@@ -8,6 +8,9 @@
 - [時來－紫微 SHILAI Ziwei](https://mm7382.github.io/ziwei/): SHILAI Ziwei: iPhone course for reading your own Zi Wei Dou Shu (Purple Star Astrology) twelve-palace chart. 36 lessons (3 free, usable before creating a chart); each explanation labelled classical passage / restatement / own wording, classical lines only from Ziwei Doushu Quanshu vols 1–3. No fortune verdicts. Traditional Chinese and English. No account. Coming soon.
 - [時來－星座 Shilai Astrology](https://mm7382.github.io/astrology/): Shilai Astrology: iPhone app teaching Western astrology in plain language. 3 free lessons (what a chart is; Sun/Moon/Ascendant; modalities and elements of the signs). Placidus chart; without a birth time it shows only what is certain and leaves Ascendant/houses blank. Today's sky with the triggering transit shown. Public-domain sources (Ptolemy, Lilly, NASA). No account, offline. In development.
 
+## Personal site
+- [Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/): Michael's AI agent learning hub — tools, tutorials, training materials, engineering journal (zh-Hant).
+
 ## Learning articles (zh-Hant + en)
 - [八字入門：四柱、天干地支與五行怎麼看｜Bazi for beginners](https://mm7382.github.io/learn/bazi-four-pillars.html)
 - [動爻、本卦與之卦是什麼？｜What are changing lines, the primary hexagram and the resulting hexagram?](https://mm7382.github.io/learn/changing-lines.html)
