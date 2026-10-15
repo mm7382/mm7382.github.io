@@ -27,3 +27,6 @@ dl dt{font-weight:600;margin-top:14px}
 dl dd{margin:4px 0 0}
 ol li,ul li{margin:5px 0}
 .lang{margin-top:64px;padding-top:8px;border-top:1px solid var(--line)}
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.links h3{margin-top:0}
+@media (max-width:600px){.links{grid-template-columns:1fr}}

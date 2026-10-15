@@ -145,8 +145,15 @@ def hub():
     for a in APPS:
         out += f'<a class="app" href="/{a["slug"]}/"><img src="{a["icon"]}" alt="{esc(a["name"])} 圖示"><div><strong>{esc(a["name"])}</strong><span>{esc(a["tag"])}</span></div></a>\n'
     out += """</div>
-<h2>入門學習文章</h2>
-<p>不知道從哪裡開始？先讀這些白話入門文章：<a href="/learn/">全部文章</a>。</p>
+<h2>所有連結</h2>
+<p class="muted">每個 App 的介紹頁、入門文章與法律文件都在這裡。</p>
+<div class="links">
+<div class="card"><h3><a href="/yijian/">易見 介紹頁</a></h3><ul><li><a href="/learn/yijian-beginner.html">易經初學者怎麼開始：從陰陽、八卦到六十四卦</a></li><li><a href="/learn/changing-lines.html">動爻、本卦與之卦是什麼？</a></li><li class="muted"><a href="/legal/yijian/privacy">隱私權政策</a>・<a href="/legal/yijian/terms">使用條款</a></li></ul></div>
+<div class="card"><h3><a href="/bazi/">時來－八字 介紹頁</a></h3><ul><li><a href="/learn/bazi-four-pillars.html">八字入門：四柱、天干地支與五行怎麼看</a></li><li><a href="/learn/ten-gods.html">十神是什麼？從日主讀懂八字裡的關係</a></li><li class="muted"><a href="/legal/bazi/privacy">隱私權政策</a>・<a href="/legal/bazi/terms">使用條款</a></li></ul></div>
+<div class="card"><h3><a href="/ziwei/">時來－紫微 介紹頁</a></h3><ul><li><a href="/learn/ziwei-twelve-palaces.html">紫微斗數入門：十二宮與命宮</a></li><li><a href="/learn/life-body-palace.html">命宮與身宮有什麼不同？</a></li><li class="muted"><a href="/legal/ziwei/privacy.html">隱私權政策</a>・<a href="/legal/ziwei/terms.html">使用條款</a></li></ul></div>
+<div class="card"><h3><a href="/astrology/">時來－星座 介紹頁</a></h3><ul><li><a href="/learn/sun-moon-rising.html">星盤怎麼看：太陽、月亮、上升</a></li><li><a href="/learn/unknown-birth-time.html">不知道出生時間，還能看星盤嗎？</a></li></ul></div>
+</div>
+<p><a href="/learn/">全部入門文章</a>・<a href="/llms.txt">給 AI 看的簡介（llms.txt）</a>・<a href="/sitemap.xml">網站地圖</a></p>
 <h2>四個 App 的共同原則</h2>
 <ul>
 <li>以課程為主：先學會讀，再看自己的盤或卦。</li>
