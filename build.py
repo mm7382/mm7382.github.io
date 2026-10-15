@@ -132,55 +132,44 @@ def hub():
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{BASE}/{a['slug']}/", "name": a["name"]} for i, a in enumerate(APPS)]},
     ]}
     out = head("Wei Chun Chuang 的 iPhone App｜易經、八字、紫微、星座學習",
-               "四個用白話教你讀懂命理的 iPhone 學習 App：易見（易經）、時來－八字、時來－紫微、時來－星座。都有免費入門課，不需要帳號，資料只存在手機。",
-               url, ld, "/yijian/icon.png")
-    out += nav()
-    out += """<header><div>
-<h1>Wei Chun Chuang 的 iPhone App</h1>
-<p class="sub">所有 App 的介紹都在這裡・目前：易經、八字、紫微斗數、西洋占星學習 App</p>
-</div></header>
-<p>這裡有四個學習型 App，共同點是：<strong>先教你怎麼讀，而不是直接告訴你答案。</strong>每個 App 都有免費的入門課程，繁體中文與英文，不需要帳號，資料只存在你的手機。</p>
-<div class="apps">
-"""
-    for a in APPS:
-        out += f'<a class="app" href="/{a["slug"]}/"><img src="{a["icon"]}" alt="{esc(a["name"])} 圖示"><div><strong>{esc(a["name"])}</strong><span>{esc(a["tag"])}</span></div></a>\n'
-    out += """</div>
-<h2>所有連結</h2>
-<p class="muted">每個 App 的介紹頁、入門文章與法律文件都在這裡。</p>
-<div class="links">
-<div class="card"><h3><a href="/yijian/">易見 介紹頁</a></h3><ul><li><a href="/learn/yijian-beginner.html">易經初學者怎麼開始：從陰陽、八卦到六十四卦</a></li><li><a href="/learn/changing-lines.html">動爻、本卦與之卦是什麼？</a></li><li class="muted"><a href="/legal/yijian/privacy">隱私權政策</a>・<a href="/legal/yijian/terms">使用條款</a></li></ul></div>
-<div class="card"><h3><a href="/bazi/">時來－八字 介紹頁</a></h3><ul><li><a href="/learn/bazi-four-pillars.html">八字入門：四柱、天干地支與五行怎麼看</a></li><li><a href="/learn/ten-gods.html">十神是什麼？從日主讀懂八字裡的關係</a></li><li class="muted"><a href="/legal/bazi/privacy">隱私權政策</a>・<a href="/legal/bazi/terms">使用條款</a></li></ul></div>
-<div class="card"><h3><a href="/ziwei/">時來－紫微 介紹頁</a></h3><ul><li><a href="/learn/ziwei-twelve-palaces.html">紫微斗數入門：十二宮與命宮</a></li><li><a href="/learn/life-body-palace.html">命宮與身宮有什麼不同？</a></li><li class="muted"><a href="/legal/ziwei/privacy.html">隱私權政策</a>・<a href="/legal/ziwei/terms.html">使用條款</a></li></ul></div>
-<div class="card"><h3><a href="/astrology/">時來－星座 介紹頁</a></h3><ul><li><a href="/learn/sun-moon-rising.html">星盤怎麼看：太陽、月亮、上升</a></li><li><a href="/learn/unknown-birth-time.html">不知道出生時間，還能看星盤嗎？</a></li></ul></div>
+               "四款從基礎教起的 iPhone 學習 App：易見、時來－八字、時來－紫微、時來－星座。免費入門課，資料保留在手機。",
+               url, ld, "/yijian/icon.png").replace('<main class="wrap">', '<main class="hub">')
+    out += '''<a class="hub-skip" href="#works">跳到 App 作品</a>
+<div class="hub-shell">
+<header class="hub-nav">
+  <a class="hub-brand" href="/" aria-label="Wei Chun Chuang 首頁">WCC<span> / </span>作品</a>
+  <nav aria-label="主要導覽"><a href="#works">App</a><a href="#notes">入門文章</a><a href="https://mm7382.github.io/pec-ai-agent-training/">Michael Agent Lab ↗</a></nav>
+</header>
+<section class="hub-intro" aria-labelledby="hub-title">
+  <div class="hub-intro-main"><p class="hub-overline">WEI CHUN CHUANG · INDEPENDENT APPS</p>
+  <h1 id="hub-title">我把想弄懂的事，<br>做成可以慢慢學的 App。</h1></div>
+  <div class="hub-intro-side"><p>易經、八字、紫微與星盤，常被一串術語擋在門外。我把起點放在課程：先看懂它怎麼組成，再讀自己的卦與盤。</p><a href="#works">看四款 App <span aria-hidden="true">↓</span></a></div>
+</section>
+<section class="hub-work" id="works" aria-labelledby="works-title">
+  <div class="hub-section-head"><h2 id="works-title">iPhone App</h2><p>目前四款。新的作品也會在這裡接著列下去。</p></div>
+  <div class="hub-work-list">
+'''
+    categories = ["易經 / I CHING", "四柱 / BAZI", "紫微 / ZI WEI", "西洋占星 / ASTROLOGY"]
+    descriptions = ["從陰陽與八卦開始，慢慢讀六十四卦。", "20 堂課，把四柱、五行與十神拆開來學。", "從命宮出發，認識十二宮與自己的盤。", "白話理解太陽、月亮、上升和星盤。"]
+    for i, (a, category, description) in enumerate(zip(APPS, categories, descriptions), 1):
+        out += f'''<a class="hub-work-item" href="/{a['slug']}/"><span class="hub-work-no">{i:02d}</span><img src="{BASE}{a['icon']}" alt="{esc(a['name'])} App 圖示" loading="lazy"><span class="hub-work-name"><span class="hub-work-category">{category}</span><strong>{esc(a['name'])}</strong></span><span class="hub-work-desc">{esc(description)}</span><span class="hub-work-arrow" aria-hidden="true">↗</span></a>\n'''
+    out += '''</div>
+</section>
+<section class="hub-method" aria-labelledby="method-title"><h2 id="method-title">先學方法，<br>再看自己的答案。</h2><div><p>四款 App 都有免費入門課，提供繁體中文與英文；不需要帳號，資料留在你的手機。</p><p>古籍原文、白話解釋與自撰內容各自標明。它們是學習與反思工具，不替你預測結果，也不代替重大決定。</p></div></section>
+<section class="hub-notes" id="notes" aria-labelledby="notes-title"><div class="hub-section-head"><h2 id="notes-title">先讀一篇</h2><a href="/learn/">所有入門文章 ↗</a></div><div class="hub-note-list">
+  <a href="/learn/yijian-beginner.html"><span>01 / 易經</span>從陰陽、八卦到六十四卦 <b aria-hidden="true">↗</b></a>
+  <a href="/learn/bazi-four-pillars.html"><span>02 / 八字</span>四柱、天干地支與五行怎麼看 <b aria-hidden="true">↗</b></a>
+  <a href="/learn/ziwei-twelve-palaces.html"><span>03 / 紫微</span>十二宮與命宮 <b aria-hidden="true">↗</b></a>
+  <a href="/learn/sun-moon-rising.html"><span>04 / 星座</span>太陽、月亮與上升 <b aria-hidden="true">↗</b></a>
+</div></section>
+<aside class="hub-lab" aria-labelledby="lab-title"><div><p>另一個學習入口</p><h2 id="lab-title">Michael Agent Lab</h2><p>除了這些 App，我也把 AI Agent 的工具、筆記與教材整理在個人網站。</p></div><a href="https://mm7382.github.io/pec-ai-agent-training/">前往個人網站 ↗</a></aside>
+<section class="hub-english" lang="en" aria-labelledby="english-title"><h2 id="english-title">A place to start learning.</h2><p>Four iPhone apps for the I Ching, Bazi, Zi Wei Dou Shu and Western astrology. Learn the foundations first, then read your own chart or hexagram. Beginner lessons are free. No account is required; your data stays on your phone.</p></section>
+<footer class="hub-footer"><div><p>Wei Chun Chuang</p><p>這些 App 是學習與反思工具。醫療、法律、投資或其他重大決定，請諮詢合格專業人士。</p><p lang="en">For medical, legal, financial or other major decisions, consult a qualified professional.</p></div><div class="hub-footer-links"><a href="/learn/">入門文章</a><a href="/llms.txt">llms.txt</a><a href="/sitemap.xml">網站地圖</a></div><div class="hub-footer-legal"><span>各款 App 的法律文件</span><a href="/legal/yijian/privacy">易見隱私</a><a href="/legal/yijian/terms">易見條款</a><a href="/legal/bazi/privacy">八字隱私</a><a href="/legal/bazi/terms">八字條款</a><a href="/legal/ziwei/privacy.html">紫微隱私</a><a href="/legal/ziwei/terms.html">紫微條款</a></div></footer>
 </div>
-<p><a href="/learn/">全部入門文章</a>・<a href="/llms.txt">給 AI 看的簡介（llms.txt）</a>・<a href="/sitemap.xml">網站地圖</a></p>
-<h2>個人網站：Michael Agent Lab</h2>
-<p><a href="/pec-ai-agent-training/">Michael Agent Lab</a>：Michael 整理的 AI Agent 學習入口、熱門工具、教學教材與實作資源，包含工作日誌與 AI Agent 培訓教材。</p>
-<h2>四個 App 的共同原則</h2>
-<ul>
-<li>以課程為主：先學會讀，再看自己的盤或卦。</li>
-<li>標明來源：古籍原文、白話解釋和自撰內容分開標示。</li>
-<li>前 3 堂免費：不用付費就能上完入門課。</li>
-<li>不收集資料：不需要帳號，資料只存在手機。</li>
-<li>中英雙語：所有內容都有繁體中文與英文版本。</li>
-</ul>
-<h2>該選哪一個？</h2>
-<dl>
-<dt>想讀懂《易經》和六十四卦</dt><dd><a href="/yijian/">易見</a>：八堂課從陰陽講到動爻與之卦，再逐卦讀完六十四卦。</dd>
-<dt>想看懂自己的八字（四柱）</dt><dd><a href="/bazi/">時來－八字</a>：App 排盤，20 堂課教你讀日主、五行與十神。</dd>
-<dt>想學紫微斗數</dt><dd><a href="/ziwei/">時來－紫微</a>：排出十二宮命盤，從命宮開始一步步學讀盤。</dd>
-<dt>想學西洋占星</dt><dd><a href="/astrology/">時來－星座</a>：白話認識星盤、太陽月亮上升與十二星座。</dd>
-</dl>
-<section lang="en" class="lang"><h2>Plain-language learning apps for the I Ching, Bazi, Zi Wei Dou Shu and astrology</h2>
-<p>Four iPhone apps that teach you how to read, rather than handing you answers. Each has free beginner lessons, Traditional Chinese and English, no account, and keeps your data on your phone.</p>
-<ul>
-<li><a href="/yijian/">YiJian</a> — learn the I Ching and all 64 hexagrams from zero.</li>
-<li><a href="/bazi/">Shilai – Bazi</a> — learn to read your own Four Pillars chart in 20 lessons.</li>
-<li><a href="/ziwei/">SHILAI Ziwei</a> — read your own Zi Wei Dou Shu twelve-palace chart, starting from the Life Palace.</li>
-<li><a href="/astrology/">Shilai Astrology</a> — learn Western astrology and your birth chart in plain language.</li>
-</ul></section>
-"""
-    out += FOOT
+</main>
+</body>
+</html>
+'''
     with open(os.path.join(HERE, "index.html"), "w") as f:
         f.write(out)
 
