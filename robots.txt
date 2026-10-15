@@ -1,4 +1,35 @@
+# 歡迎所有搜尋引擎與 AI 助理讀取本站
 User-agent: *
+Allow: /
+
+# ChatGPT（OpenAI）
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Claude（Anthropic）
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+
+# Gemini（Google）
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Bing / Copilot
+User-agent: Bingbot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
 Allow: /
 
 Sitemap: https://mm7382.github.io/sitemap.xml
