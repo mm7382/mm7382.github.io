@@ -15,7 +15,7 @@ def esc(s):
 
 
 def nav(extra=""):
-    links = ['<a href="/">全部 App</a>'] + [f'<a href="/{a["slug"]}/">{esc(a["name"])}</a>' for a in APPS]
+    links = ['<a href="/">全部 App</a>', '<a href="/learn/">入門文章</a>'] + [f'<a href="/{a["slug"]}/">{esc(a["name"])}</a>' for a in APPS]
     return "<nav>" + "".join(links) + extra + "</nav>\n"
 
 
@@ -131,13 +131,13 @@ def hub():
         {"@type": "ItemList", "name": "Wei Chun Chuang 的命理學習 App",
          "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{BASE}/{a['slug']}/", "name": a["name"]} for i, a in enumerate(APPS)]},
     ]}
-    out = head("易經、八字、紫微、星座學習 App｜Wei Chun Chuang",
+    out = head("Wei Chun Chuang 的 iPhone App｜易經、八字、紫微、星座學習",
                "四個用白話教你讀懂命理的 iPhone 學習 App：易見（易經）、時來－八字、時來－紫微、時來－星座。都有免費入門課，不需要帳號，資料只存在手機。",
                url, ld, "/yijian/icon.png")
     out += nav()
     out += """<header><div>
-<h1>用白話學命理的 iPhone App</h1>
-<p class="sub">易經・八字・紫微斗數・西洋占星</p>
+<h1>Wei Chun Chuang 的 iPhone App</h1>
+<p class="sub">所有 App 的介紹都在這裡・目前：易經、八字、紫微斗數、西洋占星學習 App</p>
 </div></header>
 <p>這裡有四個學習型 App，共同點是：<strong>先教你怎麼讀，而不是直接告訴你答案。</strong>每個 App 都有免費的入門課程，繁體中文與英文，不需要帳號，資料只存在你的手機。</p>
 <div class="apps">
@@ -145,6 +145,8 @@ def hub():
     for a in APPS:
         out += f'<a class="app" href="/{a["slug"]}/"><img src="{a["icon"]}" alt="{esc(a["name"])} 圖示"><div><strong>{esc(a["name"])}</strong><span>{esc(a["tag"])}</span></div></a>\n'
     out += """</div>
+<h2>入門學習文章</h2>
+<p>不知道從哪裡開始？先讀這些白話入門文章：<a href="/learn/">全部文章</a>。</p>
 <h2>四個 App 的共同原則</h2>
 <ul>
 <li>以課程為主：先學會讀，再看自己的盤或卦。</li>
@@ -180,12 +182,21 @@ def llms():
              "## Apps"]
     for a in APPS:
         lines.append(f"- [{a['name']} {a['en']}]({BASE}/{a['slug']}/): {a['llms']}")
+    import re, glob
+    lines += ["", "## Learning articles (zh-Hant + en)"]
+    for p in sorted(glob.glob(os.path.join(HERE, "learn", "*.html"))):
+        if p.endswith("index.html"):
+            continue
+        t = re.search(r"<title>([^<]*)</title>", open(p).read()).group(1)
+        lines.append(f"- [{t}]({BASE}/learn/{os.path.basename(p)})")
     with open(os.path.join(HERE, "llms.txt"), "w") as f:
         f.write("\n".join(lines) + "\n")
 
 
 def sitemap():
-    urls = [BASE + "/"] + [f"{BASE}/{a['slug']}/" for a in APPS] + [BASE + "/llms.txt", BASE + "/yijian/llms.txt"]
+    import glob
+    learn = [BASE + "/learn/"] + [f"{BASE}/learn/{os.path.basename(p)}" for p in sorted(glob.glob(os.path.join(HERE, "learn", "*.html"))) if not p.endswith("index.html")]
+    urls = [BASE + "/"] + [f"{BASE}/{a['slug']}/" for a in APPS] + learn + [BASE + "/llms.txt", BASE + "/yijian/llms.txt"]
     body = "".join(f"  <url><loc>{u}</loc><lastmod>2026-10-15</lastmod></url>\n" for u in urls)
     with open(os.path.join(HERE, "sitemap.xml"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + body + "</urlset>\n")
