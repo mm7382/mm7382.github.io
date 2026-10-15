@@ -125,53 +125,24 @@ def app_page(a):
 
 
 def hub():
-    url = BASE + "/"
-    ld = {"@context": "https://schema.org", "@graph": [
-        {"@type": "Person", "@id": url + "#dev", "name": DEV, "url": url},
-        {"@type": "ItemList", "name": "Wei Chun Chuang 的命理學習 App",
-         "itemListElement": [{"@type": "ListItem", "position": i + 1, "url": f"{BASE}/{a['slug']}/", "name": a["name"]} for i, a in enumerate(APPS)]},
-    ]}
-    out = head("Wei Chun Chuang 的 iPhone App｜易經、八字、紫微、星座學習",
-               "四款從基礎教起的 iPhone 學習 App：易見、時來－八字、時來－紫微、時來－星座。免費入門課，資料保留在手機。",
-               url, ld, "/yijian/icon.png").replace('<main class="wrap">', '<main class="hub">')
-    out += '''<a class="hub-skip" href="#works">跳到 App 作品</a>
-<div class="hub-shell">
-<header class="hub-nav">
-  <a class="hub-brand" href="/" aria-label="Wei Chun Chuang 首頁">WCC<span> / </span>作品</a>
-  <nav aria-label="主要導覽"><a href="#works">App</a><a href="#notes">入門文章</a><a href="https://mm7382.github.io/pec-ai-agent-training/">Michael Agent Lab ↗</a></nav>
-</header>
-<section class="hub-intro" aria-labelledby="hub-title">
-  <div class="hub-intro-main"><p class="hub-overline">WEI CHUN CHUANG · INDEPENDENT APPS</p>
-  <h1 id="hub-title">我把想弄懂的事，<br>做成可以慢慢學的 App。</h1></div>
-  <div class="hub-intro-side"><p>易經、八字、紫微與星盤，常被一串術語擋在門外。我把起點放在課程：先看懂它怎麼組成，再讀自己的卦與盤。</p><a href="#works">看四款 App <span aria-hidden="true">↓</span></a></div>
-</section>
-<section class="hub-work" id="works" aria-labelledby="works-title">
-  <div class="hub-section-head"><h2 id="works-title">iPhone App</h2><p>目前四款。新的作品也會在這裡接著列下去。</p></div>
-  <div class="hub-work-list">
-'''
-    categories = ["易經 / I CHING", "四柱 / BAZI", "紫微 / ZI WEI", "西洋占星 / ASTROLOGY"]
-    descriptions = ["從陰陽與八卦開始，慢慢讀六十四卦。", "20 堂課，把四柱、五行與十神拆開來學。", "從命宮出發，認識十二宮與自己的盤。", "白話理解太陽、月亮、上升和星盤。"]
-    for i, (a, category, description) in enumerate(zip(APPS, categories, descriptions), 1):
-        out += f'''<a class="hub-work-item" href="/{a['slug']}/"><span class="hub-work-no">{i:02d}</span><img src="{BASE}{a['icon']}" alt="{esc(a['name'])} App 圖示" loading="lazy"><span class="hub-work-name"><span class="hub-work-category">{category}</span><strong>{esc(a['name'])}</strong></span><span class="hub-work-desc">{esc(description)}</span><span class="hub-work-arrow" aria-hidden="true">↗</span></a>\n'''
-    out += '''</div>
-</section>
-<section class="hub-method" aria-labelledby="method-title"><h2 id="method-title">先學方法，<br>再看自己的答案。</h2><div><p>四款 App 都有免費入門課，提供繁體中文與英文；不需要帳號，資料留在你的手機。</p><p>古籍原文、白話解釋與自撰內容各自標明。它們是學習與反思工具，不替你預測結果，也不代替重大決定。</p></div></section>
-<section class="hub-notes" id="notes" aria-labelledby="notes-title"><div class="hub-section-head"><h2 id="notes-title">先讀一篇</h2><a href="/learn/">所有入門文章 ↗</a></div><div class="hub-note-list">
-  <a href="/learn/yijian-beginner.html"><span>01 / 易經</span>從陰陽、八卦到六十四卦 <b aria-hidden="true">↗</b></a>
-  <a href="/learn/bazi-four-pillars.html"><span>02 / 八字</span>四柱、天干地支與五行怎麼看 <b aria-hidden="true">↗</b></a>
-  <a href="/learn/ziwei-twelve-palaces.html"><span>03 / 紫微</span>十二宮與命宮 <b aria-hidden="true">↗</b></a>
-  <a href="/learn/sun-moon-rising.html"><span>04 / 星座</span>太陽、月亮與上升 <b aria-hidden="true">↗</b></a>
-</div></section>
-<aside class="hub-lab" aria-labelledby="lab-title"><div><p>另一個學習入口</p><h2 id="lab-title">Michael Agent Lab</h2><p>除了這些 App，我也把 AI Agent 的工具、筆記與教材整理在個人網站。</p></div><a href="https://mm7382.github.io/pec-ai-agent-training/">前往個人網站 ↗</a></aside>
-<section class="hub-english" lang="en" aria-labelledby="english-title"><h2 id="english-title">A place to start learning.</h2><p>Four iPhone apps for the I Ching, Bazi, Zi Wei Dou Shu and Western astrology. Learn the foundations first, then read your own chart or hexagram. Beginner lessons are free. No account is required; your data stays on your phone.</p></section>
-<footer class="hub-footer"><div><p>Wei Chun Chuang</p><p>這些 App 是學習與反思工具。醫療、法律、投資或其他重大決定，請諮詢合格專業人士。</p><p lang="en">For medical, legal, financial or other major decisions, consult a qualified professional.</p></div><div class="hub-footer-links"><a href="/learn/">入門文章</a><a href="/llms.txt">llms.txt</a><a href="/sitemap.xml">網站地圖</a></div><div class="hub-footer-legal"><span>各款 App 的法律文件</span><a href="/legal/yijian/privacy">易見隱私</a><a href="/legal/yijian/terms">易見條款</a><a href="/legal/bazi/privacy">八字隱私</a><a href="/legal/bazi/terms">八字條款</a><a href="/legal/ziwei/privacy.html">紫微隱私</a><a href="/legal/ziwei/terms.html">紫微條款</a></div></footer>
-</div>
-</main>
-</body>
-</html>
-'''
+    screenshots = {"yijian": "yijian", "bazi": "bazi", "ziwei": "ziwei", "astrology": "astrology"}
+    summaries = {
+        "yijian": "從陰陽與爻序開始，慢慢讀懂六十四卦。",
+        "bazi": "從四柱、五行到十神，學會讀自己的八字。",
+        "ziwei": "從命宮出發，一步步認識十二宮與星曜。",
+        "astrology": "從太陽、月亮與上升，開始理解自己的星盤。",
+    }
+    cards = []
+    for a in APPS:
+        slug = esc(a["slug"])
+        name = esc(a["name"])
+        image = "/assets/natural/" + screenshots[a["slug"]] + ".png" if a["slug"] in screenshots else a["icon"]
+        description = esc(summaries.get(a["slug"], a.get("tag", "")))
+        cards.append(f'<article class="work"><a href="/{slug}/" aria-label="了解{name}"><div class="work-photo {slug}"><div class="phone"><img src="{image}" alt="{name}實際 App 畫面" loading="lazy"></div></div><div class="work-caption"><h3>{name}</h3><span aria-hidden="true">↗</span></div></a><p>{description}</p></article>')
+    with open(os.path.join(HERE, "hub-template.html")) as f:
+        template = f.read()
     with open(os.path.join(HERE, "index.html"), "w") as f:
-        f.write(out)
+        f.write(template.replace("{{APP_CARDS}}", "".join(cards)))
 
 
 def llms():
