@@ -1,0 +1,13 @@
+# Wei Chun Chuang — learning apps for I Ching, Bazi, Zi Wei and astrology
+
+> Four iPhone apps that teach Chinese metaphysics and Western astrology in plain language. Free beginner lessons, Traditional Chinese and English, no account, data stays on device. Learning tools, not fortune telling.
+
+## Apps
+- [易見 YiJian](https://mm7382.github.io/yijian/): Learn the I Ching from zero
+- [時來－八字 Shilai – Bazi](https://mm7382.github.io/bazi/): Learn to read your own Bazi chart
+- [時來－紫微 SHILAI Ziwei](https://mm7382.github.io/ziwei/): Read your own Zi Wei chart
+- [時來－星座 Shilai Astrology](https://mm7382.github.io/astrology/): Learn Western astrology in plain language
+
+## Notes
+- All four are learning and reflection tools, not fortune-telling services.
+- YiJian, Ziwei and Astrology are not yet on the App Store; Bazi is in App Store review.

@@ -1,0 +1,23 @@
+:root{--paper:#f4efe6;--card:#fbf8f2;--ink:#2a2622;--ink2:#6b6259;--red:#a23a2c;--line:#ddd3c4}
+@media (prefers-color-scheme:dark){:root{--paper:#1c1a17;--card:#25221e;--ink:#eee7dc;--ink2:#b3a999;--red:#d8705f;--line:#3a352e}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.75 -apple-system,"PingFang TC","Noto Sans TC","Helvetica Neue",sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+nav{padding:18px 0;font-size:.95rem}nav a{margin-right:14px}
+header{padding:36px 0 24px;display:flex;gap:20px;align-items:center}
+header img{width:84px;height:84px;border-radius:20px;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+h1{font:600 2rem/1.25 "Songti TC","Noto Serif TC",serif;margin:0}
+.sub{color:var(--ink2);margin:.3em 0 0}
+.badge{display:inline-block;margin-top:12px;padding:6px 14px;border:1.5px solid var(--red);color:var(--red);border-radius:6px;font-weight:600;font-size:.95rem}
+h2{font:600 1.35rem/1.4 "Songti TC","Noto Serif TC",serif;margin:44px 0 12px;padding-left:12px;border-left:3px solid var(--red)}
+.muted{color:var(--ink2)}
+.shots{display:grid;grid-template-columns:repeat(2,minmax(0,280px));gap:14px;margin:24px 0}
+.shots img{width:100%;border-radius:14px;border:1px solid var(--line)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px 22px;margin:14px 0}
+.apps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin:24px 0}
+.app{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px;text-decoration:none;color:var(--ink)}
+.app img{width:60px;height:60px;border-radius:14px;flex:none}
+.app strong{display:block;font-size:1.1rem}.app span{color:var(--ink2);font-size:.95rem}
+footer{margin:64px 0 40px;padding-top:20px;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink2)}
+a{color:var(--red)}
+@media (max-width:600px){header{flex-direction:column;align-items:flex-start}.apps{grid-template-columns:1fr}h1{font-size:1.7rem}}
