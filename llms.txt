@@ -1,0 +1,19 @@
+# Wei Chun Chuang — learning apps for the I Ching, Bazi, Zi Wei Dou Shu and astrology
+
+> Four iPhone apps that teach Chinese metaphysics and Western astrology in plain language. Free beginner lessons, Traditional Chinese and English, no account, data stays on device. Learning tools, not fortune-telling services.
+
+## Apps
+- [易見 YiJian](https://mm7382.github.io/yijian/): YiJian (易見): iPhone course teaching the I Ching from zero. 8 interactive beginner lessons (3 free), guided reading of all 64 hexagrams with diagrams and quizzes, spaced review and mistakes notebook. Casting is a practice feature for reflection. Traditional Chinese and English. No account. In App Store review. Details: https://mm7382.github.io/yijian/llms.txt
+- [時來－八字 Shilai – Bazi](https://mm7382.github.io/bazi/): Shilai – Bazi: beginner iPhone course for reading your own Bazi (Four Pillars) chart. App calculates the chart; 20 plain-language lessons (3 free) cover pillars, stems and branches, Five Phases, Day Master, Ten Gods, combinations and clashes. Ungraded quizzes, daily question, notes and review. Traditional Chinese and English. No account; data on device. In App Store review.
+- [時來－紫微 SHILAI Ziwei](https://mm7382.github.io/ziwei/): SHILAI Ziwei: iPhone course for reading your own Zi Wei Dou Shu (Purple Star Astrology) twelve-palace chart. 36 lessons (3 free, usable before creating a chart); each explanation labelled classical passage / restatement / own wording, classical lines only from Ziwei Doushu Quanshu vols 1–3. No fortune verdicts. Traditional Chinese and English. No account. Coming soon.
+- [時來－星座 Shilai Astrology](https://mm7382.github.io/astrology/): Shilai Astrology: iPhone app teaching Western astrology in plain language. 3 free lessons (what a chart is; Sun/Moon/Ascendant; modalities and elements of the signs). Placidus chart; without a birth time it shows only what is certain and leaves Ascendant/houses blank. Today's sky with the triggering transit shown. Public-domain sources (Ptolemy, Lilly, NASA). No account, offline. In development.
+
+## Learning articles (zh-Hant + en)
+- [八字入門：四柱、天干地支與五行怎麼看｜Bazi for beginners](https://mm7382.github.io/learn/bazi-four-pillars.html)
+- [動爻、本卦與之卦是什麼？｜What are changing lines, the primary hexagram and the resulting hexagram?](https://mm7382.github.io/learn/changing-lines.html)
+- [命宮與身宮有什麼不同？｜What is the difference between the Life Palace and the Body Palace?](https://mm7382.github.io/learn/life-body-palace.html)
+- [星盤怎麼看：太陽、月亮、上升｜How to read a birth chart](https://mm7382.github.io/learn/sun-moon-rising.html)
+- [十神是什麼？從日主讀懂八字裡的關係｜What are the Ten Gods?](https://mm7382.github.io/learn/ten-gods.html)
+- [不知道出生時間，還能看星盤嗎？｜Can you read a birth chart without knowing your birth time?](https://mm7382.github.io/learn/unknown-birth-time.html)
+- [易經初學者怎麼開始：從陰陽、八卦到六十四卦｜How to start learning the I Ching](https://mm7382.github.io/learn/yijian-beginner.html)
+- [紫微斗數入門：十二宮與命宮｜Zi Wei Dou Shu for beginners](https://mm7382.github.io/learn/ziwei-twelve-palaces.html)
