@@ -21,3 +21,9 @@ h2{font:600 1.35rem/1.4 "Songti TC","Noto Serif TC",serif;margin:44px 0 12px;pad
 footer{margin:64px 0 40px;padding-top:20px;border-top:1px solid var(--line);font-size:.92rem;color:var(--ink2)}
 a{color:var(--red)}
 @media (max-width:600px){header{flex-direction:column;align-items:flex-start}.apps{grid-template-columns:1fr}h1{font-size:1.7rem}}
+h3{font-size:1.08rem;margin:24px 0 6px}
+h4{font-size:1rem;margin:16px 0 4px;color:var(--ink2)}
+dl dt{font-weight:600;margin-top:14px}
+dl dd{margin:4px 0 0}
+ol li,ul li{margin:5px 0}
+.lang{margin-top:64px;padding-top:8px;border-top:1px solid var(--line)}
