@@ -15,7 +15,7 @@ def esc(s):
 
 
 def nav(extra=""):
-    links = ['<a href="/">全部 App</a>', '<a href="/learn/">入門文章</a>'] + [f'<a href="/{a["slug"]}/">{esc(a["name"])}</a>' for a in APPS]
+    links = ['<a href="/">全部 App</a>', '<a href="/learn/">入門文章</a>', '<a href="/pec-ai-agent-training/">Agent Lab</a>'] + [f'<a href="/{a["slug"]}/">{esc(a["name"])}</a>' for a in APPS]
     return "<nav>" + "".join(links) + extra + "</nav>\n"
 
 
@@ -154,6 +154,8 @@ def hub():
 <div class="card"><h3><a href="/astrology/">時來－星座 介紹頁</a></h3><ul><li><a href="/learn/sun-moon-rising.html">星盤怎麼看：太陽、月亮、上升</a></li><li><a href="/learn/unknown-birth-time.html">不知道出生時間，還能看星盤嗎？</a></li></ul></div>
 </div>
 <p><a href="/learn/">全部入門文章</a>・<a href="/llms.txt">給 AI 看的簡介（llms.txt）</a>・<a href="/sitemap.xml">網站地圖</a></p>
+<h2>個人網站：Michael Agent Lab</h2>
+<p><a href="/pec-ai-agent-training/">Michael Agent Lab</a>：Michael 整理的 AI Agent 學習入口、熱門工具、教學教材與實作資源，包含工作日誌與 AI Agent 培訓教材。</p>
 <h2>四個 App 的共同原則</h2>
 <ul>
 <li>以課程為主：先學會讀，再看自己的盤或卦。</li>
@@ -190,6 +192,7 @@ def llms():
     for a in APPS:
         lines.append(f"- [{a['name']} {a['en']}]({BASE}/{a['slug']}/): {a['llms']}")
     import re, glob
+    lines += ["", "## Personal site", "- [Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/): Michael's AI agent learning hub — tools, tutorials, training materials, engineering journal (zh-Hant)."]
     lines += ["", "## Learning articles (zh-Hant + en)"]
     for p in sorted(glob.glob(os.path.join(HERE, "learn", "*.html"))):
         if p.endswith("index.html"):
