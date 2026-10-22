@@ -267,7 +267,7 @@ for (const host of $$(".interactive")) {
           ["lower", "upper"]
             .map(
               (part, i) =>
-                `<label class="field"><span>${i ? "上卦" : "下卦"}</span><select data-half="${part}">${trigrams.map((t) => `<option value="${t[0]}">${t[1]}</option>`).join("")}</select></label>`,
+                `<label class="field"><span>${i ? "上卦" : "下卦"}</span><select data-half="${part}" aria-label="${i ? "上卦" : "下卦"}">${trigrams.map((t) => `<option value="${t[0]}">${t[1]}</option>`).join("")}</select></label>`,
             )
             .join("") +
           '<div class="activity-diagram"></div><p class="feedback" role="status"></p>';
