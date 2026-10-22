@@ -27,3 +27,25 @@ test("unavailable and corrupt storage report failures without blocking a reading
   assert.deepEqual(b.read(), { completed: [], history: [] });
   assert.ok(b.error);
 });
+test("a temporary storage failure can recover without reload or clearing old records", () => {
+  const memory = new Map();
+  let unavailable = false;
+  const storage = {
+    getItem: (key) => memory.get(key) ?? null,
+    setItem: (key, value) => {
+      if (unavailable) throw new Error("quota");
+      memory.set(key, value);
+    },
+  };
+  const store = createStore(() => storage);
+  unavailable = true;
+  assert.equal(store.complete("first"), false);
+  unavailable = false;
+  assert.equal(store.complete("first"), true);
+  unavailable = true;
+  assert.equal(store.complete("second"), false);
+  unavailable = false;
+  assert.equal(store.complete("second"), true);
+  assert.deepEqual(store.read().completed, ["first", "second"]);
+  assert.equal(store.error, "");
+});
