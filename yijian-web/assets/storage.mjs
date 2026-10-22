@@ -22,9 +22,13 @@ export function createStore(provider = () => localStorage) {
   const read = () => {
     try {
       const raw = provider().getItem(KEY);
-      if (!raw) return empty();
+      if (!raw) {
+        error = "";
+        return empty();
+      }
       const data = JSON.parse(raw);
       if (!valid(data)) throw Error();
+      error = "";
       return data;
     } catch {
       error =
