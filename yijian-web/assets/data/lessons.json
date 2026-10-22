@@ -1,0 +1,2039 @@
+{
+  "schemaVersion": 1,
+  "lessons": [
+    {
+      "id": "yin-yang-and-line-order",
+      "order": 1,
+      "title": {
+        "zh-Hant": "陰陽與六爻順序",
+        "en": "Yin, Yang, and the Order of the Six Lines"
+      },
+      "summary": {
+        "zh-Hant": "認識組成一卦的兩種符號，以及為什麼六爻要從最下面開始數。",
+        "en": "Learn the two symbols every hexagram is made of, and why the six lines are counted from the bottom up."
+      },
+      "objectives": [
+        {
+          "zh-Hant": "分辨陽爻與陰爻的樣子。",
+          "en": "Tell a yang line and a yin line apart on sight."
+        },
+        {
+          "zh-Hant": "說出六爻由下往上的位置名稱：初、二、三、四、五、上。",
+          "en": "Name the six positions from the bottom up: first, second, third, fourth, fifth, top."
+        },
+        {
+          "zh-Hant": "依位置與陰陽，叫出一爻的完整名稱，例如「初九」「上六」。",
+          "en": "Combine position and line type into a full line name, such as \"nine in the first place\" or \"six at the top\"."
+        }
+      ],
+      "sections": [
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "一卦只由兩種符號組成",
+            "en": "A hexagram uses only two symbols"
+          },
+          "body": {
+            "zh-Hant": "易經的卦看起來有六十四種變化，其實每一卦都只用兩種符號堆起來。一條完整不斷的橫線叫陽爻；中間斷開成兩段的橫線叫陰爻。六條這樣的線由下往上疊起來，就是一個卦。\n\n陰陽在這裡是兩種狀態的名字，像開與關、動與靜，本身沒有好壞之分。後面幾堂課談的組合、變化、取文規則，全部建立在這兩個符號上。",
+            "en": "The Book of Changes has sixty-four hexagrams, but every one of them is built from just two symbols. One unbroken horizontal stroke is a yang line. A stroke broken into two halves is a yin line. Stack six of them and you have a hexagram.\n\nHere yin and yang are simply the names of two states, like open and closed, or moving and still. Neither is good or bad in itself. Everything in the later lessons — combinations, change, which text to read — is built on these two symbols."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "動手排一個卦",
+            "en": "Build a hexagram yourself"
+          },
+          "body": {
+            "zh-Hant": "一卦有六爻，由下往上數：最下面那一條是初爻，往上依序是第二爻、第三爻、第四爻、第五爻，最上面是上爻。陽爻畫成一整條實線，陰爻畫成中間斷開的兩段。同一個位置換成另一種符號，爻名就跟著變——位置寫在前面，陰陽寫在後面，陽用九、陰用六。所以最下面那一爻是陽就叫初九，是陰就叫初六。",
+            "en": "A hexagram has six lines, counted from the bottom up: the lowest is the first line, then the second, third, fourth and fifth, and the top one is the sixth. A yang line is drawn as one solid stroke, a yin line as two segments with a gap. Change the symbol in a position and the name changes with it — the position comes first, the line type second, with nine for yang and six for yin. So the bottom line is called “nine in the first place” when yang and “six in the first place” when yin."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "為什麼從下往上數",
+            "en": "Why the counting starts at the bottom"
+          },
+          "body": {
+            "zh-Hant": "傳統上把一卦看成一件事由開始走到結束：最下面是事情剛起頭，最上面是已經走到盡頭。所以第一爻在最下面，第六爻在最上面。\n\n六個位置各有固定的叫法。最下面那一爻叫「初」，最上面那一爻叫「上」，中間四爻就用數字二、三、四、五。這套叫法在之後讀爻辭時每一次都會用到。\n\n這個方向不是隨便定的，而是貫穿整套讀法的前提。之後查卦、找爻辭、判斷哪一爻在變，每一步都預設你是從下面開始數。一旦數反了，整個卦會變成另一個卦，接下來讀到的也會是另一段文字。\n\n一個實用的檢查習慣：拿到任何一張卦象圖，先用手指點一下最下面那條線，心裡說一次「這是初爻」，再往上數。",
+            "en": "By tradition a hexagram reads like something unfolding from start to finish: the bottom is the very beginning, the top is the point where it has run its course. So the first line sits at the bottom and the sixth line at the top.\n\nEach position has a fixed name. The bottom one is called \"first\", the top one is called \"top\", and the four in between are simply second, third, fourth and fifth. You will use these names every time you read a line statement later on.\n\nThe direction is not an arbitrary choice; it is an assumption built into the whole method. Looking a hexagram up, finding the right line statement, deciding which line is changing — every step takes for granted that you started from the bottom. Count the other way and you end up with a different hexagram, and a different passage to read.\n\nA useful habit: whenever you meet a hexagram diagram, touch the lowest stroke first, say \"this is the first line\" to yourself, and count upward from there."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "位置加上陰陽，才是一爻的全名",
+            "en": "Position plus line type makes the full name"
+          },
+          "body": {
+            "zh-Hant": "古書裡提到某一爻時，不會說「第一個陽爻」，而是把陰陽寫成數字：陽爻寫成「九」，陰爻寫成「六」。位置名稱放前面，陰陽放後面。\n\n所以最下面的陽爻叫「初九」，最下面的陰爻叫「初六」。第三個位置的陽爻叫「九三」，第五個位置的陰爻叫「六五」。只有最上面那一爻反過來寫，叫「上九」或「上六」。\n\n這不是另一套理論，只是一種固定的寫法。認得它，之後打開任何一本易經原文都讀得下去。",
+            "en": "Classical texts never say \"the first yang line\". They write the line type as a number: a yang line is a \"nine\", a yin line is a \"six\". The position name comes first, the line type second.\n\nSo a yang line at the bottom is \"nine in the first place\", and a yin line at the bottom is \"six in the first place\". A yang line in the third position is \"nine in the third place\"; a yin line in the fifth is \"six in the fifth place\". Only the topmost line reverses the order: \"nine at the top\" or \"six at the top\".\n\nThis is not a separate theory, only a fixed convention. Once you recognise it, you can open any edition of the original text and follow it."
+          }
+        }
+      ],
+      "activity": {
+        "kind": "toggleLines",
+        "heading": {
+          "zh-Hant": "動手：點一爻看看",
+          "en": "Try it: tap a line"
+        },
+        "instruction": {
+          "zh-Hant": "下面六爻預設全是陽爻。點任何一爻就會在陽與陰之間切換，右邊會顯示它現在叫什麼。注意最下面那一條才是初爻，不是最上面那條。",
+          "en": "All six lines below start as yang. Tap any line to switch it between yang and yin; the name on the right updates with it. Remember that the bottom line is the first line, not the top one."
+        }
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": {
+            "zh-Hant": "一個卦的六爻，第一爻在哪個位置？",
+            "en": "In a hexagram, where is the first line?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "最下面那一條",
+                "en": "The bottom stroke"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。一卦由下往上讀，最下面是事情的起頭，所以是第一爻。",
+                "en": "Correct. A hexagram is read from the bottom up, and the bottom is where things begin, so it is the first line."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "最上面那一條",
+                "en": "The top stroke"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "最上面那一條是第六爻，叫「上爻」。數的方向是由下往上，不是由上往下。",
+                "en": "The top stroke is the sixth line, called the top line. The counting runs upward, not downward."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "正中間那一條",
+                "en": "The stroke in the middle"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "六爻是偶數，沒有正中間那一條。第一爻固定在最下面。",
+                "en": "Six is an even number, so there is no single middle stroke. The first line is always at the bottom."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "prompt": {
+            "zh-Hant": "最下面那一爻如果是陰爻，它的全名是什麼？",
+            "en": "If the bottom line is a yin line, what is its full name?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "初六",
+                "en": "Six in the first place"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。最下面的位置叫「初」，陰爻寫成「六」，合起來就是初六。",
+                "en": "Correct. The bottom position is \"first\" and a yin line is written as \"six\", so together it is six in the first place."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "初九",
+                "en": "Nine in the first place"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "位置對了，但「九」代表陽爻。陰爻要寫成「六」。",
+                "en": "The position is right, but \"nine\" means a yang line. A yin line is written as \"six\"."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "上六",
+                "en": "Six at the top"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "陰陽對了，但「上」指的是最上面那一爻，不是最下面。",
+                "en": "The line type is right, but \"top\" refers to the uppermost line, not the bottom one."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "prompt": {
+            "zh-Hant": "下面哪一個描述的是陽爻？",
+            "en": "Which of these describes a yang line?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "一條完整不斷的橫線",
+                "en": "One unbroken horizontal stroke"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。陽爻是一條連續的線；陰爻才是中間斷開的。",
+                "en": "Correct. A yang line is continuous; it is the yin line that is broken in the middle."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "中間斷開成兩段的橫線",
+                "en": "A horizontal stroke broken into two halves"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那是陰爻。兩者差別只在中間有沒有缺口。",
+                "en": "That is a yin line. The only difference between them is the gap in the middle."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "位置在上半部的那三條線",
+                "en": "Any of the three strokes in the upper half"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "陰陽講的是線本身的形狀，跟它在第幾個位置無關。",
+                "en": "Yin and yang describe the shape of the stroke itself, not which position it occupies."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eight-trigrams-and-halves",
+      "order": 2,
+      "title": {
+        "zh-Hant": "八卦與上下卦",
+        "en": "The Eight Trigrams and the Two Halves"
+      },
+      "summary": {
+        "zh-Hant": "三爻一組就是一個八卦。六爻的卦其實是上下兩個三爻卦疊起來的。",
+        "en": "Three lines make a trigram. Every six-line hexagram is two trigrams stacked, a lower one and an upper one."
+      },
+      "objectives": [
+        {
+          "zh-Hant": "說出八個三爻卦的名字與符號。",
+          "en": "Name all eight trigrams and recognise their symbols."
+        },
+        {
+          "zh-Hant": "把一個六爻的卦切成下卦與上卦。",
+          "en": "Split a six-line hexagram into its lower and upper trigram."
+        },
+        {
+          "zh-Hant": "知道下卦是第一到第三爻，上卦是第四到第六爻。",
+          "en": "Know that the lower trigram is lines one to three and the upper trigram is lines four to six."
+        }
+      ],
+      "sections": [
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "三條線能排出八種組合",
+            "en": "Three lines give eight combinations"
+          },
+          "body": {
+            "zh-Hant": "上一堂課我們把陰陽兩種符號疊了六層。先退一步，只疊三層看看。\n\n每一層有陰、陽兩種可能，三層就是 2×2×2＝8 種排法，一種都不多、一種都不少。這八種各自有名字，合稱八卦。\n\n八卦不是另外一套系統，只是先把三條線當成一個單位來看。這麼做是因為六條線一次記太難，拆成兩半之後，記八個名字就夠用了。",
+            "en": "In the first lesson we stacked yin and yang six layers deep. Step back and stack only three.\n\nEach layer can be yin or yang, so three layers give 2×2×2 = 8 arrangements — no more, no fewer. Each of the eight has a name, and together they are called the eight trigrams.\n\nThe trigrams are not a separate system. They are just a way of treating three lines as one unit. Six lines are hard to hold in mind at once; split in half, you only need to remember eight names."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "八卦各自長什麼樣",
+            "en": "What the eight trigrams look like"
+          },
+          "body": {
+            "zh-Hant": "下面依舊由下往上讀。「陽陽陽」的意思是最下面是陽爻、中間是陽爻、最上面也是陽爻。\n\n乾 ☰ 陽陽陽，傳統配天。\n兌 ☱ 陽陽陰，傳統配澤。\n離 ☲ 陽陰陽，傳統配火。\n震 ☳ 陽陰陰，傳統配雷。\n巽 ☴ 陰陽陽，傳統配風。\n坎 ☵ 陰陽陰，傳統配水。\n艮 ☶ 陰陰陽，傳統配山。\n坤 ☷ 陰陰陰，傳統配地。\n\n天、澤、火、雷這些是傳統上給八卦配的自然意象，方便記憶與聯想，不是這八種符號本身的定義。符號的定義只有一個：三爻的陰陽排列。",
+            "en": "As always, read from the bottom up. \"Yang yang yang\" means the bottom line is yang, the middle is yang, and the top is yang too.\n\nQian ☰ yang yang yang, traditionally paired with heaven.\nDui ☱ yang yang yin, paired with lake.\nLi ☲ yang yin yang, paired with fire.\nZhen ☳ yang yin yin, paired with thunder.\nXun ☴ yin yang yang, paired with wind.\nKan ☵ yin yang yin, paired with water.\nGen ☶ yin yin yang, paired with mountain.\nKun ☷ yin yin yin, paired with earth.\n\nHeaven, lake, fire and thunder are traditional images attached to the trigrams as memory aids and sources of association. They are not what the symbols mean by definition. The definition is only this: the arrangement of yin and yang across three lines."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "動手切出上下兩半",
+            "en": "Split a hexagram in half yourself"
+          },
+          "body": {
+            "zh-Hant": "六爻卦可以看成上下兩個三爻卦疊起來：最下面三爻（初爻、第二爻、第三爻）是下卦，最上面三爻（第四爻、第五爻、上爻）是上卦。只動下面三爻，改到的只有下卦，上卦完全不受影響；反過來也一樣。兩半各自獨立，這就是「上下卦」的意思。",
+            "en": "A six-line hexagram can be read as two trigrams stacked: the bottom three lines (first, second, third) are the lower trigram, and the top three (fourth, fifth, sixth) are the upper one. Change only the bottom three and only the lower trigram changes; the upper one is untouched, and the same holds the other way round. The two halves are independent — that is what “upper and lower trigram” means."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "哪三爻算下卦",
+            "en": "Which three lines are the lower half"
+          },
+          "body": {
+            "zh-Hant": "切法是固定的，不會因卦而異：第一、二、三爻合起來是下卦，又叫內卦；第四、五、六爻合起來是上卦，又叫外卦。\n\n要注意的是方向還是由下往上。下卦的三條線，最下面那條就是下卦自己的第一爻；上卦的三條線，第四爻就是上卦自己的第一爻。\n\n下一堂課會用到這個切法：八種下卦配八種上卦，正好排出六十四個卦。",
+            "en": "The split never varies from hexagram to hexagram. Lines one, two and three together are the lower trigram, also called the inner trigram. Lines four, five and six are the upper trigram, also called the outer trigram.\n\nNote that the direction is still bottom-up. Within the lower trigram, the bottom stroke is that trigram's own first line. Within the upper trigram, line four is that trigram's own first line.\n\nThe next lesson uses this split: eight possible lower trigrams times eight possible upper trigrams produce exactly sixty-four hexagrams."
+          }
+        }
+      ],
+      "activity": {
+        "kind": "buildHalves",
+        "heading": {
+          "zh-Hant": "動手：組出第十一卦泰",
+          "en": "Try it: build hexagram 11, Tai"
+        },
+        "instruction": {
+          "zh-Hant": "下卦挑乾、上卦挑坤，看看組出哪一卦。挑錯了下面會告訴你現在組出的是哪一卦，再調整就好。",
+          "en": "Choose Qian as the lower trigram and Kun as the upper one, and see which hexagram you get. If it is not the target, the text below tells you which hexagram you have built so far."
+        },
+        "targetHexagram": 11
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": {
+            "zh-Hant": "為什麼三條線正好排出八種組合？",
+            "en": "Why do three lines give exactly eight combinations?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "每條線有兩種可能，三條就是 2×2×2。",
+                "en": "Each line has two possibilities, so three lines give 2×2×2."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。陰陽各一種可能，疊三層就是八種，不多也不少。",
+                "en": "Correct. Each line is either yin or yang, so three layers give eight arrangements — no more, no fewer."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "因為古人挑了八個最重要的來用。",
+                "en": "Because eight were chosen as the most important ones."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "八卦不是從更多組合裡挑出來的。三條線總共就只有八種排法，一種都沒被捨棄。",
+                "en": "The eight were not selected from a larger set. Three lines allow only eight arrangements in total; none were left out."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "因為有八種自然現象：天、澤、火、雷、風、水、山、地。",
+                "en": "Because there are eight natural images: heaven, lake, fire, thunder, wind, water, mountain, earth."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "因果反了。先有八種排法，自然意象是後來配上去幫助記憶的。",
+                "en": "That reverses cause and effect. The eight arrangements come first; the natural images were attached later as memory aids."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "prompt": {
+            "zh-Hant": "一個六爻的卦，哪三爻合起來叫下卦？",
+            "en": "Which three lines of a hexagram make up the lower trigram?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "第一、第二、第三爻",
+                "en": "Lines one, two and three"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。下卦是最下面那三爻，也叫內卦；上面三爻才是上卦。",
+                "en": "Correct. The lower trigram is the bottom three lines, also called the inner trigram. The top three are the upper trigram."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "第四、第五、第六爻",
+                "en": "Lines four, five and six"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那是上卦。方向由下往上，所以最先數到的三爻在最下面。",
+                "en": "Those are the upper trigram. The counting runs upward, so the first three lines sit at the bottom."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "第二、第三、第四爻",
+                "en": "Lines two, three and four"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "上下卦的切法是固定的三三對分，不會從第二爻開始切。",
+                "en": "The split is always three and three from the bottom. It never starts at the second line."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "prompt": {
+            "zh-Hant": "有一個三爻卦，由下往上是陽、陰、陽。它是哪一個？",
+            "en": "A trigram reads yang, yin, yang from the bottom up. Which one is it?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "離 ☲",
+                "en": "Li ☲"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。離是上下兩爻為陽、中間一爻為陰，傳統配火。",
+                "en": "Correct. Li has yang above and below with a yin line in the middle, and is traditionally paired with fire."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "坎 ☵",
+                "en": "Kan ☵"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "坎正好相反：上下兩爻是陰，中間一爻是陽。",
+                "en": "Kan is the exact opposite: yin above and below with a yang line in the middle."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "乾 ☰",
+                "en": "Qian ☰"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "乾是三爻全陽，中間不會有陰爻。",
+                "en": "Qian is three yang lines. It has no yin line in the middle."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sixty-four-hexagrams-and-the-primary",
+      "order": 3,
+      "title": {
+        "zh-Hant": "六十四卦組成與本卦",
+        "en": "The Sixty-Four Hexagrams and the Primary Hexagram"
+      },
+      "summary": {
+        "zh-Hant": "八種下卦配八種上卦，就是六十四卦。你當下排出來的那一個，叫本卦。",
+        "en": "Eight lower trigrams times eight upper trigrams make sixty-four. The one you arrive at is called the primary hexagram."
+      },
+      "objectives": [
+        {
+          "zh-Hant": "說明六十四這個數字是怎麼來的。",
+          "en": "Explain where the number sixty-four comes from."
+        },
+        {
+          "zh-Hant": "從六爻的陰陽，查出它是六十四卦裡的哪一卦。",
+          "en": "Work out which of the sixty-four hexagrams a given set of six lines is."
+        },
+        {
+          "zh-Hant": "知道「本卦」指的是當下這一組六爻，還沒談任何變化。",
+          "en": "Know that the primary hexagram means the six lines as they stand, before any change is considered."
+        }
+      ],
+      "sections": [
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "八乘八等於六十四",
+            "en": "Eight times eight is sixty-four"
+          },
+          "body": {
+            "zh-Hant": "上一堂課把六爻切成上下兩個三爻卦。下卦有八種可能，上卦也有八種可能，兩邊自由搭配，就是 8×8＝64 種。\n\n換個算法也一樣：六條線各有陰陽兩種可能，2 的 6 次方剛好是 64。兩種算法得到同一個數字，因為講的是同一件事。\n\n六十四不是挑出來的吉祥數字，是窮盡所有排列之後的結果。這也表示沒有第六十五卦。",
+            "en": "The previous lesson split six lines into two trigrams. The lower trigram has eight possibilities and so does the upper one. Combine them freely and you get 8 × 8 = 64.\n\nCount it the other way and you reach the same place: six lines, each either yin or yang, is 2 to the sixth power, which is 64. Two routes, one number, because they describe the same thing.\n\nSixty-four is not an auspicious number someone picked. It is what you get when the arrangements are exhausted. It also means there is no sixty-fifth hexagram."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "排出任何一個卦",
+            "en": "Build any hexagram"
+          },
+          "body": {
+            "zh-Hant": "八個三爻卦兩兩相配，剛好六十四種組合，不多也不少，所以任何一種排法都一定落在六十四卦之中。認卦的方法是先看最下面三爻是哪一個八卦，再看上面三爻是哪一個：下卦是乾 ☰、上卦是坤 ☷，指的就是第十一卦泰；上下對調，下卦坤 ☷、上卦乾 ☰ 就變成第十二卦否，是另一個卦。",
+            "en": "Eight trigrams paired two at a time give exactly sixty-four combinations — no more, no fewer — so any arrangement of six lines is one of the sixty-four. To identify one, read the lower three lines as a trigram, then the upper three: Qian ☰ below and Kun ☷ above is hexagram 11, Tai; swap them, Kun ☷ below and Qian ☰ above, and you get hexagram 12, Pi, a different hexagram."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "「本卦」是什麼意思",
+            "en": "What \"primary hexagram\" means"
+          },
+          "body": {
+            "zh-Hant": "本卦就是你眼前這一組六爻，原原本本的樣子。它又叫原卦。\n\n這個詞之所以存在，是因為後面還會談到「變化之後的那個卦」。為了分清楚兩者，原來那個就叫本卦。在還沒談變化之前，本卦就只是這一卦，沒有別的意思。\n\n讀一卦通常從本卦開始：先看它是哪一卦、上下兩半是什麼、對應的卦辭寫了什麼。",
+            "en": "The primary hexagram is simply the six lines in front of you, exactly as they stand. It is also called the original hexagram.\n\nThe term exists because there will later be a second hexagram, the one that appears after change is applied. To keep the two apart, the first is named the primary. Before change enters the picture, the primary hexagram is just the hexagram, with no extra meaning.\n\nReading usually starts here: which hexagram is it, what are its two halves, and what does its judgement text say."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "卦序與卦名",
+            "en": "Numbering and names"
+          },
+          "body": {
+            "zh-Hant": "六十四卦在通行本裡有固定的排列順序，從第一卦乾、第二卦坤開始，到第六十三卦既濟、第六十四卦未濟結束。這個順序是傳抄下來的編排，不是從陰陽推導出來的，所以背號碼沒有特別的道理，查得到就好。\n\n每一卦有一個卦名，例如屯、蒙、需、訟。卦名多半是一個字，取自卦辭裡的關鍵詞或傳統命名，用來當這一卦的標籤。\n\n本 App 的卦庫可以依上下卦查到對應的卦，不需要背。\n\n還有一點值得先知道：六十四卦彼此是平等的，沒有哪一卦天生比較好或比較壞。有些卦名聽起來不太舒服，例如困、蹇、剝，但它們描述的是一種處境，不是對你的評價；同樣地，名字好聽的卦也不保證什麼。\n\n本 App 對部分卦標示的傾向，是編寫者讀完該卦文本之後的詮釋，會標明理由，也只是詮釋。",
+            "en": "In the received edition the sixty-four hexagrams follow a fixed sequence, beginning with 1 Qian and 2 Kun and ending with 63 Jiji and 64 Weiji. That order is an inherited editorial arrangement rather than something derived from yin and yang, so there is no particular merit in memorising the numbers. Being able to look them up is enough.\n\nEach hexagram has a name — Zhun, Meng, Xu, Song, and so on. Most names are a single character taken from a keyword in the judgement text or from traditional usage, and serve as a label for that hexagram.\n\nThe hexagram library in this app lets you find a hexagram from its two trigrams, so there is nothing to memorise.\n\nOne more thing worth knowing up front: the sixty-four hexagrams are on an equal footing, and none of them is inherently better or worse than another. Some names sound uncomfortable — Oppression, Obstruction, Splitting Apart — but they describe a situation rather than pass a verdict on you, and a pleasant-sounding name guarantees nothing either.\n\nWhere this app marks a tendency for a hexagram, that is the writer's interpretation after reading its text. The reasoning is stated, and it remains an interpretation."
+          }
+        }
+      ],
+      "activity": {
+        "kind": "buildHalves",
+        "heading": {
+          "zh-Hant": "動手：自己配一個卦",
+          "en": "Try it: pair any two trigrams"
+        },
+        "instruction": {
+          "zh-Hant": "上下卦隨你挑。不論怎麼配，組出來的一定是六十四卦其中之一，下面會即時說出那是第幾卦、叫什麼。",
+          "en": "Pick any two trigrams. Whatever you choose, the result is one of the sixty-four hexagrams, and the line below names it as you go."
+        }
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": {
+            "zh-Hant": "六十四這個數字是怎麼來的？",
+            "en": "Where does the number sixty-four come from?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "八種下卦配八種上卦，8×8。",
+                "en": "Eight lower trigrams times eight upper trigrams, 8 × 8."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。等同於六條線各有陰陽兩種可能，2 的 6 次方也是 64。",
+                "en": "Correct. It is the same as six lines each being yin or yang: 2 to the sixth power is also 64."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "八卦兩兩相加，8＋8＋⋯⋯。",
+                "en": "The trigrams added together, 8 + 8 + …"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "是相乘不是相加。每一種下卦都能配上全部八種上卦，所以是 8×8。",
+                "en": "It is multiplication, not addition. Every lower trigram can pair with all eight upper trigrams, so it is 8 × 8."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "從更多可能的卦裡挑出六十四個常用的。",
+                "en": "Sixty-four common ones were selected from a larger set."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "沒有被捨棄的卦。六條線的排列總數就是六十四，剛好全部收進來。",
+                "en": "Nothing was left out. Sixty-four is the total number of arrangements of six lines, and all of them are included."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "prompt": {
+            "zh-Hant": "「本卦」指的是什麼？",
+            "en": "What does \"primary hexagram\" refer to?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "當下這一組六爻，還沒套用任何變化。",
+                "en": "The six lines as they stand, before any change is applied."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。之所以要特別叫「本」，是為了跟變化之後的那個卦分開。",
+                "en": "Correct. It is called \"primary\" only to distinguish it from the hexagram that appears after change."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "六十四卦裡最根本的那一卦，也就是乾卦。",
+                "en": "The single most fundamental hexagram, namely Qian."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "本卦不是固定的某一卦。你排出哪一卦，那一卦就是你的本卦。",
+                "en": "The primary hexagram is not one fixed hexagram. Whichever one you arrive at is your primary hexagram."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "變化之後得到的新卦。",
+                "en": "The new hexagram you get after change."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那個叫之卦，第五堂課會談。本卦是變化之前的那一個。",
+                "en": "That is the resulting hexagram, covered in lesson five. The primary hexagram is the one before the change."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "prompt": {
+            "zh-Hant": "下卦是坤 ☷、上卦是乾 ☰，這樣足以指認出唯一一卦嗎？",
+            "en": "Kun ☷ below and Qian ☰ above — is that enough to identify a single hexagram?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "足夠。上下兩半定了，六爻就全定了。",
+                "en": "Yes. Once both halves are fixed, all six lines are fixed."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。下卦三爻加上卦三爻就是六爻，不留任何空位。下坤上乾這一卦是第十二卦否；反過來下乾上坤才是第十一卦泰。",
+                "en": "Correct. Three lines below plus three above is all six, with nothing left undetermined. Kun below and Qian above is hexagram 12, Pi; the other way round, Qian below and Kun above, is hexagram 11, Tai."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "不夠，還要知道是第幾卦。",
+                "en": "No, you also need the hexagram number."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "卦號是查出來的結果，不是另外的輸入。六爻定了，卦號就跟著定了。",
+                "en": "The number is a result you look up, not an extra input. Once the six lines are fixed, the number follows."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "不夠，還要知道哪一爻會變。",
+                "en": "No, you also need to know which line changes."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "動爻影響的是之後會變成哪一卦，不影響本卦是哪一卦。",
+                "en": "Changing lines affect which hexagram comes next; they do not affect which hexagram the primary one is."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "moving-lines",
+      "order": 4,
+      "title": {
+        "zh-Hant": "動爻",
+        "en": "Moving Lines"
+      },
+      "summary": {
+        "zh-Hant": "有些爻會被標記成「正在變」。認識動爻是怎麼產生的，以及它標記的是什麼。",
+        "en": "Some lines are marked as changing. Learn how a moving line arises and what the mark actually means."
+      },
+      "objectives": [
+        {
+          "zh-Hant": "說出六、七、八、九分別代表哪一種爻。",
+          "en": "Say which kind of line each of the numbers six, seven, eight and nine stands for."
+        },
+        {
+          "zh-Hant": "指出一次起卦裡哪幾爻是動爻。",
+          "en": "Identify which lines in a casting are the moving ones."
+        },
+        {
+          "zh-Hant": "知道動爻數量可以從零到六，沒有固定值。",
+          "en": "Know that the number of moving lines can be anywhere from zero to six."
+        }
+      ],
+      "sections": [
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "一爻不只有陰陽兩種身分",
+            "en": "A line carries more than yin or yang"
+          },
+          "body": {
+            "zh-Hant": "到目前為止，一爻只有兩種樣子：陽或陰。但在起卦的時候，每一爻其實會得到四種身分之一。\n\n除了陰陽，還多了一個資訊：這一爻是「穩定的」還是「正在變的」。穩定的叫少，正在變的叫老。四種身分就是少陽、老陽、少陰、老陰。\n\n老陽與老陰合稱動爻。動爻在卦象上通常會特別標出來，例如打一個記號，因為它會影響接下來要讀哪一段文字。",
+            "en": "So far a line has had only two forms: yang or yin. During a casting, though, each line receives one of four identities.\n\nBeyond yin and yang there is a second piece of information: whether the line is stable or in the middle of changing. A stable line is called young; a changing one is called old. That gives four identities: young yang, old yang, young yin, old yin.\n\nOld yang and old yin together are the moving lines. They are usually marked on the diagram, because they determine which passage you read next."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "六、七、八、九",
+            "en": "Six, seven, eight and nine"
+          },
+          "body": {
+            "zh-Hant": "常見的起卦方式是擲三枚銅錢，每一爻擲一次，依正反面換算成一個數字，數字只會落在六到九之間。\n\n六是老陰：本卦是陰爻，而且是動爻。\n七是少陽：本卦是陽爻，不動。\n八是少陰：本卦是陰爻，不動。\n九是老陽：本卦是陽爻，而且是動爻。\n\n記的訣竅是：單數是陽、雙數是陰；兩端的六與九是動，中間的七與八不動。本 App 的「起卦」分頁用的就是這套六到九的判定。\n\n這也解釋了上一堂課的寫法：陽爻寫成「九」、陰爻寫成「六」，正是從這四個數字來的。",
+            "en": "The common casting method is to throw three coins once per line and convert heads and tails into a number. The number always falls between six and nine.\n\nSix is old yin: a yin line in the primary hexagram, and a moving line.\nSeven is young yang: a yang line, not moving.\nEight is young yin: a yin line, not moving.\nNine is old yang: a yang line, and a moving line.\n\nA useful handle: odd numbers are yang and even numbers are yin; the outer two, six and nine, move, while the inner two, seven and eight, do not. The casting tab in this app uses exactly this six-to-nine scheme.\n\nIt also explains the convention from the earlier lesson: a yang line is written as \"nine\" and a yin line as \"six\" because these four numbers are where the names come from."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "動爻可以有幾條",
+            "en": "How many lines can move"
+          },
+          "body": {
+            "zh-Hant": "六爻各自判定，彼此不影響，所以動爻的數量從零到六都有可能。\n\n零動爻表示六爻全是七或八，整個卦是穩定的。六動爻表示六爻全是六或九，整個卦都在變。中間的一到五條是比較常見的情形。\n\n沒有「至少要有一條動爻」這種規則。零動爻是正常結果，不是失敗，也不需要重擲。",
+            "en": "Each of the six lines is determined on its own, so the number of moving lines can be anything from zero to six.\n\nZero moving lines means every line came out as a seven or an eight and the whole hexagram is stable. Six moving lines means every line came out as a six or a nine and the whole hexagram is in motion. Anywhere from one to five is the more usual case.\n\nThere is no rule that at least one line must move. Zero moving lines is a normal outcome, not a failure, and nothing needs to be thrown again."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "動爻標記的是什麼",
+            "en": "What the mark actually means"
+          },
+          "body": {
+            "zh-Hant": "值得說清楚：動爻是起卦這個程序產生的標記，它標示的是「這一爻要套用變化規則」，不是對事情本身的判斷，也不代表哪裡會發生什麼事。\n\n在讀的層面上，它的用途很具體：決定接下來要讀哪一段文字，以及要不要產生第二個卦。這兩件事分別是第六堂課與下一堂課的內容。",
+            "en": "Worth stating plainly: a moving line is a mark produced by the casting procedure. It says \"apply the change rule to this line\". It is not a judgement about the situation and it does not indicate that something will happen anywhere.\n\nAt the level of reading, its use is very concrete: it decides which passage you read next, and whether a second hexagram is produced at all. Those two topics are lesson six and the next lesson respectively."
+          }
+        }
+      ],
+      "activity": {
+        "kind": "pickLine",
+        "heading": {
+          "zh-Hant": "動手：點出動爻",
+          "en": "Try it: find the moving line"
+        },
+        "instruction": {
+          "zh-Hant": "每一爻旁邊是擲出來的數字：6 是老陰、7 是少陽、8 是少陰、9 是老陽。只有 6 與 9 會動。請點出這一卦的動爻。",
+          "en": "Next to each line is the number it was cast as: six is old yin, seven young yang, eight young yin, nine old yang. Only six and nine move. Tap the moving line of this hexagram."
+        },
+        "lineValues": [
+          7,
+          9,
+          8,
+          7,
+          8,
+          7
+        ],
+        "targetLine": 1
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": {
+            "zh-Hant": "哪兩個數字代表動爻？",
+            "en": "Which two numbers mark a moving line?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "六與九",
+                "en": "Six and nine"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。六是老陰、九是老陽，兩者都是動爻；七與八不動。",
+                "en": "Correct. Six is old yin and nine is old yang, and both move. Seven and eight do not."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "七與八",
+                "en": "Seven and eight"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "七與八是少陽與少陰，正好是不動的那兩種。動的是兩端的六與九。",
+                "en": "Seven and eight are young yang and young yin, the two that stay put. The moving ones are the outer pair, six and nine."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "六與七",
+                "en": "Six and seven"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "六確實是動爻，但七是少陽，不動。另一個動爻是九。",
+                "en": "Six does move, but seven is young yang and stays put. The other moving number is nine."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "prompt": {
+            "zh-Hant": "一次起卦六爻的數字依序是 7、8、9、8、7、8。哪幾爻是動爻？",
+            "en": "A casting gives, from the bottom up, 7, 8, 9, 8, 7, 8. Which lines move?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "只有第三爻",
+                "en": "The third line only"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。由下往上數第三個數字是 9，是老陽；其餘都是 7 或 8，不動。",
+                "en": "Correct. Counting from the bottom, the third value is 9, an old yang. Everything else is a 7 or an 8 and does not move."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "第一爻與第五爻",
+                "en": "The first and fifth lines"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那兩爻是 7，少陽，不動。7 是陽爻沒錯，但陽爻不等於動爻。",
+                "en": "Those two are 7s, young yang, and do not move. A 7 is indeed a yang line, but being yang is not the same as moving."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "沒有動爻",
+                "en": "None of them"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "第三爻的 9 就是動爻。零動爻要六個數字全部是 7 或 8。",
+                "en": "The 9 on the third line is a moving line. Zero moving lines would require all six values to be 7 or 8."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "prompt": {
+            "zh-Hant": "起卦結果一條動爻都沒有，應該怎麼辦？",
+            "en": "A casting comes out with no moving lines at all. What should you do?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "那是正常結果，照零動爻的讀法讀下去。",
+                "en": "Treat it as a normal result and read it by the zero-moving-line rule."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。零動爻只表示六爻都落在 7 或 8，有對應的讀法，不是出了錯。",
+                "en": "Correct. Zero moving lines simply means every value landed on 7 or 8. There is a reading rule for it; nothing has gone wrong."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "重新擲一次，直到出現動爻為止。",
+                "en": "Throw again until a moving line appears."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "沒有這條規則。重擲到出現想要的結果，等於是自己挑答案。",
+                "en": "There is no such rule. Re-throwing until you get the result you want amounts to picking the answer yourself."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "把最上面那一爻當成動爻。",
+                "en": "Treat the top line as a moving line."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "動爻只由數字決定，不能自己指定。沒有 6 或 9 就是沒有動爻。",
+                "en": "Moving lines are determined by the numbers alone and cannot be assigned by hand. No 6 or 9 means no moving line."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resulting-hexagram-and-comparison",
+      "order": 5,
+      "title": {
+        "zh-Hant": "之卦與變化比較",
+        "en": "The Resulting Hexagram and Reading the Change"
+      },
+      "summary": {
+        "zh-Hant": "把動爻翻成相反的，就得到第二個卦，叫之卦。本卦與之卦擺在一起看，就看得到變化。",
+        "en": "Flip every moving line and you get a second hexagram, the resulting hexagram. Set it beside the primary one and the change becomes visible."
+      },
+      "objectives": [
+        {
+          "zh-Hant": "由本卦與動爻推出之卦。",
+          "en": "Derive the resulting hexagram from the primary hexagram and its moving lines."
+        },
+        {
+          "zh-Hant": "說明零動爻時為什麼沒有之卦。",
+          "en": "Explain why there is no resulting hexagram when no line moves."
+        },
+        {
+          "zh-Hant": "知道只有動爻會翻面，不動的爻原樣照抄。",
+          "en": "Know that only moving lines flip; unmoving lines are copied across unchanged."
+        }
+      ],
+      "sections": [
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "之卦怎麼來的",
+            "en": "Where the resulting hexagram comes from"
+          },
+          "body": {
+            "zh-Hant": "規則只有一句話：把每一條動爻翻成相反的陰陽，其他爻照抄，得到的新六爻就是之卦。之卦也叫變卦。\n\n具體來說，老陽（9）在本卦是陽爻，在之卦變成陰爻；老陰（6）在本卦是陰爻，在之卦變成陽爻。少陽（7）與少陰（8）兩邊一模一樣。\n\n所以本卦與之卦的差別，剛好就是動爻的位置，一條不多、一條不少。",
+            "en": "The rule is one sentence: flip every moving line to its opposite, copy the rest across unchanged, and the six lines you end up with are the resulting hexagram, also called the changed hexagram.\n\nConcretely, an old yang (9) is a yang line in the primary hexagram and becomes a yin line in the resulting one. An old yin (6) is yin in the primary and becomes yang. A young yang (7) and a young yin (8) are identical on both sides.\n\nSo the differences between the two hexagrams are exactly the moving lines — no more and no fewer."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "動手翻一爻看看",
+            "en": "Flip a line and watch"
+          },
+          "body": {
+            "zh-Hant": "本卦是擲出來的那一卦，之卦是把動爻翻面之後的那一卦。動爻有幾個就翻幾爻，其餘各爻原封不動，沒有別的步驟。只動第二爻，得到的之卦就只有第二爻與本卦不同；如果第二爻與第五爻同時是動爻，那是兩個動爻的情況，之卦會有兩處不同。把兩卦並排看，差在哪裡一眼就看得出來。",
+            "en": "The primary hexagram is the one you cast; the resulting hexagram is what you get after flipping the moving lines. Flip as many lines as there are moving lines and leave everything else alone — there is no further step. If only the second line moves, the resulting hexagram differs from the primary one in that line only; if the second and the fifth both move, two lines differ. Set the two side by side and the difference is plain."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "零動爻就沒有之卦",
+            "en": "No moving line means no second hexagram"
+          },
+          "body": {
+            "zh-Hant": "如果六爻都不動，照規則翻完之後，新的六爻會跟原來一模一樣。這種情況下之卦等於本卦，等於沒有第二個卦可以比。\n\n這不是缺漏。它表達的就是「這一卦目前沒有在變」，讀的時候只看本卦即可。\n\n反過來，六爻全動的時候，之卦與本卦每一爻都相反，兩者差最多。",
+            "en": "If no line moves, applying the rule produces six lines identical to the ones you started with. The resulting hexagram equals the primary hexagram, which is to say there is no second hexagram to compare.\n\nThis is not a gap in the system. It expresses exactly that nothing is currently changing, and the reading simply stays with the primary hexagram.\n\nAt the other extreme, when all six lines move, every line of the resulting hexagram is the opposite of the primary one and the two are as far apart as they can be."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "兩卦擺在一起看什麼",
+            "en": "What to look at when you compare them"
+          },
+          "body": {
+            "zh-Hant": "有了兩個卦之後，常見的看法是把它們當成一個過程的兩端：本卦是目前的樣子，之卦是變化若走到底會成為的樣子。\n\n值得提醒的是，這是一種詮釋上的說法，不是這套符號系統自己宣稱的事。符號層面確定的只有：之卦是本卦翻掉動爻之後的結果。\n\n至於兩個卦之間要讀哪一段文字、誰為主誰為輔，有固定的規則，但不同流派的規則不完全一樣。下一堂課先認識文字本身，再談取用規則。\n\n還有一個常被弄混的地方：之卦是推導出來的，不是另外再起一次卦。你不必為了得到之卦而重擲一次，它完全由本卦與動爻決定，兩個人拿到同一組數字，一定推出同一個之卦。\n\n也因為如此，之卦不帶新的資訊。它把「哪幾爻在變」這件事換一種方式呈現出來，讓變化看得見，如此而已。",
+            "en": "Once you have two hexagrams, a common way to look at them is as two ends of one process: the primary hexagram is how things stand, and the resulting hexagram is what they would become if the change ran its course.\n\nIt is worth noting that this is an interpretive reading, not something the symbol system itself asserts. At the level of symbols, only one thing is certain: the resulting hexagram is the primary hexagram with its moving lines flipped.\n\nAs for which passage to read across the two, and which takes precedence, there are fixed rules — but they are not identical across schools. The next lesson looks at the texts themselves before turning to those rules.\n\nOne more point that is easy to confuse: the resulting hexagram is derived, not cast again. You do not throw a second time to obtain it. It follows entirely from the primary hexagram and its moving lines, so two people given the same six numbers will always arrive at the same resulting hexagram.\n\nFor the same reason it carries no new information. It restates which lines are moving in a different form, making the change visible — and that is all."
+          }
+        }
+      ],
+      "activity": {
+        "kind": "predictChange",
+        "heading": {
+          "zh-Hant": "動手：判斷之卦是哪一卦",
+          "en": "Try it: work out the resulting hexagram"
+        },
+        "instruction": {
+          "zh-Hant": "本卦在左邊，動爻標成紅色。先想清楚那一爻翻面之後會變成哪一卦，再從下面選一個。選了才會顯示之卦與原因。",
+          "en": "The primary hexagram is on the left with the moving line in red. Work out which hexagram you get when that one line flips, then pick from the list below. The resulting hexagram and the reason appear only after you choose."
+        },
+        "lineValues": [
+          7,
+          9,
+          7,
+          7,
+          7,
+          7
+        ],
+        "candidateHexagrams": [
+          13,
+          44,
+          14,
+          2
+        ]
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": {
+            "zh-Hant": "本卦六爻由下往上是陽陽陽陽陽陽，只有第二爻是動爻。之卦是什麼？",
+            "en": "The primary hexagram is six yang lines and only the second line moves. What is the resulting hexagram?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "陽陰陽陽陽陽",
+                "en": "Yang, yin, yang, yang, yang, yang"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。只有動爻那一條翻面，其餘五爻照抄。",
+                "en": "Correct. Only the moving line flips; the other five are copied across unchanged."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "陰陰陰陰陰陰",
+                "en": "Six yin lines"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那是六爻全動的結果。這一題只有一條動爻，其他五爻不會跟著翻。",
+                "en": "That is what you would get if all six lines moved. Here only one line moves, and the other five do not follow it."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "陽陽陽陽陽陽，跟本卦一樣",
+                "en": "Six yang lines, the same as the primary hexagram"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "有動爻就一定會變。兩卦完全相同只會發生在零動爻的時候。",
+                "en": "If a line moves, something must change. The two hexagrams are identical only when no line moves."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "prompt": {
+            "zh-Hant": "為什麼零動爻的時候沒有之卦可以看？",
+            "en": "Why is there no resulting hexagram to look at when no line moves?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "沒有爻要翻，推出來的六爻跟本卦一模一樣。",
+                "en": "There is nothing to flip, so the six lines you derive are identical to the primary hexagram."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。規則照樣成立，只是結果跟本卦重合，所以沒有第二個卦可比。",
+                "en": "Correct. The rule still applies; it just lands back on the primary hexagram, so there is no second hexagram to compare."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "因為零動爻的起卦無效，要重來。",
+                "en": "Because a casting with no moving lines is invalid and must be redone."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "零動爻是正常結果，有自己的讀法，不需要重來。",
+                "en": "Zero moving lines is a normal outcome with its own reading rule. Nothing needs to be redone."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "因為零動爻要改看上下卦互換後的卦。",
+                "en": "Because with no moving lines you swap the two trigrams instead."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "沒有這條規則。之卦只有一種產生方式：翻動爻。",
+                "en": "No such rule exists. There is only one way a resulting hexagram is produced: by flipping the moving lines."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "prompt": {
+            "zh-Hant": "本卦與之卦之間，哪些爻會不一樣？",
+            "en": "Which lines differ between the primary and the resulting hexagram?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "剛好就是動爻那幾條，其餘完全相同。",
+                "en": "Exactly the moving lines; everything else is identical."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。這也可以反過來用：看兩卦哪幾爻不同，就知道動爻在哪裡。",
+                "en": "Correct. This also works in reverse: spot which lines differ and you know where the moving lines are."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "上卦三爻會變，下卦不會。",
+                "en": "The upper trigram changes and the lower one does not."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "變化跟上下卦無關。動爻可能落在任何位置，包括全部在下卦。",
+                "en": "Change has nothing to do with the two halves. Moving lines can fall anywhere, including entirely in the lower trigram."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "每一爻都會變，因為整個卦都變了。",
+                "en": "Every line changes, because the whole hexagram changed."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "只有六爻全動時才會這樣。不動的爻一律原樣照抄。",
+                "en": "That only happens when all six lines move. Unmoving lines are always copied across as they are."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "judgment-and-line-statements",
+      "order": 6,
+      "title": {
+        "zh-Hant": "卦辭與爻辭",
+        "en": "Judgements and Line Statements"
+      },
+      "summary": {
+        "zh-Hant": "每一卦有一段卦辭，每一爻有一段爻辭。認識這些文字是什麼，以及該讀哪一段。",
+        "en": "Each hexagram has a judgement; each line has its own statement. Learn what these texts are and which one to read."
+      },
+      "objectives": [
+        {
+          "zh-Hant": "分辨卦辭與爻辭。",
+          "en": "Tell a judgement apart from a line statement."
+        },
+        {
+          "zh-Hant": "知道《易傳》是後人寫的註解，不是原本的經文。",
+          "en": "Know that the Ten Wings are later commentary, not the original text."
+        },
+        {
+          "zh-Hant": "依動爻數量，說出常見的取文規則讀哪一段。",
+          "en": "State which passage the common convention selects, based on how many lines move."
+        }
+      ],
+      "sections": [
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "經文有兩種",
+            "en": "Two kinds of text"
+          },
+          "body": {
+            "zh-Hant": "一卦附帶的原文分兩種。\n\n卦辭：整個卦一段，講這一卦整體。例如第十七卦隨的卦辭是「隨：元亨。利貞。无咎。」六十四卦就有六十四段。\n\n爻辭：六爻各一段，分別講每一爻。例如隨卦初九的爻辭是「初九：官有渝，貞吉。出門交有功。」六十四卦乘六爻，共三百八十四段。\n\n另外，只有乾卦與坤卦多一段，分別叫「用九」與「用六」，六爻全動時才用得到。全部加起來是四百五十段原文。",
+            "en": "The original text attached to a hexagram comes in two kinds.\n\nThe judgement: one passage for the whole hexagram, speaking about it as a whole. The judgement of hexagram 17, Following, reads \"Following. Supreme success. Perseverance furthers. No blame.\" There are sixty-four of them.\n\nLine statements: one passage per line, each speaking about that line. The statement for the bottom line of Following reads \"Nine in the first place: the standard is changing. Perseverance brings good fortune. To go out of the door with results brings achievement.\" Sixty-four hexagrams times six lines gives three hundred and eighty-four.\n\nIn addition, Qian and Kun each carry one extra passage, used only when all six lines move. Altogether that makes four hundred and fifty passages of original text."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "原文與註解要分開",
+            "en": "Keep the text and its commentary apart"
+          },
+          "body": {
+            "zh-Hant": "翻開任何一本易經，除了卦辭爻辭，還會看到彖傳、象傳、文言等文字。這些合稱《易傳》，傳統上又叫十翼，是後世替經文寫的註解，成書時間比卦爻辭晚。\n\n差別很實際：卦辭爻辭是被解釋的對象，彖傳象傳是其中一種解釋。把兩者混在一起讀，容易把某一家的講法當成原文本身說的話。\n\n本 App 的卦庫把原文、古註與現代白話解說分成不同欄位，就是為了讓這條界線看得見。",
+            "en": "Open any edition and you will find, alongside the judgements and line statements, texts called the Tuan, the Xiang, the Wenyan and others. Together these are the Ten Wings: commentary written later to explain the earlier text.\n\nThe distinction matters in practice. The judgements and line statements are what is being explained; the Tuan and Xiang are one way of explaining them. Reading the two as a single block makes it easy to mistake one school's account for what the original text says.\n\nThe hexagram library in this app keeps the original text, the classical commentary and the modern plain-language explanation in separate fields, so that the line stays visible."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "該讀哪一段",
+            "en": "Which passage to read"
+          },
+          "body": {
+            "zh-Hant": "一卦有卦辭加六段爻辭，不是每次都全部讀。常見的做法是依動爻數量決定主讀哪一段。下面是朱熹《易學啟蒙》整理的一套規則，也是本 App 採用的：\n\n零動爻：讀本卦卦辭。\n一動爻：讀本卦那一爻的爻辭。\n二動爻：讀本卦那兩爻的爻辭，以上面那爻為主。\n三動爻：讀本卦與之卦的卦辭，以本卦為主。\n四動爻：讀之卦兩條不動爻的爻辭，以下面那爻為主。\n五動爻：讀之卦唯一那條不動爻的爻辭。\n六動爻：讀之卦卦辭；若本卦是乾或坤，則改讀用九或用六。\n\n可以看出一個傾向：動得少的時候看本卦，動得多的時候重心移到之卦。",
+            "en": "A hexagram carries a judgement plus six line statements, and you do not read all of them every time. The usual approach is to let the number of moving lines decide which passage is the main one. The scheme below was set out by Zhu Xi in the Yixue Qimeng, and is the one this app follows:\n\nNo moving line: read the judgement of the primary hexagram.\nOne: read that line's statement in the primary hexagram.\nTwo: read both line statements in the primary hexagram, with the upper one as the main text.\nThree: read the judgements of both hexagrams, with the primary one as the main text.\nFour: read the statements of the two unmoving lines in the resulting hexagram, with the lower one as the main text.\nFive: read the statement of the single unmoving line in the resulting hexagram.\nSix: read the judgement of the resulting hexagram — unless the primary hexagram is Qian or Kun, in which case read their extra passage.\n\nOne tendency is visible: when little moves you stay with the primary hexagram, and when a lot moves the weight shifts to the resulting one."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "規則不只一套",
+            "en": "There is more than one scheme"
+          },
+          "body": {
+            "zh-Hant": "上面那套規則流傳很廣，但它是一套整理，不是唯一被公認的讀法。歷代有不同的取文主張，例如一律先看卦辭、或以某一特定爻為主，各有各的依據。\n\n本 App 選定一套並且標明出處，是為了讓每次顯示的結果可以被檢查，而不是主張其他讀法是錯的。你如果照另一套規則讀，不會比較不正統。\n\n重點是：知道自己用的是哪一套，而且前後一致。",
+            "en": "The scheme above is widely transmitted, but it is one systematisation rather than the single accepted reading. Other positions exist across the tradition — always starting from the judgement, or giving precedence to one particular line — each with its own reasoning.\n\nThis app picks one scheme and names its source so that every displayed result can be checked. That is not a claim that other readings are wrong. If you follow a different scheme, you are not being less orthodox.\n\nWhat matters is knowing which scheme you are using, and staying consistent with it."
+          }
+        }
+      ],
+      "activity": {
+        "kind": "choose",
+        "heading": {
+          "zh-Hant": "動手：這句話在講整卦，還是某一爻？",
+          "en": "Try it: whole hexagram, or one line?"
+        },
+        "instruction": {
+          "zh-Hant": "卦辭講整卦，爻辭講其中一爻。下面兩句都出自乾卦，分別屬於哪一種？",
+          "en": "The judgment speaks for the whole hexagram; a line statement speaks for one line. Both passages below come from Qian — which is which?"
+        },
+        "questions": [
+          {
+            "id": "a1",
+            "prompt": {
+              "zh-Hant": "「元亨利貞」寫在乾卦的最前面。它講的是什麼？",
+              "en": "“Yuan heng li zhen” stands at the head of Qian. What does it speak for?"
+            },
+            "choices": [
+              {
+                "id": "a",
+                "text": {
+                  "zh-Hant": "整卦的卦辭",
+                  "en": "The judgment for the whole hexagram"
+                },
+                "correct": true,
+                "explanation": {
+                  "zh-Hant": "對。寫在卦名後面、六爻之前的那一句就是卦辭，講的是整卦。",
+                  "en": "Correct. The passage that follows the name and precedes the six lines is the judgment, and it speaks for the hexagram as a whole."
+                }
+              },
+              {
+                "id": "b",
+                "text": {
+                  "zh-Hant": "初九那一爻的爻辭",
+                  "en": "The statement for the first line"
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "爻辭一定跟著某一爻的名字出現，例如「初九」後面那一句。這一句前面沒有爻名。",
+                  "en": "A line statement always appears under a line name, such as “nine in the first place.” This passage has no line name before it."
+                }
+              },
+              {
+                "id": "c",
+                "text": {
+                  "zh-Hant": "之卦的卦辭",
+                  "en": "The judgment of the resulting hexagram"
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "之卦要有動爻才有。這一句出現在乾卦本身的開頭，與動爻無關。",
+                  "en": "A resulting hexagram exists only when there are moving lines. This passage stands at the head of Qian itself and has nothing to do with moving lines."
+                }
+              }
+            ]
+          },
+          {
+            "id": "a2",
+            "prompt": {
+              "zh-Hant": "「潛龍勿用」寫在乾卦「初九」底下。它講的是什麼？",
+              "en": "“The dragon lies hidden; do not act” appears under “nine in the first place” in Qian. What does it speak for?"
+            },
+            "choices": [
+              {
+                "id": "a",
+                "text": {
+                  "zh-Hant": "初九那一爻",
+                  "en": "That one line, the first"
+                },
+                "correct": true,
+                "explanation": {
+                  "zh-Hant": "對。前面有爻名「初九」，所以這一句只講最下面那一爻。",
+                  "en": "Correct. The line name comes first, so the passage speaks only for the bottom line."
+                }
+              },
+              {
+                "id": "b",
+                "text": {
+                  "zh-Hant": "整卦",
+                  "en": "The whole hexagram"
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "講整卦的是卦辭，寫在六爻之前，前面不會有爻名。",
+                  "en": "The judgment speaks for the whole hexagram; it comes before the six lines and carries no line name."
+                }
+              },
+              {
+                "id": "c",
+                "text": {
+                  "zh-Hant": "乾卦與坤卦兩卦",
+                  "en": "Both Qian and Kun"
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "爻辭屬於它所在的那一卦的那一爻，不跨卦。",
+                  "en": "A line statement belongs to one line of one hexagram; it does not span two hexagrams."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": {
+            "zh-Hant": "「爻辭」指的是什麼？",
+            "en": "What is a line statement?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "六爻各自一段的原文，一卦有六段。",
+                "en": "A passage attached to each of the six lines — six per hexagram."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。六十四卦乘六爻共三百八十四段，另有乾用九、坤用六兩段。",
+                "en": "Correct. Sixty-four hexagrams times six lines gives three hundred and eighty-four, plus the two extra passages in Qian and Kun."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "整個卦一段的原文。",
+                "en": "The single passage covering the whole hexagram."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那是卦辭，一卦只有一段。爻辭是逐爻各一段。",
+                "en": "That is the judgement, one per hexagram. Line statements come one per line."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "後人替經文寫的註解。",
+                "en": "Commentary written later to explain the text."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那是《易傳》，例如彖傳、象傳。爻辭屬於被註解的經文本身。",
+                "en": "That describes the Ten Wings, such as the Tuan and Xiang. Line statements belong to the text being commented on."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "prompt": {
+            "zh-Hant": "彖傳與象傳在易經裡是什麼地位？",
+            "en": "What is the standing of the Tuan and Xiang commentaries?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "後世寫的註解，是對經文的一種解釋。",
+                "en": "Later commentary — one way of explaining the original text."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。它們合稱《易傳》，成書晚於卦爻辭，引用時要跟原文分開。",
+                "en": "Correct. Together they form the Ten Wings, written after the judgements and line statements, and should be cited separately from them."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "最原始的經文，卦辭爻辭反而是後來補的。",
+                "en": "The oldest layer, with the judgements and line statements added later."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "順序相反。卦辭爻辭在前，《易傳》是替它們作的註。",
+                "en": "The order is the other way around. The judgements and line statements came first, and the Ten Wings were written about them."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "現代學者的白話翻譯。",
+                "en": "A modern plain-language translation."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "它們是古代文獻，本身也是文言。白話解說是另外一層，再晚得多。",
+                "en": "They are ancient documents, themselves in classical Chinese. Plain-language explanation is a separate and much later layer."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "prompt": {
+            "zh-Hant": "依本 App 採用的取文規則，只有一條動爻時主讀哪一段？",
+            "en": "Under the scheme this app follows, which passage is the main text when exactly one line moves?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "本卦那一條動爻的爻辭。",
+                "en": "The statement of that moving line in the primary hexagram."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。動得少的時候重心在本卦，而且正好指向動的那一爻。",
+                "en": "Correct. When little moves the weight stays on the primary hexagram, and it points precisely at the line that moved."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "之卦的卦辭。",
+                "en": "The judgement of the resulting hexagram."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那是六動爻（且本卦非乾坤）才用的讀法。一動爻還停在本卦。",
+                "en": "That applies when all six lines move and the primary hexagram is neither Qian nor Kun. With one moving line you stay on the primary hexagram."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "本卦的卦辭。",
+                "en": "The judgement of the primary hexagram."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那是零動爻的讀法。有一條動爻時，規則要你讀那一爻的爻辭。",
+                "en": "That is the zero-moving-line case. With one moving line, the scheme sends you to that line's statement."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "how-to-read-and-its-limits",
+      "order": 7,
+      "title": {
+        "zh-Hant": "解讀方法與適用限制",
+        "en": "How to Read It, and Where It Stops"
+      },
+      "summary": {
+        "zh-Hant": "原文、古註、現代解說是三層不同的東西。也談這套方法做不到什麼。",
+        "en": "The original text, the classical commentary and the modern explanation are three different layers. Also: what this method cannot do."
+      },
+      "objectives": [
+        {
+          "zh-Hant": "分出原文、古註、現代解說三層，知道哪一層是誰說的。",
+          "en": "Separate original text, classical commentary and modern explanation, and know who is speaking in each."
+        },
+        {
+          "zh-Hant": "說出兩種常見的解讀取向，並知道兩者都不是唯一正解。",
+          "en": "Name two common interpretive approaches and know that neither is the single correct one."
+        },
+        {
+          "zh-Hant": "說出這套方法的適用限制。",
+          "en": "State the limits of what this method applies to."
+        }
+      ],
+      "sections": [
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "三層文字，不要混在一起",
+            "en": "Three layers, kept apart"
+          },
+          "body": {
+            "zh-Hant": "讀一卦的時候，眼前的文字其實來自三個不同的時代與身分。\n\n第一層是原文：卦辭與爻辭，年代最早，用的是當時的語彙與句法，有些字今天已經沒有共識的解釋。\n\n第二層是古註：《易傳》以及歷代注疏，是古人替原文作的解釋。它權威、影響大，但仍然是解釋。\n\n第三層是現代解說：包括本 App 寫的白話說明與生活化的例子。它的作用是讓今天的人讀得懂前兩層，本身不是經文。\n\n把三層分開最大的好處是：你隨時知道某一句話是原文這麼寫，還是某個人這麼想。",
+            "en": "When you read a hexagram, the words in front of you come from three different periods and three different kinds of speaker.\n\nThe first layer is the original text: the judgements and line statements. It is the oldest, uses the vocabulary and syntax of its own time, and contains characters whose reading is still not agreed upon.\n\nThe second layer is classical commentary: the Ten Wings and the exegesis of later centuries. It is authoritative and influential, but it is still commentary.\n\nThe third layer is modern explanation, including the plain-language notes and everyday examples written for this app. Its job is to make the first two layers readable today. It is not scripture.\n\nThe main benefit of keeping them apart is that you always know whether a sentence is what the text says or what somebody thought about it."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "兩種常見的取向",
+            "en": "Two common approaches"
+          },
+          "body": {
+            "zh-Hant": "歷代解易大致有兩種取向，傳統上叫象數與義理。\n\n象數偏重符號本身：爻位、上下卦、陰陽的配置、數字關係，從結構推出說法。\n\n義理偏重文字的道理：把卦爻辭讀成關於處境與行為的論述，重點在它主張什麼。\n\n兩者不是互斥的，很多人兩邊都用。重要的是：它們是兩種取向，不是一對一錯。看到一個說法時，可以先問它是從哪個取向來的，再判斷有沒有說服力。\n\n同樣地，同一條爻辭在不同註家手上會有不同解釋。這是常態，不是有人出了錯。",
+            "en": "Across the tradition, two broad approaches recur, usually named image-and-number and meaning-and-principle.\n\nThe first works from the symbols themselves: line positions, the two trigrams, how yin and yang are arranged, numerical relations — conclusions drawn from structure.\n\nThe second works from the sense of the words: it reads the judgements and line statements as claims about situations and conduct, and asks what they argue for.\n\nThe two are not exclusive, and many readers use both. What matters is that they are approaches, not a right one and a wrong one. When you meet a particular claim, it helps to ask which approach it comes from before weighing how convincing it is.\n\nIn the same way, one line statement can be read differently by different commentators. That is the normal state of affairs, not a sign that someone made a mistake."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "這套方法做不到的事",
+            "en": "What this method cannot do"
+          },
+          "body": {
+            "zh-Hant": "說清楚限制，比誇大用途更有用。\n\n它不預測未來。卦象是依規則產生的符號，文字是古代文獻，兩者都沒有關於日後事實的資訊。\n\n它不保證結果。任何「照著做就會如何」的說法，都不是這些文字能支持的。\n\n它不能取代專業判斷。醫療、法律、財務、心理這些領域的問題，要找有資格的人處理。\n\n它也不是運勢的度量。本 App 對某些卦標示的傾向，是編寫者對文本的詮釋，不是對你的狀況的評估。\n\n扣掉這些之後，剩下的是它真正能做的：提供一組固定的題目與角度，逼你把問題講清楚，並從一段兩千多年來反覆被討論的文字裡，找到自己原本沒想到的那一面。",
+            "en": "Stating the limits is more useful than overselling the uses.\n\nIt does not predict the future. The diagram is a symbol produced by a rule, and the text is an ancient document. Neither contains information about later facts.\n\nIt does not guarantee outcomes. Any claim of the form \"do this and such-and-such will follow\" is not something these texts can support.\n\nIt is not a substitute for professional judgement. Medical, legal, financial and psychological questions belong with qualified people.\n\nNor is it a measure of fortune. Where this app marks a tendency for a hexagram, that is the writer's interpretation of the text, not an assessment of your situation.\n\nSubtract all of that and what remains is what it genuinely offers: a fixed set of questions and angles that forces you to state your problem clearly, and a body of text argued over for more than two thousand years in which you may find an aspect you had not considered."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "讀一卦的實際步驟",
+            "en": "A practical reading routine"
+          },
+          "body": {
+            "zh-Hant": "一個可重複的順序：\n\n一、先確認符號層的事實：本卦是哪一卦、上下卦是什麼、哪幾爻是動爻、之卦是哪一卦。這一層沒有詮釋空間，對就是對。\n\n二、依取文規則找出要讀的那一段原文，並留意自己用的是哪一套規則。\n\n三、讀原文，不懂的地方再看古註與白話解說，心裡記得那是解釋。\n\n四、把讀到的東西當成問題，不是答案：這段話指出的是什麼處境？跟我的狀況哪裡像、哪裡不像？\n\n第四步最容易被跳過，卻是整件事唯一有用的部分。",
+            "en": "A routine you can repeat:\n\nFirst, settle the facts at the level of symbols: which hexagram is primary, what its two trigrams are, which lines move, and which hexagram results. There is no room for interpretation here; it is either right or wrong.\n\nSecond, use the selection scheme to find the passage you are meant to read, and stay aware of which scheme you are using.\n\nThird, read the original text, and turn to the commentary and the plain-language notes where it is opaque — remembering that those are explanations.\n\nFourth, treat what you have read as a question rather than an answer: what situation is this passage pointing at? Where does my own case resemble it, and where does it not?\n\nThe fourth step is the easiest to skip and the only part that does any work."
+          }
+        }
+      ],
+      "activity": {
+        "kind": "choose",
+        "heading": {
+          "zh-Hant": "動手：挑出站得住腳的解讀",
+          "en": "Try it: pick the defensible reading"
+        },
+        "instruction": {
+          "zh-Hant": "同一個卦象，有些說法說得過去，有些已經越過這套方法做得到的範圍。挑出合理的那一個，並看看另外兩個錯在哪裡。",
+          "en": "For the same figure, some readings hold up and some go past what this method can do. Pick the one that holds up, and see where the other two go wrong."
+        },
+        "questions": [
+          {
+            "id": "b1",
+            "prompt": {
+              "zh-Hant": "卦象是否（上乾下坤）。下面哪一個說法比較站得住腳？",
+              "en": "The figure is Pi (Qian above, Kun below). Which statement holds up?"
+            },
+            "choices": [
+              {
+                "id": "a",
+                "text": {
+                  "zh-Hant": "這個排列描述的是上下不交的狀態，可以想想自己哪裡沒講通。",
+                  "en": "The arrangement describes a state without exchange; it is worth asking where communication has stopped."
+                },
+                "correct": true,
+                "explanation": {
+                  "zh-Hant": "對。這是把卦象當成一種結構的描述，再回到自己的處境去想，沒有宣稱未來會怎樣。",
+                  "en": "Correct. This treats the figure as a description of a structure and turns it back on your own situation, without claiming anything about the future."
+                }
+              },
+              {
+                "id": "b",
+                "text": {
+                  "zh-Hant": "這代表接下來三個月一定會失敗。",
+                  "en": "It means the next three months will fail."
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "這是把象的描述當成對未來的預測。卦象描述的是結構，不是時程，也不是結果。",
+                  "en": "This turns a description into a forecast. The figure describes a structure, not a timetable and not an outcome."
+                }
+              },
+              {
+                "id": "c",
+                "text": {
+                  "zh-Hant": "這代表我不該再努力了。",
+                  "en": "It means I should stop trying."
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "這是把判斷權交給卦。解讀可以提供角度，決定仍然是自己的。",
+                  "en": "This hands the decision to the figure. A reading can offer a perspective; the decision stays yours."
+                }
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "prompt": {
+              "zh-Hant": "有人說「我抽到這一卦，所以這筆投資一定賺」。問題出在哪裡？",
+              "en": "Someone says: “I drew this hexagram, so this investment is sure to pay off.” What is wrong with that?"
+            },
+            "choices": [
+              {
+                "id": "a",
+                "text": {
+                  "zh-Hant": "把描述當成結果保證。",
+                  "en": "It turns a description into a guarantee."
+                },
+                "correct": true,
+                "explanation": {
+                  "zh-Hant": "對。這套方法不保證結果，也不該拿來決定財務、醫療或法律上的事。",
+                  "en": "Correct. This method guarantees no outcome, and it should not be used to decide financial, medical or legal matters."
+                }
+              },
+              {
+                "id": "b",
+                "text": {
+                  "zh-Hant": "卦抽錯了，應該重抽。",
+                  "en": "The casting was wrong; it should be redone."
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "問題不在抽得對不對。即使流程完全正確，也推不出「一定賺」這種結論。",
+                  "en": "The problem is not whether the casting was done correctly. Even a flawless casting cannot support a claim like “sure to pay off.”"
+                }
+              },
+              {
+                "id": "c",
+                "text": {
+                  "zh-Hant": "應該改問別的問題。",
+                  "en": "A different question should have been asked."
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "換個問法不會改變這件事：任何問法都得不到結果保證。",
+                  "en": "Rewording the question changes nothing: no wording yields a guaranteed outcome."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": {
+            "zh-Hant": "本 App 對某一卦寫的白話解說，屬於哪一層？",
+            "en": "The plain-language explanation this app writes for a hexagram belongs to which layer?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "現代解說，是幫助理解的詮釋。",
+                "en": "Modern explanation — an interpretation written to aid understanding."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。它不是經文，也不是古註，引用時要說明是誰寫的。",
+                "en": "Correct. It is neither the original text nor classical commentary, and should be attributed when quoted."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "原文，只是換成今天的字。",
+                "en": "The original text, just rendered in today's words."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "白話解說會補上原文沒有的判斷與例子，不是逐字對譯。兩者要分開看。",
+                "en": "Plain-language notes add judgements and examples the text does not contain. They are not a word-for-word rendering, and should be kept separate."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "古註，跟彖傳象傳同一層。",
+                "en": "Classical commentary, on the same level as the Tuan and Xiang."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "古註是古代文獻，白話解說是現代寫的，時代與身分都不同。",
+                "en": "Classical commentary is an ancient document; the plain-language notes were written now. The period and the speaker both differ."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "prompt": {
+            "zh-Hant": "同一條爻辭，兩位註家的解釋不一樣。最合適的理解是什麼？",
+            "en": "Two commentators read the same line statement differently. What is the most reasonable way to take that?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "這是常態。原文簡短，本來就容許不同解讀。",
+                "en": "It is normal. The text is terse and admits more than one reading."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。可以比較兩種說法各自的依據，但不需要預設其中一個是錯的。",
+                "en": "Correct. You can compare the grounds each gives without assuming that one of them must be wrong."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "一定有一個人說錯了，要找出正確答案。",
+                "en": "One of them must be mistaken, and the correct answer should be found."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "有些字句至今沒有共識的解釋。要求單一正解，反而會把某一家當成原文。",
+                "en": "Some passages have no agreed reading even now. Demanding a single answer tends to promote one school into the status of the text itself."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "表示這條爻辭沒有意義，可以略過。",
+                "en": "It means the statement is meaningless and can be skipped."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "有歧義不等於沒有內容。多種解釋通常是因為這段話同時能對應不同處境。",
+                "en": "Ambiguity is not emptiness. Multiple readings usually arise because the passage fits more than one situation."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "prompt": {
+            "zh-Hant": "下面哪一件事，是這套方法明確做不到的？",
+            "en": "Which of these is this method explicitly unable to do?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "告訴你某件事日後會不會發生。",
+                "en": "Tell you whether something will happen later."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。卦象是依規則產生的符號，文字是古代文獻，都不含關於未來事實的資訊。",
+                "en": "Correct. The diagram is a symbol produced by a rule and the text is an ancient document; neither contains information about future facts."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "提供一組固定的角度，逼你把問題講清楚。",
+                "en": "Give you a fixed set of angles that forces you to state your problem clearly."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "這正是它做得到的部分。限制在於預測與保證，不在於提供思考材料。",
+                "en": "That is precisely what it can do. The limits lie in prediction and guarantees, not in supplying material to think with."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "讓你認識一段流傳兩千多年的文獻。",
+                "en": "Introduce you to a body of text transmitted for over two thousand years."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "閱讀與理解文獻本身沒有問題。做不到的是從中取得關於未來的事實。",
+                "en": "Reading and understanding the text is perfectly within reach. What is out of reach is extracting facts about the future from it."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "worked-example",
+      "order": 8,
+      "title": {
+        "zh-Hant": "完整案例練習",
+        "en": "A Worked Example from Start to Finish"
+      },
+      "summary": {
+        "zh-Hant": "把前七堂課串起來：從六個數字一路走到讀出一段原文。",
+        "en": "Put the first seven lessons together: from six numbers all the way to a passage of original text."
+      },
+      "objectives": [
+        {
+          "zh-Hant": "由六個數字排出本卦，並說出上下卦。",
+          "en": "Turn six numbers into a primary hexagram and name its two trigrams."
+        },
+        {
+          "zh-Hant": "找出動爻並推出之卦。",
+          "en": "Find the moving lines and derive the resulting hexagram."
+        },
+        {
+          "zh-Hant": "依取文規則讀出正確的那一段原文。",
+          "en": "Use the selection scheme to arrive at the right passage."
+        }
+      ],
+      "sections": [
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "這次的案例",
+            "en": "The case"
+          },
+          "body": {
+            "zh-Hant": "假設一次起卦，六爻由下往上得到的數字是：\n\n初爻 9，第二爻 8，第三爻 8，第四爻 7，第五爻 7，上爻 8。\n\n接下來四個步驟都只是查規則，沒有任何需要靈感的地方。建議先自己做一遍，再看下面的答案。",
+            "en": "Suppose a casting produces these six numbers, read from the bottom up:\n\nfirst line 9, second line 8, third line 8, fourth line 7, fifth line 7, top line 8.\n\nThe four steps that follow are all a matter of applying rules; none of them calls for inspiration. Try them yourself before reading the answers below."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "第一步：排出本卦",
+            "en": "Step one: build the primary hexagram"
+          },
+          "body": {
+            "zh-Hant": "單數是陽、雙數是陰，所以由下往上是：陽、陰、陰、陽、陽、陰。\n\n下卦是初爻到第三爻：陽陰陰，也就是震 ☳。\n上卦是第四爻到上爻：陽陽陰，也就是兌 ☱。\n\n震下兌上，查出來是第十七卦隨。它的卦辭是「隨：元亨。利貞。无咎。」\n\n到這裡為止，還沒有用到任何關於變化的資訊。",
+            "en": "Odd numbers are yang and even numbers are yin, so from the bottom up the lines read: yang, yin, yin, yang, yang, yin.\n\nThe lower trigram is lines one to three — yang, yin, yin — which is Zhen ☳.\nThe upper trigram is lines four to six — yang, yang, yin — which is Dui ☱.\n\nZhen below and Dui above is hexagram 17, Following. Its judgement reads \"Following. Supreme success. Perseverance furthers. No blame.\"\n\nUp to this point nothing about change has been used."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "第二步：自己排一次",
+            "en": "Step two: build it yourself"
+          },
+          "body": {
+            "zh-Hant": "第一步擲出來的六個數字是 9、8、8、7、7、8，由下往上排。9 與 7 是陽，8 與 6 是陰，所以六爻由下而上是陽、陰、陰、陽、陽、陰。最下面三爻合起來是震 ☳，上面三爻是兌 ☱，震下兌上就是第十七卦隨。六個數字裡只有最下面那個 9 是老陽，所以這一卦只有一個動爻。",
+            "en": "The six numbers from the first step are 9, 8, 8, 7, 7, 8, read from the bottom up. Nine and seven are yang, eight and six are yin, so the lines are yang, yin, yin, yang, yang, yin from the bottom. The lower three form Zhen ☳ and the upper three form Dui ☱; Zhen below Dui is hexagram 17, Sui. Of the six numbers only the bottom nine is an old yang, so this hexagram has exactly one moving line."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "第三步：動爻與之卦",
+            "en": "Step three: moving lines and the resulting hexagram"
+          },
+          "body": {
+            "zh-Hant": "回頭看那六個數字：9、8、8、7、7、8。動爻是 6 與 9，這裡只有初爻的 9，所以動爻只有一條，在最下面。\n\n把初爻翻成陰爻，其餘五爻照抄，得到：陰、陰、陰、陽、陽、陰。\n\n下卦變成坤 ☷，上卦仍是兌 ☱。坤下兌上是第四十五卦萃。\n\n所以本卦是隨，之卦是萃，差別只在初爻。",
+            "en": "Look back at the six numbers: 9, 8, 8, 7, 7, 8. Moving lines are sixes and nines, and here the only one is the 9 on the bottom line. So exactly one line moves, and it is the lowest.\n\nFlip that line to yin and copy the rest across: yin, yin, yin, yang, yang, yin.\n\nThe lower trigram becomes Kun ☷ while the upper one stays Dui ☱. Kun below and Dui above is hexagram 45, Gathering.\n\nSo the primary hexagram is Following, the resulting hexagram is Gathering, and the only difference is the bottom line."
+          }
+        },
+        {
+          "kind": "text",
+          "heading": {
+            "zh-Hant": "第四步：讀哪一段",
+            "en": "Step four: which passage to read"
+          },
+          "body": {
+            "zh-Hant": "動爻剛好一條，依第六堂課的規則，主讀本卦那一爻的爻辭。本卦是隨，動的是初爻，而初爻是陽爻，所以要找的是隨卦的初九。\n\n隨卦初九的爻辭是：「初九：官有渝，貞吉。出門交有功。」\n\n注意這一步要讀的是本卦隨的爻辭，不是之卦萃的。之卦在這個情況下提供的是變化的方向，不是主讀的對象。\n\n讀到這裡，符號層的工作就做完了。接下來是第七堂課講的那件事：把這段話當成問題，去對照自己的處境，而不是當成答案抄下來。",
+            "en": "Exactly one line moves, so by the scheme in lesson six the main text is that line's statement in the primary hexagram. The primary hexagram is Following, the moving line is the bottom one, and that line is yang — so we want the \"nine in the first place\" of Following.\n\nIt reads: \"Nine in the first place: the standard is changing. Perseverance brings good fortune. To go out of the door with results brings achievement.\"\n\nNote that this step reads the statement from Following, the primary hexagram, not from Gathering. In this case the resulting hexagram indicates the direction of change; it is not the main text.\n\nThat completes the work at the level of symbols. What follows is the point of lesson seven: treat the passage as a question to hold against your own situation, rather than as an answer to copy down."
+          }
+        }
+      ],
+      "activity": {
+        "kind": "compare",
+        "heading": {
+          "zh-Hant": "動手：把這個案例走完",
+          "en": "Try it: finish the worked example"
+        },
+        "instruction": {
+          "zh-Hant": "這是第一步擲出來的六個數字排成的卦。左邊是本卦，右邊是之卦，紅色那一爻是動爻。看完之後回答下面這一題。",
+          "en": "This is the hexagram built from the six numbers cast in the first step. The primary hexagram is on the left, the resulting one on the right, and the moving line is marked in red. Then answer the question below."
+        },
+        "lineValues": [
+          9,
+          8,
+          8,
+          7,
+          7,
+          8
+        ],
+        "questions": [
+          {
+            "id": "c1",
+            "prompt": {
+              "zh-Hant": "這一卦只有一個動爻。依本 App 採用的朱熹變占法，應該讀哪一段？",
+              "en": "This hexagram has exactly one moving line. Under the Zhu Xi method this app follows, which passage do you read?"
+            },
+            "choices": [
+              {
+                "id": "a",
+                "text": {
+                  "zh-Hant": "讀本卦那一個動爻的爻辭。",
+                  "en": "The statement of that moving line in the primary hexagram."
+                },
+                "correct": true,
+                "explanation": {
+                  "zh-Hant": "對。只有一個動爻時，讀的是本卦那一爻的爻辭，之卦只作為變化的參照。",
+                  "en": "Correct. With a single moving line you read that line’s statement in the primary hexagram; the resulting hexagram only shows where the change leads."
+                }
+              },
+              {
+                "id": "b",
+                "text": {
+                  "zh-Hant": "讀本卦的卦辭。",
+                  "en": "The judgment of the primary hexagram."
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "沒有動爻時才只讀本卦卦辭。這裡有一個動爻，要讀那一爻的爻辭。",
+                  "en": "The judgment alone is read when there are no moving lines. Here one line moves, so you read that line’s statement."
+                }
+              },
+              {
+                "id": "c",
+                "text": {
+                  "zh-Hant": "讀之卦的卦辭。",
+                  "en": "The judgment of the resulting hexagram."
+                },
+                "correct": false,
+                "explanation": {
+                  "zh-Hant": "之卦的卦辭在動爻很多的情況才會用到。一個動爻時讀的是本卦那一爻。",
+                  "en": "The resulting hexagram’s judgment comes into play when many lines move. With one moving line you read that line in the primary hexagram."
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "quiz": [
+        {
+          "id": "q1",
+          "prompt": {
+            "zh-Hant": "數字 9、8、8、7、7、8（由下往上），本卦的下卦是哪一個？",
+            "en": "For the values 9, 8, 8, 7, 7, 8 read bottom-up, what is the lower trigram?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "震 ☳",
+                "en": "Zhen ☳"
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。9、8、8 是陽、陰、陰，由下往上正是震。",
+                "en": "Correct. 9, 8, 8 gives yang, yin, yin from the bottom up, which is Zhen."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "艮 ☶",
+                "en": "Gen ☶"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "艮是陰陰陽，陽爻在最上面。這裡的陽爻在最下面，所以是震。",
+                "en": "Gen is yin, yin, yang, with the yang line on top. Here the yang line is at the bottom, which makes it Zhen."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "兌 ☱",
+                "en": "Dui ☱"
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "兌是這一卦的上卦（7、7、8＝陽陽陰），不是下卦。",
+                "en": "Dui is this hexagram's upper trigram (7, 7, 8 = yang, yang, yin), not the lower one."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q2",
+          "prompt": {
+            "zh-Hant": "同一組數字，之卦是怎麼來的？",
+            "en": "With the same six values, how is the resulting hexagram obtained?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "初爻的 9 是動爻，把它翻成陰爻，下卦就從震變坤。",
+                "en": "The 9 on the bottom line moves; flip it to yin and the lower trigram goes from Zhen to Kun."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。坤下兌上是第四十五卦萃，與本卦隨只差初爻。",
+                "en": "Correct. Kun below and Dui above is hexagram 45, Gathering, differing from Following only in the bottom line."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "把六爻全部翻面。",
+                "en": "Flip all six lines."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "只有動爻會翻。這組數字裡只有初爻是 9，其餘是 7 或 8，不動。",
+                "en": "Only moving lines flip. Here only the bottom line is a 9; the rest are 7s and 8s and stay put."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "把上卦與下卦對調。",
+                "en": "Swap the upper and lower trigrams."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "沒有這條規則。之卦只由翻動爻產生。",
+                "en": "No such rule exists. The resulting hexagram comes only from flipping the moving lines."
+              }
+            }
+          ]
+        },
+        {
+          "id": "q3",
+          "prompt": {
+            "zh-Hant": "這個案例最後要讀的是哪一段？",
+            "en": "In this worked example, which passage is finally read?"
+          },
+          "choices": [
+            {
+              "id": "a",
+              "text": {
+                "zh-Hant": "本卦隨的初九爻辭。",
+                "en": "The \"nine in the first place\" statement of Following, the primary hexagram."
+              },
+              "correct": true,
+              "explanation": {
+                "zh-Hant": "對。一條動爻就讀本卦那一爻的爻辭；動的是初爻、且是陽爻，所以是初九。",
+                "en": "Correct. One moving line means reading that line's statement in the primary hexagram; the moving line is the bottom one and it is yang, hence \"nine in the first place\"."
+              }
+            },
+            {
+              "id": "b",
+              "text": {
+                "zh-Hant": "之卦萃的卦辭。",
+                "en": "The judgement of Gathering, the resulting hexagram."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "那是六動爻時的讀法。只有一條動爻時，主讀的仍是本卦。",
+                "en": "That is the six-moving-line case. With a single moving line the main text stays with the primary hexagram."
+              }
+            },
+            {
+              "id": "c",
+              "text": {
+                "zh-Hant": "本卦隨的卦辭。",
+                "en": "The judgement of Following, the primary hexagram."
+              },
+              "correct": false,
+              "explanation": {
+                "zh-Hant": "卦辭是零動爻才主讀的。這裡有一條動爻，規則指向那一爻的爻辭。",
+                "en": "The judgement is the main text only when no line moves. Here one line moves, and the scheme points to that line's statement."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
