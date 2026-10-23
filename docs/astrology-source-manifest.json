@@ -15,7 +15,19 @@
     "Core/Calculation/AspectCalculator.swift": "2a33a93812c89eab0bbdc996070eec161f7ffed40661d3e91f70ff8b56458ee5",
     "Shared/Calculation/ChartContract.swift": "eb23bbfda3748495bbe1268a6209ef9eed104c0563563512f3bc68e51816d1e3",
     "Shared/Calculation/OrbTable.swift": "8957b2d54794d29816de48f364c97b783f6641c7aeef1263b9fa0a1a49f2ba52",
-    "Tests/Golden/benchmark-100.json": "ddad8daaa10b1c547b60f4b07c1bba5d0894167c3d5c69caeab3a5cf306cd5f1"
+    "Tests/Golden/benchmark-100.json": "ddad8daaa10b1c547b60f4b07c1bba5d0894167c3d5c69caeab3a5cf306cd5f1",
+    "Core/Calculation/TransitCalculator.swift": "4eef84521a2d0cb034cfa6ca2e722c92b4fd3c22e71abbc37d7a263200ba7b38",
+    "Core/Calculation/DailyAdvisor.swift": "19ac02cfe7b7eebe102921b025c57b04dfe3ad4371fca43ad6240040dedf28be",
+    "Shared/Calculation/TransitContract.swift": "9000bb9f1e37e2c04ffcc48cc1018ce7527ac541793fc3550318c3b6b7affcc3",
+    "Shared/Content/Rules.swift": "5d24709d120b9ea80376ef73362611d74a67218e8222c489f00ab6f869502a32",
+    "App/Today/TodayView.swift": "442535f6680e00dac774247a8e2e62c1653507791ec2951b23d980d92e912643",
+    "App/Forecast/ForecastView.swift": "cb2edef4b71f7c3722b4a6568f494793df6ddbbbcb671c5730001daa9e8b998e",
+    "App/Chart/ChartSummaryView.swift": "f425423dc8090dd2f7ea71e2e3a68e2ed7a96569bc12d3ecdce562f054a9470f",
+    "App/Resources/Rules/rules-trial-v1.json": "94044acdfbfbc39a836445a25420365011f94d0e76af48500ca99619b6c028b0",
+    "App/Resources/Rules/rules-batch-a-v1.json": "e606154c5622bf94938f4cf052d3e9bdb6132e3ece0797922981723ee98fec80",
+    "App/Resources/Rules/rules-batch-b-v1.json": "916e5d72e22ec11b3d0fe460619caa9359a0521fdc51becad49c5871367650b7",
+    "App/Resources/Rules/rules-batch-c-v1.json": "1d98fd2ee3f99359c78097947ceb9281374f672c17c9147a5624944d78c635e4",
+    "App/Resources/Rules/fallbacks-v1.json": "0253f067000da74a6ad354a8eb331f4f628e2d4b30e0f9eef873cb413025c7f8"
   },
   "sourceProject": "ShilaiAstrology",
   "webEngine": {

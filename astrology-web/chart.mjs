@@ -16,7 +16,7 @@ function wallParts(utc,zone){
   const parts=Object.fromEntries(zoneFormatter(zone).formatToParts(new Date(utc)).filter(x=>x.type!=='literal').map(x=>[x.type,Number(x.value)]));
   return parts;
 }
-function localToUtc(year,month,day,hour,minute,zone){
+export function localToUtc(year,month,day,hour,minute,zone){
   const wall=Date.UTC(year,month-1,day,hour,minute);
   const offsets=new Set();
   for(let h=-48;h<=48;h+=6){
@@ -52,6 +52,7 @@ function position(astronomy,body,date){
   return {body,longitude:value,retrograde:separation(value,later)<0};
 }
 const allPositions=(astronomy,date)=>bodies.map(body=>position(astronomy,body,date));
+export const positionsAt=allPositions;
 function trueObliquity(tt){
   const t=tt/36525,meanArcseconds=21.448-t*(46.8150+t*(0.00059-t*0.001813));
   const omega=(125.04452-1934.136261*t)*rad;

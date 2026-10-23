@@ -9,7 +9,7 @@
 | ASC、MC、十二宮與極緯 fallback | `Core/Calculation/EarthOrientation.swift`、`Houses.swift`、`NatalChartCalculator.swift` | A1 | 100 組原生 golden 的角度與宮頭對照通過；極緯改整宮制並顯示原因 |
 | 五大相位與原有容許度 | `Core/Calculation/AspectCalculator.swift`、`Shared/Calculation/OrbTable.swift` | A1 | 已按原生五類與 8°／6°／4° 容許度計算；部分盤逐時標記待確認 |
 | 未知出生時間的部分盤 | `Core/Calculation/PartialChartCalculator.swift` | A1 | 整個出生地當地日取 25 點；上升、天頂和宮位保持空白；跨星座顯示雙候選。原生黃經與當日 DST 測例通過 |
-| 本命解讀與今日／七日行運 | 原生規則與呈現器 | A2 | 待完成，不在 A1 預覽中冒充解讀 |
+| 本命導讀、今日與七日行運 | `App/Chart/ChartSummaryView.swift`、`Core/Calculation/TransitCalculator.swift`、`DailyAdvisor.swift`、`Shared/Content/Rules.swift` | A2 | 原 App 本命閱讀引導與日月上升事實已接；103 條核准規則及原文輸出、5 條未核准規則排除；完整／部分盤各 8 天的行運候選與四主題逐句對照原生編譯器通過。日期切換與 390px 手機操作通過 |
 | 36 堂課、圖解、練習與筆記 | 原生課程清單 | A3 | 待完成 |
 | 人物管理、合盤與分享 | 原生人物簿與合盤 | A4 | 待完成 |
 | 搜尋入口與個人網站公開 | 網站規格 | A5 | A1 預覽保留 noindex，待全部驗收後公開 |

@@ -1,4 +1,5 @@
 import {calculateChart,signs} from './chart.mjs';
+import {renderReading} from './reading-ui.mjs';
 
 const $=selector=>document.querySelector(selector);
 const cities={
@@ -87,6 +88,7 @@ function render(chart,place){
     row.textContent=`${names[aspect.first][0]} × ${names[aspect.second][0]}　${aspectNames[aspect.kind]}　${aspect.orb.toFixed(1)}°${aspect.unconfirmed?' · 待確認':''}`;
     aspectRoot.append(row);
   }
+  renderReading(chart);
   $('#results-title').focus({preventScroll:true});$('#results').scrollIntoView({behavior:'smooth',block:'start'});
 }
 $('#chart-form').addEventListener('submit',event=>{
