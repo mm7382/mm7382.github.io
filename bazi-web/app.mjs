@@ -3,6 +3,7 @@ import { calculateBaziReading } from './reading.mjs';
 import {createBaziProfileBook} from './profiles.mjs';
 import {compareBaziCharts} from './synastry.mjs';
 import {createStudyStore} from './learn/study.mjs';
+import {buildDailyQuiz,buildMonthlyReport,createPracticeLog,tenGodLabel} from './monthly.mjs';
 
 const $ = id => document.getElementById(id);
 const phaseEnglish = {木:'Wood',火:'Fire',土:'Earth',金:'Metal',水:'Water'};
@@ -14,6 +15,8 @@ let browserStorage;
 try {browserStorage=window.localStorage;} catch {browserStorage=blockedStorage;}
 const profileBook=createBaziProfileBook(browserStorage);
 const studyStore=createStudyStore(browserStorage);
+const practiceLog=createPracticeLog(browserStorage);
+const quizChoices=new Map();
 const node = (tag, className, value) => {
   const element = document.createElement(tag);
   if (className) element.className = className;
@@ -108,6 +111,52 @@ function renderReading() {
     }
     plain.append(themes);
 
+    const quizPanel=$('quiz-reading');quizPanel.replaceChildren();
+    const quiz=buildDailyQuiz(data.today,date);
+    if(quiz) {
+      appendText(quizPanel,'p','TODAY / ONE QUESTION','eyebrow');
+      appendText(quizPanel,'h3',lang==='zh'?'今日練習：先猜，再看推導。':"Today's practice: have a guess first.");
+      appendText(quizPanel,'p',lang==='zh'?`今天的日干「${quiz.dayStem}」對你的日主「${quiz.dayMaster}」是什麼十神？`:`Which Ten God is today's stem ${quiz.dayStem} to your Day Master ${quiz.dayMaster}?`,'reading-lead');
+      const answered=practiceLog.answer(date)!==undefined;
+      const buttons=node('div','quiz-options');
+      for(const option of quiz.options) {
+        const button=node('button','quiz-option',tenGodLabel(option,lang));button.type='button';button.disabled=answered;
+        if(answered&&option===quiz.answer) button.classList.add('correct');
+        button.addEventListener('click',()=>{
+          practiceLog.record(date,option===quiz.answer);quizChoices.set(date,option);
+          renderReading();showStorageWarning();
+        });buttons.append(button);
+      }
+      quizPanel.append(buttons);
+      if(answered) {
+        const choice=quizChoices.get(date);
+        appendText(quizPanel,'p',choice===quiz.answer?(lang==='zh'?'答對了。':'Correct.'):
+          (lang==='zh'?`正確答案是${tenGodLabel(quiz.answer,lang)}。`:`The answer is ${tenGodLabel(quiz.answer,lang)}.`),'reading-note');
+        appendText(quizPanel,'p',lang==='zh'?`因為日干「${quiz.dayStem}」相對日主「${quiz.dayMaster}」的關係是${tenGodLabel(quiz.answer,lang)}。`:
+          `The stem ${quiz.dayStem} relates to your Day Master ${quiz.dayMaster} as ${tenGodLabel(quiz.answer,lang)}.`,'reading-note');
+        const lesson=node('a','text-link',lang==='zh'?'去看「十神怎麼推導」這一堂 ↗':'See how Ten Gods are worked out ↗');
+        lesson.href='./learn/P09/';quizPanel.append(lesson);
+      } else appendText(quizPanel,'p',lang==='zh'?'先想一下再按，答錯也會看到完整推導。':"Take a guess first. You'll see how it's worked out either way.",'reading-note');
+    }
+
+    const monthly=$('monthly-reading');monthly.replaceChildren();
+    const lessonsRead=studyStore.entries().filter(item=>item.read).length;
+    const report=buildMonthlyReport(data.today.dayMaster,data.monthContext,window.FortuneEngine,practiceLog,lessonsRead);
+    if(report) {
+      appendText(monthly,'p','MONTHLY / PRACTICE & REVIEW','eyebrow');
+      appendText(monthly,'h3',lang==='zh'?`${report.month.month} 月・${report.month.ganZhi}`:`Month ${report.month.month} · ${report.month.ganZhi}`);
+      appendText(monthly,'p',report.headline[lang],'reading-lead');
+      appendText(monthly,'p',report.meaning[lang]);
+      appendText(monthly,'h4',lang==='zh'?'這個月，試試三件小事。':'Three small things to try this month.');
+      const list=node('ol','monthly-practices');
+      for(const practice of report.practices[lang]) appendText(list,'li',practice);
+      monthly.append(list);
+      appendText(monthly,'h4',lang==='zh'?'上月回顧':'Last month');
+      appendText(monthly,'p',report.review[lang]);
+      appendText(monthly,'p',lang==='zh'?'取當月 15 日正午的月柱，避開節氣交界；這是傳統分類與原 App 的練習提案，並非事件預測。':
+        'The Month Pillar is taken at noon on the 15th, away from solar-term boundaries. This is a learning prompt, not a prediction.','reading-note');
+    }
+
     const luck = $('luck-reading'); luck.replaceChildren();
     if (data.luck?.pillars?.length) {
       appendText(luck,'p','02 / TEN-YEAR CYCLES','eyebrow');
@@ -173,7 +222,7 @@ function renderReading() {
     $('reading').hidden=false;
     $('reading-error').textContent=error instanceof Error?error.message:'解讀暫時無法顯示。';
     $('reading-error').hidden=false;
-    for (const id of ['plain-reading','luck-reading','today-reading','seven-reading']) $(id).replaceChildren();
+    for (const id of ['plain-reading','luck-reading','quiz-reading','monthly-reading','today-reading','seven-reading']) $(id).replaceChildren();
   }
 }
 
@@ -183,7 +232,7 @@ function peopleMessage(value) {
 }
 
 function showStorageWarning() {
-  const warning=[profileBook.warning,studyStore.warning].filter(Boolean).join(' ');
+  const warning=[profileBook.warning,studyStore.warning,practiceLog.warning].filter(Boolean).join(' ');
   $('storage-warning').textContent=warning;
   $('storage-warning').hidden=!warning;
 }
@@ -289,10 +338,10 @@ $('friend-form').addEventListener('submit',event=>{
   } catch(error) {peopleMessage(error.message);}
 });
 $('clear-all').addEventListener('click',()=>{
-  if (!window.confirm('確定清除這個瀏覽器裡八字的全部人物、課程筆記與複習紀錄嗎？這個動作無法復原。')) return;
-  profileBook.clear();studyStore.clearAll();activeProfile=null;activeRecordId=null;
+  if (!window.confirm('確定清除這個瀏覽器裡八字的全部人物、課程筆記、複習與每日練習紀錄嗎？這個動作無法復原。')) return;
+  profileBook.clear();studyStore.clearAll();practiceLog.clearAll();quizChoices.clear();activeProfile=null;activeRecordId=null;
   $('birth-form').reset();$('results').hidden=true;$('reading').hidden=true;$('comparison').hidden=true;
-  renderPeople();peopleMessage(profileBook.persistent&&studyStore.persistent?'已清除八字的人物與學習資料。':'清除未完全成功，請查看儲存提示。');
+  renderPeople();peopleMessage(profileBook.persistent&&studyStore.persistent&&practiceLog.persistent?'已清除八字的人物與學習資料。':'清除未完全成功，請查看儲存提示。');
 });
 
 $('reading-date').value = new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'});

@@ -29,11 +29,16 @@ def shell(lang, title, body, *, lesson_id=None, page='index'):
     translated = lang_url(lesson_id, alternate) if lesson_id else '/bazi-web/learn/' + ('review/' if page == 'review' else '') + ('en/' if alternate == 'en' else '')
     id_attr = f' data-lesson-id="{e(lesson_id)}"' if lesson_id else ''
     lead = 'All 20 existing lessons, free to read.' if english else '原 App 的 20 堂課，全部免費閱讀。'
+    canonical = f'https://mm7382.github.io{lang_url(lesson_id,lang) if lesson_id else "/bazi-web/learn/" + ("review/" if page == "review" else "") + ("en/" if english else "")}'
+    indexing = '<meta name="robots" content="noindex, nofollow">' if page == 'review' else '<meta name="robots" content="index, follow">'
+    alternate_url = f'https://mm7382.github.io{translated}'
     return f'''<!doctype html>
 <html lang="{'en' if english else 'zh-Hant'}"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow"><title>{e(title)}｜{'Shilai Bazi' if english else '時來八字'}</title>
-<meta name="description" content="{e(lead)}"><link rel="icon" href="/bazi/icon.png">
+{indexing}<title>{e(title)}｜{'Shilai Bazi' if english else '時來八字'}</title>
+<meta name="description" content="{e(lead)}"><link rel="canonical" href="{e(canonical)}">
+<link rel="alternate" hreflang="{'zh-Hant' if english else 'en'}" href="{e(alternate_url)}">
+<link rel="icon" href="/bazi/icon.png">
 <link rel="stylesheet" href="/bazi-web/learn/style.css"><script type="module" src="/bazi-web/learn/learn.mjs"></script>
 </head><body data-page="{e(page)}"{id_attr} data-language="{lang}">
 <a class="skip" href="#main">{'Skip to content' if english else '跳到主要內容'}</a>

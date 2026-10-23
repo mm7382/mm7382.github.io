@@ -28,5 +28,9 @@
 .reading-tip{font:500 19px/1.7 var(--serif);margin:10px 0}.seven-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:35px}
 .day-card{padding:30px;border:1px solid var(--line);background:#f9f7f1}.day-date{font-size:11px;letter-spacing:.13em;color:var(--bronze)}.day-card h4{margin:12px 0;font-size:24px}.day-card p{margin:0 0 18px}.day-card small{color:var(--muted);line-height:1.7}
 .reading-caution{max-width:850px;color:var(--muted);font-size:13px;line-height:1.8;margin-top:35px}
-@media(max-width:760px){.reading-heading{grid-template-columns:1fr}.reading-heading .eyebrow{grid-column:auto}.reading-controls{grid-template-columns:1fr}.theme-grid,.advice-grid,.source-grid,.seven-grid{grid-template-columns:1fr}.reading-row{grid-template-columns:1fr;gap:4px}.reading-row h4{margin:0}.cycle>p,.cycle-years{padding-left:0}.cycle-year{grid-template-columns:1fr;gap:1px}.day-card{padding:22px}}
+.quiz-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:830px;margin:25px 0}
+.quiz-option{min-height:54px;padding:12px 18px;text-align:left;font:inherit;color:var(--ink);background:#f9f7f1;border:1px solid var(--line);cursor:pointer}
+.quiz-option:hover,.quiz-option:focus-visible{border-color:var(--bronze);outline-offset:2px}.quiz-option.correct{background:#eae2d2;border-color:var(--bronze)}
+.quiz-option:disabled{cursor:default}.monthly-practices{max-width:900px;padding-left:24px;line-height:1.85}.monthly-practices li{padding:8px 0}
+@media(max-width:760px){.reading-heading{grid-template-columns:1fr}.reading-heading .eyebrow{grid-column:auto}.reading-controls{grid-template-columns:1fr}.theme-grid,.advice-grid,.source-grid,.seven-grid,.quiz-options{grid-template-columns:1fr}.reading-row{grid-template-columns:1fr;gap:4px}.reading-row h4{margin:0}.cycle>p,.cycle-years{padding-left:0}.cycle-year{grid-template-columns:1fr;gap:1px}.day-card{padding:22px}}
 @media(prefers-reduced-motion:reduce){.reading-room *{scroll-behavior:auto}}
