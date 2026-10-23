@@ -1,0 +1,11 @@
+# 時來・紫微 — 免費線上紫微斗數命盤與完整課程
+
+> Shilai Zi Wei is a free learning tool by Michael. Enter a Gregorian or lunar birth date and Taiwan birth time to explore the twelve-palace chart. No account or payment.
+
+- [免費排盤與導讀](https://mm7382.github.io/ziwei-web/): Twelve palaces, Life and Body palaces, major and minor stars, transformations, six original-app reading topics, yearly/monthly layers and seven daily guides.
+- [三十六堂完整課程](https://mm7382.github.io/ziwei-web/learn/): All 24 core lessons and 12 workshops from the original app, with English pages, diagrams, exercises, notes and review.
+- [English course index](https://mm7382.github.io/ziwei-web/learn/en/)
+
+If birth time is unknown, the chart uses a clearly marked provisional noon time. It is for learning the layout and must not be treated as a certain personal chart. The app does not make event predictions or compatibility scores. Calculations run in the browser. Saved people, notes and progress stay in that browser, and can be cleared on the site. Personal records are not published or indexed.
+
+Original lesson text is self-reviewed and visibly marked as awaiting the project's final batch sign-off. Classical passages are identified separately from this project's plain-language explanations and exercises. Third-party calculation licenses are listed on the app page.

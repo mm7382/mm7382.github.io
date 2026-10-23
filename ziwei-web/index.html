@@ -2,9 +2,15 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>時來・紫微｜命盤展廳預覽</title>
-  <meta name="description" content="從十二宮、命身宮、星曜和四化開始，學習看自己的紫微斗數命盤。">
+  <meta name="robots" content="index, follow">
+  <title>免費線上紫微斗數排盤與 36 堂完整課程｜時來・紫微</title>
+  <meta name="description" content="免費線上紫微斗數排盤：國曆、農曆與時辰，十二宮、命身宮、星曜、四化、六項導讀、人物對照與 36 堂完整課程。免登入，資料只留在瀏覽器。">
+  <link rel="canonical" href="https://mm7382.github.io/ziwei-web/">
+  <meta property="og:type" content="website"><meta property="og:url" content="https://mm7382.github.io/ziwei-web/">
+  <meta property="og:title" content="免費線上紫微斗數排盤與完整課程｜時來・紫微">
+  <meta property="og:description" content="排出十二宮命盤，免費閱讀 36 堂完整紫微課程。">
+  <meta property="og:image" content="https://mm7382.github.io/ziwei/icon.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebApplication","name":"時來・紫微","alternateName":"Shilai Zi Wei","url":"https://mm7382.github.io/ziwei-web/","applicationCategory":"EducationalApplication","operatingSystem":"Any web browser","isAccessibleForFree":true,"inLanguage":["zh-Hant","en"],"author":{"@type":"Person","name":"Michael"},"description":"免費紫微斗數十二宮排盤、原 App 導讀與三十六堂完整課程"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"紫微網頁版要登入或付費嗎？","acceptedAnswer":{"@type":"Answer","text":"不用。排盤、導讀、人物對照與三十六堂完整課程都免費使用。"}},{"@type":"Question","name":"不知道出生時辰可以排紫微命盤嗎？","acceptedAnswer":{"@type":"Answer","text":"可以先看標明午時暫定的探索盤，但命宮、身宮與星曜可能隨真正時辰改變，不能當成確定命盤。"}},{"@type":"Question","name":"我的生日與筆記會上傳嗎？","acceptedAnswer":{"@type":"Answer","text":"不會。計算在瀏覽器完成，主動儲存的人物與筆記只留在目前瀏覽器。"}}]}]}</script>
   <link rel="icon" href="/ziwei/icon.png"><link rel="stylesheet" href="./style.css">
   <script src="./assets/engine.js" defer></script><script type="module" src="./app.mjs"></script>
 </head>
@@ -28,6 +34,7 @@
       <section class="people-room" id="people-room" aria-labelledby="people-title"><div class="people-heading"><div><p class="eyebrow">05 / YOUR CHARTS</p><h3 id="people-title">把重要的盤，<br>留在自己手裡。</h3><p>人物與出生資料只儲存在這個瀏覽器。先儲存自己的盤，再替朋友排盤並儲存，就能互看兩張盤的宮位位置。</p></div><div class="save-person"><label for="profile-name">這張盤的暱稱</label><input id="profile-name" maxlength="40" placeholder="例如：我、朋友 A"><button type="button" id="save-profile">儲存目前命盤 ↗</button></div></div><p id="people-message" class="people-message" role="status"></p><div id="people-list" class="people-list"></div><div id="comparison" class="comparison" hidden><p class="eyebrow">TWO CHARTS / ONE TABLE</p><h4 id="comparison-title"></h4><p id="comparison-note"></p><div id="comparison-facts"></div><details class="share-preview"><summary>查看要分享的文字</summary><p>只包含暱稱與宮位，不包含生日與出生時間。確認內容後才會複製；網頁不會自動傳送。</p><pre id="share-text"></pre><button type="button" id="copy-share">複製這段文字</button></details></div><div class="data-actions"><button type="button" id="clear-all">清除紫微人物、命盤與學習紀錄</button><span>清除前會再次確認。這只影響紫微網頁版，不會碰其他 App。</span></div></section>
     </div></section>
     <section class="method wrap" id="method"><p class="eyebrow">03 / HOW TO READ THIS</p><h2>先看盤面，<br>再談理解。</h2><div class="method-copy"><p>盤面地支位置固定：巳午未申在上排，十二宮名稱依出生資料轉動。點開任一宮，可以查看主星、輔星、雜曜、四化、亮度、大限年齡與四組輔助標記。</p><p>不知道出生時辰時，網頁會沿用原 App 的午時暫定做法。這張盤只供探索，不是確定命盤；命宮、身宮和星曜可能隨實際時辰改變。補上資料後請重新排盤。</p><p>結果是傳統曆法與星曜位置，不是對事件、吉凶或適合時辰的保證。<span class="english">A chart shows placements, not a verdict about your future.</span></p><a href="./assets/THIRD_PARTY_NOTICES.txt">計算核心與第三方授權</a></div></section>
+    <section class="method wrap" aria-labelledby="faq-title"><p class="eyebrow">FAQ / BEFORE YOU BEGIN</p><h2 id="faq-title">開始之前，<br>你可能想知道。</h2><div class="method-copy"><h3>需要登入或付費嗎？</h3><p>不用。排盤、六項導讀、人物對照和原 App 的 36 堂完整課程都免費。<span class="english">No sign-up or payment. The full course is open here.</span></p><h3>不知道出生時辰，還能看嗎？</h3><p>可以先用「不知道」排午時暫定盤，當作認識盤面的練習。確定時辰後再重排，因為命宮、身宮與星曜都可能改變。<span class="english">You can explore a provisional chart, then recalculate when you know your birth time.</span></p><h3>生日和筆記會上傳嗎？</h3><p>不會。命盤在瀏覽器計算；你主動儲存的人物、筆記和練習紀錄只留在這個瀏覽器，也能在頁面上清除。<span class="english">Your details and notes stay in this browser, and you can clear them here.</span></p><p><a href="./learn/">閱讀完整 36 堂課 ↗</a></p></div></section>
   </main>
   <footer class="footer"><div class="wrap"><span>MICHAEL · 時來紫微</span><span>免費學習 · 命理與民俗參考 / Free to explore</span><a href="/">回作品總覽 ↗</a></div></footer>
 </body>
