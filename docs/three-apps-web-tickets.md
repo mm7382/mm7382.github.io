@@ -53,7 +53,7 @@ Type: AFK。Status: integrated, published and verified (`7030147`; 網站與個�
 
 ## Z1：輸入出生資料並取得紫微盤
 
-Type: AFK。Status: proposed。Blocked by: B5。
+Type: AFK。Status: integrated and verified (`cb25c45`; 12 宮、13 種時辰、農曆與暫定午時對照，390px 手機操作通過)。Blocked by: B5。
 
 以紫微原 App 來源建立獨立輸入、十二宮盤面、命身宮、星曜／四化與資訊展開，不直接採用舊八字原型當紫微結果。
 
