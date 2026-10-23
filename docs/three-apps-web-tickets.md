@@ -69,7 +69,7 @@ Type: AFK。Status: integrated and verified (`ce3c55c`; 六項分析與七日導
 
 ## Z3：學習完整紫微教材並記下筆記
 
-Type: AFK。Status: proposed。Blocked by: Z1。
+Type: AFK。Status: integrated and verified (`4b296fe`; 36 堂、156 段、72 題轉出，75 個課程／索引／筆記頁，中英文、390px 與瀏覽器進度流程通過)。Blocked by: Z1。
 
 轉入正式課程清單全部教材、星曜文化說明、圖解、例子、已有練習、個人盤觀察與閱讀筆記。
 
