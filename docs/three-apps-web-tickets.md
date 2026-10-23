@@ -1,7 +1,7 @@
 # 三款免費網頁版工作單
 
 日期：2026-10-23。
-狀態：規模已核准，以下切片待確認；未開始功能實作。
+狀態：規模與以下 15 項切片均已核准；依序實作中。
 規格：[three-apps-web-spec.md](three-apps-web-spec.md)。
 順序：B1–B5 → Z1–Z5 → A1–A5。全部 AFK；既有整批授權涵蓋驗證通過後逐款公開。
 
@@ -11,7 +11,7 @@
 
 ## B1：輸入出生資料並取得八字命盤
 
-Type: AFK。Status: proposed。Blocked by: None。
+Type: AFK。Status: integrated and verified (`30d3e6d`; 7 項排盤對照測試、390px 手機操作通過)。Blocked by: None。
 
 建立八字獨立入口、出生資料表單與四柱／五行／十神畫面，沿用鎖定引擎；已知／時辰／未知時間和原有農曆、出生地規則均按原合約處理。
 
@@ -19,7 +19,7 @@ Type: AFK。Status: proposed。Blocked by: None。
 
 ## B2：讀八字命盤與日期內容
 
-Type: AFK。Status: proposed。Blocked by: B1。
+Type: AFK。Status: integrated and verified (`28203fa`; 合計 11 項排盤／解讀對照測試、手機日期／領域／語言操作通過)。Blocked by: B1。
 
 轉入已有個人命盤白話、推導依據、來源分類、今日與未來七日及領域切換。清楚區分曆算、傳統分類與原創生活建議。
 
