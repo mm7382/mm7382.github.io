@@ -43,11 +43,13 @@ Type: AFK。Status: integrated and verified (`94cf443`; 人物保存／切換／
 
 ## B5：八字完整驗收並在個人網站公開
 
-Type: AFK。Status: proposed。Blocked by: B2, B3, B4。
+Type: AFK。Status: integrated, published and verified (`7030147`; 網站與個人首頁已公開)。Blocked by: B2, B3, B4。
 
 完成搜尋頁資料、FAQ、授權與資料限制、公開網址與首頁作品入口。通過八字完整驗收後公開。
 
 驗收：核心功能矩陣全部有對應完成證據；所有課程可爬取，私密頁不索引；正式網址、資源和主要操作正常；易見與既有網站入口無回歸。更新票狀態與證據，才進紫微。
+
+完成證據：全站 Node 30 項、Python 5 項及易見 77 頁來源稽核通過；390px 真實瀏覽器排盤／答題／月報無溢出與錯誤。`https://mm7382.github.io/bazi-web/` 與 `https://mm7382.github.io/bazi-web/learn/P09/` 正式頁面回應 200 且可操作；個人網站 `https://mm7382.github.io/pec-ai-agent-training/` 已顯示八字入口。課程 40 篇中英獨立頁列入 sitemap，個人複習頁未列入。
 
 ## Z1：輸入出生資料並取得紫微盤
 
