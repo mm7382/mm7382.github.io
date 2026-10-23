@@ -1,0 +1,2900 @@
+{
+  "lessons": [
+    {
+      "id": "F01",
+      "free": true,
+      "title": {
+        "zh": "四柱命盤怎麼看",
+        "en": "How to read the four pillars"
+      },
+      "lead": {
+        "zh": "八個字不是密碼，是一張「你跟世界的關係表」。先看懂怎麼讀，再談準不準。",
+        "en": "The eight characters aren't a secret code. They map how you relate to the world. Learn to read them first."
+      },
+      "figure": "pillars",
+      "sections": [
+        {
+          "title": {
+            "zh": "命盤在講什麼",
+            "en": "What a chart actually describes"
+          },
+          "body": {
+            "zh": [
+              "八字就是出生的年、月、日、時，各寫成兩個字，合起來八個字。上面那排叫天干，下面那排叫地支。",
+              "這八個字本身沒有吉凶。它描述的是一個人天生比較容易往哪個方向使力、容易被什麼卡住、靠什麼補血。",
+              "所以讀命盤不是在看「會發生什麼」，是在看「你習慣怎麼反應」。這一點先立住，後面每一堂才不會走偏。"
+            ],
+            "en": [
+              "Bazi writes your birth year, month, day, and hour as two characters each, eight in all. The top row holds the stems, and the bottom row holds the branches.",
+              "The eight characters themselves aren't good or bad. Together they describe where you naturally put your energy, what tends to trip you up, and what recharges you.",
+              "So reading a chart isn't about what will happen to you. It's about how you tend to respond. Keep that in mind and the rest of the course stays on track."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "只要記住一個位置",
+            "en": "Start with just one spot"
+          },
+          "body": {
+            "zh": [
+              "四柱由左到右是年、月、日、時。日柱上面那個字叫「日主」，那就是你本人。",
+              "其他七個字都是配角，它們的意義都是相對於日主才成立的。日主沒找對，整張盤就讀歪了。",
+              "初學不必背四柱各代表什麼人生階段。先會指出日主，就夠你讀完這套課的一半。"
+            ],
+            "en": [
+              "The four pillars run left to right: year, month, day, hour. The top character of the Day Pillar is your Day Master. That's you.",
+              "The other seven characters only make sense in relation to it. Pick the wrong Day Master and the whole reading goes off course.",
+              "You don't need to memorize what each pillar stands for yet. If you can point to your Day Master, you're halfway through this course."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "實際看一次自己的",
+            "en": "Try it with your own chart"
+          },
+          "body": {
+            "zh": [
+              "打開「命盤」那一頁，找到日柱。上面那個字就是你的日主。例如日柱是辛卯，日主是辛金。",
+              "接著只做一件事：看看另外七個字裡，有沒有跟日主同一個五行的。有很多代表同類力量強，通常表現為主見強、也容易跟人正面對撞。",
+              "先做到這裡就好。怎麼細分那七個字，是後面「十神」那幾堂的事。"
+            ],
+            "en": [
+              "Open the Chart tab and find your Day Pillar. Its top character is your Day Master. For example, if your Day Pillar is Xin Mao, your Day Master is Xin Metal.",
+              "Then do just one thing: count how many of the other seven share its phase. A lot of them means that energy runs strong. It often shows up as strong opinions and head-on clashes.",
+              "That's enough for now. Sorting those seven in more detail is what the Ten Gods lessons are for."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "不要一開始就追求精準",
+            "en": "Don't chase precision yet"
+          },
+          "body": {
+            "zh": [
+              "很多人卡在「我出生時間不確定，是不是就不能算」。不是。時柱不確定，年月日三柱照樣成立，日主也照樣找得到。",
+              "這套課的重點是解讀，不是排盤。排盤 App 會幫你算好，真正要練的是把算出來的東西翻成人話。"
+            ],
+            "en": [
+              "Many people get stuck because they don't know their exact birth time. That's okay. Without the Hour Pillar, the other three pillars still hold, and you can still find your Day Master.",
+              "This course is about reading a chart, not calculating one. The app does the math. Your job is to put what it shows into plain words."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "記住一句：日柱上面那個字就是你，其他七個字都是在講「它對你」。這一句撐得起整套課。",
+        "en": "Remember this: the top character of your Day Pillar is you, and the other seven describe how they relate to you."
+      },
+      "sources": [
+        "S1",
+        "S3"
+      ],
+      "quiz": [
+        {
+          "id": "F01Q1",
+          "question": {
+            "zh": "八字總共幾個字，分別來自哪裡？",
+            "en": "How many characters are there, and where do they come from?"
+          },
+          "options": [
+            {
+              "zh": "八個，來自年月日時各兩個",
+              "en": "Eight: two each from year, month, day, and hour"
+            },
+            {
+              "zh": "八個，來自姓名筆畫",
+              "en": "Eight, from the strokes in your name"
+            },
+            {
+              "zh": "四個，只看年和日",
+              "en": "Four, from the year and day only"
+            },
+            {
+              "zh": "十個，加上十神",
+              "en": "Ten, counting the Ten Gods"
+            }
+          ],
+          "answer": 0,
+          "explain": {
+            "zh": "年、月、日、時四柱，每柱一個天干一個地支，合起來八個字，所以叫八字。",
+            "en": "Four pillars, each with one stem and one branch, make eight characters. That's where the name Bazi (eight characters) comes from."
+          }
+        },
+        {
+          "id": "F01Q2",
+          "question": {
+            "zh": "哪一個字代表「你本人」？",
+            "en": "Which character stands for you?"
+          },
+          "options": [
+            {
+              "zh": "年柱天干",
+              "en": "The Year Pillar stem"
+            },
+            {
+              "zh": "月柱地支",
+              "en": "The Month Pillar branch"
+            },
+            {
+              "zh": "日柱天干（日主）",
+              "en": "The Day Pillar stem (Day Master)"
+            },
+            {
+              "zh": "時柱地支",
+              "en": "The Hour Pillar branch"
+            }
+          ],
+          "answer": 2,
+          "explain": {
+            "zh": "日柱上面那個字就是日主。所有其他字的意義，都是相對於它才算得出來。",
+            "en": "The top character of the Day Pillar is your Day Master. Every other character is read in relation to it."
+          }
+        },
+        {
+          "id": "F01Q3",
+          "question": {
+            "zh": "出生時間不確定，還能讀命盤嗎？",
+            "en": "Can you still read a chart if you don't know your birth time?"
+          },
+          "options": [
+            {
+              "zh": "完全不能，要放棄",
+              "en": "No, you have to give up"
+            },
+            {
+              "zh": "可以，年月日三柱和日主都還在",
+              "en": "Yes. Year, month, day, and the Day Master still hold"
+            },
+            {
+              "zh": "可以，但要改用西洋占星",
+              "en": "Yes, but you have to switch to Western astrology"
+            },
+            {
+              "zh": "可以，隨便填一個時辰就好",
+              "en": "Yes, just pick any hour"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "少了時柱只是少一塊資訊，日主與前三柱不受影響。隨便填時辰反而會讀出錯的東西。",
+            "en": "Without the Hour Pillar you lose one piece, but your Day Master and the other three pillars are unaffected. Making up an hour would give you a wrong reading."
+          }
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "free": true,
+      "title": {
+        "zh": "天干、地支與五行",
+        "en": "Stems, branches, and the Five Phases"
+      },
+      "lead": {
+        "zh": "五行不是元素，是五種做事的方式。認得出來，就看得懂一個人慣用哪一招。",
+        "en": "The Five Phases aren't substances. They're five ways of getting things done. Spot them, and you'll see which one a person reaches for."
+      },
+      "figure": "elements",
+      "sections": [
+        {
+          "title": {
+            "zh": "五行用生活話講",
+            "en": "The Five Phases in everyday terms"
+          },
+          "body": {
+            "zh": [
+              "木是往外長：開始、擴張、想做新的事。火是往上散：表達、熱度、被看見。土是往中間收：穩住、承接、照顧。",
+              "金是往內切：取捨、紀律、把事情做乾淨。水是往下流：變通、思考、往沒人走的地方鑽。",
+              "每個人八個字裡五行的多寡不同，這就是為什麼有人天生愛開頭卻收不了尾，有人很能守卻不敢開始。"
+            ],
+            "en": [
+              "Wood grows outward: starting, expanding, trying new things. Fire rises: expressing, warmth, being seen. Earth draws to the center: steadying, supporting, taking care.",
+              "Metal cuts inward: choosing, discipline, finishing cleanly. Water flows down: adapting, thinking, finding paths no one else takes.",
+              "Every chart holds a different mix of the five. That's why some people love starting things but struggle to finish, while others hold steady but hesitate to begin."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "天干地支只是五行的分身",
+            "en": "Stems and branches are the phases in disguise"
+          },
+          "body": {
+            "zh": [
+              "十個天干：甲乙屬木，丙丁屬火，戊己屬土，庚辛屬金，壬癸屬水。每一對前面是陽、後面是陰。",
+              "陽像是外顯、直接、量大；陰像是內收、細緻、持久。甲木是大樹，乙木是藤蔓，兩者都是木，使力方式不同。",
+              "地支十二個則多一層：它們裡面還藏著天干。初學先不用管藏干，記得地支也有五行就好。"
+            ],
+            "en": [
+              "There are ten stems: Jia and Yi are Wood, Bing and Ding are Fire, Wu and Ji are Earth, Geng and Xin are Metal, Ren and Gui are Water. In each pair, the first is yang and the second is yin.",
+              "Yang is outward, direct, and big. Yin is inward, subtle, and lasting. Jia Wood is a tall tree and Yi Wood is a vine. Both are Wood, but they grow in different ways.",
+              "The twelve branches add another layer: each one has stems hidden inside. You can skip that for now. Just remember that branches have phases too."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "看自己缺什麼不是重點",
+            "en": "What you're missing isn't the point"
+          },
+          "body": {
+            "zh": [
+              "很多人第一件事是數「我缺什麼」，然後去補。但缺某個五行不等於人生缺一塊，它只是說你比較少用那一招。",
+              "真正有用的問法是：我慣用哪一招？慣用木的人要練的是收尾，慣用金的人要練的是別太早否定。",
+              "這一課要帶走的是這個切換——從「我缺什麼」換成「我慣用什麼、所以要補哪個習慣」。"
+            ],
+            "en": [
+              "Many people start by counting which phase they're missing, then try to make up for it. But a missing phase doesn't mean something is missing from your life. It just means you use that approach less often.",
+              "A more useful question is: which approach do I reach for by default? People heavy in Wood can practice finishing. People heavy in Metal can practice not ruling things out too soon.",
+              "That shift is the takeaway here. Stop asking what you're missing, and ask what you default to and which habit could balance it."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "五行是五種使力方式。看懂自己慣用哪一種，比數缺幾個有用得多。",
+        "en": "The Five Phases are five ways of getting things done. Knowing which one you default to is far more useful than counting what's missing."
+      },
+      "sources": [
+        "S1",
+        "S4"
+      ],
+      "quiz": [
+        {
+          "id": "F02Q1",
+          "question": {
+            "zh": "「金」在做事方式上比較接近什麼？",
+            "en": "Which way of working is closest to Metal?"
+          },
+          "options": [
+            {
+              "zh": "取捨、紀律、把事做乾淨",
+              "en": "Choosing, discipline, finishing cleanly"
+            },
+            {
+              "zh": "開始新的事",
+              "en": "Starting new things"
+            },
+            {
+              "zh": "表達與被看見",
+              "en": "Expressing and being seen"
+            },
+            {
+              "zh": "穩住與照顧",
+              "en": "Steadying and caring"
+            }
+          ],
+          "answer": 0,
+          "explain": {
+            "zh": "金是往內切的力量，特徵是收斂與決斷。愛開頭的是木，愛表達的是火，愛承接的是土。",
+            "en": "Metal cuts inward: it narrows things down and makes decisions. Wood likes to start, Fire likes to express, and Earth likes to support."
+          }
+        },
+        {
+          "id": "F02Q2",
+          "question": {
+            "zh": "甲木和乙木的差別是什麼？",
+            "en": "What's the difference between Jia Wood and Yi Wood?"
+          },
+          "options": [
+            {
+              "zh": "一個是木、一個是火",
+              "en": "One is Wood and the other is Fire"
+            },
+            {
+              "zh": "同樣是木，陽與陰使力方式不同",
+              "en": "Both are Wood, but yang and yin work differently"
+            },
+            {
+              "zh": "甲比乙好",
+              "en": "Jia is better than Yi"
+            },
+            {
+              "zh": "乙不算天干",
+              "en": "Yi isn't a stem"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "甲是陽木、乙是陰木。方向一樣，但一個像大樹直接長，一個像藤蔓繞著長。陰陽不分好壞。",
+            "en": "Jia is yang Wood and Yi is yin Wood. They grow the same way, but one grows straight like a tree and the other winds like a vine. Neither yang nor yin is better."
+          }
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "free": true,
+      "title": {
+        "zh": "找到日主，讀懂第一個關係",
+        "en": "Your Day Master's first relationship"
+      },
+      "lead": {
+        "zh": "找到日主之後，命盤就從一堆字，變成「誰在幫你、誰在推你」。",
+        "en": "Once you find your Day Master, the chart stops being a jumble of characters. It starts showing what supports you and what pushes you."
+      },
+      "figure": "generation",
+      "sections": [
+        {
+          "title": {
+            "zh": "第一個關係怎麼讀",
+            "en": "How to read your first relationship"
+          },
+          "body": {
+            "zh": [
+              "挑日柱旁邊的月柱天干，拿它跟日主比。只問兩件事：五行上它跟你是什麼方向，陰陽是同還是異。",
+              "方向只有五種：跟你一樣、你生出去的、你管得動的、管得動你的、養你的。這五種決定了基本性質。",
+              "例如日主辛金，月干是壬水。金生水，所以壬是「你生出去的」——那是你的產出與表達。"
+            ],
+            "en": [
+              "Take the Month Pillar stem, right next to your Day Master, and compare the two. Ask just two things: how their phases relate, and whether they're both yin or both yang.",
+              "There are only five possibilities: same as me, what I produce, what I control, what controls me, and what nourishes me. Which one it is sets the basic tone.",
+              "Say your Day Master is Xin Metal and the month stem is Ren Water. Metal generates Water, so Ren falls under what I produce. That stands for your output and self-expression."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "翻成生活裡的一句話",
+            "en": "Put it into one everyday sentence"
+          },
+          "body": {
+            "zh": [
+              "「你生出去的」多，代表你傾向把力氣花在產出上：做東西、講話、教人、養小孩。好處是留得下東西，代價是容易耗。",
+              "「管得動你的」多，代表你長期有外部要求在推著：責任、職位、期待。好處是有結構，代價是喘不過氣。",
+              "「養你的」多，代表你有靠山與知識在支撐。好處是穩，代價是行動力容易被養鈍。"
+            ],
+            "en": [
+              "Lots of what I produce means you tend to pour energy into output: making things, talking, teaching, raising kids. You leave something behind, but it can wear you out.",
+              "Lots of what controls me means outside demands keep pushing you: duties, roles, expectations. You get structure, but little room to breathe.",
+              "Lots of what nourishes me means you have support and knowledge to lean on. You feel steady, but your drive to act can get dulled."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "練習的方法",
+            "en": "How to practice"
+          },
+          "body": {
+            "zh": [
+              "不要一次讀完八個字。每天只拿一個字跟日主比，講出一句生活話，講完就收。",
+              "「今日」那一頁每天會給你一題，用的就是當天的天干對你的日主。那是最省力的練習場。",
+              "連續做兩週，你會發現自己不用查表也講得出來。那時候再回頭讀十神的名字，會非常快。"
+            ],
+            "en": [
+              "Don't try to read all eight characters at once. Each day, compare just one to your Day Master, sum it up in one everyday sentence, and stop there.",
+              "The Today tab gives you one question a day built on exactly this: the day’s stem compared with your Day Master. It's the easiest place to practice.",
+              "Keep it up for two weeks and you'll be able to say it without looking anything up. Then the Ten Gods names will click fast."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "一次只讀一個關係，翻成一句生活話。這個習慣，比背完十神表有用。",
+        "en": "Read one relationship at a time and put it into one everyday sentence. That habit does more for you than memorizing the whole Ten Gods table."
+      },
+      "sources": [
+        "S4",
+        "S5"
+      ],
+      "quiz": [
+        {
+          "id": "F03Q1",
+          "question": {
+            "zh": "日主辛金，月干壬水，兩者是什麼方向？",
+            "en": "Day Master Xin Metal, month stem Ren Water: how do they relate?"
+          },
+          "options": [
+            {
+              "zh": "養你的",
+              "en": "What nourishes me"
+            },
+            {
+              "zh": "你生出去的",
+              "en": "What I produce"
+            },
+            {
+              "zh": "管得動你的",
+              "en": "What controls me"
+            },
+            {
+              "zh": "跟你一樣",
+              "en": "Same as me"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "金生水，所以水是從你這裡生出去的，屬於「你生出去的」——對應產出與表達。",
+            "en": "Metal generates Water, so Water comes out of you. It falls under what I produce, which stands for output and expression."
+          }
+        },
+        {
+          "id": "F03Q2",
+          "question": {
+            "zh": "課程建議怎麼練習解讀？",
+            "en": "How does the lesson suggest you practice?"
+          },
+          "options": [
+            {
+              "zh": "一次把八個字全部解完",
+              "en": "Read all eight characters in one go"
+            },
+            {
+              "zh": "每天拿一個字跟日主比，講一句生活話",
+              "en": "Compare one character a day and sum it up in one sentence"
+            },
+            {
+              "zh": "先背完十神名稱表",
+              "en": "Memorize the whole Ten Gods table first"
+            },
+            {
+              "zh": "找別人幫你算",
+              "en": "Have someone else read it for you"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "解讀是習慣，不是記憶。每天一題、一句話，兩週後名字自己會跟上來。",
+            "en": "Reading a chart is a habit, not a memory test. One question and one sentence a day, and in two weeks the names will come on their own."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P01",
+      "free": false,
+      "title": {
+        "zh": "出生時間與時區",
+        "en": "Birth time and time zones"
+      },
+      "lead": {
+        "zh": "時辰會換掉一整柱，但換不掉你是誰。先搞懂它影響什麼、不影響什麼。",
+        "en": "The hour changes one pillar. It does not change who you are."
+      },
+      "figure": "timezone",
+      "sections": [
+        {
+          "title": {
+            "zh": "時辰決定的是哪一塊",
+            "en": "What the hour actually decides"
+          },
+          "body": {
+            "zh": [
+              "出生時間只決定第四柱（時柱）。日主、年柱、月柱完全不受影響，所以「我是什麼樣的人」這一層，時辰不準也讀得出來。",
+              "時柱通常被用來看晚年、子女、以及一個人私下的樣子。這些是補充，不是主幹。"
+            ],
+            "en": [
+              "Birth time only sets the fourth pillar. Day Master, year and month are untouched, so the core reading survives an uncertain hour.",
+              "The hour pillar is usually read for later life, children and the private self. Supplementary, not structural."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "時區才是最常見的錯",
+            "en": "Time zone is the usual mistake"
+          },
+          "body": {
+            "zh": [
+              "命盤用的是你出生當地的時間。在美國出生卻用台灣時間填，可能整個日柱都錯，那就等於換了一個人。",
+              "所以設定裡要選出生地。這一步比糾結幾點幾分重要得多。"
+            ],
+            "en": [
+              "A chart uses local time at the place of birth. Entering Taiwan time for a US birth can shift the whole Day Pillar — a different person.",
+              "That is why the settings ask for a birthplace. It matters far more than the exact minute."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "不確定時怎麼辦",
+            "en": "What to do when unsure"
+          },
+          "body": {
+            "zh": [
+              "選「不知道時辰」，不要猜。猜出來的時柱會讓你讀到不存在的東西，比少一柱更糟。",
+              "想確認可以查出生證明或問家人。查到了再補，前面讀過的內容都不用重來。"
+            ],
+            "en": [
+              "Choose “unknown” rather than guessing. An invented hour makes you read something that is not there.",
+              "Check a birth certificate or ask family. Adding it later does not invalidate anything you have read."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "時辰只動一柱，時區動的是整張盤。先把出生地填對。",
+        "en": "The hour moves one pillar; the time zone can move the whole chart. Get the birthplace right first."
+      },
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "quiz": [
+        {
+          "id": "P01Q1",
+          "question": {
+            "zh": "出生時間不確定，最該避免的做法是什麼？",
+            "en": "What should you avoid when the birth hour is unknown?"
+          },
+          "options": [
+            {
+              "zh": "選「不知道時辰」",
+              "en": "Choose “unknown”"
+            },
+            {
+              "zh": "隨便猜一個時辰填進去",
+              "en": "Guess an hour and enter it"
+            },
+            {
+              "zh": "先讀前三柱",
+              "en": "Read the first three pillars"
+            },
+            {
+              "zh": "去問家人",
+              "en": "Ask your family"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "猜出來的時柱是假資料，你會據此讀出不存在的結論。寧可少一柱，不要多一個錯的。",
+            "en": "A guessed hour is fabricated data. Better one pillar short than one pillar wrong."
+          }
+        },
+        {
+          "id": "P01Q2",
+          "question": {
+            "zh": "為什麼要填出生地？",
+            "en": "Why does the app ask for a birthplace?"
+          },
+          "options": [
+            {
+              "zh": "為了顯示地圖",
+              "en": "To show a map"
+            },
+            {
+              "zh": "因為命盤用出生當地時間，填錯可能整個日柱都錯",
+              "en": "Because the chart uses local birth time; the wrong one can shift the Day Pillar"
+            },
+            {
+              "zh": "為了算距離",
+              "en": "To compute distance"
+            },
+            {
+              "zh": "沒有實際作用",
+              "en": "It has no effect"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "時區換算錯誤會讓日期跨過去，日柱一變，日主就變，整張盤跟著變。",
+            "en": "A wrong time zone can push the date over a boundary, changing the Day Pillar and therefore the Day Master."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P02",
+      "free": false,
+      "title": {
+        "zh": "節氣和月份分界",
+        "en": "Solar terms and month boundaries"
+      },
+      "lead": {
+        "zh": "八字的「月」不是日曆的月，是節氣的月。這一點搞錯，整張盤會差一柱。",
+        "en": "The Bazi month follows solar terms, not the calendar."
+      },
+      "figure": "timeline",
+      "sections": [
+        {
+          "title": {
+            "zh": "月份從節氣換，不從初一",
+            "en": "Months turn on solar terms"
+          },
+          "body": {
+            "zh": [
+              "八字的月柱在「節」那天換，例如立春、驚蟄、清明。不是農曆初一，也不是國曆 1 號。",
+              "所以 2 月 3 日出生和 2 月 5 日出生，可能分屬不同月柱，因為中間跨過立春。"
+            ],
+            "en": [
+              "The month pillar turns on a major solar term — Start of Spring, Waking of Insects, Clear and Bright — not on the first of a month.",
+              "Births on 3 and 5 February can sit in different month pillars because Start of Spring falls between them."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "年也一樣",
+            "en": "The year too"
+          },
+          "body": {
+            "zh": [
+              "八字的年在立春換，不在農曆春節，更不在 1 月 1 日。春節前幾天出生的人，年柱常常是前一年。",
+              "這不是玄學上的講究，是曆法定義。App 已經照這個規則算，你不用自己換。"
+            ],
+            "en": [
+              "The Bazi year turns at Start of Spring, not at Lunar New Year and not on 1 January. Births just before the new year often carry the previous year pillar.",
+              "This is a calendar definition, and the app already applies it."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "對解讀的影響",
+            "en": "Why it matters for reading"
+          },
+          "body": {
+            "zh": [
+              "月柱常被看成一個人的「主場」：成長環境、最吃力也最拿手的那一塊。差一柱，讀出來的主場就換了。",
+              "所以遇到生日剛好在節氣前後的人，先確認一下再開口，不要急著下結論。"
+            ],
+            "en": [
+              "The month pillar is often read as a person’s home ground: upbringing, and where they work hardest and best. One pillar off changes that.",
+              "For births near a term boundary, confirm before drawing conclusions."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "年看立春，月看節。生日落在交界的人，先確認再解讀。",
+        "en": "Years turn at Start of Spring and months at major terms. Confirm boundary births before reading."
+      },
+      "sources": [
+        "S2",
+        "S8",
+        "S7"
+      ],
+      "quiz": [
+        {
+          "id": "P02Q1",
+          "question": {
+            "zh": "八字的一年從哪一天換？",
+            "en": "When does the Bazi year change?"
+          },
+          "options": [
+            {
+              "zh": "國曆 1 月 1 日",
+              "en": "1 January"
+            },
+            {
+              "zh": "農曆春節",
+              "en": "Lunar New Year"
+            },
+            {
+              "zh": "立春",
+              "en": "Start of Spring"
+            },
+            {
+              "zh": "冬至",
+              "en": "Winter Solstice"
+            }
+          ],
+          "answer": 2,
+          "explain": {
+            "zh": "八字年在立春換。春節前出生的人，年柱常常還算前一年。",
+            "en": "The Bazi year turns at Start of Spring, so births before it often keep the previous year pillar."
+          }
+        },
+        {
+          "id": "P02Q2",
+          "question": {
+            "zh": "月柱在解讀上常被看成什麼？",
+            "en": "What is the month pillar usually read as?"
+          },
+          "options": [
+            {
+              "zh": "晚年與子女",
+              "en": "Later life and children"
+            },
+            {
+              "zh": "成長環境與最拿手的那一塊",
+              "en": "Upbringing and where you work best"
+            },
+            {
+              "zh": "財運高低",
+              "en": "How much money you will have"
+            },
+            {
+              "zh": "壽命長短",
+              "en": "Lifespan"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "月柱是「主場」：你從哪裡長出來、哪一塊最吃力也最熟練。晚年子女是時柱的事。",
+            "en": "The month pillar is home ground. Later life and children belong to the hour pillar."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P03",
+      "free": false,
+      "title": {
+        "zh": "四柱如何排出",
+        "en": "Following a chart calculation"
+      },
+      "lead": {
+        "zh": "排盤交給 App。你要會的是看懂它排出來的每一格在說什麼。",
+        "en": "Let the app calculate. Your job is to read what it produced."
+      },
+      "figure": "derive",
+      "sections": [
+        {
+          "title": {
+            "zh": "四柱是怎麼來的",
+            "en": "Where the four pillars come from"
+          },
+          "body": {
+            "zh": [
+              "年柱由立春後的年份決定，月柱由節氣決定，日柱由連續的干支日序決定，時柱由出生時辰配日干推出。",
+              "這四步都是查表與計算，沒有判斷空間。所以不同 App 排出來應該一樣；不一樣通常是時區或節氣處理不同。"
+            ],
+            "en": [
+              "The year pillar follows the term-based year, the month pillar the solar term, the day pillar a continuous sexagenary count, the hour pillar the hour combined with the day stem.",
+              "All four are lookup and arithmetic, so apps should agree. Differences usually come from time zone or term handling."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "你真正要檢查的三件事",
+            "en": "The three things worth checking"
+          },
+          "body": {
+            "zh": [
+              "一、出生地時區對不對。二、國曆農曆有沒有選錯。三、時辰是真的知道，還是猜的。",
+              "這三件事對了，排出來就可以信。其餘的細節不是初學要處理的。"
+            ],
+            "en": [
+              "One: the birthplace time zone. Two: solar versus lunar date. Three: whether the hour is known or guessed.",
+              "Get those right and you can trust the output."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "接下來才是重點",
+            "en": "Then comes the real work"
+          },
+          "body": {
+            "zh": [
+              "排盤只是把資料擺好。真正的工作是拿每一格跟日主比，翻成一句生活話。",
+              "後面的課都在做這件事，不會再回頭講怎麼算。"
+            ],
+            "en": [
+              "Calculation just lays out the data. The work is comparing each cell to the Day Master and saying it plainly.",
+              "The rest of the course does that and does not return to arithmetic."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "排盤沒有判斷空間，檢查三件事就好：時區、曆別、時辰是否確定。",
+        "en": "Calculation is mechanical. Check three things: time zone, calendar type, and whether the hour is known."
+      },
+      "sources": [
+        "S1",
+        "S8",
+        "S7"
+      ],
+      "quiz": [
+        {
+          "id": "P03Q1",
+          "question": {
+            "zh": "兩個 App 排出不同命盤，最可能的原因是什麼？",
+            "en": "Two apps disagree on a chart. Most likely cause?"
+          },
+          "options": [
+            {
+              "zh": "命理流派不同",
+              "en": "Different schools of interpretation"
+            },
+            {
+              "zh": "時區或節氣處理不同",
+              "en": "Different time zone or solar term handling"
+            },
+            {
+              "zh": "其中一個是假的",
+              "en": "One of them is fake"
+            },
+            {
+              "zh": "出生地風水不同",
+              "en": "Different feng shui"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "排盤是查表與計算，沒有流派差異。會差通常是時區換算或節氣交界的處理。",
+            "en": "Calculation is mechanical; disagreements come from time zone or term boundaries."
+          }
+        },
+        {
+          "id": "P03Q2",
+          "question": {
+            "zh": "初學者排盤時最該檢查哪三件事？",
+            "en": "Which three things should a beginner check?"
+          },
+          "options": [
+            {
+              "zh": "時區、曆別、時辰是否確定",
+              "en": "Time zone, calendar type, whether the hour is known"
+            },
+            {
+              "zh": "姓名、性別、血型",
+              "en": "Name, gender, blood type"
+            },
+            {
+              "zh": "天氣、地點、心情",
+              "en": "Weather, place, mood"
+            },
+            {
+              "zh": "手機型號、版本、語言",
+              "en": "Phone model, version, language"
+            }
+          ],
+          "answer": 0,
+          "explain": {
+            "zh": "這三件錯了會整張盤走樣，其他細節初學不必處理。",
+            "en": "Those three can distort the whole chart; the rest can wait."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P04",
+      "free": false,
+      "title": {
+        "zh": "出生時間不確定時怎麼閱讀",
+        "en": "Reading with an unknown birth time"
+      },
+      "lead": {
+        "zh": "不知道時辰不是殘缺。少一柱該怎麼讀、不該讀什麼，這一課講清楚。",
+        "en": "An unknown hour is not a broken chart. Here is what you can and cannot read."
+      },
+      "figure": "unknown",
+      "sections": [
+        {
+          "title": {
+            "zh": "還讀得到什麼",
+            "en": "What still reads"
+          },
+          "body": {
+            "zh": [
+              "日主在，所以「你是誰、慣用什麼方式使力」完全讀得到。月柱在，所以成長環境與主場也讀得到。",
+              "年柱在，家族背景那一層也在。三柱加起來已經可以講出一個人的主要輪廓。"
+            ],
+            "en": [
+              "The Day Master stands, so who you are and how you push still reads. The month pillar stands, so upbringing and home ground read too.",
+              "With the year pillar as well, three of four give you the main outline."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "什麼要先放下",
+            "en": "What to set aside"
+          },
+          "body": {
+            "zh": [
+              "晚年、子女、以及私下獨處時的樣子，這幾塊主要靠時柱，少了就先不要下結論。",
+              "不要用「大概是早上吧」去補。補錯的資訊會讓你讀出一個不存在的人，比空著危險。"
+            ],
+            "en": [
+              "Later life, children and the private self lean on the hour pillar. Without it, hold those conclusions.",
+              "Do not fill the gap with a guess. Wrong data produces a person who does not exist."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "怎麼慢慢補回來",
+            "en": "How to recover it"
+          },
+          "body": {
+            "zh": [
+              "出生證明、媽媽手冊、戶政資料常有時間。問長輩時可以問「天亮了沒」「是不是吃飯時間」，比問幾點容易回想。",
+              "補到之後再回來讀時柱那一塊，前面讀過的都不用推翻。"
+            ],
+            "en": [
+              "Birth certificates and hospital records often record the time. Asking an elder “was it light out?” works better than asking for a clock time.",
+              "Add it later and nothing you already read is overturned."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "少一柱就少讀一塊，不要補假資料。三柱已經夠講出主要輪廓。",
+        "en": "Read one block less rather than inventing data. Three pillars already give the outline."
+      },
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P04Q1",
+          "question": {
+            "zh": "不知道時辰時，哪一塊應該先不要下結論？",
+            "en": "Without the hour, which area should you hold?"
+          },
+          "options": [
+            {
+              "zh": "你慣用的做事方式",
+              "en": "How you tend to act"
+            },
+            {
+              "zh": "晚年、子女與私下的樣子",
+              "en": "Later life, children, the private self"
+            },
+            {
+              "zh": "成長環境",
+              "en": "Upbringing"
+            },
+            {
+              "zh": "家族背景",
+              "en": "Family background"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "那幾塊主要靠時柱。其餘三柱還在，輪廓照樣讀得出來。",
+            "en": "Those lean on the hour pillar; the other three still give the outline."
+          }
+        },
+        {
+          "id": "P04Q2",
+          "question": {
+            "zh": "問長輩出生時間時，哪種問法比較容易問到？",
+            "en": "How is it easier to ask an elder about a birth time?"
+          },
+          "options": [
+            {
+              "zh": "直接問幾點幾分",
+              "en": "Ask for the exact minute"
+            },
+            {
+              "zh": "問「天亮了沒」「是不是吃飯時間」",
+              "en": "Ask whether it was light out, or around a meal"
+            },
+            {
+              "zh": "問農曆還是國曆",
+              "en": "Ask lunar or solar"
+            },
+            {
+              "zh": "不要問，自己猜",
+              "en": "Do not ask; guess"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "人記得的是場景不是時鐘。用場景問，回想得出來的機會高很多。",
+            "en": "People remember scenes, not clocks. Scene questions recover far more."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P05",
+      "free": false,
+      "title": {
+        "zh": "十天干與陰陽",
+        "en": "The ten stems and polarity"
+      },
+      "lead": {
+        "zh": "十個天干其實是五種力量各分陰陽。認得陰陽，就看得出同一種力量的兩種脾氣。",
+        "en": "Ten stems are five forces split by polarity — two temperaments per force."
+      },
+      "figure": "stems",
+      "sections": [
+        {
+          "title": {
+            "zh": "陽與陰差在哪",
+            "en": "What polarity changes"
+          },
+          "body": {
+            "zh": [
+              "陽是往外、直接、一次用很多；陰是往內、細緻、慢慢用很久。兩者沒有強弱之分，只有方式不同。",
+              "甲木像大樹，硬碰硬往上長；乙木像藤蔓，繞過去也要長到。兩個都是木。"
+            ],
+            "en": [
+              "Yang goes outward, direct, in large amounts. Yin goes inward, fine, sustained. Neither is stronger.",
+              "Jia Wood is a tree pushing straight up; Yi Wood is a vine that goes around. Both are Wood."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "十個天干速記",
+            "en": "The ten stems at a glance"
+          },
+          "body": {
+            "zh": [
+              "甲乙木、丙丁火、戊己土、庚辛金、壬癸水。每組前陽後陰。",
+              "丙火像太陽，照得遠但不挑對象；丁火像燭火，照得近但持久。庚金像斧頭，辛金像刀片。體會這個差別比背名字有用。"
+            ],
+            "en": [
+              "Jia/Yi Wood, Bing/Ding Fire, Wu/Ji Earth, Geng/Xin Metal, Ren/Gui Water — yang first, yin second.",
+              "Bing is sunlight: far-reaching. Ding is candlelight: close and lasting. Geng is an axe, Xin a blade."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "用在自己身上",
+            "en": "Applying it"
+          },
+          "body": {
+            "zh": [
+              "看你的日主是陽干還是陰干。陽干的人通常先動再修，陰干的人通常想好再動。",
+              "這不是優劣，是你要認得的預設值。知道自己是哪一種，就知道要刻意補哪一邊。"
+            ],
+            "en": [
+              "Check whether your Day Master is yang or yin. Yang tends to act then adjust; yin tends to settle then act.",
+              "Not better or worse — a default to recognise, so you know which side to practise."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "陰陽不是強弱，是兩種脾氣。先認出自己日主是哪一種。",
+        "en": "Polarity is temperament, not strength. Start by identifying your own."
+      },
+      "sources": [
+        "S4",
+        "S5",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P05Q1",
+          "question": {
+            "zh": "甲木與乙木最主要的差別是什麼？",
+            "en": "What mainly separates Jia and Yi Wood?"
+          },
+          "options": [
+            {
+              "zh": "五行不同",
+              "en": "Different phases"
+            },
+            {
+              "zh": "陰陽不同，使力方式不同",
+              "en": "Different polarity, different manner"
+            },
+            {
+              "zh": "一個能用一個不能用",
+              "en": "One is usable, the other not"
+            },
+            {
+              "zh": "甲一定比乙強",
+              "en": "Jia is always stronger"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "同為木，甲陽乙陰。一個直接往上，一個繞路也要到。沒有強弱。",
+            "en": "Both Wood: Jia yang, Yi yin. Direct versus roundabout, not stronger versus weaker."
+          }
+        },
+        {
+          "id": "P05Q2",
+          "question": {
+            "zh": "日主是陽干的人，通常的預設反應是什麼？",
+            "en": "What is the usual default for a yang Day Master?"
+          },
+          "options": [
+            {
+              "zh": "想好再動",
+              "en": "Settle first, then act"
+            },
+            {
+              "zh": "先動再修",
+              "en": "Act first, then adjust"
+            },
+            {
+              "zh": "不會行動",
+              "en": "Never acts"
+            },
+            {
+              "zh": "完全看心情",
+              "en": "Entirely mood-driven"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "陽干偏向先動再修，陰干偏向想好再動。認出預設值，才知道要刻意補哪一邊。",
+            "en": "Yang acts then adjusts; yin settles then acts. Knowing your default tells you what to practise."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P06",
+      "free": false,
+      "title": {
+        "zh": "十二地支與藏干",
+        "en": "Branches and hidden stems"
+      },
+      "lead": {
+        "zh": "地支裡面還「藏著」天干。這是命盤讀起來有層次的原因。",
+        "en": "Branches hide stems inside. That is where a chart gains depth."
+      },
+      "figure": "hidden",
+      "sections": [
+        {
+          "title": {
+            "zh": "藏干是什麼",
+            "en": "What hidden stems are"
+          },
+          "body": {
+            "zh": [
+              "每個地支裡面藏著一到三個天干。例如寅裡面藏甲木、丙火、戊土；子裡面只藏癸水。",
+              "可以想成：天干是檯面上講出來的，地支藏干是心裡真正在運作的。"
+            ],
+            "en": [
+              "Each branch holds one to three stems. Yin holds Jia Wood, Bing Fire and Wu Earth; Zi holds only Gui Water.",
+              "Think of stems as what is said aloud and hidden stems as what runs underneath."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "為什麼要管它",
+            "en": "Why it matters"
+          },
+          "body": {
+            "zh": [
+              "只看天干，一個人會顯得很單薄。加上藏干，才看得出他表面做一件事、底下其實在要另一件事。",
+              "例如檯面上是正官（責任），底下藏著傷官（想表達、不想被管），這種人做事守規矩但心裡一直想跳出來。"
+            ],
+            "en": [
+              "Stems alone make a person look flat. Hidden stems show someone doing one thing on the surface while wanting another underneath.",
+              "Direct Officer on the surface with Hurting Officer hidden: follows the rules, constantly wants out."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "初學怎麼用",
+            "en": "How to use it as a beginner"
+          },
+          "body": {
+            "zh": [
+              "先只看每個地支的「主氣」，也就是最主要的那一個藏干。日支的主氣最重要，那是跟你最貼身的一塊。",
+              "其餘的藏干先放著。等你熟了主氣，再加進來也不遲。"
+            ],
+            "en": [
+              "Start with each branch’s main hidden stem. The Day branch’s main stem matters most — it sits closest to you.",
+              "Leave the rest for later."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "天干是說出來的，地支藏干是底下在運作的。先只看主氣。",
+        "en": "Stems are spoken, hidden stems run underneath. Start with the main one."
+      },
+      "sources": [
+        "S4",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P06Q1",
+          "question": {
+            "zh": "地支藏干可以理解成什麼？",
+            "en": "What are hidden stems best understood as?"
+          },
+          "options": [
+            {
+              "zh": "檯面上說出來的",
+              "en": "What is said on the surface"
+            },
+            {
+              "zh": "底下真正在運作的",
+              "en": "What runs underneath"
+            },
+            {
+              "zh": "完全沒有作用",
+              "en": "Nothing at all"
+            },
+            {
+              "zh": "另一個人的命盤",
+              "en": "Someone else’s chart"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "天干是檯面，藏干是底下。兩層對起來才看得出表裡不一致的地方。",
+            "en": "Stems are the surface, hidden stems the undercurrent."
+          }
+        },
+        {
+          "id": "P06Q2",
+          "question": {
+            "zh": "初學者應該先看哪一個藏干？",
+            "en": "Which hidden stem should a beginner read first?"
+          },
+          "options": [
+            {
+              "zh": "全部一起看",
+              "en": "All at once"
+            },
+            {
+              "zh": "每個地支的主氣，尤其日支",
+              "en": "Each branch’s main stem, especially the Day branch"
+            },
+            {
+              "zh": "最後一個",
+              "en": "The last one"
+            },
+            {
+              "zh": "不用看",
+              "en": "None"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "主氣是最主要的那一個，日支又離你最近。",
+            "en": "The main stem dominates, and the Day branch sits closest."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P07",
+      "free": false,
+      "title": {
+        "zh": "五行生剋",
+        "en": "Generation and control"
+      },
+      "lead": {
+        "zh": "生與剋不是好壞，是五種力量之間的推拉。看懂推拉，才看得出一個人卡在哪。",
+        "en": "Generation and control are push and pull, not good and bad."
+      },
+      "figure": "cycles",
+      "sections": [
+        {
+          "title": {
+            "zh": "相生：一個餵一個",
+            "en": "Generation: one feeds the next"
+          },
+          "body": {
+            "zh": [
+              "木生火、火生土、土生金、金生水、水生木。被生的那一方得到支援，生的那一方被消耗。",
+              "所以「生」不是只有好處。一直在生別人的人，自己會耗。"
+            ],
+            "en": [
+              "Wood feeds Fire, Fire feeds Earth, Earth feeds Metal, Metal feeds Water, Water feeds Wood. The receiver gains; the giver spends.",
+              "So generating is not purely good. Someone always generating gets drained."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "相剋：一個管一個",
+            "en": "Control: one checks the next"
+          },
+          "body": {
+            "zh": [
+              "木剋土、土剋水、水剋火、火剋金、金剋木。被剋的受到限制，剋的那一方要花力氣。",
+              "剋也不是壞事。沒有剋，一個人會散掉。紀律、期限、責任都是剋的具體形式。"
+            ],
+            "en": [
+              "Wood checks Earth, Earth checks Water, Water checks Fire, Fire checks Metal, Metal checks Wood. The checked is limited; the checker spends effort.",
+              "Control is not bad. Without it a person scatters. Deadlines and duty are control made concrete."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "用在自己身上",
+            "en": "Applying it"
+          },
+          "body": {
+            "zh": [
+              "找出你日主的五行，然後問三句話：誰在餵我（靠山）、我在餵誰（產出）、誰在管我（壓力）。",
+              "這三句回答得出來，你就抓到自己日常的能量流向了。缺哪一項，通常就是生活裡最明顯的卡點。"
+            ],
+            "en": [
+              "Find your Day Master’s phase and ask: who feeds me, whom do I feed, who checks me.",
+              "Answer those and you have your daily energy flow. A missing one is usually where life feels stuck."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "生會消耗，剋會成形。問三句：誰餵我、我餵誰、誰管我。",
+        "en": "Generating drains, control shapes. Ask who feeds me, whom I feed, who checks me."
+      },
+      "sources": [
+        "S5"
+      ],
+      "quiz": [
+        {
+          "id": "P07Q1",
+          "question": {
+            "zh": "「相生」對生的那一方代表什麼？",
+            "en": "What does generating mean for the giver?"
+          },
+          "options": [
+            {
+              "zh": "純粹得到好處",
+              "en": "Pure benefit"
+            },
+            {
+              "zh": "會被消耗",
+              "en": "It costs them"
+            },
+            {
+              "zh": "完全沒影響",
+              "en": "No effect"
+            },
+            {
+              "zh": "會被限制",
+              "en": "They are limited"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "生是把自己的力氣給出去，所以一直產出的人容易累。",
+            "en": "Generating spends your own force, so constant output drains."
+          }
+        },
+        {
+          "id": "P07Q2",
+          "question": {
+            "zh": "為什麼說「剋」不一定是壞事？",
+            "en": "Why is control not necessarily bad?"
+          },
+          "options": [
+            {
+              "zh": "因為剋沒有作用",
+              "en": "Because it does nothing"
+            },
+            {
+              "zh": "因為沒有剋人會散掉；紀律與期限都是剋",
+              "en": "Because without it a person scatters; discipline is control"
+            },
+            {
+              "zh": "因為剋會變成生",
+              "en": "Because control becomes generation"
+            },
+            {
+              "zh": "因為古書這樣說",
+              "en": "Because the classics say so"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "剋提供邊界。責任、期限、規矩讓力量成形。",
+            "en": "Control provides boundaries that give force a shape."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P08",
+      "free": false,
+      "title": {
+        "zh": "日主與其他三柱",
+        "en": "Reading from the Day Master"
+      },
+      "lead": {
+        "zh": "從日主往外看，每一柱講的是人生不同的一塊。",
+        "en": "From the Day Master outward, each pillar speaks about a different area."
+      },
+      "figure": "pillarMeaning",
+      "sections": [
+        {
+          "title": {
+            "zh": "四柱各管哪一塊",
+            "en": "What each pillar covers"
+          },
+          "body": {
+            "zh": [
+              "年柱：你來自哪裡——家族、祖輩、早年的大環境。月柱：你的主場——成長環境、工作方式、最吃力也最拿手的事。",
+              "日柱：你自己與最親近的關係（日支常看伴侶）。時柱：你往哪裡去——晚年、子女、私下的樣子。"
+            ],
+            "en": [
+              "Year: where you come from. Month: home ground — upbringing, how you work, where you are strongest.",
+              "Day: yourself and your closest bond (the Day branch is often read for a partner). Hour: later life, children, the private self."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "距離決定親疏",
+            "en": "Distance means closeness"
+          },
+          "body": {
+            "zh": [
+              "離日柱越近的柱，影響越貼身。月柱和日支是最有感的兩塊，年柱比較像背景音。",
+              "所以解讀時先看日支和月柱，不要一開始就衝去看年柱。"
+            ],
+            "en": [
+              "The closer a pillar sits to the Day Pillar, the more immediate its effect. Month and Day branch are felt most.",
+              "So start with the Day branch and the month pillar."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "一個完整的小練習",
+            "en": "A short full practice"
+          },
+          "body": {
+            "zh": [
+              "拿你的日支主氣跟日主比一次，翻成一句生活話。這一句常常就是你在親密關係裡的模式。",
+              "再拿月干比一次，翻成一句。這一句常常是你在工作裡的模式。兩句擺在一起，就是很具體的自我描述。"
+            ],
+            "en": [
+              "Compare the Day branch’s main stem to your Day Master and say one plain sentence: often your pattern in close relationships.",
+              "Do the same with the month stem for your pattern at work."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "先讀日支與月柱，那兩塊最有感。年柱是背景，時柱是方向。",
+        "en": "Read the Day branch and month pillar first. The year is background, the hour is direction."
+      },
+      "sources": [
+        "S3",
+        "S5",
+        "S7",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P08Q1",
+          "question": {
+            "zh": "日支常被用來看什麼？",
+            "en": "What is the Day branch often read for?"
+          },
+          "options": [
+            {
+              "zh": "家族祖輩",
+              "en": "Family and ancestors"
+            },
+            {
+              "zh": "伴侶與最親近的關係",
+              "en": "A partner and closest bonds"
+            },
+            {
+              "zh": "晚年與子女",
+              "en": "Later life and children"
+            },
+            {
+              "zh": "工作方式",
+              "en": "How you work"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "日柱是你自己，日支貼著你，所以常看最親近的關係。",
+            "en": "The Day Pillar is you; its branch sits closest."
+          }
+        },
+        {
+          "id": "P08Q2",
+          "question": {
+            "zh": "解讀時建議先看哪兩塊？",
+            "en": "Which two should you read first?"
+          },
+          "options": [
+            {
+              "zh": "年柱與時柱",
+              "en": "Year and hour"
+            },
+            {
+              "zh": "日支與月柱",
+              "en": "Day branch and month pillar"
+            },
+            {
+              "zh": "只看年柱",
+              "en": "Year only"
+            },
+            {
+              "zh": "只看時柱",
+              "en": "Hour only"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "離日主越近越有感。年柱像背景音。",
+            "en": "Closer to the Day Master means more immediate."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P09",
+      "free": false,
+      "title": {
+        "zh": "十神怎麼推導",
+        "en": "Deriving the Ten Gods"
+      },
+      "lead": {
+        "zh": "十神就是「這個字跟你是什麼關係」。看懂它，命盤才會變成在講你。",
+        "en": "A Ten God is simply what a stem is to you. Read it, and the chart starts describing you."
+      },
+      "figure": "tengods",
+      "sections": [
+        {
+          "title": {
+            "zh": "先講結論：十神在回答什麼",
+            "en": "What a Ten God actually answers"
+          },
+          "body": {
+            "zh": [
+              "你的命盤上有八個字，其中一個叫「日主」，那就是你本人。其他七個字都不是獨立的角色，它們只是在回答一件事：相對於你，這個字站在什麼位置。",
+              "站的位置只有五種：跟你一樣、你生出去的、你管得動的、管得動你的、養你的。這五種再分陰陽，就是十個名字，統稱十神。",
+              "所以「正官」不是一個東西，是一種關係。同一個庚金，對甲木是七殺，對乙木是正官。讀別人的命盤時，第一件事永遠是先確認他的日主是誰。"
+            ],
+            "en": [
+              "Your chart has eight characters. One of them, the Day Master, is you. The other seven are not independent characters — each one only answers: where does this stand in relation to you?",
+              "There are five positions: same as me, what I produce, what I control, what controls me, what nourishes me. Split each by polarity and you get ten names.",
+              "So Direct Officer is not a thing, it is a relationship. The same Geng Metal is Seven Killings to Jia Wood and Direct Officer to Yi Wood. Always find the Day Master first."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "五個位置，用生活話講",
+            "en": "The five positions in everyday words"
+          },
+          "body": {
+            "zh": [
+              "跟你一樣（比肩、劫財）：同輩、同行、合夥人。幫得上你，也會跟你搶同一塊。",
+              "你生出去的（食神、傷官）：你的產出、表達、作品、小孩。投入會消耗你，但那是你留下的東西。",
+              "你管得動的（正財、偏財）：你能掌握的資源與錢。正財是固定的，偏財是流動的。",
+              "管得動你的（正官、七殺）：規矩、職責、壓力、上司。正官是講道理的那種，七殺是不講道理的那種。",
+              "養你的（正印、偏印）：靠山、長輩、知識、照顧。讓你補血，但靠太久也會不想動。"
+            ],
+            "en": [
+              "Same as me (Companion, Rob Wealth): peers, partners, competitors. They help, and they compete for the same thing.",
+              "What I produce (Eating God, Hurting Officer): your output, expression, work, children. It costs you, and it is what you leave behind.",
+              "What I control (Direct and Indirect Wealth): resources and money you can command. Direct is steady, indirect is fluid.",
+              "What controls me (Direct Officer, Seven Killings): rules, duty, pressure, bosses. Direct Officer reasons with you; Seven Killings does not.",
+              "What nourishes me (Direct and Indirect Resource): support, elders, knowledge, care. It restores you, and leaning on it too long makes you passive."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "用在自己身上：三步",
+            "en": "Apply it to yourself in three steps"
+          },
+          "body": {
+            "zh": [
+              "第一步，找出日主：命盤「日柱」上面那個字就是。例如日柱是辛卯，日主就是辛。",
+              "第二步，拿另外一個字跟它比。例如今天是乙日，乙木對辛金——金剋木，所以是「你管得動的」；辛是陰、乙是陰，陰陽相同，所以是偏財。",
+              "第三步，翻成人話：今天出現的是「你能掌握的流動資源」。對應到生活，就是機會與交際比較多，靠人脈推進的事比較走得動。這一句才是你要帶走的東西，名字記不住沒關係。"
+            ],
+            "en": [
+              "Step one: find your Day Master — the upper character of the Day Pillar. If the Day Pillar is Xin Mao, your Day Master is Xin.",
+              "Step two: compare another character to it. Today is a Yi day; Metal controls Wood, so Yi is “what I control”. Xin and Yi are both yin, so it is Indirect Wealth.",
+              "Step three: say it in plain words — today brings fluid resources you can command: more chances and more contact with people. That sentence is what you keep. Forgetting the name is fine."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "常見誤會",
+            "en": "Common misreadings"
+          },
+          "body": {
+            "zh": [
+              "「七殺」「傷官」聽起來很兇，但十神沒有吉凶。它描述的是關係的性質，不是結果的好壞。同一個七殺，可能是壓力，也可能是讓你成事的紀律。",
+              "不要急著背十個名字。先會問「這個字跟我是哪一種關係」，名字自然會跟上來。",
+              "這一課只談天干。地支裡還藏著天干（藏干），那是下一課的事。"
+            ],
+            "en": [
+              "Seven Killings and Hurting Officer sound harsh, but Ten Gods carry no good or bad. They describe the nature of a relationship, not an outcome.",
+              "Do not rush to memorise ten names. Learn to ask which of the five positions applies; the name follows.",
+              "This lesson covers stems only. Branches hide stems of their own — that is the next lesson."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "記住一句話就夠：十神是「別的字對你」的關係，不是標籤。能把關係翻成一句生活話，你就會讀自己的命盤了。",
+        "en": "One sentence is enough: a Ten God is what something is to you, not a label. Turn the relationship into one everyday sentence and you can read your own chart."
+      },
+      "sources": [
+        "S5",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P09Q1",
+          "question": {
+            "zh": "命盤上哪一個字代表「你本人」？",
+            "en": "Which character in the chart represents you?"
+          },
+          "options": [
+            {
+              "zh": "年柱上面那個字",
+              "en": "The upper character of the Year Pillar"
+            },
+            {
+              "zh": "日柱上面那個字（日主）",
+              "en": "The upper character of the Day Pillar (Day Master)"
+            },
+            {
+              "zh": "時柱下面那個字",
+              "en": "The lower character of the Hour Pillar"
+            },
+            {
+              "zh": "月柱下面那個字",
+              "en": "The lower character of the Month Pillar"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "日柱上面那個字叫日主，就是你。所有十神都是「相對於日主」算出來的，所以讀任何命盤的第一步都是先找它。",
+            "en": "The upper character of the Day Pillar is the Day Master — you. Every Ten God is computed relative to it, so finding it is always step one."
+          }
+        },
+        {
+          "id": "P09Q2",
+          "question": {
+            "zh": "同一個庚金，對甲木是七殺，對乙木是正官。這說明什麼？",
+            "en": "The same Geng Metal is Seven Killings to Jia and Direct Officer to Yi. What does that show?"
+          },
+          "options": [
+            {
+              "zh": "庚金本身就帶著七殺這個標籤",
+              "en": "Geng Metal permanently carries the Seven Killings label"
+            },
+            {
+              "zh": "十神是關係，會隨日主改變",
+              "en": "A Ten God is a relationship and changes with the Day Master"
+            },
+            {
+              "zh": "甲木比乙木強",
+              "en": "Jia Wood is stronger than Yi Wood"
+            },
+            {
+              "zh": "正官一定比七殺好",
+              "en": "Direct Officer is always better than Seven Killings"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "十神講的是「它對你」，不是它自己是什麼。換一個日主，同一個天干的名稱就換了。所以看別人的命盤，不能把自己的那套直接套上去。",
+            "en": "A Ten God describes what something is to you, not what it is by itself. Change the Day Master and the name changes."
+          }
+        },
+        {
+          "id": "P09Q3",
+          "question": {
+            "zh": "日主是辛金，今天天干是乙木。乙木對辛金是哪一種關係？",
+            "en": "Your Day Master is Xin Metal and today’s stem is Yi Wood. What is Yi to Xin?"
+          },
+          "options": [
+            {
+              "zh": "養你的",
+              "en": "What nourishes me"
+            },
+            {
+              "zh": "管得動你的",
+              "en": "What controls me"
+            },
+            {
+              "zh": "你管得動的",
+              "en": "What I control"
+            },
+            {
+              "zh": "跟你一樣",
+              "en": "Same as me"
+            }
+          ],
+          "answer": 2,
+          "explain": {
+            "zh": "金剋木，所以乙木是「你管得動的」。辛與乙都是陰，陰陽相同，名稱就是偏財——你能掌握的流動資源，日常上對應機會與交際。",
+            "en": "Metal controls Wood, so Yi is what you control. Xin and Yi are both yin, giving Indirect Wealth: fluid resources, chances and contact with people."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P10",
+      "free": false,
+      "title": {
+        "zh": "十神五組各代表什麼",
+        "en": "Understanding the five groups"
+      },
+      "lead": {
+        "zh": "十神分成五組。記五組比記十個名字容易，而且夠用。",
+        "en": "Ten Gods come in five pairs. Five is easier to hold than ten, and enough."
+      },
+      "figure": "groups",
+      "sections": [
+        {
+          "title": {
+            "zh": "五組各是什麼",
+            "en": "The five groups"
+          },
+          "body": {
+            "zh": [
+              "比劫（比肩、劫財）＝同輩與競爭。食傷（食神、傷官）＝你的產出與表達。財（正財、偏財）＝你能掌握的資源。",
+              "官殺（正官、七殺）＝責任與壓力。印（正印、偏印）＝靠山與學習。五組講完，一個人的人生主要面向就蓋完了。"
+            ],
+            "en": [
+              "Companions = peers and competition. Output = what you make and express. Wealth = resources you command.",
+              "Officers = duty and pressure. Resource = support and learning. Those five cover most of a life."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "多了會怎樣，少了會怎樣",
+            "en": "Too much, too little"
+          },
+          "body": {
+            "zh": [
+              "比劫多：有夥伴也有人搶，容易跟人硬碰。比劫少：自己做，但孤單。食傷多：想法多表達強，容易耗也容易衝撞規矩。",
+              "財多：機會多但容易分心。官殺多：責任重、喘不過氣。印多：穩，但行動力被養鈍。每一組都有兩面，沒有哪一組是好運。"
+            ],
+            "en": [
+              "Many companions: partners and rivals, head-on friction. Few: self-reliant but alone. Much output: expressive, draining, friction with rules.",
+              "Much wealth: chances but distraction. Much officer: duty and no breathing room. Much resource: steady but passive. Each has two faces."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "怎麼用在自己身上",
+            "en": "Applying it"
+          },
+          "body": {
+            "zh": [
+              "數一數你八個字裡哪一組最多、哪一組最少。最多的那組是你的預設行為，最少的那組通常是你要刻意練的。",
+              "例如印多食傷少的人，書讀得多但很少產出；要練的不是再讀，是把讀到的做出來。"
+            ],
+            "en": [
+              "Count which group is most and least present. The largest is your default; the smallest is usually what to practise.",
+              "Much resource and little output: reads a lot, makes little. The practice is making, not reading more."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "記五組就夠：同輩、產出、資源、責任、靠山。最多的是預設，最少的是功課。",
+        "en": "Five groups suffice: peers, output, resources, duty, support. The largest is your default; the smallest is your homework."
+      },
+      "sources": [
+        "S5",
+        "S8",
+        "S9"
+      ],
+      "quiz": [
+        {
+          "id": "P10Q1",
+          "question": {
+            "zh": "「食傷」這一組代表什麼？",
+            "en": "What does the Output group represent?"
+          },
+          "options": [
+            {
+              "zh": "責任與壓力",
+              "en": "Duty and pressure"
+            },
+            {
+              "zh": "你的產出與表達",
+              "en": "What you make and express"
+            },
+            {
+              "zh": "靠山與學習",
+              "en": "Support and learning"
+            },
+            {
+              "zh": "同輩與競爭",
+              "en": "Peers and competition"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "食神與傷官都是「你生出去的」，對應作品、表達、教人、養小孩。",
+            "en": "Eating God and Hurting Officer are what you produce: work, expression, teaching, raising."
+          }
+        },
+        {
+          "id": "P10Q2",
+          "question": {
+            "zh": "印多而食傷少的人，比較需要練什麼？",
+            "en": "Much Resource and little Output — what should they practise?"
+          },
+          "options": [
+            {
+              "zh": "再多讀一點書",
+              "en": "Read even more"
+            },
+            {
+              "zh": "把讀到的東西做出來",
+              "en": "Turn what they read into something made"
+            },
+            {
+              "zh": "多休息",
+              "en": "Rest more"
+            },
+            {
+              "zh": "多找靠山",
+              "en": "Find more support"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "印是進來的，食傷是出去的。進得多出得少，功課就是產出。",
+            "en": "Resource comes in, output goes out. The homework is making something."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P11",
+      "free": false,
+      "title": {
+        "zh": "十神在不同柱位",
+        "en": "Relationships at different positions"
+      },
+      "lead": {
+        "zh": "同一個十神，放在不同柱，講的是不同場合的你。",
+        "en": "The same Ten God in a different pillar describes a different setting."
+      },
+      "figure": "positions",
+      "sections": [
+        {
+          "title": {
+            "zh": "位置就是場合",
+            "en": "Position is setting"
+          },
+          "body": {
+            "zh": [
+              "十神在年柱＝在家族與早年環境裡的樣子。在月柱＝在工作與日常場合裡的樣子。",
+              "在日支＝在親密關係裡的樣子。在時柱＝在晚年與私下的樣子。"
+            ],
+            "en": [
+              "A Ten God in the year pillar shows up in family and early life. In the month pillar, at work and in daily settings.",
+              "In the Day branch, in intimacy. In the hour pillar, in later life and in private."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "同一個七殺，兩種人生",
+            "en": "One Seven Killings, two lives"
+          },
+          "body": {
+            "zh": [
+              "七殺在月柱：工作上長期有壓力與要求推著你，容易是拚出來的那種人。",
+              "七殺在日支：壓力來自最親近的關係，容易在親密裡感到被逼。同一個名字，體感完全不同。"
+            ],
+            "en": [
+              "Seven Killings in the month pillar: lasting pressure at work; often someone who got there by grinding.",
+              "In the Day branch: the pressure comes from the closest relationship. Same name, very different experience."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "讀的順序",
+            "en": "Reading order"
+          },
+          "body": {
+            "zh": [
+              "先定位置，再講名字。先問「這在哪一柱」，再問「它對日主是什麼」，最後才翻成生活話。",
+              "順序顛倒的人會把名字當成標籤到處貼，那就讀不準了。"
+            ],
+            "en": [
+              "Locate first, name second. Ask which pillar, then what it is to the Day Master, then say it plainly.",
+              "Reversing the order turns names into labels stuck everywhere."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "先問在哪一柱，再問是什麼十神。位置決定那句話套在哪個場合。",
+        "en": "Ask which pillar before asking which Ten God. Position decides where the sentence applies."
+      },
+      "sources": [
+        "S5",
+        "S7",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P11Q1",
+          "question": {
+            "zh": "七殺出現在日支，壓力比較可能來自哪裡？",
+            "en": "Seven Killings in the Day branch — where does the pressure come from?"
+          },
+          "options": [
+            {
+              "zh": "工作",
+              "en": "Work"
+            },
+            {
+              "zh": "最親近的關係",
+              "en": "The closest relationship"
+            },
+            {
+              "zh": "家族",
+              "en": "Family"
+            },
+            {
+              "zh": "晚年",
+              "en": "Later life"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "日支是最貼身的位置，常看伴侶與親密關係。同樣的七殺放月柱才是工作壓力。",
+            "en": "The Day branch sits closest and reads for intimacy. In the month pillar it would be work pressure."
+          }
+        },
+        {
+          "id": "P11Q2",
+          "question": {
+            "zh": "解讀的正確順序是什麼？",
+            "en": "What is the correct reading order?"
+          },
+          "options": [
+            {
+              "zh": "先講名字再找位置",
+              "en": "Name first, then position"
+            },
+            {
+              "zh": "先定位置，再看對日主是什麼，最後翻成生活話",
+              "en": "Position, then relation to the Day Master, then plain words"
+            },
+            {
+              "zh": "只看名字",
+              "en": "Name only"
+            },
+            {
+              "zh": "只看位置",
+              "en": "Position only"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "位置決定場合，關係決定性質，生活話才是帶得走的結論。",
+            "en": "Position sets the setting, relation sets the nature, plain words are what you keep."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P12",
+      "free": false,
+      "title": {
+        "zh": "天干相合",
+        "en": "Stem combinations"
+      },
+      "lead": {
+        "zh": "天干相合是兩個字互相牽住。牽住之後，力量不一定還照原樣運作。",
+        "en": "Stem combinations tie two characters together, and tied force does not act as before."
+      },
+      "figure": "stemPairs",
+      "sections": [
+        {
+          "title": {
+            "zh": "哪些會合",
+            "en": "Which stems combine"
+          },
+          "body": {
+            "zh": [
+              "甲己、乙庚、丙辛、丁壬、戊癸，這五組會互相牽引。可以想成兩個人手牽在一起。",
+              "牽住的結果是：兩邊都比較不容易單獨發揮，注意力互相被對方佔住。"
+            ],
+            "en": [
+              "Jia–Ji, Yi–Geng, Bing–Xin, Ding–Ren, Wu–Gui. Think of two people holding hands.",
+              "Neither acts as freely alone; each holds part of the other’s attention."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "對人的意思",
+            "en": "What it means for a person"
+          },
+          "body": {
+            "zh": [
+              "命盤裡有合，常表現為「在某件事上會自動被某種人或某種情境黏住」。可能是牽絆，也可能是互補。",
+              "例如日主與某個字相合，你在那個領域就容易身不由己，好的壞的都難抽身。"
+            ],
+            "en": [
+              "A combination often shows as being automatically drawn to a type of person or situation. It can be support or entanglement.",
+              "If your Day Master combines with something, that area is hard to stay detached from."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "不要過度解釋",
+            "en": "Do not over-read it"
+          },
+          "body": {
+            "zh": [
+              "合不等於好，也不等於結婚、發財。它只是說明這兩股力量彼此牽制。",
+              "初學遇到合，先記下「這一塊我容易身不由己」就好，其餘等熟了再說。"
+            ],
+            "en": [
+              "A combination is not luck, marriage or money. It only says two forces hold each other.",
+              "As a beginner, note “I lose detachment here” and move on."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "合是牽住，不是好事也不是壞事。先記「這一塊我容易身不由己」。",
+        "en": "A combination ties, it does not bless. Note where you lose detachment."
+      },
+      "sources": [
+        "S4",
+        "S7",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P12Q1",
+          "question": {
+            "zh": "天干相合最準確的理解是什麼？",
+            "en": "What does a stem combination most accurately mean?"
+          },
+          "options": [
+            {
+              "zh": "代表好運",
+              "en": "It means good luck"
+            },
+            {
+              "zh": "兩股力量互相牽住，都不易單獨發揮",
+              "en": "Two forces hold each other and neither acts freely"
+            },
+            {
+              "zh": "代表會結婚",
+              "en": "It means marriage"
+            },
+            {
+              "zh": "代表沒有作用",
+              "en": "It has no effect"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "合是牽引，不是吉凶。被牽住的兩邊注意力互相佔住。",
+            "en": "Combination is attraction, not fortune. Each holds the other’s attention."
+          }
+        },
+        {
+          "id": "P12Q2",
+          "question": {
+            "zh": "初學者遇到命盤裡有合，該怎麼處理？",
+            "en": "As a beginner, what should you do with a combination?"
+          },
+          "options": [
+            {
+              "zh": "直接斷定會發財",
+              "en": "Conclude wealth is coming"
+            },
+            {
+              "zh": "記下「這一塊我容易身不由己」就好",
+              "en": "Note that you lose detachment there, and move on"
+            },
+            {
+              "zh": "忽略不看",
+              "en": "Ignore it"
+            },
+            {
+              "zh": "改排別張盤",
+              "en": "Recalculate the chart"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "先記現象，不要急著下結論。細節等基礎熟了再加。",
+            "en": "Note the phenomenon; add detail once the basics are solid."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P13",
+      "free": false,
+      "title": {
+        "zh": "地支六合",
+        "en": "The six branch combinations"
+      },
+      "lead": {
+        "zh": "地支六合是兩個地支互相配合。配合起來，那一塊事情比較順，也比較容易彼此牽著走。",
+        "en": "Six Harmonies pair branches. Things in that area run smoother, and pull you along."
+      },
+      "figure": "branchPairs",
+      "sections": [
+        {
+          "title": {
+            "zh": "六組配對",
+            "en": "The six pairs"
+          },
+          "body": {
+            "zh": [
+              "子丑、寅亥、卯戌、辰酉、巳申、午未。這六組彼此相合。",
+              "相合不是相同，是互相配合。可以想成兩個不同個性的人很合得來。"
+            ],
+            "en": [
+              "Zi–Chou, Yin–Hai, Mao–Xu, Chen–You, Si–Shen, Wu–Wei.",
+              "Harmony is not sameness; it is fit. Two different people who get along."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "實際體感",
+            "en": "What it feels like"
+          },
+          "body": {
+            "zh": [
+              "命盤裡有合的那一塊，通常是你覺得「做起來不費力」的地方：關係好談、事情自然接上。",
+              "代價是容易被那一塊綁住。順的地方人就不想離開，久了會變成舒適圈。"
+            ],
+            "en": [
+              "Where there is harmony, things feel effortless: easy conversations, work that connects by itself.",
+              "The cost is attachment. People stay where it is easy, and it becomes a comfort zone."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "跟今日那一頁的關係",
+            "en": "How the Today tab uses it"
+          },
+          "body": {
+            "zh": [
+              "「今日」會比較今天的日支和你的生年支。遇到六合會多講一句，因為那天那種「順」的感覺會比較明顯。",
+              "那只是描述當天的配合度，不是預言，也沒有分數。"
+            ],
+            "en": [
+              "The Today tab compares the day branch with your birth-year branch and adds a line when they harmonise.",
+              "It describes fit for that day. It is not a prediction and carries no score."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "合代表配合，不代表好。順的地方容易變成不想離開的地方。",
+        "en": "Harmony means fit, not fortune. Easy places become places you will not leave."
+      },
+      "sources": [
+        "S4",
+        "S7",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P13Q1",
+          "question": {
+            "zh": "地支六合最接近下面哪個說法？",
+            "en": "Which best describes a Six Harmony?"
+          },
+          "options": [
+            {
+              "zh": "兩個地支一模一樣",
+              "en": "The two branches are identical"
+            },
+            {
+              "zh": "兩個不同的地支互相配合",
+              "en": "Two different branches that fit well"
+            },
+            {
+              "zh": "兩個地支互相傷害",
+              "en": "They damage each other"
+            },
+            {
+              "zh": "沒有任何意義",
+              "en": "It means nothing"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "合是配合不是相同，像兩個個性不同但合得來的人。",
+            "en": "Harmony is fit, not sameness."
+          }
+        },
+        {
+          "id": "P13Q2",
+          "question": {
+            "zh": "命盤裡「順」的那一塊，要注意什麼？",
+            "en": "What should you watch where things run easy?"
+          },
+          "options": [
+            {
+              "zh": "那裡一定會成功",
+              "en": "Success is guaranteed there"
+            },
+            {
+              "zh": "容易被綁住，久了變成舒適圈",
+              "en": "It is easy to get attached and settle there"
+            },
+            {
+              "zh": "那裡完全沒用",
+              "en": "It is useless"
+            },
+            {
+              "zh": "要避開那一塊",
+              "en": "Avoid that area"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "順的地方人不想離開。這不是壞事，但要自己知道。",
+            "en": "People do not leave what is easy."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P14",
+      "free": false,
+      "title": {
+        "zh": "地支六沖",
+        "en": "The six branch clashes"
+      },
+      "lead": {
+        "zh": "地支六沖是兩個地支互相撞。撞到的地方會動，動了才有變化，也才容易出事。",
+        "en": "A Six Clash means two branches collide. Collision brings movement — and movement brings change."
+      },
+      "figure": "clashes",
+      "sections": [
+        {
+          "title": {
+            "zh": "六組相沖",
+            "en": "The six clashes"
+          },
+          "body": {
+            "zh": [
+              "子午、丑未、寅申、卯酉、辰戌、巳亥。這六組兩兩相沖。",
+              "沖是兩股方向相反的力量撞在一起，結果是那一塊穩不住。"
+            ],
+            "en": [
+              "Zi–Wu, Chou–Wei, Yin–Shen, Mao–You, Chen–Xu, Si–Hai.",
+              "A clash is two opposing forces meeting. That area will not stay still."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "撞不一定是壞事",
+            "en": "A clash is not necessarily bad"
+          },
+          "body": {
+            "zh": [
+              "沖代表動。搬家、換工作、關係變化，都是動。停滯太久的人遇到沖，反而是鬆動的機會。",
+              "但動的時候細節容易掉，所以那段時間要多留緩衝，不要排得太滿。"
+            ],
+            "en": [
+              "A clash means movement: moving house, changing jobs, shifting relationships. For someone stuck, that is an opening.",
+              "But details slip while things move, so leave slack and do not overbook."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "怎麼在生活裡用",
+            "en": "Using it day to day"
+          },
+          "body": {
+            "zh": [
+              "「今日」頁遇到日支與你生年支相沖時會多講一句。那不是警告，是提醒你那天節奏容易被打斷。",
+              "實務上就是：重要的事排在不會被插隊的時段，送出前多檢查一次。"
+            ],
+            "en": [
+              "The Today tab adds a line when the day branch clashes with your birth-year branch. Not a warning — a note that the rhythm breaks easily.",
+              "In practice: put important work where it will not be interrupted, and check once more before sending."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "沖是動，不是凶。動的時候留緩衝，細節多看一次。",
+        "en": "A clash is movement, not misfortune. Leave slack and check details twice."
+      },
+      "sources": [
+        "S1",
+        "S4",
+        "S7"
+      ],
+      "quiz": [
+        {
+          "id": "P14Q1",
+          "question": {
+            "zh": "地支相沖代表什麼？",
+            "en": "What does a Six Clash indicate?"
+          },
+          "options": [
+            {
+              "zh": "一定會出意外",
+              "en": "An accident is certain"
+            },
+            {
+              "zh": "那一塊會動、穩不住",
+              "en": "That area moves and will not settle"
+            },
+            {
+              "zh": "代表好運",
+              "en": "Good luck"
+            },
+            {
+              "zh": "完全沒作用",
+              "en": "No effect"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "沖是兩股相反的力量撞在一起，結果是動。動可能是機會，也可能是打斷。",
+            "en": "Opposing forces collide and things move."
+          }
+        },
+        {
+          "id": "P14Q2",
+          "question": {
+            "zh": "遇到沖的日子，務實的做法是什麼？",
+            "en": "What is the practical response on a clash day?"
+          },
+          "options": [
+            {
+              "zh": "什麼都不要做",
+              "en": "Do nothing at all"
+            },
+            {
+              "zh": "重要的事排在不會被打斷的時段，送出前多檢查",
+              "en": "Schedule key work where it will not be interrupted and check before sending"
+            },
+            {
+              "zh": "改期到下個月",
+              "en": "Postpone a month"
+            },
+            {
+              "zh": "去拜拜",
+              "en": "Go to a temple"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "沖的影響是節奏容易斷、細節容易掉，對策就是留緩衝與多檢查。",
+            "en": "Rhythm breaks and details slip, so leave slack and verify."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P15",
+      "free": false,
+      "title": {
+        "zh": "跟著一張完整命盤讀一遍",
+        "en": "A complete worked reading"
+      },
+      "lead": {
+        "zh": "把前面學的全部串起來，從頭到尾讀一張完整的命盤。",
+        "en": "Put it all together and read one complete chart end to end."
+      },
+      "figure": "steps",
+      "sections": [
+        {
+          "title": {
+            "zh": "五個步驟",
+            "en": "The five steps"
+          },
+          "body": {
+            "zh": [
+              "一、找日主，確認五行與陰陽。二、看日支主氣，講一句親密關係的話。三、看月柱，講一句工作與主場的話。",
+              "四、數五組十神哪個最多最少，講一句預設與功課。五、看有沒有合或沖，補一句「哪一塊容易身不由己或容易動」。"
+            ],
+            "en": [
+              "One: find the Day Master, note phase and polarity. Two: the Day branch’s main stem — one sentence on intimacy. Three: the month pillar — one sentence on work.",
+              "Four: count the five groups — one sentence on default and homework. Five: note combinations and clashes."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "示範",
+            "en": "A worked example"
+          },
+          "body": {
+            "zh": [
+              "假設日主辛金（陰金），日支主氣乙木（偏財），月干壬水（傷官），五組裡食傷最多、官殺最少。",
+              "讀法：你是細緻、重取捨的人。親密關係裡你習慣掌握流動的資源與機會，容易熱絡也容易分心。工作上你靠表達與產出推進，不太受得了被管。預設是一直輸出、不喜歡約束；功課是替自己設邊界，不然會耗乾。"
+            ],
+            "en": [
+              "Say the Day Master is Xin Metal (yin), the Day branch’s main stem Yi Wood (Indirect Wealth), the month stem Ren Water (Hurting Officer), with Output largest and Officer smallest.",
+              "Reading: fine-grained and decisive. In intimacy you work through fluid resources and chances — warm, easily distracted. At work you push through expression and output and dislike being managed. Homework: set your own boundaries or burn out."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "五句話就夠",
+            "en": "Five sentences are enough"
+          },
+          "body": {
+            "zh": [
+              "完整的解讀不是講很多，是講得準。五句話可以講完一個人的主要輪廓。",
+              "講不出來就回去補那一課，不要用模糊的形容詞蓋過去。"
+            ],
+            "en": [
+              "A complete reading is accurate, not long. Five sentences cover the main outline.",
+              "If you cannot say one, go back to that lesson rather than covering it with vague adjectives."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "五個步驟、五句話。講不出來就回去補那一課。",
+        "en": "Five steps, five sentences. If one will not come, go back to that lesson."
+      },
+      "sources": [
+        "S1",
+        "S3",
+        "S4",
+        "S5",
+        "S7",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P15Q1",
+          "question": {
+            "zh": "完整解讀的第一步是什麼？",
+            "en": "What is step one of a full reading?"
+          },
+          "options": [
+            {
+              "zh": "數十神",
+              "en": "Count the Ten Gods"
+            },
+            {
+              "zh": "找日主並確認五行與陰陽",
+              "en": "Find the Day Master, note phase and polarity"
+            },
+            {
+              "zh": "看有沒有沖",
+              "en": "Look for clashes"
+            },
+            {
+              "zh": "看年柱",
+              "en": "Read the year pillar"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "日主沒定，其他全部算不出來。它永遠是第一步。",
+            "en": "Nothing else computes until the Day Master is fixed."
+          }
+        },
+        {
+          "id": "P15Q2",
+          "question": {
+            "zh": "「食傷多、官殺少」的人，功課通常是什麼？",
+            "en": "Much Output and little Officer — what is the homework?"
+          },
+          "options": [
+            {
+              "zh": "再多產出一點",
+              "en": "Produce even more"
+            },
+            {
+              "zh": "替自己設邊界，否則會耗乾",
+              "en": "Set your own boundaries or burn out"
+            },
+            {
+              "zh": "找更多靠山",
+              "en": "Find more support"
+            },
+            {
+              "zh": "完全停下來",
+              "en": "Stop entirely"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "官殺是外來的約束，少了就要自己補。",
+            "en": "Officer is external restraint; supply your own."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P16",
+      "free": false,
+      "title": {
+        "zh": "比較出生資料造成的差異",
+        "en": "Comparing input changes"
+      },
+      "lead": {
+        "zh": "改一個輸入，命盤會變多少？親手比較過，你才知道哪些資料非準不可。",
+        "en": "Change one input and see how far the chart moves. That tells you which data must be right."
+      },
+      "figure": "compare",
+      "sections": [
+        {
+          "title": {
+            "zh": "差一天會怎樣",
+            "en": "What one day changes"
+          },
+          "body": {
+            "zh": [
+              "日柱每天換一組干支，所以差一天，日主就換人。日主換了，整張盤的十神全部重算。",
+              "這是為什麼生日只差一天的兩個人，讀起來可以完全不像。"
+            ],
+            "en": [
+              "The day pillar changes every day, so one day shifts the Day Master — and every Ten God is recomputed.",
+              "That is why two people born a day apart can read nothing alike."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "差一個時辰會怎樣",
+            "en": "What one hour changes"
+          },
+          "body": {
+            "zh": [
+              "只有時柱會換，日主不動。所以主要輪廓一樣，差別在晚年、子女與私下的樣子。",
+              "這也是為什麼時辰不確定不算災難——動的是一塊，不是全部。"
+            ],
+            "en": [
+              "Only the hour pillar moves; the Day Master holds. The outline stays, and later life, children and the private self shift.",
+              "That is why an uncertain hour is not a disaster."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "差時區會怎樣",
+            "en": "What a wrong time zone changes"
+          },
+          "body": {
+            "zh": [
+              "時區錯會讓時間跨過午夜或節氣，結果可能整個日柱甚至月柱都換。這是最嚴重的一種錯。",
+              "所以設定裡的出生地要填對，這比任何解讀技巧都重要。"
+            ],
+            "en": [
+              "A wrong time zone can push the time past midnight or a solar term, changing the day or even month pillar. This is the worst error.",
+              "Getting the birthplace right matters more than any interpretive skill."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "時辰錯只動一柱，時區錯可能整張變。先顧時區。",
+        "en": "A wrong hour moves one pillar; a wrong time zone can move everything. Fix the time zone first."
+      },
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "quiz": [
+        {
+          "id": "P16Q1",
+          "question": {
+            "zh": "出生日期差一天，影響有多大？",
+            "en": "How much does one day change?"
+          },
+          "options": [
+            {
+              "zh": "完全沒有影響",
+              "en": "No effect"
+            },
+            {
+              "zh": "日主會換，十神全部重算",
+              "en": "The Day Master changes and every Ten God is recomputed"
+            },
+            {
+              "zh": "只有晚年會變",
+              "en": "Only later life changes"
+            },
+            {
+              "zh": "只有年柱會變",
+              "en": "Only the year pillar changes"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "日柱每天換，日主跟著換。日主是所有十神的基準，所以整張盤都變。",
+            "en": "The day pillar turns daily, and every Ten God is relative to it."
+          }
+        },
+        {
+          "id": "P16Q2",
+          "question": {
+            "zh": "三種輸入錯誤裡，哪一種最嚴重？",
+            "en": "Which input error is worst?"
+          },
+          "options": [
+            {
+              "zh": "時辰猜錯",
+              "en": "A guessed hour"
+            },
+            {
+              "zh": "時區填錯",
+              "en": "A wrong time zone"
+            },
+            {
+              "zh": "性別填錯",
+              "en": "Wrong gender"
+            },
+            {
+              "zh": "姓名打錯",
+              "en": "A misspelt name"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "時區錯可能讓日期跨過午夜或節氣，日柱甚至月柱整個換掉。",
+            "en": "A wrong time zone can shift the day or month pillar entirely."
+          }
+        }
+      ]
+    },
+    {
+      "id": "P17",
+      "free": false,
+      "title": {
+        "zh": "查來源，建立研究筆記",
+        "en": "Sources, notes and review"
+      },
+      "lead": {
+        "zh": "學完之後怎麼不忘：查來源、寫三句筆記、把複習排開。",
+        "en": "How to keep it: check sources, write three lines, space your review."
+      },
+      "figure": "notes",
+      "sections": [
+        {
+          "title": {
+            "zh": "為什麼要查來源",
+            "en": "Why sources matter"
+          },
+          "body": {
+            "zh": [
+              "八字的說法歷代不同，同一個詞在不同書裡意思可能不一樣。看到一個說法先問它從哪來，才不會把別人的流派當成定論。",
+              "這個 App 每一堂課下面都列了依據，點得進去。看到跟你學過的不一樣，不代表誰錯，可能只是流派不同。"
+            ],
+            "en": [
+              "Bazi terminology varies between eras and schools. Ask where a claim comes from before treating it as settled.",
+              "Each lesson lists its sources. A difference from what you learned elsewhere may just be a different school."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "筆記要寫什麼",
+            "en": "What to write in a note"
+          },
+          "body": {
+            "zh": [
+              "不要抄原文。寫三件事：這一課我聽懂的一句話、我在自己命盤上看到的實例、我還不確定的地方。",
+              "三句話就好。寫得多反而不會回看。"
+            ],
+            "en": [
+              "Do not copy the text. Write three things: the one sentence you understood, an example from your own chart, and what you are still unsure about.",
+              "Three lines. Longer notes do not get reread."
+            ]
+          }
+        },
+        {
+          "title": {
+            "zh": "複習怎麼排",
+            "en": "How to schedule review"
+          },
+          "body": {
+            "zh": [
+              "讀完隔天看一次，一週後再看一次，一個月後再看一次。間隔拉開比一次讀很久有效。",
+              "App 可以替每一堂排複習時間，排好就不用自己記。"
+            ],
+            "en": [
+              "Review the next day, again after a week, again after a month. Spacing beats one long session.",
+              "The app can schedule each lesson so you do not have to remember."
+            ]
+          }
+        }
+      ],
+      "close": {
+        "zh": "筆記只寫三句：懂了什麼、在自己盤上看到什麼、還不確定什麼。",
+        "en": "Three lines per note: what you understood, what you saw in your own chart, what is still unclear."
+      },
+      "sources": [
+        "S3",
+        "S9"
+      ],
+      "quiz": [
+        {
+          "id": "P17Q1",
+          "question": {
+            "zh": "看到跟自己學過的不一樣的說法，第一個反應應該是什麼？",
+            "en": "You meet a claim that differs from what you learned. First reaction?"
+          },
+          "options": [
+            {
+              "zh": "斷定對方是錯的",
+              "en": "Decide they are wrong"
+            },
+            {
+              "zh": "先問這個說法從哪來",
+              "en": "Ask where the claim comes from"
+            },
+            {
+              "zh": "馬上改信新的",
+              "en": "Switch immediately"
+            },
+            {
+              "zh": "不要再學八字",
+              "en": "Stop studying"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "八字歷代流派不同。先確認來源，才知道是錯誤還是流派差異。",
+            "en": "Schools differ. Check the source before judging."
+          }
+        },
+        {
+          "id": "P17Q2",
+          "question": {
+            "zh": "課程建議筆記寫哪三件事？",
+            "en": "Which three things should a note contain?"
+          },
+          "options": [
+            {
+              "zh": "原文、作者、年份",
+              "en": "Original text, author, year"
+            },
+            {
+              "zh": "懂了什麼、在自己盤上看到什麼、還不確定什麼",
+              "en": "What you understood, what you saw in your own chart, what is unclear"
+            },
+            {
+              "zh": "全部抄一遍",
+              "en": "Copy everything"
+            },
+            {
+              "zh": "只寫日期",
+              "en": "Just the date"
+            }
+          ],
+          "answer": 1,
+          "explain": {
+            "zh": "抄原文不會變成你的。寫理解、實例與疑問，回看才有用。",
+            "en": "Copying does not make it yours. Understanding, example and question do."
+          }
+        }
+      ]
+    }
+  ],
+  "sources": {
+    "S1": {
+      "title": {
+        "zh": "香港天文台｜天干和地支",
+        "en": "Hong Kong Observatory · Stems and branches"
+      },
+      "url": "https://www.hko.gov.hk/tc/gts/time/stemsandbranches.htm",
+      "note": {
+        "zh": "干支、時辰，以及年干起月干、日干起時干的對照。",
+        "en": "Names, time periods, and stem correspondence tables."
+      }
+    },
+    "S2": {
+      "title": {
+        "zh": "香港天文台｜二十四節氣",
+        "en": "Hong Kong Observatory · The 24 solar terms"
+      },
+      "url": "https://www.hko.gov.hk/tc/gts/time/24solarterms.htm",
+      "note": {
+        "zh": "天文節點與十二節、十二中氣；不作命理效果的證據。",
+        "en": "Astronomical boundaries and the two alternating term groups."
+      }
+    },
+    "S3": {
+      "title": {
+        "zh": "《三命通會》卷十｜看命口訣",
+        "en": "San Ming Tong Hui · Volume 10"
+      },
+      "url": "https://zh.wikisource.org/zh-hant/三命通會_(四庫全書本)/卷10",
+      "note": {
+        "zh": "「專以日干為主」段落。引用線上轉錄，白話比喻由時來編寫。",
+        "en": "The passage using the day stem as reference. Online transcription; teaching analogies are original."
+      }
+    },
+    "S4": {
+      "title": {
+        "zh": "《三命通會》卷二｜干支關係",
+        "en": "San Ming Tong Hui · Volume 2"
+      },
+      "url": "https://zh.wikisource.org/zh-hant/三命通會_(四庫全書本)/卷02",
+      "note": {
+        "zh": "天干陰陽、十干合、支元六合與衝擊篇章。全文底本仍待編輯校對。",
+        "en": "Chapters on polarity, combinations and clashes. Facsimile collation remains an editorial task."
+      }
+    },
+    "S5": {
+      "title": {
+        "zh": "《三命通會》卷五｜印食官財名義",
+        "en": "San Ming Tong Hui · Volume 5"
+      },
+      "url": "https://zh.wikisource.org/zh-hant/三命通會_(四庫全書本)/卷05",
+      "note": {
+        "zh": "以日干為我的生剋框架；完整現代對照表另列計算採用版本。",
+        "en": "The day-stem relationship framework. The adopted calculation table is recorded separately."
+      }
+    },
+    "S6": {
+      "title": {
+        "zh": "IANA｜歷史時區資料說明",
+        "en": "IANA · Time-zone database"
+      },
+      "url": "https://data.iana.org/time-zones/tz-link.html",
+      "note": {
+        "zh": "地方時間、UTC偏移與夏令時間的歷史資料及涵蓋限制。",
+        "en": "Local time, UTC offsets, daylight saving history and coverage limitations."
+      }
+    },
+    "S7": {
+      "title": {
+        "zh": "本課教學案例與計算約定",
+        "en": "Lesson cases and conventions"
+      },
+      "url": null,
+      "note": {
+        "zh": "2000年1月7日，台北，10:30／11:30／12:00；民用時間。案例已用固定計算版本重跑，非獨立曆表驗證。",
+        "en": "7 January 2000, Taipei, 10:30 / 11:30 / 12:00, civil time. Replayed with a fixed calculation version; not independently validated against an almanac."
+      }
+    },
+    "S8": {
+      "title": {
+        "zh": "lunar-javascript｜採用的計算資料",
+        "en": "lunar-javascript · Adopted calculation data"
+      },
+      "url": "https://github.com/6tail/lunar-javascript",
+      "note": {
+        "zh": "教材使用1.7.7版作案例重算及分類表對照；算法一致性不等於古籍底本校勘。",
+        "en": "Version 1.7.7 used for replayed cases and correspondence-table checks. Algorithm agreement is not textual collation."
+      }
+    },
+    "S9": {
+      "title": {
+        "zh": "時來原創｜閱讀與筆記方法",
+        "en": "ShiLai · Reading and note methods"
+      },
+      "url": null,
+      "note": {
+        "zh": "白話概念、筆記提示與複習安排由時來編寫；依個人需求調整。",
+        "en": "Original explanations, note prompts and adjustable reading schedules."
+      }
+    }
+  }
+}
