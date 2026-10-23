@@ -51,6 +51,12 @@ export function createStudyStore(storage = globalThis.localStorage, clock = () =
     markRead(id) { put(id, {read:true}); },
     schedule(id, days) { put(id, {reviewDate:days ? nextDay(clock(), days) : null}); },
     exportNotes() { return Object.keys(entries).sort().filter(id => entry(id).note).map(id => `## ${id}\n\n${entry(id).note}`).join('\n\n'); },
+    clearAll() {
+      for (const id of Object.keys(entries)) delete entries[id];
+      for (const id of Object.keys(review)) delete review[id];
+      try { storage.removeItem(STUDY_KEY); storage.removeItem(REVIEW_KEY); persistent = true; warning = ''; }
+      catch { persistent = false; warning = '瀏覽器無法清除已儲存的學習資料，請檢查瀏覽器設定。'; }
+    },
     reviewEntry,
     recordFirstAnswer(lessonId, questionId, correct) {
       if (correct || reviewEntry(lessonId,questionId)) return;
