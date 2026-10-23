@@ -97,11 +97,13 @@ Type: AFK。Status: integrated, published and verified (`51a465f`；正式網站
 
 ## A1：計算完整與部分本命星盤
 
-Type: AFK。Status: proposed。Blocked by: Z5。
+Type: AFK。Status: integrated and verified (`3c8342a`; 100 組原生標準盤與手機操作通過，仍為 noindex 預覽)。Blocked by: Z5。
 
 建立星座出生輸入與星盤輪，使用與原 App 等價的星曆計算十星、ASC／MC、宮位、相位與逆行；未知時間提供有不確定狀態的部分盤。
 
 驗收：來源版本和容差記錄清楚；星體位置、相位、上升／天頂與宮頭對照原 App；極緯 fallback 有標示；歷史 DST 與未知出生時間符合原合約；不以生日日期表代替實算。以數值基準、邊界案例與手機盤面驗證。
+
+完成證據：原生 Astronomy Engine 2.1.19 的 JS 版本與 100 組凍結 golden 命盤逐一比對，十星黃經、ASC／MC、十二宮及完整／部分狀態皆在既有四位小數來源精度內；另以原生獨立參考案例檢查角度、逆行與跨星座未知時間。春季跳時與秋季重複時刻對照原生 Foundation 結果。瀏覽器實作教學盤、未知時間留白、極緯整宮制、夏令時間提示；390px 無水平溢出或錯誤。A1 頁面 noindex，待 A5 完整公開。
 
 ## A2：閱讀本命解說、今日與七日行運
 
