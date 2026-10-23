@@ -1,0 +1,121 @@
+{
+  "capturedOn": "2026-10-23",
+  "sourceRepository": "FortuneWidget",
+  "sourceCommit": "ec209ac0e11d8b4b81fa080c5dafd17877931c63",
+  "sourceHasUncommittedChanges": true,
+  "dependencies": {
+    "lunar-javascript": "1.7.7",
+    "iztro": "2.6.1"
+  },
+  "files": [
+    {
+      "path": "src/engine.mjs",
+      "sha256": "3108f3161466390210ebd5d1e221f36bd99d04cb993f031bd017577e24990a6a",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "src/activities.mjs",
+      "sha256": "5be98407a735e195ca2fd70876417787d6549499be6a9e49b8c427a713418a18",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "src/rules/corpus.json",
+      "sha256": "a5ac81e2a60710b3f23552648286fbe45adedc692f9ad0cab33b614a4cfbfbbd",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "src/rules/evaluate.mjs",
+      "sha256": "3d5f4c73a4beb3ac003275fd1c648cf5501edf160a9b57044ee659fa6c1b9082",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "src/rules/aggregate.mjs",
+      "sha256": "967ecff34817fdbc9d4b2055cb8d554633a2ce53762f4d03653c398024040e26",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "src/rules/attest.mjs",
+      "sha256": "d265d4aaecacbb41b103ebb3627ddba630be9f9be37fcacf029ba7e7aa68e5ce",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "src/copy/home-advice.mjs",
+      "sha256": "beef96df71384e58d0969e308986b52052b05d78ebcad9c4e5bf7912c760151c",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "src/copy/daily-copy.mjs",
+      "sha256": "9945d40fca0a79083205f5e377e126c7b322f8a1dc77b78bb52c715604653a83",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "ios/App/Engine.swift",
+      "sha256": "8d02e3de45e2e9b566e94338417a8592e8a3fbbb099d9069eecf43f458ec1f02",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "ios/Shared/Models.swift",
+      "sha256": "7f62a16c602a282dcc50b77dd4f7ff7b15682a8abc843b53648ec0175d7ffd22",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "ios/App/ChartPlainReading.swift",
+      "sha256": "047f65b72580c44829c6ad868ac65ee37ad6d21d788d7dd6f68803fe14c21a0b",
+      "trackedAtSourceCommit": false
+    },
+    {
+      "path": "ios/App/ShilaiChartView.swift",
+      "sha256": "97dde43bc7ddcd4a292e4895aaf406c0c751bad65c6f3dd31114174f552e2136",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "ios/App/BaziCourses.json",
+      "sha256": "946329454ccf166480995970a7a85da2a3ae8ab1ddd85aebcc4d26bf7baa4e52",
+      "trackedAtSourceCommit": false
+    },
+    {
+      "path": "ios/App/CourseStudy.swift",
+      "sha256": "31dc46ddcb759921308797bf2db197d892e7ae41f6abe8bbbdeeac1ac4679b53",
+      "trackedAtSourceCommit": false
+    },
+    {
+      "path": "ios/App/FriendBook.swift",
+      "sha256": "e6bab5cd41117e21d3e737dfa23ca2d8bceab3f0f0ff6539c5e64f09c0229669",
+      "trackedAtSourceCommit": false
+    },
+    {
+      "path": "ios/App/BaziSynastry.swift",
+      "sha256": "fe7df376ae700e956603e69a036a4f0fc69674ae89406a8231fe3309792d96bf",
+      "trackedAtSourceCommit": false
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "74b3b34697c7dd185820ea1efeac46b90edb3f876502781dbbb8618bb6d4077b",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "src/notices/source-notices.txt",
+      "sha256": "a9de928818c2fb242c15c5f9e85b0fe4ff5e1cc6cdab629d85870e13158fe3c2",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "ios/Shared/THIRD_PARTY_NOTICES.txt",
+      "sha256": "a658266ad28269de05a4323e6eb41605f8e8eb45e2569c659e49f8abdf9b46cf",
+      "trackedAtSourceCommit": true
+    },
+    {
+      "path": "ios/DailyFortuneTests/BirthInputEngineTests.swift",
+      "sha256": "de0aadf1cebd73ff9ff5cf24114e3b860ed848697ff3d865f1a7d0b3f0af5dcb",
+      "trackedAtSourceCommit": true
+    }
+  ],
+  "webEngine": {
+    "path": "bazi-web/assets/engine.js",
+    "sha256": "0c47868bfdca40f42dd4d7c29c7e66d534709d403924e33baea179afea425fa6",
+    "generatedFrom": "src/engine.mjs with source repository esbuild, browser IIFE FortuneEngine"
+  },
+  "webNotices": {
+    "path": "bazi-web/assets/THIRD_PARTY_NOTICES.txt",
+    "sha256": "a658266ad28269de05a4323e6eb41605f8e8eb45e2569c659e49f8abdf9b46cf"
+  }
+}
