@@ -87,11 +87,13 @@ Type: AFK。Status: integrated and verified (`0a69ab4`; 原生雙向合盤規則
 
 ## Z5：紫微完整驗收並在個人網站公開
 
-Type: AFK。Status: proposed。Blocked by: Z2, Z3, Z4。
+Type: AFK。Status: integrated, published and verified (`51a465f`；正式網站與個人網站入口皆已驗證)。Blocked by: Z2, Z3, Z4。
 
 完成紫微索引、FAQ、授權、metadata、sitemap 與個人網站作品入口，通過整套驗收後公開。
 
 驗收：功能矩陣無缺口；正式盤面與教材可開；搜尋可讀個人資料不可索引；八字、易見及共用入口回歸通過。留下公開驗證與測試證據，才進星座。
+
+完成證據：紫微 75 個公開網址列入 sitemap、具 canonical；私人筆記頁保留 noindex 且未列入 sitemap。全站 Node 49 項、Python 5 項與易見 77 頁稽核通過。正式 `https://mm7382.github.io/ziwei-web/` 排出教學盤、顯示十二宮與導讀，課程 `https://mm7382.github.io/ziwei-web/learn/L01/` 及 AI 說明頁回應 200。個人網站 `https://mm7382.github.io/pec-ai-agent-training/` 已顯示紫微入口與作品卡，圖片載入、無水平溢出或瀏覽器錯誤。
 
 ## A1：計算完整與部分本命星盤
 
