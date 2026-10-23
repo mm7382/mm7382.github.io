@@ -1,0 +1,27 @@
+{
+  "commit": "f2700ed19b0015634ae5713acc437e32797afcef",
+  "capturedOn": "2026-10-23",
+  "engine": "Astronomy Engine 2.1.19, MIT",
+  "goldenFixture": "Tests/Golden/benchmark-100.json",
+  "files": {
+    "Vendor/AstronomyEngine/astronomy.c": "388920479d819713963ffd0f8ab0677944f66c6c94239ceddddd3b0d5d064432",
+    "Vendor/AstronomyEngine/astronomy.h": "83a31011957c2b87e22f0828820f370f1a495aa4d51357bb57d714cde839dc00",
+    "Core/Calculation/Ephemeris.swift": "836ab2b4f1674f6526ba6ff0541e240a9acf76ab968c232a15ab6f8cae808337",
+    "Core/Calculation/NatalChartCalculator.swift": "31f7dd4d8c53a664bd30da433a565fd6e81519cd4ce182e6a4202a0fcbf8e234",
+    "Core/Calculation/PartialChartCalculator.swift": "8f9225cc266d13547f78059ceb102cb335670ef4c04da38202612ca343abc96c",
+    "Core/Calculation/BirthTimeResolver.swift": "027d19e8713a0bbb9ed57dade2e9d8c9b4c1864bddd653c0f9fa048ddffaddd6",
+    "Core/Calculation/Houses.swift": "e26deec4ffce8bffb9a747541ef411c1c896a5007ba4a5281bca3a7437f0c223",
+    "Core/Calculation/EarthOrientation.swift": "2e5f8e1712675c0a5abe3f361c2c871199eafd8ad2c0908a7a63eea76111df13",
+    "Core/Calculation/AspectCalculator.swift": "2a33a93812c89eab0bbdc996070eec161f7ffed40661d3e91f70ff8b56458ee5",
+    "Shared/Calculation/ChartContract.swift": "eb23bbfda3748495bbe1268a6209ef9eed104c0563563512f3bc68e51816d1e3",
+    "Shared/Calculation/OrbTable.swift": "8957b2d54794d29816de48f364c97b783f6641c7aeef1263b9fa0a1a49f2ba52",
+    "Tests/Golden/benchmark-100.json": "ddad8daaa10b1c547b60f4b07c1bba5d0894167c3d5c69caeab3a5cf306cd5f1"
+  },
+  "sourceProject": "ShilaiAstrology",
+  "webEngine": {
+    "package": "astronomy-engine@2.1.19",
+    "sha256": "f41139a87941ea017ab902b954c9389fa27ea72083d7fab4971756d7769d14e6",
+    "license": "MIT",
+    "upstream": "https://github.com/cosinekitty/astronomy"
+  }
+}
