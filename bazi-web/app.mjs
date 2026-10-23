@@ -1,10 +1,19 @@
 import { calculateBaziChart } from './chart.mjs';
 import { calculateBaziReading } from './reading.mjs';
+import {createBaziProfileBook} from './profiles.mjs';
+import {compareBaziCharts} from './synastry.mjs';
+import {createStudyStore} from './learn/study.mjs';
 
 const $ = id => document.getElementById(id);
 const phaseEnglish = {木:'Wood',火:'Fire',土:'Earth',金:'Metal',水:'Water'};
 const gods = {peer:'比肩',rob:'劫財',eatingGod:'食神',hurtingOfficer:'傷官',indirectWealth:'偏財',directWealth:'正財',sevenKillings:'七殺',directOfficer:'正官',indirectResource:'偏印',directResource:'正印'};
 let activeProfile = null;
+let activeRecordId = null;
+const blockedStorage = {getItem(){throw Error('disabled')},setItem(){throw Error('disabled')},removeItem(){throw Error('disabled')}};
+let browserStorage;
+try {browserStorage=window.localStorage;} catch {browserStorage=blockedStorage;}
+const profileBook=createBaziProfileBook(browserStorage);
+const studyStore=createStudyStore(browserStorage);
 const node = (tag, className, value) => {
   const element = document.createElement(tag);
   if (className) element.className = className;
@@ -25,7 +34,7 @@ function syncFields() {
   $('custom-zone').required = $('zone').value === 'other';
 }
 
-function renderChart(chart, sample = false) {
+function renderChart(chart, sample = false, reveal = true) {
   $('result-kind').hidden = !sample;
   $('result-kind').textContent = sample ? '教學例盤・非個人結果 / Sample chart, not your personal result' : '';
   $('pillar-grid').replaceChildren();
@@ -59,8 +68,10 @@ function renderChart(chart, sample = false) {
     bar.append(fill); row.append(bar); return row;
   }));
   $('results').hidden = false;
-  $('results-title').focus({preventScroll:true});
-  $('results').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block:'start'});
+  if (reveal) {
+    $('results-title').focus({preventScroll:true});
+    $('results').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block:'start'});
+  }
 }
 
 function appendText(parent, tag, value, className = '') {
@@ -166,6 +177,124 @@ function renderReading() {
   }
 }
 
+function peopleMessage(value) {
+  $('people-message').textContent=value;
+  $('people-message').hidden=!value;
+}
+
+function showStorageWarning() {
+  const warning=[profileBook.warning,studyStore.warning].filter(Boolean).join(' ');
+  $('storage-warning').textContent=warning;
+  $('storage-warning').hidden=!warning;
+}
+
+function fillBirthForm(profile) {
+  $('calendar').value=profile.calendar;
+  $('birthDate').value=profile.birthDate;
+  $('leapMonth').checked=Boolean(profile.leapMonth);
+  $('timeState').value=profile.timeState;
+  if (profile.timeState==='earthlyBranch') $('branch').value=profile.time;
+  else $('time').value=profile.time||'';
+  $('gender').value=profile.gender;
+  const listed=[...$('zone').options].some(item=>item.value===profile.timeZoneIdentifier);
+  $('zone').value=listed?profile.timeZoneIdentifier:'other';
+  $('custom-zone').value=listed?'':profile.timeZoneIdentifier;
+  $('demo-label').hidden=true;
+  syncFields();
+}
+
+function openProfile(saved) {
+  activeProfile=saved.birth;
+  activeRecordId=saved.id;
+  fillBirthForm(activeProfile);
+  try {
+    renderChart(calculateBaziChart(activeProfile,window.FortuneEngine));
+    renderReading();
+    peopleMessage(`已切換到「${saved.name}」。`);
+  } catch(error) { peopleMessage(error instanceof Error?error.message:'這張盤暫時無法開啟。'); }
+  renderPeople();
+}
+
+function showComparison(saved) {
+  if (!activeProfile) {peopleMessage('請先在上方排出自己的命盤。');return;}
+  if (activeRecordId===saved.id) {peopleMessage('請選另一位人物，再看兩張盤的對照。');return;}
+  try {
+    const mine=calculateBaziChart(activeProfile,window.FortuneEngine);
+    const theirs=calculateBaziChart(saved.birth,window.FortuneEngine);
+    const result=compareBaziCharts(mine,theirs,window.FortuneEngine);
+    const lang=$('reading-language').value;
+    const comparison=$('comparison'); comparison.replaceChildren();
+    appendText(comparison,'p','TWO CHARTS / ONE CONVERSATION','eyebrow');
+    appendText(comparison,'h3',`我 × ${saved.name}`);
+    const labels=lang==='zh'?['你對他','他對你','相處節奏']:['How you are with them','How they are with you','Your rhythm together'];
+    result.readings.forEach((entry,index)=>{
+      const row=node('div','comparison-row');
+      appendText(row,'strong',labels[index]); appendText(row,'p',entry[lang]);comparison.append(row);
+    });
+    appendText(comparison,'p',result.note,'comparison-foot');
+    if (activeProfile.timeState==='unknown'||saved.birth.timeState==='unknown')
+      appendText(comparison,'p','其中一人不知道出生時間；這裡只比較日主與日支。若實際出生在 23:00 後，日柱仍需核對。','comparison-foot');
+    const copy=node('button','people-action',lang==='zh'?'複製簡短分享文字':'Copy a short share line');
+    copy.type='button';copy.addEventListener('click',async()=>{
+      try {await navigator.clipboard.writeText(result.share[lang]);peopleMessage('已複製只含日主與相處節奏的文字，沒有生日。');}
+      catch {peopleMessage('瀏覽器未允許複製，請手動選取文字。');appendText(comparison,'p',result.share[lang]);}
+    });comparison.append(copy);comparison.hidden=false;
+    comparison.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+  } catch(error) {peopleMessage(error instanceof Error?error.message:'雙人對照暫時無法完成。');}
+}
+
+function renderPeople() {
+  const list=$('profile-list');list.replaceChildren();
+  const active=profileBook.active();
+  const records=profileBook.list();
+  if (!records.length) appendText(list,'p','目前還沒儲存人物。先排出自己的盤，或直接加入一位朋友。','reading-note');
+  for (const saved of records) {
+    const card=node('article',`profile-card${saved.id===active?.id?' active':''}`);
+    appendText(card,'h3',saved.name);
+    appendText(card,'p',`${saved.birth.birthDate} · ${saved.birth.timeState==='unknown'?'出生時間未知':saved.birth.time}`);
+    const actions=node('div','profile-actions');
+    const switchButton=node('button','', '切換命盤');switchButton.type='button';
+    switchButton.addEventListener('click',()=>{profileBook.select(saved.id);openProfile(saved);});
+    const compareButton=node('button','','與目前的盤對照');compareButton.type='button';
+    compareButton.addEventListener('click',()=>showComparison(saved));
+    const removeButton=node('button','','刪除');removeButton.type='button';
+    removeButton.addEventListener('click',()=>{
+      if (!window.confirm(`確定刪除「${saved.name}」的出生資料嗎？`)) return;
+      profileBook.remove(saved.id);$('comparison').hidden=true;
+      if (activeRecordId===saved.id) {activeProfile=null;activeRecordId=null;$('results').hidden=true;$('reading').hidden=true;}
+      showStorageWarning();renderPeople();peopleMessage(`已刪除「${saved.name}」。`);
+    });
+    actions.append(switchButton,compareButton,removeButton);card.append(actions);list.append(card);
+  }
+  showStorageWarning();
+}
+
+$('save-profile').addEventListener('click',()=>{
+  if (!activeProfile){peopleMessage('請先在上方排出一張命盤。');return;}
+  try {const saved=profileBook.save($('profile-name').value,activeProfile);activeRecordId=saved.id;renderPeople();peopleMessage(`已儲存「${saved.name}」。`);}
+  catch(error){peopleMessage(error.message);}
+});
+$('friend-knows-time').addEventListener('change',()=>{$('friend-time-wrap').hidden=!$('friend-knows-time').checked;});
+$('friend-form').addEventListener('submit',event=>{
+  event.preventDefault();
+  try {
+    const time=$('friend-knows-time').checked?$('friend-time').value:'';
+    if ($('friend-knows-time').checked&&!time) throw new Error('請填寫朋友的出生時間，或取消「知道出生時間」。');
+    const birth={birthDate:$('friend-birth').value,calendar:'solar',leapMonth:false,
+      timeState:time?'exact':'unknown',time,gender:'female',timeZoneIdentifier:'Asia/Taipei'};
+    calculateBaziChart(birth,window.FortuneEngine);
+    const saved=profileBook.save($('friend-name').value,birth,null,false);
+    $('friend-form').reset();$('friend-time-wrap').hidden=true;
+    renderPeople();peopleMessage(`已加入「${saved.name}」。`);
+  } catch(error) {peopleMessage(error.message);}
+});
+$('clear-all').addEventListener('click',()=>{
+  if (!window.confirm('確定清除這個瀏覽器裡八字的全部人物、課程筆記與複習紀錄嗎？這個動作無法復原。')) return;
+  profileBook.clear();studyStore.clearAll();activeProfile=null;activeRecordId=null;
+  $('birth-form').reset();$('results').hidden=true;$('reading').hidden=true;$('comparison').hidden=true;
+  renderPeople();peopleMessage(profileBook.persistent&&studyStore.persistent?'已清除八字的人物與學習資料。':'清除未完全成功，請查看儲存提示。');
+});
+
 $('reading-date').value = new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'});
 for (const id of ['reading-date','reading-domain','reading-language']) $(id).addEventListener('change',renderReading);
 
@@ -194,15 +323,26 @@ $('birth-form').addEventListener('submit', event => {
     if (!profile.timeZoneIdentifier) throw new Error('請填寫出生地時區。');
     const chart = calculateBaziChart(profile, window.FortuneEngine);
     activeProfile = profile;
+    activeRecordId = null;
     renderChart(chart, !$('demo-label').hidden);
     renderReading();
   } catch (error) {
     $('results').hidden = true;
     $('reading').hidden = true;
     activeProfile = null;
+    activeRecordId = null;
     $('form-error').textContent = error instanceof Error ? error.message : '排盤暫時無法完成，請檢查輸入內容。';
     $('form-error').hidden = false;
     $('form-error').scrollIntoView({block:'nearest'});
   }
 });
 syncFields();
+const restored=profileBook.active();
+if (restored) {
+  try {
+    activeProfile=restored.birth;activeRecordId=restored.id;fillBirthForm(activeProfile);
+    renderChart(calculateBaziChart(activeProfile,window.FortuneEngine),false,false);
+    renderReading();
+  } catch {peopleMessage('先前的人物資料無法排盤，請重新核對出生資料。');}
+}
+renderPeople();
