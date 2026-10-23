@@ -4,6 +4,7 @@ import sys
 from html.parser import HTMLParser
 from pathlib import Path
 import unittest
+import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
@@ -48,7 +49,9 @@ class BaziLessons(unittest.TestCase):
                 parser.feed(html)
                 text = ' '.join(parser.text)
                 self.assertIn(f'lang="{"zh-Hant" if lang == "zh" else "en"}"', html)
-                self.assertIn('noindex', html)  # B5 removes preview gate
+                self.assertIn('<meta name="robots" content="index, follow">', html)
+                public_url='https://mm7382.github.io/bazi-web/learn/' + lesson['id'] + '/' + suffix
+                self.assertIn(f'<link rel="canonical" href="{public_url}">', html)
                 for value in [lesson['title'][lang], lesson['lead'][lang], lesson['close'][lang]]:
                     self.assertIn(value, text, (lesson['id'], lang, value))
                 for section in lesson['sections']:
@@ -84,6 +87,18 @@ class BaziLessons(unittest.TestCase):
             self.assertIn('learn.mjs', review)
             other = '/bazi-web/learn/review/' + ('' if suffix else 'en/')
             self.assertIn(f'href="{other}" hreflang=', review)
+            self.assertIn('noindex', review)
+            self.assertNotIn('noindex', index)
+
+    def test_public_sitemap_has_every_course_and_excludes_private_review(self):
+        urls={e.text for e in ET.parse(ROOT/'sitemap.xml').iter() if e.tag.endswith('loc')}
+        self.assertIn('https://mm7382.github.io/bazi-web/',urls)
+        self.assertIn('https://mm7382.github.io/bazi-web/learn/',urls)
+        self.assertIn('https://mm7382.github.io/bazi-web/learn/en/',urls)
+        for lesson in json.loads(SOURCE.read_text())['lessons']:
+            for suffix in ('','en/'):
+                self.assertIn('https://mm7382.github.io/bazi-web/learn/'+lesson['id']+'/'+suffix,urls)
+        self.assertFalse(any('/bazi-web/learn/review/' in url for url in urls))
 
 
 if __name__ == '__main__':

@@ -75,7 +75,7 @@ export function calculateBaziReading(profile, engine, date, focusDomain = 'work'
     workAndDaily:workGroup?context(workGroup,'work'):null,
     privateAndLater:laterGroup?context(laterGroup,'later'):null,
     homework,themes,luck,
-    today:raw.homeToday, branchContext:raw.branchContext, dailyCopy:raw.dailyCopy,
+    today:raw.homeToday, monthContext:raw.monthContext, branchContext:raw.branchContext, dailyCopy:raw.dailyCopy,
     sevenDays:upcoming.result.days, lunarDate:raw.lunarDate, solarTerm:raw.solarTerm,
     timeNote:chart.timeNote,hourKnown:!chart.timeUncertain,
     sourceVersion:raw.version,

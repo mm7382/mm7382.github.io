@@ -27,7 +27,7 @@ Type: AFK。Status: integrated and verified (`28203fa`; 合計 11 項排盤／�
 
 ## B3：閱讀全部八字課程並記下學習進度
 
-Type: AFK。Status: proposed。Blocked by: B1。
+Type: AFK。Status: integrated and verified (`9dbc67d`; 20 堂、40 篇雙語課頁、42 題、來源與圖解對照通過)。Blocked by: B1。
 
 公開 20 堂既有課程、原圖解／例子／練習、個人命盤觀察、已讀、筆記與原有複習功能；無個人命盤仍可學習。
 
@@ -35,7 +35,7 @@ Type: AFK。Status: proposed。Blocked by: B1。
 
 ## B4：保存、切換、比較與清除八字人物
 
-Type: AFK。Status: proposed。Blocked by: B1, B2, B3。
+Type: AFK。Status: integrated and verified (`94cf443`; 人物保存／切換／刪除、雙人比較與資料清除測試通過)。Blocked by: B1, B2, B3。
 
 完成原有多命盤／人物簿與合盤等已實作功能的瀏覽器流程，提供本機資料管理與原有筆記匯出功能對應。
 
