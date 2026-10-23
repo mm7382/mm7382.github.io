@@ -2,7 +2,7 @@ import json, os, html, sys
 from content import BAZI, ZIWEI, ASTRO, YIJIAN_LINK, BANNED
 
 BASE = "https://mm7382.github.io"
-DEV = "Wei Chun Chuang"
+DEV = "Michael"
 HERE = os.path.dirname(os.path.abspath(__file__))
 APPS = [YIJIAN_LINK, BAZI, ZIWEI, ASTRO]
 PAGES = [BAZI, ZIWEI, ASTRO]
@@ -46,7 +46,7 @@ def head(title, desc, url, jsonld, image):
 
 FOOT = """<footer>
 <p>這些 App 是學習與反思的工具。醫療、法律、投資與其他重大決定，請諮詢合格的專業人士。<br>These apps are tools for learning and reflection. For medical, legal, financial or other major decisions, consult a qualified professional.</p>
-<p>開發者 Developer：Wei Chun Chuang・<a href="/">全部 App</a></p>
+<p>開發者 Developer：Michael・<a href="/">全部 App</a></p>
 </footer>
 </main>
 </body>
@@ -147,7 +147,7 @@ def hub():
 
 
 def llms():
-    lines = ["# Wei Chun Chuang — learning apps for the I Ching, Bazi, Zi Wei Dou Shu and astrology", "",
+    lines = ["# Michael — learning apps for the I Ching, Bazi, Zi Wei Dou Shu and astrology", "",
              "> Four iPhone apps that teach Chinese metaphysics and Western astrology in plain language. Free beginner lessons, Traditional Chinese and English, no account, data stays on device. Learning tools, not fortune-telling services.", "",
              "## Free web tools", "- [易見：免費線上易經起卦與六十四卦學習](https://mm7382.github.io/yijian-web/): Free, no login; I Ching coin casting, Zhu Xi reading rules, 64 complete hexagrams and eight interactive lessons. Browser-local history. Not live AI-generated predictions.", "", "## Apps"]
     for a in APPS:
@@ -169,7 +169,7 @@ def sitemap():
     learn = [BASE + "/learn/"] + [f"{BASE}/learn/{os.path.basename(p)}" for p in sorted(glob.glob(os.path.join(HERE, "learn", "*.html"))) if not p.endswith("index.html")]
     urls = [BASE + "/"] + [f"{BASE}/{a['slug']}/" for a in APPS] + learn + [BASE + "/llms.txt", BASE + "/yijian/llms.txt"]
     urls += [BASE + '/' + str(p.parent.relative_to(__import__('pathlib').Path(HERE))) + '/' for p in sorted(__import__('pathlib').Path(HERE).glob('yijian-web/**/index.html')) if '/records/' not in str(p)]
-    body = "".join(f"  <url><loc>{u}</loc><lastmod>{"2026-10-22" if "/yijian-web/" in u else "2026-10-15"}</lastmod></url>\n" for u in urls)
+    body = "".join(f"  <url><loc>{u}</loc><lastmod>{"2026-10-23" if "/yijian-web/" in u else "2026-10-15"}</lastmod></url>\n" for u in urls)
     with open(os.path.join(HERE, "sitemap.xml"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + body + "</urlset>\n")
 

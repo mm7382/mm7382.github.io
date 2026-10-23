@@ -138,11 +138,13 @@ if ($("#cast-form")) {
   let busy = false;
   const throwButton = $("#throw-coins");
   const redraw = () => {
-    $("#cast-lines").innerHTML = values.length
-      ? `<div class="line-controls">${values.map((v, i) => `<span>${lineName(i, v % 2)}：${v} ${v === 6 || v === 9 ? "（動爻）" : ""}</span>`).join("")}</div>`
-      : "";
+    $("#cast-lines").innerHTML = `<div class="cast-board" aria-label="由下往上完成六爻">${[5, 4, 3, 2, 1, 0]
+      .map((i) => {
+        const v = values[i], filled = v !== undefined;
+        return `<div class="cast-slot${filled ? " is-filled" : ""}${i === values.length - 1 ? " is-new" : ""}"><small>第 ${i + 1} 爻</small><span class="cast-stroke">${filled ? (v % 2 ? "━━━━━" : "━━　━━") : "· · ·"}</span><em>${filled ? `${lineName(i, v % 2)} · ${v}${v === 6 || v === 9 ? " 動爻" : ""}` : "待擲"}</em></div>`;
+      }).join("")}</div>`;
     throwButton.textContent =
-      values.length === 6 ? "六爻已完成" : `擲第${values.length + 1}爻`;
+      values.length === 6 ? "六爻已完成" : `擲第${["一", "二", "三", "四", "五", "六"][values.length]}爻`;
     throwButton.disabled = values.length === 6 || busy;
     $("#throw-status").textContent = `已完成 ${values.length} / 6 爻`;
   };
@@ -191,6 +193,7 @@ if ($("#cast-form")) {
     if (values.length === 6 && !busy)
       showResult(values, $("#topic").value, false);
   });
+  redraw();
 }
 const trigrams = [
   ["111", "乾・天"],
