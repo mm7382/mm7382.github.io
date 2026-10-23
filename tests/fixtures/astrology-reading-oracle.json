@@ -1,0 +1,1480 @@
+{
+  "complete" : [
+    {
+      "angleTargetsExcluded" : false,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.90007285823719485,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.066188980106403505,
+          "phase" : "exact",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.035555005917274229,
+          "phase" : "exact",
+          "target" : "saturn",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.56059534415506107,
+          "phase" : "applying",
+          "target" : "venus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 1.2395880388839373,
+          "phase" : "separating",
+          "target" : "mars",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 1.6192829531274811,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.4742443307587223,
+          "phase" : "applying",
+          "target" : "uranus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.14453506453992304,
+          "phase" : "separating",
+          "target" : "mercury",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-22T16:00:00Z",
+      "instant" : "2026-10-23T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天這個主題沒有命中已核准的提醒，正好照自己的步調走：挑一件拖了超過三天的事，在中午前開個頭，晚上你會感謝自己。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "把今天用在自己身上",
+          "trace" : null
+        },
+        {
+          "body" : "力氣和方向這幾天難得一致，推進度就對了；挑最重要的一件事火力集中，其他的先放排程。",
+          "domain" : "work",
+          "ruleId" : "AST-R-071",
+          "title" : "使得上力的幾天",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 1.2395880388839373,
+            "phase" : "separating",
+            "target" : "mars",
+            "transiting" : "sun"
+          }
+        },
+        {
+          "body" : "這幾天人際回饋偏溫暖，合作、社交、修復關係都省力；有想恢復聯絡的人，現在是開口的好時機。",
+          "domain" : "love",
+          "ruleId" : "AST-R-067",
+          "title" : "被喜歡的順風",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.56059534415506107,
+            "phase" : "applying",
+            "target" : "venus",
+            "transiting" : "sun"
+          }
+        },
+        {
+          "body" : "適合做確認型動作：看一眼本月支出、檢查訂閱扣款、把發票或收據整理掉。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "對帳與盤點日",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : false,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.87636896474003834,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.0046810284998173302,
+          "phase" : "exact",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.4116043553875528,
+          "phase" : "applying",
+          "target" : "venus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.64708325358486718,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.49795536878389157,
+          "phase" : "applying",
+          "target" : "uranus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.43463777008030036,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.62404983889211962,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.52098878347663913,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "sun"
+        }
+      ],
+      "day" : "2026-10-23T16:00:00Z",
+      "instant" : "2026-10-24T04:00:00Z",
+      "items" : [
+        {
+          "body" : "適合做低風險的累積：運動二十分鐘、清掉五封待回訊息、把下週的行程排好，任何一件都讓今天有分數。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "小步前進的一天",
+          "trace" : null
+        },
+        {
+          "body" : "適合補齊文件、回覆積壓的訊息、跟進之前交辦的事；把基本盤顧好，關鍵日才有底氣。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "鞏固例行成果",
+          "trace" : null
+        },
+        {
+          "body" : "與人相處的摩擦感比平常低，適合安排一段不趕時間的相處，或把想說的感謝說出口。",
+          "domain" : "love",
+          "ruleId" : "AST-R-004",
+          "title" : "關係裡的順流",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.4116043553875528,
+            "phase" : "applying",
+            "target" : "venus",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "大筆消費與投資今天都可以再等等：把想買的東西放進清單，三天後還想要再買。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "不急著做決定",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : false,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 1.7796543469569315,
+          "phase" : "separating",
+          "target" : "ascendant",
+          "transiting" : "moon"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.8529640358357824,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.07472737019958231,
+          "phase" : "exact",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.20078109305022451,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.11443007965388574,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 1.4303932955825616,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.37170568661014158,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 1.5167443089789003,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.15828413403443164,
+          "phase" : "separating",
+          "target" : "moon",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-24T16:00:00Z",
+      "instant" : "2026-10-25T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天容易沒來由地煩躁，多半是節奏問題不是真有大事；把行程排鬆一點，留白本身就是解方。",
+          "domain" : "theme",
+          "ruleId" : "AST-R-019",
+          "title" : "心情的小亂流",
+          "trace" : {
+            "kind" : "square",
+            "orb" : 0.15828413403443164,
+            "phase" : "separating",
+            "target" : "moon",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "適合做準備型工作：列清單、約下週的會、把簡報先寫三頁，讓未來的你接手更輕鬆。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "為下一步鋪路",
+          "trace" : null
+        },
+        {
+          "body" : "與人相處的摩擦感比平常低，適合安排一段不趕時間的相處，或把想說的感謝說出口。",
+          "domain" : "love",
+          "ruleId" : "AST-R-004",
+          "title" : "關係裡的順流",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.20078109305022451,
+            "phase" : "separating",
+            "target" : "venus",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "最適合自動化的一天：確認自動轉帳與儲蓄規則有在跑，或把這週省下的小錢撥進備用金。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "替未來存一點",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : false,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.82987179107738029,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.143909499159804,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.80978019522321176,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.99040318781578662,
+          "phase" : "applying",
+          "target" : "mars",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.72342918182687299,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 1.3680025539889584,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 1.2597993308433502,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-25T16:00:00Z",
+      "instant" : "2026-10-26T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天這個主題沒有命中已核准的提醒，正好照自己的步調走：挑一件拖了超過三天的事，在中午前開個頭，晚上你會感謝自己。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "把今天用在自己身上",
+          "trace" : null
+        },
+        {
+          "body" : "今天能穩穩接住麻煩事，別人也會感覺你可靠；適合處理需要「大人在場」的協調或承諾。",
+          "domain" : "work",
+          "ruleId" : "AST-R-044",
+          "title" : "冷靜而不冷漠",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 1.2597993308433502,
+            "phase" : "separating",
+            "target" : "saturn",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "與人相處的摩擦感比平常低，適合安排一段不趕時間的相處，或把想說的感謝說出口。",
+          "domain" : "love",
+          "ruleId" : "AST-R-004",
+          "title" : "關係裡的順流",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.80978019522321176,
+            "phase" : "separating",
+            "target" : "venus",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "適合做確認型動作：看一眼本月支出、檢查訂閱扣款、把發票或收據整理掉。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "對帳與盤點日",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : false,
+      "candidates" : [
+        {
+          "kind" : "sextile",
+          "orb" : 0.49978347669261325,
+          "phase" : "separating",
+          "target" : "ascendant",
+          "transiting" : "moon"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.80710388795347399,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.21218928637995305,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.58026772137014859,
+          "phase" : "applying",
+          "target" : "jupiter",
+          "transiting" : "mars"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.38899984863024883,
+          "phase" : "applying",
+          "target" : "mars",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 1.4381550042987499,
+          "phase" : "applying",
+          "target" : "moon",
+          "transiting" : "moon"
+        },
+        {
+          "kind" : "conjunction",
+          "orb" : 0.41768358633000702,
+          "phase" : "separating",
+          "target" : "jupiter",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-26T16:00:00Z",
+      "instant" : "2026-10-27T04:00:00Z",
+      "items" : [
+        {
+          "body" : "情緒今天有彈性，小挫折不太會過夜；適合處理平常覺得有點煩的人際往來，會比想像中順。",
+          "domain" : "theme",
+          "ruleId" : "AST-R-018",
+          "title" : "心裡有靠墊",
+          "trace" : {
+            "kind" : "sextile",
+            "orb" : 1.4381550042987499,
+            "phase" : "applying",
+            "target" : "moon",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "適合補齊文件、回覆積壓的訊息、跟進之前交辦的事；把基本盤顧好，關鍵日才有底氣。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "鞏固例行成果",
+          "trace" : null
+        },
+        {
+          "body" : "這幾天主動不顯得急、溫柔不顯得軟，關係推進很自然；適合把「我們接下來呢」這種話題拿出來聊。",
+          "domain" : "love",
+          "ruleId" : "AST-R-094",
+          "title" : "剛柔剛好的默契",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.38899984863024883,
+            "phase" : "applying",
+            "target" : "mars",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "今天看什麼都順眼，花錢和答應事情都容易手滑；享受大方之前，先給今天設一個消費上限。",
+          "domain" : "money",
+          "ruleId" : "AST-R-036",
+          "title" : "心情大方的日子",
+          "trace" : {
+            "kind" : "conjunction",
+            "orb" : 0.41768358633000702,
+            "phase" : "separating",
+            "target" : "jupiter",
+            "transiting" : "moon"
+          }
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : false,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.78466934972146873,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.27953149212248718,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.063229370984203115,
+          "phase" : "exact",
+          "target" : "jupiter",
+          "transiting" : "mars"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.20069313950401124,
+          "phase" : "separating",
+          "target" : "mars",
+          "transiting" : "venus"
+        }
+      ],
+      "day" : "2026-10-27T16:00:00Z",
+      "instant" : "2026-10-28T04:00:00Z",
+      "items" : [
+        {
+          "body" : "把能量放在恢復上：早點睡、把桌面或相簿清一輪，為接下來忙碌的日子留好餘裕。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "整理與充電日",
+          "trace" : null
+        },
+        {
+          "body" : "適合做準備型工作：列清單、約下週的會、把簡報先寫三頁，讓未來的你接手更輕鬆。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "為下一步鋪路",
+          "trace" : null
+        },
+        {
+          "body" : "這幾天主動不顯得急、溫柔不顯得軟，關係推進很自然；適合把「我們接下來呢」這種話題拿出來聊。",
+          "domain" : "love",
+          "ruleId" : "AST-R-094",
+          "title" : "剛柔剛好的默契",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.20069313950401124,
+            "phase" : "separating",
+            "target" : "mars",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "最適合自動化的一天：確認自動轉帳與儲蓄規則有在跑，或把這週省下的小錢撥進備用金。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "替未來存一點",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : false,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.76257453167352196,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.34590370906272483,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.45083415783193459,
+          "phase" : "separating",
+          "target" : "jupiter",
+          "transiting" : "mars"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.77471333420518818,
+          "phase" : "separating",
+          "target" : "mars",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.68714980623643385,
+          "phase" : "applying",
+          "target" : "moon",
+          "transiting" : "mercury"
+        }
+      ],
+      "day" : "2026-10-28T16:00:00Z",
+      "instant" : "2026-10-29T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天這個主題沒有命中已核准的提醒，正好照自己的步調走：挑一件拖了超過三天的事，在中午前開個頭，晚上你會感謝自己。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "把今天用在自己身上",
+          "trace" : null
+        },
+        {
+          "body" : "今天工作面沒有命中已核准的提醒，專注力由你分配：把最難的那件事排在精神最好的時段，一次只開一個戰場。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "清待辦的好時機",
+          "trace" : null
+        },
+        {
+          "body" : "這幾天主動不顯得急、溫柔不顯得軟，關係推進很自然；適合把「我們接下來呢」這種話題拿出來聊。",
+          "domain" : "love",
+          "ruleId" : "AST-R-094",
+          "title" : "剛柔剛好的默契",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.77471333420518818,
+            "phase" : "separating",
+            "target" : "mars",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "適合做確認型動作：看一眼本月支出、檢查訂閱扣款、把發票或收據整理掉。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "對帳與盤點日",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : false,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.74082363677570129,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.4112757753402434,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.96186066281782701,
+          "phase" : "separating",
+          "target" : "jupiter",
+          "transiting" : "mars"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.10646013397662557,
+          "phase" : "separating",
+          "target" : "moon",
+          "transiting" : "mercury"
+        },
+        {
+          "kind" : "conjunction",
+          "orb" : 0.83125659710123045,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "moon"
+        },
+        {
+          "kind" : "opposition",
+          "orb" : 0.22743101187120374,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "moon"
+        },
+        {
+          "kind" : "opposition",
+          "orb" : 0.91760761049755502,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-29T16:00:00Z",
+      "instant" : "2026-10-30T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天行程容易被外來的臨時狀況打斷，預留緩衝比排滿更聰明；被打亂時，先救重要的那一件。",
+          "domain" : "theme",
+          "ruleId" : "AST-R-050",
+          "title" : "計畫趕不上變化",
+          "trace" : {
+            "kind" : "opposition",
+            "orb" : 0.91760761049755502,
+            "phase" : "separating",
+            "target" : "uranus",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "今天容易覺得孤立或不被支持，多半是距離感被放大；主動問一句近況，牆通常比想像薄。",
+          "domain" : "work",
+          "ruleId" : "AST-R-045",
+          "title" : "覺得沒人挺的錯覺",
+          "trace" : {
+            "kind" : "opposition",
+            "orb" : 0.22743101187120374,
+            "phase" : "separating",
+            "target" : "saturn",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "今天特別容易被小小的溫柔打動，也更願意付出；適合表達在意、修補小疙瘩，或單純好好吃一頓飯。",
+          "domain" : "love",
+          "ruleId" : "AST-R-026",
+          "title" : "柔軟被打開",
+          "trace" : {
+            "kind" : "conjunction",
+            "orb" : 0.83125659710123045,
+            "phase" : "separating",
+            "target" : "venus",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "大筆消費與投資今天都可以再等等：把想買的東西放進清單，三天後還想要再買。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "不急著做決定",
+          "trace" : null
+        }
+      ]
+    }
+  ],
+  "partial" : [
+    {
+      "angleTargetsExcluded" : true,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.88021742344898257,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.059600423658139334,
+          "phase" : "exact",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.055410440705486508,
+          "phase" : "exact",
+          "target" : "saturn",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.52361788479339566,
+          "phase" : "applying",
+          "target" : "venus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 1.4671833341664637,
+          "phase" : "separating",
+          "target" : "mars",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 1.6391383879156933,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.4858298285423075,
+          "phase" : "applying",
+          "target" : "uranus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.18050705808326484,
+          "phase" : "separating",
+          "target" : "mercury",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-22T16:00:00Z",
+      "instant" : "2026-10-23T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天這個主題沒有命中已核准的提醒，正好照自己的步調走：挑一件拖了超過三天的事，在中午前開個頭，晚上你會感謝自己。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "把今天用在自己身上",
+          "trace" : null
+        },
+        {
+          "body" : "力氣和方向這幾天難得一致，推進度就對了；挑最重要的一件事火力集中，其他的先放排程。",
+          "domain" : "work",
+          "ruleId" : "AST-R-071",
+          "title" : "使得上力的幾天",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 1.4671833341664637,
+            "phase" : "separating",
+            "target" : "mars",
+            "transiting" : "sun"
+          }
+        },
+        {
+          "body" : "這幾天人際回饋偏溫暖，合作、社交、修復關係都省力；有想恢復聯絡的人，現在是開口的好時機。",
+          "domain" : "love",
+          "ruleId" : "AST-R-067",
+          "title" : "被喜歡的順風",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.52361788479339566,
+            "phase" : "applying",
+            "target" : "venus",
+            "transiting" : "sun"
+          }
+        },
+        {
+          "body" : "適合做確認型動作：看一眼本月支出、檢查訂閱扣款、把發票或收據整理掉。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "對帳與盤點日",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : true,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.85651352995182606,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.011269584948081501,
+          "phase" : "exact",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.44858181474921821,
+          "phase" : "applying",
+          "target" : "venus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.66693868837307946,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.48636987100030638,
+          "phase" : "applying",
+          "target" : "uranus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.47161522944196577,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.6439052736803319,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.50940328569305393,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "sun"
+        }
+      ],
+      "day" : "2026-10-23T16:00:00Z",
+      "instant" : "2026-10-24T04:00:00Z",
+      "items" : [
+        {
+          "body" : "適合做低風險的累積：運動二十分鐘、清掉五封待回訊息、把下週的行程排好，任何一件都讓今天有分數。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "小步前進的一天",
+          "trace" : null
+        },
+        {
+          "body" : "適合補齊文件、回覆積壓的訊息、跟進之前交辦的事；把基本盤顧好，關鍵日才有底氣。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "鞏固例行成果",
+          "trace" : null
+        },
+        {
+          "body" : "與人相處的摩擦感比平常低，適合安排一段不趕時間的相處，或把想說的感謝說出口。",
+          "domain" : "love",
+          "ruleId" : "AST-R-004",
+          "title" : "關係裡的順流",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.44858181474921821,
+            "phase" : "applying",
+            "target" : "venus",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "大筆消費與投資今天都可以再等等：把想買的東西放進清單，三天後還想要再買。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "不急著做決定",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : true,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.83310860104757012,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.081315926647846482,
+          "phase" : "exact",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.1638036336885591,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.12601557743747094,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 1.467370754944227,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.35185025182192931,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 1.5051588111953151,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "sun"
+        }
+      ],
+      "day" : "2026-10-24T16:00:00Z",
+      "instant" : "2026-10-25T04:00:00Z",
+      "items" : [
+        {
+          "body" : "把能量放在恢復上：早點睡、把桌面或相簿清一輪，為接下來忙碌的日子留好餘裕。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "整理與充電日",
+          "trace" : null
+        },
+        {
+          "body" : "適合做準備型工作：列清單、約下週的會、把簡報先寫三頁，讓未來的你接手更輕鬆。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "為下一步鋪路",
+          "trace" : null
+        },
+        {
+          "body" : "與人相處的摩擦感比平常低，適合安排一段不趕時間的相處，或把想說的感謝說出口。",
+          "domain" : "love",
+          "ruleId" : "AST-R-004",
+          "title" : "關係裡的順流",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.1638036336885591,
+            "phase" : "separating",
+            "target" : "venus",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "最適合自動化的一天：確認自動轉帳與儲蓄規則有在跑，或把這週省下的小錢撥進備用金。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "替未來存一點",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : true,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.81001635628916802,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.15049805560806817,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.77280273586154635,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 0.73501467961045819,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "sextile",
+          "orb" : 1.3481471192007461,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "sun"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 1.2399438960551379,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-25T16:00:00Z",
+      "instant" : "2026-10-26T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天這個主題沒有命中已核准的提醒，正好照自己的步調走：挑一件拖了超過三天的事，在中午前開個頭，晚上你會感謝自己。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "把今天用在自己身上",
+          "trace" : null
+        },
+        {
+          "body" : "今天能穩穩接住麻煩事，別人也會感覺你可靠；適合處理需要「大人在場」的協調或承諾。",
+          "domain" : "work",
+          "ruleId" : "AST-R-044",
+          "title" : "冷靜而不冷漠",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 1.2399438960551379,
+            "phase" : "separating",
+            "target" : "saturn",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "與人相處的摩擦感比平常低，適合安排一段不趕時間的相處，或把想說的感謝說出口。",
+          "domain" : "love",
+          "ruleId" : "AST-R-004",
+          "title" : "關係裡的順流",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.77280273586154635,
+            "phase" : "separating",
+            "target" : "venus",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "適合做確認型動作：看一眼本月支出、檢查訂閱扣款、把發票或收據整理掉。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "對帳與盤點日",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : true,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.78724845316526171,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.21877784282821722,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.49684591293089397,
+          "phase" : "applying",
+          "target" : "jupiter",
+          "transiting" : "mars"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.61659514391277526,
+          "phase" : "applying",
+          "target" : "mars",
+          "transiting" : "venus"
+        },
+        {
+          "kind" : "conjunction",
+          "orb" : 0.50110539476925453,
+          "phase" : "separating",
+          "target" : "jupiter",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-26T16:00:00Z",
+      "instant" : "2026-10-27T04:00:00Z",
+      "items" : [
+        {
+          "body" : "適合做低風險的累積：運動二十分鐘、清掉五封待回訊息、把下週的行程排好，任何一件都讓今天有分數。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "小步前進的一天",
+          "trace" : null
+        },
+        {
+          "body" : "適合補齊文件、回覆積壓的訊息、跟進之前交辦的事；把基本盤顧好，關鍵日才有底氣。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "鞏固例行成果",
+          "trace" : null
+        },
+        {
+          "body" : "這幾天主動不顯得急、溫柔不顯得軟，關係推進很自然；適合把「我們接下來呢」這種話題拿出來聊。",
+          "domain" : "love",
+          "ruleId" : "AST-R-094",
+          "title" : "剛柔剛好的默契",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.61659514391277526,
+            "phase" : "applying",
+            "target" : "mars",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "今天看什麼都順眼，花錢和答應事情都容易手滑；享受大方之前，先給今天設一個消費上限。",
+          "domain" : "money",
+          "ruleId" : "AST-R-036",
+          "title" : "心情大方的日子",
+          "trace" : {
+            "kind" : "conjunction",
+            "orb" : 0.50110539476925453,
+            "phase" : "separating",
+            "target" : "jupiter",
+            "transiting" : "moon"
+          }
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : true,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.76481391493325646,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.28612004857075135,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.020192437455051504,
+          "phase" : "exact",
+          "target" : "jupiter",
+          "transiting" : "mars"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.02690215577851518,
+          "phase" : "exact",
+          "target" : "mars",
+          "transiting" : "venus"
+        }
+      ],
+      "day" : "2026-10-27T16:00:00Z",
+      "instant" : "2026-10-28T04:00:00Z",
+      "items" : [
+        {
+          "body" : "把能量放在恢復上：早點睡、把桌面或相簿清一輪，為接下來忙碌的日子留好餘裕。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "整理與充電日",
+          "trace" : null
+        },
+        {
+          "body" : "適合做準備型工作：列清單、約下週的會、把簡報先寫三頁，讓未來的你接手更輕鬆。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "為下一步鋪路",
+          "trace" : null
+        },
+        {
+          "body" : "這幾天主動不顯得急、溫柔不顯得軟，關係推進很自然；適合把「我們接下來呢」這種話題拿出來聊。",
+          "domain" : "love",
+          "ruleId" : "AST-R-094",
+          "title" : "剛柔剛好的默契",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.02690215577851518,
+            "phase" : "exact",
+            "target" : "mars",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "最適合自動化的一天：確認自動轉帳與儲蓄規則有在跑，或把這週省下的小錢撥進備用金。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "替未來存一點",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : true,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.74271909688530968,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.352492265510989,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.53425596627118921,
+          "phase" : "separating",
+          "target" : "jupiter",
+          "transiting" : "mars"
+        },
+        {
+          "kind" : "trine",
+          "orb" : 0.54711803892266175,
+          "phase" : "separating",
+          "target" : "mars",
+          "transiting" : "venus"
+        }
+      ],
+      "day" : "2026-10-28T16:00:00Z",
+      "instant" : "2026-10-29T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天這個主題沒有命中已核准的提醒，正好照自己的步調走：挑一件拖了超過三天的事，在中午前開個頭，晚上你會感謝自己。",
+          "domain" : "theme",
+          "ruleId" : null,
+          "title" : "把今天用在自己身上",
+          "trace" : null
+        },
+        {
+          "body" : "今天工作面沒有命中已核准的提醒，專注力由你分配：把最難的那件事排在精神最好的時段，一次只開一個戰場。",
+          "domain" : "work",
+          "ruleId" : null,
+          "title" : "清待辦的好時機",
+          "trace" : null
+        },
+        {
+          "body" : "這幾天主動不顯得急、溫柔不顯得軟，關係推進很自然；適合把「我們接下來呢」這種話題拿出來聊。",
+          "domain" : "love",
+          "ruleId" : "AST-R-094",
+          "title" : "剛柔剛好的默契",
+          "trace" : {
+            "kind" : "trine",
+            "orb" : 0.54711803892266175,
+            "phase" : "separating",
+            "target" : "mars",
+            "transiting" : "venus"
+          }
+        },
+        {
+          "body" : "適合做確認型動作：看一眼本月支出、檢查訂閱扣款、把發票或收據整理掉。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "對帳與盤點日",
+          "trace" : null
+        }
+      ]
+    },
+    {
+      "angleTargetsExcluded" : true,
+      "candidates" : [
+        {
+          "kind" : "square",
+          "orb" : 0.72096820198748901,
+          "phase" : "applying",
+          "target" : "saturn",
+          "transiting" : "neptune"
+        },
+        {
+          "kind" : "square",
+          "orb" : 0.41786433178850757,
+          "phase" : "separating",
+          "target" : "neptune",
+          "transiting" : "saturn"
+        },
+        {
+          "kind" : "conjunction",
+          "orb" : 0.86823405646289586,
+          "phase" : "separating",
+          "target" : "venus",
+          "transiting" : "moon"
+        },
+        {
+          "kind" : "opposition",
+          "orb" : 0.24728644665941601,
+          "phase" : "separating",
+          "target" : "saturn",
+          "transiting" : "moon"
+        },
+        {
+          "kind" : "opposition",
+          "orb" : 0.90602211271396982,
+          "phase" : "separating",
+          "target" : "uranus",
+          "transiting" : "moon"
+        }
+      ],
+      "day" : "2026-10-29T16:00:00Z",
+      "instant" : "2026-10-30T04:00:00Z",
+      "items" : [
+        {
+          "body" : "今天行程容易被外來的臨時狀況打斷，預留緩衝比排滿更聰明；被打亂時，先救重要的那一件。",
+          "domain" : "theme",
+          "ruleId" : "AST-R-050",
+          "title" : "計畫趕不上變化",
+          "trace" : {
+            "kind" : "opposition",
+            "orb" : 0.90602211271396982,
+            "phase" : "separating",
+            "target" : "uranus",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "今天容易覺得孤立或不被支持，多半是距離感被放大；主動問一句近況，牆通常比想像薄。",
+          "domain" : "work",
+          "ruleId" : "AST-R-045",
+          "title" : "覺得沒人挺的錯覺",
+          "trace" : {
+            "kind" : "opposition",
+            "orb" : 0.24728644665941601,
+            "phase" : "separating",
+            "target" : "saturn",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "今天特別容易被小小的溫柔打動，也更願意付出；適合表達在意、修補小疙瘩，或單純好好吃一頓飯。",
+          "domain" : "love",
+          "ruleId" : "AST-R-026",
+          "title" : "柔軟被打開",
+          "trace" : {
+            "kind" : "conjunction",
+            "orb" : 0.86823405646289586,
+            "phase" : "separating",
+            "target" : "venus",
+            "transiting" : "moon"
+          }
+        },
+        {
+          "body" : "大筆消費與投資今天都可以再等等：把想買的東西放進清單，三天後還想要再買。",
+          "domain" : "money",
+          "ruleId" : null,
+          "title" : "不急著做決定",
+          "trace" : null
+        }
+      ]
+    }
+  ]
+}
