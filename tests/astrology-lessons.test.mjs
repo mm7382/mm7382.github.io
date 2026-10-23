@@ -27,12 +27,12 @@ test('all approved native lessons and the full bilingual content are exported',(
   }
 });
 
-test('each lesson has public-path preview pages in both languages with exact source copy',()=>{
+test('each lesson has indexable pages in both languages with exact source copy',()=>{
   for(const lesson of data.lessons){
     for(const language of ['zh','en']){
       const suffix=language==='en'?'/en':'';
       const page=fromRoot(`astrology-web/learn/${lesson.id}${suffix}/index.html`);
-      assert.match(page,/noindex, nofollow/);
+      assert.match(page,/index, follow/);
       assert.ok(page.includes(clean(lesson.title[language])),`${lesson.id} title ${language}`);
       assert.ok(page.includes(clean(lesson.objective[language])),`${lesson.id} objective ${language}`);
       assert.ok(page.includes(clean(lesson.diagram.caption[language])),`${lesson.id} diagram ${language}`);
@@ -54,4 +54,5 @@ test('the lesson entrance and progress page are present',()=>{
   assert.match(fromRoot('astrology-web/learn/index.html'),/三十六堂課/);
   assert.match(fromRoot('astrology-web/learn/en/index.html'),/Thirty-six lessons/);
   assert.match(fromRoot('astrology-web/learn/review/index.html'),/我的筆記與進度/);
+  assert.match(fromRoot('astrology-web/learn/review/index.html'),/noindex, nofollow/);
 });

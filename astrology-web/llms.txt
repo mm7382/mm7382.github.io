@@ -1,0 +1,11 @@
+# 時來星座 / Shilai Astrology
+
+Free Western astrology birth-chart tool by Michael: https://mm7382.github.io/astrology-web/
+All 36 approved bilingual lessons: https://mm7382.github.io/astrology-web/learn/
+Original iPhone-app introduction: https://mm7382.github.io/astrology/
+
+What it does: calculates ten geocentric tropical positions, retrograde motion, Ascendant, Midheaven, twelve Placidus houses, and five natal aspect kinds from birth date, local time and place. At extreme latitudes it labels the Whole Sign fallback. If birth time is unknown, it shows a partial chart with candidate signs where needed and leaves Ascendant and houses blank. The daily and seven-day reading uses approved rules from the original app, with the triggering transit shown; a quiet day is labeled as such. Two saved charts can be compared by Sun/Moon/rising signs, cross-chart aspects and, when both birth times are known, house overlays. There are no compatibility scores.
+
+All chart calculations happen in the browser. The current chart is temporarily kept in this browser tab so lessons can use it. A visitor explicitly saves a person or friend chart for longer-term use; study notes and progress are saved locally as they are entered. The visitor can clear this app data. No account or payment is required. Shared text is previewed before the visitor explicitly copies it and contains no birth date, time or place.
+
+The site is an educational and reflection tool. Astrology classifications and readings are not guarantees about future events. Traditional Chinese is the main interface; the 36 lessons and daily reading also have English text. The original app's unapproved draft relationship interpretations are not published here.

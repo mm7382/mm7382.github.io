@@ -1,11 +1,12 @@
 # Michael — learning apps for the I Ching, Bazi, Zi Wei Dou Shu and astrology
 
-> Four iPhone apps that teach Chinese metaphysics and Western astrology in plain language. Free beginner lessons, Traditional Chinese and English, no account, data stays on device. Learning tools, not fortune-telling services.
+> Four free browser apps for the I Ching, Bazi, Zi Wei Dou Shu and Western astrology. Complete lessons in Traditional Chinese and English, no account, data stays in the browser. Learning tools, not guarantees about the future.
 
 ## Free web tools
 - [易見：免費線上易經起卦與六十四卦學習](https://mm7382.github.io/yijian-web/): Free, no login; I Ching coin casting, Zhu Xi reading rules, 64 complete hexagrams and eight interactive lessons. Browser-local history. Not live AI-generated predictions.
 - [時來八字：免費排盤與二十堂課](https://mm7382.github.io/bazi-web/): Four Pillars chart, native-source readings, daily practice, monthly report, 20 complete bilingual lessons, browser-local profiles and notes. Free, no login.
 - [時來紫微：免費十二宮排盤與三十六堂課](https://mm7382.github.io/ziwei-web/): Zi Wei Dou Shu chart, original-app reading notes, time layers, two-way palace comparison, and 36 complete bilingual lessons. Free, no login. Unknown birth time shows a provisional chart. Profiles and notes stay in the browser. Details: https://mm7382.github.io/ziwei-web/llms.txt
+- [時來星座：免費出生星盤與三十六堂課](https://mm7382.github.io/astrology-web/): Western astrology chart, daily and seven-day readings, friend comparison, and 36 complete bilingual lessons. Unknown birth time yields an honestly partial chart. Free, no login. Details: https://mm7382.github.io/astrology-web/llms.txt
 
 ## Apps
 - [易見 YiJian](https://mm7382.github.io/yijian/): YiJian (易見): iPhone course teaching the I Ching from zero. 8 interactive beginner lessons (3 free), guided reading of all 64 hexagrams with diagrams and quizzes, spaced review and mistakes notebook. Casting is a practice feature for reflection. Traditional Chinese and English. No account. In App Store review. Details: https://mm7382.github.io/yijian/llms.txt
