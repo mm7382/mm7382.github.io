@@ -61,7 +61,7 @@ Type: AFK。Status: integrated and verified (`cb25c45`; 12 宮、13 種時辰、
 
 ## Z2：閱讀紫微解讀與原有運限
 
-Type: AFK。Status: proposed。Blocked by: Z1。
+Type: AFK。Status: integrated and verified (`ce3c55c`; 六項分析與七日導讀逐句對照原生 Swift 呈現器，390px 手機操作通過)。Blocked by: Z1。
 
 移植現有命盤分析、宮位／星曜解說與已實作的日期／運限功能，保留原方法與阻擋規則。
 
