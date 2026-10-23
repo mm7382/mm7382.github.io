@@ -127,7 +127,7 @@ Type: AFK。Status: integrated and verified (`153aea0`；36 堂核准教材、75
 
 ## A4：保存與比較星盤、管理學習資料
 
-Type: AFK。Status: implemented and verified in isolated worktree（三種雙盤情境與原生實算逐項對照；19 項星座測試通過；待整合）。Blocked by: A1, A2, A3。
+Type: AFK。Status: integrated and verified (`ed708e4`；三種雙盤情境與原生實算逐項對照；19 項星座測試通過)。Blocked by: A1, A2, A3。
 
 完成原有多盤、朋友／合盤、分享內容的網頁對應，並接通學習紀錄、本機管理與刪除。
 
@@ -137,11 +137,15 @@ Type: AFK。Status: implemented and verified in isolated worktree（三種雙盤
 
 ## A5：星座完整驗收並完成三款公開
 
-Type: AFK。Status: proposed。Blocked by: A2, A3, A4。
+Type: AFK。Status: published and verified (`fd1ce0e`；個人網站入口 `04f952a`)。Blocked by: A2, A3, A4。
 
 完成星座搜尋頁、來源與授權、FAQ、sitemap 和網站入口；三款與易見的網站入口共同驗收後公開星座。
 
 驗收：核心矩陣全部完成；正式本命／行運／課程主要路徑正常；四款入口清楚、署名一致、手機可用；私密資料不進公開內容或網址。留下整批狀態、測試證據與公開網址。
+
+完成證據：星座主頁、課程、個人網站與 sitemap 均在正式網址回傳 200；手機 390px 的正式星座排盤、導讀、七日行運、課程與個人網站四款入口在瀏覽器核對通過，無水平溢出或瀏覽器錯誤。36 堂課中英文、搜尋與 AI 摘要入口共 76 個公開網址列入 sitemap；私人筆記與複習頁不列入索引。整站 71 項程式驗證、5 項頁面資料檢查與易見 77 頁公開內容稽核通過。GitHub Pages 的兩個正式發布作業均成功。
+
+公開網址：[個人網站](https://mm7382.github.io/pec-ai-agent-training/)、[八字](https://mm7382.github.io/bazi-web/)、[紫微](https://mm7382.github.io/ziwei-web/)、[星座](https://mm7382.github.io/astrology-web/)、[易見](https://mm7382.github.io/yijian-web/)。B1–B5、Z1–Z5、A1–A5 共 15 票已完成；原 App 尚未核准的合盤詮釋草稿未公開。
 
 ## 真正的 HITL 升級條件
 
