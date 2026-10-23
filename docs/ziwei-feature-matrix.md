@@ -9,7 +9,7 @@
 | 十二宮、命身宮、14 主星、輔星、四化、亮度與大限年齡 | `src/engine.mjs`、`ios/Shared/ZiweiBoard.swift`、`ios/Shared/Models.swift` | Z1 | 已以原引擎資料畫 4×4 宮位盤；手機改雙欄可讀卡，逐宮展開保留全部星曜與標記 |
 | 已有宮位／星曜閱讀與來源分層 | `ios/Shared/ZiweiReading.swift`、`ios/Shared/ZiweiAnalysisPresentation.swift`、`ios/Shared/ZiweiContent.swift` | Z2 | 六項分析、星曜白話、原有生活練習與古籍來源已接入；全部文字與原生 Swift 呈現器固定案例逐句對照。核心 `interpretationStatus` 為 `unsupported`，不稱已有吉凶判讀 |
 | 大限、流年、小限、流月與逐日宮位事實 | `src/engine.mjs` 的 `timeLayers`、`timeLayersByDay`、`dailyTransits` | Z2 | 已呈現原引擎時間層級；今日及七日三主題的文案與原生 Swift 呈現器固定案例逐句對照，流日方法不合即停用 |
-| 36 堂既有完整教材、圖解、練習、來源 | `ios/Shared/ZiweiContent.swift`、`ZiweiLearningPresentation.swift` | Z3 | 源碼 `ZiweiLessonLibrary.baseLessons` 列出 36 堂，待完整轉出與對照 |
+| 36 堂既有完整教材、圖解、練習、來源 | `ios/Shared/ZiweiContent.swift`、`ZiweiLearningPresentation.swift` | Z3 | 36 堂、156 段、72 題已由原生 Swift 來源直接轉出，產生 72 篇中英文課頁；圖解、教學例盤、我的盤觀察、原答對與找盤完成條件、筆記進度可用。原生審編狀態仍為 `reviewed`，課頁保留待整批簽核告知 |
 | 人物簿、切換、合盤與學習筆記 | `ios/App/ProfileStore.swift`、`ios/Shared/ZiweiSynastry.swift`、`ios/Shared/ZiweiLearningNotes.swift` | Z4 | 待移植 |
 | 搜尋入口、全課公開與個人網站入口 | 網站規格 | Z5 | 本頁目前 `noindex` 預覽；Z5 全部驗收後才發布 |
 
