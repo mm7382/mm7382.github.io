@@ -1,0 +1,32 @@
+.reading-room{padding-block:clamp(80px,10vw,150px);border-top:1px solid var(--line)}
+.reading-heading{display:grid;grid-template-columns:1fr 1fr;align-items:end;column-gap:8vw}
+.reading-heading .eyebrow{grid-column:1/-1}
+.reading-heading h2{font:500 clamp(46px,6vw,88px)/1.22 var(--serif);letter-spacing:-.045em;margin:28px 0}
+.reading-heading h2 em{font-style:normal;color:var(--bronze)}
+.reading-heading>p:last-child{max-width:530px;color:var(--muted);font-size:17px}
+.reading-heading .english{display:block;margin-top:16px;font-size:14px}
+.reading-controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;padding:24px 0 42px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:38px}
+.reading-controls label{display:grid;gap:8px;font-size:14px}.reading-controls label span{font-size:11px;letter-spacing:.08em;color:var(--bronze)}
+.reading-controls select,.reading-controls input{width:100%;min-height:48px;border:1px solid var(--line);background:#fffdf7;color:var(--ink);border-radius:0;padding:9px 13px}
+.reading-panel{padding-block:66px;border-bottom:1px solid var(--line)}.reading-panel:empty{display:none}
+.reading-panel h3{font:500 clamp(32px,3.6vw,56px)/1.35 var(--serif);letter-spacing:-.025em;max-width:900px;margin:20px 0 28px}
+.reading-panel h4{font:500 23px/1.4 var(--serif);margin:0 0 12px}
+.reading-lead{font:500 clamp(21px,2.3vw,31px)/1.75 var(--serif);max-width:930px;margin:0 0 34px}
+.reading-row{display:grid;grid-template-columns:minmax(170px,.25fr) 1fr;gap:25px;max-width:950px;padding:24px 0;border-top:1px solid var(--line)}
+.reading-row h4{font-size:18px;color:var(--bronze)}.reading-row p{margin:0;line-height:1.9}
+.reading-note{color:var(--muted);max-width:950px;font-size:14px;line-height:1.8}
+.theme-grid,.advice-grid,.source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:35px}
+.theme-card,.advice-card,.source-card{padding:clamp(18px,2.6vw,35px);border:1px solid var(--line);background:#f9f7f1;min-width:0}
+.theme-card h4,.advice-card h4,.source-card h4{color:var(--bronze)}.theme-card p,.advice-card p,.source-card p{line-height:1.8;margin:0 0 12px}
+.theme-card p:last-child,.advice-card p:last-child,.source-card p:last-child{margin-bottom:0}
+.advice-card.active{background:#eae2d2;border-color:var(--bronze)}.source-card{background:transparent}
+.cycle-list{border-top:1px solid var(--line);margin-top:35px}.cycle{border-bottom:1px solid var(--line);padding:8px 0}
+.cycle summary{display:flex;align-items:center;gap:22px;min-height:62px;cursor:pointer;list-style:none}.cycle summary::-webkit-details-marker{display:none}
+.cycle summary::after{content:'+';margin-left:auto;font-size:25px;color:var(--bronze)}.cycle[open] summary::after{content:'−'}
+.cycle-mark{font:500 26px var(--serif);min-width:70px;color:var(--bronze)}.cycle summary em{font-style:normal;font-size:12px;border:1px solid var(--bronze);padding:1px 10px}
+.cycle>p{padding-left:92px;max-width:860px}.cycle-years{padding:14px 0 24px 92px;max-width:960px}.cycle-year{display:grid;grid-template-columns:130px 1fr;gap:12px;padding:10px 0;border-top:1px solid var(--line)}.cycle-year strong{font-weight:500;color:var(--bronze)}
+.reading-tip{font:500 19px/1.7 var(--serif);margin:10px 0}.seven-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:35px}
+.day-card{padding:30px;border:1px solid var(--line);background:#f9f7f1}.day-date{font-size:11px;letter-spacing:.13em;color:var(--bronze)}.day-card h4{margin:12px 0;font-size:24px}.day-card p{margin:0 0 18px}.day-card small{color:var(--muted);line-height:1.7}
+.reading-caution{max-width:850px;color:var(--muted);font-size:13px;line-height:1.8;margin-top:35px}
+@media(max-width:760px){.reading-heading{grid-template-columns:1fr}.reading-heading .eyebrow{grid-column:auto}.reading-controls{grid-template-columns:1fr}.theme-grid,.advice-grid,.source-grid,.seven-grid{grid-template-columns:1fr}.reading-row{grid-template-columns:1fr;gap:4px}.reading-row h4{margin:0}.cycle>p,.cycle-years{padding-left:0}.cycle-year{grid-template-columns:1fr;gap:1px}.day-card{padding:22px}}
+@media(prefers-reduced-motion:reduce){.reading-room *{scroll-behavior:auto}}
