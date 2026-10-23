@@ -146,6 +146,7 @@ $('reading-date').addEventListener('change',()=>{
     const date=$('reading-date').value;
     if(!/^\d{4}-\d{2}-\d{2}$/.test(date))throw Error('請選擇有效日期。');
     currentChart=calculateZiweiChart(currentProfile,window.FortuneEngine,date);
+    try{if($('demo-label').hidden)sessionStorage.setItem('ziwei-web-current-chart-v1',JSON.stringify(currentChart));}catch{}
     activeDay=0;$('reading-error').hidden=true;renderReadings();
   }catch(error){$('reading-error').textContent=error.message;$('reading-error').hidden=false;}
 });
@@ -167,6 +168,10 @@ $('birth-form').addEventListener('submit',event=>{
     const date=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'});
     const chart=calculateZiweiChart(profile,window.FortuneEngine,date);
     currentProfile=profile;activeKind='natal';activeDay=0;$('reading-date').value=date;
+    try{
+      if($('demo-label').hidden)sessionStorage.setItem('ziwei-web-current-chart-v1',JSON.stringify(chart));
+      else sessionStorage.removeItem('ziwei-web-current-chart-v1');
+    }catch{/* The lesson uses its labelled teaching chart if session storage is unavailable. */}
     renderChart(chart,!$('demo-label').hidden);
   }catch(error){
     $('results').hidden=true;$('form-error').textContent=error instanceof Error?error.message:'排盤暫時無法完成。';
