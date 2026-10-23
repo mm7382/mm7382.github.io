@@ -40,8 +40,8 @@ export function exactCivilToTaipei(date, time, zone) {
   return { date: `${target.year}-${pad(target.month)}-${pad(target.day)}`, time: `${pad(target.hour)}:${pad(target.minute)}` };
 }
 
-/** Generate public-facing facts using exactly the native engine bundle. */
-export function calculateBaziChart(profile, engine, date = new Date().toLocaleDateString('en-CA', {timeZone:'Asia/Taipei'})) {
+/** Apply the native birth-time contract before any chart or reading calculation. */
+export function prepareBaziProfile(profile, engine) {
   if (!engine?.calculateJSON || !engine?.resolveBirthSolarJSON || !engine?.tenGod) throw new Error('八字計算核心尚未載入。');
   const input = { ...profile };
   const zone = input.timeZoneIdentifier || 'Asia/Taipei';
@@ -58,6 +58,13 @@ export function calculateBaziChart(profile, engine, date = new Date().toLocaleDa
     try { new Intl.DateTimeFormat('en-US', {timeZone:zone}); }
     catch { throw new Error('找不到這個出生地時區，請填寫有效的 IANA 時區名稱。'); }
   }
+  return input;
+}
+
+/** Generate public-facing facts using exactly the native engine bundle. */
+export function calculateBaziChart(profile, engine, date = new Date().toLocaleDateString('en-CA', {timeZone:'Asia/Taipei'})) {
+  const input = prepareBaziProfile(profile, engine);
+  const zone = profile.timeZoneIdentifier || 'Asia/Taipei';
   const response = JSON.parse(engine.calculateJSON(JSON.stringify({ ...input, date, activity:'negotiation', startHour:9, endHour:21 }), JSON.stringify({version:1, notice:'只顯示原 App 排出的八字事實；判讀與擇時規則另行說明。', timingEnabled:false})));
   if (!response.ok) throw new Error(response.error);
   const raw = response.result;
