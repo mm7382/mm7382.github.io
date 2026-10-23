@@ -139,5 +139,5 @@ export function calculateChart(input,astronomy=globalThis.Astronomy){
     else{houseSystem='wholeSign';fallbackReason=Math.abs(latitude)>=90-obliquity?'extremeLatitude':'undefinedPlacidusSolution';const start=Math.floor(ascendant(ramc,latitude,obliquity)/30)*30;cusps=Array.from({length:12},(_,i)=>norm(start+i*30));}
     for(const item of placements)item.house=houseOf(item.longitude,cusps);
   }
-  return {completeness:unknown?'validPartial':'complete',placements,cusps,ascendant:cusps?.[0]??null,midheaven,houseSystem,fallbackReason,aspects:chartAspects(placements,unknown?samplesByBody:null),metadata:{ephemerisName:'Astronomy Engine',ephemerisVersion:'2.1.19',utcInstant:first.toISOString(),resolvedTimeZoneIdentifier:zone,ambiguousBirthTime:ambiguous,adjustedBirthTime:adjusted}};
+  return {completeness:unknown?'validPartial':'complete',placements,cusps,ascendant:cusps?.[0]??null,midheaven,houseSystem,fallbackReason,aspects:chartAspects(placements,unknown?samplesByBody:null),uncertaintySamples:unknown?samplesByBody:null,metadata:{ephemerisName:'Astronomy Engine',ephemerisVersion:'2.1.19',utcInstant:first.toISOString(),resolvedTimeZoneIdentifier:zone,ambiguousBirthTime:ambiguous,adjustedBirthTime:adjusted}};
 }

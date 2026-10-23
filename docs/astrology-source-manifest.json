@@ -66,7 +66,11 @@
     "Shared/Content/Lesson33.swift": "267b936f3f0a62103bf97665e0922a3f2c2af992d333203ba95b191c0376903c",
     "Shared/Content/Lesson34.swift": "73f43683a1e840fb83c392fdffa58a786965013acd0e72edec94b6b81e5e663a",
     "Shared/Content/Lesson35.swift": "c989ea06ccc468d5e8eb4d2fcd8112160239e0382ef06e09f26e5d975e29297b",
-    "Shared/Content/Lesson36.swift": "4298c3510e3031c1756de0fcf6d2a89ecad713a91c42eabf4eaab7d2dd8b83c4"
+    "Shared/Content/Lesson36.swift": "4298c3510e3031c1756de0fcf6d2a89ecad713a91c42eabf4eaab7d2dd8b83c4",
+    "Core/Calculation/SynastryCalculator.swift": "631d0adbd1b0b1c06fe084a125851b52c05c47037158819071b0bfea12815e89",
+    "App/Domain/ProfileModels.swift": "ed6a703770466a952e955b0518979b409d9985027c553e7dea4aa959a94b0f15",
+    "App/Domain/ProfileStore.swift": "fa71ba3c7608d18498a7159685c97a6696d465eb0e81677021658feb52b6f682",
+    "Shared/Content/SynastryCopy.swift": "7229cfa36f24743a8bf1d1edcf4a59b85d16f6a1cb98bd59e1011f042b91fb2c"
   },
   "sourceProject": "ShilaiAstrology",
   "webEngine": {
