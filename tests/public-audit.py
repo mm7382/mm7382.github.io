@@ -33,7 +33,9 @@ def zh_strings(x):
   for v in x:yield from zh_strings(v)
 files=list(SITE.rglob('index.html'));assert len(files)>=77,len(files)
 for f in files:
- d=Doc(f.read_text());rel='/'+str(f.parent.relative_to(ROOT))+'/'
+ markup=f.read_text();d=Doc(markup);rel='/'+str(f.parent.relative_to(ROOT))+'/'
+ assert 'Wei Chun Chuang' not in markup,(rel,'private author name')
+ assert all(item.get('author',{}).get('name')=='Michael' for item in d.ld),(rel,'public author name')
  assert d.h1==1,(rel,'h1')
  assert d.canonical==['https://mm7382.github.io'+rel],(rel,'canonical')
  assert len(d.description)==1 and d.description[0],(rel,'description')

@@ -9,7 +9,7 @@ Canonical deployment target: root mm7382.github.io repo, /yijian-web/ (do not sh
 3 AFK depends 2: free casting, base/moving/changed, Zhu Xi rule selection and full source explanations/topic guidance. Validate against original Swift engine all 4096 input cases.
 4 AFK depends 2,3: all 8 lessons, all original sections/diagrams, activity families and quizzes with accurate feedback; no paywalls.
 5 AFK depends 3,4: browser-only progress/history, reload persistence, clear with confirmation, explicit no sync warning, graceful disabled/corrupt storage behavior. No personal data in URLs or public pages.
-6 AFK depends 2,3,4: semantic crawlable content, author (Wei Chun Chuang / Michael), free/no login FAQ, canonical/meta/social/structured data, sitemap + hub navigation, Google and AI discovery readiness, no guarantee rankings. No new bulk articles.
+6 AFK depends 2,3,4: semantic crawlable content, public author name (Michael), free/no login FAQ, canonical/meta/social/structured data, sitemap + hub navigation, Google and AI discovery readiness, no guarantee rankings. No new bulk articles.
 7 HITL: preview approval then publish and account-related submission/tracking. NOT AUTHORIZED NOW.
 ## Design
 Preserve existing warm paper + muted cinnabar + ink editorial character, Chinese readable typography, restrained navigation; no giant decorative symbols, stock images, invented testimonials or equal marketing card walls. Mobile and desktop accessible, keyboard/focus/labels/live feedback/reduced motion.
