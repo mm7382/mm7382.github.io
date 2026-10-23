@@ -1,0 +1,23 @@
+{
+  "capturedOn": "2026-10-23",
+  "sourceRepository": "ShilaiZiwei",
+  "sourceCommit": "b5e390a83fa68f5ef398d781cf77557e9a3b9552",
+  "sourceHasUncommittedChanges": true,
+  "dependencies": {"lunar-javascript": "1.7.7", "iztro": "2.6.1"},
+  "files": {
+    "src/engine.mjs": "b37a3b1dcb6710fe75b808264821dbb7f38862afdc5a4cc316cc10fbb1b05d9c",
+    "ios/Shared/engine.js": "f6633359d3ce23ffa5a0ab6576bbfa3ba0a6ffa76fe39b2b6b5a604dbb152420",
+    "ios/Shared/ZiweiBirthInput.swift": "48ca190de2984edab733b403a2c0696a7ec41c1671b5c66430151c8c7ad334e4",
+    "ios/Shared/ZiweiHomeState.swift": "6b1ab85c7dde6df211fe963aa9cbc4a8afdc34819cd41bbc4f27a1ef8fa8519e",
+    "ios/Shared/ZiweiBoard.swift": "ee909e5301bb53e537a51f8a99482dfa7e4ca02065b6266c6118791d8ac3cdc7",
+    "ios/Shared/ZiweiChartPresentation.swift": "dd0698fe384ed4d0255a7eeab58558d0895627d7a41dc417948d0d9b7d4168ca",
+    "ios/Shared/ZiweiContent.swift": "084ec32cf2374d8bb51cf146222273e5f5efcf3a6142c6405dc1070bfb265f9d",
+    "ios/Shared/ZiweiAnalysisPresentation.swift": "50a3a65a3d8d9a884cafce48211a9f2ba3cf4a050333110b020e55a61e0a83d2",
+    "ios/Shared/ZiweiReading.swift": "b14f212f81c0d7bfc17c0433118b8af5013674e04005d83d124d3f9687e3ee89",
+    "ios/Shared/ZiweiSynastry.swift": "77b3e2d45e303759f97dc1d88ee803e01182bdc656ef789e88a3b748ddbcfb12",
+    "ios/Shared/Models.swift": "c23f8312a1b95ac6b6a708f7bbc7bb06e784c94ea777ef9feed4833d4506cdef",
+    "ios/App/Engine.swift": "e5d2a36d8aa9b6b78b32f37a79be33523bc7493cccf2bac18afafea8755cf1a5",
+    "package-lock.json": "e0b6d70f943316f48fb522401f8a228bb656a03888875ac673cee714b83c4ac5",
+    "THIRD_PARTY_NOTICES.txt": "4e0cd0fd5a7f1b52311687a1ee5d802b32bff0f30d3ccf56924f7e32ac6fa9b2"
+  }
+}
