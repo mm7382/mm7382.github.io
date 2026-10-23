@@ -60,7 +60,7 @@ function wheel(chart){
   });
   root.append(svg('circle',{cx:300,cy:300,r:40,class:'wheel-center'}),svg('text',{x:300,y:294,class:'center-word','text-anchor':'middle'},chart.completeness==='complete'?'NATAL':'PARTIAL'),svg('text',{x:300,y:312,class:'center-sub','text-anchor':'middle'},'SKY / 星圖'));
 }
-function render(chart,place){
+function render(chart,place,scroll=true){
   $('#results').hidden=false;
   $('#chart-summary').textContent=`${$('#birth-date').value} · ${place.name} · ${chart.completeness==='complete'?'完整星盤 / Full chart':'部分星盤 / Partial chart'}`;
   const timeWarning=$('#time-warning');
@@ -89,7 +89,7 @@ function render(chart,place){
     aspectRoot.append(row);
   }
   renderReading(chart);
-  $('#results-title').focus({preventScroll:true});$('#results').scrollIntoView({behavior:'smooth',block:'start'});
+  if(scroll){$('#results-title').focus({preventScroll:true});$('#results').scrollIntoView({behavior:'smooth',block:'start'});}
 }
 $('#chart-form').addEventListener('submit',event=>{
   event.preventDefault();const error=$('#form-error');error.hidden=true;
@@ -98,6 +98,20 @@ $('#chart-form').addEventListener('submit',event=>{
   try{
     const chart=calculateChart({date:$('#birth-date').value,time:$('#unknown-time').checked?null:$('#birth-time').value,latitude:place.latitude,longitude:place.longitude,timeZone:place.timeZone});
     render(chart,place);
+    window.dispatchEvent(new CustomEvent('astrology:chart',{detail:{saved:false,chart,place,birth:{date:$('#birth-date').value,time:$('#unknown-time').checked?null:$('#birth-time').value,latitude:Number(place.latitude),longitude:Number(place.longitude),timeZone:place.timeZone,placeName:place.name}}}));
   }catch(cause){error.hidden=false;error.textContent=cause instanceof Error?cause.message:'星盤暫時無法計算，請核對出生資料。';}
 });
 syncInputs();
+export function showSavedChart(record){
+  $('#birth-date').value=record.birth.date;
+  $('#birth-time').value=record.birth.time??'';
+  $('#unknown-time').checked=record.birth.time===null;
+  $('#city').value='custom';
+  $('#latitude').value=record.birth.latitude;
+  $('#longitude').value=record.birth.longitude;
+  $('#birth-zone').value=record.birth.timeZone;
+  $('#sample-note').hidden=true;
+  syncInputs();
+  render(record.chart,{name:record.birth.placeName??record.name,latitude:record.birth.latitude,longitude:record.birth.longitude,timeZone:record.birth.timeZone});
+  window.dispatchEvent(new CustomEvent('astrology:chart',{detail:{saved:true,profileId:record.id,chart:record.chart,place:{name:record.birth.placeName??record.name},birth:record.birth}}));
+}

@@ -1,3 +1,4 @@
+import {DATA_KEY} from '../profiles.mjs';
 const $=selector=>document.querySelector(selector);
 const language=document.body.dataset.language;
 const lessonId=document.body.dataset.lessonId;
@@ -5,7 +6,13 @@ const key='astrology-web-study-v1';
 const profileKey='astrology-web-current-profile-id-v1';
 const chartKey='astrology-web-current-chart-v1';
 let profileId='astrology.noProfile';
-try{profileId=sessionStorage.getItem(profileKey)||profileId;}catch{}
+let savedActive=null;
+try{
+  const raw=localStorage.getItem(DATA_KEY),data=raw?JSON.parse(raw):null;
+  savedActive=data?.profiles?.find(x=>x.id===data.activeId)??null;
+}catch{}
+try{profileId=sessionStorage.getItem(profileKey)??savedActive?.id??profileId;}
+catch{profileId=savedActive?.id??profileId;}
 let state={profiles:{}};
 let blocked=false;
 try{
@@ -25,7 +32,10 @@ function save(){
   try{localStorage.setItem(key,JSON.stringify(state));return true;}
   catch{$('#storage-warning').hidden=false;$('#storage-warning').textContent=language==='zh'?'瀏覽器儲存不可用，筆記沒有存下來。':'Browser storage is unavailable; your note was not saved.';return false;}
 }
-function chart(){try{const value=JSON.parse(sessionStorage.getItem(chartKey));return value?.placements?.length===10?value:null;}catch{return null;}}
+function chart(){
+  try{const value=JSON.parse(sessionStorage.getItem(chartKey));if(value?.placements?.length===10)return value;}catch{}
+  return profileId===savedActive?.id?savedActive.chart:null;
+}
 const bodyName={sun:['太陽','Sun'],moon:['月亮','Moon'],mercury:['水星','Mercury'],venus:['金星','Venus'],mars:['火星','Mars'],jupiter:['木星','Jupiter'],saturn:['土星','Saturn'],uranus:['天王星','Uranus'],neptune:['海王星','Neptune'],pluto:['冥王星','Pluto']};
 const signName={aries:['牡羊','Aries'],taurus:['金牛','Taurus'],gemini:['雙子','Gemini'],cancer:['巨蟹','Cancer'],leo:['獅子','Leo'],virgo:['處女','Virgo'],libra:['天秤','Libra'],scorpio:['天蠍','Scorpio'],sagittarius:['射手','Sagittarius'],capricorn:['摩羯','Capricorn'],aquarius:['水瓶','Aquarius'],pisces:['雙魚','Pisces']};
 const aspectName={conjunction:['合相','conjunction'],sextile:['六分相','sextile'],square:['四分相','square'],trine:['三分相','trine'],opposition:['對分相','opposition']};

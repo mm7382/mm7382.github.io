@@ -117,7 +117,7 @@ Type: AFK。Status: integrated and verified (`f9f4449`; 完整／部分盤各 8 
 
 ## A3：閱讀完整 36 堂星座課程
 
-Type: AFK。Status: implemented and verified in isolated worktree（36 堂核准教材、75 個課程／索引／筆記頁、14 項星座測試通過；待整合）。Blocked by: A1。
+Type: AFK。Status: integrated and verified (`153aea0`；36 堂核准教材、75 個課程／索引／筆記頁、14 項星座測試通過)。Blocked by: A1。
 
 移植 24 堂核心＋12 堂實作，包含來源、教學圖、已存在的案例／練習與答案、我的盤觀察、筆記與閱讀進度。
 
@@ -127,11 +127,13 @@ Type: AFK。Status: implemented and verified in isolated worktree（36 堂核准
 
 ## A4：保存與比較星盤、管理學習資料
 
-Type: AFK。Status: proposed。Blocked by: A1, A2, A3。
+Type: AFK。Status: implemented and verified in isolated worktree（三種雙盤情境與原生實算逐項對照；19 項星座測試通過；待整合）。Blocked by: A1, A2, A3。
 
 完成原有多盤、朋友／合盤、分享內容的網頁對應，並接通學習紀錄、本機管理與刪除。
 
 驗收：雙人相位與原 App 一致；完整盤／部分盤混合時正確標示限制；不新增相配分數；分享由使用者主動選擇且不自動外傳；保存、恢復、清除與儲存故障可重跑。
+
+完成證據：原生 Swift 同時計算完整＋完整、完整＋部分、部分＋部分雙盤，各類相位、最小／最大容許度、個人行星前三筆、太陽／月亮／上升候選與雙向宮位疊合逐項對照通過；部分盤的 25 個當地日樣本作獨立笛卡兒比對，不假設兩人出生同一時刻。手機 390px 實際排盤、儲存自我與朋友、重新載入、比較與切換課程觀察皆通過；未知時間顯示月亮雙候選，沒有假上升或宮位。分享內容只在頁面預覽，按複製才進剪貼簿，不含生日。儲存停用與損壞資料保護已測。原生 `SynastryCopy.swift` 明記待 Michael 核准，本階段未把該草稿文字放上網站；以可核對的客觀盤面和相位代替。
 
 ## A5：星座完整驗收並完成三款公開
 
