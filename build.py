@@ -102,6 +102,10 @@ def app_page(a):
     out += f"<h2>隱私</h2>\n<p>{PRIVACY}</p>\n"
     if a['slug'] == 'bazi':
         out += '<section class="card"><h2>免費使用八字網頁版</h2><p>四柱排盤、白話解讀、每日練習、月報、二十堂課、人物比較，瀏覽器裡都能免費使用。</p><p><a href="/bazi-web/">開始排盤與學習 →</a>・<a href="/bazi-web/learn/">閱讀全部課程 →</a></p><p>網頁版的出生資料與筆記留在目前瀏覽器，不會傳到伺服器；清除瀏覽器資料也會清除紀錄。</p></section>'
+    if a['slug'] == 'ziwei':
+        out += '<section class="card"><h2>免費使用紫微網頁版</h2><p>十二宮排盤、六項導讀、人物對照與三十六堂課都免費開放。</p><p><a href="/ziwei-web/">開始排盤與學習 →</a>・<a href="/ziwei-web/learn/">閱讀全部課程 →</a></p><p>你主動儲存的人物與筆記只留在目前瀏覽器。</p></section>'
+    if a['slug'] == 'astrology':
+        out += '<section class="card"><h2>免費使用星座網頁版</h2><p>出生星盤、今日與未來七天導讀、朋友對照，以及原 App 三十六堂課都免費開放。</p><p><a href="/astrology-web/">開始排星盤與學習 →</a>・<a href="/astrology-web/learn/">閱讀全部課程 →</a></p><p>不知道出生時間也能看部分星盤；上升和宮位不會亂猜。你主動儲存的資料只留在目前瀏覽器。</p></section>'
     out += "<h2>常見問題</h2>\n" + deflist(a["faq"])
     out += f'<section id="en" class="lang" lang="en">\n<h2>{esc(a["en"])} — {esc(a["tag_en"])}</h2>\n<p><em>{esc(a["status_en"])}.</em> {esc(a["intro_en"])}</p>\n'
     out += "<h3>Who it is for</h3>\n" + ul(a["audience_en"])
@@ -141,7 +145,9 @@ def hub():
         image = "/assets/natural/" + screenshots[a["slug"]] + ".png" if a["slug"] in screenshots else a["icon"]
         description = esc(summaries.get(a["slug"], a.get("tag", "")))
         web_links = {'yijian':'<p><a href="/yijian-web/">免費使用易見網頁版 →</a></p>',
-                     'bazi':'<p><a href="/bazi-web/">免費排八字、讀 20 堂課 →</a></p>'}
+                     'bazi':'<p><a href="/bazi-web/">免費排八字、讀 20 堂課 →</a></p>',
+                     'ziwei':'<p><a href="/ziwei-web/">免費排紫微、讀 36 堂課 →</a></p>',
+                     'astrology':'<p><a href="/astrology-web/">免費排星座命盤、讀 36 堂課 →</a></p>'}
         web_link = web_links.get(a['slug'],'')
         cards.append(f'<article class="work"><a href="/{slug}/" aria-label="了解{name}"><div class="work-photo {slug}"><div class="phone"><img src="{image}" alt="{name}實際 App 畫面" loading="lazy"></div></div><div class="work-caption"><h3>{name}</h3><span aria-hidden="true">↗</span></div></a><p>{description}</p>{web_link}</article>')
     with open(os.path.join(HERE, "hub-template.html")) as f:
@@ -152,9 +158,11 @@ def hub():
 
 def llms():
     lines = ["# Michael — learning apps for the I Ching, Bazi, Zi Wei Dou Shu and astrology", "",
-             "> Four iPhone apps that teach Chinese metaphysics and Western astrology in plain language. Free beginner lessons, Traditional Chinese and English, no account, data stays on device. Learning tools, not fortune-telling services.", "",
+             "> Four free browser apps for the I Ching, Bazi, Zi Wei Dou Shu and Western astrology. Complete lessons in Traditional Chinese and English, no account, data stays in the browser. Learning tools, not guarantees about the future.", "",
              "## Free web tools", "- [易見：免費線上易經起卦與六十四卦學習](https://mm7382.github.io/yijian-web/): Free, no login; I Ching coin casting, Zhu Xi reading rules, 64 complete hexagrams and eight interactive lessons. Browser-local history. Not live AI-generated predictions.",
-             "- [時來八字：免費排盤與二十堂課](https://mm7382.github.io/bazi-web/): Four Pillars chart, native-source readings, daily practice, monthly report, 20 complete bilingual lessons, browser-local profiles and notes. Free, no login.", "", "## Apps"]
+             "- [時來八字：免費排盤與二十堂課](https://mm7382.github.io/bazi-web/): Four Pillars chart, native-source readings, daily practice, monthly report, 20 complete bilingual lessons, browser-local profiles and notes. Free, no login.",
+             "- [時來紫微：免費十二宮排盤與三十六堂課](https://mm7382.github.io/ziwei-web/): Zi Wei Dou Shu chart, original-app reading notes, time layers, two-way palace comparison, and 36 complete bilingual lessons. Free, no login. Details: https://mm7382.github.io/ziwei-web/llms.txt",
+             "- [時來星座：免費出生星盤與三十六堂課](https://mm7382.github.io/astrology-web/): Western astrology chart, daily and seven-day readings, friend comparison, and 36 complete bilingual lessons. Unknown birth time yields an honestly partial chart. Free, no login. Details: https://mm7382.github.io/astrology-web/llms.txt", "", "## Apps"]
     for a in APPS:
         lines.append(f"- [{a['name']} {a['en']}]({BASE}/{a['slug']}/): {a['llms']}")
     import re, glob
@@ -176,7 +184,10 @@ def sitemap():
     urls += [BASE + '/' + str(p.parent.relative_to(__import__('pathlib').Path(HERE))) + '/' for p in sorted(__import__('pathlib').Path(HERE).glob('yijian-web/**/index.html')) if '/records/' not in str(p)]
     urls += [BASE + '/bazi-web/']
     urls += [BASE + '/' + str(p.parent.relative_to(__import__('pathlib').Path(HERE))) + '/' for p in sorted(__import__('pathlib').Path(HERE).glob('bazi-web/learn/**/index.html')) if '/review/' not in str(p)]
-    body = "".join(f"  <url><loc>{u}</loc><lastmod>{"2026-10-23" if "/yijian-web/" in u or "/bazi-web/" in u else "2026-10-15"}</lastmod></url>\n" for u in urls)
+    for slug in ['ziwei-web', 'astrology-web']:
+        urls += [BASE + f'/{slug}/', BASE + f'/{slug}/llms.txt']
+        urls += [BASE + '/' + str(p.parent.relative_to(__import__('pathlib').Path(HERE))) + '/' for p in sorted(__import__('pathlib').Path(HERE).glob(f'{slug}/learn/**/index.html')) if '/review/' not in str(p)]
+    body = "".join(f"  <url><loc>{u}</loc><lastmod>{"2026-10-23" if "-web/" in u else "2026-10-15"}</lastmod></url>\n" for u in urls)
     with open(os.path.join(HERE, "sitemap.xml"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + body + "</urlset>\n")
 
