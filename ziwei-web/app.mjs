@@ -1,5 +1,7 @@
 import {calculateZiweiChart} from './chart.mjs';
 import {buildZiweiReading,buildZiweiWeek} from './reading.mjs';
+import {createZiweiPeopleStore,compareZiweiCharts,shareZiweiComparison,renderZiweiRole} from './people.mjs';
+import {peopleCopy} from './people-copy.mjs';
 
 const $=id=>document.getElementById(id);
 const slots={巳:[1,1],午:[1,2],未:[1,3],申:[1,4],酉:[2,4],戌:[3,4],亥:[4,4],子:[4,3],丑:[4,2],寅:[4,1],卯:[3,1],辰:[2,1]};
@@ -9,6 +11,8 @@ let currentChart=null;
 let currentProfile=null;
 let activeKind='natal';
 let activeDay=0;
+let currentRecordId=null;
+const people=createZiweiPeopleStore();
 const node=(tag,className,value)=>{const item=document.createElement(tag);if(className)item.className=className;if(value!==undefined)item.textContent=value;return item;};
 const add=(parent,tag,className,value)=>{const item=node(tag,className,value);parent.append(item);return item;};
 
@@ -71,10 +75,118 @@ function renderChart(chart,sample=false){
   board.append(center);
   $('palace-detail').hidden=true;
   renderReadings();
+  renderPeople();
   $('results').hidden=false;
   $('results-title').focus({preventScroll:true});
   $('results').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
 }
+
+function peopleMessage(message){const shown=message||people.warning||'';$('people-message').textContent=shown;$('top-notice').textContent=shown;}
+function fillProfileForm(profile){
+  $('calendar').value=profile.calendar;$('birthDate').value=profile.birthDate;
+  $('leapMonth').checked=Boolean(profile.leapMonth);$('timeState').value=profile.timeState;
+  if(profile.timeState==='earthlyBranch')$('branch').value=profile.time;
+  else $('time').value=profile.time||'';
+  $('gender').value=profile.gender;syncForm();
+}
+function openSaved(record){
+  try{
+    const date=$('reading-date').value||new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'});
+    const chart=calculateZiweiChart(record.profile,window.FortuneEngine,date);
+    people.select(record.id);currentRecordId=record.id;currentProfile=record.profile;
+    $('reading-date').value=date;fillProfileForm(record.profile);$('demo-label').hidden=true;
+    activeKind='natal';activeDay=0;renderChart(chart);
+    try{sessionStorage.setItem('ziwei-web-current-chart-v1',JSON.stringify(chart));sessionStorage.setItem('ziwei-web-current-profile-id-v1',record.id);}catch{}
+    peopleMessage(`已切換到「${record.name}」。`);
+  }catch(error){peopleMessage(error.message);}
+}
+function renderPeople(){
+  const list=$('people-list');list.replaceChildren();
+  for(const record of people.list()){
+    const card=add(list,'article',`people-card${record.id===currentRecordId?' active':''}`);
+    add(card,'strong','',record.name);
+    add(card,'span','',record.profile.timeState==='unknown'?'時辰未知 · 午時暫定':'已儲存於此瀏覽器');
+    const actions=add(card,'div','people-actions');
+    const switchButton=add(actions,'button','','查看這張盤');switchButton.type='button';
+    switchButton.addEventListener('click',()=>openSaved(record));
+    if(currentRecordId&&record.id!==currentRecordId){
+      const compare=add(actions,'button','','與目前命盤對照');compare.type='button';
+      compare.addEventListener('click',()=>showComparison(record));
+    }
+    const rename=add(actions,'button','','改暱稱');rename.type='button';
+    rename.addEventListener('click',()=>{
+      const name=window.prompt('新的暱稱',record.name);if(name===null)return;
+      try{people.rename(record.id,name);renderPeople();peopleMessage('暱稱已更新。');}catch(error){peopleMessage(error.message);}
+    });
+    const remove=add(actions,'button','','刪除');remove.type='button';
+    remove.addEventListener('click',()=>{
+      if(!window.confirm(`確定刪除「${record.name}」的紫微命盤嗎？`))return;
+      try{people.remove(record.id);$('comparison').hidden=true;
+        if(currentRecordId===record.id){
+          currentRecordId=null;
+          const next=people.active();
+          if(next)openSaved(next);
+          else{currentProfile=null;currentChart=null;$('results').hidden=true;
+            try{sessionStorage.removeItem('ziwei-web-current-chart-v1');sessionStorage.removeItem('ziwei-web-current-profile-id-v1');}catch{}}
+        }
+        renderPeople();peopleMessage(`已刪除「${record.name}」。`);
+      }catch(error){peopleMessage(error.message);}
+    });
+  }
+  if(!list.children.length)add(list,'p','people-empty','還沒有儲存人物。先排出一張盤，再替它取個暱稱。');
+  if(people.warning)peopleMessage(people.warning);
+}
+function showComparison(friend){
+  const own=people.list().find(x=>x.id===currentRecordId);if(!own)return peopleMessage('請先儲存或切換到一張人物命盤。');
+  try{
+    const date=$('reading-date').value;
+    const first=calculateZiweiChart(own.profile,window.FortuneEngine,date);
+    const second=calculateZiweiChart(friend.profile,window.FortuneEngine,date);
+    const comparison=compareZiweiCharts(first,second);
+    if(!comparison)throw Error('兩張盤資料不足，暫時不能對照。');
+    const panel=$('comparison');$('comparison-title').textContent=`${own.name} · ${friend.name}`;
+    $('comparison-note').textContent=peopleCopy.copy.synScopeNote.zh+
+      ((first.hourAssumed||second.hourAssumed)?' 至少一人的時辰未知，以下宮位是午時暫定，補上時間後可能不同。':'');
+    const facts=$('comparison-facts');facts.replaceChildren();
+    for(const [from,to,direction] of [[own,friend,comparison.firstToSecond],[friend,own,comparison.secondToFirst]]){
+      const box=add(facts,'section','comparison-fact');add(box,'h5','',`${from.name} → ${to.name}`);
+      for(const [label,p] of [['命宮',direction.life],['身宮',direction.body]]){
+        const template=peopleCopy.copy[label==='命宮'?'synLifeLine':'synBodyLine'].zh;
+        add(box,'p','',template.replace('{source}',from.name).replace('{target}',to.name)
+          .replace('{palace}',palaceLabel(p.targetPalace)).replace('{branch}',p.sourceBranch));
+        if(label==='命宮')add(box,'p','role-line',renderZiweiRole(from.name,to.name,p.targetPalace));
+      }
+      if(direction.lifeStars.length){
+        for(const star of direction.lifeStars){
+          const template=peopleCopy.copy.synStarLine.zh;
+          add(box,'p','',template.replace('{source}',from.name).replace('{target}',to.name)
+            .replace('{star}',star.name).replace('{branch}',star.sourceBranch)
+            .replace('{palace}',palaceLabel(star.targetPalace)));
+        }
+      }else add(box,'p','',peopleCopy.copy.synNoMajorStar.zh);
+      add(box,'p','',peopleCopy.copy.synTargetStarsLine.zh.replace('{stars}',direction.life.targetStars.join('、')||'無正曜'));
+    }
+    const share=shareZiweiComparison({first,second,comparison,firstName:own.name,secondName:friend.name,
+      firstProfile:own.profile,secondProfile:friend.profile});
+    $('share-text').textContent=share||'';panel.hidden=false;
+    $('copy-share').onclick=async()=>{try{await navigator.clipboard.writeText(share);peopleMessage('已複製你預覽過的分享文字。');}catch{peopleMessage('無法自動複製，請選取上方文字自行複製。');}};
+    panel.scrollIntoView({block:'nearest',behavior:'smooth'});
+  }catch(error){peopleMessage(error.message);}
+}
+
+$('save-profile').addEventListener('click',()=>{
+  if(!currentProfile||!currentChart||!$('result-kind').hidden)return peopleMessage('請先排出自己的命盤；教學例盤不能存成人物。');
+  try{const saved=people.save($('profile-name').value,currentProfile);currentRecordId=saved.id;
+    try{sessionStorage.setItem('ziwei-web-current-profile-id-v1',saved.id);}catch{}
+    $('profile-name').value='';renderPeople();peopleMessage(`已儲存「${saved.name}」。`);
+  }catch(error){peopleMessage(error.message);}
+});
+$('clear-all').addEventListener('click',()=>{
+  if(!window.confirm('確定清除這個瀏覽器中的紫微人物、目前命盤與學習筆記嗎？這個動作無法復原。'))return;
+  try{people.clear();localStorage.removeItem('ziwei-web-study-v1');sessionStorage.removeItem('ziwei-web-current-chart-v1');sessionStorage.removeItem('ziwei-web-current-profile-id-v1');
+    currentRecordId=null;currentProfile=null;currentChart=null;$('results').hidden=true;renderPeople();peopleMessage('紫微人物與學習紀錄已清除。');
+  }catch(error){peopleMessage(`清除沒有完全成功：${error.message}`);}
+});
 
 function showSections(target,sections){
   for(const section of sections){
@@ -167,10 +279,11 @@ $('birth-form').addEventListener('submit',event=>{
     if(profile.timeState==='exact'&&!profile.time) throw Error('請填寫出生時間。');
     const date=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Taipei'});
     const chart=calculateZiweiChart(profile,window.FortuneEngine,date);
-    currentProfile=profile;activeKind='natal';activeDay=0;$('reading-date').value=date;
+    currentProfile=profile;currentRecordId=null;activeKind='natal';activeDay=0;$('reading-date').value=date;
     try{
       if($('demo-label').hidden)sessionStorage.setItem('ziwei-web-current-chart-v1',JSON.stringify(chart));
       else sessionStorage.removeItem('ziwei-web-current-chart-v1');
+      sessionStorage.removeItem('ziwei-web-current-profile-id-v1');
     }catch{/* The lesson uses its labelled teaching chart if session storage is unavailable. */}
     renderChart(chart,!$('demo-label').hidden);
   }catch(error){
@@ -179,3 +292,4 @@ $('birth-form').addEventListener('submit',event=>{
   }
 });
 syncForm();
+if(people.active())openSaved(people.active());
