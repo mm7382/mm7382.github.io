@@ -5,7 +5,7 @@
 ## Free web tools
 - [易見：免費線上易經起卦與六十四卦學習](https://mm7382.github.io/yijian-web/): Free, no login; I Ching coin casting, Zhu Xi reading rules, 64 complete hexagrams and eight interactive lessons. Browser-local history. Not live AI-generated predictions.
 - [時來八字：免費排盤與二十堂課](https://mm7382.github.io/bazi-web/): Four Pillars chart, native-source readings, daily practice, monthly report, 20 complete bilingual lessons, browser-local profiles and notes. Free, no login.
-- [時來紫微：免費十二宮排盤與三十六堂課](https://mm7382.github.io/ziwei-web/): Zi Wei Dou Shu chart, original-app reading notes, time layers, two-way palace comparison, and 36 complete bilingual lessons. Free, no login. Unknown birth time shows a provisional chart. Profiles and notes stay in the browser. Details: https://mm7382.github.io/ziwei-web/llms.txt
+- [時來紫微：免費十二宮排盤與三十六堂課](https://mm7382.github.io/ziwei-web/): Zi Wei Dou Shu chart, original-app reading notes, time layers, two-way palace comparison, and 36 complete bilingual lessons. Free, no login. Details: https://mm7382.github.io/ziwei-web/llms.txt
 - [時來星座：免費出生星盤與三十六堂課](https://mm7382.github.io/astrology-web/): Western astrology chart, daily and seven-day readings, friend comparison, and 36 complete bilingual lessons. Unknown birth time yields an honestly partial chart. Free, no login. Details: https://mm7382.github.io/astrology-web/llms.txt
 
 ## Apps
@@ -18,19 +18,29 @@
 - [Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/): Michael's AI agent learning hub — tools, tutorials, training materials, engineering journal (zh-Hant).
 
 ## Learning articles (zh-Hant + en)
+- [相位是什麼？合相、對分、三分、四分、六分怎麼看｜What are aspects in a birth chart?](https://mm7382.github.io/learn/aspects.html)
 - [八字入門：四柱、天干地支與五行怎麼看｜Bazi for beginners](https://mm7382.github.io/learn/bazi-four-pillars.html)
 - [動爻、本卦與之卦是什麼？｜What are changing lines, the primary hexagram and the resulting hexagram?](https://mm7382.github.io/learn/changing-lines.html)
+- [三枚銅錢起卦怎麼做？擲六次的規則與記錄方式｜How do you cast an I Ching hexagram with three coins?](https://mm7382.github.io/learn/coin-casting.html)
 - [日主是什麼？怎麼從八字找到自己的日主｜What is the Day Master?](https://mm7382.github.io/learn/day-master.html)
+- [十二時辰怎麼對應現在的時間？子丑寅卯一次看懂｜How do the twelve earthly branches map to clock hours?](https://mm7382.github.io/learn/earthly-branches-hours.html)
 - [八卦是什麼？乾坤震巽坎離艮兌一次看懂｜What are the eight trigrams?](https://mm7382.github.io/learn/eight-trigrams.html)
 - [星座的四元素與三種模式是什麼？｜What are the four elements and three modalities of the zodiac signs?](https://mm7382.github.io/learn/elements-modalities.html)
 - [五行生剋是什麼？木火土金水的關係一次看懂｜What are the Five Phases?](https://mm7382.github.io/learn/five-phases.html)
+- [四化是什麼？祿權科忌怎麼看｜What are the Four Transformations (Si Hua)?](https://mm7382.github.io/learn/four-transformations.html)
+- [六十四卦怎麼查？用上下卦找到卦名與卦序｜How do you look up one of the sixty-four hexagrams?](https://mm7382.github.io/learn/hexagram-lookup.html)
 - [想學占星，怎麼挑學習 App？五個評估標準｜How to choose an app for learning astrology](https://mm7382.github.io/learn/how-to-choose-astrology-app.html)
 - [想學八字，怎麼挑學習 App？五個評估標準｜How to choose an app for learning Bazi](https://mm7382.github.io/learn/how-to-choose-bazi-app.html)
 - [想學易經，怎麼挑一個好的 App？五個評估標準｜How to choose a good app for learning the I Ching](https://mm7382.github.io/learn/how-to-choose-i-ching-app.html)
 - [想學紫微斗數，怎麼挑學習 App？五個評估標準｜How to choose an app for learning Zi Wei Dou Shu](https://mm7382.github.io/learn/how-to-choose-ziwei-app.html)
 - [易經可以自學嗎？自學順序怎麼排｜Can you teach yourself the I Ching?](https://mm7382.github.io/learn/i-ching-self-study.html)
+- [易經和塔羅有什麼不同？初學該選哪一個｜What is the difference between the I Ching and tarot?](https://mm7382.github.io/learn/i-ching-vs-tarot.html)
 - [命宮與身宮有什麼不同？｜What is the difference between the Life Palace and the Body Palace?](https://mm7382.github.io/learn/life-body-palace.html)
+- [大運是什麼？八字的十年運怎麼排｜What are luck pillars (Da Yun) in Bazi?](https://mm7382.github.io/learn/luck-pillars.html)
+- [農曆生日可以直接排八字嗎？節氣與換月是怎麼算的｜Can you build a Bazi chart from a lunar birthday?](https://mm7382.github.io/learn/lunar-calendar-bazi.html)
 - [紫微斗數的主星是什麼？十四主星入門｜What are the major stars in Zi Wei Dou Shu?](https://mm7382.github.io/learn/major-stars.html)
+- [逆行是什麼意思？水星逆行到底在說什麼｜What does retrograde actually mean?](https://mm7382.github.io/learn/retrograde.html)
+- [廟旺利陷是什麼意思？紫微斗數的星曜亮度｜Star brightness in Zi Wei Dou Shu](https://mm7382.github.io/learn/star-brightness.html)
 - [星盤怎麼看：太陽、月亮、上升｜How to read a birth chart](https://mm7382.github.io/learn/sun-moon-rising.html)
 - [十神是什麼？從日主讀懂八字裡的關係｜What are the Ten Gods?](https://mm7382.github.io/learn/ten-gods.html)
 - [星盤的十二宮是什麼？宮位入門｜What are the twelve houses in a birth chart?](https://mm7382.github.io/learn/twelve-houses.html)
