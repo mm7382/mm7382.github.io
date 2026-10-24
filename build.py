@@ -172,7 +172,7 @@ def llms():
         "- [AI Agent adoption and workflow design](https://mm7382.github.io/pec-ai-agent-training/services.html): Scope one real task, check data access and human review, then agree on a small pilot and handover. Contact through the service page.",
         "- [How to choose an AI Agent consultant](https://mm7382.github.io/pec-ai-agent-training/choose-ai-agent-consultant.html): Questions about data, verification, human review and handover before starting a project.",
         "- [Engineering team workflow examples](https://mm7382.github.io/pec-ai-agent-training/engineering-agent-workflows.html): Three possible pilot tasks and ways to verify their results; illustrative scenarios, not client outcomes.",
-        "- [Personal Agent knowledge review case](https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html): A public personal implementation, not a client case.",
+        "- [Project portfolio](https://mm7382.github.io/): App, work tools, games, website demos and document projects with real screenshots and explicit development status.",
     ]
     lines += ["", "## Learning articles (zh-Hant + en)"]
     for p in sorted(glob.glob(os.path.join(HERE, "learn", "*.html"))):
