@@ -16,6 +16,7 @@
 
 ## Personal site
 - [Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/): Michael's AI agent learning hub — tools, tutorials, training materials, engineering journal (zh-Hant).
+- [Work with Michael — AI agent adoption projects](https://mm7382.github.io/pec-ai-agent-training/services.html): Michael takes on freelance AI agent adoption and workflow automation projects: scoping which work can be automated, tool and model selection, turning one-off attempts into repeatable agents and skills, plus acceptance checks and handover notes. Free 30-minute first conversation, then a small scoped pilot. Contact via LinkedIn. Not medical, legal or investment advice.
 
 ## Learning articles (zh-Hant + en)
 - [相位是什麼？合相、對分、三分、四分、六分怎麼看｜What are aspects in a birth chart?](https://mm7382.github.io/learn/aspects.html)
