@@ -60,3 +60,4 @@
 - [排得好｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
 - [Sugar Boom｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
 - [易見｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
+- [中文閱讀測驗文件範本](https://mm7382.github.io/work/reading-template.html): Existing Word student worksheet template preview. Blank template, not a completed exam or proven teaching outcome.
