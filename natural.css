@@ -4,3 +4,13 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 /* Keep the natural photograph quiet; avoid text crossing the leaves. */
 .scene-note{display:none}
+
+/* In-progress work is deliberately separate from the live apps above. */
+.more-projects{max-width:1100px;margin:82px auto 0;padding:0 40px}
+.project-list{border-top:1px solid var(--line)}
+.project-item{display:grid;grid-template-columns:64px minmax(0,1fr);gap:22px;padding:27px 0 31px;border-bottom:1px solid var(--line)}
+.project-number{padding-top:8px;color:#617568;font:600 13px/1.4 Arial,sans-serif;letter-spacing:.12em}
+.project-type{margin:0 0 7px;color:#526859;font:600 12px/1.5 Arial,sans-serif;letter-spacing:.1em}
+.project-item h3{margin:0 0 9px;color:var(--ink);font:500 clamp(25px,3vw,36px)/1.25 'Songti TC','Noto Serif TC',serif}
+.project-item p:last-child{max-width:680px;margin:0;color:#485a4c;font-size:16px;line-height:1.85}
+@media(max-width:700px){.more-projects{margin:64px auto 0;padding:0 24px}.project-item{grid-template-columns:36px minmax(0,1fr);gap:12px;padding:23px 0}}
