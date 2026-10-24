@@ -15,8 +15,11 @@
 - [時來－星座 Shilai Astrology](https://mm7382.github.io/astrology/): Shilai Astrology: iPhone app teaching Western astrology in plain language. 3 free lessons (what a chart is; Sun/Moon/Ascendant; modalities and elements of the signs). Placidus chart; without a birth time it shows only what is certain and leaves Ascendant/houses blank. Today's sky with the triggering transit shown. Public-domain sources (Ptolemy, Lilly, NASA). No account, offline. In development.
 
 ## Personal site
-- [Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/): Michael's AI agent learning hub — tools, tutorials, training materials, engineering journal (zh-Hant).
-- [Work with Michael — AI agent adoption projects](https://mm7382.github.io/pec-ai-agent-training/services.html): Michael takes on freelance AI agent adoption and workflow automation projects: scoping which work can be automated, tool and model selection, turning one-off attempts into repeatable agents and skills, plus acceptance checks and handover notes. Free 30-minute first conversation, then a small scoped pilot. Contact via LinkedIn. Not medical, legal or investment advice.
+- [Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/): AI agent learning hub with public methods, tutorials and engineering notes (zh-Hant).
+- [AI Agent adoption and workflow design](https://mm7382.github.io/pec-ai-agent-training/services.html): Scope one real task, check data access and human review, then agree on a small pilot and handover. Contact through the service page.
+- [How to choose an AI Agent consultant](https://mm7382.github.io/pec-ai-agent-training/choose-ai-agent-consultant.html): Questions about data, verification, human review and handover before starting a project.
+- [Engineering team workflow examples](https://mm7382.github.io/pec-ai-agent-training/engineering-agent-workflows.html): Three possible pilot tasks and ways to verify their results; illustrative scenarios, not client outcomes.
+- [Personal Agent knowledge review case](https://mm7382.github.io/pec-ai-agent-training/case-study-agent-memory.html): A public personal implementation, not a client case.
 
 ## Learning articles (zh-Hant + en)
 - [相位是什麼？合相、對分、三分、四分、六分怎麼看｜What are aspects in a birth chart?](https://mm7382.github.io/learn/aspects.html)
