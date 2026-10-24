@@ -174,6 +174,10 @@ def llms():
         "- [Engineering team workflow examples](https://mm7382.github.io/pec-ai-agent-training/engineering-agent-workflows.html): Three possible pilot tasks and ways to verify their results; illustrative scenarios, not client outcomes.",
         "- [Project portfolio](https://mm7382.github.io/): App, work tools, games, website demos and document projects with real screenshots and explicit development status.",
     ]
+    lines += ["", "## Portfolio case pages"]
+    for p in sorted(glob.glob(os.path.join(HERE, "work", "*.html"))):
+        title = re.search(r"<title>([^<]*)</title>", open(p).read()).group(1)
+        lines.append(f"- [{title}]({BASE}/work/{os.path.basename(p)}): Actual work, images and current availability.")
     lines += ["", "## Learning articles (zh-Hant + en)"]
     for p in sorted(glob.glob(os.path.join(HERE, "learn", "*.html"))):
         if p.endswith("index.html"):
@@ -194,7 +198,8 @@ def sitemap():
     for slug in ['ziwei-web', 'astrology-web']:
         urls += [BASE + f'/{slug}/', BASE + f'/{slug}/llms.txt']
         urls += [BASE + '/' + str(p.parent.relative_to(__import__('pathlib').Path(HERE))) + '/' for p in sorted(__import__('pathlib').Path(HERE).glob(f'{slug}/learn/**/index.html')) if '/review/' not in str(p)]
-    body = "".join(f"  <url><loc>{u}</loc><lastmod>{"2026-10-23" if "-web/" in u else "2026-10-15"}</lastmod></url>\n" for u in urls)
+    urls += [f"{BASE}/work/{os.path.basename(p)}" for p in sorted(glob.glob(os.path.join(HERE, "work", "*.html")))]
+    body = "".join(f"  <url><loc>{u}</loc><lastmod>{"2026-10-25" if u == BASE + "/" or "/work/" in u else ("2026-10-23" if "-web/" in u else "2026-10-15")}</lastmod></url>\n" for u in urls)
     with open(os.path.join(HERE, "sitemap.xml"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + body + "</urlset>\n")
 

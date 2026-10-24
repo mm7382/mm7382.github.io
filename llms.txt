@@ -52,3 +52,11 @@
 - [易經初學者怎麼開始：從陰陽、八卦到六十四卦｜How to start learning the I Ching](https://mm7382.github.io/learn/yijian-beginner.html)
 - [紫微斗數入門：十二宮與命宮｜Zi Wei Dou Shu for beginners](https://mm7382.github.io/learn/ziwei-twelve-palaces.html)
 - [紫微斗數和八字有什麼不同？初學該從哪個開始｜Zi Wei Dou Shu vs Bazi](https://mm7382.github.io/learn/ziwei-vs-bazi.html)
+
+## Portfolio case pages
+- [淺水網頁 Demo｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/diving.html): Actual work, images and current availability.
+- [教學測驗與文件套件｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/document-kit.html): Actual work, images and current availability.
+- [LINE 貼圖角色設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/lion-character.html): Actual work, images and current availability.
+- [排得好｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
+- [Sugar Boom｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
+- [易見｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
