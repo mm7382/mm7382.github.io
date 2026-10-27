@@ -21,17 +21,6 @@
 - [Engineering team workflow examples](https://mm7382.github.io/pec-ai-agent-training/engineering-agent-workflows.html): Three possible pilot tasks and ways to verify their results; illustrative scenarios, not client outcomes.
 - [Project portfolio](https://mm7382.github.io/): App, work tools, games, website demos and document projects with real screenshots and explicit development status.
 
-## Portfolio case pages
-- [古裝照片 AI 遊戲｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/costume-photo.html): Actual work, images and current availability.
-- [淺水網頁 Demo｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/diving.html): Actual work, images and current availability.
-- [教學測驗與文件套件｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/document-kit.html): Actual work, images and current availability.
-- [LINE 貼圖角色設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/lion-character.html): Actual work, images and current availability.
-- [中文閱讀測驗文件範本｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/reading-template.html): Actual work, images and current availability.
-- [排得好｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
-- [Sugar Boom｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
-- [情境主視覺設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/visual-scenes.html): Actual work, images and current availability.
-- [易見｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
-
 ## Learning articles (zh-Hant + en)
 - [相位是什麼？合相、對分、三分、四分、六分怎麼看｜What are aspects in a birth chart?](https://mm7382.github.io/learn/aspects.html)
 - [八字入門：四柱、天干地支與五行怎麼看｜Bazi for beginners](https://mm7382.github.io/learn/bazi-four-pillars.html)
@@ -63,3 +52,14 @@
 - [易經初學者怎麼開始：從陰陽、八卦到六十四卦｜How to start learning the I Ching](https://mm7382.github.io/learn/yijian-beginner.html)
 - [紫微斗數入門：十二宮與命宮｜Zi Wei Dou Shu for beginners](https://mm7382.github.io/learn/ziwei-twelve-palaces.html)
 - [紫微斗數和八字有什麼不同？初學該從哪個開始｜Zi Wei Dou Shu vs Bazi](https://mm7382.github.io/learn/ziwei-vs-bazi.html)
+
+## Portfolio case pages
+- [淺水網頁 Demo｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/diving.html): Actual work, images and current availability.
+- [教學測驗與文件套件｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/document-kit.html): Actual work, images and current availability.
+- [LINE 貼圖角色設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/lion-character.html): Actual work, images and current availability.
+- [排得好｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
+- [Sugar Boom｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
+- [易見｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
+- [中文閱讀測驗文件範本](https://mm7382.github.io/work/reading-template.html): Existing Word student worksheet template preview. Blank template, not a completed exam or proven teaching outcome.
+- [情境主視覺設計](https://mm7382.github.io/work/visual-scenes.html): Three completed AI-generated scene visuals for product, education and workspace themes. Design concepts, not real photographs or client outcome evidence.
+- [古裝照片 AI 遊戲](https://mm7382.github.io/work/costume-photo.html): Mac test build for an interactive costume photo experience, with ten garment-only catalogue images. No participant portraits published; no public download.
