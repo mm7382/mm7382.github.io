@@ -157,7 +157,7 @@ ASTRO = {
 
 YIJIAN_LINK = {"slug": "yijian", "name": "易見", "en": "YiJian", "icon": "/yijian/icon.png",
                "tag": "從零學易經，八堂課讀懂六十四卦", "tag_en": "Learn the I Ching from zero",
-               "llms": "YiJian (易見): iPhone course teaching the I Ching from zero. 8 interactive beginner lessons (3 free), guided reading of all 64 hexagrams with diagrams and quizzes, spaced review and mistakes notebook. Casting is a practice feature for reflection. Traditional Chinese and English. No account. In App Store review. Details: https://mm7382.github.io/yijian/llms.txt"}
+               "llms": "YiJian (易見): iPhone course teaching the I Ching from zero. 8 interactive beginner lessons (3 free), guided reading of all 64 hexagrams with diagrams and quizzes, spaced review and mistakes notebook. Casting is a practice feature for reflection. Traditional Chinese and English. No account. Available on the App Store: https://apps.apple.com/tw/app/id6816324095 Details: https://mm7382.github.io/yijian/llms.txt"}
 
 BANNED = {
     "bazi": ["吉", "凶", "宜", "忌", "分數", "準確率", "運勢指數", "老師推薦", "命中率", "機率", "好日子", "壞日子", "會成功", "會順利"],

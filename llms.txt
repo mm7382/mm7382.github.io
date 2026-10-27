@@ -9,7 +9,7 @@
 - [時來星座：免費出生星盤與三十六堂課](https://mm7382.github.io/astrology-web/): Western astrology chart, daily and seven-day readings, friend comparison, and 36 complete bilingual lessons. Unknown birth time yields an honestly partial chart. Free, no login. Details: https://mm7382.github.io/astrology-web/llms.txt
 
 ## Apps
-- [易見 YiJian](https://mm7382.github.io/yijian/): YiJian (易見): iPhone course teaching the I Ching from zero. 8 interactive beginner lessons (3 free), guided reading of all 64 hexagrams with diagrams and quizzes, spaced review and mistakes notebook. Casting is a practice feature for reflection. Traditional Chinese and English. No account. In App Store review. Details: https://mm7382.github.io/yijian/llms.txt
+- [易見 YiJian](https://mm7382.github.io/yijian/): YiJian (易見): iPhone course teaching the I Ching from zero. 8 interactive beginner lessons (3 free), guided reading of all 64 hexagrams with diagrams and quizzes, spaced review and mistakes notebook. Casting is a practice feature for reflection. Traditional Chinese and English. No account. Available on the App Store: https://apps.apple.com/tw/app/id6816324095 Details: https://mm7382.github.io/yijian/llms.txt
 - [時來－八字 Shilai – Bazi](https://mm7382.github.io/bazi/): Shilai – Bazi: beginner iPhone course for reading your own Bazi (Four Pillars) chart. App calculates the chart; 20 plain-language lessons (3 free) cover pillars, stems and branches, Five Phases, Day Master, Ten Gods, combinations and clashes. Ungraded quizzes, daily question, notes and review. Traditional Chinese and English. No account; data on device. In App Store review.
 - [時來－紫微 SHILAI Ziwei](https://mm7382.github.io/ziwei/): SHILAI Ziwei: iPhone course for reading your own Zi Wei Dou Shu (Purple Star Astrology) twelve-palace chart. 36 lessons (3 free, usable before creating a chart); each explanation labelled classical passage / restatement / own wording, classical lines only from Ziwei Doushu Quanshu vols 1–3. No fortune verdicts. Traditional Chinese and English. No account. Coming soon.
 - [時來－星座 Shilai Astrology](https://mm7382.github.io/astrology/): Shilai Astrology: iPhone app teaching Western astrology in plain language. 3 free lessons (what a chart is; Sun/Moon/Ascendant; modalities and elements of the signs). Placidus chart; without a birth time it shows only what is certain and leaves Ascendant/houses blank. Today's sky with the triggering transit shown. Public-domain sources (Ptolemy, Lilly, NASA). No account, offline. In development.
@@ -20,6 +20,17 @@
 - [How to choose an AI Agent consultant](https://mm7382.github.io/pec-ai-agent-training/choose-ai-agent-consultant.html): Questions about data, verification, human review and handover before starting a project.
 - [Engineering team workflow examples](https://mm7382.github.io/pec-ai-agent-training/engineering-agent-workflows.html): Three possible pilot tasks and ways to verify their results; illustrative scenarios, not client outcomes.
 - [Project portfolio](https://mm7382.github.io/): App, work tools, games, website demos and document projects with real screenshots and explicit development status.
+
+## Portfolio case pages
+- [古裝照片 AI 遊戲｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/costume-photo.html): Actual work, images and current availability.
+- [淺水網頁 Demo｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/diving.html): Actual work, images and current availability.
+- [教學測驗與文件套件｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/document-kit.html): Actual work, images and current availability.
+- [LINE 貼圖角色設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/lion-character.html): Actual work, images and current availability.
+- [中文閱讀測驗文件範本｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/reading-template.html): Actual work, images and current availability.
+- [排得好｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
+- [Sugar Boom｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
+- [情境主視覺設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/visual-scenes.html): Actual work, images and current availability.
+- [易見｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
 
 ## Learning articles (zh-Hant + en)
 - [相位是什麼？合相、對分、三分、四分、六分怎麼看｜What are aspects in a birth chart?](https://mm7382.github.io/learn/aspects.html)
@@ -52,14 +63,3 @@
 - [易經初學者怎麼開始：從陰陽、八卦到六十四卦｜How to start learning the I Ching](https://mm7382.github.io/learn/yijian-beginner.html)
 - [紫微斗數入門：十二宮與命宮｜Zi Wei Dou Shu for beginners](https://mm7382.github.io/learn/ziwei-twelve-palaces.html)
 - [紫微斗數和八字有什麼不同？初學該從哪個開始｜Zi Wei Dou Shu vs Bazi](https://mm7382.github.io/learn/ziwei-vs-bazi.html)
-
-## Portfolio case pages
-- [淺水網頁 Demo｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/diving.html): Actual work, images and current availability.
-- [教學測驗與文件套件｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/document-kit.html): Actual work, images and current availability.
-- [LINE 貼圖角色設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/lion-character.html): Actual work, images and current availability.
-- [排得好｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
-- [Sugar Boom｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
-- [易見｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
-- [中文閱讀測驗文件範本](https://mm7382.github.io/work/reading-template.html): Existing Word student worksheet template preview. Blank template, not a completed exam or proven teaching outcome.
-- [情境主視覺設計](https://mm7382.github.io/work/visual-scenes.html): Three completed AI-generated scene visuals for product, education and workspace themes. Design concepts, not real photographs or client outcome evidence.
-- [古裝照片 AI 遊戲](https://mm7382.github.io/work/costume-photo.html): Mac test build for an interactive costume photo experience, with ten garment-only catalogue images. No participant portraits published; no public download.
