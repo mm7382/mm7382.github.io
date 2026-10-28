@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">自由潛水網站版面示意</title>
+  <desc id="desc">以海洋色系展示課程介紹與聯絡入口的網頁版面示意，不含品牌與人物。</desc>
+  <rect width="1200" height="750" fill="#e8eff0"/>
+  <rect x="54" y="48" width="1092" height="654" rx="18" fill="#fff"/>
+  <rect x="54" y="48" width="1092" height="72" rx="18" fill="#f8faf9"/>
+  <circle cx="91" cy="84" r="7" fill="#9bb1b1"/><circle cx="115" cy="84" r="7" fill="#9bb1b1"/><circle cx="139" cy="84" r="7" fill="#9bb1b1"/>
+  <rect x="54" y="120" width="1092" height="582" fill="#123f56"/>
+  <path d="M54 450 C250 370 380 520 600 430 S950 350 1146 430 V702 H54Z" fill="#1c5b70"/>
+  <path d="M54 530 C260 450 410 610 650 525 S950 465 1146 520 V702 H54Z" fill="#287487"/>
+  <text x="118" y="225" fill="#a8d5d8" font-family="Arial,sans-serif" font-size="23" letter-spacing="5">DIVING WEBSITE DEMO</text>
+  <text x="118" y="312" fill="#fff" font-family="Arial,sans-serif" font-size="64" font-weight="700">Explore the ocean</text>
+  <text x="118" y="367" fill="#d8e8e9" font-family="Arial,sans-serif" font-size="25">Course information and enquiry</text>
+  <rect x="118" y="410" width="195" height="57" rx="6" fill="#f8faf9"/>
+  <text x="150" y="446" fill="#123f56" font-family="Arial,sans-serif" font-size="19" font-weight="700">VIEW COURSES</text>
+  <text x="118" y="656" fill="#d1e3e4" font-family="Arial,sans-serif" font-size="17">ILLUSTRATIVE LAYOUT · NOT A LIVE BOOKING SITE</text>
+</svg>
