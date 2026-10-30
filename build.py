@@ -38,6 +38,7 @@ def head(title, desc, url, jsonld, image):
 <script type="application/ld+json">
 {json.dumps(jsonld, ensure_ascii=False, indent=1)}
 </script>
+<script defer src="/assets/site-analytics.js?v=20261030"></script>
 </head>
 <body>
 <main class="wrap">
