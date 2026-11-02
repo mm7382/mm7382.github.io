@@ -8,6 +8,9 @@ const names={sun:'太陽',moon:'月亮',mercury:'水星',venus:'金星',mars:'�
 const signNames={aries:'牡羊',taurus:'金牛',gemini:'雙子',cancer:'巨蟹',leo:'獅子',virgo:'處女',libra:'天秤',scorpio:'天蠍',sagittarius:'射手',capricorn:'摩羯',aquarius:'水瓶',pisces:'雙魚'};
 const kindNames={conjunction:'合相',sextile:'六分相',square:'四分相',trine:'三分相',opposition:'對分相'};
 let draft=null,report=null;
+const english=()=>document.documentElement.lang==='en';
+const tr=s=>window.SiteLanguage?.translate(s)??s;
+const preserve=el=>{el.dataset.userContent='';return el;};
 const node=(tag,text,className)=>{const element=document.createElement(tag);element.textContent=text;if(className)element.className=className;return element;};
 function status(message){$('#profile-status').textContent=message;}
 function session(chart,id){
@@ -18,13 +21,14 @@ function session(chart,id){
 }
 function row(record,kind,selected){
   const item=node('div','',selected?'profile-item selected':'profile-item');
-  const pick=node('button',`${record.name} · ${record.chart.completeness==='complete'?'完整盤':'部分盤'}`);
+  const pick=node('button','');
+  pick.append(preserve(node('span',record.name)),node('span',` · ${record.chart.completeness==='complete'?'完整盤':'部分盤'}`));
   pick.type='button';pick.setAttribute('aria-pressed',String(selected));
   pick.addEventListener('click',()=>{
     try{manager.select(kind,record.id);session(record.chart,record.id);showSavedChart(record);renderAll();}
     catch(error){status(error.message);}
   });
-  const remove=node('button','移除','remove');remove.type='button';remove.setAttribute('aria-label',`移除 ${record.name}`);
+  const remove=node('button',english()?'Remove':'移除','remove');remove.type='button';remove.setAttribute('aria-label',english()?`Remove ${record.name}`:`移除 ${record.name}`);preserve(remove);
   remove.addEventListener('click',()=>{
     if(!window.confirm(`確定移除「${record.name}」？這張星盤無法由網站復原。`))return;
     try{
@@ -44,27 +48,27 @@ function renderList(kind,selector,selectedId){
 }
 function aspectLabel(aspect){
   const orb=aspect.minimumOrb===aspect.maximumOrb?`${aspect.minimumOrb.toFixed(1)}°`:`${aspect.minimumOrb.toFixed(1)}–${aspect.maximumOrb.toFixed(1)}°`;
-  return `${names[aspect.first]} × ${names[aspect.second]} · ${kindNames[aspect.kind]} · ${orb}${aspect.unconfirmed?' · 待確認':''}`;
+  return `${tr(names[aspect.first])} × ${tr(names[aspect.second])} · ${tr(kindNames[aspect.kind])} · ${orb}${aspect.unconfirmed?(english()?' · Unconfirmed':' · 待確認'):''}`;
 }
 function renderComparison(){
-  const root=$('#comparison-result');root.replaceChildren();report=null;
+  const root=preserve($('#comparison-result'));preserve($('#share-text'));root.replaceChildren();report=null;
   const first=manager.active(),second=manager.friend();
-  if(!first||!second){root.textContent='儲存並選擇一張自己的盤和一張朋友的盤後，這裡會顯示對照。';$('#share-text').textContent='';return;}
+  if(!first||!second){root.textContent=tr('儲存並選擇一張自己的盤和一張朋友的盤後，這裡會顯示對照。');$('#share-text').textContent='';return;}
   try{report=compareCharts(first.chart,second.chart);}
-  catch(error){root.textContent=error.message;$('#share-text').textContent='';return;}
+  catch(error){root.textContent=tr(error.message);$('#share-text').textContent='';return;}
   root.append(node('p',`${first.name} × ${second.name}`,'pair-name'));
-  if(report.hasUnknownTime)root.append(node('p','至少有一方不知道出生時間：上升與宮位疊合不顯示；相位只作可能線索，不能當成精確出生相位。','notice'));
+  if(report.hasUnknownTime)root.append(node('p',tr('至少有一方不知道出生時間：上升與宮位疊合不顯示；相位只作可能線索，不能當成精確出生相位。'),'notice'));
   const points=node('div','','comparison-points');
   for(const item of report.comparisons){
-    const box=node('div','','comparison-point');box.append(node('small',names[item.point]),node('strong',`${item.firstSigns.map(x=>signNames[x]).join('／')} × ${item.secondSigns.map(x=>signNames[x]).join('／')}`));points.append(box);
+    const box=node('div','','comparison-point');box.append(node('small',tr(names[item.point])),node('strong',`${item.firstSigns.map(x=>tr(signNames[x])).join('／')} × ${item.secondSigns.map(x=>tr(signNames[x])).join('／')}`));points.append(box);
   }
-  root.append(points,node('h4','最接近的三個個人行星相位'));
+  root.append(points,node('h4',tr('最接近的三個個人行星相位')));
   const basic=node('ol','','comparison-aspects');for(const aspect of report.basicAspects)basic.append(node('li',aspectLabel(aspect)));root.append(basic);
-  if(!report.basicAspects.length)root.append(node('p','目前沒有落在原 App 容許度內的個人行星相位。'));
-  if(report.remainingAspects.length){const detail=document.createElement('details');detail.append(node('summary',`查看其餘 ${report.remainingAspects.length} 個相位`));const list=node('ol','','comparison-aspects');for(const aspect of report.remainingAspects)list.append(node('li',aspectLabel(aspect)));detail.append(list);root.append(detail);}
-  if(report.houseOverlays.length){const detail=document.createElement('details');detail.append(node('summary','查看雙向宮位疊合'));const list=node('ul','','overlays');for(const item of report.houseOverlays)list.append(node('li',`${item.firstInSecond?first.name:second.name} 的${names[item.body]}落在 ${item.firstInSecond?second.name:first.name} 的第 ${item.house} 宮`));detail.append(list);root.append(detail);}
-  const pointLines=report.comparisons.filter(x=>x.point!=='ascendant').map(x=>`${names[x.point]}：${x.firstSigns.map(s=>signNames[s]).join('／')} × ${x.secondSigns.map(s=>signNames[s]).join('／')}`);
-  $('#share-text').textContent=[`${first.name} × ${second.name}｜星盤對照`,...pointLines,...report.basicAspects.map(aspectLabel),report.hasUnknownTime?'出生時間不完整；相位待確認。':'', '這只是星盤位置與相位的對照，不保證關係結果。'].filter(Boolean).join('\n');
+  if(!report.basicAspects.length)root.append(node('p',tr('目前沒有落在原 App 容許度內的個人行星相位。')));
+  if(report.remainingAspects.length){const detail=document.createElement('details');detail.append(node('summary',english()?`View ${report.remainingAspects.length} other aspects`:`查看其餘 ${report.remainingAspects.length} 個相位`));const list=node('ol','','comparison-aspects');for(const aspect of report.remainingAspects)list.append(node('li',aspectLabel(aspect)));detail.append(list);root.append(detail);}
+  if(report.houseOverlays.length){const detail=document.createElement('details');detail.append(node('summary',tr('查看雙向宮位疊合')));const list=node('ul','','overlays');for(const item of report.houseOverlays)list.append(node('li',english()?`${item.firstInSecond?first.name:second.name}'s ${tr(names[item.body])} falls in house ${item.house} of ${item.firstInSecond?second.name:first.name}`:`${item.firstInSecond?first.name:second.name} 的${names[item.body]}落在 ${item.firstInSecond?second.name:first.name} 的第 ${item.house} 宮`));detail.append(list);root.append(detail);}
+  const pointLines=report.comparisons.filter(x=>x.point!=='ascendant').map(x=>`${tr(names[x.point])}：${x.firstSigns.map(s=>tr(signNames[s])).join('／')} × ${x.secondSigns.map(s=>tr(signNames[s])).join('／')}`);
+  $('#share-text').textContent=[`${first.name} × ${second.name}｜${english()?'Chart comparison':'星盤對照'}`,...pointLines,...report.basicAspects.map(aspectLabel),report.hasUnknownTime?tr('出生時間不完整；相位待確認。'):'', tr('這只是星盤位置與相位的對照，不保證關係結果。')].filter(Boolean).join('\n');
 }
 function renderAll(){
   renderList('profiles','#self-list',manager.state.activeId);
@@ -98,3 +102,5 @@ $('#clear-astrology').addEventListener('click',()=>{
 if(manager.corrupt)status('原有星盤資料無法讀取，為避免覆蓋，儲存功能已暫停。');
 else if(manager.unavailable)status('瀏覽器儲存暫時不可用；目前可以排盤，但無法保存人物。');
 renderAll();
+
+document.addEventListener('site-language-change',renderAll);

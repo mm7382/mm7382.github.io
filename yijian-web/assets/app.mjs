@@ -10,7 +10,8 @@ const esc = (v) =>
         c
       ],
   );
-const zh = (v) => (typeof v === "object" ? (v?.["zh-Hant"] ?? "") : (v ?? ""));
+const isEnglish = () => document.documentElement.lang === "en";
+const zh = (v) => (typeof v === "object" ? (v?.[isEnglish() ? "en" : "zh-Hant"] ?? v?.["zh-Hant"] ?? "") : (v ?? ""));
 const paragraphs = (v) =>
   String(v ?? "")
     .split("\n\n")
@@ -19,7 +20,8 @@ const paragraphs = (v) =>
     .join("");
 const store = createStore();
 const cached = new Map();
-const data = (name) => {
+const data = (name, localized = false) => {
+  if(name === "hexagrams" && localized && isEnglish()) name = "hexagrams-en";
   if (!cached.has(name))
     cached.set(
       name,
@@ -81,13 +83,17 @@ function source(h) {
 function lineDetail(l, title) {
   return `<section><h3>${title}：${esc(l.original)}</h3>${paragraphs(l.ancientContext)}${paragraphs(l.plainLanguage)}${paragraphs(l.lifeTranslation)}${paragraphs(l.reflectionPrompt)}</section>`;
 }
+let lastResult = null;
 async function showResult(values, topic, save = false) {
+  lastResult = {values:[...values],topic};
+  const englishAtStart=isEnglish();
   const result = $("#result");
   try {
     const [corpus, guidance] = await Promise.all([
-      data("hexagrams"),
-      data("topic-guidance"),
+      data("hexagrams", true),
+      isEnglish() ? Promise.resolve(null) : data("topic-guidance"),
     ]);
+    if(englishAtStart!==isEnglish())return showResult(values,topic,save);
     const r = cast(values, corpus);
     const get = (n) => corpus.hexagrams.find((h) => h.number === n);
     const base = get(r.hexagramNumber),
@@ -100,10 +106,10 @@ async function showResult(values, topic, save = false) {
           : primary.useSix
         : null;
     const entry =
-      guidance.hexagrams[String(primary.number)]?.topics?.[topic]?.[
+      guidance?.hexagrams[String(primary.number)]?.topics?.[topic]?.[
         topicCase(r.reading)
       ];
-    let body = `<section><p class="eyebrow">本次解讀</p><h2>${esc(base.name)}${changed ? " → " + esc(changed.name) : "・無動爻"}</h2><div class="split"><div><h3>本卦</h3>${diagram(base.linesBinary, r.movingLineIndices)}${hexLink(base)}</div>${changed ? `<div><h3>之卦</h3>${diagram(changed.linesBinary)}${hexLink(changed)}</div>` : ""}</div><p>由初爻到上爻：${values.join("、")}。動爻：${r.movingLineIndices.length ? r.movingLineIndices.map((i) => `第 ${i + 1} 爻`).join("、") : "無"}。</p><p class="notice">${esc(r.reading.ruleName)}</p><h3>主讀：${esc(primary.name)}</h3>${paragraphs(primary.coreMessage)}${paragraphs(primary.trendReason)}</section>`;
+    let body = `<section><p class="eyebrow">本次解讀</p><h2>${esc(base.name)}${changed ? " → " + esc(changed.name) : (isEnglish()?" · No changing lines":"・無動爻")}</h2><div class="split"><div><h3>本卦</h3>${diagram(base.linesBinary, r.movingLineIndices)}${hexLink(base)}</div>${changed ? `<div><h3>之卦</h3>${diagram(changed.linesBinary)}${hexLink(changed)}</div>` : ""}</div><p>${isEnglish()?"Bottom line to top: ":"由初爻到上爻："}${values.join(isEnglish()?", ":"、")}${isEnglish()?". Changing lines: ":"。動爻："}${r.movingLineIndices.length ? r.movingLineIndices.map((i) => isEnglish()?`Line ${i + 1}`:`第 ${i + 1} 爻`).join(isEnglish()?", ":"、") : (isEnglish()?"None":"無")}.</p><p class="notice">${esc(r.reading.ruleName)}</p><h3>${isEnglish()?"Primary reading: ":"主讀："}${esc(primary.name)}</h3>${paragraphs(primary.coreMessage)}${paragraphs(primary.trendReason)}</section>`;
     if (special)
       body += `<section><h3>${esc(special.original)}</h3>${paragraphs(special.plainLanguage)}${paragraphs(special.lifeTranslation)}</section>`;
     else if (r.reading.indices.length)
@@ -111,22 +117,22 @@ async function showResult(values, topic, save = false) {
         .map((i, n) =>
           lineDetail(
             primary.lines.find((l) => l.index === i),
-            n === 0 ? "主讀爻" : "次讀爻",
+            n === 0 ? (isEnglish()?"Primary line":"主讀爻") : (isEnglish()?"Secondary line":"次讀爻"),
           ),
         )
         .join("");
     else
       body += `<section><h3>卦辭與白話</h3>${paragraphs(primary.originalJudgment)}${paragraphs(primary.ancientContext)}${paragraphs(primary.plainLanguage)}${paragraphs(primary.judgmentGuidance)}</section>`;
-    body += `<section><h3>所選主題的反思</h3>${entry ? "<h4>現在的狀況</h4>" + paragraphs(entry.situation) + "<h4>建議怎麼做</h4>" + paragraphs(entry.advice) + "<h4>別做什麼</h4>" + paragraphs(entry.avoid) : paragraphs(primary.topicRules[topic] ?? primary.topicRules.general)}</section>`;
+    body += `<section><h3>所選主題的反思</h3>${isEnglish()?"<p class=notice>The English reflection uses the app’s existing English topic notes.</p>":""}${entry ? "<h4>現在的狀況</h4>" + paragraphs(entry.situation) + "<h4>建議怎麼做</h4>" + paragraphs(entry.advice) + "<h4>別做什麼</h4>" + paragraphs(entry.avoid) : paragraphs(primary.topicRules[topic] ?? primary.topicRules.general)}</section>`;
     if (changed)
-      body += `<section><h3>${r.reading.secondaryHexagramNumber ? "次讀卦辭" : "之卦補充"}：${esc(changed.name)}</h3>${paragraphs(changed.originalJudgment)}${paragraphs(changed.plainLanguage)}${hexLink(changed)}</section>`;
-    body += `<details><summary>查看本卦全部六爻</summary>${base.lines.map((l) => lineDetail(l, "第 " + (l.index + 1) + " 爻")).join("")}</details>${source(primary)}`;
+      body += `<section><h3>${r.reading.secondaryHexagramNumber ? (isEnglish()?"Secondary judgment":"次讀卦辭") : (isEnglish()?"Resulting hexagram notes":"之卦補充")}：${esc(changed.name)}</h3>${paragraphs(changed.originalJudgment)}${paragraphs(changed.plainLanguage)}${hexLink(changed)}</section>`;
+    body += `<details><summary>查看本卦全部六爻</summary>${base.lines.map((l) => lineDetail(l, isEnglish()?"Line "+(l.index+1):"第 " + (l.index + 1) + " 爻")).join("")}</details>${source(primary)}`;
     if (save) {
       const ok = store.add({ values: [...values], topic });
       body += `<p class="notice">${ok ? "已保存在目前瀏覽器。最多保留最近 100 筆，可到「我的紀錄」查看或清除。" : esc(store.error)}</p>`;
     }
     result.innerHTML = body;
-    result.focus();
+    if(save) result.focus();
     return r;
   } catch (e) {
     if (result) result.innerHTML = `<p role="alert">${esc(e.message)}</p>`;
@@ -365,7 +371,7 @@ async function renderRecords() {
   try {
     const [lessons, corpus] = await Promise.all([
       data("lessons"),
-      data("hexagrams"),
+      data("hexagrams", true),
     ]);
     $("#saved-progress").innerHTML = saved.completed.length
       ? "<ul>" +
@@ -383,7 +389,7 @@ async function renderRecords() {
           .map((x, i) => {
             const r = cast(x.values, corpus),
               h = corpus.hexagrams.find((h) => h.number === r.hexagramNumber);
-            return `<div class="history-item"><p>${esc(new Date(x.date).toLocaleString("zh-TW"))} · ${esc(h.name)}卦</p><button type="button" data-history="${i}" class="quiet">查看第 ${i + 1} 筆解讀</button></div>`;
+            return `<div class="history-item"><p>${esc(new Date(x.date).toLocaleString(isEnglish()?"en-GB":"zh-TW"))} · ${esc(h.name)}${isEnglish()?"":"卦"}</p><button type="button" data-history="${i}" class="quiet">查看第 ${i + 1} 筆解讀</button></div>`;
           })
           .join("")
       : '<p>還沒有起卦紀錄。<a href="/yijian-web/cast/">免費起卦</a></p>';
@@ -417,3 +423,5 @@ if ($("#clear-records")) {
   };
   renderRecords();
 }
+
+document.addEventListener('site-language-change',()=>{if(lastResult && document.querySelector('#result')?.children.length)showResult(lastResult.values,lastResult.topic,false);if(document.querySelector('#saved-history'))renderRecords();});

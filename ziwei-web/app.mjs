@@ -3,6 +3,7 @@ import {buildZiweiReading,buildZiweiWeek} from './reading.mjs';
 import {createZiweiPeopleStore,compareZiweiCharts,shareZiweiComparison,renderZiweiRole} from './people.mjs';
 import {peopleCopy} from './people-copy.mjs';
 
+const siteLang=()=>document.documentElement.lang==='en'?'en':'zh';
 const $=id=>document.getElementById(id);
 const slots={巳:[1,1],午:[1,2],未:[1,3],申:[1,4],酉:[2,4],戌:[3,4],亥:[4,4],子:[4,3],丑:[4,2],寅:[4,1],卯:[3,1],辰:[2,1]};
 const starGroup={major:'主星 / Major',minor:'輔星 / Supporting',adjective:'雜曜 / Other'};
@@ -12,6 +13,9 @@ let currentProfile=null;
 let activeKind='natal';
 let activeDay=0;
 let currentRecordId=null;
+let comparedRecord=null;
+const preserve=el=>{el.dataset.userContent='';return el;};
+const localized=s=>window.SiteLanguage?.translate(s)??s;
 const people=createZiweiPeopleStore();
 const node=(tag,className,value)=>{const item=document.createElement(tag);if(className)item.className=className;if(value!==undefined)item.textContent=value;return item;};
 const add=(parent,tag,className,value)=>{const item=node(tag,className,value);parent.append(item);return item;};
@@ -104,7 +108,7 @@ function renderPeople(){
   const list=$('people-list');list.replaceChildren();
   for(const record of people.list()){
     const card=add(list,'article',`people-card${record.id===currentRecordId?' active':''}`);
-    add(card,'strong','',record.name);
+    preserve(add(card,'strong','',record.name));
     add(card,'span','',record.profile.timeState==='unknown'?'時辰未知 · 午時暫定':'已儲存於此瀏覽器');
     const actions=add(card,'div','people-actions');
     const switchButton=add(actions,'button','','查看這張盤');switchButton.type='button';
@@ -136,7 +140,7 @@ function renderPeople(){
   if(!list.children.length)add(list,'p','people-empty','還沒有儲存人物。先排出一張盤，再替它取個暱稱。');
   if(people.warning)peopleMessage(people.warning);
 }
-function showComparison(friend){
+function showComparison(friend,scroll=true){
   const own=people.list().find(x=>x.id===currentRecordId);if(!own)return peopleMessage('請先儲存或切換到一張人物命盤。');
   try{
     const date=$('reading-date').value;
@@ -144,33 +148,35 @@ function showComparison(friend){
     const second=calculateZiweiChart(friend.profile,window.FortuneEngine,date);
     const comparison=compareZiweiCharts(first,second);
     if(!comparison)throw Error('兩張盤資料不足，暫時不能對照。');
+    comparedRecord=friend;
+    preserve($('comparison-facts'));preserve($('comparison-title'));preserve($('share-text'));
     const panel=$('comparison');$('comparison-title').textContent=`${own.name} · ${friend.name}`;
-    $('comparison-note').textContent=peopleCopy.copy.synScopeNote.zh+
+    $('comparison-note').textContent=peopleCopy.copy.synScopeNote[siteLang()]+
       ((first.hourAssumed||second.hourAssumed)?' 至少一人的時辰未知，以下宮位是午時暫定，補上時間後可能不同。':'');
     const facts=$('comparison-facts');facts.replaceChildren();
     for(const [from,to,direction] of [[own,friend,comparison.firstToSecond],[friend,own,comparison.secondToFirst]]){
       const box=add(facts,'section','comparison-fact');add(box,'h5','',`${from.name} → ${to.name}`);
       for(const [label,p] of [['命宮',direction.life],['身宮',direction.body]]){
-        const template=peopleCopy.copy[label==='命宮'?'synLifeLine':'synBodyLine'].zh;
+        const template=peopleCopy.copy[label==='命宮'?'synLifeLine':'synBodyLine'][siteLang()];
         add(box,'p','',template.replace('{source}',from.name).replace('{target}',to.name)
-          .replace('{palace}',palaceLabel(p.targetPalace)).replace('{branch}',p.sourceBranch));
-        if(label==='命宮')add(box,'p','role-line',renderZiweiRole(from.name,to.name,p.targetPalace));
+          .replace('{palace}',localized(palaceLabel(p.targetPalace))).replace('{branch}',localized(p.sourceBranch)));
+        if(label==='命宮')add(box,'p','role-line',renderZiweiRole(from.name,to.name,p.targetPalace,siteLang()));
       }
       if(direction.lifeStars.length){
         for(const star of direction.lifeStars){
-          const template=peopleCopy.copy.synStarLine.zh;
+          const template=peopleCopy.copy.synStarLine[siteLang()];
           add(box,'p','',template.replace('{source}',from.name).replace('{target}',to.name)
-            .replace('{star}',star.name).replace('{branch}',star.sourceBranch)
-            .replace('{palace}',palaceLabel(star.targetPalace)));
+            .replace('{star}',localized(star.name)).replace('{branch}',localized(star.sourceBranch))
+            .replace('{palace}',localized(palaceLabel(star.targetPalace))));
         }
-      }else add(box,'p','',peopleCopy.copy.synNoMajorStar.zh);
-      add(box,'p','',peopleCopy.copy.synTargetStarsLine.zh.replace('{stars}',direction.life.targetStars.join('、')||'無正曜'));
+      }else add(box,'p','',peopleCopy.copy.synNoMajorStar[siteLang()]);
+      add(box,'p','',peopleCopy.copy.synTargetStarsLine[siteLang()].replace('{stars}',direction.life.targetStars.map(localized).join(siteLang()==='en'?', ':'、')||localized('無正曜')));
     }
-    const share=shareZiweiComparison({first,second,comparison,firstName:own.name,secondName:friend.name,
-      firstProfile:own.profile,secondProfile:friend.profile});
+    const share=shareZiweiComparison({first,second,comparison,firstName:"__MAL_FIRST_NAME__",secondName:"__MAL_SECOND_NAME__",
+      firstProfile:own.profile,secondProfile:friend.profile,language:siteLang()}).split("\n").map(localized).join("\n").replaceAll("__MAL_FIRST_NAME__",own.name).replaceAll("__MAL_SECOND_NAME__",friend.name);
     $('share-text').textContent=share||'';panel.hidden=false;
     $('copy-share').onclick=async()=>{try{await navigator.clipboard.writeText(share);peopleMessage('已複製你預覽過的分享文字。');}catch{peopleMessage('無法自動複製，請選取上方文字自行複製。');}};
-    panel.scrollIntoView({block:'nearest',behavior:'smooth'});
+    if(scroll)panel.scrollIntoView({block:'nearest',behavior:'smooth'});
   }catch(error){peopleMessage(error.message);}
 }
 
@@ -198,7 +204,7 @@ function showSections(target,sections){
 
 function renderReadings(){
   if(!currentChart)return;
-  const reading=buildZiweiReading(currentChart,activeKind);
+  const reading=buildZiweiReading(currentChart,activeKind,siteLang());
   const display=$('reading-display');display.replaceChildren();
   add(display,'p','eyebrow',`${activeKind.toUpperCase()} / ORIGINAL APP READING`);
   add(display,'h4','',reading.title);
@@ -218,7 +224,7 @@ function renderReadings(){
   if(reading.unavailable)add(display,'p','assumed-note','這一項資料不足，原 App 不會猜出結果。請檢查出生資料或閱讀日期。');
   else showSections(display,reading.sections);
   for(const button of $('reading-tabs').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.kind===activeKind));
-  const week=buildZiweiWeek(currentChart),list=$('week-days');list.replaceChildren();
+  const week=buildZiweiWeek(currentChart,siteLang()),list=$('week-days');list.replaceChildren();
   week.forEach((day,index)=>{
     const button=add(list,'button','week-button',day.date);
     button.type='button';button.setAttribute('aria-pressed',String(index===activeDay));
@@ -293,3 +299,5 @@ $('birth-form').addEventListener('submit',event=>{
 });
 syncForm();
 if(people.active())openSaved(people.active());
+
+document.addEventListener('site-language-change',()=>{renderReadings();renderPeople();if(comparedRecord&&!$('comparison').hidden)showComparison(comparedRecord,false);});

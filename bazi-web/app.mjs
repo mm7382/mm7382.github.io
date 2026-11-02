@@ -10,6 +10,9 @@ const phaseEnglish = {木:'Wood',火:'Fire',土:'Earth',金:'Metal',水:'Water'}
 const gods = {peer:'比肩',rob:'劫財',eatingGod:'食神',hurtingOfficer:'傷官',indirectWealth:'偏財',directWealth:'正財',sevenKillings:'七殺',directOfficer:'正官',indirectResource:'偏印',directResource:'正印'};
 let activeProfile = null;
 let activeRecordId = null;
+let comparedRecord=null;
+const preserve=el=>{el.dataset.userContent='';return el;};
+const localized=s=>window.SiteLanguage?.translate(s)??s;
 const blockedStorage = {getItem(){throw Error('disabled')},setItem(){throw Error('disabled')},removeItem(){throw Error('disabled')}};
 let browserStorage;
 try {browserStorage=window.localStorage;} catch {browserStorage=blockedStorage;}
@@ -264,7 +267,7 @@ function openProfile(saved) {
   renderPeople();
 }
 
-function showComparison(saved) {
+function showComparison(saved,scroll=true) {
   if (!activeProfile) {peopleMessage('請先在上方排出自己的命盤。');return;}
   if (activeRecordId===saved.id) {peopleMessage('請選另一位人物，再看兩張盤的對照。');return;}
   try {
@@ -272,23 +275,25 @@ function showComparison(saved) {
     const theirs=calculateBaziChart(saved.birth,window.FortuneEngine);
     const result=compareBaziCharts(mine,theirs,window.FortuneEngine);
     const lang=$('reading-language').value;
-    const comparison=$('comparison'); comparison.replaceChildren();
-    appendText(comparison,'p','TWO CHARTS / ONE CONVERSATION','eyebrow');
-    appendText(comparison,'h3',`我 × ${saved.name}`);
+    comparedRecord=saved;
+    const comparison=preserve($('comparison')); comparison.replaceChildren();
+    appendText(comparison,'p',lang==='zh'?'雙人命盤對照':'TWO CHARTS / ONE CONVERSATION','eyebrow');
+    appendText(comparison,'h3',`${lang==='zh'?'我':'Me'} × ${saved.name}`);
     const labels=lang==='zh'?['你對他','他對你','相處節奏']:['How you are with them','How they are with you','Your rhythm together'];
     result.readings.forEach((entry,index)=>{
       const row=node('div','comparison-row');
       appendText(row,'strong',labels[index]); appendText(row,'p',entry[lang]);comparison.append(row);
     });
-    appendText(comparison,'p',result.note,'comparison-foot');
+    appendText(comparison,'p',localized(result.note),'comparison-foot');
     if (activeProfile.timeState==='unknown'||saved.birth.timeState==='unknown')
-      appendText(comparison,'p','其中一人不知道出生時間；這裡只比較日主與日支。若實際出生在 23:00 後，日柱仍需核對。','comparison-foot');
+      appendText(comparison,'p',localized('其中一人不知道出生時間；這裡只比較日主與日支。若實際出生在 23:00 後，日柱仍需核對。'),'comparison-foot');
+    const shareText=localized(result.share[lang]).replace(/\b([A-Za-z]+)\s*\(\1\)/g,'$1');
     const copy=node('button','people-action',lang==='zh'?'複製簡短分享文字':'Copy a short share line');
     copy.type='button';copy.addEventListener('click',async()=>{
-      try {await navigator.clipboard.writeText(result.share[lang]);peopleMessage('已複製只含日主與相處節奏的文字，沒有生日。');}
-      catch {peopleMessage('瀏覽器未允許複製，請手動選取文字。');appendText(comparison,'p',result.share[lang]);}
+      try {await navigator.clipboard.writeText(shareText);peopleMessage('已複製只含日主與相處節奏的文字，沒有生日。');}
+      catch {peopleMessage('瀏覽器未允許複製，請手動選取文字。');appendText(comparison,'p',shareText);}
     });comparison.append(copy);comparison.hidden=false;
-    comparison.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
+    if(scroll)comparison.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});
   } catch(error) {peopleMessage(error instanceof Error?error.message:'雙人對照暫時無法完成。');}
 }
 
@@ -299,7 +304,7 @@ function renderPeople() {
   if (!records.length) appendText(list,'p','目前還沒儲存人物。先排出自己的盤，或直接加入一位朋友。','reading-note');
   for (const saved of records) {
     const card=node('article',`profile-card${saved.id===active?.id?' active':''}`);
-    appendText(card,'h3',saved.name);
+    preserve(appendText(card,'h3',saved.name));
     appendText(card,'p',`${saved.birth.birthDate} · ${saved.birth.timeState==='unknown'?'出生時間未知':saved.birth.time}`);
     const actions=node('div','profile-actions');
     const switchButton=node('button','', '切換命盤');switchButton.type='button';
@@ -395,3 +400,5 @@ if (restored) {
   } catch {peopleMessage('先前的人物資料無法排盤，請重新核對出生資料。');}
 }
 renderPeople();
+
+document.addEventListener('site-language-change',()=>{if(comparedRecord&&!$('comparison').hidden)showComparison(comparedRecord,false);});
