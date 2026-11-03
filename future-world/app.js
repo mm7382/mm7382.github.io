@@ -14,10 +14,13 @@ for(const id of ['route','route-alt'])$(id).onclick=()=>{$('route-dialog').showM
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());
 document.querySelectorAll('[name=destination]').forEach(r=>r.onchange=()=>{$('selection').textContent=`已選擇「${r.value}」；目的地尚未開放。`;$('confirm').disabled=false;});
 $('confirm').onclick=()=>$('route-dialog').close();
-window.__stopPoint={snapshot:()=>({entered,destination,movementPlayed,playing,scene:'first-scene-coated',frameCount:48,renderResolution:[2560,1440],stopImageVisible:!stopImage.hidden,openDialog:document.querySelector('dialog[open]')?.id||null,videoTime:video.currentTime,ready:video.readyState>=2})};
+window.__stopPoint={snapshot:()=>({entered,destination,movementPlayed,playing,scene:'first-scene-coated',viewpoint:'Michael',availableViewpoints:['Michael'],lucyStatus:'coming-soon',frameCount:48,renderResolution:[2560,1440],stopImageVisible:!stopImage.hidden,openDialog:document.querySelector('dialog[open]')?.id||null,videoTime:video.currentTime,ready:video.readyState>=2})};
 
 const readingPages=["那份感覺裡，大部分是平靜。\nMichael 仍站在空橋上，望著眼前的城市。\n她的思念很輕，輕得容得下這片風景。", "有一點思念，有一點需要他。\n想聊聊天，也想讓他在身邊。\n那些心意輕輕相依，沒有一句話，卻已經很近。", "她沒有催他。\n他可以再看一會兒，讓眼前的城市慢慢映入心裡。\n那份想念安靜地陪著他，沒有拉住他的腳步。", "她的位置、影像、平靜與思念，\n連同想見他的心意，同時清晰起來。\n還不必整理成語句，他就已經懂了。"];let readingIndex=0;
 function renderReading(){$('reading-text').textContent=readingPages[readingIndex];$('reading-count').textContent=`${readingIndex+1} / 4 · 依你的步調閱讀`;$('reading-prev').disabled=readingIndex===0;$('reading-next').disabled=readingIndex===3;}
 $('reading-prev').onclick=()=>{if(entered&&!playing&&readingIndex>0){readingIndex--;renderReading();}};
 $('reading-next').onclick=()=>{if(entered&&!playing&&readingIndex<3){readingIndex++;renderReading();}};
 $('reading-forward').onclick=enter;
+
+$('open-viewpoint').onclick=()=>{if(playing)return;$('viewpoint-dialog').showModal();};
+$('choose-michael').onclick=()=>{$('viewpoint-dialog').close();};

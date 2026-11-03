@@ -38,3 +38,5 @@ body.moving header{visibility:hidden}body.moving .hud,body.moving .hud-reopen,bo
 main:has(.hud:not([hidden])) .stopbar{display:none}
 
 .scene #stop-frame{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:65% 50%;pointer-events:none}.scene #stop-frame[hidden]{display:none}
+
+.scene-heading{display:flex;align-items:center;gap:20px}.scene-heading p{margin:0}.scene-heading button{pointer-events:auto;min-height:44px;border:1px solid #baffcd50;border-radius:6px;padding:8px 12px;background:#10271d40;color:#d1ffd9;font-size:14px;text-shadow:0 1px 4px #000}#viewpoint-dialog .viewpoint-options{display:grid;gap:12px;margin:20px 0}#viewpoint-dialog .viewpoint-options button{display:grid;gap:6px;text-align:left;padding:16px;background:#12312630;border:1px solid #baffcd50;border-radius:8px;color:inherit}#viewpoint-dialog strong{font-size:21px}#viewpoint-dialog span{font-size:15px;line-height:1.65}#viewpoint-dialog small{color:#baffcd}#viewpoint-dialog [disabled]{opacity:.65;cursor:default}@media(max-width:600px){.scene-heading{gap:8px}.scene-heading p{display:none}.scene-heading button{font-size:13px;padding:8px 10px}}
