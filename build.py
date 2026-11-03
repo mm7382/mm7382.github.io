@@ -1,4 +1,4 @@
-import json, os, html, sys
+import json, os, html, re, sys
 from content import BAZI, ZIWEI, ASTRO, YIJIAN_LINK, BANNED
 
 BASE = "https://mm7382.github.io"
@@ -189,6 +189,96 @@ def llms():
         f.write("\n".join(lines) + "\n")
 
 
+# 內容太薄的頁面：留在網站上給使用者用，但不進 sitemap、並標記 noindex，
+# 避免整站被 Google 判定為灌水。目錄頁不列入，否則 Google 爬不到底下的內容。
+THIN_PAGES = [
+    "/yijian-web/cast/",
+    "/yijian-web/lessons/1/",
+    "/yijian-web/lessons/2/",
+    "/yijian-web/lessons/4/",
+    "/bazi-web/learn/F01/",
+    "/bazi-web/learn/F02/",
+    "/bazi-web/learn/F03/",
+    "/bazi-web/learn/P01/",
+    "/bazi-web/learn/P02/",
+    "/bazi-web/learn/P03/",
+    "/bazi-web/learn/P04/",
+    "/bazi-web/learn/P05/",
+    "/bazi-web/learn/P06/",
+    "/bazi-web/learn/P07/",
+    "/bazi-web/learn/P08/",
+    "/bazi-web/learn/P10/",
+    "/bazi-web/learn/P11/",
+    "/bazi-web/learn/P12/",
+    "/bazi-web/learn/P13/",
+    "/bazi-web/learn/P14/",
+    "/bazi-web/learn/P15/",
+    "/bazi-web/learn/P16/",
+    "/bazi-web/learn/P17/",
+    "/ziwei-web/learn/L01/",
+    "/ziwei-web/learn/L02/",
+    "/ziwei-web/learn/L03/",
+    "/ziwei-web/learn/L04/",
+    "/ziwei-web/learn/L05/",
+    "/ziwei-web/learn/L06/",
+    "/ziwei-web/learn/L09/",
+    "/ziwei-web/learn/L10/",
+    "/ziwei-web/learn/L11/",
+    "/ziwei-web/learn/L12/",
+    "/ziwei-web/learn/L13/",
+    "/ziwei-web/learn/L14/",
+    "/ziwei-web/learn/L15/",
+    "/ziwei-web/learn/L16/",
+    "/ziwei-web/learn/L17/",
+    "/ziwei-web/learn/L18/",
+    "/ziwei-web/learn/L19/",
+    "/ziwei-web/learn/L20/",
+    "/ziwei-web/learn/L21/",
+    "/ziwei-web/learn/L22/",
+    "/ziwei-web/learn/L23/",
+    "/ziwei-web/learn/L24/",
+    "/ziwei-web/learn/W01/",
+    "/ziwei-web/learn/W02/",
+    "/ziwei-web/learn/W03/",
+    "/ziwei-web/learn/W04/",
+    "/ziwei-web/learn/W05/",
+    "/ziwei-web/learn/W06/",
+    "/ziwei-web/learn/W07/",
+    "/ziwei-web/learn/W08/",
+    "/ziwei-web/learn/W09/",
+    "/ziwei-web/learn/W10/",
+    "/ziwei-web/learn/W11/",
+    "/ziwei-web/learn/W12/",
+    "/work/diving.html",
+    "/work/document-kit.html",
+    "/work/lion-character.html",
+    "/work/shiftok.html",
+    "/work/sugar-boom.html",
+    "/work/yijian.html",
+    "/work/reading-template.html",
+    "/work/visual-scenes.html",
+    "/work/costume-photo.html",
+]
+
+
+def noindex_thin():
+    tag = '<meta name="robots" content="noindex,follow">'
+    for rel in THIN_PAGES:
+        path = os.path.join(HERE, rel.strip("/"))
+        if rel.endswith("/"):
+            path = os.path.join(path, "index.html")
+        if not os.path.exists(path):
+            continue
+        with open(path, encoding="utf-8") as f:
+            page = f.read()
+        if 'name="robots"' in page:
+            page = re.sub(r'<meta name="robots"[^>]*>', tag, page, count=1)
+        else:
+            page = page.replace("</head>", "  " + tag + "\n</head>", 1)
+        with open(path, "w", encoding="utf-8") as f:
+            f.write(page)
+
+
 def sitemap():
     import glob
     learn = [BASE + "/learn/"] + [f"{BASE}/learn/{os.path.basename(p)}" for p in sorted(glob.glob(os.path.join(HERE, "learn", "*.html"))) if not p.endswith("index.html")]
@@ -200,6 +290,7 @@ def sitemap():
         urls += [BASE + f'/{slug}/', BASE + f'/{slug}/llms.txt']
         urls += [BASE + '/' + str(p.parent.relative_to(__import__('pathlib').Path(HERE))) + '/' for p in sorted(__import__('pathlib').Path(HERE).glob(f'{slug}/learn/**/index.html')) if '/review/' not in str(p)]
     urls += [f"{BASE}/work/{os.path.basename(p)}" for p in sorted(glob.glob(os.path.join(HERE, "work", "*.html")))]
+    urls = [u for u in urls if u.replace(BASE, "") not in THIN_PAGES]
     body = "".join(f"  <url><loc>{u}</loc><lastmod>{"2026-10-25" if u == BASE + "/" or "/work/" in u else ("2026-10-23" if "-web/" in u else "2026-10-15")}</lastmod></url>\n" for u in urls)
     with open(os.path.join(HERE, "sitemap.xml"), "w") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + body + "</urlset>\n")
@@ -219,6 +310,7 @@ for a in PAGES:
             bad.append((a["slug"], w))
 hub()
 llms()
+noindex_thin()
 sitemap()
 if bad:
     print("BANNED:", bad)
