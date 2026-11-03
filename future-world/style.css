@@ -31,3 +31,10 @@ header{position:fixed;z-index:5;inset:0 0 auto;max-width:none;margin:0;padding:m
 @media(min-width:601px) and (min-height:501px){.hud{width:min(520px,48vw)}.hud #reading-text{max-width:none}}
 @media(max-height:500px){.reading-actions{width:calc(100vw - min(540px,68vw) - 52px)}}
 @media(max-height:500px){.reading-actions{position:fixed;left:auto;right:max(18px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom));width:clamp(120px,23vw,180px)}}
+
+.caption:has(#start-forward:not([hidden])){display:flex}.caption #start-forward{min-height:48px;background:#10271d40;color:#baffcd}
+
+body.moving header{visibility:hidden}body.moving .hud,body.moving .hud-reopen,body.moving #hotspots,body.moving .stopbar{display:none!important}
+main:has(.hud:not([hidden])) .stopbar{display:none}
+
+.scene #stop-frame{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:65% 50%;pointer-events:none}.scene #stop-frame[hidden]{display:none}
