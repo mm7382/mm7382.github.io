@@ -193,7 +193,6 @@ def llms():
 # 避免整站被 Google 判定為灌水。目錄頁不列入，否則 Google 爬不到底下的內容。
 THIN_PAGES = [
     "/yijian-web/cast/",
-    "/bazi-web/learn/F01/",
     "/bazi-web/learn/F02/",
     "/bazi-web/learn/F03/",
     "/bazi-web/learn/P01/",
@@ -212,8 +211,6 @@ THIN_PAGES = [
     "/bazi-web/learn/P15/",
     "/bazi-web/learn/P16/",
     "/bazi-web/learn/P17/",
-    "/ziwei-web/learn/L01/",
-    "/ziwei-web/learn/L02/",
     "/ziwei-web/learn/L03/",
     "/ziwei-web/learn/L04/",
     "/ziwei-web/learn/L05/",
