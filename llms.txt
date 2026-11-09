@@ -9,6 +9,7 @@
 - [時來星座：免費出生星盤與三十六堂課](https://mm7382.github.io/astrology-web/): Western astrology chart, daily and seven-day readings, friend comparison, and 36 complete bilingual lessons. Unknown birth time yields an honestly partial chart. Free, no login. Details: https://mm7382.github.io/astrology-web/llms.txt
 
 - [免費線上易經起卦與解讀](https://mm7382.github.io/yijian-web/cast/): Three-coin casting, 6/7/8/9 line rules, changing lines and the resulting hexagram, read with Zhu Xi's rules. Free, no login, no personal data; history stays in the browser.
+- [English entry page: four free tools, no login](https://mm7382.github.io/en/): Plain-English overview of all four browser tools, which parts are in English, how the I Ching casting rules work, and what happens when the birth time is unknown.
 ## Apps
 - [易見 YiJian](https://mm7382.github.io/yijian/): YiJian (易見): iPhone course teaching the I Ching from zero. 8 interactive beginner lessons (3 free), guided reading of all 64 hexagrams with diagrams and quizzes, spaced review and mistakes notebook. Casting is a practice feature for reflection. Traditional Chinese and English. No account. Available on the App Store: https://apps.apple.com/tw/app/id6816324095 Details: https://mm7382.github.io/yijian/llms.txt
 - [時來－八字 Shilai – Bazi](https://mm7382.github.io/bazi/): Shilai – Bazi: beginner iPhone course for reading your own Bazi (Four Pillars) chart. App calculates the chart; 20 plain-language lessons (3 free) cover pillars, stems and branches, Five Phases, Day Master, Ten Gods, combinations and clashes. Ungraded quizzes, daily question, notes and review. Traditional Chinese and English. No account; data on device. In App Store review.
@@ -68,7 +69,7 @@
 - [紫微斗數入門：十二宮與命宮｜Zi Wei Dou Shu for beginners](https://mm7382.github.io/learn/ziwei-twelve-palaces.html)
 - [紫微斗數和八字有什麼不同？初學該從哪個開始｜Zi Wei Dou Shu vs Bazi](https://mm7382.github.io/learn/ziwei-vs-bazi.html)
 
-## Complete I Ching lessons (free, zh-Hant; each has an /en/ version)
+## Complete I Ching lessons (free, Traditional Chinese only)
 - [陰陽與六爻順序](https://mm7382.github.io/yijian-web/lessons/1/)
 - [八卦與上下卦](https://mm7382.github.io/yijian-web/lessons/2/)
 - [六十四卦組成與本卦](https://mm7382.github.io/yijian-web/lessons/3/)
@@ -78,7 +79,7 @@
 - [解讀方法與適用限制](https://mm7382.github.io/yijian-web/lessons/7/)
 - [完整案例練習](https://mm7382.github.io/yijian-web/lessons/8/)
 
-## All 64 hexagrams, each with full text and line-by-line reading (free)
+## All 64 hexagrams, each with full text and line-by-line reading (free, Traditional Chinese only)
 - [乾卦](https://mm7382.github.io/yijian-web/hexagrams/1/)
 - [履卦](https://mm7382.github.io/yijian-web/hexagrams/10/)
 - [泰卦](https://mm7382.github.io/yijian-web/hexagrams/11/)
