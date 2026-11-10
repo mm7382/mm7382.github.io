@@ -90,7 +90,7 @@
 - [How to Read It, and Where It Stops](https://mm7382.github.io/yijian-web/lessons/7/en/): The original text, the classical commentary and the modern explanation are three different layers. Also: what this method cannot do.
 - [A Worked Example from Start to Finish](https://mm7382.github.io/yijian-web/lessons/8/en/): Put the first seven lessons together: from six numbers all the way to a passage of original text.
 
-## All 64 hexagrams, each with full text and line-by-line reading (free, Traditional Chinese only)
+## All 64 hexagrams, each with full text and line-by-line reading (free, Traditional Chinese; English versions are listed at the end of this file)
 - [乾卦](https://mm7382.github.io/yijian-web/hexagrams/1/)
 - [履卦](https://mm7382.github.io/yijian-web/hexagrams/10/)
 - [泰卦](https://mm7382.github.io/yijian-web/hexagrams/11/)
@@ -253,3 +253,71 @@
 - [寫一段自己的摘要](https://mm7382.github.io/astrology-web/learn/practice-10/): 做完這一堂，你會把前面的筆記整理成一段自己的摘要，而且每一句都說得出根據。
 - [常見誤讀自我檢查](https://mm7382.github.io/astrology-web/learn/practice-11/): 做完這一堂，你會用一張檢查表，抓出自己讀盤時最容易犯的錯，也知道每一項為什麼算錯。
 - [整理你的筆記](https://mm7382.github.io/astrology-web/learn/practice-12/): 做完這一堂，你的筆記會整理成以後回來看還讀得懂的樣子，你也會知道筆記存在哪裡、什麼情況下會被刪掉。
+
+## All 64 hexagrams in English
+
+- [Sixty-four hexagrams index](https://mm7382.github.io/yijian-web/hexagrams/en/): Every hexagram with classical text, line-by-line readings and plain-language notes.
+- [Hexagram 1: Qian · The Creative](https://mm7382.github.io/yijian-web/hexagrams/1/en/): Cultivate strength without ceasing, create through right conduct, and remain steadfast
+- [Hexagram 2: Kun · The Receptive](https://mm7382.github.io/yijian-web/hexagrams/2/en/): Support all things with generous virtue, respond to circumstances, and find good fortune through quiet steadfastness
+- [Hexagram 3: Zhun · Difficulty at the Beginning](https://mm7382.github.io/yijian-web/hexagrams/3/en/): Beginnings are hard; build roots before reach
+- [Hexagram 4: Meng · Youthful Inexperience](https://mm7382.github.io/yijian-web/hexagrams/4/en/): Ask honestly; openness is what teaches you
+- [Hexagram 5: Xu · Waiting](https://mm7382.github.io/yijian-web/hexagrams/5/en/): Wait in good faith; timing opens the way
+- [Hexagram 6: Song · Conflict](https://mm7382.github.io/yijian-web/hexagrams/6/en/): Fights rarely end well; settle, do not escalate
+- [Hexagram 7: Shi · The Army](https://mm7382.github.io/yijian-web/hexagrams/7/en/): Lead by discipline, and put the right people in place
+- [Hexagram 8: Bi · Holding Together](https://mm7382.github.io/yijian-web/hexagrams/8/en/): Reach out sincerely; lasting bonds carry you
+- [Hexagram 9: Xiao Xu · Small Accumulation](https://mm7382.github.io/yijian-web/hexagrams/9/en/): Keep gathering quietly; the release has not come yet.
+- [Hexagram 10: Lu · Treading](https://mm7382.github.io/yijian-web/hexagrams/10/en/): Proceed carefully, observe propriety and restraint, and advance steadily toward success
+- [Hexagram 11: Tai · Peace](https://mm7382.github.io/yijian-web/hexagrams/11/en/): Heaven and Earth meet in harmony; communication flows between higher and lower levels. Use favorable timing to move forward actively.
+- [Hexagram 12: Pi · Stagnation](https://mm7382.github.io/yijian-web/hexagrams/12/en/): Cultivate virtue in blockage, remain correct in adversity, and await a turning point; at stagnation's extreme, peace must return
+- [Hexagram 13: Tong Ren · Fellowship](https://mm7382.github.io/yijian-web/hexagrams/13/en/): Unite around shared goals, respect differences, and avoid the exclusivity of cliques
+- [Hexagram 14: Da You · Great Possession](https://mm7382.github.io/yijian-web/hexagrams/14/en/): More resources demand clearer judgment, honest sharing, restraint, and responsibility
+- [Hexagram 15: Qian · Modesty](https://mm7382.github.io/yijian-web/hexagrams/15/en/): Remain capable without complacency, judge appropriate limits, and fulfill responsibilities with humility
+- [Hexagram 16: Yu · Enthusiasm](https://mm7382.github.io/yijian-web/hexagrams/16/en/): Match enthusiasm with preparation, recognize change early, and avoid becoming absorbed in comfort
+- [Hexagram 17: Sui · Following](https://mm7382.github.io/yijian-web/hexagrams/17/en/): Move with the times, follow what is good, choose what to follow, and stay true without losing yourself
+- [Hexagram 18: Gu · Repairing Decay](https://mm7382.github.io/yijian-web/hexagrams/18/en/): Treat accumulated problems, take responsibility for the past, prepare before reform and review afterward; repair enables renewal
+- [Hexagram 19: Lin · Approach](https://mm7382.github.io/yijian-web/hexagrams/19/en/): Approach others sincerely, lead with tolerance, act with favorable momentum, and keep a way back open at the peak
+- [Hexagram 20: Guan · Contemplation](https://mm7382.github.io/yijian-web/hexagrams/20/en/): Observe and reflect, put yourself in order, see the whole, and understand before acting
+- [Hexagram 21: Shi He · Biting Through](https://mm7382.github.io/yijian-web/hexagrams/21/en/): Remove obstructions, distinguish right from wrong, make consequences proportionate, and combine firmness with flexibility to restore passage
+- [Hexagram 22: Bi · Grace](https://mm7382.github.io/yijian-web/hexagrams/22/en/): Adorn with restraint, establish substance before polish, and return to simplicity so the exterior faithfully expresses the interior
+- [Hexagram 23: Bo · Splitting Apart](https://mm7382.github.io/yijian-web/hexagrams/23/en/): In decline, strengthen the base to secure the dwelling, stop without contention, and preserve the uneaten fruit
+- [Hexagram 24: Fu · Return](https://mm7382.github.io/yijian-web/hexagrams/24/en/): Turn back early, then restart at a pace you can keep.
+- [Hexagram 25: Wu Wang · Innocence](https://mm7382.github.io/yijian-web/hexagrams/25/en/): Act from an honest motive and accept what you cannot control.
+- [Hexagram 26: Da Xu · Great Accumulation](https://mm7382.github.io/yijian-web/hexagrams/26/en/): Store your strength now so the road opens later.
+- [Hexagram 27: Yi · Nourishment](https://mm7382.github.io/yijian-web/hexagrams/27/en/): Watch what feeds you, and watch what you feed.
+- [Hexagram 28: Da Guo · Great Exceeding](https://mm7382.github.io/yijian-web/hexagrams/28/en/): The load is beyond the structure; lighten it before it gives.
+- [Hexagram 29: Kan · The Abysmal](https://mm7382.github.io/yijian-web/hexagrams/29/en/): Danger comes in layers; keep your footing and take small gains.
+- [Hexagram 30: Li · The Clinging](https://mm7382.github.io/yijian-web/hexagrams/30/en/): Light lasts only where it rests on something correct.
+- [Hexagram 31: Xian · Mutual Influence](https://mm7382.github.io/yijian-web/hexagrams/31/en/): Meet others with an empty mind and no calculation.
+- [Hexagram 32: Heng · Duration](https://mm7382.github.io/yijian-web/hexagrams/32/en/): Duration is a rhythm you can keep, not an effort you strain.
+- [Hexagram 33: Dun · Retreat](https://mm7382.github.io/yijian-web/hexagrams/33/en/): Step back in good time, cleanly and with your dignity intact.
+- [Hexagram 34: Da Zhuang · Great Strength](https://mm7382.github.io/yijian-web/hexagrams/34/en/): Strength only carries you when it stays inside what is proper.
+- [Hexagram 35: Jin · Progress](https://mm7382.github.io/yijian-web/hexagrams/35/en/): Rise like the morning sun, and rise cleanly.
+- [Hexagram 36: Ming Yi · Darkening of the Light](https://mm7382.github.io/yijian-web/hexagrams/36/en/): Veil your light, keep your principles, and wait for the turn.
+- [Hexagram 37: Jia Ren · The Family](https://mm7382.github.io/yijian-web/hexagrams/37/en/): Words with substance, conduct with constancy, everyone in their place.
+- [Hexagram 38: Kui · Opposition](https://mm7382.github.io/yijian-web/hexagrams/38/en/): Hold what is shared and leave room for the difference.
+- [Hexagram 39: Jian · Obstruction](https://mm7382.github.io/yijian-web/hexagrams/39/en/): Halt at the sight of danger and turn the effort inward.
+- [Hexagram 40: Xie · Release](https://mm7382.github.io/yijian-web/hexagrams/40/en/): The knot is loosening; act early and forgive what is past.
+- [Hexagram 41: Sun · Decrease](https://mm7382.github.io/yijian-web/hexagrams/41/en/): Cut the surplus so the essential can stand.
+- [Hexagram 42: Yi · Increase](https://mm7382.github.io/yijian-web/hexagrams/42/en/): Give downward and outward, and support gathers around you.
+- [Hexagram 43: Guai · Breakthrough](https://mm7382.github.io/yijian-web/hexagrams/43/en/): Cut cleanly, but argue in the open instead of forcing it.
+- [Hexagram 44: Gou · Coming to Meet](https://mm7382.github.io/yijian-web/hexagrams/44/en/): In a chance meeting, look closely before you commit.
+- [Hexagram 45: Cui · Gathering](https://mm7382.github.io/yijian-web/hexagrams/45/en/): Gather around something correct, and prepare while things are strong.
+- [Hexagram 46: Sheng · Pushing Upward](https://mm7382.github.io/yijian-web/hexagrams/46/en/): Grow like a tree: small gains, stacked, in the right direction.
+- [Hexagram 47: Kun · Oppression](https://mm7382.github.io/yijian-web/hexagrams/47/en/): Held fast, keep your ground and let actions speak.
+- [Hexagram 48: Jing · The Well](https://mm7382.github.io/yijian-web/hexagrams/48/en/): What nourishes others must be maintained, and finished to the last pull.
+- [Hexagram 49: Ge · Revolution](https://mm7382.github.io/yijian-web/hexagrams/49/en/): Change what must change, but earn trust before you move.
+- [Hexagram 50: Ding · The Cauldron](https://mm7382.github.io/yijian-web/hexagrams/50/en/): Nourish others, but first be able to carry the weight.
+- [Hexagram 51: Zhen · The Arousing](https://mm7382.github.io/yijian-web/hexagrams/51/en/): Hold your ladle steady; fright well used becomes a rule.
+- [Hexagram 52: Gen · Keeping Still](https://mm7382.github.io/yijian-web/hexagrams/52/en/): Stop where stopping belongs, and think within your own ground.
+- [Hexagram 53: Jian · Gradual Progress](https://mm7382.github.io/yijian-web/hexagrams/53/en/): Climb one rung at a time and let nothing skip its stage.
+- [Hexagram 54: Gui Mei · The Marrying Maiden](https://mm7382.github.io/yijian-web/hexagrams/54/en/): Where standing is unclear, enthusiasm alone tends to fail.
+- [Hexagram 55: Feng · Abundance](https://mm7382.github.io/yijian-web/hexagrams/55/en/): At full noon the shadows deepen, so decide while you can see.
+- [Hexagram 56: Lu · The Traveler](https://mm7382.github.io/yijian-web/hexagrams/56/en/): Away from home your roots are shallow, so stay light and careful.
+- [Hexagram 57: Xun · The Gentle](https://mm7382.github.io/yijian-web/hexagrams/57/en/): Enter by seeping in, state your case clearly, and keep your own ground.
+- [Hexagram 58: Dui · The Joyous](https://mm7382.github.io/yijian-web/hexagrams/58/en/): Gladness built on candour lasts; flattery buys goodwill only once.
+- [Hexagram 59: Huan · Dispersion](https://mm7382.github.io/yijian-web/hexagrams/59/en/): Let the blockage go and the space it leaves is where people return.
+- [Hexagram 60: Jie · Limitation](https://mm7382.github.io/yijian-web/hexagrams/60/en/): Set the limit where you can hold it; too loose spills, too tight snaps.
+- [Hexagram 61: Zhong Fu · Inner Truth](https://mm7382.github.io/yijian-web/hexagrams/61/en/): Sincerity grows from the centre; never let volume outrun substance.
+- [Hexagram 62: Xiao Guo · Small Exceeding](https://mm7382.github.io/yijian-web/hexagrams/62/en/): Overdo the small things a little; do not cross the line on the large ones.
+- [Hexagram 63: Ji Ji · After Completion](https://mm7382.github.io/yijian-web/hexagrams/63/en/): The moment it is finished is the moment to start guarding it.
+- [Hexagram 64: Wei Ji · Before Completion](https://mm7382.github.io/yijian-web/hexagrams/64/en/): Not yet ashore is not defeat; sort things, place them, and keep going.
