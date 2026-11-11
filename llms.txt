@@ -44,6 +44,7 @@
 - [周易和易經有什麼不同？連山、歸藏與十翼一次說清楚｜Zhou Yi or Yi Jing: what is the difference? The Three Changes and the Ten Wings](https://mm7382.github.io/learn/zhouyi-vs-yijing.html)
 - [三枚銅錢起卦怎麼做？擲六次的規則與記錄方式｜How do you cast an I Ching hexagram with three coins?](https://mm7382.github.io/learn/coin-casting.html)
 - [易經要怎麼問問題？問卦前把問題寫清楚的五個原則｜How do you ask the I Ching a question?](https://mm7382.github.io/learn/ask-the-i-ching-a-question.html)
+- [起完卦之後怎麼解讀？讀卦的六個步驟與取文規則｜How do you interpret an I Ching reading?](https://mm7382.github.io/learn/interpret-a-reading.html)
 - [日主是什麼？怎麼從八字找到自己的日主｜What is the Day Master?](https://mm7382.github.io/learn/day-master.html)
 - [十二時辰怎麼對應現在的時間？子丑寅卯一次看懂｜How do the twelve earthly branches map to clock hours?](https://mm7382.github.io/learn/earthly-branches-hours.html)
 - [八卦是什麼？乾坤震巽坎離艮兌一次看懂｜What are the eight trigrams?](https://mm7382.github.io/learn/eight-trigrams.html)
@@ -327,6 +328,7 @@
 ## Beginner articles in English (static English pages)
 
 - [How do you ask the I Ching a question?](https://mm7382.github.io/learn/en/ask-the-i-ching-a-question.html)
+- [How do you interpret an I Ching reading?](https://mm7382.github.io/learn/en/interpret-a-reading.html)
 - [What are aspects in a birth chart?](https://mm7382.github.io/learn/en/aspects.html)
 - [Bazi for beginners: how to read the four pillars, stems, branches and the Five Phases](https://mm7382.github.io/learn/en/bazi-four-pillars.html)
 - [What are changing lines, the primary hexagram and the resulting hexagram?](https://mm7382.github.io/learn/en/changing-lines.html)
