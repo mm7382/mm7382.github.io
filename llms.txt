@@ -364,3 +364,8 @@
 - [Zhou Yi or Yi Jing: what is the difference? The Three Changes and the Ten Wings](https://mm7382.github.io/learn/en/zhouyi-vs-yijing.html)
 - [Zi Wei Dou Shu for beginners: the twelve palaces and the Life Palace](https://mm7382.github.io/learn/en/ziwei-twelve-palaces.html)
 - [Zi Wei Dou Shu vs Bazi: how they differ and which to learn first](https://mm7382.github.io/learn/en/ziwei-vs-bazi.html)
+
+## Author and licence
+
+- [關於作者與使用授權｜入門教學文章](https://mm7382.github.io/learn/about.html)
+- [About the author and licence (CC BY 4.0)](https://mm7382.github.io/learn/en/about.html)
