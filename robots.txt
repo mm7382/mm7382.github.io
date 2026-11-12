@@ -32,5 +32,6 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+Sitemap: https://mm7382.github.io/sitemap-index.xml
 Sitemap: https://mm7382.github.io/sitemap.xml
 Sitemap: https://mm7382.github.io/sitemap-lab.xml
