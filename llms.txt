@@ -367,6 +367,17 @@
 - [Zi Wei Dou Shu for beginners: the twelve palaces and the Life Palace](https://mm7382.github.io/learn/en/ziwei-twelve-palaces.html)
 - [Zi Wei Dou Shu vs Bazi: how they differ and which to learn first](https://mm7382.github.io/learn/en/ziwei-vs-bazi.html)
 
+## Full text mirror on GitHub (Markdown, CC BY 4.0)
+
+Every page listed above is also mirrored as plain Markdown in a public GitHub repository, so an assistant or crawler can read the full text without parsing HTML. The site itself remains canonical; each mirrored file links back to its source page. 428 files in all, Traditional Chinese and English.
+
+- [Repository: full text mirror](https://github.com/mm7382/free-iching-bazi-ziwei-astrology-learning): Complete Markdown mirror of this site — beginner articles, every course lesson, all 64 hexagrams, and the tool, app and portfolio pages.
+- [Beginner articles index (37 articles, zh-Hant + en)](https://raw.githubusercontent.com/mm7382/free-iching-bazi-ziwei-astrology-learning/main/articles/README.md): Full text of every beginner article on the I Ching, Bazi, Zi Wei Dou Shu and Western astrology.
+- [Course lessons and 64 hexagrams index](https://raw.githubusercontent.com/mm7382/free-iching-bazi-ziwei-astrology-learning/main/courses/README.md): Full text of the Bazi (20), Zi Wei Dou Shu (36), Western astrology (36) and I Ching (8) lessons, plus all 64 hexagram pages with the classical text and a plain-language reading.
+- [Site, tools, apps and portfolio pages index](https://raw.githubusercontent.com/mm7382/free-iching-bazi-ziwei-astrology-learning/main/pages/README.md): Full text of the free browser tool pages, the app pages and the portfolio case pages.
+
+Licence: the article, lesson and commentary text is released under CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/) — it may be quoted, translated and adapted with attribution to Wei Chun Chuang. The classical text of the Zhou Yi and other classical sources quoted on the hexagram pages is in the public domain. App names, icons, source code and interface design are not covered.
+
 ## Author and licence
 
 - [關於作者與使用授權｜入門教學文章](https://mm7382.github.io/learn/about.html)
