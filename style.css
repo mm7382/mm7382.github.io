@@ -94,3 +94,12 @@ ol li,ul li{margin:5px 0}
 @media(max-width:900px){.hub-intro{grid-template-columns:1fr;gap:35px}.hub-intro-side{max-width:35em}.hub-work-item{grid-template-columns:35px 68px 1fr 24px}.hub-work-desc{grid-column:3;grid-row:2}.hub-work-arrow{grid-column:4;grid-row:1/3}.hub-work-item{row-gap:0}.hub-method{gap:40px}.hub-footer{grid-template-columns:1fr 1fr}.hub-footer div:first-child{grid-column:1/-1}}
 @media(max-width:600px){.hub-nav{min-height:62px}.hub-nav nav{gap:15px;font-size:.73rem}.hub-nav nav a:nth-child(2){display:none}.hub-brand{font-size:.82rem}.hub-intro{padding:48px 0 52px;gap:26px}.hub-overline{font-size:.59rem;margin-bottom:20px}.hub h1{font-size:clamp(2.55rem,9.4vw,4rem);line-height:1.26}.hub-intro-side p{font-size:.94rem;margin-bottom:20px}.hub-work,.hub-notes{padding-bottom:72px}.hub-section-head{align-items:start;flex-direction:column;gap:7px}.hub-work-item{grid-template-columns:25px 52px 1fr 17px;gap:12px;min-height:124px;padding:16px 2px}.hub-work-item img{width:50px;height:50px;border-radius:11px}.hub-work-name strong{font-size:1.25rem}.hub-work-category,.hub-work-no{font-size:.58rem}.hub-work-desc{font-size:.75rem}.hub-work-arrow{font-size:1.1rem}.hub-method{grid-template-columns:1fr;gap:30px;padding-top:60px;padding-bottom:60px}.hub-method h2{font-size:2.5rem}.hub-method div{font-size:.95rem}.hub-notes{padding-top:70px}.hub-note-list a{grid-template-columns:1fr 18px;gap:3px 10px;padding:14px 0;min-height:75px;font-size:.9rem}.hub-note-list span{grid-column:1/-1}.hub-note-list b{grid-column:2;grid-row:2}.hub-lab{grid-template-columns:1fr;gap:20px;margin-bottom:70px}.hub-lab h2{font-size:2.5rem}.hub-lab>a{justify-self:start}.hub-english{padding-bottom:70px}.hub-footer{gap:28px}}
 @media(prefers-reduced-motion:reduce){.hub-work-item{transition:none}}
+
+.app-cta{display:grid;grid-template-columns:64px minmax(0,1fr);gap:18px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:30px 0}
+.app-cta img{width:64px;height:64px;border-radius:14px;margin:0}
+.app-cta b{display:block;font-size:1.05rem;margin-bottom:6px}
+.app-cta p{margin:0 0 14px;font-size:.95rem;color:var(--ink2)}
+.app-cta-btn{display:inline-block;border:1px solid var(--red);color:var(--red);border-radius:6px;padding:9px 18px;font-size:.95rem;text-decoration:none}
+.app-cta-btn:hover{background:var(--red);color:var(--paper)}
+.app-cta-btn:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+@media(max-width:520px){.app-cta{grid-template-columns:1fr}.app-cta img{width:56px;height:56px}}
