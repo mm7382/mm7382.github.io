@@ -36,7 +36,7 @@
 - [教學測驗與文件套件｜試卷與評分資料｜Michael Agent Lab](https://mm7382.github.io/work/document-kit.html): Actual work, images and current availability.
 - [LINE 貼圖角色設計｜獅子角色概念稿｜Michael Agent Lab](https://mm7382.github.io/work/lion-character.html): Actual work, images and current availability.
 - [中文閱讀測驗文件範本｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/reading-template.html): Actual work, images and current availability.
-- [排得好｜排班與班表分享 App・測試中｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
+- [排得好｜排班與班表分享 App・App Store 上架中｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
 - [Sugar Boom｜糖果射擊手機遊戲・開發中｜Michael Agent Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
 - [情境主視覺設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/visual-scenes.html): Actual work, images and current availability.
 - [易見｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
