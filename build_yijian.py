@@ -16,6 +16,21 @@ def zh(s):
 def p(s):
     return ''.join(('<p>' + e(x) + '</p>' for x in zh(s).split('\n\n') if x))
 
+def hexagram_description(h):
+    """Unique, search-friendly summary: name, core message, judgment and what the page contains."""
+    judgment = h['originalJudgment'].split('：', 1)[-1].strip()
+    return f"{h['name']}卦（第 {h['number']} 卦）：{h['coreMessage']}。卦辭「{judgment}」，附六爻原文、白話解釋、宜做與避免，以及卦象結構教學，免費閱讀。"
+
+def lesson_description(l):
+    return f"{zh(l['title'])}：{zh(l['summary'])}易見免費易經入門八堂課第 {l['order']} 堂，附互動練習與小測驗。"
+
+INDEX_DESCRIPTIONS = {
+    '': '易見：免費、免登入的易經學習網站。查閱完整六十四卦原文與白話、跟著八堂入門課學陰陽八卦與動爻，或用三枚銅錢線上起卦，依朱熹變占法讀本卦與之卦。',
+    'cast/': '免費線上易經起卦：免登入、不需個人資料，用三枚銅錢由下往上擲出六爻，依朱熹變占法判讀本卦、動爻與之卦，並提供白話解讀與反思方向。紀錄只存在你的瀏覽器。',
+    'hexagrams/': '免費查閱完整六十四卦：每一卦都有卦辭與六爻原文、白話解釋、宜做與避免，以及上下卦結構教學。可用卦名或卦序搜尋，免登入、無廣告。',
+    'lessons/': '免費易經入門八堂課：從陰陽與六爻、八卦、六十四卦的組成，到動爻、之卦與解讀方法，一堂一堂學，每堂附互動練習及測驗，免登入。',
+}
+
 def heading(title, body):
     return '<section><h2>' + e(title) + '</h2>' + body + '</section>'
 
@@ -68,7 +83,7 @@ def reading(h, r):
             b += heading('用九' if key == 'useNine' else '用六', ''.join((p(v) for v in h[key].values())))
     b += heading('動手觀察', p(r['interaction']['instruction']) + interactive({'number': h['number'], 'interaction': r['interaction']}, 'reading')) + heading('小測驗', quiz(r['quiz'], 'hex-' + str(h['number'])))
     b += source(h) + '<p><a href="' + PREFIX + 'hexagrams/">返回六十四卦</a></p>'
-    page('hexagrams/' + str(h['number']) + '/', h['name'] + '卦：原文、白話與六爻解釋', h['coreMessage'], b)
+    page('hexagrams/' + str(h['number']) + '/', h['name'] + '卦：原文、白話與六爻解釋', hexagram_description(h), b)
 
 def lesson(l):
     b = '<p class="eyebrow">八堂入門課 / ' + str(l['order']).zfill(2) + '</p><h1>' + e(zh(l['title'])) + '</h1>' + p(l['summary']) + '<ul>' + ''.join(('<li>' + e(zh(o)) + '</li>' for o in l['objectives'])) + '</ul>'
@@ -81,7 +96,7 @@ def lesson(l):
     if l['order'] < 8:
         b += '<a class="next-lesson" href="' + PREFIX + 'lessons/' + str(l['order'] + 1) + '/">下一堂 →</a>'
     b += '</div>'
-    page('lessons/' + str(l['order']) + '/', zh(l['title']), zh(l['summary']), b, 'LearningResource')
+    page('lessons/' + str(l['order']) + '/', zh(l['title']), lesson_description(l), b, 'LearningResource')
 
 def build():
     hs = json.loads((DATA / 'hexagrams.json').read_text())['hexagrams']
@@ -91,11 +106,11 @@ def build():
     lessons = json.loads((DATA / 'lessons.json').read_text())['lessons']
     for l in lessons:
         lesson(l)
-    page('lessons/', '易經入門八堂課', '免費易經課程：陰陽、八卦、六十四卦、動爻與解讀，附互動練習及測驗。', '<p class="eyebrow">不用急著懂全部</p><h1>八堂課，從零開始。</h1><p>每堂都有可操作的練習。讀、試、再回頭看，一步步建立自己的理解。</p><ol class="entry-list">' + ''.join(('<li><a href="' + PREFIX + 'lessons/' + str(l['order']) + '/">' + str(l['order']).zfill(2) + '\u3000' + e(zh(l['title'])) + '</a><span class="lesson-progress" data-progress="' + e(l['id']) + '"></span><p>' + e(zh(l['summary'])) + '</p></li>' for l in lessons)) + '</ol>')
-    page('cast/', '免費線上易經起卦與解讀', '免費、免登入，使用三枚銅錢法起卦，依朱熹變占法閱讀本卦、動爻與之卦。', '<div class="cast-heading"><div class="cast-heading-copy"><p class="eyebrow">留一點時間給自己</p><h1>起一卦，慢慢讀。</h1><p>在心中整理一個想反思的問題，不必輸入個人資料。每次擲三枚銅錢，由下往上完成六爻。</p><div class="notice">使用三枚銅錢法：正面算 3，反面算 2。6、9 為動爻。完成後依朱熹變占法選擇主讀文字；解讀提供思考角度，不保證結果。</div><a class="cast-jump" href="#cast-form">現在開始擲銅錢 ↓</a></div>' + still_life(False) + '</div><form id="cast-form"><label class="field"><span>想反思的主題</span><select id="topic" aria-label="想反思的主題">' + ''.join(('<option value="' + k + '">' + v + '</option>' for k, v in [('general', '綜合'), ('career', '事業'), ('study', '學業'), ('romance', '感情'), ('family', '家庭'), ('relations', '人際'), ('finance', '財務'), ('wellness', '身心')])) + '</select></label><div class="actions"><button type="button" id="throw-coins">擲第一爻</button><button type="button" id="reset-cast" class="quiet">重新起卦</button></div><p id="throw-status" role="status">尚未起卦</p><div id="cast-lines"></div><details><summary>使用自己擲出的六爻數字</summary><p>由初爻至上爻填入 6、7、8、9，以空格分隔。</p><label class="field"><span>六爻數字</span><input id="manual-values" inputmode="numeric" placeholder="例如：9 8 8 7 7 8"></label><button type="submit">查看解讀</button></details></form><p id="cast-error" role="alert"></p><div id="result" tabindex="-1"></div>')
+    page('lessons/', '易經入門八堂課', INDEX_DESCRIPTIONS['lessons/'], '<p class="eyebrow">不用急著懂全部</p><h1>八堂課，從零開始。</h1><p>每堂都有可操作的練習。讀、試、再回頭看，一步步建立自己的理解。</p><ol class="entry-list">' + ''.join(('<li><a href="' + PREFIX + 'lessons/' + str(l['order']) + '/">' + str(l['order']).zfill(2) + '\u3000' + e(zh(l['title'])) + '</a><span class="lesson-progress" data-progress="' + e(l['id']) + '"></span><p>' + e(zh(l['summary'])) + '</p></li>' for l in lessons)) + '</ol>')
+    page('cast/', '免費線上易經起卦與解讀', INDEX_DESCRIPTIONS['cast/'], '<div class="cast-heading"><div class="cast-heading-copy"><p class="eyebrow">留一點時間給自己</p><h1>起一卦，慢慢讀。</h1><p>在心中整理一個想反思的問題，不必輸入個人資料。每次擲三枚銅錢，由下往上完成六爻。</p><div class="notice">使用三枚銅錢法：正面算 3，反面算 2。6、9 為動爻。完成後依朱熹變占法選擇主讀文字；解讀提供思考角度，不保證結果。</div><a class="cast-jump" href="#cast-form">現在開始擲銅錢 ↓</a></div>' + still_life(False) + '</div><form id="cast-form"><label class="field"><span>想反思的主題</span><select id="topic" aria-label="想反思的主題">' + ''.join(('<option value="' + k + '">' + v + '</option>' for k, v in [('general', '綜合'), ('career', '事業'), ('study', '學業'), ('romance', '感情'), ('family', '家庭'), ('relations', '人際'), ('finance', '財務'), ('wellness', '身心')])) + '</select></label><div class="actions"><button type="button" id="throw-coins">擲第一爻</button><button type="button" id="reset-cast" class="quiet">重新起卦</button></div><p id="throw-status" role="status">尚未起卦</p><div id="cast-lines"></div><details><summary>使用自己擲出的六爻數字</summary><p>由初爻至上爻填入 6、7、8、9，以空格分隔。</p><label class="field"><span>六爻數字</span><input id="manual-values" inputmode="numeric" placeholder="例如：9 8 8 7 7 8"></label><button type="submit">查看解讀</button></details></form><p id="cast-error" role="alert"></p><div id="result" tabindex="-1"></div>')
     page('records/', '我的學習與起卦紀錄', '查看與清除保存在目前瀏覽器的學習進度、起卦紀錄。', '<p class="eyebrow">留給自己的筆記</p><h1>我的紀錄</h1><p class="notice">紀錄只存在目前瀏覽器，不上傳、不跨裝置同步。無痕模式或清除瀏覽器資料後可能消失。</p><p id="storage-status" role="status"></p><section><h2>學習進度</h2><div id="saved-progress"></div></section><section><h2>起卦紀錄</h2><div id="saved-history"></div></section><section><button type="button" class="quiet" id="clear-records">清除全部紀錄與進度</button><div id="clear-confirm" hidden><p>確定清除？刪除後無法復原。</p><button id="confirm-clear" type="button">確定清除</button> <button id="cancel-clear" type="button" class="quiet">取消</button></div></section><div id="result" tabindex="-1"></div>')
-    page('hexagrams/', '六十四卦查閱：卦辭、爻辭與白話解釋', '免費查閱完整六十四卦，每卦含原文、六爻、白話與結構教學。', '<p class="eyebrow">從一卦開始</p><h1>六十四卦</h1><p>由下往上讀六爻，從原文走向理解。</p><label class="field"><span>搜尋卦名或卦序</span><input id="hex-search" type="search" placeholder="例如：乾、泰、11"></label><p id="search-status" role="status"></p><ul class="hex-list">' + ''.join(('<li data-search="' + str(h['number']) + ' ' + h['name'] + '"><a href="' + PREFIX + 'hexagrams/' + str(h['number']) + '/"><small>' + str(h['number']).zfill(2) + '</small>\u3000' + e(h['name']) + '</a></li>' for h in hs)) + '</ul>')
-    page('', '免費線上易經起卦與六十四卦學習', '易見：免費、免登入的易經工具。查閱六十四卦原文與白話，學習八堂課，線上起卦與解讀。', (ROOT / 'templates/museum-home.html').read_text())
+    page('hexagrams/', '六十四卦查閱：卦辭、爻辭與白話解釋', INDEX_DESCRIPTIONS['hexagrams/'], '<p class="eyebrow">從一卦開始</p><h1>六十四卦</h1><p>由下往上讀六爻，從原文走向理解。</p><label class="field"><span>搜尋卦名或卦序</span><input id="hex-search" type="search" placeholder="例如：乾、泰、11"></label><p id="search-status" role="status"></p><ul class="hex-list">' + ''.join(('<li data-search="' + str(h['number']) + ' ' + h['name'] + '"><a href="' + PREFIX + 'hexagrams/' + str(h['number']) + '/"><small>' + str(h['number']).zfill(2) + '</small>\u3000' + e(h['name']) + '</a></li>' for h in hs)) + '</ul>')
+    page('', '免費線上易經起卦與六十四卦學習', INDEX_DESCRIPTIONS[''], (ROOT / 'templates/museum-home.html').read_text())
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--source', type=Path)
