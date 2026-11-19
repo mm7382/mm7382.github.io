@@ -23,12 +23,27 @@ def lang_url(lesson_id, lang):
     return f'/bazi-web/learn/{lesson_id}/' + ('en/' if lang == 'en' else '')
 
 
-def shell(lang, title, body, *, lesson_id=None, page='index'):
+INDEX_DESCRIPTION = {
+    'zh': '時來八字二十堂免費課程：從四柱、天干地支、日主到十神，用白話一堂一堂讀懂八字，附圖解與練習題，免登入，筆記只存在你的瀏覽器。',
+    'en': 'Twenty free Shilai Bazi lessons in plain English: the four pillars, stems and branches, the Day Master and the ten gods, with diagrams and practice questions. No login; notes stay in your browser.',
+}
+
+
+def lesson_description(lesson, index, lang):
+    """Unique per-lesson summary; search engines flag shared or very short descriptions."""
+    title, lead = lesson['title'][lang], lesson['lead'][lang]
+    if lang == 'en':
+        text = f'{title}: {lead} Lesson {index+1} of 20 in the free Shilai Bazi course, with a teaching diagram, practice questions and sources.'
+        return text if len(text) <= 200 else f'{title}: {lead}'
+    return f'{title}：{lead}時來八字免費二十堂課第 {index+1} 堂，附教學圖解、練習題與出處。'
+
+
+def shell(lang, title, body, *, lesson_id=None, page='index', description=None):
     english = lang == 'en'
     alternate = 'zh' if english else 'en'
     translated = lang_url(lesson_id, alternate) if lesson_id else '/bazi-web/learn/' + ('review/' if page == 'review' else '') + ('en/' if alternate == 'en' else '')
     id_attr = f' data-lesson-id="{e(lesson_id)}"' if lesson_id else ''
-    lead = 'All 20 existing lessons, free to read.' if english else '原 App 的 20 堂課，全部免費閱讀。'
+    lead = description or ('All 20 existing lessons, free to read.' if english else '原 App 的 20 堂課，全部免費閱讀。')
     canonical = f'https://mm7382.github.io{lang_url(lesson_id,lang) if lesson_id else "/bazi-web/learn/" + ("review/" if page == "review" else "") + ("en/" if english else "")}'
     indexing = '<meta name="robots" content="noindex, nofollow">' if page == 'review' else '<meta name="robots" content="index, follow">'
     alternate_url = f'https://mm7382.github.io{translated}'
@@ -115,7 +130,7 @@ def lesson_page(lesson, lang, index):
 <section class="quiz" aria-labelledby="quiz-heading"><p class="eyebrow">CHECK YOURSELF</p><h2 id="quiz-heading">{'Try the lesson questions' if english else '讀完，練習看看。'}</h2><p class="micro">{'No score. An incorrect first answer enters your review book.' if english else '不計分；第一次答錯的題目會進複習本。'}</p>{quiz}</section>
 <section class="sources"><h2>{'Sources and further reading' if english else '本堂來源與閱讀線索'}</h2><ul>{sources}</ul></section>{study}{adjacent}</div>
 <aside class="reader-aside"><span>STUDY THE DETAILS</span><p>{'This is a teaching diagram, not your personal result.' if english else '圖解是教學示意，不是你的個人結果。'}</p><a href="/bazi-web/learn/{'en/' if english else ''}">{'All lessons' if english else '課程總覽'} ↗</a></aside></div></article>'''
-    return shell(lang, lesson['title'][lang], body, lesson_id=lesson_id, page='lesson')
+    return shell(lang, lesson['title'][lang], body, lesson_id=lesson_id, page='lesson', description=lesson_description(lesson, index, lang))
 
 
 def index_page(lang):
@@ -125,7 +140,7 @@ def index_page(lang):
         rows.append(f'<li data-lesson-id="{e(lesson["id"])}"><a href="{lang_url(lesson["id"],lang)}"><small>{number:02d} · {e(lesson["id"])}</small><strong>{e(lesson["title"][lang])}</strong><span>{e(lesson["lead"][lang])}</span></a><b aria-label="{e("Read" if english else "已讀")}" hidden>✓</b></li>')
     body = f'''<section class="index-hero wrap"><p class="eyebrow">THE BAZI LEARNING GALLERY</p><h1>{'Twenty lessons.<br>One chart at a time.' if english else '二十堂課，<br>一柱一柱讀懂。'}</h1><p>{'All original lessons are open. Start anywhere; you do not need a birth chart to read.' if english else '原 App 的二十堂教材都在這裡，免費閱讀。從哪一堂開始都可以，不用先排自己的命盤。'}</p><p id="progress-summary" class="progress-summary" aria-live="polite"></p></section>
 <section class="index-body wrap"><div class="index-intro"><span class="eyebrow">01—20 / CONTENTS</span><p>{'Read, make a note, and return when you are ready. Your progress stays in this browser.' if english else '讀完、記下疑問，有空再回來。進度與筆記只留在這個瀏覽器。'}</p><a href="/bazi-web/learn/review/{'en/' if english else ''}">{'My notes and review' if english else '我的筆記與複習'} ↗</a></div><ol class="lesson-list">{''.join(rows)}</ol></section>'''
-    return shell(lang, 'All 20 lessons' if english else '全部二十堂課', body, page='index')
+    return shell(lang, 'All 20 lessons' if english else '全部二十堂課', body, page='index', description=INDEX_DESCRIPTION[lang])
 
 
 def review_page(lang):
