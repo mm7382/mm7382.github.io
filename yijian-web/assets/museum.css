@@ -39,7 +39,7 @@
     .masthead .back-link { color: var(--bronze); border-bottom-color: currentColor; }
     .opening { min-height: min(800px, calc(100svh - 143px)); display: grid; grid-template-columns: minmax(0, 1.14fr) minmax(0, .86fr); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
     .opening-copy { display: flex; flex-direction: column; padding: clamp(46px, 6vw, 92px) clamp(35px, 6vw, 96px) 40px 0; }
-    .opening h1 { font-size: clamp(106px, 12.5vw, 190px); line-height: .95; letter-spacing: -.035em; white-space: nowrap; }
+    .opening h1 { font-size: clamp(34px, 12.5vw, 190px); line-height: .95; letter-spacing: -.035em; white-space: nowrap; }
     .opening h1 span { display: block; font: 400 clamp(14px, 1.35vw, 20px)/1.6 var(--sans); letter-spacing: .06em; color: var(--bronze); margin: 22px 0 38px 10px; }
     .opening-statement { max-width: 12em; font: 400 clamp(29px, 3.15vw, 49px)/1.38 var(--serif); text-wrap: balance; }
     .opening-detail { max-width: 31em; margin-top: 24px; color: var(--muted); font-size: 15px; }
@@ -75,7 +75,7 @@
     .specimen-board footer span { color: var(--bronze); font-size: 11px; }
     .gallery-copy { max-width: 450px; }
     .room-label { display: block; color: #cfbb98; font-size: 11px; letter-spacing: .17em; margin-bottom: 33px; }
-    .gallery h2 { font-size: clamp(40px, 4.3vw, 68px); line-height: 1.25; text-wrap: balance; }
+    .gallery h2 { font-size: clamp(26px, 4.3vw, 68px); line-height: 1.25; text-wrap: balance; }
     .gallery-lead { font: 400 clamp(19px, 1.8vw, 26px)/1.6 var(--serif); color: #e2d6bd; margin-top: 35px; }
     .gallery-copy > p:not(.en):not(.gallery-lead) { max-width: 29em; color: #d2d6ca; font-size: 15px; margin-top: 26px; }
     .gallery-copy .en { color: #d2d6ca; }
@@ -85,7 +85,7 @@
     .curriculum { padding: clamp(86px, 10vw, 150px) 0; }
     .section-head { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: 40px; align-items: end; padding-bottom: 50px; border-bottom: 1px solid var(--rule); }
     .section-head small { display: block; color: var(--bronze); font-size: 11px; letter-spacing: .17em; margin-bottom: 26px; }
-    .section-head h2 { font-size: clamp(42px, 5.5vw, 80px); line-height: 1.16; }
+    .section-head h2 { font-size: clamp(28px, 5.5vw, 80px); line-height: 1.16; }
     .section-head p { color: var(--muted); max-width: 32em; font-size: 15px; }
     .section-head .en { font-size: 14px; }
     .lesson-index { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 70px; }
@@ -97,7 +97,7 @@
     .participate { background: #e6dfd1; padding: clamp(85px, 10vw, 145px) 0; overflow: hidden; }
     .participate-inner { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); align-items: center; gap: clamp(50px, 8vw, 115px); }
     .participate small { color: var(--bronze); font-size: 11px; letter-spacing: .17em; }
-    .participate h2 { font-size: clamp(43px, 5.4vw, 77px); line-height: 1.2; margin: 33px 0 27px; }
+    .participate h2 { font-size: clamp(28px, 5.4vw, 77px); line-height: 1.2; margin: 33px 0 27px; }
     .participate p { max-width: 30em; color: #56594f; font-size: 15px; }
     .participate .en { color: #56594f; font-size: 14px; }
     .participate h2 + .en { color: var(--bronze); font-size: 16px; margin: -10px 0 24px; }
@@ -112,7 +112,7 @@
     .coin-caption { position: absolute; right: 29px; bottom: 27px; font-size: 11px; color: #55472f; letter-spacing: .1em; }
     .exit { padding: 90px 0 55px; }
     .exit-inner { border-top: 1px solid var(--rule); display: flex; align-items: end; justify-content: space-between; gap: 40px; padding-top: 55px; }
-    .exit h2 { font-size: clamp(37px, 4.5vw, 65px); line-height: 1.25; }
+    .exit h2 { font-size: clamp(26px, 4.5vw, 65px); line-height: 1.25; }
     .exit p { max-width: 40em; color: var(--muted); font-size: 13px; margin-top: 20px; }
     .exit .en { font-size: 13px; margin-top: 9px; }
     .exit a { display: inline-flex; align-items: center; gap: 34px; padding: 16px 0; border-bottom: 1px solid var(--bronze); color: var(--bronze); font-size: 14px; white-space: nowrap; text-decoration: none; }
@@ -120,7 +120,7 @@
     @media (max-width: 900px) {
       .frame { width: min(100% - 42px, 1420px); }
       .opening { min-height: unset; }
-      .opening h1 { font-size: clamp(82px, 12vw, 140px); }
+      .opening h1 { font-size: clamp(34px, 7.5vw, 140px); }
       .opening-copy { padding-right: 30px; }
       .gallery-inner, .participate-inner { gap: 38px; }
       .specimen { min-height: 530px; }
@@ -129,7 +129,7 @@
       .orientation { grid-template-columns: repeat(3, 1fr); }
     }
     @media (max-width: 700px) {
-      .frame { width: calc(100% - 36px); }
+      .frame { width: calc(100% - 40px); }
       .topline { font-size: 9px; }
       .topline .frame { min-height: 30px; }
       .masthead { min-height: 76px; align-items: center; gap: 16px; }
@@ -140,7 +140,7 @@
       .seal { width: 24px; }
       .opening { grid-template-columns: 1fr; }
       .opening-copy { min-width: 0; min-height: 560px; padding: 52px 10px 33px 0; }
-      .opening h1 { font-size: clamp(112px, 29vw, 155px); }
+      .opening h1 { font-size: clamp(34px, 10vw, 56px); }
       .opening h1 span { margin-left: 5px; margin-bottom: 30px; font-size: 10px; letter-spacing: .18em; white-space: normal; }
       .opening-statement { font-size: clamp(29px, 8vw, 39px); }
       .opening-detail { font-size: 14px; max-width: 28em; }
@@ -155,7 +155,7 @@
       .specimen { min-height: 500px; padding: 22px; }
       .specimen-board { max-width: 330px; width: 75%; padding: 28px; }
       .gallery-copy { padding-top: 12px; }
-      .gallery h2 { font-size: clamp(39px, 10vw, 54px); }
+      .gallery h2 { font-size: clamp(24px, 7.5vw, 54px); }
       .gallery-lead { margin-top: 21px; }
       .wall-note { margin-top: 38px; }
       .curriculum { padding: 83px 0; }
@@ -204,7 +204,7 @@ body.museum-interior > main { width: min(100% - 72px, 1420px); margin: 0 auto; p
 body.museum-interior > main::before { content: "易見收藏  ·  YI JIAN COLLECTION"; display: block; border-top: 1px solid var(--rule); color: var(--bronze); font-size: 11px; letter-spacing: .14em; padding-top: 16px; margin-bottom: 70px; }
 body.museum-interior > main > * { max-width: 900px; margin-left: auto; margin-right: auto; }
 body.museum-interior > main > .cast-heading { max-width: 1240px; }
-body.museum-interior h1 { font-size: clamp(47px, 5.4vw, 76px); font-weight: 500; line-height: 1.2; margin-bottom: 30px; }
+body.museum-interior h1 { font-size: clamp(30px, 5.4vw, 76px); font-weight: 500; line-height: 1.2; margin-bottom: 30px; }
 body.museum-interior h2 { font-size: clamp(29px, 3vw, 42px); font-weight: 500; line-height: 1.3; }
 body.museum-interior h3 { font-weight: 500; }
 body.museum-interior .eyebrow { color: var(--bronze); font-size: 12px; letter-spacing: .13em; }
@@ -240,9 +240,9 @@ input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible
   .masthead { display: block; padding-block: 17px; }
   .masthead nav { display: flex; gap: 10px 18px; margin-top: 19px; font-size: 12px; }
   .masthead nav a:not(.back-link) { display: inline; }
-  .site-footer { display: block; width: calc(100% - 36px); }
+  .site-footer { display: block; width: calc(100% - 40px); }
   .site-footer p { margin-bottom: 12px; }
-  body.museum-interior > main { width: calc(100% - 36px); padding-top: 24px; }
+  body.museum-interior > main { width: calc(100% - 40px); padding-top: 24px; }
   body.museum-interior > main::before { margin-bottom: 44px; }
   body.museum-interior .hexagram { width: min(100%, 310px); padding: 35px 45px; }
   body.museum-home > main > .curriculum { padding-block: 83px; }
