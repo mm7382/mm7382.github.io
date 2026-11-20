@@ -4,3 +4,5 @@
 @media(max-width:680px){.wrap{width:min(calc(100% - 40px),560px)}.topline{padding-inline:18px}.topline span{display:none}.masthead{padding:20px 0;min-height:auto;display:block}.masthead nav{margin:20px 0 12px;flex-wrap:wrap;gap:18px}.index-hero,.lesson-hero{padding:58px 0}.index-body{display:block}.index-intro{position:static;margin-bottom:30px}.lesson-list li a{grid-template-columns:60px 1fr;padding-right:25px}.lesson-list strong{font-size:19px}.reader{gap:0}.palace-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.lesson-section{grid-template-columns:1fr;gap:7px}.quiz-options{grid-template-columns:1fr}.study-panel{padding:22px}footer .wrap{display:block}}
 .chart-task button{background:#fffaf7;border:1px solid var(--brass);color:var(--plum);padding:10px 15px;margin:6px 16px 6px 0}.chart-task button[aria-pressed=true]{background:var(--plum);color:white}
 .review-notice{max-width:58em;margin-top:24px;padding:12px 16px;border-left:2px solid var(--brass);background:#eadfe4;color:#695663;font-size:12px}
+@media(max-width:700px){.lesson-section p{font-size:17px}.room-intro>p:last-child{font-size:16px}}
+@media(max-width:700px){.lesson-list span{font-size:14px}}
