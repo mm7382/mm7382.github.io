@@ -58,7 +58,7 @@ BAZI = {
 ZIWEI = {
     "slug": "ziwei", "name": "時來－紫微", "en": "SHILAI Ziwei", "icon": "/ziwei/icon.png",
     "tag": "從命宮開始，讀懂自己的盤", "tag_en": "Read your own Zi Wei chart",
-    "status": "即將上架", "status_en": "Coming soon to the App Store",
+    "status": "App Store 已上架", "status_en": "On the App Store",
     "os": "iOS 17 or later",
     "intro": "時來－紫微會依你的出生資料排出紫微斗數十二宮命盤，再用課程一步步帶你學會自己讀。前三堂不用先填生日就能上完。每一句解釋都分成古籍原文、白話轉述與本專案自撰三層，古籍原文只取自《紫微斗數全書》卷一至卷三，並對照原典。",
     "intro_en": "SHILAI Ziwei builds your Zi Wei Dou Shu (Purple Star Astrology) twelve-palace chart from your birth details and teaches you, lesson by lesson, how to read it yourself. The first three lessons can be finished before you even create a chart. Every explanation is labelled as classical passage, plain-language restatement, or the project's own wording; classical lines come only from volumes 1–3 of the Ziwei Doushu Quanshu, checked against the original text.",
@@ -105,7 +105,7 @@ ZIWEI = {
                ("Where should a Zi Wei Dou Shu beginner start?", "With palaces, branches and stars, then the Life and Body Palaces, then the major stars in your Life Palace — exactly the three free lessons."),
                ("Are the explanations sourced?", "Yes. Each line is labelled as classical passage, restatement or the project's own wording; classical lines come from volumes 1–3 of the Ziwei Doushu Quanshu."),
                ("Can I use it without my birth time?", "A chart can't be generated without it, and the app says so plainly — but the first three lessons work without a chart.")],
-    "llms": "SHILAI Ziwei: iPhone course for reading your own Zi Wei Dou Shu (Purple Star Astrology) twelve-palace chart. 36 lessons (3 free, usable before creating a chart); each explanation labelled classical passage / restatement / own wording, classical lines only from Ziwei Doushu Quanshu vols 1–3. No fortune verdicts. Traditional Chinese and English. No account. Coming soon.",
+    "llms": "SHILAI Ziwei: iPhone course for reading your own Zi Wei Dou Shu (Purple Star Astrology) twelve-palace chart. 36 lessons (3 free, usable before creating a chart); each explanation labelled classical passage / restatement / own wording, classical lines only from Ziwei Doushu Quanshu vols 1–3. No fortune verdicts. Traditional Chinese and English. No account. Available on the App Store: https://apps.apple.com/tw/app/id6821574290",
 }
 
 ASTRO = {
