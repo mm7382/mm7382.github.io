@@ -5,10 +5,11 @@ function draw(){
  const c=canvas.getContext('2d');c.setTransform(dpr,0,0,dpr,0,0);c.clearRect(0,0,w,h);
  c.translate(w/2+camera.x,h/2+camera.y);c.scale(camera.zoom,camera.zoom);c.translate(-w/2,-h/2);
  c.fillStyle='#9ab57a';c.fillRect(0,0,w,h);
- if(scenery.complete&&scenery.naturalWidth){
-  const scale=Math.max(w/scenery.naturalWidth,h/scenery.naturalHeight);
-  const iw=scenery.naturalWidth*scale,ih=scenery.naturalHeight*scale;
-  c.drawImage(scenery,(w-iw)/2,(h-ih)/2,iw,ih);
+ const landscape=worldKey==='eden'?edenScenery:scenery;
+ if(landscape.complete&&landscape.naturalWidth){
+  const scale=Math.max(w/landscape.naturalWidth,h/landscape.naturalHeight);
+  const iw=landscape.naturalWidth*scale,ih=landscape.naturalHeight*scale;
+  c.drawImage(landscape,(w-iw)/2,(h-ih)/2,iw,ih);
  }
  const mapW=latest.world.width||11,mapH=latest.world.height||10;const unit=Math.max(12,Math.min(w/24,h/15)*Math.min(1,14/mapW));
  const jitter=(x,y,k)=>{const n=Math.sin(x*(k?53.1:91.7)+y*(k?73.7:157.3))*(k?24634.6345:43758.5453);return n-Math.floor(n)-.5};
@@ -24,7 +25,7 @@ function draw(){
   }
  }
  resourceHits=[];
- const river=latest.world.waterTiles||[];if(river.length>1){
+ const river=latest.world.waterTiles||[];if(river.length>1&&worldKey!=='eden'){
   const points=river.map(tile=>pt(...tile.split(',').map(Number))),xs=points.map(p=>p[0]),ys=points.map(p=>p[1]),top=Math.min(...ys),bottom=Math.max(...ys),center=(Math.min(...xs)+Math.max(...xs))/2;
   if(riverAsset.complete&&riverAsset.naturalWidth){const riverWidth=Math.max(unit*5,Math.max(...xs)-Math.min(...xs)+unit*4);c.drawImage(riverAsset,center-riverWidth/2,0,riverWidth,h+unit)}
   else{c.save();c.strokeStyle='#5f8983';c.lineWidth=unit;c.lineCap='round';c.beginPath();c.moveTo(...points[0]);for(const point of points.slice(1))c.lineTo(...point);c.stroke();c.restore()}
@@ -41,6 +42,7 @@ function draw(){
  for(const [xy,r] of Object.entries(latest.world.resources||{})){
   const [x,y]=xy.split(',').map(Number);objects.push({kind:'resource',x,y,r});
  }
+ for(const landmark of latest.world.landmarks||[])objects.push({kind:'landmark',x:landmark.x,y:landmark.y,landmark});
  for(const landmark of latest.world.landmarks||[])objects.push({kind:'landmark',x:landmark.x,y:landmark.y,landmark});
  for(const b of latest.world.buildings||[])objects.push({kind:'building',x:b.x,y:b.y});
  for(const animal of latest.world.animals||[])objects.push({kind:'animal',x:animal.x,y:animal.y,animal});
@@ -67,6 +69,7 @@ function draw(){
   }else if(object.kind==='landmark'){
    tree(x,y,1);const label=object.landmark.id==='life-tree'?tr('生命樹','Tree of Life'):tr('知善惡樹','Tree of Knowledge');
    c.save();c.textAlign='center';c.font='650 12px system-ui';const tw=c.measureText(label).width+12;const ty=Math.max(5,y-unit*5.5);c.fillStyle='#172a21e8';c.fillRect(x-tw/2,ty,tw,19);c.fillStyle='#fff2ca';c.fillText(label,x,ty+14);c.restore();
+  }else if(object.kind==='landmark'){tree(x,y,1);resourceHits.push({x,y:y-unit*2,radius:unit*2,caption:object.landmark.name});
   }else if(object.kind==='building'){
    if(!asset(1,1,x-unit*2.8,y-unit*4.4,unit*5.6,unit*4.5)){
     c.fillStyle='#b9946d';c.fillRect(x-unit*.54,y-unit*.72,unit*1.08,unit*.72);

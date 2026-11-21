@@ -8,3 +8,5 @@
 .world-categories .development-status{background:#263b32;border:1px solid var(--line);border-radius:7px;padding:8px 14px;color:var(--muted);cursor:default}.world-categories .development-status strong,.world-categories .development-status small{display:block}.replay-exit{margin:0 0 10px;text-align:right}.replay-exit button{min-height:36px;font-size:.85rem}
 
 .historical{margin-top:clamp(28px,5vw,64px);padding-top:16px;border-top:1px solid var(--line);scroll-margin-top:12px}.historical h2{margin:.2em 0 .3em}.historical>p:not(.status){margin:.2em 0 1em;color:var(--muted)}.archive-grid{padding:0;list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 18px}.archive-grid a{display:block;padding:12px;border-radius:9px;border:1px solid var(--line);background:var(--panel);text-decoration:none}.archive-grid a:hover{border-color:var(--accent)}.archive-grid small{display:block;color:var(--muted);margin-top:5px}@media(max-width:800px){.archive-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.unreleased #worldName,.unreleased .replay-exit{display:none}.unreleased #viewer{margin-top:28px}

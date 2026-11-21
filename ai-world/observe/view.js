@@ -3,8 +3,9 @@ const $=id=>document.getElementById(id), en=document.documentElement.lang==='en'
 const root='/ai-world/observe/';
 let camera={zoom:1,x:0,y:0}, dragging=null, resourceHits=[], latest=null, animation=null, positions={},activeSpeech={},activeRest={},bundle,worldKey=new URLSearchParams(location.search).get('world')||'eden',shown=null,run=null;
 const [characters,worldAssets,riverAsset,foodSprites,animalSprites,scenery]=['characters','life-objects','life-river-v1','life-food-v1','life-animals-v1','life-meadow-v2'].map(key=>{const img=new Image();img.onload=()=>{if(latest&&!animation)draw()};img.src=root+'assets/'+key+'.webp';return img});
+const edenScenery=new Image();edenScenery.onload=()=>{if(latest&&!animation)draw()};edenScenery.src=root+'assets/eden-meadow.webp';
 const labels={move:['移動','walked'],gather:['採集','gathered'],fish:['釣魚','fished'],eat:['吃東西','ate'],drink:['喝水','drank'],rest:['休息','rested'],sleep:['睡覺','slept'],build:['建造住處','built shelter'],talk:['與對方交談','spoke'],share:['分享食物','shared food'],care:['照顧','provided care'],craft:['製作工具','crafted'],hunt:['狩獵','hunted'],fire:['生火','lit a fire'],cook:['烹煮','cooked'],research:['研究','researched'],family:['討論家庭','discussed family'],birth:['出生','birth'],death:['離世','died'],offer:['提出分享','made an offer'],accept:['接受','accepted'],reject:['拒絕','declined']};
-const name=id=>id==='1'?tr('亞當','Adam'):tr('夏娃','Eve');
+const name=id=>worldKey==='eden'?(id==='1'?tr('夏娃','Eve'):tr('亞當','Adam')):(id==='1'?tr('亞當','Adam'):tr('夏娃','Eve'));
 const action=a=>(labels[a]||[])[en?1:0]||'';
 const stamp=m=>{const n=(m||0)+420;return tr('第 '+(Math.floor(n/1440)+1)+' 天','Day '+(Math.floor(n/1440)+1))+' · '+String(Math.floor((n%1440)/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')};
 function note(e){return stamp(e.minute)+'　'+name(e.actor)+' '+action(e.action)+(e.text?'：「'+e.text+'」':'')}
@@ -14,7 +15,7 @@ function state(data,reset=false){
  latest={...data,world:{...data.world,people:data.world.people.map(p=>({...p,name:name(p.id)}))}};
  $('worldTime').textContent=stamp(data.minute);$('worldName').textContent=en?data.en:data.zh;
  $('saved').textContent=tr('存檔時間：','Saved: ')+new Intl.DateTimeFormat(en?'en-GB':'zh-TW',{dateStyle:'medium',timeStyle:'short',timeZone:'Asia/Taipei'}).format(new Date(data.saved))+tr('（台灣）',' (Taipei)');
- $('people').replaceChildren(...data.world.people.map(p=>{const li=document.createElement('li');li.textContent=name(p.id)+' · '+(p.health<=0?tr('已離世','deceased'):tr('健康 ','Health ')+p.health+' · '+tr('口渴 ','Thirst ')+p.thirst);return li}));
+ $('people').replaceChildren(...data.world.people.map(p=>{const li=document.createElement('li');li.textContent=name(p.id)+' · '+(p.health<=0?tr('已離世','deceased'):tr('健康 ','Health ')+Math.round(p.health)+' · '+tr('口渴 ','Thirst ')+Math.round(p.thirst));return li}));
  if(!animation)draw();
 }
 const group=w=>w.category==='development'?'development':'archive';
@@ -26,7 +27,7 @@ function showDevelopment(){
 function select(data){
  end(false);shown=data;worldKey=data.key;
  $('viewer').hidden=false;
- const g=group(data);
+ const g=group(data);(g==='development'?$('unreleased'):$('history')).appendChild($('viewer'));
  const matches=bundle.worlds.filter(w=>group(w)===g);
  $('worldSelect').replaceChildren(...matches.map(w=>{const o=document.createElement('option');o.value=w.key;o.textContent=en?w.en:w.zh;return o}));
  $('worldSelect').value=worldKey;
@@ -41,6 +42,7 @@ function end(restore=true){if(run)clearTimeout(run.timer);run=null;activeSpeech=
 function play(){
  if(run){end();return}
  if(!shown)return;
+ if(shown.key==='eden'&&shown.replayFrames?.length){playEden();return}
  const e=shown.events, quote=e.findIndex(x=>x.text), n=quote>=0?Math.max(0,quote-8):Math.max(0,e.length-24), frames=e.slice(n,quote>=0?quote+13:undefined);
  if(!frames.length)return;
  const previous={}, deceased=new Set();for(const x of e.slice(0,n)){
@@ -57,6 +59,7 @@ function play(){
  }
  step();
 }
+function playEden(){const source=shown,frames=source.replayFrames;let i=0;run={timer:null};$('play').textContent=tr('停止回放','Stop replay');$('mode').textContent=tr('真實決策紀錄回放 · 非直播','Actual decisions replay · Not live');function step(){if(!run)return;if(i>=frames.length){run=null;$('play').textContent=tr('播放紀錄','Play record');return}const frame=frames[i++];state({...source,minute:frame.minute,world:frame.world},true);const ev=frame.event;activeSpeech={};if(ev?.action==='talk'&&ev.text)activeSpeech[ev.actor]={text:ev.text,until:Date.now()+2400};$('event').textContent=ev?note(ev):tr('世界第一天，兩人從這裡開始。','The first day begins here.');if(!animation)draw();run.timer=setTimeout(step,ev?.text?2600:850)}step()}
 async function refresh(){
  try{const res=await fetch(root+'data.json',{cache:'no-store',credentials:'omit'});if(!res.ok)throw Error('unavailable');const json=await res.json();
  if(json.version!==1||!Array.isArray(json.worlds)||!json.worlds.length)throw Error('invalid format');
