@@ -228,6 +228,7 @@ def sitemap():
     urls = [BASE + "/"] + [f"{BASE}/{a['slug']}/" for a in APPS] + learn + [BASE + "/llms.txt", BASE + "/yijian/llms.txt"]
     urls += [BASE + '/' + str(p.parent.relative_to(__import__('pathlib').Path(HERE))) + '/' for p in sorted(__import__('pathlib').Path(HERE).glob('yijian-web/**/index.html')) if '/records/' not in str(p)]
     urls += [BASE + '/bazi-web/']
+    urls += [BASE + '/ai-world/', BASE + '/ai-world/en/']
     urls += [BASE + '/' + str(p.parent.relative_to(__import__('pathlib').Path(HERE))) + '/' for p in sorted(__import__('pathlib').Path(HERE).glob('bazi-web/learn/**/index.html')) if '/review/' not in str(p)]
     for slug in ['ziwei-web', 'astrology-web']:
         urls += [BASE + f'/{slug}/', BASE + f'/{slug}/llms.txt']
