@@ -67,7 +67,7 @@ function draw(){
    }
    if(object.r.food>0||object.r.wood>0)resourceHits.push({x,y:y-unit*.75,radius:unit*1.4,caption:'野果 '+(object.r.food||0)+' 份 · 木材 '+(object.r.wood||0)+' 份'});
   }else if(object.kind==='landmark'){
-   tree(x,y,1);const label=object.landmark.id==='life-tree'?tr('生命樹','Tree of Life'):tr('知善惡樹','Tree of Knowledge');
+   c.save();c.shadowColor=object.landmark.id==='life-tree'?'#f3ce69':'#cf98d8';c.shadowBlur=unit*.65;tree(x,y,object.landmark.id==='life-tree'?1.18:1.05);c.restore();const label=object.landmark.id==='life-tree'?tr('生命樹','Tree of Life'):tr('知善惡樹','Tree of Knowledge');
    c.save();c.textAlign='center';c.font='650 12px system-ui';const tw=c.measureText(label).width+12;const ty=Math.max(5,y-unit*5.5);c.fillStyle='#172a21e8';c.fillRect(x-tw/2,ty,tw,19);c.fillStyle='#fff2ca';c.fillText(label,x,ty+14);c.restore();
   }else if(object.kind==='landmark'){tree(x,y,1);resourceHits.push({x,y:y-unit*2,radius:unit*2,caption:object.landmark.name});
   }else if(object.kind==='building'){
