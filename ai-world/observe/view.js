@@ -21,14 +21,14 @@ const group=w=>w.category==='development'?'development':'archive';
 function showDevelopment(){
  end(false); if(animation)cancelAnimationFrame(animation);
  animation=null; latest=null; shown=null; worldKey='eden';
- $('development').setAttribute('aria-pressed','true');$('archive').setAttribute('aria-pressed','false');
+ $('archive').setAttribute('aria-pressed','false');
  $('viewer').hidden=true;$('unreleased').hidden=false;
 }
 function select(data){
  end(false);shown=data;worldKey=data.key;
  $('unreleased').hidden=true;$('viewer').hidden=false;
  const g=group(data);
- for(const k of ['development','archive'])$(k).setAttribute('aria-pressed',String(k===g));
+ $('archive').setAttribute('aria-pressed',String(g==='archive'));
  const matches=bundle.worlds.filter(w=>group(w)===g);
  $('worldSelect').replaceChildren(...matches.map(w=>{const o=document.createElement('option');o.value=w.key;o.textContent=en?w.en:w.zh;return o}));
  $('worldSelect').value=worldKey;
@@ -72,7 +72,7 @@ async function refresh(){
  $('scene').classList.add('ready');
  }catch{if(!bundle)$('mode').textContent=tr('存檔暫時無法讀取','Save temporarily unavailable');}
 }
-$('development').onclick=showDevelopment;
+$('closeArchive').onclick=showDevelopment;
 async function openArchive(){
  if(!bundle){await refresh();}
  const w=bundle?.worlds.find(w=>group(w)==='archive');
