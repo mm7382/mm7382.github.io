@@ -41,6 +41,7 @@ function draw(){
  for(const [xy,r] of Object.entries(latest.world.resources||{})){
   const [x,y]=xy.split(',').map(Number);objects.push({kind:'resource',x,y,r});
  }
+ for(const landmark of latest.world.landmarks||[])objects.push({kind:'landmark',x:landmark.x,y:landmark.y,landmark});
  for(const b of latest.world.buildings||[])objects.push({kind:'building',x:b.x,y:b.y});
  for(const animal of latest.world.animals||[])objects.push({kind:'animal',x:animal.x,y:animal.y,animal});
  for(const fire of latest.world.fires||[])if(fire.until>latest.minute)objects.push({kind:'fire',x:fire.x,y:fire.y});
@@ -63,6 +64,9 @@ function draw(){
     for(let j=0;j<bushes;j++){const bx=x-unit*.85+j*unit*.38,by=y-unit*1.05+(j%2)*unit*.12;if(!asset(1,0,bx,by,unit*.95,unit*.73))ellipse(bx,by,unit*.25,unit*.12,'#527e4b')}
    }
    if(object.r.food>0||object.r.wood>0)resourceHits.push({x,y:y-unit*.75,radius:unit*1.4,caption:'野果 '+(object.r.food||0)+' 份 · 木材 '+(object.r.wood||0)+' 份'});
+  }else if(object.kind==='landmark'){
+   tree(x,y,1);const label=object.landmark.id==='life-tree'?tr('生命樹','Tree of Life'):tr('知善惡樹','Tree of Knowledge');
+   c.save();c.textAlign='center';c.font='650 12px system-ui';const tw=c.measureText(label).width+12;const ty=Math.max(5,y-unit*5.5);c.fillStyle='#172a21e8';c.fillRect(x-tw/2,ty,tw,19);c.fillStyle='#fff2ca';c.fillText(label,x,ty+14);c.restore();
   }else if(object.kind==='building'){
    if(!asset(1,1,x-unit*2.8,y-unit*4.4,unit*5.6,unit*4.5)){
     c.fillStyle='#b9946d';c.fillRect(x-unit*.54,y-unit*.72,unit*1.08,unit*.72);
