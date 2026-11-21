@@ -46,6 +46,7 @@ function draw(){
  for(const fire of latest.world.fires||[])if(fire.until>latest.minute)objects.push({kind:'fire',x:fire.x,y:fire.y});
  let moving=false;
  for(const [i,p] of latest.world.people.entries()){
+  if(!Number.isFinite(p.x)||!Number.isFinite(p.y))continue;
   let loc=positions[p.id]||{x:p.x,y:p.y};loc.x+=(p.x-loc.x)*.09;loc.y+=(p.y-loc.y)*.09;
   if(Math.abs(p.x-loc.x)+Math.abs(p.y-loc.y)>.01)moving=true;
   positions[p.id]=loc;objects.push({kind:'person',x:loc.x,y:loc.y,p,i});

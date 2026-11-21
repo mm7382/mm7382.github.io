@@ -24,10 +24,11 @@ function play(){
  if(!shown)return;
  const e=shown.events, quote=e.findIndex(x=>x.text), n=quote>=0?Math.max(0,quote-8):Math.max(0,e.length-24), frames=e.slice(n,quote>=0?quote+13:undefined);
  if(!frames.length)return;
- const previous={};for(const x of e.slice(0,n))if(x.action==='move'&&x.target)previous[x.actor]=x.target.split(',').map(Number);
- for(let i=0;i<frames.length;i++){const x=frames[i];if(x.action==='move'&&x.target&&!previous[x.actor])previous[x.actor]=x.target.split(',').map(Number)}
- if(!shown.world.people.every(p=>previous[p.id])){$('event').textContent=tr('這段缺少可驗證的位置，保留最新存檔。','No verified path for both characters in this excerpt.');return}
- const people=shown.world.people.map(p=>({...p,x:previous[p.id][0],y:previous[p.id][1],health:1}));
+ const previous={}, deceased=new Set();for(const x of e.slice(0,n)){
+  if(x.action==='move'&&x.target)previous[x.actor]=x.target.split(',').map(Number);
+  if(x.action==='death')deceased.add(x.actor);
+ }
+ const people=shown.world.people.map(p=>({...p,x:previous[p.id]?.[0],y:previous[p.id]?.[1],health:deceased.has(p.id)?0:1}));
  latest={...shown,world:{...shown.world,people:people.map(p=>({...p,name:name(p.id)}))},events:[]};positions={};activeRest={};activeSpeech={};
  $('play').textContent=tr('停止回放','Stop replay');$('mode').textContent=tr('紀錄回放 · 地形使用存檔底圖','Record replay · Base map from the save');
  run={i:0,timer:null};
