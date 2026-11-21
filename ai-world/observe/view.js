@@ -18,8 +18,15 @@ function state(data,reset=false){
  if(!animation)draw();
 }
 const group=w=>w.category==='development'?'development':'archive';
+function showDevelopment(){
+ end(false); if(animation)cancelAnimationFrame(animation);
+ animation=null; latest=null; shown=null; worldKey='eden';
+ $('development').setAttribute('aria-pressed','true');$('archive').setAttribute('aria-pressed','false');
+ $('viewer').hidden=true;$('unreleased').hidden=false;
+}
 function select(data){
  end(false);shown=data;worldKey=data.key;
+ $('unreleased').hidden=true;$('viewer').hidden=false;
  const g=group(data);
  for(const k of ['development','archive'])$(k).setAttribute('aria-pressed',String(k===g));
  const matches=bundle.worlds.filter(w=>group(w)===g);
@@ -55,7 +62,9 @@ function play(){
 async function refresh(){
  try{const res=await fetch(root+'data.json',{cache:'no-store',credentials:'omit'});if(!res.ok)throw Error('unavailable');const json=await res.json();
  if(json.version!==1||!Array.isArray(json.worlds)||!json.worlds.length)throw Error('invalid format');
- bundle=json;const w=json.worlds.find(w=>w.key===worldKey)||json.worlds[0];
+ bundle=json;
+ if(worldKey==='eden'){const eden=json.worlds.find(w=>w.key==='eden');if(!eden){if(shown)showDevelopment();return}}
+ const w=json.worlds.find(w=>w.key===worldKey)||json.worlds[0];
  if(!run&&(!shown||w.minute!==shown.minute||w.saved!==shown.saved)){
   if(shown&&shown.key===w.key){activeSpeech={};const ids=new Set(shown.events.map(e=>e.id));for(const ev of w.events)if(ev.text&&!ids.has(ev.id))activeSpeech[ev.actor]={text:ev.text,until:Date.now()+6500};shown=w;listed(w);state(w);}
   else select(w);
@@ -63,7 +72,13 @@ async function refresh(){
  $('scene').classList.add('ready');
  }catch{if(!bundle)$('mode').textContent=tr('存檔暫時無法讀取','Save temporarily unavailable');}
 }
-for(const g of ['development','archive'])$(g).onclick=()=>{const w=bundle?.worlds.find(w=>group(w)===g);if(w&&group(shown)!==g){camera={zoom:1,x:0,y:0};select(w)}};
+$('development').onclick=showDevelopment;
+async function openArchive(){
+ if(!bundle){await refresh();}
+ const w=bundle?.worlds.find(w=>group(w)==='archive');
+ if(w&&(!shown||group(shown)!=='archive')){camera={zoom:1,x:0,y:0};select(w);$('scene').classList.add('ready')}
+}
+$('archive').onclick=$('openArchive').onclick=openArchive;
 $('worldSelect').onchange=()=>{const w=bundle?.worlds.find(x=>x.key===$('worldSelect').value);if(w){camera={zoom:1,x:0,y:0};select(w)}};
 $('play').onclick=play;
 $('zoomIn').onclick=()=>{camera.zoom=Math.min(3,camera.zoom*1.25);draw()};
