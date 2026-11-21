@@ -95,8 +95,9 @@ function draw(){
     const sourceWidth=characters.naturalWidth/2, sourceHeight=characters.naturalHeight;
     const spriteHeight=unit*(p.isAdult===false?1.5:2.85),spriteWidth=spriteHeight*sourceWidth/sourceHeight;
     c.save();c.shadowColor=i?'#ffcf80':'#b4f0f0';c.shadowBlur=unit*.65;if(p.health<=0)c.globalAlpha=.45;
-    if(isResting||activeRest[p.id]>Date.now()){c.translate(x,y-unit*.24);c.rotate(Math.PI/2);c.drawImage(characters,(i%2)*sourceWidth,0,sourceWidth,sourceHeight,-spriteWidth/2,-spriteHeight/2,spriteWidth,spriteHeight)}else{c.drawImage(characters,(i%2)*sourceWidth,0,sourceWidth,sourceHeight,x-spriteWidth/2,y-spriteHeight,spriteWidth,spriteHeight)}
+    c.drawImage(characters,(i%2)*sourceWidth,0,sourceWidth,sourceHeight,x-spriteWidth/2,y-spriteHeight,spriteWidth,spriteHeight);
     c.restore();
+    if(isResting||activeRest[p.id]>Date.now()){c.save();c.font='600 '+Math.max(11,unit*.38)+'px system-ui';c.textAlign='center';c.lineWidth=3;c.strokeStyle='#17271f';c.fillStyle='#fff9de';const restLabel=lastPersonEvent?.action==='sleep'?'Z z':'休息中';c.strokeText(restLabel,x+unit*.65,y-spriteHeight-unit*.12);c.fillText(restLabel,x+unit*.65,y-spriteHeight-unit*.12);c.restore()}
    }else{
     c.fillStyle=i?'#987458':'#778e83';
     c.beginPath();c.roundRect(x-sz*.17,y-sz*.65,sz*.34,sz*.43,sz*.08);c.fill();
