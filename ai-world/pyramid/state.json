@@ -1,0 +1,46 @@
+{
+  "schema": 1,
+  "run": "1020731313f6",
+  "status": "blocked",
+  "waitingFor": null,
+  "publishedAt": 1795418682.032587,
+  "updatedAt": 1795418682.032584,
+  "modelCalls": 0,
+  "stone": {
+    "id": "K001",
+    "massKg": 2000,
+    "progress": 0.0,
+    "route": "direct",
+    "location": "quay",
+    "motion": null,
+    "placed": false
+  },
+  "crew": 0,
+  "wet": false,
+  "surveyed": false,
+  "blocked": false,
+  "physics": {
+    "requiredN": 5875,
+    "availableN": 0,
+    "mu": 0.24,
+    "slope": 0.06,
+    "perWorkerN": 240
+  },
+  "events": [
+    {
+      "id": 1,
+      "at": 1795418682.032584,
+      "type": "system",
+      "text": "工地就緒。尚未收到 AI 決策。",
+      "actor": null
+    }
+  ],
+  "roles": {
+    "planner": "阿岑・工地協調",
+    "transport": "阿禾・搬運領班",
+    "mason": "阿石・砌築領班"
+  },
+  "testCondition": true,
+  "error": "本次工作環境無法啟動獨立 AI 程序。這是待驗收場景，尚無 AI 發言或施工成果。",
+  "scope": "一塊石材・低層施工驗收；非完整金字塔復原"
+}
