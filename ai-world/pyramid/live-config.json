@@ -1,5 +1,6 @@
 {
   "liveUrl": null,
   "snapshot": "state.json",
-  "connectionStatus": "模型啟動與外網即時連線受阻；顯示最近公開存檔。"
+  "syncMode": "batch",
+  "pollMs": 15000
 }
