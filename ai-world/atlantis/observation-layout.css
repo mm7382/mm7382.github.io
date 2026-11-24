@@ -21,3 +21,7 @@ body{background:var(--bg)}.mast{background:#17251e;min-height:86px;padding:14px 
 @media(max-width:800px){.world>.viewport{min-height:0;max-height:none;aspect-ratio:1120 / 600}}
 
 .map-zoom #zoom-reset{font-size:12px;height:34px;border-top:1px solid #506244}
+/* More room for the bay, especially in the in-app observation pane. */
+main{max-width:1920px;padding-inline:12px}.hero{min-height:170px;padding-block:18px}.layout{grid-template-columns:minmax(0,1fr) 245px;gap:12px}.recent-life{padding:16px}.live-world-clock small{margin-top:8px}
+@media(max-width:1100px){.layout{display:flex;flex-direction:column;gap:14px}.layout>.world{width:100%;order:0}.recent-life{width:100%;order:1;max-height:300px}.world>.viewport{width:100%;aspect-ratio:1120 / 600;min-height:0;max-height:none}.hero{min-height:150px}.hero h1{font-size:28px}.recent-life h2{margin-bottom:8px}}
+@media(max-width:600px){main{padding-inline:8px}.hero{padding-block:14px}.hero h1{font-size:25px}}
