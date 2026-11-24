@@ -36,7 +36,7 @@ const sky = `<defs>
 <mask id="sea-mask"><rect x="-20" y="-20" width="1160" height="640" fill="white"/><path d="${land}" fill="black"/></mask>
 </defs>`;
 const esc = (s) => String(s).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
-function art(){return `<defs><filter id="softshadow"><feGaussianBlur stdDeviation="2"/></filter><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".2 .8" numOctaves="3" seed="12" result="noise"/><feComposite in="noise" in2="SourceGraphic" operator="in" result="clipped"/><feBlend in="SourceGraphic" in2="clipped" mode="soft-light"/></filter><linearGradient id="plank"><stop stop-color="#c0a678"/><stop offset=".55" stop-color="#8b704c"/><stop offset="1" stop-color="#624b34"/></linearGradient></defs><image href="./assets/bay.png" x="0" y="0" width="1120" height="600" preserveAspectRatio="none"/><rect id="stormwash" width="1120" height="600" fill="#102b46" opacity="0" pointer-events="none"/><g id="places"></g><g id="structures" filter="url(#grain)"></g><g id="ship"><ellipse cx="5" cy="13" rx="65" ry="9" fill="#102e29" opacity=".25" filter="url(#softshadow)"/><svg x="-78" y="-118" width="156" height="138" viewBox="570 630 684 624" overflow="hidden"><image href="./assets/actors-ship.png" width="1254" height="1254"/></svg></g><g id="actors"></g>`;}
+function art(){return `<defs><filter id="softshadow"><feGaussianBlur stdDeviation="2"/></filter><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".2 .8" numOctaves="3" seed="12" result="noise"/><feComposite in="noise" in2="SourceGraphic" operator="in" result="clipped"/><feBlend in="SourceGraphic" in2="clipped" mode="soft-light"/></filter><linearGradient id="plank"><stop stop-color="#c0a678"/><stop offset=".55" stop-color="#8b704c"/><stop offset="1" stop-color="#624b34"/></linearGradient></defs><image href="./assets/bay.png" x="0" y="0" width="1120" height="600" preserveAspectRatio="none"/><rect id="stormwash" width="1120" height="600" fill="#102b46" opacity="0" pointer-events="none"/><g id="places"></g><g id="structures"></g><g id="ship"><ellipse cx="5" cy="13" rx="65" ry="9" fill="#102e29" opacity=".25" filter="url(#softshadow)"/><svg x="-78" y="-118" width="156" height="138" viewBox="570 630 684 624" overflow="hidden"><image href="./assets/actors-ship.png" width="1254" height="1254"/></svg></g><g id="actors"></g>`;}
 scene.innerHTML = art();
 el('ship').append(as('g',{id:'ship-cargo'}));
 scene.insertBefore(as('g',{id:'shore-cargo'}),el('actors'));
@@ -80,14 +80,14 @@ function structures(snapshot){
   const full=s.complete!==false, ratio=clamp(finite(s.progress,1)/Math.max(1,finite(s.required,1)),.14,1);
   const group=as('g',{transform:`translate(${x},${y})`});
   if(['shelter','well','garden'].includes(s.kind)){
-   const offsets={shelter:[30,-12],well:[-35,10],garden:[30,28]};
+   const offsets={shelter:[75,-25],well:[-58,24],garden:[72,91]};
    const [dx,dy]=offsets[s.kind];group.setAttribute('transform','translate('+(x+dx)+','+(y+dy)+')');
    const foundation='<path d="M-20 0 0-10 23 0 2 12Z" fill="#85775e" stroke="#655b4c"/>';
    if(s.kind==='shelter')group.innerHTML=foundation+'<path d="M-17 0v-23m34 23v-23M-17-23 0-34 17-23" stroke="#796142" stroke-width="3" fill="none"/>'+(ratio>=.66?'<path d="M-17-22 17-22 17 0 0 8-17 0Z" fill="#bba37f"/><path d="M-4 5v-17h8V5" fill="#463d30"/>':'')+(full?'<path d="M-23-21 0-37 23-21 0-13Z" fill="#8b7957" stroke="#b5a16f"/>':'');
    if(s.kind==='well')group.innerHTML=foundation+'<ellipse cy="-4" rx="12" ry="7" fill="#a7997f" stroke="#716653" stroke-width="'+(3+ratio*4)+'"/>'+(full?'<ellipse cy="-5" rx="7" ry="3" fill="#294943"/>':'');
    if(s.kind==='garden')group.innerHTML='<path d="M-23 0 0-11 27 0 4 13Z" fill="#685840"/>'+Array.from({length:Math.ceil(ratio*4)},(_,j)=>'<path d="M'+(-15+j*7)+' 1l18-8" stroke="'+(full?'#738259':'#a08a61')+'" stroke-width="3"/>').join('');
    if(full){const cell={shelter:0,well:1,garden:2}[s.kind],size={shelter:110,well:48,garden:92}[s.kind];
-    group.innerHTML='<svg x="'+(-size/2)+'" y="'+(-size*.83)+'" width="'+size+'" height="'+size+'" viewBox="'+(cell*724)+' 0 724 724"><image href="./assets/buildings.png" width="2172" height="724"/></svg>';
+    group.innerHTML='<svg x="'+(-size/2)+'" y="'+(-size*.83)+'" width="'+size+'" height="'+size+'" overflow="hidden" viewBox="'+(cell*724)+' 0 724 724"><image href="./assets/buildings.png" width="2172" height="724"/></svg>';
    }
   }else if(s.kind==='breakwater'){
    const rubble=Array.from({length:Math.ceil(28*ratio)},(_,j)=>{const x=j*2.9-27,y=j*.65+7+Math.sin(j*2.5)*4;return `<path d="m${x.toFixed(1)} ${y.toFixed(1)}q8-6 13-1l3 5-12 4-7-4z" fill="${['#b6a386','#978c72','#847965'][j%3]}" stroke="#645b50" stroke-width=".6"/>`;}).join('');
@@ -327,7 +327,7 @@ function finishMapDrag(e){if(!mapDrag||e.pointerId!==mapDrag.id)return;if(mapDra
 scene.addEventListener('pointerup',finishMapDrag);scene.addEventListener('pointercancel',finishMapDrag);
 scene.addEventListener('click',e=>{if(performance.now()<suppressMapClickUntil){e.preventDefault();e.stopImmediatePropagation();}},true);
 el('rewind').onclick=()=>{stop();i=0;render();};
-el('play').onclick=play;el('step').onclick=()=>step();el('overview').onclick=()=>setFocus(null);
+el('play').onclick=play;el('step').onclick=()=>step();el('overview').onclick=()=>setFocus(null);el('zoom-reset').onclick=()=>setFocus(null);
 el('timeline').oninput=(e)=>{stop();el('session').textContent='AI 實錄回放 · 2.5D';i=Number(e.target.value);render();};
 el('load').onchange=async e=>{
  const f=e.target.files[0];if(!f)return;
