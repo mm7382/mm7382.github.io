@@ -306,6 +306,20 @@ function prepareZoom(){if(manualView){oldView=manualView.slice();manualView=null
 el('zoom-in').onclick=()=>{prepareZoom();mapZoom=Math.min(4,mapZoom+.5);render(true);};
 el('zoom-out').onclick=()=>{prepareZoom();mapZoom=Math.max(1,mapZoom-.5);render(true);};
 
+scene.addEventListener('wheel',e=>{
+ e.preventDefault();selected=null;
+ const box=scene.getBoundingClientRect(),v=oldView.slice();
+ if(e.shiftKey||Math.abs(e.deltaX)>Math.abs(e.deltaY)){
+  const scale=Math.min(box.width/v[2],box.height/v[3]);
+  manualView=[clamp(v[0]+(e.deltaX||0)/scale,0,W-v[2]),clamp(v[1]+e.deltaY/scale,0,H-v[3]),v[2],v[3]];
+ }else{
+  const next=clamp(Math.round((mapZoom+(e.deltaY<0?.25:-.25))*4)/4,1,4);
+  const fx=clamp((e.clientX-box.left)/box.width,0,1),fy=clamp((e.clientY-box.top)/box.height,0,1),w=W/next,h=H/next;
+  manualView=[clamp(v[0]+fx*v[2]-fx*w,0,W-w),clamp(v[1]+fy*v[3]-fy*h,0,H-h),w,h];mapZoom=next;
+ }
+ oldView=manualView.slice();scene.setAttribute('viewBox',oldView.join(' '));
+ el('zoom-level').textContent=mapZoom+'×';el('zoom-in').disabled=mapZoom>=4;el('zoom-out').disabled=mapZoom<=1;el('overview').disabled=mapZoom===1;el('speaker').hidden=true;
+},{passive:false});
 let mapDrag=null,suppressMapClickUntil=0;
 scene.addEventListener('pointerdown',e=>{
  if(mapZoom<=1||e.isPrimary===false||(e.button!==undefined&&e.button!==0))return;
