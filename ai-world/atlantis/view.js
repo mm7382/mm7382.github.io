@@ -79,7 +79,7 @@ function structures(snapshot){
   const x=finite(s.x,site?.x??.35)*W,y=finite(s.y,site?.y??.57)*H;
   const full=s.complete!==false, ratio=clamp(finite(s.progress,1)/Math.max(1,finite(s.required,1)),.14,1);
   const group=as('g',{transform:`translate(${x},${y})`});
-  if(['shelter','well','garden'].includes(s.kind)){
+  if(s.kind==='navigation_marker'){group.innerHTML=full?'<image href="./assets/navigation-marker-v1.png" x="-32" y="-82" width="64" height="82"/>':'<path d="M-15 0h30l-4-'+Math.round(ratio*45)+'h-22Z" fill="#a99b7e"/>'; }else if(['shelter','well','garden'].includes(s.kind)){
    const offsets={shelter:[75,-25],well:[-58,24],garden:[72,91]};
    const [dx,dy]=offsets[s.kind];group.setAttribute('transform','translate('+(x+dx)+','+(y+dy)+')');
    const foundation='<path d="M-20 0 0-10 23 0 2 12Z" fill="#85775e" stroke="#655b4c"/>';
