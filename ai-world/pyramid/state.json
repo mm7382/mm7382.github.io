@@ -1,9 +1,9 @@
 {
   "schema": 2,
   "run": "e5c22ef8eb0b",
-  "status": "paused",
+  "status": "thinking",
   "waitingFor": "mason",
-  "publishedAt": 1795504431.9943109,
+  "publishedAt": 1795505650.1706,
   "updatedAt": 1795504431.993094,
   "modelCalls": 2,
   "stone": {
@@ -112,6 +112,6 @@
     "minute": 24,
     "elapsedRealSeconds": 58.538051167008234,
     "realSecondsPerDay": 60,
-    "running": false
+    "running": true
   }
 }
