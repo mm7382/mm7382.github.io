@@ -305,6 +305,7 @@ el('load').onchange=async e=>{
  const f=e.target.files[0];if(!f)return;
  try{load(JSON.parse(await f.text()));}catch(err){el('stage-note').textContent=`匯入失敗：${err.message}`;}finally{e.target.value='';}
 };
+window.addEventListener('atlantis-record',e=>{if(replay?.phase==='settlement'&&!active&&i===replay.frames.length){load(e.detail);}});
 window.addEventListener('resize',()=>anchorBubble(event()));
 render();el('overview').disabled=true;
 if(globalThis.ATLANTIS_REPLAY){
