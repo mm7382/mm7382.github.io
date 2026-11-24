@@ -3,23 +3,16 @@
   "run": "e5c22ef8eb0b",
   "status": "running",
   "waitingFor": null,
-  "publishedAt": 1795506200.3133929,
-  "updatedAt": 1795506173.13845,
-  "modelCalls": 23,
+  "publishedAt": 1795506289.367042,
+  "updatedAt": 1795506289.366358,
+  "modelCalls": 25,
   "stone": {
     "id": "K001",
     "massKg": 2000,
-    "progress": 0.2976406226839338,
+    "progress": 0.44,
     "route": "direct",
     "location": "road",
-    "motion": {
-      "kind": "haul",
-      "started": 1795506173.1384451,
-      "duration": 77.0,
-      "from": 0.22,
-      "to": 0.44,
-      "cause": 38
-    },
+    "motion": null,
     "placed": false
   },
   "crew": 17,
@@ -398,6 +391,34 @@
       "actor": "transport",
       "cause": 38,
       "action": "haul"
+    },
+    {
+      "id": 40,
+      "at": 1795506250.236764,
+      "type": "result",
+      "text": "本段拖運完成。",
+      "actor": null,
+      "cause": 38
+    },
+    {
+      "id": 41,
+      "at": 1795506267.299148,
+      "type": "speech",
+      "text": "石材仍在路上，第二段拖運已完成。我會等待運抵並確認雪橇停止，再請規劃同事調派至少四人安放。",
+      "actor": "mason",
+      "to": "all",
+      "requestId": "e5c22ef8eb0b-000024",
+      "source": "model-output"
+    },
+    {
+      "id": 42,
+      "at": 1795506289.366356,
+      "type": "speech",
+      "text": "石材仍在路上，請運輸同事確認路況後繼續搬運；待運抵且雪橇停止，我再調派至少四人協助安放。",
+      "actor": "planner",
+      "to": "transport",
+      "requestId": "e5c22ef8eb0b-000025",
+      "source": "model-output"
     }
   ],
   "roles": {
@@ -447,10 +468,10 @@
   "buildingWork": null,
   "pyramidComplete": false,
   "worldTime": {
-    "day": 11,
-    "hour": 3,
-    "minute": 28,
-    "elapsedRealSeconds": 608.6978103760048,
+    "day": 12,
+    "hour": 15,
+    "minute": 6,
+    "elapsedRealSeconds": 697.7547723340103,
     "realSecondsPerDay": 60,
     "running": true
   }
