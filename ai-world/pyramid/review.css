@@ -4,3 +4,5 @@
 .playback[hidden]{display:none}#live-log{max-height:310px;overflow:auto;margin-top:16px}#live-log article{border-top:1px solid #a99c7540;padding:10px 0}#live-log strong{font-size:11px;color:#e3c898}#live-log p{margin:5px 0;font-size:12px}#speech-bubble{position:absolute;top:22%;left:32%;max-width:340px;padding:12px 16px;background:#f4ecdbed;color:#302d23;border-radius:12px;font-size:12px;line-height:1.7;box-shadow:0 2px 16px #0004;pointer-events:none}#speech-bubble[hidden]{display:none}.camera-controls{flex-wrap:wrap;max-width:calc(100% - 40px)}#build-progress{color:#dec58f}
 
 #building-needs{border-top:1px solid #a99c7540;margin-top:22px;padding-top:10px}#building-list article{padding:10px 0;border-bottom:1px solid #a99c7530}#building-list img{width:100%;max-height:150px;object-fit:contain}#building-list strong{font-size:13px;color:#e3c898}
+
+#world-clock{margin-top:12px;font-size:16px;font-variant-numeric:tabular-nums;color:#ecd29e}.time-scale{margin-top:5px;font-size:11px;opacity:.8}

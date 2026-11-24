@@ -21,6 +21,13 @@ function update(){
  const speech=[...(s?.events||[])].reverse().find(e=>e.type==='speech'&&e.source==='model-output');
  bubble.hidden=!speech||live.demo;if(speech)bubble.textContent=(s.roles[speech.actor]||speech.actor)+'：'+speech.text;
 }
+function updateClock(){
+ const s=live.state,c=s?.worldTime,node=el('world-clock');if(!node)return;
+ if(!c){node.textContent='世界時間待啟動';return;}
+ const elapsed=c.elapsedRealSeconds+(live.online&&c.running?Math.max(0,Date.now()/1000-s.publishedAt):0),minutes=Math.floor(elapsed*24),day=1+Math.floor(minutes/1440),hour=Math.floor(minutes/60)%24,minute=minutes%60;
+ node.textContent=`第 ${day} 天 ${String(hour).padStart(2,'0')}:${String(minute).padStart(2,'0')}${!live.online||!c.running?' · 時間暫停':''}`;
+}
+setInterval(updateClock,250);
 async function json(url){const r=await fetch(url,{cache:'no-store',signal:AbortSignal.timeout(6000)});if(!r.ok)throw Error('HTTP '+r.status);const v=await r.json();return v;}
 function valid(s){return s?.schema===2&&Array.isArray(s.events)&&Array.isArray(s.placed)&&Number.isInteger(s.modelCalls);}
 (async()=>{let config;try{config=await json('live-config.json');}catch{config={snapshot:'state.json'};}
