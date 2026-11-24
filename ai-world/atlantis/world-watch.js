@@ -6,7 +6,7 @@
  const label=panel.querySelector('#run-state'),fresh=panel.querySelector('#fresh-world'),stop=panel.querySelector('#stop-world');
  const local=location.hostname==='127.0.0.1';let known=null;
  fresh.onclick=()=>location.reload();
- stop.onclick=async()=>{stop.disabled=true;try{const r=await fetch('http://127.0.0.1:8779/stop',{method:'POST',headers:{'X-Atlantis-Control':'stop'}});if(!r.ok)throw Error();label.textContent='正在保存目前決策並停止世界…';}catch{label.textContent='停止指令未送達，請在對話告訴我停止。';stop.disabled=false;}};
+ stop.onclick=async()=>{stop.disabled=true;try{const r=await fetch('http://127.0.0.1:8779/stop',{method:'POST',headers:{'X-Atlantis-Control':'stop'}});if(!r.ok)throw Error();label.textContent='正在保存本批決策並停止世界…';}catch{label.textContent='停止指令未送達，請在對話告訴我停止。';stop.disabled=false;}};
  async function poll(){
  try{
   const r=await fetch(local?'http://127.0.0.1:8779/status':'./world-status.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const s=await r.json();
