@@ -72,6 +72,7 @@
 - [陰陽是什麼？從一條線看懂易經的基本單位｜What are yin and yang? The basic unit of the I Ching explained](https://mm7382.github.io/learn/yin-and-yang.html)
 - [易經和八字有什麼不同？一個問當下，一個看整張底圖｜I Ching or Bazi: what is the difference and which to learn first](https://mm7382.github.io/learn/i-ching-vs-bazi.html)
 - [2027 紫微年度運勢｜丁未年四化與一年的生活提醒（全文免費）｜The 2027 Zi Wei Annual Guide, free to read in full](https://mm7382.github.io/learn/2027-ziwei-year-guide.html): 丁未年四化（太陰化祿、天同化權、天機化科、巨門化忌）轉成八個生活主題：財運、工作、感情與人際、健康、幸運色提案、逢凶化吉練習與四季行動計畫。農曆年界 2027-02-06。文化導讀，不是個人命運預測；不必排盤、不需訂閱。
+- [2027 八字流年指南｜丁未年怎麼讀（全文免費）｜The 2027 Bazi Year Guide, free to read in full](https://mm7382.github.io/learn/2027-bazi-year-guide.html): 2027 年的八字流年是丁未年（天干丁陰火、地支未陰土，六十甲子第 44 位，納音天河水，生肖羊）。內容包含：未的藏干（己土、丁火、乙木）、年柱在立春換年（2027-02-04 前後）而不是農曆初一（2027-02-06）、午未合與丑未沖與亥卦未三合木局與丑戌未三刑、丁未屬甲辰旬所以旬空在寅卑，以及十天干日主對丁與未的十神對照表。教學文章，不是個人吉凶預測。
 - [易經可以自學嗎？自學順序怎麼排｜Can you teach yourself the I Ching?](https://mm7382.github.io/learn/i-ching-self-study.html)
 - [易經和塔羅有什麼不同？初學該選哪一個｜What is the difference between the I Ching and tarot?](https://mm7382.github.io/learn/i-ching-vs-tarot.html)
 - [命宮與身宮有什麼不同？｜What is the difference between the Life Palace and the Body Palace?](https://mm7382.github.io/learn/life-body-palace.html)
@@ -369,6 +370,7 @@
 - [What are yin and yang? The basic unit of the I Ching explained](https://mm7382.github.io/learn/en/yin-and-yang.html)
 - [I Ching or Bazi: what is the difference and which to learn first](https://mm7382.github.io/learn/en/i-ching-vs-bazi.html)
 - [2027 Zi Wei Annual Guide: the Ding-Wei year in eight themes (free to read in full)](https://mm7382.github.io/learn/en/2027-ziwei-year-guide.html): The Ding-Wei year’s four transformations (Tai Yin to Lu, Tian Tong to Quan, Tian Ji to Ke, Ju Men to Ji) turned into eight everyday themes: money, work, relationships, wellbeing, symbolic colours, coping exercises and a seasonal action plan. Lunar year starts 6 February 2027. A cultural reading, not a personal forecast; no birth chart and no subscription needed.
+- [The 2027 Bazi Year Guide: how to read the Ding-Wei year (free to read in full)](https://mm7382.github.io/learn/en/2027-bazi-year-guide.html): 2027 is the Ding Wei year in Bazi (yin Fire stem over yin Earth branch, number 44 of the sexagenary cycle, na yin Heavenly River Water, the Goat). Covers the stems hidden in Wei (Ji, Ding, Yi), the year pillar changing at Lichun around 4 February 2027 rather than Lunar New Year on 6 February, the Wu-Wei combination, Chou-Wei clash, Hai-Mao-Wei Wood frame and Chou-Xu-Wei punishment, the Jia Chen decade putting the void branches at Yin and Mao, and a Ten Gods table for all ten Day Masters. An explainer, not a personal forecast.
 - [Can you teach yourself the I Ching? A self-study order that works](https://mm7382.github.io/learn/en/i-ching-self-study.html)
 - [What is the difference between the I Ching and tarot?](https://mm7382.github.io/learn/en/i-ching-vs-tarot.html)
 - [Beginner articles: I Ching, Bazi, Zi Wei Dou Shu and Western astrology](https://mm7382.github.io/learn/en/)
