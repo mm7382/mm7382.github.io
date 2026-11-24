@@ -6,9 +6,9 @@ const BASE = [0,0,1120,600], W = BASE[2], H = BASE[3];
 const NS = 'http://www.w3.org/2000/svg';
 const media = window.matchMedia('(prefers-reduced-motion: reduce)');
 const crew = {
-  harbor: ['港務官','#86beab',-27,1],
-  craft: ['工匠','#e0a96b',27,10],
-  merchant: ['商人','#aab9e4',0,-38],
+  harbor: ['港務官','#86beab',-17,-4],
+  craft: ['工匠','#e0a96b',18,4],
+  merchant: ['商人','#aab9e4',0,-24],
 };
 const roleName = (a) => crew[a.id]?.[0] || a.role || a.id;
 const name = (a) => a?.name || roleName(a || {});
@@ -36,7 +36,7 @@ const sky = `<defs>
 <mask id="sea-mask"><rect x="-20" y="-20" width="1160" height="640" fill="white"/><path d="${land}" fill="black"/></mask>
 </defs>`;
 const esc = (s) => String(s).replace(/[&<>"']/g,(c)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[c]));
-function art(){return `<defs><filter id="softshadow"><feGaussianBlur stdDeviation="2"/></filter><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".2 .8" numOctaves="3" seed="12" result="noise"/><feComposite in="noise" in2="SourceGraphic" operator="in" result="clipped"/><feBlend in="SourceGraphic" in2="clipped" mode="soft-light"/></filter><linearGradient id="plank"><stop stop-color="#c0a678"/><stop offset=".55" stop-color="#8b704c"/><stop offset="1" stop-color="#624b34"/></linearGradient></defs><image href="./assets/bay.png" x="0" y="0" width="1120" height="600" preserveAspectRatio="none"/><rect id="stormwash" width="1120" height="600" fill="#102b46" opacity="0" pointer-events="none"/><g id="places"></g><g id="structures" filter="url(#grain)"></g><g id="ship"><ellipse cx="5" cy="13" rx="38" ry="6" fill="#102e29" opacity=".25" filter="url(#softshadow)"/><svg x="-43" y="-59" width="86" height="76" viewBox="570 630 684 624" overflow="hidden"><image href="./assets/actors-ship.png" width="1254" height="1254"/></svg></g><g id="actors"></g>`;}
+function art(){return `<defs><filter id="softshadow"><feGaussianBlur stdDeviation="2"/></filter><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".2 .8" numOctaves="3" seed="12" result="noise"/><feComposite in="noise" in2="SourceGraphic" operator="in" result="clipped"/><feBlend in="SourceGraphic" in2="clipped" mode="soft-light"/></filter><linearGradient id="plank"><stop stop-color="#c0a678"/><stop offset=".55" stop-color="#8b704c"/><stop offset="1" stop-color="#624b34"/></linearGradient></defs><image href="./assets/bay.png" x="0" y="0" width="1120" height="600" preserveAspectRatio="none"/><rect id="stormwash" width="1120" height="600" fill="#102b46" opacity="0" pointer-events="none"/><g id="places"></g><g id="structures" filter="url(#grain)"></g><g id="ship"><ellipse cx="5" cy="13" rx="65" ry="9" fill="#102e29" opacity=".25" filter="url(#softshadow)"/><svg x="-78" y="-118" width="156" height="138" viewBox="570 630 684 624" overflow="hidden"><image href="./assets/actors-ship.png" width="1254" height="1254"/></svg></g><g id="actors"></g>`;}
 scene.innerHTML = art();
 el('ship').append(as('g',{id:'ship-cargo'}));
 scene.insertBefore(as('g',{id:'shore-cargo'}),el('actors'));
@@ -56,7 +56,7 @@ function ensureActors(snapshot){
   const col=crew[a.id]?.[1]||'#deb779';
   const g=as('g',{class:'person-mark',role:'button',tabindex:0,'aria-label':`近看${name(a)}`,'aria-pressed':'false'});
   const crop={harbor:'0 0 627 627',craft:'627 0 627 627',merchant:'0 627 627 627'}[a.id];
-  g.innerHTML=`<title>${esc(name(a))}</title><ellipse class="pickring" cy="3" rx="9" ry="3" fill="none" stroke="#f4d39a" opacity=".65"/><ellipse cx="7" cy="5" rx="12" ry="3" fill="#26302a" opacity=".35" filter="url(#softshadow)"/><svg class="photo-person" x="-39" y="-72" width="78" height="78" viewBox="${crop}" overflow="hidden"><image href="./assets/actors-ship.png" width="1254" height="1254"/></svg><g class="cargo" opacity="0"><path d="m3-13 13 2v7L3-6z" fill="#99734a" stroke="#4e3b27"/><path d="m3-13 3-3 13 2-3 3z" fill="#d0b381"/><path d="m7-12v7m5-6v7" stroke="#d9c79b"/></g><circle cy="-30" r="35" fill="transparent"/>`;
+  g.innerHTML=`<title>${esc(name(a))}</title><ellipse class="pickring" cy="3" rx="7" ry="2" fill="none" stroke="#f4d39a" opacity=".65"/><ellipse cx="7" cy="5" rx="7" ry="2" fill="#26302a" opacity=".35" filter="url(#softshadow)"/><svg class="photo-person" x="-24" y="-47" width="48" height="48" viewBox="${crop}" overflow="hidden"><image href="./assets/actors-ship.png" width="1254" height="1254"/></svg><g class="cargo" opacity="0" transform="translate(0,-15) scale(.55)"><path d="m3-13 13 2v7L3-6z" fill="#99734a" stroke="#4e3b27"/><path d="m3-13 3-3 13 2-3 3z" fill="#d0b381"/><path d="m7-12v7m5-6v7" stroke="#d9c79b"/></g><circle cy="-23" r="24" fill="transparent"/>`;
   const choose=()=>setFocus(selected===a.id?null:a.id);
   g.addEventListener('click',choose);
   g.addEventListener('keydown',(e)=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose();}});
@@ -79,7 +79,14 @@ function structures(snapshot){
   const x=finite(s.x,site?.x??.35)*W,y=finite(s.y,site?.y??.57)*H;
   const full=s.complete!==false, ratio=clamp(finite(s.progress,1)/Math.max(1,finite(s.required,1)),.14,1);
   const group=as('g',{transform:`translate(${x},${y})`});
-  if(s.kind==='breakwater'){
+  if(['shelter','well','garden'].includes(s.kind)){
+   const offsets={shelter:[30,-12],well:[-35,10],garden:[30,28]};
+   const [dx,dy]=offsets[s.kind];group.setAttribute('transform','translate('+(x+dx)+','+(y+dy)+')');
+   const foundation='<path d="M-20 0 0-10 23 0 2 12Z" fill="#85775e" stroke="#655b4c"/>';
+   if(s.kind==='shelter')group.innerHTML=foundation+'<path d="M-17 0v-23m34 23v-23M-17-23 0-34 17-23" stroke="#796142" stroke-width="3" fill="none"/>'+(ratio>=.66?'<path d="M-17-22 17-22 17 0 0 8-17 0Z" fill="#bba37f"/><path d="M-4 5v-17h8V5" fill="#463d30"/>':'')+(full?'<path d="M-23-21 0-37 23-21 0-13Z" fill="#8b7957" stroke="#b5a16f"/>':'');
+   if(s.kind==='well')group.innerHTML=foundation+'<ellipse cy="-4" rx="12" ry="7" fill="#a7997f" stroke="#716653" stroke-width="'+(3+ratio*4)+'"/>'+(full?'<ellipse cy="-5" rx="7" ry="3" fill="#294943"/>':'');
+   if(s.kind==='garden')group.innerHTML='<path d="M-23 0 0-11 27 0 4 13Z" fill="#685840"/>'+Array.from({length:Math.ceil(ratio*4)},(_,j)=>'<path d="M'+(-15+j*7)+' 1l18-8" stroke="'+(full?'#738259':'#a08a61')+'" stroke-width="3"/>').join('');
+  }else if(s.kind==='breakwater'){
    const rubble=Array.from({length:Math.ceil(28*ratio)},(_,j)=>{const x=j*2.9-27,y=j*.65+7+Math.sin(j*2.5)*4;return `<path d="m${x.toFixed(1)} ${y.toFixed(1)}q8-6 13-1l3 5-12 4-7-4z" fill="${['#b6a386','#978c72','#847965'][j%3]}" stroke="#645b50" stroke-width=".6"/>`;}).join('');
    group.innerHTML=`<ellipse cx="0" cy="21" rx="${50*ratio}" ry="12" fill="#245b63" opacity=".45"/>${rubble}`;
   } else {
@@ -131,7 +138,7 @@ function anchorBubble(ev) {
  if(el('speaker').hidden||!ev)return;
  const xy=positions[ev.actorId];if(!xy)return;
  const m=scene.getScreenCTM();if(!m)return;
- const p=scene.createSVGPoint();[p.x,p.y]=[xy[0],xy[1]-76];
+ const p=scene.createSVGPoint();[p.x,p.y]=[xy[0],xy[1]-50];
  const q=p.matrixTransform(m),b=wrap.getBoundingClientRect();
  if(q.x < b.left-10||q.x>b.right+10||q.y<b.top-10||q.y>b.bottom+10){el('speaker').style.visibility='hidden';return;}
  el('speaker').style.visibility='';
@@ -142,7 +149,7 @@ function anchorBubble(ev) {
 function viewTarget(s){
  const a=(s.actors||[]).find(a=>a.id===selected);
  if(!a)return BASE.slice();
- const [x,y]=actorPos(a), w=430,h=290;
+ const [x,y]=actorPos(a), w=320,h=210;
  return [clamp(x-w/2,0,W-w),clamp(y-h*.59,0,H-h),w,h];
 }
 function drawMotion(s, ev, transition){
@@ -157,20 +164,40 @@ function drawMotion(s, ev, transition){
  const travelMs=Math.max(0,...Object.entries(dest).map(([id,xy])=>{
  const p=basePositions[id]||xy;
  const carrying=Object.values((s.actors||[]).find(a=>a.id===id)?.carry||{}).some(v=>v>0);
- return Math.hypot(p[0]-xy[0],p[1]-xy[1])/(carrying?17:24)*1000;
+ return Math.hypot(p[0]-xy[0],p[1]-xy[1])/(carrying?13:18)*1000;
 }),Math.hypot(startShip[0]-targetShip[0],startShip[1]-targetShip[1])/42*1000);
  const duration=transition&&!media.matches?Math.max(690,travelMs):0;
  const tick=(now)=>{
-  const k=duration?clamp((now-begin)/duration,0,1):1, ease=k*k*(3-2*k);
+  const k=duration?clamp((now-begin)/duration,0,1):1, ease=k<.12?k*k/.2112:k>.88?1-(1-k)*(1-k)/.2112:(k-.06)/.88;
   const mix=(u,v)=>u+(v-u)*ease;
   for(const [id,xy] of Object.entries(dest)){
    const p=basePositions[id]||xy, g=chars.get(id);
    positions[id]=[mix(p[0],xy[0]),mix(p[1],xy[1])];
-   move(g,...positions[id]);g.dataset.moving=String(k<1&&Math.hypot(p[0]-xy[0],p[1]-xy[1])>1);
+   
+   const distance=Math.hypot(p[0]-xy[0],p[1]-xy[1]);
+   const walking=k<1&&distance>1;
+   const depth=.86+clamp((positions[id][1]-130)/240,0,1)*.14;
+   move(g,...positions[id]);
+   g.setAttribute('transform','translate('+positions[id][0]+','+positions[id][1]+') scale('+depth+')');
+   g.dataset.moving=String(walking);
+   const picture=g.querySelector('.photo-person');
+   if(distance>1)g.dataset.facing=xy[0]<p[0]?'left':'right';
+   const facing=g.dataset.facing==='left'?-1:1;
+   const phase=distance*ease/9*Math.PI*2;
+   const lift=walking?Math.sin(phase)*.3:0;
+   picture.setAttribute('transform','translate(0,'+(-Math.abs(lift))+') scale('+facing+',1)');
+ 
   }
   shipXY=[mix(startShip[0],targetShip[0]),mix(startShip[1],targetShip[1])];
   move(el('ship'),...shipXY);
-  oldView=targetView.map((v,j)=>mix(startView[j],v));scene.setAttribute('viewBox',oldView.join(' '));
+  
+  const cameraEase=duration?Math.min(1,(now-begin)/690):1;
+  oldView=targetView.map((v,j)=>startView[j]+(v-startView[j])*cameraEase);
+  if(selected&&positions[selected]){
+   oldView[0]=clamp(positions[selected][0]-oldView[2]/2,0,W-oldView[2]);
+   oldView[1]=clamp(positions[selected][1]-oldView[3]*.59,0,H-oldView[3]);
+  }
+ scene.setAttribute('viewBox',oldView.join(' '));
   anchorBubble(ev);
   cargoScene(s,ev,ease);
   if(k<1)animated=requestAnimationFrame(tick);else {animated=null;resumeMotion=null;pauseMotion=null;}
@@ -188,7 +215,7 @@ function eventLog(ev,s){
  }
 }
 function render(transition=false){
- const s=snapshot(),ev=event();
+ const s=snapshot(),ev=event();el('food').textContent=s.stocks?.camp?.food??'—';el('water').textContent=s.stocks?.camp?.water??'—';
  ensureActors(s);
  structures(s);
  const phase=s.weather?.phase||'calm';
@@ -218,7 +245,7 @@ function render(transition=false){
  el('frame-count').value=`${i} / ${max}`;
  el('timeline').setAttribute('aria-valuetext',`第 ${i} 幕，共 ${max} 幕`);
  const outcome=s.outcome==='unloaded'?'首艘商船已卸貨':s.outcome==='ship-departed'?'首艘商船未完成卸貨':'';
- el('stage-note').textContent=outcome || (ev?.message?String(ev.message):i===0?'開場 · 尚未修建港口':'觀察回放');
+ el('stage-note').textContent=outcome || (ev?.message?String(ev.message):i===0?(replay?.phase==='settlement'?'聚落階段起點 · 港口已完成':'開場 · 尚未修建港口'):'觀察回放');
  eventLog(ev,s);
  updateBubble(ev,s);
  drawMotion(s,ev,transition);
@@ -259,14 +286,18 @@ function load(data){
  stop();i=0;selected=null;el('overview').disabled=true;
  for (const n of chars.values())n.remove();for(const n of panels.values())n.button.remove();chars.clear();panels.clear();
  positions={};shipXY=null;replay=data;
+ document.querySelector('h1').textContent=data.phase==='settlement'?'向自給聚落前進':'從空海灣開始';
+ document.querySelector('.subtitle').textContent=data.phase==='settlement'?data.goal:'給三位 AI 一個目標：讓第一艘商船安全靠岸卸貨。不給藍圖，也不替他們決定結局。';
  const live=data.source==='ai'||data.source==='codex';
  const fixture=['fixture','demo','test','scripted'].includes(data.source);
  el('session').textContent=live?'AI 實錄回放':fixture?'介面測試 · 非 AI':'觀察紀錄';
  el('provenance').textContent=live?`AI 實錄回放${data.model?' · '+data.model:''}，不是直播`:fixture?'介面測試資料，不是 AI 執行結果':'匯入的回放紀錄，來源未標示';
  el('timeline').max=data.frames.length;
- i=data.frames.length;render();el('session').textContent='最新保存成果 · 2.5D';
+ i=data.frames.length;render();el('session').textContent=data.phase==='settlement'?'聚落試跑 · 本批已暫停':'最新保存成果 · 2.5D';
 }
 el('latest').onclick=()=>{stop();i=replay?.frames.length||0;selected=null;el('overview').disabled=true;render();el('session').textContent='最新保存成果 · 2.5D';};
+el('harbor-record').onclick=()=>fetch('./replay.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(load).catch(()=>{el('stage-note').textContent='港口紀錄載入失敗';});
+el('settlement-record').onclick=()=>fetch('./settlement.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(load).catch(()=>{el('stage-note').textContent='聚落 AI 紀錄尚未匯出';});
 el('rewind').onclick=()=>{stop();i=0;render();};
 el('play').onclick=play;el('step').onclick=()=>step();el('overview').onclick=()=>setFocus(null);
 el('timeline').oninput=(e)=>{stop();el('session').textContent='AI 實錄回放 · 2.5D';i=Number(e.target.value);render();};
@@ -281,6 +312,6 @@ if(globalThis.ATLANTIS_REPLAY){
 } else if(location.protocol==='file:'){
  el('stage-note').textContent='請用右上角「匯入紀錄」載入 replay.json。';
 } else {
- fetch('./replay.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(load).catch(()=>{el('stage-note').textContent='尚無回放。可從右上角匯入紀錄。';});
+ fetch('./settlement.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).catch(()=>fetch('./replay.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();})).then(load).catch(()=>{el('stage-note').textContent='紀錄載入失敗';});
 }
 })();
