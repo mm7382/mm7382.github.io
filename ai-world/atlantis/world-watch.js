@@ -3,6 +3,8 @@
  const panel=document.createElement('div');panel.className='world-run';
  panel.innerHTML='<span id="run-state">讀取世界狀態…</span> <button id="fresh-world" type="button" hidden>查看新進展</button> <button id="stop-world" type="button" hidden>停止世界運行</button>';
  document.querySelector('.world').before(panel);
+ const clockLabel=document.createElement('div');clockLabel.textContent='時間規則：現實 1 分鐘＝世界 1 天；日結於決策保存時更新。';panel.append(clockLabel);
+ let clockState=null;setInterval(()=>{if(!clockState?.clock)return;const day=clockState.clock.startDay+Math.floor((Date.now()-Date.parse(clockState.clock.epoch))/60000);clockLabel.textContent='現實 1 分鐘＝世界 1 天｜時鐘第 '+day+' 天｜已結算第 '+clockState.day+' 天（狀態中斷時以已保存紀錄為準）';},1000);
  const label=panel.querySelector('#run-state'),fresh=panel.querySelector('#fresh-world'),stop=panel.querySelector('#stop-world');
  const local=location.hostname==='127.0.0.1';let known=null;
  fresh.onclick=()=>location.reload();
@@ -15,7 +17,7 @@
   label.textContent=stale?'尚未收到近期運行狀態':(names[s.phase]||s.phase);
   stop.hidden=!local||!s.running;panel.title=s.policy||'';
  }catch{label.textContent='目前無法確認世界運行狀態';}
- try{const data=await fetch('./settlement.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json());if(known===null)known=data.frames.length;else if(data.frames.length>known){window.dispatchEvent(new CustomEvent('atlantis-record',{detail:data}));known=data.frames.length;fresh.hidden=false;fresh.textContent='查看新進展（'+data.frames.length+' 個動作）';}}catch{}
+ try{const data=await fetch('./settlement.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json());clockState=data.frames.at(-1)?.snapshot||data.initial;if(known===null)known=data.frames.length;else if(data.frames.length>known){window.dispatchEvent(new CustomEvent('atlantis-record',{detail:data}));known=data.frames.length;fresh.hidden=false;fresh.textContent='查看新進展（'+data.frames.length+' 個動作）';}}catch{}
  }
  poll();setInterval(poll,15000);
 })();
