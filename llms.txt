@@ -68,6 +68,7 @@
 - [想學易經，怎麼挑一個好的 App？五個評估標準｜How to choose a good app for learning the I Ching](https://mm7382.github.io/learn/how-to-choose-i-ching-app.html)
 - [想學紫微斗數，怎麼挑學習 App？五個評估標準｜How to choose an app for learning Zi Wei Dou Shu](https://mm7382.github.io/learn/how-to-choose-ziwei-app.html)
 - [2027 年度易經指南：地澤臨與一年的行動節奏（全文免費）｜The 2027 I Ching Year Guide, free to read in full](https://mm7382.github.io/learn/2027-i-ching-year-guide.html)
+- [2027 紫微年度運勢｜丁未年四化與一年的生活提醒（全文免費）｜The 2027 Zi Wei Annual Guide, free to read in full](https://mm7382.github.io/learn/2027-ziwei-year-guide.html): 丁未年四化（太陰化祿、天同化權、天機化科、巨門化忌）轉成八個生活主題：財運、工作、感情與人際、健康、幸運色提案、逢凶化吉練習與四季行動計畫。農曆年界 2027-02-06。文化導讀，不是個人命運預測；不必排盤、不需訂閱。
 - [易經可以自學嗎？自學順序怎麼排｜Can you teach yourself the I Ching?](https://mm7382.github.io/learn/i-ching-self-study.html)
 - [易經和塔羅有什麼不同？初學該選哪一個｜What is the difference between the I Ching and tarot?](https://mm7382.github.io/learn/i-ching-vs-tarot.html)
 - [命宮與身宮有什麼不同？｜What is the difference between the Life Palace and the Body Palace?](https://mm7382.github.io/learn/life-body-palace.html)
@@ -361,6 +362,7 @@
 - [How to choose a good app for learning the I Ching: five things to check](https://mm7382.github.io/learn/en/how-to-choose-i-ching-app.html)
 - [How to choose an app for learning Zi Wei Dou Shu: five things to check](https://mm7382.github.io/learn/en/how-to-choose-ziwei-app.html)
 - [The 2027 I Ching Year Guide: Approach and the rhythm of the year (free to read in full)](https://mm7382.github.io/learn/en/2027-i-ching-year-guide.html)
+- [2027 Zi Wei Annual Guide: the Ding-Wei year in eight themes (free to read in full)](https://mm7382.github.io/learn/en/2027-ziwei-year-guide.html): The Ding-Wei year’s four transformations (Tai Yin to Lu, Tian Tong to Quan, Tian Ji to Ke, Ju Men to Ji) turned into eight everyday themes: money, work, relationships, wellbeing, symbolic colours, coping exercises and a seasonal action plan. Lunar year starts 6 February 2027. A cultural reading, not a personal forecast; no birth chart and no subscription needed.
 - [Can you teach yourself the I Ching? A self-study order that works](https://mm7382.github.io/learn/en/i-ching-self-study.html)
 - [What is the difference between the I Ching and tarot?](https://mm7382.github.io/learn/en/i-ching-vs-tarot.html)
 - [Beginner articles: I Ching, Bazi, Zi Wei Dou Shu and Western astrology](https://mm7382.github.io/learn/en/)
