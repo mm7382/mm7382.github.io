@@ -1,11 +1,11 @@
 {
   "schema": 2,
   "run": "e5c22ef8eb0b",
-  "status": "blocked",
-  "waitingFor": null,
-  "publishedAt": 1795502780.099406,
-  "updatedAt": 1795502780.099146,
-  "modelCalls": 0,
+  "status": "paused",
+  "waitingFor": "mason",
+  "publishedAt": 1795504431.9943109,
+  "updatedAt": 1795504431.993094,
+  "modelCalls": 2,
   "stone": {
     "id": "K001",
     "massKg": 2000,
@@ -40,6 +40,33 @@
       "type": "system",
       "text": "模型連線／訂閱檢查未通過，施工暫停。尚未執行的工作不會自動補完。",
       "actor": null
+    },
+    {
+      "id": 3,
+      "at": 1795504387.673942,
+      "type": "speech",
+      "text": "目前有17人可調度，石塊重2000公斤；參考資料支持適量濕砂減阻，但不代表唯一工法。我傾向選3格底邊以控制規模，請運輸與砌築同事先評估拉力、坡道及穩定性。",
+      "actor": "planner",
+      "to": "all",
+      "requestId": "e5c22ef8eb0b-000001",
+      "source": "model-output"
+    },
+    {
+      "id": 4,
+      "at": 1795504406.034657,
+      "type": "speech",
+      "text": "我支持先考慮3格底邊。直路目前需5875牛頓，按每人240牛頓計至少25人，超過現有人力；建議先適量灑水，再評估緩坡繞路與所需人數，確認可行後才搬運。",
+      "actor": "transport",
+      "to": "all",
+      "requestId": "e5c22ef8eb0b-000002",
+      "source": "model-output"
+    },
+    {
+      "id": 5,
+      "at": 1795504431.993093,
+      "type": "system",
+      "text": "已收到停止指令，世界狀態保留。",
+      "actor": null
     }
   ],
   "roles": {
@@ -48,7 +75,7 @@
     "mason": "阿石・砌築領班"
   },
   "testCondition": false,
-  "error": "模型連線／訂閱檢查未通過，施工暫停。尚未執行的工作不會自動補完。",
+  "error": null,
   "scope": "AI 自訂尺寸的小型階梯金字塔；簡化運輸與離散支撐模擬",
   "plan": null,
   "target": null,
@@ -73,5 +100,18 @@
     "matchesDesign": true,
     "scope": "離散支撐與施工紀錄檢查；非真實結構工程認證"
   },
-  "initialBackdrop": "畫面後方石砌工作面是佈景，不計入 AI 建造成果。"
+  "initialBackdrop": "畫面後方石砌工作面是佈景，不計入 AI 建造成果。",
+  "continuous": true,
+  "buildings": [],
+  "artRequests": [],
+  "buildingWork": null,
+  "pyramidComplete": false,
+  "worldTime": {
+    "day": 1,
+    "hour": 23,
+    "minute": 24,
+    "elapsedRealSeconds": 58.538051167008234,
+    "realSecondsPerDay": 60,
+    "running": false
+  }
 }
