@@ -3,16 +3,23 @@
   "run": "e5c22ef8eb0b",
   "status": "running",
   "waitingFor": null,
-  "publishedAt": 1795506289.367042,
-  "updatedAt": 1795506289.366358,
-  "modelCalls": 25,
+  "publishedAt": 1795506384.429939,
+  "updatedAt": 1795506310.0240939,
+  "modelCalls": 26,
   "stone": {
     "id": "K001",
     "massKg": 2000,
-    "progress": 0.44,
+    "progress": 0.6525877598353794,
     "route": "direct",
     "location": "road",
-    "motion": null,
+    "motion": {
+      "kind": "haul",
+      "started": 1795506310.024087,
+      "duration": 77.00000000000001,
+      "from": 0.44,
+      "to": 0.66,
+      "cause": 43
+    },
     "placed": false
   },
   "crew": 17,
@@ -419,6 +426,25 @@
       "to": "transport",
       "requestId": "e5c22ef8eb0b-000025",
       "source": "model-output"
+    },
+    {
+      "id": 43,
+      "at": 1795506310.024066,
+      "type": "speech",
+      "text": "石材仍在途中，直路未受阻且路面濕潤；依目前模擬，17人的拉力足夠。我帶隊繼續拖運，留意路況變化。",
+      "actor": "transport",
+      "to": "all",
+      "requestId": "e5c22ef8eb0b-000026",
+      "source": "model-output"
+    },
+    {
+      "id": 44,
+      "at": 1795506310.024093,
+      "type": "accepted",
+      "text": "執行：拖運石材",
+      "actor": "transport",
+      "cause": 43,
+      "action": "haul"
     }
   ],
   "roles": {
@@ -468,10 +494,10 @@
   "buildingWork": null,
   "pyramidComplete": false,
   "worldTime": {
-    "day": 12,
-    "hour": 15,
-    "minute": 6,
-    "elapsedRealSeconds": 697.7547723340103,
+    "day": 14,
+    "hour": 5,
+    "minute": 7,
+    "elapsedRealSeconds": 792.820837584004,
     "realSecondsPerDay": 60,
     "running": true
   }
