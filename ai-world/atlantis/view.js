@@ -21,7 +21,7 @@ const as = (key, data={}) => {const o=document.createElementNS(NS,key); for (con
 const node = (tag, cls, copy) => {const e=document.createElement(tag); if(cls)e.className=cls;if(copy)e.textContent=copy;return e;};
 const enable = (id, control=true) => {el(id).disabled=!control;};
 const move = (obj,x,y) => obj.setAttribute('transform', `translate(${x},${y})`);
-let mapZoom=1; let replay, i=0, selected=null, animated, positions={}, shipXY, oldView=BASE.slice(), timer, active=false, resumeMotion=null, pauseMotion=null;
+let mapZoom=1, manualView=null; let replay, i=0, selected=null, animated, positions={}, shipXY, oldView=BASE.slice(), timer, active=false, resumeMotion=null, pauseMotion=null;
 const chars = new Map();
 const panels = new Map();
 const land = `M-20-20H1148V301Q1092 308 1064 333Q1035 355 989 345Q941 334 895 354Q862 370 826 351Q794 331 754 339Q725 344 704 332Q682 320 633 323Q589 327 554 345Q516 366 475 342Q448 326 419 338Q389 358 358 354Q322 349 299 366Q262 392 228 366Q200 346 151 359Q113 369 89 395Q67 417 39 414L-20 440Z`;
@@ -201,7 +201,7 @@ function drawMotion(s, ev, transition){
    oldView[0]=clamp(positions[selected][0]-oldView[2]/2,0,W-oldView[2]);
    oldView[1]=clamp(positions[selected][1]-oldView[3]*.59,0,H-oldView[3]);
   }
- scene.setAttribute('viewBox',oldView.join(' '));
+ if(manualView)oldView=manualView.slice();scene.setAttribute('viewBox',oldView.join(' '));
   anchorBubble(ev);
   cargoScene(s,ev,ease);
   if(k<1)animated=requestAnimationFrame(tick);else {animated=null;resumeMotion=null;pauseMotion=null;}
@@ -256,7 +256,7 @@ function render(transition=false){
  [ ['play',max>0], ['rewind',i>0], ['step',i<max], ['timeline',max>0] ].forEach(([id,on])=>enable(id,on));
 }
 function setFocus(id){
- selected=id;if(!id)mapZoom=1;
+ selected=id;manualView=null;if(!id)mapZoom=1;
  el('overview').disabled=!id;
  render(true);
 }
@@ -302,8 +302,30 @@ function load(data){
 el('latest').onclick=()=>{stop();i=replay?.frames.length||0;selected=null;el('overview').disabled=true;render();el('session').textContent='最新保存成果 · 2.5D';};
 el('harbor-record').onclick=()=>fetch('./replay.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(load).catch(()=>{el('stage-note').textContent='港口紀錄載入失敗';});
 el('settlement-record').onclick=()=>fetch('./settlement.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(load).catch(()=>{el('stage-note').textContent='聚落 AI 紀錄尚未匯出';});
-el('zoom-in').onclick=()=>{mapZoom=Math.min(4,mapZoom+.5);render(true);};
-el('zoom-out').onclick=()=>{mapZoom=Math.max(1,mapZoom-.5);render(true);};
+function prepareZoom(){if(manualView){oldView=manualView.slice();manualView=null;}}
+el('zoom-in').onclick=()=>{prepareZoom();mapZoom=Math.min(4,mapZoom+.5);render(true);};
+el('zoom-out').onclick=()=>{prepareZoom();mapZoom=Math.max(1,mapZoom-.5);render(true);};
+
+let mapDrag=null,suppressMapClickUntil=0;
+scene.addEventListener('pointerdown',e=>{
+ if(mapZoom<=1||e.isPrimary===false||(e.button!==undefined&&e.button!==0))return;
+ mapDrag={id:e.pointerId,x:e.clientX,y:e.clientY,view:oldView.slice(),moved:false};
+ scene.setPointerCapture?.(e.pointerId);
+});
+scene.addEventListener('pointermove',e=>{
+ if(!mapDrag||e.pointerId!==mapDrag.id)return;
+ const dx=e.clientX-mapDrag.x,dy=e.clientY-mapDrag.y;
+ if(!mapDrag.moved&&Math.hypot(dx,dy)<5)return;
+ mapDrag.moved=true;selected=null;scene.classList.add('map-dragging');
+ const b=scene.getBoundingClientRect(),v=mapDrag.view,scale=Math.min(b.width/v[2],b.height/v[3]);
+ manualView=[clamp(v[0]-dx/scale,0,W-v[2]),clamp(v[1]-dy/scale,0,H-v[3]),v[2],v[3]];
+ oldView=manualView.slice();scene.setAttribute('viewBox',oldView.join(' '));
+ el('speaker').hidden=true;
+ e.preventDefault();
+});
+function finishMapDrag(e){if(!mapDrag||e.pointerId!==mapDrag.id)return;if(mapDrag.moved)suppressMapClickUntil=performance.now()+500;scene.releasePointerCapture?.(e.pointerId);mapDrag=null;scene.classList.remove('map-dragging');}
+scene.addEventListener('pointerup',finishMapDrag);scene.addEventListener('pointercancel',finishMapDrag);
+scene.addEventListener('click',e=>{if(performance.now()<suppressMapClickUntil){e.preventDefault();e.stopImmediatePropagation();}},true);
 el('rewind').onclick=()=>{stop();i=0;render();};
 el('play').onclick=play;el('step').onclick=()=>step();el('overview').onclick=()=>setFocus(null);
 el('timeline').oninput=(e)=>{stop();el('session').textContent='AI 實錄回放 · 2.5D';i=Number(e.target.value);render();};
