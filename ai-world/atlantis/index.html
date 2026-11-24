@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d1a1c">
+<title>雅特蘭提斯世界｜從空海灣開始</title>
+<link rel="stylesheet" href="./styles.css">
+<script defer src="./view.js"></script>
+</head>
+<body>
+<header class="mast">
+  <div class="brand"><span class="sigil" aria-hidden="true"><svg viewBox="0 0 36 36"><path d="M5 28 18 6l13 22M10 20h16M8 25h20" fill="none" stroke="currentColor" stroke-width="1.25"/><circle cx="18" cy="29" r="1.5" fill="currentColor"/></svg></span><div><strong>雅特蘭提斯世界</strong><small>寫實 2.5D · AI 自主世界</small></div></div>
+  <span class="badge" id="session">觀察模式</span>
+</header>
+<main>
+<section class="hero">
+  <p class="kicker"><span></span> 島城觀察誌 / 01</p>
+  <h1>從空海灣開始</h1>
+  <p class="subtitle">給三位 AI 一個目標：讓第一艘商船安全靠岸卸貨。<br>不給藍圖，也不替他們決定結局。</p>
+</section>
+<div class="layout">
+  <section class="world" aria-label="海灣觀景台">
+    <div class="worldbar"><div><span class="dot"></span>海灣觀景台 · 2.5D</div><div class="world-actions"><button id="latest" type="button">最新成果</button><label for="load" class="load-label">匯入紀錄</label><input id="load" class="file-input" type="file" accept=".json,application/json"><button id="overview" type="button">回到全景</button></div></div>
+    <div class="viewport">
+      <svg id="scene" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 600" preserveAspectRatio="xMidYMid meet" aria-label="2.5D 海灣與三位角色"></svg>
+      <div class="maptext" aria-hidden="true"><b>西灣</b><span>WESTERN COVE</span></div>
+      <div class="speaker" id="speaker" hidden><small id="speaker-role"></small><p id="speaker-text"></p></div>
+      <div class="scale" aria-hidden="true"><svg viewBox="0 0 38 44"><path d="m19 1 7 21-7-3-7 3z" fill="#e7d7aa"/><path d="m19 43 7-21-7 3-7-3z" fill="#e7d7aa" opacity=".35"/><path d="M1 22h36" stroke="#e7d7aa" opacity=".4"/></svg></div>
+      <div class="caption" id="stage-note" aria-live="polite">尚未載入觀察紀錄</div>
+    </div>
+    <div class="transport">
+      <div class="playgroup">
+        <button id="rewind" type="button" aria-label="回到第一幕" title="回到第一幕"><svg viewBox="0 0 24 24"><path d="M6 5v14M18 5 8 12l10 7z"/></svg></button>
+        <button class="play" id="play" type="button" aria-label="播放" title="播放"><svg viewBox="0 0 24 24"><path d="m9 4 12 8-12 8z"/></svg></button>
+        <button id="step" type="button" aria-label="下一幕" title="下一幕"><svg viewBox="0 0 24 24"><path d="M18 5v14M6 5l10 7-10 7z"/></svg></button>
+      </div>
+      <label for="timeline" class="sr">回放進度</label><input id="timeline" type="range" min="0" max="0" value="0">
+      <output id="frame-count" for="timeline">0 / 0</output>
+    </div>
+  </section>
+  <aside class="side">
+    <section class="card">
+      <div class="sectionhead"><p class="eyebrow">島上近況</p><span id="day">第 1 日</span></div>
+      <div class="stats"><div><span>天候</span><b id="weather">平靜</b></div><div><span>庫存木料</span><b id="wood">—</b></div><div><span>庫存石料</span><b id="stone">—</b></div><div><span>第一艘船</span><b id="ship-status">未靠岸</b></div></div>
+    </section>
+    <section class="card crew-card">
+      <p class="eyebrow">駐島三人 <small>點擊近看</small></p>
+      <div id="crew"></div>
+    </section>
+    <section class="card log-card">
+      <p class="eyebrow">本幕紀錄 <small>對話和施工分開</small></p>
+      <ol id="events"></ol>
+    </section>
+  </aside>
+</div>
+<footer><span>生成場景與人物素材 · 真實 AI 決策紀錄 · 非實景攝影</span><span id="provenance">尚未載入回放</span></footer>
+</main>
+</body>
+</html>
