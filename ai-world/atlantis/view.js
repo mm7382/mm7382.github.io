@@ -154,7 +154,12 @@ function drawMotion(s, ev, transition){
  let begin=performance.now(), pausedAt=null;
  pauseMotion=()=>{if(animated){cancelAnimationFrame(animated);animated=null;pausedAt=performance.now();}};
  resumeMotion=()=>{if(pausedAt!==null){begin+=performance.now()-pausedAt;pausedAt=null;animated=requestAnimationFrame(tick);}};
- const duration=transition&&!media.matches?690:0;
+ const travelMs=Math.max(0,...Object.entries(dest).map(([id,xy])=>{
+ const p=basePositions[id]||xy;
+ const carrying=Object.values((s.actors||[]).find(a=>a.id===id)?.carry||{}).some(v=>v>0);
+ return Math.hypot(p[0]-xy[0],p[1]-xy[1])/(carrying?17:24)*1000;
+}),Math.hypot(startShip[0]-targetShip[0],startShip[1]-targetShip[1])/42*1000);
+ const duration=transition&&!media.matches?Math.max(690,travelMs):0;
  const tick=(now)=>{
   const k=duration?clamp((now-begin)/duration,0,1):1, ease=k*k*(3-2*k);
   const mix=(u,v)=>u+(v-u)*ease;
@@ -242,6 +247,7 @@ function play(){
  el('play').setAttribute('aria-label','暫停');el('play').title='暫停';
  el('play').firstElementChild.innerHTML='<path d="M7 5h4v14H7zm7 0h4v14h-4z"/>';
  function advance(){
+  if(animated){timer=setTimeout(advance,120);return;}
   if(i>=max){stop();return;}
   i+=1;el('session').textContent='AI 實錄回放 · 2.5D';render(true);timer=setTimeout(advance,2400);
  }
