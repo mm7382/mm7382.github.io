@@ -3,16 +3,23 @@
   "run": "e5c22ef8eb0b",
   "status": "running",
   "waitingFor": null,
-  "publishedAt": 1795506016.440835,
-  "updatedAt": 1795506016.440076,
-  "modelCalls": 19,
+  "publishedAt": 1795506108.803649,
+  "updatedAt": 1795506037.5357969,
+  "modelCalls": 20,
   "stone": {
     "id": "K001",
     "massKg": 2000,
-    "progress": 0.0,
+    "progress": 0.2036210823059082,
     "route": "direct",
     "location": "sledge",
-    "motion": null,
+    "motion": {
+      "kind": "haul",
+      "started": 1795506037.535795,
+      "duration": 77.0,
+      "from": 0.0,
+      "to": 0.22,
+      "cause": 33
+    },
     "placed": false
   },
   "crew": 17,
@@ -325,6 +332,25 @@
       "to": "transport",
       "requestId": "e5c22ef8eb0b-000019",
       "source": "model-output"
+    },
+    {
+      "id": 33,
+      "at": 1795506037.5357819,
+      "type": "speech",
+      "text": "石材已上雪橇，路面濕潤且前方未見阻塞；模擬拉力有餘裕，我帶17人沿直路拖運，隨時留意狀況。",
+      "actor": "transport",
+      "to": "all",
+      "requestId": "e5c22ef8eb0b-000020",
+      "source": "model-output"
+    },
+    {
+      "id": 34,
+      "at": 1795506037.5357969,
+      "type": "accepted",
+      "text": "執行：拖運石材",
+      "actor": "transport",
+      "cause": 33,
+      "action": "haul"
     }
   ],
   "roles": {
@@ -374,10 +400,10 @@
   "buildingWork": null,
   "pyramidComplete": false,
   "worldTime": {
-    "day": 8,
-    "hour": 1,
-    "minute": 55,
-    "elapsedRealSeconds": 424.819875709014,
+    "day": 9,
+    "hour": 14,
+    "minute": 52,
+    "elapsedRealSeconds": 517.1853897920082,
     "realSecondsPerDay": 60,
     "running": true
   }
