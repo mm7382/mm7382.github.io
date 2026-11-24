@@ -21,7 +21,7 @@ const as = (key, data={}) => {const o=document.createElementNS(NS,key); for (con
 const node = (tag, cls, copy) => {const e=document.createElement(tag); if(cls)e.className=cls;if(copy)e.textContent=copy;return e;};
 const enable = (id, control=true) => {el(id).disabled=!control;};
 const move = (obj,x,y) => obj.setAttribute('transform', `translate(${x},${y})`);
-let replay, i=0, selected=null, animated, positions={}, shipXY, oldView=BASE.slice(), timer, active=false, resumeMotion=null, pauseMotion=null;
+let mapZoom=1; let replay, i=0, selected=null, animated, positions={}, shipXY, oldView=BASE.slice(), timer, active=false, resumeMotion=null, pauseMotion=null;
 const chars = new Map();
 const panels = new Map();
 const land = `M-20-20H1148V301Q1092 308 1064 333Q1035 355 989 345Q941 334 895 354Q862 370 826 351Q794 331 754 339Q725 344 704 332Q682 320 633 323Q589 327 554 345Q516 366 475 342Q448 326 419 338Q389 358 358 354Q322 349 299 366Q262 392 228 366Q200 346 151 359Q113 369 89 395Q67 417 39 414L-20 440Z`;
@@ -150,10 +150,11 @@ function anchorBubble(ev) {
  el('speaker').style.left=`${bx}px`;el('speaker').style.top=`${by}px`;
 }
 function viewTarget(s){
- const a=(s.actors||[]).find(a=>a.id===selected);
- if(!a)return BASE.slice();
- const [x,y]=actorPos(a), w=320,h=210;
- return [clamp(x-w/2,0,W-w),clamp(y-h*.59,0,H-h),w,h];
+ const a=(s.actors||[]).find(a=>a.id===selected),w=W/mapZoom,h=H/mapZoom;
+ const [x,y]=a?actorPos(a):[oldView[0]+oldView[2]/2,oldView[1]+oldView[3]/2];
+ el('zoom-in').disabled=mapZoom>=4;el('zoom-out').disabled=mapZoom<=1;
+ el('zoom-level').textContent=mapZoom+'×';el('overview').disabled=mapZoom===1&&!selected;
+ return [clamp(x-w/2,0,W-w),clamp(y-h/2,0,H-h),w,h];
 }
 function drawMotion(s, ev, transition){
  scene.classList.remove('paused');
@@ -255,7 +256,7 @@ function render(transition=false){
  [ ['play',max>0], ['rewind',i>0], ['step',i<max], ['timeline',max>0] ].forEach(([id,on])=>enable(id,on));
 }
 function setFocus(id){
- selected=id;
+ selected=id;if(!id)mapZoom=1;
  el('overview').disabled=!id;
  render(true);
 }
@@ -301,6 +302,8 @@ function load(data){
 el('latest').onclick=()=>{stop();i=replay?.frames.length||0;selected=null;el('overview').disabled=true;render();el('session').textContent='最新保存成果 · 2.5D';};
 el('harbor-record').onclick=()=>fetch('./replay.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(load).catch(()=>{el('stage-note').textContent='港口紀錄載入失敗';});
 el('settlement-record').onclick=()=>fetch('./settlement.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(load).catch(()=>{el('stage-note').textContent='聚落 AI 紀錄尚未匯出';});
+el('zoom-in').onclick=()=>{mapZoom=Math.min(4,mapZoom+.5);render(true);};
+el('zoom-out').onclick=()=>{mapZoom=Math.max(1,mapZoom-.5);render(true);};
 el('rewind').onclick=()=>{stop();i=0;render();};
 el('play').onclick=play;el('step').onclick=()=>step();el('overview').onclick=()=>setFocus(null);
 el('timeline').oninput=(e)=>{stop();el('session').textContent='AI 實錄回放 · 2.5D';i=Number(e.target.value);render();};
