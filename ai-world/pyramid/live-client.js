@@ -3,7 +3,7 @@
 'use strict';
 const live=window.KhufuLive={state:null,online:false,source:'loading',error:'',demo:new URLSearchParams(location.search).get('mode')==='demo'};
 const statuses={ready:'等待 AI 設計',thinking:'AI 正在討論',running:'施工中',blocked:'AI 連線受阻 · 施工暫停',paused:'已暫停 · 保留現場',complete:'施工完成 · 查看驗收'};
-const empty=document.querySelector('.empty');empty.innerHTML='<h3 id="connection-status">讀取工地狀態…</h3><p id="connection-detail"></p><span class="badge" id="model-count">實際 AI 回覆：0</span><p id="build-progress"></p><div id="live-log" aria-live="polite"></div>';
+const empty=document.querySelector('.empty');empty.innerHTML='<h3 id="connection-status">讀取工地狀態…</h3><p id="connection-detail"></p><span class="badge" id="model-count">實際 AI 回覆：0</span><p id="build-progress"></p><div id="live-log" aria-live="polite"></div><section id="building-needs"><h3>他們提出的建築需求</h3><div id="building-list"></div></section>';
 const modeButton=document.createElement('button');modeButton.id='mode-toggle';modeButton.textContent=live.demo?'返回即時工地':'查看動作預覽';document.querySelector('.camera-controls').append(modeButton);
 modeButton.onclick=()=>{live.demo=!live.demo;modeButton.textContent=live.demo?'返回即時工地':'查看動作預覽';document.dispatchEvent(new Event('khufu-mode'));};
 const bubble=document.createElement('div');bubble.id='speech-bubble';bubble.hidden=true;document.getElementById('viewport').append(bubble);
@@ -13,6 +13,9 @@ function update(){
  el('connection-detail').textContent=s?(s.error||(live.online?'與 Mac 上的施工狀態同步。':'目前未收到即時狀態，不會自行推進施工。')):'沒有可用資料；畫面不代表已開工。';
  el('model-count').textContent='實際 AI 回覆：'+(s?.modelCalls||0);
  el('build-progress').textContent=s?.plan?`AI 選定 ${s.plan.base} × ${s.plan.base} 底座、${s.plan.layers} 層；已安放 ${s.placed.length} / ${s.totalBlocks} 塊。`:'設計尚未定案 · 已安放 0 塊';
+ const buildingList=el('building-list');buildingList.replaceChildren();
+ if(!s?.buildings?.length){const note=document.createElement('p');note.textContent='尚未收到 AI 的建築提案。';buildingList.append(note);}
+ for(const b of s?.buildings||[]){const card=document.createElement('article'),name=document.createElement('strong'),purpose=document.createElement('p'),status=document.createElement('p');name.textContent=b.name;purpose.textContent=b.purpose;status.textContent=['提案／等待整地','整地完成','基礎完成','主體完成','本版工序完成'][b.stage]||'等待中';card.append(name,purpose,status);const art=[...(s.artRequests||[])].reverse().find(r=>r.buildingId===b.id);const note=document.createElement('p');note.textContent=art?.status==='ready'?'外觀素材已生成（不代表建築完工）':'圖片需求等待處理';card.append(note);if(art?.status==='ready'&&/^assets\/generated\/art[0-9]+\.png$/.test(art.asset)){const img=document.createElement('img');img.src=art.asset;img.alt=b.name+'外觀素材';img.loading='lazy';card.append(img);}buildingList.append(card);}
  const key=s?`${s.run}:${s.events?.at(-1)?.id}`:'';
  if(key!==lastLogKey){lastLogKey=key;el('live-log').replaceChildren();for(const e of [...(s?.events||[])].reverse().slice(0,45)){const row=document.createElement('article'),label=document.createElement('strong'),text=document.createElement('p');label.textContent=e.type==='speech'?s.roles[e.actor]||e.actor:'施工紀錄';text.textContent=e.text;row.append(label,text);if(e.type==='speech'){row.dataset.source='model-output';row.title='模型回覆編號：'+e.requestId;}el('live-log').append(row);}}
  const speech=[...(s?.events||[])].reverse().find(e=>e.type==='speech'&&e.source==='model-output');

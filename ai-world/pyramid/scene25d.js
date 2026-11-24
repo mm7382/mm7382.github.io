@@ -32,6 +32,12 @@ function render(ctx,assets,time,view={mode:'overview',zoom:1,panX:0,panY:0},pin=
  shadow(ctx,440,444,23);root.KhufuRig.task(ctx,assets,kneeler,440,450,132,live?(live.stone?.motion?.kind==='place'?time:0):s.t,'lever');
  shadow(ctx,1080,460,22);root.KhufuRig.task(ctx,assets,foreman,1080,465,160,live?(live.status==='thinking'?time+1.8:0):s.t+1.8,'foreman');
  if(live)for(const block of [...live.placed].sort((a,b)=>a.cell[2]-b.cell[2]||a.cell[1]-b.cell[1]||a.cell[0]-b.cell[0]))placedStone(ctx,assets,block.cell,live.plan?.base||3);
+ if(live)for(const [i,building] of (live.buildings||[]).entries()){
+  const x=1120+(i%3)*135,y=450+Math.floor(i/3)*90,asset=assets.generated?.[building.id];
+  if(building.stage===4&&asset){const h=155,w=h*asset.width/asset.height;ctx.drawImage(asset,x-w/2,y-h,w,h);}
+  else if(building.stage>0){ctx.fillStyle='#af95775c';ctx.fillRect(x-48,y-25,96,25);ctx.strokeStyle='#685038';ctx.lineWidth=3;for(let k=0;k<4;k++){ctx.beginPath();ctx.moveTo(x-40+k*27,y);ctx.lineTo(x-40+k*27,y-25-building.stage*12);ctx.stroke();}}
+  if(building.stage>0){ctx.fillStyle='#27332cd9';ctx.fillRect(x-65,y+4,130,25);ctx.fillStyle='#f0e4ca';ctx.font='12px sans-serif';ctx.textAlign='center';ctx.fillText(building.name+(building.stage<4?'・施工中':asset?'':'・等候外觀素材'),x,y+21);ctx.textAlign='start';}
+ }
  // Two staggered rope teams. Back row is drawn before the load and front row.
  const back=[],front=[];
  const crewCount=live?Math.max(0,(live.crew||0)-(live.stone?.motion?.kind==='wet'?1:0)):10;
