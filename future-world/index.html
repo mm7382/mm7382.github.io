@@ -1,22 +1,42 @@
 <!doctype html>
 <html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><link rel="icon" href="data:,"><meta name="description" content="《回來以後》：先體驗空橋短段前進與 Michael、Lucy 雙視角閱讀。更多故事與空間，Coming soon。"><title>回來以後｜Coming soon</title><link rel="stylesheet" href="style.css?v=20261110-comingsoon"><style>
-.lucy-preview{position:fixed;z-index:2;left:clamp(1rem,4vw,3rem);bottom:clamp(5.8rem,13vh,8rem);width:min(24rem,calc(100vw - 2rem));box-sizing:border-box;padding:clamp(.8rem,2vw,1.25rem);border:1px solid #d9e1ea44;border-radius:1rem;color:#fff;background:#121b26e8;box-shadow:0 .5rem 2rem #080a1266}
-.lucy-preview h2{font-size:clamp(1.2rem,3vw,1.65rem);margin:0}.lucy-preview p{font-size:.9rem;line-height:1.55;margin:.6rem 0 .8rem;color:#e0e6ec}.lucy-preview-actions{display:flex;flex-wrap:wrap;gap:.45rem}.lucy-preview-actions button{min-height:44px;padding:.45rem .75rem}
-body[data-viewpoint="Lucy"] .lucy-preview,.scene:has(#invitation:not([hidden]),#hotspots:not([hidden]),#show-invitation:not([hidden])) .lucy-preview,.moving .lucy-preview,.switching .lucy-preview{display:none}
-#lucy-video-dialog{width:min(56rem,calc(100% - 2rem));max-height:calc(100dvh - 2rem);box-sizing:border-box;overflow:auto}#lucy-video-dialog .lucy-video-frame{aspect-ratio:16/9;margin:.75rem 0;background:#000;border-radius:.5rem;overflow:hidden}#lucy-video-dialog iframe{display:block;width:100%;height:100%;border:0}#lucy-video-dialog a{color:inherit;text-underline-offset:.2em}
-@media(max-height:420px){.lucy-preview{bottom:4.5rem;padding:.5rem .65rem}.lucy-preview p{margin:.25rem 0}}
+.lucy-cue{position:absolute;z-index:3;left:max(clamp(1rem,4vw,3.5rem),env(safe-area-inset-left));bottom:calc(max(1.2rem,env(safe-area-inset-bottom)) + .2rem);color:#fff5e1;text-shadow:0 1px 8px #070d0a,0 2px 12px #070d0a}
+.lucy-cue::before{content:"";position:absolute;z-index:-1;inset:-5rem -4rem -1.5rem -4rem;background:radial-gradient(ellipse at 25% 90%,#101b19e8,transparent 73%);pointer-events:none}
+.lucy-cue p{margin:0;font:clamp(.82rem,1.6vw,1rem)/1.6 Georgia,"Songti TC",serif;letter-spacing:.045em}
+.lucy-cue button,.lucy-cut button,.lucy-cut a{min-height:44px;display:inline-flex;align-items:center;gap:.5rem;padding:0;color:#ffe7b7;background:none;border:0;border-radius:0;font:inherit;letter-spacing:.04em;text-decoration:underline;text-decoration-color:#ffe7b780;text-underline-offset:.35em}
+.lucy-cue button:hover,.lucy-cut button:hover,.lucy-cut a:hover{color:white;text-decoration-color:white}
+.lucy-cue button:focus-visible,.lucy-cut button:focus-visible,.lucy-cut a:focus-visible{outline:2px solid #ffe7b7;outline-offset:5px}
+body[data-viewpoint="Lucy"] .lucy-cue,body.moving .lucy-cue,body.switching .lucy-cue,body:has(dialog[open]) .lucy-cue,.scene:has(#invitation:not([hidden]),#hotspots:not([hidden]),#show-invitation:not([hidden])) .lucy-cue{display:none}
+.lucy-cut[hidden],.lucy-cut [hidden]{display:none!important}
+body.lucy-cut-open header,body.lucy-cut-open .caption,body.lucy-cut-open .stopbar{visibility:hidden}
+.lucy-cut{position:absolute;inset:0;z-index:5;display:grid;place-items:center;box-sizing:border-box;overflow:auto;overscroll-behavior:contain;color:#fff5e1;background:linear-gradient(180deg,#19170ff0 0%,#171611b3 50%,#14150ff5 100%),url("lucy-room.webp") center/cover;animation:lucy-cut-in .4s ease-out;padding:max(1.1rem,env(safe-area-inset-top)) max(1.15rem,env(safe-area-inset-right)) max(1.1rem,env(safe-area-inset-bottom)) max(1.15rem,env(safe-area-inset-left))}
+@keyframes lucy-cut-in{from{opacity:0}to{opacity:1}}
+.lucy-cut-inner{width:min(100%,64rem,max(22rem,calc((100dvh - 10rem)*1.7778)));margin:auto}
+.lucy-cut-head{margin:0 0 .85rem}.lucy-cut-head p{margin:0 0 .2rem;font-size:.7rem;letter-spacing:.18em;color:#efd9ac}.lucy-cut h2{font:clamp(1.35rem,4vw,2.1rem)/1.2 Georgia,"Songti TC",serif;letter-spacing:.045em;margin:0}
+.lucy-cut-screen{width:100%;position:relative;aspect-ratio:16/9;min-height:200px;background:#16150f url("lucy-room.webp") center/cover;overflow:hidden;box-shadow:0 1rem 3rem #0d0b0780}
+.lucy-cut-screen iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
+.lucy-cut-nav{display:flex;align-items:center;justify-content:space-between;gap:.35rem 1rem;flex-wrap:wrap;margin-top:.25rem;font-size:.84rem}
+.lucy-cut-nav a{color:#f5e8ca}
+@media(max-width:520px){.lucy-cue{bottom:calc(max(1.2rem,env(safe-area-inset-bottom)) + 3.35rem)}.lucy-cut{background-position:center,42% center}.lucy-cut-inner{width:100%}}
+@media(max-height:500px) and (min-width:521px){.lucy-cut-inner{width:min(100%,max(23rem,calc((100dvh - 8.25rem)*1.7778)))}.lucy-cut-head{margin-bottom:.5rem}}
+@media(prefers-reduced-motion:reduce){.lucy-cut{animation:none}}
 </style></head>
 <body><header><div class="brand-block"><a href="#" id="home" aria-label="回到這個視角的起點">回來以後<span>UPON RETURNING</span></a><button id="project-status" class="project-status" aria-haspopup="dialog" aria-controls="project-dialog">Coming soon <span aria-hidden="true">ⓘ</span></button></div><div class="scene-heading"><p id="scene-title">空橋停點 <i>第一幕</i></p><button id="open-viewpoint" aria-haspopup="dialog" aria-controls="viewpoint-dialog">視角 / Michael ▾</button></div></header>
-<main><div class="scene" id="scene"><video id="motion" width="2560" height="1440" playsinline muted preload="auto" poster="start.webp" aria-label="沿著玻璃空橋緩緩前進"><source src="forward-2m.mp4" type="video/mp4"></video><img id="stop-frame" src="stop.webp" alt="空橋停止視角" hidden decoding="async"><img id="lucy-room" src="lucy-room.webp" alt="Lucy的房間：畫作、紙頁、琴與窗外的城市" hidden decoding="async"><div id="hotspots" hidden><button class="hotspot device" id="device" aria-haspopup="dialog"><b>＋</b><span>裝置說明</span></button><button class="hotspot route" id="route" aria-haspopup="dialog"><b>↗</b><span>Coming soon</span></button></div><section class="entry" hidden id="entry" aria-labelledby="entry-title"><p class="eyebrow">01 / 空橋</p><h1 id="entry-title">她沒有催他。</h1><p>他可以再看一會兒。</p><button class="primary" id="enter">收起文字，往前 <span>→</span></button></section><section class="lucy-preview" aria-labelledby="lucy-preview-title"><h2 id="lucy-preview-title">她沒有催他。</h2><p>Lucy 沒有收起桌上的畫。她想讓 Michael 看見她平常生活的樣子。她想見他，但不急著要他現在過來。</p><div class="lucy-preview-actions"><button type="button" class="primary" id="lucy-video-start" aria-haspopup="dialog" aria-controls="lucy-video-dialog">▶ 播放 Lucy 短片</button><button type="button" id="lucy-preview-viewpoint">選擇視角</button></div></section><section id="invitation" class="hud" hidden aria-label="非語言邀請"><p id="reading-viewpoint" class="eyebrow">感知 / Michael 視角</p><p id="reading-count" class="reading-count">1 / 8 · 依你的步調閱讀</p><div id="reading-content" class="reading-content"><p id="reading-text" tabindex="-1"></p><p id="reading-detail" hidden></p></div><nav class="reading-nav" aria-label="閱讀段落"><button id="reading-prev" disabled>上一段</button><button id="reading-detail-toggle" aria-expanded="false">再讀一點</button><button id="reading-next">下一段 →</button></nav><div class="reading-actions"><button id="hide-invitation">收起文字</button><button id="reading-forward">重播這段 →</button></div></section><button id="show-invitation" class="hud-reopen" hidden>感知</button><button id="lucy-next" class="lucy-next" disabled hidden>後續移動 · Coming soon</button></div>
+<main><div class="scene" id="scene"><video id="motion" width="2560" height="1440" playsinline muted preload="auto" poster="start.webp" aria-label="沿著玻璃空橋緩緩前進"><source src="forward-2m.mp4" type="video/mp4"></video><img id="stop-frame" src="stop.webp" alt="空橋停止視角" hidden decoding="async"><img id="lucy-room" src="lucy-room.webp" alt="Lucy的房間：畫作、紙頁、琴與窗外的城市" hidden decoding="async"><div id="hotspots" hidden><button class="hotspot device" id="device" aria-haspopup="dialog"><b>＋</b><span>裝置說明</span></button><button class="hotspot route" id="route" aria-haspopup="dialog"><b>↗</b><span>Coming soon</span></button></div><section class="entry" hidden id="entry" aria-labelledby="entry-title"><p class="eyebrow">01 / 空橋</p><h1 id="entry-title">她沒有催他。</h1><p>他可以再看一會兒。</p><button class="primary" id="enter">收起文字，往前 <span>→</span></button></section><div class="lucy-cue"><p>同一時間，Lucy 把畫留在桌上。</p><button type="button" id="lucy-video-start" aria-controls="lucy-cut">看看 Lucy 那邊 <span aria-hidden="true">→</span></button></div><section id="invitation" class="hud" hidden aria-label="非語言邀請"><p id="reading-viewpoint" class="eyebrow">感知 / Michael 視角</p><p id="reading-count" class="reading-count">1 / 8 · 依你的步調閱讀</p><div id="reading-content" class="reading-content"><p id="reading-text" tabindex="-1"></p><p id="reading-detail" hidden></p></div><nav class="reading-nav" aria-label="閱讀段落"><button id="reading-prev" disabled>上一段</button><button id="reading-detail-toggle" aria-expanded="false">再讀一點</button><button id="reading-next">下一段 →</button></nav><div class="reading-actions"><button id="hide-invitation">收起文字</button><button id="reading-forward">重播這段 →</button></div></section><button id="show-invitation" class="hud-reopen" hidden>感知</button><button id="lucy-next" class="lucy-next" disabled hidden>後續移動 · Coming soon</button><section id="lucy-cut" class="lucy-cut" hidden aria-labelledby="lucy-cut-title">
+<div class="lucy-cut-inner"><div class="lucy-cut-head"><p>第一幕 ／ 同一時間</p><h2 id="lucy-cut-title">Lucy 的畫桌</h2></div>
+<div id="lucy-video-frame" class="lucy-cut-screen"></div>
+<nav class="lucy-cut-nav" aria-label="Lucy 視角"><button type="button" id="lucy-video-return"><span aria-hidden="true">←</span> 回到空橋</button><button type="button" id="lucy-video-replay" hidden>重看片段</button><a href="https://youtu.be/k0DWPrPXqFw" target="_blank" rel="noopener noreferrer">在 YouTube 觀看 ↗</a></nav></div></section></div>
 <div class="caption"><button id="start-forward">沿空橋前進 →</button><p id="status" role="status">載入前進片段…</p><p>第一幕 · 空橋</p></div>
 <section class="stopbar" id="stopbar" hidden><div><p class="eyebrow">01 / 空橋停點</p><h1>目前展示至此。</h1><p>可查看裝置說明，或了解其他片段。</p></div><div class="actions"><button id="continue" class="primary" hidden>往前 →</button><button id="device-alt">裝置說明</button><button class="primary" id="route-alt">Coming soon</button></div></section></main>
 <dialog id="device-dialog" aria-labelledby="device-title"><button class="close" data-close aria-label="關閉說明">×</button><p class="eyebrow">裝置筆記</p><h2 id="device-title">生命修復裝置</h2><p>細胞之間的電訊號，會參與協調修復的方向。這個裝置嘗試調整這些訊號，幫助不同區域的細胞重新配合；它也需要局部保護與持續觀察。</p><button class="primary" data-close>返回空橋</button></dialog>
 <dialog id="route-dialog" aria-labelledby="route-title"><button class="close" data-close aria-label="關閉選路">×</button><p class="eyebrow">展示範圍</p><h2 id="route-title">更多片段 · Coming soon</h2><p class="intro">更多房間與旅程，Coming soon。先在空橋停留一會兒。</p><fieldset><legend>目的地</legend><label><input type="radio" disabled name="destination" value="生命修復室"><span><strong>生命修復室</strong><small>了解長躺椅與修復模組</small></span><em>Coming soon</em></label><label><input type="radio" disabled name="destination" value="重力搬運維修房"><span><strong>重力搬運維修房</strong><small>了解重物搬運與定位</small></span><em>Coming soon</em></label></fieldset><p id="selection" role="status">目前保留空橋體驗，以及 Lucy 房間的靜態畫面與敘事。</p><button class="primary" id="confirm">返回空橋</button></dialog>
-<dialog id="viewpoint-dialog" aria-labelledby="viewpoint-title" aria-describedby="viewpoint-note"><button class="close" data-close aria-label="關閉視角選擇">×</button><p class="eyebrow">兩種目光，同一個故事</p><h2 id="viewpoint-title">選擇你的視角</h2><div class="viewpoint-options"><button id="choose-michael" aria-pressed="true"><strong>Michael</strong><span>站在空橋，看見遠方的城市。</span><small id="michael-view-status">目前視角</small></button><button id="choose-lucy" aria-pressed="false"><strong>Lucy</strong><span>留在房間，整理想見他的心意。</span><small id="lucy-view-status">靜態敘事可閱讀 · 移動 Coming soon</small></button></div><p id="viewpoint-note">兩個視角各有不同場景與心聲。Lucy 的房間是靜態停點；後續移動與人物動畫，Coming soon。</p><button class="primary" data-close>回到目前視角</button></dialog><dialog id="project-dialog" aria-labelledby="project-title" aria-describedby="project-summary"><button class="close" data-close aria-label="關閉展示說明">×</button><p class="eyebrow">回來以後 · <time datetime="2026-11-10">2026.11.10</time></p><h2 id="project-title">Coming soon</h2><p id="project-summary">更多故事與空間，Coming soon。你可以先體驗目前開放的片段。</p><dl class="release-scope"><dt>目前可體驗</dt><dd>Michael 的空橋短段前進與文字閱讀；Lucy 房間的靜態畫面與獨立敘事。</dd><dt>Coming soon</dt><dd>後續房間、完整人物動畫與連續城市探索。</dd></dl><p class="note">目前可體驗的片段保留原有閱讀與互動。</p><button class="primary" data-close>返回展示</button></dialog><script src="narrative.js?v=20261103-dual2b"></script><script src="app.js?v=20261110-comingsoon"></script><dialog id="lucy-video-dialog" aria-labelledby="lucy-video-title"><button type="button" class="close" id="lucy-video-close" autofocus aria-label="關閉短片">×</button><h2 id="lucy-video-title">她沒有催他。</h2><div id="lucy-video-frame" class="lucy-video-frame"></div><button type="button" id="lucy-video-return" class="primary">返回場景</button> <a href="https://youtu.be/k0DWPrPXqFw" target="_blank" rel="noopener noreferrer">在 YouTube 觀看</a></dialog><script>
+<dialog id="viewpoint-dialog" aria-labelledby="viewpoint-title" aria-describedby="viewpoint-note"><button class="close" data-close aria-label="關閉視角選擇">×</button><p class="eyebrow">兩種目光，同一個故事</p><h2 id="viewpoint-title">選擇你的視角</h2><div class="viewpoint-options"><button id="choose-michael" aria-pressed="true"><strong>Michael</strong><span>站在空橋，看見遠方的城市。</span><small id="michael-view-status">目前視角</small></button><button id="choose-lucy" aria-pressed="false"><strong>Lucy</strong><span>留在房間，整理想見他的心意。</span><small id="lucy-view-status">靜態敘事可閱讀 · 移動 Coming soon</small></button></div><p id="viewpoint-note">兩個視角各有不同場景與心聲。Lucy 的房間是靜態停點；後續移動與人物動畫，Coming soon。</p><button class="primary" data-close>回到目前視角</button></dialog><dialog id="project-dialog" aria-labelledby="project-title" aria-describedby="project-summary"><button class="close" data-close aria-label="關閉展示說明">×</button><p class="eyebrow">回來以後 · <time datetime="2026-11-10">2026.11.10</time></p><h2 id="project-title">Coming soon</h2><p id="project-summary">更多故事與空間，Coming soon。你可以先體驗目前開放的片段。</p><dl class="release-scope"><dt>目前可體驗</dt><dd>Michael 的空橋短段前進與文字閱讀；Lucy 的畫桌短片、房間靜態畫面與獨立敘事。</dd><dt>Coming soon</dt><dd>後續房間、完整人物動畫與連續城市探索。</dd></dl><p class="note">目前可體驗的片段保留原有閱讀與互動。</p><button class="primary" data-close>返回展示</button></dialog><script src="narrative.js?v=20261103-dual2b"></script><script src="app.js?v=20261110-comingsoon"></script><script>
 (() => {
- const dialog=document.getElementById('lucy-video-dialog'), mount=document.getElementById('lucy-video-frame'), trigger=document.getElementById('lucy-video-start');
- let player, api;
- function connectAPI() {
+ const cut=document.getElementById('lucy-cut'), mount=document.getElementById('lucy-video-frame');
+ const trigger=document.getElementById('lucy-video-start'), back=document.getElementById('lucy-video-return'), replay=document.getElementById('lucy-video-replay');
+ const background=[...cut.parentElement.children].filter(node=>node!==cut).concat([...document.querySelectorAll('body > header, main > .caption, main > .stopbar')]);
+ let player,api;
+ function connectAPI(){
    if(window.YT?.Player)return Promise.resolve(window.YT);
    if(api)return api;
    api=new Promise((resolve,reject)=>{
@@ -28,28 +48,46 @@ body[data-viewpoint="Lucy"] .lucy-preview,.scene:has(#invitation:not([hidden]),#
    });
    return api;
  }
- trigger.addEventListener('click',()=>{
-   dialog.showModal();
+ function unload(){
+   if(player){player.destroy();player=undefined;}
+   mount.replaceChildren();
+ }
+ function play(){
+   unload();replay.hidden=true;
    const frame=document.createElement('iframe');
-   frame.title='Lucy 短片：她沒有催他。';
+   frame.title='Lucy 的畫桌：她沒有催他';
    frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
    frame.allowFullscreen=true;
    frame.referrerPolicy='strict-origin-when-cross-origin';
    const url=new URL('https://www.youtube-nocookie.com/embed/k0DWPrPXqFw');
    url.search=new URLSearchParams({autoplay:'1',playsinline:'1',enablejsapi:'1',origin:location.origin,rel:'0'}).toString();
    frame.src=url.href;
-   mount.replaceChildren(frame);
+   mount.append(frame);
    connectAPI().then(YT=>{
-     if(!dialog.open || !frame.isConnected)return;
-     player=new YT.Player(frame,{events:{onStateChange:e=>{if(e.data===YT.PlayerState.ENDED && dialog.open && frame.isConnected)dialog.close();}}});
+     if(cut.hidden || !frame.isConnected)return;
+     player=new YT.Player(frame,{events:{onStateChange:e=>{
+       if(e.data!==YT.PlayerState.ENDED || cut.hidden || !frame.isConnected)return;
+       const hadFocus=document.activeElement===frame;
+       unload();replay.hidden=false;
+       if(hadFocus)replay.focus({preventScroll:true});
+     }}});
    }).catch(()=>{});
+ }
+ function close(){
+   if(cut.hidden)return;
+   cut.hidden=true;unload();background.forEach(node=>node.inert=false);
+   document.body.classList.remove('lucy-cut-open');
+   trigger.focus({preventScroll:true});
+ }
+ trigger.addEventListener('click',()=>{
+   if(!cut.hidden)return;
+   cut.hidden=false;background.forEach(node=>node.inert=true);
+   document.body.classList.add('lucy-cut-open');
+   play();back.focus({preventScroll:true});
  });
- document.getElementById('lucy-preview-viewpoint').addEventListener('click',()=>document.getElementById('open-viewpoint').click());
- for(const id of ['lucy-video-close','lucy-video-return'])document.getElementById(id).addEventListener('click',()=>dialog.close());
- dialog.addEventListener('close',()=>{
-   player?.destroy(); player=undefined;
-   mount.replaceChildren();
-   trigger.focus();
- });
+ back.addEventListener('click',close);
+ replay.addEventListener('click',()=>{play();back.focus({preventScroll:true});});
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!cut.hidden){event.preventDefault();close();}});
+ window.addEventListener('hashchange',close);
 })();
 </script></body></html>
