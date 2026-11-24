@@ -3,22 +3,22 @@
   "run": "e5c22ef8eb0b",
   "status": "running",
   "waitingFor": null,
-  "publishedAt": 1795506108.803649,
-  "updatedAt": 1795506037.5357969,
-  "modelCalls": 20,
+  "publishedAt": 1795506200.3133929,
+  "updatedAt": 1795506173.13845,
+  "modelCalls": 23,
   "stone": {
     "id": "K001",
     "massKg": 2000,
-    "progress": 0.2036210823059082,
+    "progress": 0.2976406226839338,
     "route": "direct",
-    "location": "sledge",
+    "location": "road",
     "motion": {
       "kind": "haul",
-      "started": 1795506037.535795,
+      "started": 1795506173.1384451,
       "duration": 77.0,
-      "from": 0.0,
-      "to": 0.22,
-      "cause": 33
+      "from": 0.22,
+      "to": 0.44,
+      "cause": 38
     },
     "placed": false
   },
@@ -351,6 +351,53 @@
       "actor": "transport",
       "cause": 33,
       "action": "haul"
+    },
+    {
+      "id": 35,
+      "at": 1795506114.7436118,
+      "type": "result",
+      "text": "本段拖運完成。",
+      "actor": null,
+      "cause": 33
+    },
+    {
+      "id": 36,
+      "at": 1795506130.169557,
+      "type": "speech",
+      "text": "石材仍在路上，這段拖運已完成；請運輸同事繼續確認路況與搬運進度。等石材運抵、雪橇停止後，請規劃同事調派至少四人協助安放。",
+      "actor": "mason",
+      "to": "all",
+      "requestId": "e5c22ef8eb0b-000021",
+      "source": "model-output"
+    },
+    {
+      "id": 37,
+      "at": 1795506150.509307,
+      "type": "speech",
+      "text": "第一段拖運已完成，石材仍在路上。請運輸同事確認路況後繼續搬運；待石材運抵且雪橇停止，我再調派至少四人協助安放。",
+      "actor": "planner",
+      "to": "transport",
+      "requestId": "e5c22ef8eb0b-000022",
+      "source": "model-output"
+    },
+    {
+      "id": 38,
+      "at": 1795506173.138428,
+      "type": "speech",
+      "text": "路面仍濕潤、直路未受阻，17人的模擬拉力高於所需拉力；我帶隊繼續拖運，留意途中變化。",
+      "actor": "transport",
+      "to": "all",
+      "requestId": "e5c22ef8eb0b-000023",
+      "source": "model-output"
+    },
+    {
+      "id": 39,
+      "at": 1795506173.138449,
+      "type": "accepted",
+      "text": "執行：拖運石材",
+      "actor": "transport",
+      "cause": 38,
+      "action": "haul"
     }
   ],
   "roles": {
@@ -400,10 +447,10 @@
   "buildingWork": null,
   "pyramidComplete": false,
   "worldTime": {
-    "day": 9,
-    "hour": 14,
-    "minute": 52,
-    "elapsedRealSeconds": 517.1853897920082,
+    "day": 11,
+    "hour": 3,
+    "minute": 28,
+    "elapsedRealSeconds": 608.6978103760048,
     "realSecondsPerDay": 60,
     "running": true
   }
