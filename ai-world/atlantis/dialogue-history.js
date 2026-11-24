@@ -2,6 +2,7 @@
  const make=(tag,text,cls)=>{const n=document.createElement(tag);if(text)n.textContent=text;if(cls)n.className=cls;return n;};
  const layout=document.querySelector('.layout'),footer=document.querySelector('main footer');
  document.querySelector('.brand strong').textContent='AIWorldLab';document.querySelector('.brand small').textContent='觀察一個世界慢慢長大';
+ const topActions=make('div',null,'top-world-actions');for(const id of ['run-state','fresh-world','stop-world']){const n=document.getElementById(id);if(n)topActions.append(n);}document.querySelector('.mast').append(topActions);
  const nav=make('div','雅特蘭提斯 · 海灣聚落','world-tab');document.querySelector('.mast').after(nav);
  const controls=make('details',null,'replay-controls'),summary=make('summary','回放與觀察工具');controls.append(summary);
  const actions=document.querySelector('.world-actions');controls.append(actions,document.querySelector('.transport'));layout.after(controls);
