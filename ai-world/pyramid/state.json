@@ -1,25 +1,18 @@
 {
   "schema": 2,
   "run": "e5c22ef8eb0b",
-  "status": "running",
-  "waitingFor": null,
-  "publishedAt": 1795506475.469617,
-  "updatedAt": 1795506446.480921,
-  "modelCalls": 29,
+  "status": "thinking",
+  "waitingFor": "transport",
+  "publishedAt": 1795506561.856482,
+  "updatedAt": 1795506553.848326,
+  "modelCalls": 31,
   "stone": {
     "id": "K001",
     "massKg": 2000,
-    "progress": 0.7428228228432792,
+    "progress": 0.88,
     "route": "direct",
     "location": "road",
-    "motion": {
-      "kind": "haul",
-      "started": 1795506446.480916,
-      "duration": 76.99999999999999,
-      "from": 0.66,
-      "to": 0.88,
-      "cause": 48
-    },
+    "motion": null,
     "placed": false
   },
   "crew": 17,
@@ -492,6 +485,34 @@
       "actor": "transport",
       "cause": 48,
       "action": "haul"
+    },
+    {
+      "id": 50,
+      "at": 1795506523.6404648,
+      "type": "result",
+      "text": "本段拖運完成。",
+      "actor": null,
+      "cause": 48
+    },
+    {
+      "id": 51,
+      "at": 1795506536.162815,
+      "type": "speech",
+      "text": "石材仍在途中，請運輸同事繼續留意路況；待運抵、雪橇停穩且至少四人到位後，我再安放基座石。",
+      "actor": "mason",
+      "to": "all",
+      "requestId": "e5c22ef8eb0b-000030",
+      "source": "model-output"
+    },
+    {
+      "id": 52,
+      "at": 1795506553.8483222,
+      "type": "speech",
+      "text": "石材已接近工地，請運輸同事確認路況及隊員狀態後繼續拖運；抵達並停穩後，我會調派至少四人協助安放。",
+      "actor": "planner",
+      "to": "transport",
+      "requestId": "e5c22ef8eb0b-000031",
+      "source": "model-output"
     }
   ],
   "roles": {
@@ -541,10 +562,10 @@
   "buildingWork": null,
   "pyramidComplete": false,
   "worldTime": {
-    "day": 15,
-    "hour": 17,
-    "minute": 32,
-    "elapsedRealSeconds": 883.8628756670078,
+    "day": 17,
+    "hour": 4,
+    "minute": 6,
+    "elapsedRealSeconds": 970.2527672920114,
     "realSecondsPerDay": 60,
     "running": true
   }
