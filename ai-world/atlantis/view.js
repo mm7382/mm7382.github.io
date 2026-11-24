@@ -86,6 +86,9 @@ function structures(snapshot){
    if(s.kind==='shelter')group.innerHTML=foundation+'<path d="M-17 0v-23m34 23v-23M-17-23 0-34 17-23" stroke="#796142" stroke-width="3" fill="none"/>'+(ratio>=.66?'<path d="M-17-22 17-22 17 0 0 8-17 0Z" fill="#bba37f"/><path d="M-4 5v-17h8V5" fill="#463d30"/>':'')+(full?'<path d="M-23-21 0-37 23-21 0-13Z" fill="#8b7957" stroke="#b5a16f"/>':'');
    if(s.kind==='well')group.innerHTML=foundation+'<ellipse cy="-4" rx="12" ry="7" fill="#a7997f" stroke="#716653" stroke-width="'+(3+ratio*4)+'"/>'+(full?'<ellipse cy="-5" rx="7" ry="3" fill="#294943"/>':'');
    if(s.kind==='garden')group.innerHTML='<path d="M-23 0 0-11 27 0 4 13Z" fill="#685840"/>'+Array.from({length:Math.ceil(ratio*4)},(_,j)=>'<path d="M'+(-15+j*7)+' 1l18-8" stroke="'+(full?'#738259':'#a08a61')+'" stroke-width="3"/>').join('');
+   if(full){const cell={shelter:0,well:1,garden:2}[s.kind],size={shelter:110,well:48,garden:92}[s.kind];
+    group.innerHTML='<svg x="'+(-size/2)+'" y="'+(-size*.83)+'" width="'+size+'" height="'+size+'" viewBox="'+(cell*724)+' 0 724 724"><image href="./assets/buildings.png" width="2172" height="724"/></svg>';
+   }
   }else if(s.kind==='breakwater'){
    const rubble=Array.from({length:Math.ceil(28*ratio)},(_,j)=>{const x=j*2.9-27,y=j*.65+7+Math.sin(j*2.5)*4;return `<path d="m${x.toFixed(1)} ${y.toFixed(1)}q8-6 13-1l3 5-12 4-7-4z" fill="${['#b6a386','#978c72','#847965'][j%3]}" stroke="#645b50" stroke-width=".6"/>`;}).join('');
    group.innerHTML=`<ellipse cx="0" cy="21" rx="${50*ratio}" ry="12" fill="#245b63" opacity=".45"/>${rubble}`;
@@ -293,7 +296,7 @@ function load(data){
  el('session').textContent=live?'AI 實錄回放':fixture?'介面測試 · 非 AI':'觀察紀錄';
  el('provenance').textContent=live?`AI 實錄回放${data.model?' · '+data.model:''}，不是直播`:fixture?'介面測試資料，不是 AI 執行結果':'匯入的回放紀錄，來源未標示';
  el('timeline').max=data.frames.length;
- i=data.frames.length;render();el('session').textContent=data.phase==='settlement'?'聚落試跑 · 本批已暫停':'最新保存成果 · 2.5D';
+ i=data.frames.length;render();el('session').textContent=data.phase==='settlement'?'聚落紀錄 · 最新保存':'最新保存成果 · 2.5D';
 }
 el('latest').onclick=()=>{stop();i=replay?.frames.length||0;selected=null;el('overview').disabled=true;render();el('session').textContent='最新保存成果 · 2.5D';};
 el('harbor-record').onclick=()=>fetch('./replay.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(load).catch(()=>{el('stage-note').textContent='港口紀錄載入失敗';});
@@ -305,6 +308,7 @@ el('load').onchange=async e=>{
  const f=e.target.files[0];if(!f)return;
  try{load(JSON.parse(await f.text()));}catch(err){el('stage-note').textContent=`匯入失敗：${err.message}`;}finally{e.target.value='';}
 };
+window.addEventListener('atlantis-record',e=>{if(replay?.phase==='settlement'&&!active&&i===replay.frames.length){load(e.detail);}});
 window.addEventListener('resize',()=>anchorBubble(event()));
 render();el('overview').disabled=true;
 if(globalThis.ATLANTIS_REPLAY){

@@ -14,7 +14,7 @@ function frame(now){if(last&&playing&&(!window.KhufuLive||window.KhufuLive.demo)
 document.addEventListener('khufu-mode',()=>{t=0;playing=true;document.querySelector('.playback').hidden=!window.KhufuLive.demo;});document.querySelector('.playback').hidden=!window.KhufuLive?.demo;
 $('play').onclick=()=>{if(t===R.DURATION)t=0;playing=!playing;};
 $('timeline').oninput=e=>{t=Number(e.target.value);playing=false;};
-function reset(mode='overview'){Object.assign(view,{mode,zoom:1,panX:0,panY:0});document.querySelectorAll('[data-camera]').forEach(b=>b.classList.toggle('active',b.dataset.camera===mode));$('camera-label').textContent={overview:'工地全景',follow:'近景 · 跟隨工班',walk:'自由移動 · 2.5D'}[mode];}
+function reset(mode='overview'){Object.assign(view,{mode,zoom:1,panX:0,panY:0});document.querySelectorAll('[data-camera]').forEach(b=>b.classList.toggle('active',b.dataset.camera===mode));$('camera-label').textContent={overview:'工地全景',follow:'近景 · 跟隨工班'}[mode];}
 document.querySelectorAll('[data-camera]').forEach(b=>b.onclick=()=>reset(b.dataset.camera));$('reset').onclick=()=>reset(view.mode);
 function point(e){const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*R.W,y:(e.clientY-r.top)/r.height*R.H};}
 canvas.onpointerdown=e=>{const p=point(e);if(mark){pin={x:((p.x-R.W/2-transform.panX)/transform.zoom+R.W/2)/R.W,y:((p.y-R.H*.56-transform.panY)/transform.zoom+R.H*.56)/R.H};mark=false;$('mark').classList.remove('active');$('feedback').focus();return;}drag={x:p.x,y:p.y};canvas.setPointerCapture(e.pointerId);};
