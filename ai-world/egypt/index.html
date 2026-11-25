@@ -1,20 +1,32 @@
 <!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>古埃及 AI 自主世界 · AIWorldLab</title><style>
 :root{color-scheme:dark;--bg:#0d1814;--bar:#18281f;--card:#1b2d23;--edge:#4c6249;--text:#f3efdc;--muted:#becbb8}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,"PingFang TC",sans-serif}header,nav,main,footer{padding-inline:clamp(10px,1.8vw,36px)}main,footer{max-width:1580px;margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-block:12px;background:var(--bar);border-bottom:1px solid var(--edge)}header strong{font: bold clamp(28px,3vw,42px) Georgia,serif}header small{margin-left:12px}small,p,footer,label{color:var(--muted)}a{color:inherit}nav{padding-block:10px;border-bottom:1px solid var(--edge);font-weight:650}.actions,.tools,.controls{display:flex;align-items:center;gap:8px}.actions span,.badge{border:1px solid var(--edge);border-radius:12px;padding:6px 12px}.actions button{border-radius:99px;background:#d6e7b2;color:#19261c;font-weight:700}button,input,select,textarea{font:inherit;color:inherit;background:#15241c;border:1px solid var(--edge);border-radius:8px;padding:6px 12px}button,summary{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #edf3ab}button:disabled{opacity:.5;cursor:default}.hero{display:flex;justify-content:space-between;gap:25px;padding-block:24px}.hero p{max-width:760px}.metrics{text-align:right;min-width:224px;color:var(--muted);display:grid;justify-items:end;gap:3px}.metrics b{font-size:clamp(22px,2.5vw,36px);color:var(--text);font-variant-numeric:tabular-nums}.badge{font-size:14px}h1,h2,p{margin:0 0 8px}h1{font:700 clamp(30px,3.4vw,48px) Georgia,"Songti TC",serif}h2{font-size:22px}h2 small{font-size:14px}
-#map{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:16/8.6;border-radius:17px;border:1px solid var(--edge);background:#36402e;touch-action:pan-y}#layer{position:absolute;inset:0;background:url(assets/nile.webp?v=b22424014d23) center/100% 100%;transform-origin:0 0}#layer>span,#layer>img{position:absolute;transform:translate(-50%,-100%)}.tag,.work{border-radius:5px;padding:1px 5px;color:#fff6e3;background:#283626ba;font-size:clamp(10px,1.1vw,15px)}.work{background:#624522db}#layer .speech{background:#f6ead1;color:#332a19;border:1px solid #ae9770;border-radius:12px;padding:8px 11px;width:clamp(122px,19%,250px);line-height:1.4;font-size:clamp(11px,1.05vw,15px);box-shadow:0 3px 12px #0004;z-index:2}.speech b{display:block;color:#72522c}.speech:after{content:'';position:absolute;top:100%;left:50%;border:7px solid transparent;border-top-color:#f6ead1}.tools{position:absolute;bottom:12px;right:12px;flex-direction:column;gap:0;border:1px solid var(--edge);border-radius:12px;overflow:hidden;background:#18291fee}.tools button{background:transparent;border:0;border-radius:0;font-weight:bold}.tools button:first-child,.tools button:nth-child(3){font-size:23px}.mapnote{position:absolute;bottom:12px;left:12px;background:#16251ce8;border-radius:6px;padding:4px 9px;max-width:70%;font-size:14px}.statusline{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:5px}article{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:clamp(14px,2vw,26px);margin:22px 0}summary{font-weight:600;color:var(--muted)}.scroll{max-height:300px;overflow:auto;scrollbar-color:#65705e #1b2921}.row{padding:14px 0;border-bottom:1px solid #415144}.row small,.row strong,.row span{display:block}.row span{color:var(--muted)}.controls{flex-wrap:wrap;margin:8px 0}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(154px,1fr));gap:12px}.person{display:grid;align-content:start;gap:3px;border:1px solid var(--edge);border-radius:13px;background:#26382b;padding:12px;text-align:left}.person img{width:100%;aspect-ratio:1;object-fit:contain;background:#dce6cf;border-radius:8px}.person span{color:var(--muted);font-size:14px}.person button{padding:0;border:0;background:none}.person button img{display:block}label,input,textarea{display:block}textarea{min-height:100px}fieldset{border:0;padding:0;margin:0}fieldset input,textarea{width:100%;margin:3px 0 12px}dialog{max-width:min(90vw,550px);background:var(--card);color:var(--text);border:1px solid var(--edge);border-radius:14px}dialog img{max-width:100%;max-height:65vh;display:block;margin:auto}dialog::backdrop{background:#061009cb}footer{padding-block:12px;font-size:13px}#reason:empty{display:none}@media(max-width:720px){.hero{display:block}.metrics{text-align:left;justify-items:start;margin-top:12px}.actions{flex-wrap:wrap}header small{display:none}#map{aspect-ratio:1.3}.tools button{padding:2px 9px}.speech{max-height:80px;overflow:auto}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+#map{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:16/8.6;border-radius:17px;border:1px solid var(--edge);background:#36402e;touch-action:pan-y}#layer{position:absolute;inset:0;isolation:isolate;transform-origin:0 0}#layer>span,#layer>img{position:absolute;transform:translate(-50%,-100%)}.tag,.work{border-radius:5px;padding:1px 5px;color:#fff6e3;background:#283626ba;font-size:clamp(10px,1.1vw,15px)}.work{background:#624522db}#layer .speech{background:#f6ead1;color:#332a19;border:1px solid #ae9770;border-radius:12px;padding:8px 11px;width:clamp(122px,19%,250px);line-height:1.4;font-size:clamp(11px,1.05vw,15px);box-shadow:0 3px 12px #0004;z-index:2}.speech b{display:block;color:#72522c}.speech:after{content:'';position:absolute;top:100%;left:50%;border:7px solid transparent;border-top-color:#f6ead1}.tools{position:absolute;bottom:12px;right:12px;flex-direction:column;gap:0;border:1px solid var(--edge);border-radius:12px;overflow:hidden;background:#18291fee}.tools button{background:transparent;border:0;border-radius:0;font-weight:bold}.tools button:first-child,.tools button:nth-child(3){font-size:23px}.mapnote{position:absolute;bottom:12px;left:12px;background:#16251ce8;border-radius:6px;padding:4px 9px;max-width:70%;font-size:14px}article{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:clamp(14px,2vw,26px);margin:22px 0}summary{font-weight:600;color:var(--muted)}.scroll{max-height:300px;overflow:auto;scrollbar-color:#65705e #1b2921}.row{padding:14px 0;border-bottom:1px solid #415144}.row small,.row strong,.row span{display:block}.row span{color:var(--muted)}.controls{flex-wrap:wrap;margin:8px 0}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(154px,1fr));gap:12px}.person{display:grid;align-content:start;gap:3px;border:1px solid var(--edge);border-radius:13px;background:#26382b;padding:12px;text-align:left}.person img{width:100%;aspect-ratio:1;object-fit:contain;background:#dce6cf;border-radius:8px}.person span{color:var(--muted);font-size:14px}.person button{padding:0;border:0;background:none}.person button img{display:block}label,input,textarea{display:block}textarea{min-height:100px}fieldset{border:0;padding:0;margin:0}fieldset input,textarea{width:100%;margin:3px 0 12px}dialog{max-width:min(90vw,550px);background:var(--card);color:var(--text);border:1px solid var(--edge);border-radius:14px}dialog img{max-width:100%;max-height:65vh;display:block;margin:auto}dialog::backdrop{background:#061009cb}footer{padding-block:12px;font-size:13px}@media(max-width:720px){.hero{display:block}.metrics{text-align:left;justify-items:start;margin-top:12px}.actions{flex-wrap:wrap}header small{display:none}#map{aspect-ratio:1.3}.tools button{padding:2px 9px}.speech{max-height:80px;overflow:auto}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .breadcrumbs{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px}.breadcrumbs a{padding-block:4px;text-underline-offset:3px}.breadcrumbs [aria-hidden]{color:var(--muted)}
 #visitors{background:var(--card);padding:6px 10px;margin:0 0 8px;font-size:14px;font-variant-numeric:tabular-nums}#visitors strong{margin-right:1em}
 .plot-images{display:grid;grid-template-columns:repeat(var(--columns),minmax(0,1fr));align-items:center;background:#dce6cf;border-radius:8px}.plot-images img{width:100%;height:auto}.metrics{flex-shrink:0}.metrics b{font-size:clamp(20px,2.1vw,32px)}@media(max-width:830px){.hero{display:block}.metrics{justify-items:start;text-align:left}}
+#layer::before,#layer::after{content:"";position:absolute;inset:0;pointer-events:none}
+#layer::before{z-index:-2;background:url(assets/nile.webp?v=b22424014d23) center/100% 100%;filter:var(--terrain-light);transition:filter 1.4s linear}
+#layer::after{z-index:-1;background:linear-gradient(var(--sky-light,transparent),var(--ground-light,transparent) 72%);mix-blend-mode:color}
+#layer>img{filter:var(--terrain-light);transition:filter 1.4s linear}
+#map{--terrain-light:brightness(1);--sky-light:transparent;--ground-light:transparent}
+#map.dawn{--terrain-light:brightness(.8) saturate(.68);--sky-light:#b0a1c2;--ground-light:#dcc6aa}
+#map.morning{--terrain-light:brightness(1.02) saturate(1.04);--sky-light:#c7dbdf55;--ground-light:#d0c08a24}
+#map.noon{--terrain-light:brightness(1.14) contrast(1.06) saturate(.82);--sky-light:#90c9e4aa;--ground-light:#e7d8af55}
+#map.afternoon{--terrain-light:brightness(.96) contrast(1.04) saturate(1.1);--sky-light:#f1c48b66;--ground-light:#c5915c55}
+#map.dusk{--terrain-light:brightness(.71) saturate(.95);--sky-light:#d48372;--ground-light:#a0829d}
+#map.night{--terrain-light:grayscale(.85) brightness(.41) contrast(.94);--sky-light:#425c94;--ground-light:#627497}
+@media(prefers-reduced-motion:reduce){#layer::before,#layer>img{transition:none}}
 </style>
 <header><div><strong>AIWorldLab</strong><small>觀察一個世界慢慢長大</small></div><div class="actions"><span id="phase">讀取世界狀態</span><button id="pause">暫停觀看</button></div></header>
 <nav class="breadcrumbs" aria-label="網站導覽">
   <a href="https://mm7382.github.io/pec-ai-agent-training/index.html?lang=zh-Hant" target="_top">個人網站首頁</a><span aria-hidden="true">›</span>
   <a href="https://mm7382.github.io/ai-world/" target="_top">AIWorldLab 總覽</a><span aria-hidden="true">›</span>
   <span aria-current="page">古埃及 · 尼羅河聚落</span>
-</nav><main><section class="hero"><div><h1>古埃及</h1><p>尼羅河一漲，通往低地的路就會被水淹沒。河水退去，氾濫平原才適合耕作。居民在河岸取水與收蘆葦，把糧食搬上河階，在高處搭屋。沙漠另一側的石灰岩露頭，則是日後開石、雕像的材料來源。</p><p>等住處修好、全村備足兩天食水，居民會討論要先建金字塔、獅身人面像還是神廟。選址、分工和開工都會留在聚落紀錄裡。</p></div><div class="metrics"><b id="worldTime" title="聚落以 30 天為一個月，12 個月為一年"></b><span id="river"></span><span id="real"></span><span>現實 1 分鐘＝世界 1 天</span><span class="badge" id="count"></span></div></section>
+</nav><main><section class="hero"><div><h1>古埃及</h1><p>這座模擬聚落位於尼羅河岸。氾濫期間，河水阻斷通往平原的道路；水位回落後，居民便能下田耕作。地勢較高的河階用於居住與儲糧，沙漠邊緣的石灰岩露頭則提供建材。</p><p>當住所可用、飲水與存糧足以支應全村兩天，居民便可商議大型工程。從金字塔的基址、神廟的柱廊，到就地鑿刻的獅身人面像，每項提案都涉及選址、材料與人力分配。</p></div><div class="metrics"><b id="worldTime" title="從世界建立當天起算，每月 30 天，每年 12 個月"></b><span id="river"></span><span id="real"></span><span>現實 1 分鐘＝世界 1 天</span><span class="badge" id="count"></span></div></section>
 <div id="visitors" hidden><strong>個人網站 · 近 7 天</strong> <span id="trafficTotals"></span></div>
 <div id="map" aria-label="尼羅河聚落地圖"><div id="layer"></div><div class="mapnote" id="activity"></div><div class="tools"><button id="plus" aria-label="放大">＋</button><button id="zoom" aria-label="重設視角">1×</button><button id="minus" aria-label="縮小">−</button><button id="overview">全景</button></div></div>
-<div class="statusline"><span id="link">讀取世界快照</span><span id="sync"></span></div><p id="reason"></p>
+
 <article><h2>生活與對話 <small>最新在上</small></h2><div id="latest" class="scroll"></div></article>
 <details><summary>回放與觀察工具</summary><div class="controls"><button id="prev">上一筆</button><button id="play">播放紀錄</button><button id="next">下一筆</button></div><div id="frame" aria-live="polite"></div></details>
 <article><h2>人物與世界圖鑑 <small id="population"></small></h2><p>點圖片可放大查看。人物位置和建築進度來自聚落存檔。</p><div class="gallery" id="people"></div><div class="gallery" id="buildings" style="margin-top:12px"></div><details><summary>建築提案</summary><p id="agenda"></p><div id="works"></div></details></article>
@@ -121,7 +133,7 @@ function render(){const s=data.state;el('population').textContent='聚落居民 
  }
  el('activity').textContent=last?last.name+' · '+last.message:'等待第一筆決策';
  listRecords('latest',data.history.slice(-15).reverse(),'等待第一筆真實居民決策。');replayFrame();lines('milestones',data.history.filter(h=>['propose','agree','build','research'].includes(h.action)||!h.ok).slice(-8).reverse().map(line),'尚無已記錄的發展事件。');
- el('sync').textContent='資料快照時間（台灣） '+ts(data.snapshotAt);el('count').textContent='真實 AI 決策 '+s.turn+' 次';el('reason').textContent=friendlyReason(data.status);history();clock()}
+ el('count').textContent='真實 AI 決策 '+s.turn+' 次';el('phase').title=friendlyReason(data.status);history();clock()}
 function friendlyReason(status){
  if(!status.reason)return '';
  if(/逾時|timed out/i.test(status.reason))return '居民的 AI 回覆逾時，這一輪尚未計入。';
@@ -131,24 +143,33 @@ function friendlyReason(status){
 function worldDate(seconds){
  const day=Math.floor(seconds/60), minute=Math.floor(seconds%60*24);
  const year=1+Math.floor(day/360),month=1+Math.floor(day%360/30);
- return '聚落曆 '+year+' 年 '+month+' 月 '+(day%30+1)+' 日 '+String(Math.floor(minute/60)).padStart(2,'0')+':'+String(minute%60).padStart(2,'0');
+ return '模擬時間　第 '+year+' 年 '+month+' 月 '+(day%30+1)+' 日 '+String(Math.floor(minute/60)).padStart(2,'0')+':'+String(minute%60).padStart(2,'0');
 }
-function clock(){if(!data)return;const now=Date.now()/1000,shown=paused?pausedAt:now,age=shown-data.status.updated,active=['deciding','waiting'].includes(data.status.phase),fresh=age<90;el('phase').textContent=paused?'觀看已暫停':active?(fresh?'最近回報運行中':'更新中斷，顯示快照'):({attention:'暫停 · 需處理',ready:'已就緒',idle:'已暫停',stopped:'已停止'}[data.status.phase]||data.status.phase);const sec=data.seconds+(active&&fresh?Math.max(0,shown-data.snapshotAt):0);el('worldTime').textContent=worldDate(sec);el('river').textContent='尼羅河 · '+({'退水':'洪水消退期','乾季':'乾季','洪水':'氾濫期'}[data.season]||data.season);el('real').textContent='台灣 '+ts(now)}
+function scenePeriod(seconds){
+ const hour=(seconds%60)*24/60;
+ if(hour<5 || hour>=19)return 'night';
+ if(hour<7)return 'dawn';
+ if(hour<11)return 'morning';
+ if(hour<14)return 'noon';
+ if(hour<17)return 'afternoon';
+ return 'dusk';
+}
+function clock(){if(!data)return;const now=Date.now()/1000,shown=paused?pausedAt:now,age=shown-data.status.updated,active=['deciding','waiting'].includes(data.status.phase),fresh=age<90;el('phase').textContent=paused?'觀看已暫停':active?(fresh?'最近回報運行中':'更新中斷，顯示快照'):({attention:'居民決策已暫停',reconnecting:'居民服務重新連線中',ready:'已就緒',idle:'已暫停',stopped:'已停止'}[data.status.phase]||data.status.phase);const sec=data.seconds+(active&&fresh?Math.max(0,shown-data.snapshotAt):0);map.className=scenePeriod(sec);el('worldTime').textContent=worldDate(sec);el('river').textContent='尼羅河 · '+({'退水':'洪水消退期','乾季':'乾季','洪水':'氾濫期'}[data.season]||data.season);el('real').textContent='台灣 '+ts(now)}
 el('actor').onchange=el('outcome').onchange=el('search').oninput=history;
 function acceptSnapshot(snapshot){
  if(!data || (!paused && snapshot.snapshotAt>=data.snapshotAt)){data=snapshot;render()}
 }
 function showLocalWorld(snapshot){
- acceptSnapshot(snapshot);el('link').textContent='本機存檔 · 每 15 秒更新';
+ acceptSnapshot(snapshot);
 }
 function refreshLocal(){
  const script=document.createElement('script');
  script.src='local-world.js?t='+Date.now();
  script.onload=()=>script.remove();
- script.onerror=()=>{script.remove();el('link').textContent=data?'無法更新本機存檔 · 顯示上次快照':'尚未讀到本機存檔'};
+ script.onerror=()=>{script.remove();if(!data)el('phase').textContent='尚未讀到本機存檔'};
  document.head.append(script);
 }
-async function refresh(){if(paused)return;if(window.location?.protocol==='file:'){refreshLocal();return}try{const r=await fetch('world.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();acceptSnapshot(await r.json());el('link').textContent='已連線 · 世界快照'}catch{el('link').textContent=data?'離線 · 已保存快照':'尚未讀到世界存檔'}}
+async function refresh(){if(paused)return;if(window.location?.protocol==='file:'){refreshLocal();return}try{const r=await fetch('world.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();acceptSnapshot(await r.json())}catch{if(!data)el('phase').textContent='尚未讀到世界存檔'}}
 const publicOrigin='https://mm7382.github.io';
 function displayVisitors(sample){
  if(sample?.rangeDays!==7||![sample.visitors,sample.views].every(n=>Number.isSafeInteger(n)&&n>=0))return;
@@ -174,9 +195,7 @@ if(el('initial').getAttribute('data-mode')!=='offline'){
  refreshVisitors();setInterval(refreshVisitors,60000);
 }
 if(data)render();
-if(el('initial').getAttribute('data-mode')==='offline'){
- el('link').textContent='離線快照';
-}else{
+if(el('initial').getAttribute('data-mode')!=='offline'){
  refresh();setInterval(refresh,15000);
 }
 setInterval(clock,1000);
