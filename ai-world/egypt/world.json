@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 281,
+    "day": 282,
     "actors": [
       {
         "name": "梅莉",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,9 +60,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 1
+          "water": 0
         },
-        "energy": 0,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -74,11 +74,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -93,7 +93,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -192,7 +192,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 5
+        "condition": 4
       },
       "field/農田": {
         "kind": "農田",
@@ -229,8 +229,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1107,
-    "deficits": 2106
+    "turn": 1109,
+    "deficits": 2115
   },
   "history": [
     {
@@ -12409,6 +12409,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1108,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 281,
+      "say": "我先休息恢復體力，再協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1109,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 282,
+      "say": "我先休息恢復體力，再把食物放入河岸共同庫存。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -12495,19 +12517,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795604449.996614,
+    "phase": "deciding",
+    "updated": 1795604484.83658,
     "reason": ""
   },
-  "seconds": 16840.939939085103,
+  "seconds": 16868.969348460087,
   "council": {
-    "food": 2,
-    "water": 1,
+    "food": 0,
+    "water": 0,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795604450.225278,
+  "snapshotAt": 1795604485.074856,
   "recipes": {
     "茅舍": {
       "sites": [
