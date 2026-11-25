@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 431,
+    "day": 432,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,7 +24,7 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 1,
+          "water": 0,
           "food": 0
         },
         "energy": 0,
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,11 +90,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1740,
-    "deficits": 3425
+    "turn": 1741,
+    "deficits": 3435
   },
   "history": [
     {
@@ -19373,6 +19373,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1741,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 432,
+      "say": "營地已有蘆葦，我先修繕茅舍，恢復住所。",
+      "action": "maintain",
+      "kind": "茅舍",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -19460,18 +19471,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795613467.9874098,
+    "updated": 1795613493.463207,
     "reason": ""
   },
-  "seconds": 25836.385113529075,
+  "seconds": 25861.592438237072,
   "council": {
-    "food": 1,
-    "water": 1,
+    "food": 0,
+    "water": 0,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795613468.3434849,
+  "snapshotAt": 1795613493.800124,
   "recipes": {
     "茅舍": {
       "sites": [
