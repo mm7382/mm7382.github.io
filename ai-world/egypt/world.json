@@ -8,10 +8,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 1,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -91,10 +91,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 156,
           "reed": 48,
           "food": 22
         },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2063,
+    "turn": 2066,
     "deficits": 4108
   },
   "history": [
@@ -22926,6 +22926,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 2064,
+      "name": "塞努",
+      "actor": 5,
+      "day": 509,
+      "say": "河岸缺水，我先取水補充共同儲備。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 2065,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 509,
+      "say": "河岸缺少飲水，我先取水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 2066,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 509,
+      "say": "我先休息恢復體力，才能繼續補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -23013,18 +23046,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795618138.356043,
+    "updated": 1795618180.363672,
     "reason": ""
   },
-  "seconds": 30496.11530293204,
+  "seconds": 30538.058162641013,
   "council": {
     "food": 2,
-    "water": 1,
+    "water": 5,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795618138.8126569,
+  "snapshotAt": 1795618180.841453,
   "recipes": {
     "茅舍": {
       "sites": [
