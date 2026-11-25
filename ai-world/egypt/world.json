@@ -11,7 +11,7 @@
           "water": 1,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2458,
+    "turn": 2461,
     "deficits": 4853
   },
   "history": [
@@ -27271,6 +27271,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 2459,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 597,
+      "say": "我先休息恢復體力，再把蘆葦送去營地修繕茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2460,
+      "name": "塞努",
+      "actor": 5,
+      "day": 597,
+      "say": "我先把身上的食物放進河岸共用庫存。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 2461,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 597,
+      "say": "我先休息恢復體力，再把身上的水放入河岸共用庫存。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -27358,10 +27391,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795623425.347063,
+    "updated": 1795623464.01194,
     "reason": ""
   },
-  "seconds": 35773.075078643626,
+  "seconds": 35811.5027746846,
   "council": {
     "food": 1,
     "water": 3,
@@ -27369,7 +27402,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795623425.8616588,
+  "snapshotAt": 1795623464.480065,
   "recipes": {
     "茅舍": {
       "sites": [
