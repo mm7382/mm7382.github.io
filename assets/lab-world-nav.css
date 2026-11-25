@@ -1,0 +1,73 @@
+:root {
+  --lab-world-nav-height: 50px;
+}
+
+nav.lab-world-nav {
+  position: sticky;
+  z-index: 20;
+  inset-block-start: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  gap: clamp(.35rem, 2.1vw, 1.5rem);
+  box-sizing: border-box;
+  min-block-size: var(--lab-world-nav-height);
+  margin: 0;
+  padding: 0 clamp(.75rem, 4vw, 3.5rem);
+  border: 0;
+  border-bottom: 1px solid #755b38;
+  background: #0c141f;
+  overflow: auto;
+  scrollbar-width: thin;
+  white-space: nowrap;
+}
+
+nav.lab-world-nav > a {
+  display: inline-flex;
+  align-items: center;
+  min-block-size: 44px;
+  color: #f6e9d5;
+  font: 600 .92rem/1.2 system-ui, sans-serif;
+  text-decoration: none;
+}
+
+nav.lab-world-nav > a:is(:hover, [aria-current]) {
+  color: #ecc989;
+  text-decoration: underline;
+  text-underline-offset: .35em;
+}
+
+nav.lab-world-nav > a:focus-visible {
+  outline: 2px solid #f1d096;
+  outline-offset: -2px;
+}
+
+/* The immersive scene keeps its own controls below the shared navigation. */
+body.lab-world-immersive > header,
+body.lab-world-immersive > main {
+  inset-block-start: var(--lab-world-nav-height);
+}
+
+@media (max-width: 620px) {
+  :root {
+    --lab-world-nav-height: 85px;
+  }
+
+  nav.lab-world-nav {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, 42px);
+    align-items: stretch;
+    gap: 0 .2rem;
+    padding-inline: .5rem;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  nav.lab-world-nav > a {
+    justify-content: center;
+    min-block-size: 42px;
+    text-align: center;
+    font-size: .78rem;
+  }
+}
