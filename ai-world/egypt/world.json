@@ -27,7 +27,7 @@
           "water": 1,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -90,10 +90,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -113,7 +113,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -229,7 +229,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1061,
+    "turn": 1064,
     "deficits": 2015
   },
   "history": [
@@ -11903,6 +11903,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1062,
+      "name": "塞努",
+      "actor": 5,
+      "day": 271,
+      "say": "河岸的共同存糧不足，我先採集食物補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 1063,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 271,
+      "say": "我把帶回的蘆葦放進營地庫存，供修繕茅舍使用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 1064,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 271,
+      "say": "我先休息恢復體力，再把身上的水放入河岸庫存。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -11989,19 +12022,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795603831.250415,
+    "phase": "waiting",
+    "updated": 1795603864.8906329,
     "reason": ""
   },
-  "seconds": 16216.5538385431,
+  "seconds": 16256.8607664601,
   "council": {
-    "food": 1,
+    "food": 3,
     "water": 1,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795603831.4721751,
+  "snapshotAt": 1795603865.0953338,
   "recipes": {
     "茅舍": {
       "sites": [
