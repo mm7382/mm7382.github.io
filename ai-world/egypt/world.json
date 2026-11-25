@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,7 +226,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 711,
+    "turn": 712,
     "deficits": 1104
   },
   "history": [
@@ -8050,6 +8050,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 712,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 178,
+      "say": "我先休息，恢復體力後採集食物。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8136,11 +8147,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795598260.583478,
+    "phase": "deciding",
+    "updated": 1795598281.961647,
     "reason": ""
   },
-  "seconds": 10660.32451196012,
+  "seconds": 10675.434577710112,
   "council": {
     "food": 0,
     "water": 0,
@@ -8148,7 +8159,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795598260.886994,
+  "snapshotAt": 1795598282.123797,
   "recipes": {
     "茅舍": {
       "sites": [
