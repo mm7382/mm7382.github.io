@@ -8,9 +8,9 @@
         "site": "field",
         "bag": {
           "food": 0,
-          "water": 4
+          "water": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -21,12 +21,12 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -37,12 +37,12 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 5,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -84,7 +84,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 0
+          "water": 4
         }
       },
       "terrace": {
@@ -180,7 +180,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 268,
+    "turn": 271,
     "deficits": 213
   },
   "history": [
@@ -3131,6 +3131,39 @@
       "kind": "",
       "ok": true,
       "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 269,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 64,
+      "say": "我去田裡協助播種，等梅莉和納赫特送到水與食物後一起完成。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 270,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 64,
+      "say": "我把食物送到田裡，和大家準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 271,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 64,
+      "say": "我先把水放進田裡的庫存，請納赫特也留下播種用的食物。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 4 water"
     }
   ],
   "needs": [
@@ -3219,11 +3252,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795578762.7215428
+    "updated": 1795578804.010144
   },
-  "seconds": 3796.8868519121606,
+  "seconds": 3838.12018424517,
   "season": "乾季",
-  "snapshotAt": 1795578762.811334,
+  "snapshotAt": 1795578804.0807831,
   "recipes": {
     "茅舍": {
       "sites": [
