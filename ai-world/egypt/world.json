@@ -24,10 +24,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 2,
           "food": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -38,13 +38,13 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 24
         },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2556,
+    "turn": 2559,
     "deficits": 5032
   },
   "history": [
@@ -28349,6 +28349,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 2557,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 618,
+      "say": "我先把身上的食物存到河岸，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 2558,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 618,
+      "say": "河岸缺飲水，我先採水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 2559,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 618,
+      "say": "我把蘆葦帶回營地，準備修復茅舍。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -28436,18 +28469,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795624679.7720819,
+    "updated": 1795624718.377843,
     "reason": ""
   },
-  "seconds": 37024.77183368555,
+  "seconds": 37063.585860102554,
   "council": {
     "food": 1,
-    "water": 0,
+    "water": 2,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795624680.281666,
+  "snapshotAt": 1795624718.926502,
   "recipes": {
     "茅舍": {
       "sites": [
