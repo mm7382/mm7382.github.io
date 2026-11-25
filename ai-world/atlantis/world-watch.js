@@ -11,8 +11,8 @@
  function updateClock(){
   const now=Date.now();realTime.textContent='現實時間：'+new Date(now).toLocaleTimeString('zh-TW',{timeZone:'Asia/Taipei',hour12:false});
   if(!clockState?.clock)return;
-  const recent=runStatus&&now-Date.parse(runStatus.updatedAt)<600000;
-  const live=recent&&runStatus.running&&!['stopped','stopping','needs-attention','retrying'].includes(runStatus.phase);
+  const recent=runStatus&&now-Date.parse(runStatus.updatedAt)<(location.hostname==='127.0.0.1'?20000:600000);
+  const live=recent&&runStatus.running&&!['stopped','stopping','needs-attention','retrying','checking'].includes(runStatus.phase);
   if(live)frozenAt=null;else if(frozenAt===null)frozenAt=Date.parse(runStatus?.updatedAt||lastSavedAt||clockState.clock.epoch);
   const value=live?AtlantisClock.reading(clockState.clock,now):{day:clockState.day,hour:0,minute:0};
   worldTime.textContent='第 '+value.day+' 天'+(live?' '+pad(value.hour)+':'+pad(value.minute):'（已保存）');
@@ -27,13 +27,14 @@
  stop.onclick=async()=>{stop.disabled=true;try{const r=await fetch('http://127.0.0.1:8779/stop',{method:'POST',headers:{'X-Atlantis-Control':'stop'}});if(!r.ok)throw Error();label.textContent='正在保存本批決策並停止世界…';}catch{label.textContent='停止指令未送達，請在對話告訴我停止。';stop.disabled=false;}};
  async function poll(){
  try{
-  const r=await fetch(local?'http://127.0.0.1:8779/status':'./world-status.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const s=await r.json();runStatus=s;updateClock();
-  const stale=Date.now()-Date.parse(s.updatedAt)>10*60*1000;
-  const names={retrying:'連線暫時受阻，系統會自動重試',starting:'世界正在啟動',deciding:'AI 正在決策',publishing:'正在同步新紀錄',waiting:'世界運行中，等待下一批決策',stopping:'正在安全停止',stopped:'世界已停止','needs-attention':'AI 連線或額度受阻，現場已保存'};
-  label.textContent=stale?'尚未收到近期運行狀態':(names[s.phase]||s.phase);
+  const r=await fetch('./world-status.json?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const s=await r.json();runStatus=s;updateClock();
+  const stale=Date.now()-Date.parse(s.updatedAt)>(local?20000:600000);
+  const names={checking:'正在確認訂閱連線',retrying:'連線暫時受阻，系統會自動重試',starting:'世界正在啟動',deciding:'AI 正在決策',publishing:'正在同步新紀錄',waiting:'世界運行中，等待下一批決策',stopping:'正在安全停止',stopped:'世界已停止','needs-attention':'AI 連線或額度受阻，現場已保存'};
+  label.textContent=stale?'背景程序尚無近期回報，顯示最後存檔':(names[s.phase]||s.phase);
+  if(!stale&&s.phase==='retrying'){const reason=(s.error||'').replace('ATLANTIS_PREFLIGHT_BLOCKED: ','');label.textContent=reason.includes('執行環境拒絕')?'執行環境拒絕啟動 Codex，居民暫停中':reason.includes('initialize')||reason.includes('資料庫')?'Codex 尚未完成啟動，稍後自動重試':'訂閱連線尚未就緒，稍後自動重試';}
   stop.hidden=!local||!s.running;panel.title=s.policy||'';
  }catch{runStatus=null;if(frozenAt===null)frozenAt=Date.now();updateClock();label.textContent='目前無法確認世界運行狀態';}
- try{const data=await fetch('./settlement.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json());clockState=data.frames.at(-1)?.snapshot||data.initial;lastSavedAt=data.frames.at(-1)?.observedAt;replies=data.frames.length;updateClock();if(known===null)known=data.frames.length;else if(data.frames.length>known){window.dispatchEvent(new CustomEvent('atlantis-record',{detail:data}));known=data.frames.length;fresh.hidden=false;fresh.textContent='查看新進展（'+data.frames.length+' 個動作）';}}catch{}
+ try{const data=await fetch('./settlement.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json());clockState=data.frames.at(-1)?.snapshot||data.initial;lastSavedAt=data.frames.at(-1)?.observedAt;replies=data.frames.length;updateClock();if(known===null||data.frames.length>known){window.dispatchEvent(new CustomEvent('atlantis-record',{detail:data}));known=data.frames.length;}}catch{}
  }
  poll();setInterval(poll,15000);
 })();

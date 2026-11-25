@@ -279,7 +279,7 @@ function play(){
  el('play').firstElementChild.innerHTML='<path d="M7 5h4v14H7zm7 0h4v14h-4z"/>';
  function advance(){
   if(animated){timer=setTimeout(advance,120);return;}
-  if(i>=max){stop();return;}
+  if(i>=replay.frames.length){stop();return;}
   i+=1;el('session').textContent='AI 實錄回放 · 2.5D';render(true);timer=setTimeout(advance,2400);
  }
  timer=setTimeout(advance,850);
@@ -347,7 +347,17 @@ el('load').onchange=async e=>{
  const f=e.target.files[0];if(!f)return;
  try{load(JSON.parse(await f.text()));}catch(err){el('stage-note').textContent=`匯入失敗：${err.message}`;}finally{e.target.value='';}
 };
-window.addEventListener('atlantis-record',e=>{if(replay?.phase==='settlement'&&!active&&i===replay.frames.length){load(e.detail);}});
+window.addEventListener('atlantis-record', event => {
+ const next = event.detail;
+ if (replay?.phase !== 'settlement' || next?.phase !== 'settlement' ||
+     !Array.isArray(next.frames) || next.frames.length <= replay.frames.length) return;
+ const last = replay.frames.length;
+ if (last && next.frames[last-1]?.event.tick !== replay.frames[last-1].event.tick) return;
+ const following = !active && i === last;
+ replay = next;
+ el('timeline').max = next.frames.length;
+ if (following) play();
+});
 window.addEventListener('resize',()=>anchorBubble(event()));
 render();el('overview').disabled=true;
 if(globalThis.ATLANTIS_REPLAY){

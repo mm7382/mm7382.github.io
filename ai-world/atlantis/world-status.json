@@ -1,1 +1,1 @@
-{"running":false,"phase":"stopped","updatedAt":"2026-11-25T01:13:30.719Z","error":"settlement/run.mjs exit 1","policy":"持續觀察；補給不足持續記錄，不自動結束。每批3次決策後休息60秒。","pid":74012}
+{"running":true,"phase":"publishing","updatedAt":"2026-11-25T02:59:26.814Z","error":null,"policy":"持續觀察；補給不足持續記錄，不自動結束。每批3次決策後休息60秒。","pid":87995}
