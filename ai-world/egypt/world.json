@@ -42,9 +42,9 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 0
+          "reed": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -75,10 +75,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,8 +112,8 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
-          "reed": 48,
+          "water": 158,
+          "reed": 46,
           "food": 22
         },
         "stock": {
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1634,
+    "turn": 1637,
     "deficits": 3207
   },
   "history": [
@@ -18207,6 +18207,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1635,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 406,
+      "say": "茅舍需要修繕，我先採集蘆葦作為修繕材料。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 reed"
+    },
+    {
+      "id": 1636,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 406,
+      "say": "我把手邊的水存入河岸庫存，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 1637,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 406,
+      "say": "河岸缺水，我先採集飲水，供大家取用。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -18294,18 +18327,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795611946.611428,
+    "updated": 1795611988.250347,
     "reason": ""
   },
-  "seconds": 24317.833461028174,
+  "seconds": 24359.333960945165,
   "council": {
     "food": 3,
-    "water": 1,
+    "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795611947.0795898,
+  "snapshotAt": 1795611988.588564,
   "recipes": {
     "茅舍": {
       "sites": [
