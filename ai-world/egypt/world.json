@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 1,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -117,7 +117,7 @@
           "food": 22
         },
         "stock": {
-          "food": 0,
+          "food": 1,
           "water": 0
         }
       },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2904,
+    "turn": 2907,
     "deficits": 5656
   },
   "history": [
@@ -32177,6 +32177,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 2905,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 692,
+      "say": "我先休息恢復體力，再把食物存入河岸供大家取用。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2906,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 692,
+      "say": "我先休息恢復體力，再運送飲水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2907,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 692,
+      "say": "我把身上的食物存到河岸，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 food"
     }
   ],
   "needs": [
@@ -32264,10 +32297,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795629142.1500978,
+    "updated": 1795629181.27247,
     "reason": ""
   },
-  "seconds": 41478.679138520354,
+  "seconds": 41517.589428645326,
   "council": {
     "food": 4,
     "water": 1,
@@ -32275,7 +32308,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795629142.739033,
+  "snapshotAt": 1795629181.823321,
   "recipes": {
     "茅舍": {
       "sites": [
