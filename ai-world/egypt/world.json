@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,11 +90,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -114,7 +114,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1516,
+    "turn": 1518,
     "deficits": 2953
   },
   "history": [
@@ -16909,6 +16909,28 @@
       "kind": "",
       "ok": false,
       "message": "材料或補給不足"
+    },
+    {
+      "id": 1517,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 378,
+      "say": "我先休息恢復體力，才能運送修繕茅舍所需的材料。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1518,
+      "name": "塞努",
+      "actor": 5,
+      "day": 378,
+      "say": "我先在河岸採集食物，補充聚落口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -16995,19 +17017,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795610243.947793,
+    "phase": "deciding",
+    "updated": 1795610278.157866,
     "reason": ""
   },
-  "seconds": 22624.86659970123,
+  "seconds": 22652.20140082622,
   "council": {
-    "food": 0,
+    "food": 2,
     "water": 0,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795610244.240681,
+  "snapshotAt": 1795610278.4712808,
   "recipes": {
     "茅舍": {
       "sites": [
