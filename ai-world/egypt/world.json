@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 173,
+    "day": 174,
     "actors": [
       {
         "name": "梅莉",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -75,7 +75,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 700,
-    "deficits": 1044
+    "turn": 702,
+    "deficits": 1056
   },
   "history": [
     {
@@ -7929,6 +7929,28 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 701,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 173,
+      "say": "我先休息恢復體力，再去修繕住所。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 702,
+      "name": "塞努",
+      "actor": 5,
+      "day": 174,
+      "say": "我先休息恢復體力，準備採集飲水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8015,11 +8037,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795597951.90594,
+    "phase": "deciding",
+    "updated": 1795597990.039115,
     "reason": ""
   },
-  "seconds": 10351.933825207147,
+  "seconds": 10383.671723165142,
   "council": {
     "food": 0,
     "water": 0,
@@ -8027,7 +8049,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795597952.257938,
+  "snapshotAt": 1795597990.200406,
   "recipes": {
     "茅舍": {
       "sites": [
