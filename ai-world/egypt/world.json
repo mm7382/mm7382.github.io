@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 9,
         "research": 0,
         "survey": [
           "terrace",
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3857,
+    "turn": 3860,
     "deficits": 7362
   },
   "history": [
@@ -42660,6 +42660,39 @@
       "kind": "",
       "ok": true,
       "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 3858,
+      "name": "塞努",
+      "actor": 5,
+      "day": 895,
+      "say": "我先休息恢復體力，再採水補充聚落飲水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3859,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 895,
+      "say": "營地缺少食水，我先恢復體力，再去河岸協助補給。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3860,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 895,
+      "say": "我把剛採的水放進河岸共同庫存，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "材料或補給不足"
     }
   ],
   "needs": [
@@ -42747,10 +42780,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795641325.3540878,
+    "updated": 1795641365.7258081,
     "reason": ""
   },
-  "seconds": 53641.9912977652,
+  "seconds": 53682.32542893221,
   "council": {
     "food": 1,
     "water": 0,
@@ -42758,7 +42791,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795641326.271907,
+  "snapshotAt": 1795641366.4601889,
   "recipes": {
     "茅舍": {
       "sites": [
