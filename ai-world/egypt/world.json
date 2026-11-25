@@ -8,10 +8,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -75,10 +75,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,11 +90,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,9 +112,9 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 156,
           "reed": 48,
-          "food": 22
+          "food": 20
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2242,
+    "turn": 2245,
     "deficits": 4462
   },
   "history": [
@@ -24895,6 +24895,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 2243,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 550,
+      "say": "河岸缺水，我先取水補充儲備。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 2244,
+      "name": "塞努",
+      "actor": 5,
+      "day": 550,
+      "say": "河岸缺少食物，我先採集，就近補充糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 2245,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 550,
+      "say": "我先在河岸採集飲水，補充聚落所需。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -24982,18 +25015,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795620593.223847,
+    "updated": 1795620635.328987,
     "reason": ""
   },
-  "seconds": 32946.13286918291,
+  "seconds": 32988.06533151795,
   "council": {
-    "food": 2,
-    "water": 1,
+    "food": 4,
+    "water": 5,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795620593.769212,
+  "snapshotAt": 1795620635.766141,
   "recipes": {
     "茅舍": {
       "sites": [
