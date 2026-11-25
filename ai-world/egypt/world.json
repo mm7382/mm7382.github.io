@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 175,
+    "day": 176,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -75,7 +75,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 706,
-    "deficits": 1068
+    "turn": 707,
+    "deficits": 1080
   },
   "history": [
     {
@@ -7995,6 +7995,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 707,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 176,
+      "say": "我先休息恢復體力，才能去修繕茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8082,10 +8093,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795598094.561715,
+    "updated": 1795598141.034247,
     "reason": ""
   },
-  "seconds": 10487.998625250126,
+  "seconds": 10534.37236825013,
   "council": {
     "food": 0,
     "water": 0,
@@ -8093,7 +8104,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795598094.725683,
+  "snapshotAt": 1795598141.178188,
   "recipes": {
     "茅舍": {
       "sites": [
