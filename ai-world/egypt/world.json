@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 187,
+    "day": 188,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -75,7 +75,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 731,
-    "deficits": 1212
+    "turn": 732,
+    "deficits": 1224
   },
   "history": [
     {
@@ -8270,6 +8270,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 732,
+      "name": "塞努",
+      "actor": 5,
+      "day": 188,
+      "say": "我先休息恢復體力，再採集河水補充公庫。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8357,10 +8368,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795598816.1498392,
+    "updated": 1795598830.071073,
     "reason": ""
   },
-  "seconds": 11209.012345751165,
+  "seconds": 11222.779940959183,
   "council": {
     "food": 0,
     "water": 0,
@@ -8368,7 +8379,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795598816.315103,
+  "snapshotAt": 1795598830.242059,
   "recipes": {
     "茅舍": {
       "sites": [
