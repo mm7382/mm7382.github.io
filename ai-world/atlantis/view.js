@@ -290,7 +290,7 @@ function load(data){
  stop();i=0;selected=null;el('overview').disabled=true;
  for (const n of chars.values())n.remove();for(const n of panels.values())n.button.remove();chars.clear();panels.clear();
  positions={};shipXY=null;replay=data;
- document.querySelector('h1').textContent=data.phase==='settlement'?'向自給聚落前進':'從空海灣開始';
+ document.querySelector('h1').textContent='雅特蘭提斯';
  document.querySelector('.subtitle').textContent=data.phase==='settlement'?data.goal:'給三位 AI 一個目標：讓第一艘商船安全靠岸卸貨。不給藍圖，也不替他們決定結局。';
  const live=data.source==='ai'||data.source==='codex';
  const fixture=['fixture','demo','test','scripted'].includes(data.source);
