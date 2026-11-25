@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 38,
+    "day": 39,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 2,
           "water": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -23,10 +23,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 2,
           "food": 0
         },
-        "energy": 5,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -39,10 +39,10 @@
         "age": 39,
         "site": "field",
         "bag": {
-          "food": 1,
-          "water": 2
+          "food": 0,
+          "water": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -65,11 +65,11 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
-          "water": 1
+          "water": 0
         }
       },
       "field": {
@@ -84,7 +84,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 0
+          "water": 1
         }
       },
       "terrace": {
@@ -180,8 +180,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 160,
-    "deficits": 115
+    "turn": 163,
+    "deficits": 117
   },
   "history": [
     {
@@ -1943,6 +1943,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 1 food"
+    },
+    {
+      "id": 161,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 39,
+      "say": "納赫特已到田地，我再採些水，準備支援播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 162,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 39,
+      "say": "我先把水放在田邊，等梅莉帶食物來就能播種。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 water"
+    },
+    {
+      "id": 163,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 39,
+      "say": "我先採些食物，再帶到田邊供播種使用。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -2031,11 +2064,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795577240.855602
+    "updated": 1795577282.102321
   },
-  "seconds": 2275.7512531220564,
+  "seconds": 2316.9704771640536,
   "season": "退水",
-  "snapshotAt": 1795577240.923266,
+  "snapshotAt": 1795577282.155317,
   "recipes": {
     "茅舍": {
       "sites": [
