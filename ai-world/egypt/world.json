@@ -75,10 +75,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -94,7 +94,7 @@
           "water": 1,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 22
         },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2110,
+    "turn": 2112,
     "deficits": 4206
   },
   "history": [
@@ -23443,6 +23443,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 2111,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 520,
+      "say": "河岸的共同儲水已用盡，我先採水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 2112,
+      "name": "塞努",
+      "actor": 5,
+      "day": 520,
+      "say": "我先休息恢復體力，再把身上的水存入河岸，供大家取用。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -23529,19 +23551,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795618805.468375,
+    "phase": "deciding",
+    "updated": 1795618842.404433,
     "reason": ""
   },
-  "seconds": 31168.83421022407,
+  "seconds": 31198.930952182098,
   "council": {
     "food": 2,
-    "water": 1,
+    "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795618805.908442,
+  "snapshotAt": 1795618842.813049,
   "recipes": {
     "茅舍": {
       "sites": [
