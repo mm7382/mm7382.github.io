@@ -25,9 +25,9 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 0
+          "food": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,9 +42,9 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 2
+          "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -59,10 +59,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -114,7 +114,7 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 22
+          "food": 18
         },
         "stock": {
           "food": 0,
@@ -153,7 +153,7 @@
         "stock": {
           "food": 0,
           "water": 0,
-          "reed": 3,
+          "reed": 5,
           "stone": 3
         }
       },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3121,
+    "turn": 3124,
     "deficits": 6047
   },
   "history": [
@@ -34564,6 +34564,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 3122,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 738,
+      "say": "我先採集食物，補充聚落口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 3123,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 738,
+      "say": "我先把蘆葦存入營地，供修繕茅舍使用。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 reed"
+    },
+    {
+      "id": 3124,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 738,
+      "say": "我先採集食物，補充聚落口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -34651,18 +34684,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795631909.363443,
+    "updated": 1795631946.8759658,
     "reason": ""
   },
-  "seconds": 44239.75736460628,
+  "seconds": 44277.20330206529,
   "council": {
-    "food": 2,
+    "food": 6,
     "water": 2,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795631909.9573262,
+  "snapshotAt": 1795631947.511146,
   "recipes": {
     "茅舍": {
       "sites": [
