@@ -24,7 +24,16 @@
  const data=records.get('settlement')||records.get('harbor'),s=data?.frames.at(-1)?.snapshot||data?.initial;if(!s)return;cards.replaceChildren();const crops={harbor:'0 0 627 627',craft:'627 0 627 627',merchant:'0 627 627 627'};for(const a of s.actors||[])card(a.name,(s.sites.find(x=>x.id===a.at)?.label||a.at)+' · '+a.role+(a.energy!==undefined?' · 精力 '+a.energy:'')+(s.autonomy?.goals[a.id]?' · 自主目標：'+s.autonomy.goals[a.id].title:''),art('./assets/actors-ship.png',crops[a.id]));
  const names={shelter:'住屋',well:'水井',garden:'菜園'};for(const [i,kind]of ['shelter','well','garden'].entries()){const bs=s.structures.filter(b=>b.kind===kind);card(names[kind],bs.filter(b=>b.complete).length+' 座完工 · '+bs.filter(b=>!b.complete).length+' 座施工中'+(bs.length&&bs[0].condition!==undefined?' · 耐久 '+bs[0].condition:''),art('./assets/buildings.png',`${i*724} 0 724 724`));}
  if(s.capabilities?.navigationMarker){const count=s.structures.filter(b=>b.kind==='navigation_marker'&&b.complete).length;const im=document.createElementNS('http://www.w3.org/2000/svg','svg');im.setAttribute('viewBox','0 0 64 82');im.innerHTML='<image href="./assets/navigation-marker-v1.png" width="64" height="82"/>';card('航行標誌',count+' 座完工 · 1木4石3工次',im);}
- const stock=s.stocks.camp;card('營地補給',`食物 ${stock.food??0} 份 · 飲水 ${stock.water??0} 份`);card('營地材料',`木材 ${stock.wood} 份 · 石料 ${stock.stone} 份`);
+ if(s.ship)card('商船',s.ship.status==='unloaded'?'已卸貨':'港灣船隻',art('./assets/actors-ship.png','627 627 627 627'));
+ function landscape(box){
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('viewBox',box);svg.setAttribute('role','img');
+  svg.innerHTML='<image href="./assets/bay.png" width="1120" height="600" preserveAspectRatio="none"/>';
+  return svg;
+ }
+ const stock=s.stocks.camp;
+ card('營地補給',`食物 ${stock.food??0} 份 · 飲水 ${stock.water??0} 份`,art('./assets/buildings.png','1448 0 724 724'));
+ card('營地材料',`木材 ${stock.wood} 份 · 石料 ${stock.stone} 份（圖為海灣地貌）`,landscape('520 20 360 260'));
  points.replaceChildren();const key=all.filter(({f})=>f.event.ok&&(['build','dock','unload','propose_building'].includes(f.event.action?.type)));for(const {kind,f}of key.slice(0,12))points.append(make('li',`${kind==='settlement'?'聚落':'港口'} 第 ${f.snapshot.day??'—'} 天　${f.event.actorName}　${f.event.message}`));if(!key.length)points.append(make('li','尚無建造、靠泊或卸貨重點紀錄。'));
  }
  for(const e of [phase,actor,search])e.addEventListener('input',render);
