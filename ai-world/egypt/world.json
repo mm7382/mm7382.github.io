@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 491,
+    "day": 495,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -25,7 +25,7 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 2
+          "food": 1
         },
         "energy": 0,
         "research": 0,
@@ -41,10 +41,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 1,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -59,10 +59,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 1,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -72,13 +72,13 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -91,10 +91,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 1,
+          "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -114,7 +114,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 22
+          "food": 24
         },
         "stock": {
           "food": 0,
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1988,
-    "deficits": 3954
+    "turn": 2004,
+    "deficits": 3988
   },
   "history": [
     {
@@ -22101,6 +22101,182 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 1989,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 491,
+      "say": "河岸缺水，我先採水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 1990,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 491,
+      "say": "我先採集食物，補充聚落口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 1991,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 492,
+      "say": "我先採集飲水，補充聚落所需。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 1992,
+      "name": "塞努",
+      "actor": 5,
+      "day": 492,
+      "say": "我先休息，恢復體力後協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1993,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 492,
+      "say": "河岸缺少飲水，我先採水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 1994,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 492,
+      "say": "我先休息恢復體力，再協助補充食水和修繕住所。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1995,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 492,
+      "say": "我先休息恢復體力，再協助補給與修繕住所。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1996,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 493,
+      "say": "我先休息恢復體力，接著把食物存入河岸共同庫存。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1997,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 493,
+      "say": "我先休息恢復體力，之後協助修繕住所。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1998,
+      "name": "塞努",
+      "actor": 5,
+      "day": 493,
+      "say": "我先採集飲水，補充河岸的共同庫存。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 1999,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 493,
+      "say": "我先休息恢復體力，接著採集食物補充聚落口糧。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2000,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 494,
+      "say": "河岸缺少口糧，我先採集食物放入背包。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 2001,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 494,
+      "say": "我先在河岸採集飲水，補充聚落所需。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 2002,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 494,
+      "say": "河岸共同庫存沒有口糧，我先採集食物補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 2003,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 494,
+      "say": "我去河階營地修繕茅舍。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 2004,
+      "name": "塞努",
+      "actor": 5,
+      "day": 495,
+      "say": "我把身上的水放進河岸共同庫存。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -22188,18 +22364,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795617053.150199,
+    "updated": 1795617282.501363,
     "reason": ""
   },
-  "seconds": 29419.708544060966,
+  "seconds": 29648.650406478962,
   "council": {
     "food": 2,
     "water": 1,
     "shelter": false,
     "ready": false
   },
-  "season": "退水",
-  "snapshotAt": 1795617053.530242,
+  "season": "乾季",
+  "snapshotAt": 1795617282.8809469,
   "recipes": {
     "茅舍": {
       "sites": [
