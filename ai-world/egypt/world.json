@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 23,
+    "day": 24,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 0,
-          "water": 2
+          "water": 1
         },
-        "energy": 5,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -23,9 +23,9 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 2
+          "water": 1
         },
-        "energy": 1,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -36,11 +36,11 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "bank",
+        "site": "field",
         "bag": {
-          "food": 2
+          "food": 1
         },
-        "energy": 3,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -61,9 +61,9 @@
           "terrace"
         ],
         "source": {
-          "water": 156,
+          "water": 160,
           "reed": 48,
-          "food": 22
+          "food": 24
         },
         "stock": {}
       },
@@ -175,8 +175,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 97,
-    "deficits": 72
+    "turn": 100,
+    "deficits": 75
   },
   "history": [
     {
@@ -1245,6 +1245,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 98,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 24,
+      "say": "我先歇息，恢復體力後把水送到田邊。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 99,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 24,
+      "say": "我把食物帶到平原，為播種做準備。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 100,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 24,
+      "say": "我把水送到平原，讓農田能夠播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
     }
   ],
   "needs": [
@@ -1331,13 +1364,13 @@
     }
   ],
   "status": {
-    "phase": "deciding",
+    "phase": "waiting",
     "reason": "",
-    "updated": 1795576342.844722
+    "updated": 1795576384.671905
   },
-  "seconds": 1378.03317787603,
+  "seconds": 1424.8911563340225,
   "season": "退水",
-  "snapshotAt": 1795576342.894897,
+  "snapshotAt": 1795576384.701664,
   "recipes": {
     "茅舍": {
       "sites": [
