@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -37,12 +37,12 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "field",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -180,7 +180,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 241,
+    "turn": 244,
     "deficits": 184
   },
   "history": [
@@ -2834,6 +2834,39 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 242,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 58,
+      "say": "我先休息恢復體力，再取水送往田裡。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 243,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 58,
+      "say": "我去河岸採集播種用的食物，梅莉先好好休息。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 244,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 58,
+      "say": "我先休息恢復體力，謝謝納赫特幫忙採集。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -2922,11 +2955,11 @@
   "status": {
     "phase": "waiting",
     "reason": "",
-    "updated": 1795578389.4284601
+    "updated": 1795578428.8173451
   },
-  "seconds": 3428.937592707225,
+  "seconds": 3468.3162649572478,
   "season": "退水",
-  "snapshotAt": 1795578389.494848,
+  "snapshotAt": 1795578428.884226,
   "recipes": {
     "茅舍": {
       "sites": [
