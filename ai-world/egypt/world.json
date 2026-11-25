@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1505,
+    "turn": 1507,
     "deficits": 2921
   },
   "history": [
@@ -16788,6 +16788,28 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 1506,
+      "name": "塞努",
+      "actor": 5,
+      "day": 375,
+      "say": "我把身上的水存入河岸，補充共同儲備。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 1507,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 375,
+      "say": "我把帶來的蘆葦放進營地庫存，供修繕茅舍使用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -16874,11 +16896,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795610089.4471009,
+    "phase": "deciding",
+    "updated": 1795610123.751147,
     "reason": ""
   },
-  "seconds": 22470.661427787272,
+  "seconds": 22498.14022770326,
   "council": {
     "food": 1,
     "water": 3,
@@ -16886,7 +16908,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795610089.808031,
+  "snapshotAt": 1795610124.054228,
   "recipes": {
     "茅舍": {
       "sites": [
