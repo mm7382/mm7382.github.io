@@ -249,3 +249,77 @@ input:focus-visible, select:focus-visible, button:focus-visible, a:focus-visible
   body.museum-home > main > .participate { padding-block: 80px; }
   body.museum-home > main > .exit { padding-block: 70px 40px; }
 }
+
+body.museum-home > main > .annual-feature {
+  display: grid;
+  grid-template-columns: clamp(5.25rem, 14vw, 10rem) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(1rem, 4vw, 3.25rem);
+  margin: 0 auto clamp(1.5rem, 4vw, 3.25rem);
+  padding: clamp(1rem, 3vw, 2.5rem);
+  border: 1px solid #947b54;
+  background: linear-gradient(112deg, #182838, #12202b 75%);
+  color: #fff1d4;
+}
+
+.annual-feature img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.annual-feature h2 {
+  margin: 0;
+  font: 500 clamp(1.45rem, 4vw, 2.95rem)/1.2 var(--serif);
+  text-wrap: balance;
+}
+
+.annual-feature .annual-kicker {
+  margin: 0 0 .45rem;
+  color: #dfbd83;
+  font-size: .82rem;
+  font-weight: 700;
+}
+
+.annual-feature .annual-summary {
+  max-width: 42ch;
+  margin: .55rem 0;
+  color: #f3e7d2;
+}
+
+.annual-guide-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .45em;
+  min-height: 44px;
+  color: #f9d69d;
+  font-weight: 700;
+}
+
+.annual-guide-link:focus-visible {
+  outline: 2px solid #f9d69d;
+  outline-offset: 3px;
+}
+
+body.museum-home .annual-en,
+html[lang="en"] body.museum-home .annual-zh {
+  display: none;
+}
+
+html[lang="en"] body.museum-home span.annual-en {
+  display: inline;
+}
+
+html[lang="en"] body.museum-home a.annual-en {
+  display: inline-flex;
+}
+
+@media (max-width: 410px) {
+  body.museum-home > main > .annual-feature {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .annual-feature img {
+    width: min(100%, 8rem);
+  }
+}
