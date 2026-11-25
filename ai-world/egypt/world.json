@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -153,7 +153,7 @@
         "stock": {
           "food": 0,
           "water": 0,
-          "reed": 3,
+          "reed": 2,
           "stone": 3
         }
       },
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 0
+        "condition": 12
       },
       "field/農田": {
         "kind": "農田",
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3644,
+    "turn": 3647,
     "deficits": 6981
   },
   "history": [
@@ -40317,6 +40317,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 3645,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 849,
+      "say": "我先休息恢復體力，再協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3646,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 849,
+      "say": "河岸共同糧食已空，我先把身上的食物存入庫存。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 3647,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 849,
+      "say": "茅舍已損壞，我現在修繕住所。",
+      "action": "maintain",
+      "kind": "茅舍",
+      "ok": true,
+      "message": "已維修"
     }
   ],
   "needs": [
@@ -40404,18 +40437,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795638574.301853,
+    "updated": 1795638612.6243358,
     "reason": ""
   },
-  "seconds": 50897.24871355813,
+  "seconds": 50935.49116110013,
   "council": {
     "food": 4,
     "water": 2,
-    "shelter": false,
+    "shelter": true,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795638574.9680152,
+  "snapshotAt": 1795638613.327011,
   "recipes": {
     "茅舍": {
       "sites": [
