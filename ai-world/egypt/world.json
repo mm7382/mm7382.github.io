@@ -3637,9 +3637,9 @@
     }
   ],
   "status": {
-    "phase": "attention",
-    "updated": 1795587720.8296242,
-    "reason": "居民暫時無法連上訂閱服務，已保留上一次決策。"
+    "phase": "deciding",
+    "updated": 1795588005.288361,
+    "reason": ""
   },
   "seconds": 4318.405533785175,
   "council": {
@@ -3649,7 +3649,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795587720.880882,
+  "snapshotAt": 1795588005.416469,
   "recipes": {
     "茅舍": {
       "sites": [
