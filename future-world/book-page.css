@@ -1,0 +1,110 @@
+/* The city is the illustration. All navigation and story type remain live. */
+:root {
+  --ivory: #f5efe4;
+  --ink: #42382c;
+  --rule: #b9ac96;
+  --serif: Georgia, "Songti TC", "Noto Serif TC", "PingFang TC", serif;
+}
+header { padding: max(10px,env(safe-area-inset-top)) max(3vw,env(safe-area-inset-left)); }
+.site-nav {
+  display: flex; align-items: center; gap: clamp(18px,3vw,48px);
+  isolation: isolate; position: relative;
+}
+.site-nav::before {
+  content: ""; position: absolute; z-index: -1; pointer-events: none;
+  inset: -25px -48px -18px -60px;
+  background: radial-gradient(ellipse at 35% 15%,#1b1713cf 20%,transparent 75%);
+}
+.site-nav a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font: 500 clamp(14px,1.2vw,19px)/1.4 var(--serif); letter-spacing: .06em;
+  color: #fff9ee; text-shadow: 0 1px 4px #20160d;
+}
+.site-nav a:hover, .book-page button:hover:not(:disabled) {text-decoration: underline; text-underline-offset: .3em;}
+body[data-viewpoint="Michael"] main {display: grid; grid-template-rows: minmax(0,1fr) auto;}
+body[data-viewpoint="Michael"] .scene {position:relative; inset:auto;}
+.scene #lm-city {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:53% 52%;}
+body[data-viewpoint="Lucy"] #lm-city, body[data-viewpoint="Lucy"] .book-page,
+body[data-viewpoint="Michael"]:not(.moving) #motion {display:none;}
+.scene #stop-frame {object-position:53% 52%;}
+.book-page {
+  display: grid; grid-template-columns: minmax(14rem,1.1fr) minmax(15rem,1.45fr) auto;
+  gap: clamp(16px,3.2vw,58px); align-items: center;
+  position: relative; color:var(--ink); background:var(--ivory);
+  padding: clamp(16px,3.1vh,36px) max(3.6vw,env(safe-area-inset-right)) max(26px,env(safe-area-inset-bottom));
+  font-family:var(--serif); min-height:clamp(122px,18vh,180px);
+}
+.book-page::after {
+  content:""; position:absolute;left:2.5%;right:2.5%;bottom:12px;border-top:1px solid var(--rule);pointer-events:none;
+}
+.book-page h1 {font:500 clamp(38px,4.1vw,72px)/1.12 var(--serif);letter-spacing:.12em;margin:0;}
+.book-page button {
+  font:inherit;color:inherit;border:0;background:none;padding:6px 3px;border-radius:0;min-height:44px;
+}
+.book-page button:focus-visible {outline-color:#665538;outline-offset:1px;}
+#project-status {font:12px/1.2 Georgia,serif;letter-spacing:.04em;color:#655a49;min-height:28px;}
+#opening-line {margin:0;letter-spacing:.07em;line-height:1.75;font-size:clamp(16px,1.45vw,23px);}
+.book-nav {display:flex;align-items:center;gap:clamp(5px,1vw,18px);font-size:clamp(16px,1.25vw,21px);}
+.book-nav #open-viewpoint {font-style:italic;text-decoration:underline;text-underline-offset:.3em;}
+.book-nav i {margin:0;padding:0;border:0;font-style:italic;}
+.book-nav #visit-lucy {position:relative;color:#675e51;}
+.book-nav small {position:absolute;top:100%;left:50%;transform:translateX(-50%);white-space:nowrap;font:11px/1.3 var(--serif);color:inherit;}
+.book-nav #start-forward {border-left:1px solid var(--rule);padding-left:clamp(10px,1.7vw,28px);margin-left:4px;white-space:nowrap;}
+.sr-status {position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);}
+body.moving main {grid-template-rows:1fr;}
+body.moving .book-page, body.moving #lm-city {display:none;}
+#book-reading .hud, #book-reading .hud-reopen {
+  position:static;width:100%;height:auto;max-height:none;overflow:visible;
+  color:var(--ink);text-shadow:none;-webkit-text-stroke:0;gap:5px;
+}
+#book-reading .hud .eyebrow {display:none;}
+#book-reading .reading-count {color:#756754;letter-spacing:.08em;}
+#book-reading .reading-content {max-height:min(19vh,11rem);flex:0 1 auto;}
+#book-reading .hud #reading-text, #book-reading .hud #reading-detail {font:clamp(16px,1.2vw,20px)/1.7 var(--serif);color:inherit;}
+#book-reading .reading-actions,#book-reading .reading-nav {position:static;display:flex;flex-direction:row;flex-wrap:wrap;width:auto;justify-content:flex-start;gap:3px 15px;}
+#book-reading .hud button {font-size:14px;padding:4px 0;}
+.book-page:has(.hud:not([hidden])) {grid-template-columns:minmax(10rem,.7fr) minmax(18rem,2.2fr) auto;}
+body[data-viewpoint="Michael"] .stopbar {position:absolute;right:18px;top:10px;bottom:auto;}
+main:has(#book-reading .hud:not([hidden])) .stopbar {display:none;}
+body[data-viewpoint="Michael"] #hotspots {opacity:.85;}
+body:has(dialog[open]) .book-page {visibility:hidden;}
+body:has(#lucy-video-frame iframe) #lucy-cut {
+  position:fixed;inset:0;width:100%;height:100%;transform:none;margin:0;background:#080807;
+  display:flex;align-items:center;justify-content:center;
+}
+body:has(#lucy-video-frame iframe) .lucy-cut::before {display:none;}
+body:has(#lucy-video-frame iframe) .lucy-cut-screen {width:min(100vw,calc((100dvh - 96px)*16/9));border:0;border-radius:0;box-shadow:none;}
+body:has(#lucy-video-frame iframe) .lucy-video-controls {right:max(10px,env(safe-area-inset-right));top:max(3px,env(safe-area-inset-top));bottom:auto;}
+@media (max-width:900px) {
+  .book-page,.book-page:has(.hud:not([hidden])) {grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;}
+  #book-reading {grid-column:1/-1;grid-row:2;}
+  .book-nav {justify-self:end;}
+  .book-nav small {display:none;}
+}
+@media (max-width:600px) {
+  header {padding-left:max(16px,env(safe-area-inset-left));}
+  .book-page {padding:12px max(16px,env(safe-area-inset-right)) max(19px,env(safe-area-inset-bottom));}
+  .book-page h1 {font-size:clamp(27px,6.7vw,38px);}
+  .book-page::after {bottom:7px;}
+  .book-nav {font-size:14px;gap:3px;}
+  .book-nav #start-forward {padding-left:7px;margin-left:0;}
+  #opening-line {font-size:16px;}
+  #book-reading .reading-content {max-height:18dvh;}
+  body[data-viewpoint="Michael"] .stopbar {top:58px;}
+  .scene #lm-city, .scene #stop-frame {object-position:41% center;}
+}
+@media(max-height:520px) {
+  .book-page {padding-top:6px;padding-bottom:10px;min-height:72px;}
+  .book-page h1 {font-size:26px;}
+  .book-page:has(.hud:not([hidden])) {grid-template-columns:100px minmax(0,1fr) auto;gap:10px;}
+  .book-page:has(.hud:not([hidden])) #book-reading {grid-row:auto;grid-column:auto;}
+  #book-reading .hud {gap:0;}
+  #book-reading .reading-content {max-height:18dvh;}
+  .book-page::after {bottom:3px;}
+}
+header .more-site {position:relative;pointer-events:auto;align-self:flex-start;font:15px/1.5 var(--serif);color:#fff8eb;text-shadow:0 1px 5px #20160d;}
+.more-site summary {cursor:pointer;min-height:44px;display:flex;align-items:center;padding:0 8px;background:#28221a80;border-radius:2px;}
+.more-site summary::after {content:"⌄";margin-left:.5em;}
+.more-site[open] summary::after {content:"⌃";}
+.more-site nav.lab-world-nav {position:absolute;top:100%;right:0;width:max-content;display:grid;grid-template-columns:repeat(2,minmax(5em,1fr));grid-template-rows:auto;padding:6px 12px;gap:0 12px;background:#302a23fa;}
+.more-site nav.lab-world-nav a {justify-content:flex-start;font:15px/1.5 var(--serif);}
