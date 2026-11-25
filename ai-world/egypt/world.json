@@ -35,11 +35,11 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -174,7 +174,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 82,
+    "turn": 84,
     "deficits": 57
   },
   "history": [
@@ -1079,6 +1079,28 @@
       "kind": "",
       "ok": true,
       "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 83,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 20,
+      "say": "田邊的水已用完，我去河岸取水，讓大家能夠播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 84,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 20,
+      "say": "我帶食物前往平原，協助準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
     }
   ],
   "needs": [
@@ -1165,13 +1187,13 @@
     }
   ],
   "status": {
-    "phase": "waiting",
+    "phase": "deciding",
     "reason": "",
-    "updated": 1795576121.5225012
+    "updated": 1795576156.768976
   },
-  "seconds": 1161.8168485840142,
+  "seconds": 1192.0149907089944,
   "season": "退水",
-  "snapshotAt": 1795576121.542339,
+  "snapshotAt": 1795576156.813973,
   "recipes": {
     "茅舍": {
       "sites": [
