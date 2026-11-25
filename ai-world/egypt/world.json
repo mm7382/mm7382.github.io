@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 195,
+    "day": 196,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 750,
-    "deficits": 1308
+    "turn": 753,
+    "deficits": 1319
   },
   "history": [
     {
@@ -8479,6 +8479,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 751,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 195,
+      "say": "我先在河岸採集食物，補充聚落糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 food"
+    },
+    {
+      "id": 752,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 196,
+      "say": "我先在河岸採水，補充聚落的飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 753,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 196,
+      "say": "我先休息恢復體力，才能採集食物補充聚落。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8566,10 +8599,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795599275.847496,
+    "updated": 1795599333.617186,
     "reason": ""
   },
-  "seconds": 11668.2085135401,
+  "seconds": 11725.805766916135,
   "council": {
     "food": 0,
     "water": 0,
@@ -8577,7 +8610,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795599276.019679,
+  "snapshotAt": 1795599333.785711,
   "recipes": {
     "茅舍": {
       "sites": [
