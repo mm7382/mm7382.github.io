@@ -5,13 +5,13 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -88,13 +88,13 @@
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2381,
+    "turn": 2383,
     "deficits": 4706
   },
   "history": [
@@ -26424,6 +26424,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 reed"
+    },
+    {
+      "id": 2382,
+      "name": "塞努",
+      "actor": 5,
+      "day": 580,
+      "say": "我去河階營地，協助修繕茅舍。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 2383,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 580,
+      "say": "茅舍需要修繕，我先到河階營地協助。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -26510,11 +26532,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795622409.750752,
+    "phase": "deciding",
+    "updated": 1795622448.172066,
     "reason": ""
   },
-  "seconds": 34766.192121064756,
+  "seconds": 34797.756820772775,
   "council": {
     "food": 0,
     "water": 1,
@@ -26522,7 +26544,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795622410.490795,
+  "snapshotAt": 1795622448.6363451,
   "recipes": {
     "茅舍": {
       "sites": [
