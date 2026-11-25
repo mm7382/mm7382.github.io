@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -74,11 +74,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -113,7 +113,7 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 22
+          "food": 20
         },
         "stock": {
           "food": 0,
@@ -152,7 +152,7 @@
         "stock": {
           "food": 0,
           "water": 0,
-          "reed": 3,
+          "reed": 2,
           "stone": 3
         }
       },
@@ -192,7 +192,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 0
+        "condition": 12
       },
       "field/農田": {
         "kind": "農田",
@@ -229,7 +229,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1149,
+    "turn": 1151,
     "deficits": 2193
   },
   "history": [
@@ -12871,6 +12871,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 1150,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 291,
+      "say": "營地有現成蘆葦，先修繕茅舍。",
+      "action": "maintain",
+      "kind": "茅舍",
+      "ok": true,
+      "message": "已維修"
+    },
+    {
+      "id": 1151,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 291,
+      "say": "河岸缺糧，我先採集食物補充儲備。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -12957,19 +12979,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795605032.811285,
+    "phase": "deciding",
+    "updated": 1795605067.025171,
     "reason": ""
   },
-  "seconds": 17422.645672587096,
+  "seconds": 17450.329291878093,
   "council": {
-    "food": 2,
+    "food": 4,
     "water": 2,
-    "shelter": false,
+    "shelter": true,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795605033.041762,
+  "snapshotAt": 1795605067.270375,
   "recipes": {
     "茅舍": {
       "sites": [
