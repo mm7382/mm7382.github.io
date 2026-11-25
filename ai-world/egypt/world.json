@@ -24,10 +24,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 2,
           "food": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -111,9 +111,9 @@
           "terrace"
         ],
         "source": {
-          "water": 158,
+          "water": 156,
           "reed": 48,
-          "food": 22
+          "food": 20
         },
         "stock": {
           "food": 0,
@@ -229,7 +229,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1363,
+    "turn": 1365,
     "deficits": 2618
   },
   "history": [
@@ -15225,6 +15225,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 1364,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 341,
+      "say": "我先採集飲水，補充河岸的共同儲備。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 1365,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 341,
+      "say": "河岸缺少共同糧食，我先採集食物補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -15311,19 +15333,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795608035.259466,
+    "phase": "deciding",
+    "updated": 1795608072.2435908,
     "reason": ""
   },
-  "seconds": 20419.983138620155,
+  "seconds": 20450.272275245137,
   "council": {
-    "food": 3,
-    "water": 2,
+    "food": 5,
+    "water": 4,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795608035.518687,
+  "snapshotAt": 1795608072.505651,
   "recipes": {
     "茅舍": {
       "sites": [
