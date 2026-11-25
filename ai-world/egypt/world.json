@@ -42,7 +42,7 @@
           "food": 1,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -226,7 +226,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 692,
+    "turn": 693,
     "deficits": 1004
   },
   "history": [
@@ -7841,6 +7841,17 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 3 food"
+    },
+    {
+      "id": 693,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 169,
+      "say": "我先休息恢復體力，接著補充聚落的食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -7928,10 +7939,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795597710.886806,
+    "updated": 1795597725.756717,
     "reason": ""
   },
-  "seconds": 10104.82562766713,
+  "seconds": 10119.531607459125,
   "council": {
     "food": 6,
     "water": 2,
@@ -7939,7 +7950,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795597711.048779,
+  "snapshotAt": 1795597725.916636,
   "recipes": {
     "茅舍": {
       "sites": [
