@@ -27,7 +27,7 @@
           "water": 1,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 1,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -114,7 +114,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2838,
+    "turn": 2841,
     "deficits": 5542
   },
   "history": [
@@ -31451,6 +31451,39 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 2839,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 678,
+      "say": "我先把身上的食物存到河岸，供大家就近取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 2840,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 678,
+      "say": "我先休息恢復體力，再把身上的水存到河岸供大家取用。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2841,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 678,
+      "say": "河岸缺少食物，我先採集補充糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -31538,18 +31571,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795628290.034962,
+    "updated": 1795628326.976825,
     "reason": ""
   },
-  "seconds": 40635.05398976841,
+  "seconds": 40671.96501031041,
   "council": {
-    "food": 1,
+    "food": 3,
     "water": 2,
     "shelter": false,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795628290.557869,
+  "snapshotAt": 1795628327.493106,
   "recipes": {
     "茅舍": {
       "sites": [
