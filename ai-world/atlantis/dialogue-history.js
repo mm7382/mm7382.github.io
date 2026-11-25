@@ -34,7 +34,10 @@
  const stock=s.stocks.camp;
  card('營地補給',`食物 ${stock.food??0} 份 · 飲水 ${stock.water??0} 份`,art('./assets/buildings.png','1448 0 724 724'));
  card('營地材料',`木材 ${stock.wood} 份 · 石料 ${stock.stone} 份（圖為海灣地貌）`,landscape('520 20 360 260'));
- points.replaceChildren();const key=all.filter(({f})=>f.event.ok&&(['build','dock','unload','propose_building'].includes(f.event.action?.type)));for(const {kind,f}of key.slice(0,12))points.append(make('li',`${kind==='settlement'?'聚落':'港口'} 第 ${f.snapshot.day??'—'} 天　${f.event.actorName}　${f.event.message}`));if(!key.length)points.append(make('li','尚無建造、靠泊或卸貨重點紀錄。'));
+ points.replaceChildren();
+ if(s.trials?.channel==='untested')points.append(make('li','營地已製作井邊導水槽，等待居民實測。'));
+ if(s.trials?.channel==='verified')points.append(make('li','導水槽已實測：一次操作可將2份井水送入共用庫存。'));
+ const key=all.filter(({f})=>f.event.ok&&(['build','dock','unload','propose_building','explore','prototype','trial'].includes(f.event.action?.type)));for(const {kind,f}of key.slice(0,12))points.append(make('li',`${kind==='settlement'?'聚落':'港口'} 第 ${f.snapshot.day??'—'} 天　${f.event.actorName}　${f.event.message}`));if(!key.length)points.append(make('li','尚無建造、靠泊或卸貨重點紀錄。'));
  }
  for(const e of [phase,actor,search])e.addEventListener('input',render);
  async function refresh(){let changed=false;const errors=[];await Promise.all([['harbor','replay.json'],['settlement','settlement.json']].map(async([kind,path])=>{try{const r=await fetch('./'+path+'?t='+Date.now(),{cache:'no-store'});if(!r.ok)throw Error();const data=await r.json();if(!Array.isArray(data.frames))throw Error();if(JSON.stringify(records.get(kind))!==JSON.stringify(data)){records.set(kind,data);changed=true;}}catch{errors.push(kind==='harbor'?'港口':'聚落');}}));if(changed||JSON.stringify(errors)!==JSON.stringify(failures)){failures=errors;render();}}
