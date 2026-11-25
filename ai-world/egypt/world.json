@@ -27,7 +27,7 @@
           "water": 1,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -117,7 +117,7 @@
           "food": 20
         },
         "stock": {
-          "food": 0,
+          "food": 1,
           "water": 0
         }
       },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3714,
+    "turn": 3717,
     "deficits": 7099
   },
   "history": [
@@ -41087,6 +41087,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 3715,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 864,
+      "say": "我把身上的食物存到河岸，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 3716,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 864,
+      "say": "我先休息恢復體力，接著把飲水存入河岸。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3717,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 864,
+      "say": "我把身上的食物存到河岸，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 food"
     }
   ],
   "needs": [
@@ -41174,10 +41207,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795639482.986971,
+    "updated": 1795639520.887404,
     "reason": ""
   },
-  "seconds": 51796.514954802115,
+  "seconds": 51834.69909326211,
   "council": {
     "food": 5,
     "water": 3,
@@ -41185,7 +41218,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795639483.990515,
+  "snapshotAt": 1795639521.619953,
   "recipes": {
     "茅舍": {
       "sites": [
