@@ -1,17 +1,17 @@
 {
   "state": {
-    "day": 819,
+    "day": 820,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,10 +24,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 1,
+          "water": 0,
           "food": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -75,7 +75,7 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2,
+          "water": 1,
           "reed": 2
         },
         "energy": 0,
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,9 +112,9 @@
           "terrace"
         ],
         "source": {
-          "water": 158,
+          "water": 160,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 6
+        "condition": 5
       },
       "field/農田": {
         "kind": "農田",
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3504,
-    "deficits": 6729
+    "turn": 3507,
+    "deficits": 6738
   },
   "history": [
     {
@@ -38777,6 +38777,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 3505,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 819,
+      "say": "我先休息恢復體力，準備補充河岸的食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3506,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 819,
+      "say": "我把身上的水放入河岸共同庫存，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 water"
+    },
+    {
+      "id": 3507,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 820,
+      "say": "河岸食物不足，我先採集糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -38864,18 +38897,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795636781.699476,
+    "updated": 1795636821.603233,
     "reason": ""
   },
-  "seconds": 49108.33608784925,
+  "seconds": 49148.20666905824,
   "council": {
-    "food": 1,
-    "water": 3,
+    "food": 2,
+    "water": 1,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795636782.700192,
+  "snapshotAt": 1795636822.408889,
   "recipes": {
     "茅舍": {
       "sites": [
