@@ -9,7 +9,7 @@
         "bag": {
           "food": 2
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -20,11 +20,11 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "terrace",
+        "site": "field",
         "bag": {
           "water": 1
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -35,11 +35,11 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "food": 0
         },
-        "energy": 7,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -174,7 +174,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 76,
+    "turn": 79,
     "deficits": 53
   },
   "history": [
@@ -1013,6 +1013,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 77,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 19,
+      "say": "我先前往平原，把水送去準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 78,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 19,
+      "say": "水退了，我去河岸採些食物，再送往平原準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 79,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 19,
+      "say": "我先休息恢復體力，再把食物送去平原播種。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -1099,13 +1132,13 @@
     }
   ],
   "status": {
-    "phase": "deciding",
+    "phase": "waiting",
     "reason": "",
-    "updated": 1795576044.944659
+    "updated": 1795576081.0946891
   },
-  "seconds": 1080.2531184590189,
+  "seconds": 1121.4288509590551,
   "season": "退水",
-  "snapshotAt": 1795576044.9813042,
+  "snapshotAt": 1795576081.123619,
   "recipes": {
     "茅舍": {
       "sites": [
