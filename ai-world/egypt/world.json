@@ -24,10 +24,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 2,
           "food": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 1,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,9 +112,9 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
-          "food": 22
+          "food": 20
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4165,
+    "turn": 4168,
     "deficits": 7925
   },
   "history": [
@@ -46048,6 +46048,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 4166,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 962,
+      "say": "河岸的飲水不足，我先採水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 4167,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 962,
+      "say": "我先採集食物，補充河岸的共同儲備。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 4168,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 962,
+      "say": "我先休息恢復體力，再把身上的食物存入河岸共用庫存。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -46135,18 +46168,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795645373.480273,
+    "updated": 1795645414.10081,
     "reason": ""
   },
-  "seconds": 57673.81631913205,
+  "seconds": 57714.51980034006,
   "council": {
-    "food": 3,
-    "water": 1,
+    "food": 5,
+    "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795645374.3301399,
+  "snapshotAt": 1795645414.962899,
   "recipes": {
     "茅舍": {
       "sites": [
