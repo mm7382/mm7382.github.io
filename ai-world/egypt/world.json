@@ -226,7 +226,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 715,
+    "turn": 716,
     "deficits": 1128
   },
   "history": [
@@ -8094,6 +8094,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 716,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 180,
+      "say": "河岸缺水，我先採集飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -8181,10 +8192,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795598386.366396,
+    "updated": 1795598400.638818,
     "reason": ""
   },
-  "seconds": 10779.436626252107,
+  "seconds": 10793.253632710112,
   "council": {
     "food": 0,
     "water": 0,
@@ -8192,7 +8203,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795598386.524122,
+  "snapshotAt": 1795598400.7993321,
   "recipes": {
     "茅舍": {
       "sites": [
