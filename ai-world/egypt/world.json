@@ -70,13 +70,13 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 6,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -88,10 +88,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -111,7 +111,7 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -227,7 +227,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 868,
+    "turn": 870,
     "deficits": 1636
   },
   "history": [
@@ -9778,6 +9778,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 869,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 227,
+      "say": "茅舍已修好，河岸缺糧；我去採集食物。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 870,
+      "name": "塞努",
+      "actor": 5,
+      "day": 227,
+      "say": "我先在河岸採集食物，補充聚落糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -9864,19 +9886,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795601180.725861,
+    "phase": "deciding",
+    "updated": 1795601216.992387,
     "reason": ""
   },
-  "seconds": 13577.307897708146,
+  "seconds": 13606.765805249132,
   "council": {
-    "food": 0,
+    "food": 2,
     "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795601180.934279,
+  "snapshotAt": 1795601217.2043579,
   "recipes": {
     "茅舍": {
       "sites": [
