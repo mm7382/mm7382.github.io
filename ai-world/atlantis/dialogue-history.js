@@ -35,6 +35,7 @@
  card('營地補給',`食物 ${stock.food??0} 份 · 飲水 ${stock.water??0} 份`,art('./assets/buildings.png','1448 0 724 724'));
  card('營地材料',`木材 ${stock.wood} 份 · 石料 ${stock.stone} 份（圖為海灣地貌）`,landscape('520 20 360 260'));
  points.replaceChildren();
+ if(s.relief)points.append(make('li','觀察者救援：第'+s.relief.day+'天送達24份食物、24份飲水，另每人3份專用救援餐；不列為居民生產成果。'));
  if(s.trials?.channel==='untested')points.append(make('li','營地已製作井邊導水槽，等待居民實測。'));
  if(s.trials?.channel==='verified')points.append(make('li','導水槽已實測：一次操作可將2份井水送入共用庫存。'));
  const key=all.filter(({f})=>f.event.ok&&(['build','dock','unload','propose_building','explore','prototype','trial'].includes(f.event.action?.type)));for(const {kind,f}of key.slice(0,12))points.append(make('li',`${kind==='settlement'?'聚落':'港口'} 第 ${f.snapshot.day??'—'} 天　${f.event.actorName}　${f.event.message}`));if(!key.length)points.append(make('li','尚無建造、靠泊或卸貨重點紀錄。'));
