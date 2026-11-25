@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,7 +226,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 743,
+    "turn": 744,
     "deficits": 1284
   },
   "history": [
@@ -8402,6 +8402,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 744,
+      "name": "塞努",
+      "actor": 5,
+      "day": 193,
+      "say": "我先休息恢復體力，才能採集飲水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8488,11 +8499,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795599135.255501,
+    "phase": "waiting",
+    "updated": 1795599177.54951,
     "reason": ""
   },
-  "seconds": 11527.695365458145,
+  "seconds": 11576.37638883313,
   "council": {
     "food": 0,
     "water": 0,
@@ -8500,7 +8511,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795599135.431356,
+  "snapshotAt": 1795599177.986003,
   "recipes": {
     "茅舍": {
       "sites": [
