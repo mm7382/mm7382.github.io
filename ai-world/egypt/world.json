@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 64,
+    "day": 65,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -39,10 +39,10 @@
         "age": 39,
         "site": "field",
         "bag": {
-          "food": 5,
+          "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -65,7 +65,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 22
+          "food": 24
         },
         "stock": {
           "food": 0,
@@ -84,7 +84,8 @@
         ],
         "source": {},
         "stock": {
-          "water": 4
+          "water": 1,
+          "food": 4
         }
       },
       "terrace": {
@@ -180,8 +181,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 271,
-    "deficits": 213
+    "turn": 274,
+    "deficits": 215
   },
   "history": [
     {
@@ -3164,6 +3165,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 4 water"
+    },
+    {
+      "id": 272,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 65,
+      "say": "我先休息恢復體力，等食物放進田裡的庫存後協助播種。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 273,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 65,
+      "say": "我把食物放進田裡的庫存，讓大家可以播種。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 4 food"
+    },
+    {
+      "id": 274,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 65,
+      "say": "播種的食物和水都備好了，我先休息恢復體力。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -3252,11 +3286,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795578804.010144
+    "updated": 1795578848.272222
   },
-  "seconds": 3838.12018424517,
+  "seconds": 3882.362578162196,
   "season": "乾季",
-  "snapshotAt": 1795578804.0807831,
+  "snapshotAt": 1795578848.324991,
   "recipes": {
     "茅舍": {
       "sites": [
