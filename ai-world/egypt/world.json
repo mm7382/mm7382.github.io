@@ -7,11 +7,11 @@
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -74,11 +74,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -114,7 +114,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 24
+          "food": 20
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3820,
+    "turn": 3823,
     "deficits": 7292
   },
   "history": [
@@ -42253,6 +42253,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 3821,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 887,
+      "say": "河岸缺少口糧，我先採集食物。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 3822,
+      "name": "塞努",
+      "actor": 5,
+      "day": 887,
+      "say": "我先休息恢復體力，再協助補充河岸的飲水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3823,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 887,
+      "say": "我先採集河岸的食物，補充聚落口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -42339,19 +42372,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795640852.170902,
+    "phase": "waiting",
+    "updated": 1795640885.1685472,
     "reason": ""
   },
-  "seconds": 53162.80095655829,
+  "seconds": 53202.76229668426,
   "council": {
-    "food": 0,
+    "food": 4,
     "water": 1,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795640852.972329,
+  "snapshotAt": 1795640886.118509,
   "recipes": {
     "茅舍": {
       "sites": [
