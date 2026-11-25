@@ -62,7 +62,7 @@
           "food": 0,
           "water": 1
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -74,11 +74,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -114,7 +114,7 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2055,
+    "turn": 2057,
     "deficits": 4092
   },
   "history": [
@@ -22838,6 +22838,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 2056,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 507,
+      "say": "我先休息恢復體力，再採集食物補充共同儲備。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2057,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 507,
+      "say": "河岸缺少共同口糧，我先採集食物。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -22924,19 +22946,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795618019.4006872,
+    "phase": "deciding",
+    "updated": 1795618054.064139,
     "reason": ""
   },
-  "seconds": 30384.27291189102,
+  "seconds": 30412.098955016,
   "council": {
-    "food": 2,
+    "food": 4,
     "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795618019.781365,
+  "snapshotAt": 1795618054.465895,
   "recipes": {
     "茅舍": {
       "sites": [
