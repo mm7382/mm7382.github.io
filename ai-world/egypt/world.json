@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 67,
+    "day": 68,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 4,
           "water": 0
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -23,10 +23,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 4,
           "food": 0
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -63,9 +63,9 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 156,
           "reed": 48,
-          "food": 24
+          "food": 20
         },
         "stock": {
           "food": 0,
@@ -152,7 +152,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 10
+        "condition": 9
       }
     },
     "needs": {
@@ -181,8 +181,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 281,
-    "deficits": 224
+    "turn": 284,
+    "deficits": 230
   },
   "history": [
     {
@@ -3275,6 +3275,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 282,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 68,
+      "say": "田裡目前無法照料，我先休息，等體力恢復後再去河岸幫忙。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 283,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 68,
+      "say": "我先採集食物，補充聚落的糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 4 food"
+    },
+    {
+      "id": 284,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 68,
+      "say": "我先採集飲水，補充聚落所需。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 4 water"
     }
   ],
   "needs": [
@@ -3361,13 +3394,13 @@
     }
   ],
   "status": {
-    "phase": "deciding",
+    "phase": "waiting",
     "reason": "",
-    "updated": 1795578970.3828201
+    "updated": 1795579013.382796
   },
-  "seconds": 4004.4560078711947,
+  "seconds": 4052.539584496175,
   "season": "洪水",
-  "snapshotAt": 1795578970.4393961,
+  "snapshotAt": 1795579013.460844,
   "recipes": {
     "茅舍": {
       "sites": [
