@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -226,7 +226,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 769,
+    "turn": 771,
     "deficits": 1391
   },
   "history": [
@@ -8688,6 +8688,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 770,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 202,
+      "say": "我先休息恢復體力，接著採水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 771,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 202,
+      "say": "我先休息，恢復體力後採集食物。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8775,10 +8797,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795599674.737256,
+    "updated": 1795599705.0199711,
     "reason": ""
   },
-  "seconds": 12066.036291000113,
+  "seconds": 12096.795170208119,
   "council": {
     "food": 0,
     "water": 0,
@@ -8786,7 +8808,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795599674.9097888,
+  "snapshotAt": 1795599705.197164,
   "recipes": {
     "茅舍": {
       "sites": [
