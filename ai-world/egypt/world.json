@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 29,
+    "day": 30,
     "actors": [
       {
         "name": "梅莉",
@@ -24,9 +24,9 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 2
+          "food": 1
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,9 +40,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2
+          "water": 1
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -63,9 +63,9 @@
           "terrace"
         ],
         "source": {
-          "water": 158,
+          "water": 160,
           "reed": 48,
-          "food": 22
+          "food": 24
         },
         "stock": {}
       },
@@ -177,8 +177,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 121,
-    "deficits": 96
+    "turn": 123,
+    "deficits": 100
   },
   "history": [
     {
@@ -1511,6 +1511,28 @@
       "kind": "",
       "ok": true,
       "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 122,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 29,
+      "say": "我把食物送到田邊，協助大家播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 123,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 30,
+      "say": "我把水帶到田邊，為播種做準備。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -1597,13 +1619,13 @@
     }
   ],
   "status": {
-    "phase": "waiting",
+    "phase": "deciding",
     "reason": "",
-    "updated": 1795576684.24175
+    "updated": 1795576717.964674
   },
-  "seconds": 1724.3481102079677,
+  "seconds": 1753.0089093739807,
   "season": "乾季",
-  "snapshotAt": 1795576684.280056,
+  "snapshotAt": 1795576718.0232608,
   "recipes": {
     "茅舍": {
       "sites": [
