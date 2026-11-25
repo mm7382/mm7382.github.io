@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 0,
+        "energy": 8,
         "research": 0,
         "survey": [
           "terrace",
@@ -76,9 +76,9 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 2
+          "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -93,7 +93,7 @@
           "food": 1,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -152,7 +152,7 @@
         "stock": {
           "food": 0,
           "water": 0,
-          "reed": 1,
+          "reed": 3,
           "stone": 3
         }
       },
@@ -229,7 +229,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1078,
+    "turn": 1081,
     "deficits": 2053
   },
   "history": [
@@ -12090,6 +12090,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 1079,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 275,
+      "say": "我把身上的蘆葦存入營地，備作茅舍修繕。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 reed"
+    },
+    {
+      "id": 1080,
+      "name": "塞努",
+      "actor": 5,
+      "day": 275,
+      "say": "我先休息恢復體力，再把身上的食物存入河岸共同庫存。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1081,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 275,
+      "say": "茅舍已修復，但營地缺水缺糧；我先休息恢復體力，準備前往河岸補給。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -12177,10 +12210,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795604062.709723,
+    "updated": 1795604102.891598,
     "reason": ""
   },
-  "seconds": 16447.932095877128,
+  "seconds": 16487.90329304413,
   "council": {
     "food": 2,
     "water": 2,
@@ -12188,7 +12221,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795604062.931233,
+  "snapshotAt": 1795604103.117853,
   "recipes": {
     "茅舍": {
       "sites": [
