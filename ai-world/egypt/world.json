@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 201,
+    "day": 202,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -75,7 +75,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 768,
-    "deficits": 1379
+    "turn": 769,
+    "deficits": 1391
   },
   "history": [
     {
@@ -8677,6 +8677,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 769,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 202,
+      "say": "我先休息恢復體力，才能採集食物補充聚落。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8764,10 +8775,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795599638.538929,
+    "updated": 1795599674.737256,
     "reason": ""
   },
-  "seconds": 12029.872229167115,
+  "seconds": 12066.036291000113,
   "council": {
     "food": 0,
     "water": 0,
@@ -8775,7 +8786,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795599638.710627,
+  "snapshotAt": 1795599674.9097888,
   "recipes": {
     "茅舍": {
       "sites": [
