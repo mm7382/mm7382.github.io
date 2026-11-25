@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -114,7 +114,7 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2041,
+    "turn": 2043,
     "deficits": 4067
   },
   "history": [
@@ -22684,6 +22684,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 2042,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 504,
+      "say": "我先休息恢復體力，再幫忙補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2043,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 504,
+      "say": "茅舍狀況良好，河岸缺少口糧；我先採集食物。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -22770,19 +22792,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795617823.868293,
+    "phase": "deciding",
+    "updated": 1795617858.364542,
     "reason": ""
   },
-  "seconds": 30189.250331769,
+  "seconds": 30216.88305210197,
   "council": {
-    "food": 1,
+    "food": 3,
     "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795617824.254435,
+  "snapshotAt": 1795617858.7757728,
   "recipes": {
     "茅舍": {
       "sites": [
