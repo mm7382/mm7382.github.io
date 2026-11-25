@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 1,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1833,
+    "turn": 1835,
     "deficits": 3647
   },
   "history": [
@@ -20396,6 +20396,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1834,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 454,
+      "say": "我先休息，恢復體力後繼續補充聚落食糧。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1835,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 454,
+      "say": "我先休息恢復體力，之後把水集中存放。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -20482,11 +20504,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795614820.26429,
+    "phase": "deciding",
+    "updated": 1795614854.8750432,
     "reason": ""
   },
-  "seconds": 27193.264512109105,
+  "seconds": 27221.119730692124,
   "council": {
     "food": 1,
     "water": 1,
@@ -20494,7 +20516,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795614820.642536,
+  "snapshotAt": 1795614855.241054,
   "recipes": {
     "茅舍": {
       "sites": [
