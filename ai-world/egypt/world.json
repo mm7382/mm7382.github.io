@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -75,7 +75,7 @@
           "food": 0,
           "water": 1
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 1
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,7 +226,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 532,
+    "turn": 535,
     "deficits": 688
   },
   "history": [
@@ -6081,6 +6081,39 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 533,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 129,
+      "say": "我先休息恢復體力，準備補充聚落飲水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 534,
+      "name": "塞努",
+      "actor": 5,
+      "day": 129,
+      "say": "我先休息恢復體力，再把身上的水存入河岸。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 535,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 129,
+      "say": "我先休息恢復體力，再協助補充食水與修復住所。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -6167,11 +6200,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795591375.031744,
+    "phase": "waiting",
+    "updated": 1795591417.9072902,
     "reason": ""
   },
-  "seconds": 7683.8150961630745,
+  "seconds": 7732.945261080022,
   "council": {
     "food": 2,
     "water": 2,
@@ -6179,7 +6212,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795591375.165525,
+  "snapshotAt": 1795591418.019475,
   "recipes": {
     "茅舍": {
       "sites": [
