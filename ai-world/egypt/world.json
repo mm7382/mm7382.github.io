@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 197,
+    "day": 198,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -75,7 +75,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 756,
-    "deficits": 1331
+    "turn": 759,
+    "deficits": 1343
   },
   "history": [
     {
@@ -8545,6 +8545,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 757,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 198,
+      "say": "我先休息恢復體力，再採集食物。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 758,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 198,
+      "say": "我先休息恢復體力，再到河岸採水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 759,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 198,
+      "say": "我先休息恢復體力，才能採集食物補充聚落。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8631,11 +8664,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795599394.688085,
+    "phase": "waiting",
+    "updated": 1795599450.6798332,
     "reason": ""
   },
-  "seconds": 11786.70735787513,
+  "seconds": 11849.089449584135,
   "council": {
     "food": 0,
     "water": 0,
@@ -8643,7 +8676,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795599394.860501,
+  "snapshotAt": 1795599450.8423061,
   "recipes": {
     "茅舍": {
       "sites": [
