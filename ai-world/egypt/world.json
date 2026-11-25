@@ -1,43 +1,10 @@
 {
   "state": {
-    "day": 575,
+    "day": 576,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
-        "bag": {
-          "food": 1,
-          "water": 0,
-          "reed": 0
-        },
-        "energy": 4,
-        "research": 0,
-        "survey": [
-          "terrace",
-          "field"
-        ],
-        "goal": ""
-      },
-      {
-        "name": "帕伊",
-        "age": 31,
-        "site": "bank",
-        "bag": {
-          "water": 1,
-          "food": 0
-        },
-        "energy": 1,
-        "research": 0,
-        "survey": [
-          "terrace",
-          "field"
-        ],
-        "goal": ""
-      },
-      {
-        "name": "納赫特",
-        "age": 39,
         "site": "bank",
         "bag": {
           "food": 0,
@@ -53,6 +20,39 @@
         "goal": ""
       },
       {
+        "name": "帕伊",
+        "age": 31,
+        "site": "bank",
+        "bag": {
+          "water": 0,
+          "food": 0
+        },
+        "energy": 4,
+        "research": 0,
+        "survey": [
+          "terrace",
+          "field"
+        ],
+        "goal": ""
+      },
+      {
+        "name": "納赫特",
+        "age": 39,
+        "site": "bank",
+        "bag": {
+          "food": 2,
+          "water": 0,
+          "reed": 0
+        },
+        "energy": 0,
+        "research": 0,
+        "survey": [
+          "terrace",
+          "field"
+        ],
+        "goal": ""
+      },
+      {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
@@ -60,9 +60,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0
+          "water": 2
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -91,10 +91,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2,
+          "water": 1,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -114,7 +114,7 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 4
+        "condition": 3
       },
       "field/農田": {
         "kind": "農田",
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2359,
-    "deficits": 4669
+    "turn": 2362,
+    "deficits": 4678
   },
   "history": [
     {
@@ -26182,6 +26182,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 2360,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 575,
+      "say": "我先休息恢復體力，再把身上的水集中存放。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2361,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 576,
+      "say": "河岸缺糧，我先採集食物補充儲備。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 2362,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 576,
+      "say": "我先採集飲水，補充河岸儲備。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -26269,18 +26302,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795622131.795509,
+    "updated": 1795622169.558922,
     "reason": ""
   },
-  "seconds": 34482.03935239589,
+  "seconds": 34519.793118604866,
   "council": {
-    "food": 1,
+    "food": 2,
     "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795622132.2908878,
+  "snapshotAt": 1795622170.01296,
   "recipes": {
     "茅舍": {
       "sites": [
