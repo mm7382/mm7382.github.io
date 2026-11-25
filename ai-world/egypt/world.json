@@ -9,7 +9,7 @@
         "bag": {
           "food": 1
         },
-        "energy": 1,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,7 +24,7 @@
         "bag": {
           "water": 1
         },
-        "energy": 2,
+        "energy": 6,
         "research": 0,
         "survey": [
           "terrace",
@@ -37,9 +37,9 @@
         "age": 39,
         "site": "terrace",
         "bag": {
-          "food": 0
+          "food": 2
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -95,7 +95,7 @@
         ],
         "source": {},
         "stock": {
-          "food": 5,
+          "food": 3,
           "water": 5,
           "reed": 2,
           "stone": 3
@@ -174,7 +174,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 68,
+    "turn": 71,
     "deficits": 51
   },
   "history": [
@@ -925,6 +925,39 @@
       "kind": "",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": 69,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 17,
+      "say": "我從營地帶些糧食到平原，和帕伊一起準備播種。",
+      "action": "take",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 70,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 17,
+      "say": "我先歇息，恢復體力後再協助大家播種。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 71,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 17,
+      "say": "我先歇息恢復體力，再把水送到平原。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -1011,13 +1044,13 @@
     }
   ],
   "status": {
-    "phase": "deciding",
+    "phase": "waiting",
     "reason": "",
-    "updated": 1795575934.652351
+    "updated": 1795575968.664014
   },
-  "seconds": 969.9765290840296,
+  "seconds": 1009.0313622510002,
   "season": "洪水",
-  "snapshotAt": 1795575934.6642659,
+  "snapshotAt": 1795575968.689963,
   "recipes": {
     "茅舍": {
       "sites": [
