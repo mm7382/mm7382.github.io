@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 65,
+    "day": 66,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 1,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -84,8 +84,8 @@
         ],
         "source": {},
         "stock": {
-          "water": 1,
-          "food": 4
+          "water": 0,
+          "food": 0
         }
       },
       "terrace": {
@@ -149,10 +149,10 @@
       "field/農田": {
         "kind": "農田",
         "site": "field",
-        "stage": 1,
+        "stage": 2,
         "work": 0,
-        "complete": false,
-        "condition": 0
+        "complete": true,
+        "condition": 11
       }
     },
     "needs": {
@@ -181,8 +181,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 274,
-    "deficits": 215
+    "turn": 276,
+    "deficits": 218
   },
   "history": [
     {
@@ -3198,6 +3198,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 275,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 65,
+      "say": "播種的物資已備妥，我來完成農田。",
+      "action": "build",
+      "kind": "農田",
+      "ok": true,
+      "message": "已完工"
+    },
+    {
+      "id": 276,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 66,
+      "say": "農田已經完工，我先休息恢復體力。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -3280,17 +3302,17 @@
       },
       "asset": {},
       "implementation": "已支援",
-      "construction": "施工中"
+      "construction": "完工"
     }
   ],
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795578848.272222
+    "updated": 1795578884.3039732
   },
-  "seconds": 3882.362578162196,
+  "seconds": 3918.4053247041884,
   "season": "乾季",
-  "snapshotAt": 1795578848.324991,
+  "snapshotAt": 1795578884.381054,
   "recipes": {
     "茅舍": {
       "sites": [
