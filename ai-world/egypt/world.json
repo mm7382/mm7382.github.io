@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 35,
+    "day": 38,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 0,
-          "water": 1
+          "food": 1,
+          "water": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,9 +24,9 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 1
+          "food": 0
         },
-        "energy": 9,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -37,12 +37,12 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "bank",
+        "site": "field",
         "bag": {
-          "food": 0,
+          "food": 1,
           "water": 2
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -67,7 +67,10 @@
           "reed": 48,
           "food": 24
         },
-        "stock": {}
+        "stock": {
+          "food": 0,
+          "water": 1
+        }
       },
       "field": {
         "name": "氾濫平原",
@@ -177,8 +180,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 144,
-    "deficits": 114
+    "turn": 160,
+    "deficits": 115
   },
   "history": [
     {
@@ -1764,6 +1767,182 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 145,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 35,
+      "say": "我先採些食物，水退後和大家帶到田邊播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 146,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 35,
+      "say": "我先在河岸採些水，備好播種和路上所需。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 147,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 35,
+      "say": "我再採些食物，等洪水退去後帶到田邊播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 148,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 36,
+      "say": "我先休息恢復體力，等洪水退去再把播種物資送到田邊。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 149,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 36,
+      "say": "我試著把水送到田邊，準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "淹水阻斷步行"
+    },
+    {
+      "id": 150,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 36,
+      "say": "洪水還擋著路，我先歇息，保存體力。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 151,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 36,
+      "say": "田路仍被洪水阻斷，我先採水備用。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 152,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 36,
+      "say": "洪水還沒退，我先採些食物，補充路上的糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 153,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 37,
+      "say": "洪水還未退，我先採些食物，留待通往田地的路恢復。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 154,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 37,
+      "say": "我再採些食物，等路能通行時帶去田裡播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 155,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 37,
+      "say": "我先取些水，備好播種和路上所需。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 156,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 38,
+      "say": "我先採些水，準備等路通了帶去田裡播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 157,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 38,
+      "say": "我先在河岸存些食物，讓大家有備用糧。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 food"
+    },
+    {
+      "id": 158,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 38,
+      "say": "我先把水放進河岸的共享庫存，留待播種使用。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 water"
+    },
+    {
+      "id": 159,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 38,
+      "say": "我再試著前往田地，若路已通就把播種物資送過去。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 160,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 38,
+      "say": "納赫特已經抵達田地，我帶些食物過去幫忙播種。",
+      "action": "take",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 food"
     }
   ],
   "needs": [
@@ -1852,11 +2031,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795577016.386695
+    "updated": 1795577240.855602
   },
-  "seconds": 2051.225771957048,
-  "season": "洪水",
-  "snapshotAt": 1795577016.4487731,
+  "seconds": 2275.7512531220564,
+  "season": "退水",
+  "snapshotAt": 1795577240.923266,
   "recipes": {
     "茅舍": {
       "sites": [
