@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 63,
+    "day": 64,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 0,
-          "water": 5
+          "water": 4
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -39,10 +39,10 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 6,
+          "food": 5,
           "water": 0
         },
-        "energy": 1,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -65,7 +65,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 18
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -180,8 +180,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 266,
-    "deficits": 209
+    "turn": 268,
+    "deficits": 213
   },
   "history": [
     {
@@ -3109,6 +3109,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 267,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 64,
+      "say": "我先休息恢復體力，再把食物送到田裡。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 268,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 64,
+      "say": "我把水送到田裡，準備完成播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
     }
   ],
   "needs": [
@@ -3195,13 +3217,13 @@
     }
   ],
   "status": {
-    "phase": "waiting",
+    "phase": "deciding",
     "reason": "",
-    "updated": 1795578730.204809
+    "updated": 1795578762.7215428
   },
-  "seconds": 3769.4900011211867,
+  "seconds": 3796.8868519121606,
   "season": "乾季",
-  "snapshotAt": 1795578730.267008,
+  "snapshotAt": 1795578762.811334,
   "recipes": {
     "茅舍": {
       "sites": [
