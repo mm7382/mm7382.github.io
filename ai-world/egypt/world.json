@@ -44,7 +44,7 @@
           "water": 1,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -57,12 +57,12 @@
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3386,
+    "turn": 3389,
     "deficits": 6498
   },
   "history": [
@@ -37479,6 +37479,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 3387,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 794,
+      "say": "我先休息恢復體力，接著協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3388,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 794,
+      "say": "我去農田照料作物，協助恢復食物供應。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 3389,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 794,
+      "say": "我先休息恢復體力，再去修繕茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -37566,10 +37599,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795635269.772136,
+    "updated": 1795635309.4196749,
     "reason": ""
   },
-  "seconds": 47599.686448600056,
+  "seconds": 47639.18973368307,
   "council": {
     "food": 2,
     "water": 1,
@@ -37577,7 +37610,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795635270.394924,
+  "snapshotAt": 1795635310.081901,
   "recipes": {
     "茅舍": {
       "sites": [
