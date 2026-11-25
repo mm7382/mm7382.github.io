@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 377,
+    "day": 378,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -38,13 +38,13 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1513,
-    "deficits": 2941
+    "turn": 1516,
+    "deficits": 2953
   },
   "history": [
     {
@@ -16876,6 +16876,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1514,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 377,
+      "say": "我把剛採集的食物放入河岸庫存，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "材料或補給不足"
+    },
+    {
+      "id": 1515,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 377,
+      "say": "我帶蘆葦回營地，幫忙修復茅舍。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 1516,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 378,
+      "say": "我把剛採的水存入河岸，供大家就近取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "材料或補給不足"
     }
   ],
   "needs": [
@@ -16963,10 +16996,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795610203.033005,
+    "updated": 1795610243.947793,
     "reason": ""
   },
-  "seconds": 22584.030296327226,
+  "seconds": 22624.86659970123,
   "council": {
     "food": 0,
     "water": 0,
@@ -16974,7 +17007,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795610203.385059,
+  "snapshotAt": 1795610244.240681,
   "recipes": {
     "茅舍": {
       "sites": [
