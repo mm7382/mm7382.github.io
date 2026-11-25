@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 39,
+    "day": 40,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 2,
+          "food": 1,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -21,12 +21,12 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "bank",
+        "site": "field",
         "bag": {
-          "water": 2,
+          "water": 1,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -63,9 +63,9 @@
           "terrace"
         ],
         "source": {
-          "water": 158,
+          "water": 160,
           "reed": 48,
-          "food": 22
+          "food": 24
         },
         "stock": {
           "food": 0,
@@ -84,7 +84,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 1
+          "water": 0
         }
       },
       "terrace": {
@@ -180,8 +180,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 163,
-    "deficits": 117
+    "turn": 166,
+    "deficits": 120
   },
   "history": [
     {
@@ -1976,6 +1976,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 164,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 39,
+      "say": "我帶些水去田邊，協助大家準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 165,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 40,
+      "say": "田邊已有水，我去河岸取食物，帶回來供播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 166,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 40,
+      "say": "我把食物帶到田邊，和大家一起準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -2062,13 +2095,13 @@
     }
   ],
   "status": {
-    "phase": "deciding",
+    "phase": "waiting",
     "reason": "",
-    "updated": 1795577282.102321
+    "updated": 1795577318.792568
   },
-  "seconds": 2316.9704771640536,
+  "seconds": 2358.7120067470532,
   "season": "退水",
-  "snapshotAt": 1795577282.155317,
+  "snapshotAt": 1795577318.836938,
   "recipes": {
     "茅舍": {
       "sites": [
