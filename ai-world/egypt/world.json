@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 52,
+    "day": 53,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 7,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,9 +24,9 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 2
+          "food": 1
         },
-        "energy": 2,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,9 +40,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2
+          "water": 1
         },
-        "energy": 4,
+        "energy": 7,
         "research": 0,
         "survey": [
           "terrace",
@@ -63,9 +63,9 @@
           "terrace"
         ],
         "source": {
-          "water": 158,
+          "water": 160,
           "reed": 48,
-          "food": 22
+          "food": 24
         },
         "stock": {
           "food": 0,
@@ -180,8 +180,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 219,
-    "deficits": 165
+    "turn": 222,
+    "deficits": 168
   },
   "history": [
     {
@@ -2592,6 +2592,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 220,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 53,
+      "say": "洪水還擋著路，我先休息保存體力，等能通行再把食物送到田裡。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 221,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 53,
+      "say": "我先休息恢復體力，等洪水退去再把食物送到田裡。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 222,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 53,
+      "say": "洪水尚未退去，我先休息，保存體力，等路通後再把水送去田裡。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -2680,11 +2713,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795578077.1403918
+    "updated": 1795578120.2905369
   },
-  "seconds": 3111.6048010801314,
+  "seconds": 3154.845551290142,
   "season": "洪水",
-  "snapshotAt": 1795578077.2188811,
+  "snapshotAt": 1795578120.369719,
   "recipes": {
     "茅舍": {
       "sites": [
