@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -59,10 +59,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,11 +90,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -114,10 +114,10 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
-          "food": 0,
+          "food": 1,
           "water": 0
         }
       },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3200,
+    "turn": 3204,
     "deficits": 6183
   },
   "history": [
@@ -35433,6 +35433,50 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 3201,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 755,
+      "say": "我先休息恢復體力，接著協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3202,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 755,
+      "say": "河岸還缺口糧，我先採集食物。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 3203,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 755,
+      "say": "我先休息恢復體力，準備修繕茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3204,
+      "name": "塞努",
+      "actor": 5,
+      "day": 755,
+      "say": "我把身上的食物存到河岸，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 food"
     }
   ],
   "needs": [
@@ -35519,19 +35563,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795632911.910603,
+    "phase": "waiting",
+    "updated": 1795632954.076407,
     "reason": ""
   },
-  "seconds": 45240.2338674381,
+  "seconds": 45289.090533105074,
   "council": {
-    "food": 2,
+    "food": 4,
     "water": 2,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795632912.514965,
+  "snapshotAt": 1795632954.666403,
   "recipes": {
     "茅舍": {
       "sites": [
