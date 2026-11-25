@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 185,
+    "day": 186,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -75,7 +75,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 725,
-    "deficits": 1188
+    "turn": 727,
+    "deficits": 1200
   },
   "history": [
     {
@@ -8204,6 +8204,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 726,
+      "name": "塞努",
+      "actor": 5,
+      "day": 185,
+      "say": "我先休息恢復體力，準備採集飲水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 727,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 186,
+      "say": "我先休息恢復體力，才能採集食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8290,11 +8312,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795598647.86879,
+    "phase": "waiting",
+    "updated": 1795598700.930162,
     "reason": ""
   },
-  "seconds": 11040.850792960176,
+  "seconds": 11100.231082127168,
   "council": {
     "food": 0,
     "water": 0,
@@ -8302,7 +8324,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795598648.029243,
+  "snapshotAt": 1795598701.088139,
   "recipes": {
     "茅舍": {
       "sites": [
