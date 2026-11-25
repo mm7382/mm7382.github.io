@@ -24,10 +24,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 2,
           "food": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 24
         },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2575,
+    "turn": 2578,
     "deficits": 5069
   },
   "history": [
@@ -28558,6 +28558,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 2576,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 622,
+      "say": "河岸缺水，我先採水補充飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 2577,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 622,
+      "say": "我先休息恢復體力，接著修繕營地的茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2578,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 622,
+      "say": "我先把身上的食物存入河岸庫存，供大家就近取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -28645,18 +28678,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795624921.239021,
+    "updated": 1795624959.150445,
     "reason": ""
   },
-  "seconds": 37272.777799809526,
+  "seconds": 37310.639911184524,
   "council": {
     "food": 1,
-    "water": 1,
+    "water": 3,
     "shelter": false,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795624921.7933729,
+  "snapshotAt": 1795624959.671051,
   "recipes": {
     "茅舍": {
       "sites": [
