@@ -5,13 +5,13 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -90,11 +90,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -114,7 +114,7 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 22
+          "food": 20
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1817,
+    "turn": 1819,
     "deficits": 3613
   },
   "history": [
@@ -20220,6 +20220,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 1818,
+      "name": "塞努",
+      "actor": 5,
+      "day": 450,
+      "say": "我先採集食物，補充聚落的口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 1819,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 450,
+      "say": "我帶蘆葦回河階營地，準備修繕茅舍。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -20306,19 +20328,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795614589.808746,
+    "phase": "deciding",
+    "updated": 1795614624.823709,
     "reason": ""
   },
-  "seconds": 26963.21402794213,
+  "seconds": 26991.38868752611,
   "council": {
-    "food": 3,
+    "food": 5,
     "water": 3,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795614590.159719,
+  "snapshotAt": 1795614625.20914,
   "recipes": {
     "茅舍": {
       "sites": [
