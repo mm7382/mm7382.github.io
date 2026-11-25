@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 221,
+    "day": 222,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,7 +40,7 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2
+          "water": 1
         },
         "energy": 0,
         "research": 0,
@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -76,7 +76,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -89,9 +89,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 1
+          "water": 0
         },
-        "energy": 0,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -109,7 +109,7 @@
           "terrace"
         ],
         "source": {
-          "water": 158,
+          "water": 160,
           "reed": 48,
           "food": 24
         },
@@ -227,8 +227,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 845,
-    "deficits": 1581
+    "turn": 847,
+    "deficits": 1590
   },
   "history": [
     {
@@ -9525,6 +9525,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 reed"
+    },
+    {
+      "id": 846,
+      "name": "塞努",
+      "actor": 5,
+      "day": 221,
+      "say": "我先休息恢復體力，再把身上的水存入河岸，讓大家取用。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 847,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 222,
+      "say": "我先休息恢復體力，再把食物存到河岸，讓大家取用。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -9611,19 +9633,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795600835.0325189,
+    "phase": "deciding",
+    "updated": 1795600871.4932868,
     "reason": ""
   },
-  "seconds": 13232.226181251142,
+  "seconds": 13262.184986792156,
   "council": {
-    "food": 1,
-    "water": 3,
+    "food": 0,
+    "water": 1,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795600835.206416,
+  "snapshotAt": 1795600871.678408,
   "recipes": {
     "茅舍": {
       "sites": [
