@@ -7894,9 +7894,9 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795593744.524765,
-    "reason": ""
+    "phase": "attention",
+    "updated": 1795593924.73212,
+    "reason": "居民的 AI 回覆逾時，這一輪尚未計入。"
   },
   "seconds": 10052.476758832141,
   "council": {
@@ -7906,7 +7906,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795593744.6825962,
+  "snapshotAt": 1795593924.8832839,
   "recipes": {
     "茅舍": {
       "sites": [
