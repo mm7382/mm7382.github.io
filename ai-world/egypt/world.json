@@ -5,13 +5,13 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,10 +24,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 2,
           "food": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 24
         },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4590,
+    "turn": 4592,
     "deficits": 8737
   },
   "history": [
@@ -50723,6 +50723,28 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 4591,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1058,
+      "say": "我把蘆葦帶回營地，準備修繕茅舍。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 4592,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1058,
+      "say": "我在河岸採集飲水，補充聚落急需的水。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -50809,19 +50831,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795651129.717865,
+    "phase": "deciding",
+    "updated": 1795651165.698396,
     "reason": ""
   },
-  "seconds": 63425.690310130856,
+  "seconds": 63453.62085625689,
   "council": {
     "food": 0,
-    "water": 0,
+    "water": 2,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795651130.568008,
+  "snapshotAt": 1795651166.599473,
   "recipes": {
     "茅舍": {
       "sites": [
