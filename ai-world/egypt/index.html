@@ -17,13 +17,33 @@
 #map.dusk{--terrain-light:brightness(.71) saturate(.95);--sky-light:#d48372;--ground-light:#a0829d}
 #map.night{--terrain-light:grayscale(.85) brightness(.41) contrast(.94);--sky-light:#425c94;--ground-light:#627497}
 @media(prefers-reduced-motion:reduce){#layer::before,#layer>img{transition:none}}
+
+:root{color-scheme:light;--bg:#f5efdf;--bar:#ede3cf;--card:#fffbf1;--edge:#ad9971;--text:#292821;--muted:#5c5548;--accent:#854128;--night:0}
+:root:has(#map.dawn){--bg:#ede4e6;--bar:#e1d7df;--accent:#704658;--night:.24}
+:root:has(#map.morning){--bar:#f5e9cf}
+:root:has(#map.noon){--bg:#faf6eb;--bar:#f2e9d8;--accent:#25516b}
+:root:has(#map.afternoon){--bg:#f4e4cc;--bar:#ecd4ad;--accent:#894525}
+:root:has(#map.dusk){--bg:#332a36;--bar:#463342;--card:#403440;--edge:#a18476;--text:#fff1dc;--muted:#e1c9be;--accent:#ffce91;--night:.7;color-scheme:dark}
+:root:has(#map.night){--bg:#0f1a2b;--bar:#172640;--card:#192a42;--edge:#766a50;--text:#fff0cf;--muted:#d1c9b8;--accent:#f5ce87;--night:1;color-scheme:dark}
+body,header,article,.hero{transition:background-color 1.4s,color 1.4s}
+.hero{position:relative;isolation:isolate;overflow:hidden;align-items:center;background:var(--bar);padding:18px 22px 18px clamp(110px,20vw,310px);border-block:1px solid var(--edge);margin-top:12px}
+.hero::before,.hero::after{content:"";position:absolute;z-index:-1;inset:0 auto 0 0;width:24%;background:url(assets/marsh-fresco.webp?v=fed0c4c5dbdf) left center/auto 100% no-repeat;mask-image:linear-gradient(90deg,#000 55%,transparent);pointer-events:none}
+.hero::after{background-image:url(assets/star-ceiling.webp?v=f2a9382998f0);opacity:var(--night);transition:opacity 1.4s}
+.hero h1{font-size:clamp(34px,4vw,64px);letter-spacing:.09em;line-height:1.1}.hero summary{color:var(--accent)}.hero details[open] p{margin-top:10px}
+.metrics{gap:0}.metrics span{font-size:13px}.metrics b{font-size:clamp(16px,1.6vw,24px)}
+#map,article,.person{border-radius:3px}#map{border-block:3px double var(--edge)}.person,button,input,select,textarea{background:var(--bar)}.actions button{background:var(--text);color:var(--bg)}
+.tools,.mapnote{background:#182534eb;color:#fff3dc}.row{border-color:var(--edge)}.person img,.plot-images{background:#e7dfcb}.row strong{color:var(--voice-day)!important}
+:root:has(#map:is(.dusk,.night)) .row strong{color:var(--voice-night)!important}
+h2{font-family:Georgia,"Songti TC",serif}button:focus-visible,a:focus-visible,summary:focus-visible{outline-color:var(--accent)}
+@media(max-width:830px){.hero{display:grid;gap:8px;padding-left:clamp(65px,19vw,155px)}.metrics{margin:0}.hero::before,.hero::after{width:21%}}
+@media(prefers-reduced-motion:reduce){body,header,article,.hero,.hero::after{transition:none}}
 </style>
 <header><div><strong>AIWorldLab</strong><small>觀察一個世界慢慢長大</small></div><div class="actions"><span id="phase">讀取世界狀態</span><button id="pause">暫停觀看</button></div></header>
 <nav class="breadcrumbs" aria-label="網站導覽">
   <a href="https://mm7382.github.io/pec-ai-agent-training/index.html?lang=zh-Hant" target="_top">個人網站首頁</a><span aria-hidden="true">›</span>
   <a href="https://mm7382.github.io/ai-world/" target="_top">AIWorldLab 總覽</a><span aria-hidden="true">›</span>
   <span aria-current="page">古埃及 · 尼羅河聚落</span>
-</nav><main><section class="hero"><div><h1>古埃及</h1><p>這座模擬聚落位於尼羅河岸。氾濫期間，河水阻斷通往平原的道路；水位回落後，居民便能下田耕作。地勢較高的河階用於居住與儲糧，沙漠邊緣的石灰岩露頭則提供建材。</p><p>當住所可用、飲水與存糧足以支應全村兩天，居民便可商議大型工程。從金字塔的基址、神廟的柱廊，到就地鑿刻的獅身人面像，每項提案都涉及選址、材料與人力分配。</p></div><div class="metrics"><b id="worldTime" title="從世界建立當天起算，每月 30 天，每年 12 個月"></b><span id="river"></span><span id="real"></span><span>現實 1 分鐘＝世界 1 天</span><span class="badge" id="count"></span></div></section>
+</nav><main><section class="hero"><div><h1>古埃及</h1><details><summary>尼羅河聚落 · 世界背景</summary><p>這座模擬聚落位於尼羅河岸。氾濫期間，河水阻斷通往平原的道路；水位回落後，居民便能下田耕作。地勢較高的河階用於居住與儲糧，沙漠邊緣的石灰岩露頭則提供建材。</p><p>當住所可用、飲水與存糧足以支應全村兩天，居民便可商議大型工程。從金字塔的基址、神廟的柱廊，到就地鑿刻的獅身人面像，每項提案都涉及選址、材料與人力分配。</p></details></div><div class="metrics"><b id="worldTime" title="從世界建立當天起算，每月 30 天，每年 12 個月"></b><span id="daylight"></span><span id="river"></span><span id="real"></span><span>現實 1 分鐘＝世界 1 天</span><span class="badge" id="count"></span></div></section>
 <div id="visitors" hidden><strong>個人網站 · 近 7 天</strong> <span id="trafficTotals"></span></div>
 <div id="map" aria-label="尼羅河聚落地圖"><div id="layer"></div><div class="mapnote" id="activity"></div><div class="tools"><button id="plus" aria-label="放大">＋</button><button id="zoom" aria-label="重設視角">1×</button><button id="minus" aria-label="縮小">−</button><button id="overview">全景</button></div></div>
 
@@ -62,7 +82,9 @@ const ink=['#71501c','#225c70','#624080','#365d32','#843e36','#793952'];
 function recordRow(h){
  const row=node('div');row.className='row';
  row.append(node('small','聚落 · 第 '+h.day+' 天 · #'+h.id),node('strong',h.name+(h.say?'　'+h.say:'')),node('span',(h.ok?'行動：':'未完成：')+h.message));
- row.children[1].style.color=voices[h.actor%voices.length];
+ const line=row.children[1];
+ line.style.color=voices[h.actor%voices.length];
+ line.style.cssText='--voice-night:'+voices[h.actor%voices.length]+';--voice-day:'+ink[h.actor%ink.length]+';color:'+voices[h.actor%voices.length];
  return row;
 }
 function listRecords(id,rows,empty){
@@ -145,6 +167,7 @@ function worldDate(seconds){
  const year=1+Math.floor(day/360),month=1+Math.floor(day%360/30);
  return '模擬時間　第 '+year+' 年 '+month+' 月 '+(day%30+1)+' 日 '+String(Math.floor(minute/60)).padStart(2,'0')+':'+String(minute%60).padStart(2,'0');
 }
+const periodNames={dawn:'黎明',morning:'上午',noon:'正午',afternoon:'午後',dusk:'傍晚',night:'夜晚'};
 function scenePeriod(seconds){
  const hour=(seconds%60)*24/60;
  if(hour<5 || hour>=19)return 'night';
@@ -154,7 +177,7 @@ function scenePeriod(seconds){
  if(hour<17)return 'afternoon';
  return 'dusk';
 }
-function clock(){if(!data)return;const now=Date.now()/1000,shown=paused?pausedAt:now,age=shown-data.status.updated,active=['deciding','waiting'].includes(data.status.phase),fresh=age<90;el('phase').textContent=paused?'觀看已暫停':active?(fresh?'最近回報運行中':'更新中斷，顯示快照'):({attention:'居民決策已暫停',reconnecting:'居民服務重新連線中',ready:'已就緒',idle:'已暫停',stopped:'已停止'}[data.status.phase]||data.status.phase);const sec=data.seconds+(active&&fresh?Math.max(0,shown-data.snapshotAt):0);map.className=scenePeriod(sec);el('worldTime').textContent=worldDate(sec);el('river').textContent='尼羅河 · '+({'退水':'洪水消退期','乾季':'乾季','洪水':'氾濫期'}[data.season]||data.season);el('real').textContent='台灣 '+ts(now)}
+function clock(){if(!data)return;const now=Date.now()/1000,shown=paused?pausedAt:now,age=shown-data.status.updated,active=['deciding','waiting'].includes(data.status.phase),fresh=age<90;el('phase').textContent=paused?'觀看已暫停':active?(fresh?'最近回報運行中':'更新中斷，顯示快照'):({attention:'居民決策已暫停',reconnecting:'居民服務重新連線中',ready:'已就緒',idle:'已暫停',stopped:'已停止'}[data.status.phase]||data.status.phase);const sec=data.seconds+(active&&fresh?Math.max(0,shown-data.snapshotAt):0);map.className=scenePeriod(sec);el('daylight').textContent=periodNames[map.className];el('worldTime').textContent=worldDate(sec);el('river').textContent='尼羅河 · '+({'退水':'洪水消退期','乾季':'乾季','洪水':'氾濫期'}[data.season]||data.season);el('real').textContent='台灣 '+ts(now)}
 el('actor').onchange=el('outcome').onchange=el('search').oninput=history;
 function acceptSnapshot(snapshot){
  if(!data || (!paused && snapshot.snapshotAt>=data.snapshotAt)){data=snapshot;render()}
