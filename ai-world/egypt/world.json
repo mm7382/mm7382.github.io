@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 189,
+    "day": 190,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 735,
-    "deficits": 1236
+    "turn": 736,
+    "deficits": 1248
   },
   "history": [
     {
@@ -8314,6 +8314,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 736,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 190,
+      "say": "我先休息恢復體力，接著採集食物補充公庫。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8401,10 +8412,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795598938.268651,
+    "updated": 1795598952.763252,
     "reason": ""
   },
-  "seconds": 11330.695835958177,
+  "seconds": 11345.29939783318,
   "council": {
     "food": 0,
     "water": 0,
@@ -8412,7 +8423,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795598938.435332,
+  "snapshotAt": 1795598952.974262,
   "recipes": {
     "茅舍": {
       "sites": [
