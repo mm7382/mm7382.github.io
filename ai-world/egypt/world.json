@@ -1,15 +1,15 @@
 {
   "state": {
-    "day": 18,
+    "day": 19,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 0
+          "food": 2
         },
-        "energy": 3,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -22,9 +22,9 @@
         "age": 31,
         "site": "terrace",
         "bag": {
-          "water": 0
+          "water": 1
         },
-        "energy": 6,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -37,9 +37,9 @@
         "age": 39,
         "site": "terrace",
         "bag": {
-          "food": 1
+          "food": 0
         },
-        "energy": 3,
+        "energy": 7,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {}
       },
@@ -95,8 +95,8 @@
         ],
         "source": {},
         "stock": {
-          "food": 1,
-          "water": 3,
+          "food": 0,
+          "water": 0,
           "reed": 2,
           "stone": 3
         }
@@ -174,8 +174,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 73,
-    "deficits": 51
+    "turn": 76,
+    "deficits": 53
   },
   "history": [
     {
@@ -980,6 +980,39 @@
       "kind": "",
       "ok": true,
       "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 74,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 18,
+      "say": "洪水仍阻擋前往平原，我先把營地的水備好，等水退後再送去播種。",
+      "action": "take",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 75,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 18,
+      "say": "洪水尚未退去，我先歇息，保留體力與食物，等路通後再去平原。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 76,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 19,
+      "say": "我先採些食物，帶回營地補充糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -1068,11 +1101,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795576001.475911
+    "updated": 1795576044.944659
   },
-  "seconds": 1036.793578584009,
-  "season": "洪水",
-  "snapshotAt": 1795576001.513607,
+  "seconds": 1080.2531184590189,
+  "season": "退水",
+  "snapshotAt": 1795576044.9813042,
   "recipes": {
     "茅舍": {
       "sites": [
