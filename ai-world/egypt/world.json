@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -72,13 +72,13 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2828,
+    "turn": 2831,
     "deficits": 5524
   },
   "history": [
@@ -31341,6 +31341,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 2829,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 676,
+      "say": "我先休息恢復體力，再協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2830,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 676,
+      "say": "先採集河水，補充農田附近的飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "材料或補給不足"
+    },
+    {
+      "id": 2831,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 676,
+      "say": "我把蘆葦送到營地，準備修繕茅舍。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -31427,11 +31460,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795628163.10245,
+    "phase": "deciding",
+    "updated": 1795628206.982829,
     "reason": ""
   },
-  "seconds": 40508.33604647542,
+  "seconds": 40545.416282017424,
   "council": {
     "food": 1,
     "water": 0,
@@ -31439,7 +31472,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795628163.631108,
+  "snapshotAt": 1795628207.567826,
   "recipes": {
     "茅舍": {
       "sites": [
