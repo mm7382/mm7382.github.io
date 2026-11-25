@@ -1,43 +1,10 @@
 {
   "state": {
-    "day": 747,
+    "day": 748,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
-        "bag": {
-          "food": 0,
-          "water": 0,
-          "reed": 0
-        },
-        "energy": 4,
-        "research": 0,
-        "survey": [
-          "terrace",
-          "field"
-        ],
-        "goal": ""
-      },
-      {
-        "name": "帕伊",
-        "age": 31,
-        "site": "bank",
-        "bag": {
-          "water": 0,
-          "food": 2
-        },
-        "energy": 1,
-        "research": 0,
-        "survey": [
-          "terrace",
-          "field"
-        ],
-        "goal": ""
-      },
-      {
-        "name": "納赫特",
-        "age": 39,
         "site": "bank",
         "bag": {
           "food": 0,
@@ -53,16 +20,49 @@
         "goal": ""
       },
       {
+        "name": "帕伊",
+        "age": 31,
+        "site": "bank",
+        "bag": {
+          "water": 0,
+          "food": 1
+        },
+        "energy": 0,
+        "research": 0,
+        "survey": [
+          "terrace",
+          "field"
+        ],
+        "goal": ""
+      },
+      {
+        "name": "納赫特",
+        "age": 39,
+        "site": "bank",
+        "bag": {
+          "food": 0,
+          "water": 1,
+          "reed": 0
+        },
+        "energy": 0,
+        "research": 0,
+        "survey": [
+          "terrace",
+          "field"
+        ],
+        "goal": ""
+      },
+      {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 1,
           "water": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -75,10 +75,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -91,10 +91,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 1,
+          "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,9 +112,9 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
-          "food": 22
+          "food": 24
         },
         "stock": {
           "food": 0,
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 7
+        "condition": 6
       },
       "field/農田": {
         "kind": "農田",
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3164,
-    "deficits": 6122
+    "turn": 3167,
+    "deficits": 6130
   },
   "history": [
     {
@@ -35037,6 +35037,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 3165,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 747,
+      "say": "河岸缺飲水，我先取水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 3166,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 747,
+      "say": "我先採集食物，補充聚落口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 3167,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 748,
+      "say": "我先到河岸採集飲水，補充聚落所需。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -35124,18 +35157,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795632446.848808,
+    "updated": 1795632487.495614,
     "reason": ""
   },
-  "seconds": 44782.89777819111,
+  "seconds": 44823.447576982086,
   "council": {
     "food": 2,
-    "water": 1,
+    "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795632447.4915671,
+  "snapshotAt": 1795632488.080339,
   "recipes": {
     "茅舍": {
       "sites": [
