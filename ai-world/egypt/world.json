@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 443,
+    "day": 444,
     "actors": [
       {
         "name": "梅莉",
@@ -8,10 +8,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 1,
+          "water": 0,
           "reed": 2
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -25,7 +25,7 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 1
+          "food": 0
         },
         "energy": 0,
         "research": 0,
@@ -38,13 +38,13 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 6,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 4
+        "condition": 3
       },
       "field/農田": {
         "kind": "農田",
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1789,
-    "deficits": 3547
+    "turn": 1791,
+    "deficits": 3557
   },
   "history": [
     {
@@ -19912,6 +19912,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1790,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 444,
+      "say": "我把身上的食物存到河岸，供大家就近取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 1791,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 444,
+      "say": "營地缺少食水，我先到河岸補充物資。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
     }
   ],
   "needs": [
@@ -19998,19 +20020,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795614198.299867,
+    "phase": "deciding",
+    "updated": 1795614233.995807,
     "reason": ""
   },
-  "seconds": 26572.312733735103,
+  "seconds": 26601.339090276102,
   "council": {
-    "food": 1,
-    "water": 1,
+    "food": 0,
+    "water": 0,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795614198.649323,
+  "snapshotAt": 1795614234.350247,
   "recipes": {
     "茅舍": {
       "sites": [
