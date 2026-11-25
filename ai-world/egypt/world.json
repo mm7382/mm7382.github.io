@@ -41,10 +41,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 24
         },
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2809,
+    "turn": 2812,
     "deficits": 5487
   },
   "history": [
@@ -31132,6 +31132,39 @@
       "kind": "",
       "ok": false,
       "message": "材料或補給不足"
+    },
+    {
+      "id": 2810,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 672,
+      "say": "我把身上的水存到河岸，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 2811,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 672,
+      "say": "河岸缺水，我先採水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 2812,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 672,
+      "say": "我先休息恢復體力，再繼續照料農田。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -31218,19 +31251,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795627925.9344199,
+    "phase": "deciding",
+    "updated": 1795627970.0516212,
     "reason": ""
   },
-  "seconds": 40271.68432793347,
+  "seconds": 40309.03501243348,
   "council": {
     "food": 1,
-    "water": 1,
+    "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795627926.671306,
+  "snapshotAt": 1795627970.6083431,
   "recipes": {
     "茅舍": {
       "sites": [
