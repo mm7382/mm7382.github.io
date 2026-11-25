@@ -15,10 +15,10 @@
   const live=recent&&runStatus.running&&!['stopped','stopping','needs-attention','retrying','checking'].includes(runStatus.phase);
   if(live)frozenAt=null;else if(frozenAt===null)frozenAt=Date.parse(runStatus?.updatedAt||lastSavedAt||clockState.clock.epoch);
   const value=live?AtlantisClock.reading(clockState.clock,now):{day:clockState.day,hour:0,minute:0};
-  worldTime.textContent='第 '+value.day+' 天'+(live?' '+pad(value.hour)+':'+pad(value.minute):'（已保存）');
+  worldTime.textContent=AtlantisClock.elapsedLabel(value)+(live?'':'（已保存）');
   replyCount.textContent='實際 AI 回覆：'+replies;replyCount.title='聚落階段已保存且通過驗證的 AI 回覆數，不含尚未完成的請求。';
   clockNote.textContent=live?'':runStatus?.phase==='stopped'?'世界已停止':runStatus?.phase==='stopping'?'正在停止':'時間暫停更新，等待確認運行狀態';
-  worldTime.title='世界顯示時鐘；目前已結算至第 '+clockState.day+' 天。';
+  worldTime.title='模擬曆：每月30天、每年12個月，第1天為經過0天；目前已結算至第 '+clockState.day+' 天。';
  }
  updateClock();setInterval(updateClock,250);
  const label=panel.querySelector('#run-state'),fresh=panel.querySelector('#fresh-world'),stop=panel.querySelector('#stop-world');

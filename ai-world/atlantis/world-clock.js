@@ -5,5 +5,6 @@
   const minutes=Math.floor(elapsed/(clock.realSecondsPerDay*1000)*1440);
   return {day:clock.startDay+Math.floor(minutes/1440),hour:Math.floor(minutes%1440/60),minute:minutes%60};
  }
- const api={reading};if(typeof module!=='undefined')module.exports=api;else root.AtlantisClock=api;
+ function elapsedLabel(value){const days=Math.max(0,value.day-1);return '已過 '+Math.floor(days/360)+' 年 '+Math.floor(days%360/30)+' 個月 '+days%30+' 天 '+value.hour+' 小時 '+value.minute+' 分鐘';}
+ const api={reading,elapsedLabel};if(typeof module!=='undefined')module.exports=api;else root.AtlantisClock=api;
 })(globalThis);
