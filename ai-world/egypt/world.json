@@ -8059,8 +8059,8 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795598027.303387,
+    "phase": "deciding",
+    "updated": 1795598033.856538,
     "reason": ""
   },
   "seconds": 10427.227270874137,
@@ -8071,7 +8071,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795598027.45694,
+  "snapshotAt": 1795598034.0387242,
   "recipes": {
     "茅舍": {
       "sites": [
