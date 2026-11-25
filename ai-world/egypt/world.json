@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 801,
+    "day": 802,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,10 +24,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 2,
           "food": 0
         },
-        "energy": 3,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 24
         },
@@ -153,7 +153,7 @@
         "stock": {
           "food": 0,
           "water": 0,
-          "reed": 2,
+          "reed": 1,
           "stone": 3
         }
       },
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 0
+        "condition": 11
       },
       "field/農田": {
         "kind": "農田",
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3419,
-    "deficits": 6567
+    "turn": 3422,
+    "deficits": 6579
   },
   "history": [
     {
@@ -37842,6 +37842,39 @@
       "kind": "",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": 3420,
+      "name": "塞努",
+      "actor": 5,
+      "day": 801,
+      "say": "我把採集的水放進河岸共同庫存，供大家取用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "材料或補給不足"
+    },
+    {
+      "id": 3421,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 801,
+      "say": "茅舍需要修繕，我先動手維修。",
+      "action": "maintain",
+      "kind": "茅舍",
+      "ok": true,
+      "message": "已維修"
+    },
+    {
+      "id": 3422,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 802,
+      "say": "我在河岸採水，先補充飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -37929,18 +37962,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795635700.258688,
+    "updated": 1795635739.069292,
     "reason": ""
   },
-  "seconds": 48022.03399422209,
+  "seconds": 48060.93457334713,
   "council": {
     "food": 0,
-    "water": 0,
-    "shelter": false,
+    "water": 2,
+    "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795635700.958085,
+  "snapshotAt": 1795635739.7617762,
   "recipes": {
     "茅舍": {
       "sites": [
