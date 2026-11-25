@@ -89,10 +89,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,7 +112,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -228,7 +228,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 893,
+    "turn": 894,
     "deficits": 1686
   },
   "history": [
@@ -10054,6 +10054,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 894,
+      "name": "塞努",
+      "actor": 5,
+      "day": 233,
+      "say": "我先採集食物，補充聚落缺少的糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -10140,19 +10151,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795601526.0849621,
+    "phase": "deciding",
+    "updated": 1795601547.481892,
     "reason": ""
   },
-  "seconds": 13922.03105446021,
+  "seconds": 13936.446788335219,
   "council": {
-    "food": 0,
+    "food": 2,
     "water": 1,
     "shelter": true,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795601526.2956228,
+  "snapshotAt": 1795601547.7143528,
   "recipes": {
     "茅舍": {
       "sites": [
