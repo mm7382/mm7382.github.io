@@ -8,10 +8,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -25,9 +25,9 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 0
+          "food": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -111,9 +111,9 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
-          "food": 22
+          "food": 20
         },
         "stock": {
           "food": 0,
@@ -229,7 +229,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1386,
+    "turn": 1388,
     "deficits": 2670
   },
   "history": [
@@ -15478,6 +15478,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 1387,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 347,
+      "say": "我先採集河水，補充聚落的飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 1388,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 347,
+      "say": "河岸的共同糧食不足，我先採集食物補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -15564,19 +15586,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795608386.500119,
+    "phase": "deciding",
+    "updated": 1795608420.4643142,
     "reason": ""
   },
-  "seconds": 20770.64245074612,
+  "seconds": 20798.03832512113,
   "council": {
-    "food": 3,
-    "water": 0,
+    "food": 5,
+    "water": 2,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795608386.7737432,
+  "snapshotAt": 1795608420.744031,
   "recipes": {
     "茅舍": {
       "sites": [
