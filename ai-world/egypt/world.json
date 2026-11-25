@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -76,9 +76,9 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 0
+          "reed": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -113,7 +113,7 @@
         ],
         "source": {
           "water": 160,
-          "reed": 48,
+          "reed": 46,
           "food": 24
         },
         "stock": {
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3404,
+    "turn": 3407,
     "deficits": 6537
   },
   "history": [
@@ -37677,6 +37677,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 3405,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 798,
+      "say": "我先休息恢復體力，接著到河岸採集食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 3406,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 798,
+      "say": "農田目前無法照料，我先前往河岸採集食水。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 3407,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 798,
+      "say": "我先採集蘆葦，準備修繕茅舍。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 reed"
     }
   ],
   "needs": [
@@ -37764,10 +37797,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795635505.57481,
+    "updated": 1795635542.883991,
     "reason": ""
   },
-  "seconds": 47827.57431972309,
+  "seconds": 47865.056666307064,
   "council": {
     "food": 0,
     "water": 0,
@@ -37775,7 +37808,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795635506.218814,
+  "snapshotAt": 1795635543.552931,
   "recipes": {
     "茅舍": {
       "sites": [
