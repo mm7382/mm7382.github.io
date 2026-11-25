@@ -7,10 +7,10 @@
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 3,
           "water": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -110,7 +110,7 @@
         "source": {
           "water": 160,
           "reed": 48,
-          "food": 24
+          "food": 21
         },
         "stock": {
           "food": 0,
@@ -226,7 +226,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 485,
+    "turn": 487,
     "deficits": 586
   },
   "history": [
@@ -5564,6 +5564,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 486,
+      "name": "塞努",
+      "actor": 5,
+      "day": 117,
+      "say": "我先休息恢復體力，才能繼續協助補給。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 487,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 117,
+      "say": "我先採集食物，補充聚落口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 3 food"
     }
   ],
   "needs": [
@@ -5651,18 +5673,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795590669.480173,
+    "updated": 1795590702.3165739,
     "reason": ""
   },
-  "seconds": 6978.514909953956,
+  "seconds": 7010.993262744974,
   "council": {
-    "food": 2,
+    "food": 5,
     "water": 2,
     "shelter": false,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795590669.60484,
+  "snapshotAt": 1795590702.438506,
   "recipes": {
     "茅舍": {
       "sites": [
