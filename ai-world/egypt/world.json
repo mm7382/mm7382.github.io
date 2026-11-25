@@ -1,17 +1,17 @@
 {
   "state": {
-    "day": 393,
+    "day": 394,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -25,9 +25,9 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 2
+          "food": 1
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,9 +60,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2
+          "water": 1
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -91,10 +91,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 2,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1583,
-    "deficits": 3089
+    "turn": 1586,
+    "deficits": 3099
   },
   "history": [
     {
@@ -17646,6 +17646,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1584,
+      "name": "塞努",
+      "actor": 5,
+      "day": 394,
+      "say": "河岸還缺飲水，我先採水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 1585,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 394,
+      "say": "河岸的食物還不夠，我先採集口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 1586,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 394,
+      "say": "我先休息恢復體力，才能搬運食物。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -17733,18 +17766,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795611204.483561,
+    "updated": 1795611249.1095948,
     "reason": ""
   },
-  "seconds": 23576.91067219412,
+  "seconds": 23621.124066653138,
   "council": {
-    "food": 2,
-    "water": 2,
+    "food": 3,
+    "water": 3,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795611204.7980359,
+  "snapshotAt": 1795611249.4152288,
   "recipes": {
     "茅舍": {
       "sites": [
