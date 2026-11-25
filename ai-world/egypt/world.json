@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 124,
+    "day": 125,
     "actors": [
       {
         "name": "梅莉",
@@ -8,9 +8,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2
+          "water": 1
         },
-        "energy": 1,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +60,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -72,10 +72,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,7 +90,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,8 +226,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 514,
-    "deficits": 647
+    "turn": 517,
+    "deficits": 657
   },
   "history": [
     {
@@ -5883,6 +5883,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 515,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 124,
+      "say": "河岸沒有存糧，我先採集食物，補充大家的口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 3 food"
+    },
+    {
+      "id": 516,
+      "name": "塞努",
+      "actor": 5,
+      "day": 125,
+      "say": "河岸缺少公共飲水，我先採水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 517,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 125,
+      "say": "我先休息恢復體力，準備補充食水並修復住所。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -5970,18 +6003,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795591100.504616,
+    "updated": 1795591143.23346,
     "reason": ""
   },
-  "seconds": 7415.626949246012,
+  "seconds": 7458.342641830008,
   "council": {
-    "food": 0,
-    "water": 2,
+    "food": 2,
+    "water": 1,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795591100.6160152,
+  "snapshotAt": 1795591143.3435771,
   "recipes": {
     "茅舍": {
       "sites": [
