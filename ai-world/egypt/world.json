@@ -1,15 +1,16 @@
 {
   "state": {
-    "day": 22,
+    "day": 23,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 0
+          "food": 0,
+          "water": 2
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,7 +25,7 @@
         "bag": {
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -39,7 +40,7 @@
         "bag": {
           "food": 0
         },
-        "energy": 1,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +61,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 24
         },
@@ -174,8 +175,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 92,
-    "deficits": 66
+    "turn": 94,
+    "deficits": 72
   },
   "history": [
     {
@@ -1189,6 +1190,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 93,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 23,
+      "say": "我先休息恢復體力，再採集食物。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 94,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 23,
+      "say": "我先取水，帶去平原供播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -1275,13 +1298,13 @@
     }
   ],
   "status": {
-    "phase": "waiting",
+    "phase": "deciding",
     "reason": "",
-    "updated": 1795576268.422501
+    "updated": 1795576300.497555
   },
-  "seconds": 1308.6904632929945,
+  "seconds": 1335.7127433340065,
   "season": "退水",
-  "snapshotAt": 1795576268.4543731,
+  "snapshotAt": 1795576300.5491588,
   "recipes": {
     "茅舍": {
       "sites": [
