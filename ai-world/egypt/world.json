@@ -57,10 +57,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -70,13 +70,13 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -111,7 +111,7 @@
         "source": {
           "water": 158,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -227,7 +227,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 831,
+    "turn": 833,
     "deficits": 1555
   },
   "history": [
@@ -9371,6 +9371,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 water"
+    },
+    {
+      "id": 832,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 218,
+      "say": "河岸缺糧，我先採集食物補充存糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 833,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 218,
+      "say": "我把蘆葦送回營地，準備修繕茅舍。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -9457,19 +9479,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795600644.344003,
+    "phase": "deciding",
+    "updated": 1795600678.8297348,
     "reason": ""
   },
-  "seconds": 13041.842606962047,
+  "seconds": 13069.447155503061,
   "council": {
-    "food": 1,
+    "food": 3,
     "water": 3,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795600644.517899,
+  "snapshotAt": 1795600679.0090292,
   "recipes": {
     "茅舍": {
       "sites": [
