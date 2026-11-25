@@ -1,15 +1,15 @@
 {
   "state": {
-    "day": 17,
+    "day": 18,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
-          "food": 1
+          "food": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -22,7 +22,7 @@
         "age": 31,
         "site": "terrace",
         "bag": {
-          "water": 1
+          "water": 0
         },
         "energy": 6,
         "research": 0,
@@ -37,7 +37,7 @@
         "age": 39,
         "site": "terrace",
         "bag": {
-          "food": 2
+          "food": 1
         },
         "energy": 3,
         "research": 0,
@@ -95,8 +95,8 @@
         ],
         "source": {},
         "stock": {
-          "food": 3,
-          "water": 5,
+          "food": 1,
+          "water": 3,
           "reed": 2,
           "stone": 3
         }
@@ -174,7 +174,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 71,
+    "turn": 73,
     "deficits": 51
   },
   "history": [
@@ -958,6 +958,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 72,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 18,
+      "say": "我帶食物前往平原，準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "淹水阻斷步行"
+    },
+    {
+      "id": 73,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 18,
+      "say": "洪水還擋著去平原的路，我去河岸採集食物，補充營地糧食。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
     }
   ],
   "needs": [
@@ -1044,13 +1066,13 @@
     }
   ],
   "status": {
-    "phase": "waiting",
+    "phase": "deciding",
     "reason": "",
-    "updated": 1795575968.664014
+    "updated": 1795576001.475911
   },
-  "seconds": 1009.0313622510002,
+  "seconds": 1036.793578584009,
   "season": "洪水",
-  "snapshotAt": 1795575968.689963,
+  "snapshotAt": 1795576001.513607,
   "recipes": {
     "茅舍": {
       "sites": [
