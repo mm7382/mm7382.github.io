@@ -1,17 +1,17 @@
 {
   "state": {
-    "day": 308,
+    "day": 309,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 1,
           "water": 0,
           "reed": 2
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -38,13 +38,13 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 8,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -75,10 +75,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2,
+          "water": 1,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,10 +90,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 2,
+          "food": 1,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -111,9 +111,9 @@
           "terrace"
         ],
         "source": {
-          "water": 158,
+          "water": 160,
           "reed": 48,
-          "food": 22
+          "food": 24
         },
         "stock": {
           "food": 0,
@@ -192,7 +192,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 10
+        "condition": 9
       },
       "field/農田": {
         "kind": "農田",
@@ -229,8 +229,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1224,
-    "deficits": 2337
+    "turn": 1227,
+    "deficits": 2346
   },
   "history": [
     {
@@ -13696,6 +13696,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 1225,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 308,
+      "say": "河岸還缺食物，我先採集糧食補充儲備。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 1226,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 309,
+      "say": "我把採集的食物放進河岸共同庫存，先補足大家的糧食。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "材料或補給不足"
+    },
+    {
+      "id": 1227,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 309,
+      "say": "茅舍已修好，我去河岸採集食水，協助補足儲備。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
     }
   ],
   "needs": [
@@ -13783,18 +13816,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795606078.6633,
+    "updated": 1795606119.4616268,
     "reason": ""
   },
-  "seconds": 18466.587064916006,
+  "seconds": 18507.337200582027,
   "council": {
     "food": 2,
-    "water": 2,
+    "water": 1,
     "shelter": true,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795606078.908204,
+  "snapshotAt": 1795606119.722873,
   "recipes": {
     "茅舍": {
       "sites": [
