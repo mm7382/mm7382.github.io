@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,9 +60,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0
+          "water": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 22
         },
@@ -153,7 +153,7 @@
         "stock": {
           "food": 0,
           "water": 0,
-          "reed": 4,
+          "reed": 3,
           "stone": 3
         }
       },
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 0
+        "condition": 12
       },
       "field/農田": {
         "kind": "農田",
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1592,
+    "turn": 1595,
     "deficits": 3117
   },
   "history": [
@@ -17745,6 +17745,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 food"
+    },
+    {
+      "id": 1593,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 396,
+      "say": "我先休息恢復體力，接著協助修繕茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1594,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 396,
+      "say": "河岸缺水，我先採水補充飲用水。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 1595,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 396,
+      "say": "茅舍已損壞，我先用營地現有材料修繕住所。",
+      "action": "maintain",
+      "kind": "茅舍",
+      "ok": true,
+      "message": "已維修"
     }
   ],
   "needs": [
@@ -17832,18 +17865,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795611327.172288,
+    "updated": 1795611370.365221,
     "reason": ""
   },
-  "seconds": 23706.183277194126,
+  "seconds": 23749.304175569123,
   "council": {
     "food": 2,
-    "water": 0,
-    "shelter": false,
+    "water": 2,
+    "shelter": true,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795611327.527827,
+  "snapshotAt": 1795611370.6910248,
   "recipes": {
     "茅舍": {
       "sites": [
