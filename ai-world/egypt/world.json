@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 44,
+    "day": 45,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "field",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0
         },
-        "energy": 6,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -23,10 +23,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 1,
+          "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -37,12 +37,12 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "field",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -180,8 +180,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 184,
-    "deficits": 135
+    "turn": 187,
+    "deficits": 140
   },
   "history": [
     {
@@ -2207,6 +2207,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 185,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 44,
+      "say": "我先休息恢復體力，再把水帶去田裡。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 186,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 45,
+      "say": "我去河岸採集食物，先補充大家的生活所需。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 187,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 45,
+      "say": "我去河岸採集食物，先補充生活所需。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
     }
   ],
   "needs": [
@@ -2295,11 +2328,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795577576.471031
+    "updated": 1795577620.754196
   },
-  "seconds": 2611.1432393730793,
+  "seconds": 2655.4357098320907,
   "season": "乾季",
-  "snapshotAt": 1795577576.5444171,
+  "snapshotAt": 1795577620.826257,
   "recipes": {
     "茅舍": {
       "sites": [
