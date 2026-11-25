@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 434,
+    "day": 435,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,11 +90,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 1751,
-    "deficits": 3458
+    "turn": 1754,
+    "deficits": 3469
   },
   "history": [
     {
@@ -19494,6 +19494,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 1752,
+      "name": "塞努",
+      "actor": 5,
+      "day": 435,
+      "say": "我先休息，恢復體力後把食物存入河岸庫存。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1753,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 435,
+      "say": "我先休息恢復體力，準備修繕茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 1754,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 435,
+      "say": "我先休息恢復體力，之後採集河水補充共用儲備。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -19580,19 +19613,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795613659.744283,
+    "phase": "waiting",
+    "updated": 1795613695.3400462,
     "reason": ""
   },
-  "seconds": 26027.784616570105,
+  "seconds": 26070.106680652098,
   "council": {
-    "food": 1,
+    "food": 0,
     "water": 0,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795613660.097471,
+  "snapshotAt": 1795613695.737304,
   "recipes": {
     "茅舍": {
       "sites": [
