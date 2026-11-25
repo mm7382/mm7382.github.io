@@ -8,9 +8,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0
+          "water": 2
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -77,7 +77,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,9 +90,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0
+          "water": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -110,7 +110,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 156,
           "reed": 48,
           "food": 24
         },
@@ -228,7 +228,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 958,
+    "turn": 961,
     "deficits": 1821
   },
   "history": [
@@ -10769,6 +10769,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 959,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 248,
+      "say": "我先休息恢復體力，準備修繕茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 960,
+      "name": "塞努",
+      "actor": 5,
+      "day": 248,
+      "say": "河岸缺飲水，我先取水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 961,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 248,
+      "say": "我先採集河水，補充聚落的飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -10856,18 +10889,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795602449.5653288,
+    "updated": 1795602488.980586,
     "reason": ""
   },
-  "seconds": 14836.958363005135,
+  "seconds": 14876.92821533914,
   "council": {
     "food": 1,
-    "water": 1,
+    "water": 5,
     "shelter": true,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795602449.7701309,
+  "snapshotAt": 1795602489.215091,
   "recipes": {
     "茅舍": {
       "sites": [
