@@ -75,7 +75,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -226,7 +226,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 730,
+    "turn": 731,
     "deficits": 1212
   },
   "history": [
@@ -8259,6 +8259,17 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 731,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 187,
+      "say": "我精力耗盡，先休息恢復體力，才能採集物資與修繕住所。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -8346,10 +8357,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795598781.91211,
+    "updated": 1795598816.1498392,
     "reason": ""
   },
-  "seconds": 11174.78778775115,
+  "seconds": 11209.012345751165,
   "council": {
     "food": 0,
     "water": 0,
@@ -8357,7 +8368,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795598782.076861,
+  "snapshotAt": 1795598816.315103,
   "recipes": {
     "茅舍": {
       "sites": [
