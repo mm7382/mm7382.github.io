@@ -1,43 +1,10 @@
 {
   "state": {
-    "day": 1015,
+    "day": 1016,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
-        "bag": {
-          "food": 0,
-          "water": 1,
-          "reed": 0
-        },
-        "energy": 4,
-        "research": 0,
-        "survey": [
-          "terrace",
-          "field"
-        ],
-        "goal": ""
-      },
-      {
-        "name": "帕伊",
-        "age": 31,
-        "site": "bank",
-        "bag": {
-          "water": 1,
-          "food": 0
-        },
-        "energy": 0,
-        "research": 0,
-        "survey": [
-          "terrace",
-          "field"
-        ],
-        "goal": ""
-      },
-      {
-        "name": "納赫特",
-        "age": 39,
         "site": "bank",
         "bag": {
           "food": 0,
@@ -53,6 +20,39 @@
         "goal": ""
       },
       {
+        "name": "帕伊",
+        "age": 31,
+        "site": "bank",
+        "bag": {
+          "water": 0,
+          "food": 0
+        },
+        "energy": 4,
+        "research": 0,
+        "survey": [
+          "terrace",
+          "field"
+        ],
+        "goal": ""
+      },
+      {
+        "name": "納赫特",
+        "age": 39,
+        "site": "bank",
+        "bag": {
+          "food": 2,
+          "water": 0,
+          "reed": 0
+        },
+        "energy": 0,
+        "research": 0,
+        "survey": [
+          "terrace",
+          "field"
+        ],
+        "goal": ""
+      },
+      {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
@@ -60,9 +60,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0
+          "water": 2
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,11 +90,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 2,
+          "food": 1,
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,7 +112,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
           "food": 22
         },
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4405,
-    "deficits": 8365
+    "turn": 4408,
+    "deficits": 8374
   },
   "history": [
     {
@@ -48688,6 +48688,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 4406,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1016,
+      "say": "我先休息恢復體力，才能繼續補充聚落食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 4407,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1016,
+      "say": "河岸缺糧，我先採集食物。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 4408,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1016,
+      "say": "河岸缺水，我先取水補充。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
     }
   ],
   "needs": [
@@ -48774,19 +48807,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795648595.576637,
+    "phase": "waiting",
+    "updated": 1795648630.227285,
     "reason": ""
   },
-  "seconds": 60889.3210785072,
+  "seconds": 60931.42077534116,
   "council": {
-    "food": 2,
+    "food": 3,
     "water": 2,
     "shelter": false,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795648596.442857,
+  "snapshotAt": 1795648631.241527,
   "recipes": {
     "茅舍": {
       "sites": [
