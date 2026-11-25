@@ -46,3 +46,23 @@ main:has(.hud:not([hidden])) .stopbar{display:none}
 /* Project status is a site label, separate from story HUD. Existing immersive viewport stays unchanged. */
 .brand-block{display:grid;justify-items:start;gap:7px}.project-status{pointer-events:auto;font-size:12px;line-height:1.45;min-height:32px;padding:6px 10px;border:1px solid #dfc99080;border-radius:20px;background:#10241ed9;color:#f3e8ce;letter-spacing:.02em;text-shadow:0 1px 3px #000}.project-status:hover{background:#20392fee}.project-status span{margin-left:4px}#project-dialog .release-scope{margin:24px 0}#project-dialog dt{font-size:13px;color:#dfc990;margin:18px 0 6px}#project-dialog dd{margin:0;font-size:15px;line-height:1.8;color:#e7eadf}#project-summary{line-height:1.8}
 @media(max-width:600px){.project-status{font-size:11px;padding:5px 8px}.brand-block{gap:6px}}@media(max-height:500px){.brand-block{gap:3px}.project-status{font-size:11px;min-height:28px;padding:4px 8px}}
+
+/* The desk is the film entry; reading and room navigation remain independent. */
+.desk-play,.room-return{position:absolute;z-index:4;min-height:48px;color:#fff1d5;border-color:#ffe7b799;background:#17221b99;text-shadow:0 1px 4px #000;padding:10px 16px}
+.desk-play{right:16%;bottom:20%}.room-return{right:max(22px,env(safe-area-inset-right));bottom:max(22px,env(safe-area-inset-bottom))}
+body.switching .desk-play,body.switching .room-return,body:has(dialog[open]) .desk-play,body:has(dialog[open]) .room-return{visibility:hidden}
+@media(max-width:600px){
+ body[data-viewpoint="Lucy"] #lucy-room{object-position:74% 50%}
+ body[data-viewpoint="Lucy"] .hud{top:max(110px,calc(env(safe-area-inset-top) + 95px));bottom:auto;height:calc(100dvh - 280px - env(safe-area-inset-bottom))}
+ body[data-viewpoint="Lucy"] .reading-actions{position:static;width:auto;flex-direction:row}
+ .desk-play{right:24px;bottom:105px}.room-return{right:18px;bottom:max(20px,env(safe-area-inset-bottom))}
+}
+@media(max-height:500px){
+ body[data-viewpoint="Lucy"] .hud{top:80px;width:58vw;height:calc(100dvh - 92px)}
+ body[data-viewpoint="Lucy"] .reading-actions{position:static;width:auto;flex-direction:row}
+ .desk-play{right:5%;bottom:105px}
+}
+
+.scene:has(#invitation:not([hidden]),#show-invitation:not([hidden]),#hotspots:not([hidden])) .lucy-cue{left:auto;right:max(22px,env(safe-area-inset-right));top:110px;bottom:auto}
+.scene:has(#invitation:not([hidden]),#show-invitation:not([hidden]),#hotspots:not([hidden])) .lucy-cue p{display:none}
+@media(max-height:500px){.scene:has(#invitation:not([hidden]),#show-invitation:not([hidden]),#hotspots:not([hidden])) .lucy-cue{top:70px;right:18px}}

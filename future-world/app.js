@@ -7,7 +7,7 @@ $('start-forward').disabled=true;ready.then(()=>{$('start-forward').disabled=fal
 function renderReading(resetScroll=false){const r=reading(),p=pages()[r.index];$('reading-text').textContent=p.text;$('reading-text').setAttribute('aria-label',p.title);$('reading-detail').textContent=p.detail;$('reading-detail').hidden=!r.detail;$('reading-detail-toggle').textContent=r.detail?'收起補敘':'再讀一點';$('reading-detail-toggle').setAttribute('aria-expanded',String(r.detail));$('reading-count').textContent=`${r.index+1} / ${pages().length} · ${r.detail?'補敘可上下滑讀':'依你的步調閱讀'}`;$('reading-prev').disabled=r.index===0;$('reading-next').disabled=r.index===pages().length-1;if(resetScroll)$('reading-content').scrollTop=0;}
 function hideReading(){$('invitation').hidden=true;$('show-invitation').hidden=playing||switching||!entered;}
 function showReading(){if(!entered||playing||switching)return;renderReading();$('invitation').hidden=false;$('show-invitation').hidden=true;}
-function syncView(){const lucy=activeViewpoint==='Lucy';document.body.dataset.viewpoint=activeViewpoint;video.hidden=lucy;room.hidden=!lucy;$('scene-title').innerHTML=lucy?'房間停點 <i>第一幕</i>':'空橋停點 <i>第一幕</i>';$('open-viewpoint').textContent=`視角 / ${activeViewpoint} ▾`;$('reading-viewpoint').textContent=`${lucy?'心聲':'感知'} / ${activeViewpoint} 視角`;$('show-invitation').textContent=lucy?'再讀心聲':'感知';$('choose-michael').setAttribute('aria-pressed',String(!lucy));$('choose-lucy').setAttribute('aria-pressed',String(lucy));$('michael-view-status').textContent=lucy?'空橋前進與感知':'目前視角';$('lucy-view-status').textContent=lucy?'目前視角 · 移動 Coming soon':'靜態敘事可閱讀 · 移動 Coming soon';$('reading-forward').textContent=lucy?'後續移動 · Coming soon':'重播這段 →';$('reading-forward').disabled=lucy;$('lucy-next').hidden=!lucy||!entered;$('hotspots').hidden=lucy||!entered;$('stopbar').hidden=lucy||!entered;$('start-forward').hidden=lucy||entered;stopImage.hidden=lucy||!entered||!stopImage.complete||!stopImage.naturalWidth;renderReading();}
+function syncView(){const lucy=activeViewpoint==='Lucy';document.body.dataset.viewpoint=activeViewpoint;video.hidden=lucy;room.hidden=!lucy;$('scene-title').innerHTML=lucy?'房間停點 <i>第一幕</i>':'空橋停點 <i>第一幕</i>';$('open-viewpoint').textContent=`視角 / ${activeViewpoint} ▾`;$('reading-viewpoint').textContent=`${lucy?'心聲':'感知'} / ${activeViewpoint} 視角`;$('show-invitation').textContent=lucy?'再讀心聲':'感知';$('choose-michael').setAttribute('aria-pressed',String(!lucy));$('choose-lucy').setAttribute('aria-pressed',String(lucy));$('michael-view-status').textContent=lucy?'空橋前進與感知':'目前視角';$('lucy-view-status').textContent=lucy?'目前視角 · 移動 Coming soon':'靜態敘事可閱讀 · 移動 Coming soon';$('reading-forward').textContent=lucy?'後續移動 · Coming soon':'重播這段 →';$('reading-forward').disabled=lucy;$('lucy-next').hidden=true;$('lucy-video-start').hidden=!lucy;$('return-bridge').hidden=!lucy;$('hotspots').hidden=lucy||!entered;$('stopbar').hidden=lucy||!entered;$('start-forward').hidden=lucy||entered;stopImage.hidden=lucy||!entered||!stopImage.complete||!stopImage.naturalWidth;renderReading();}
 async function selectViewpoint(name){if(playing)return;const mine=++token;document.querySelectorAll('dialog[open]').forEach(d=>d.close());states[activeViewpoint].entered=entered;video.pause();switching=true;$('invitation').hidden=true;$('show-invitation').hidden=true;$('hotspots').hidden=true;$('stopbar').hidden=true;document.body.classList.add('switching');
  if(name==='Lucy'){try{await room.decode();}catch(e){if(mine===token){switching=false;document.body.classList.remove('switching');$('status').textContent='房間尚未載入，請再試一次。';syncView();if(entered)showReading();}return;}}
  if(mine!==token)return;activeViewpoint=name;history.replaceState(null,'',name==='Lucy'?'#lucy':'#michael');entered=name==='Lucy'?true:states.Michael.entered;states[name].entered=entered;syncView();await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));if(mine!==token)return;switching=false;document.body.classList.remove('switching');$('status').textContent=name==='Lucy'?'房間停點 · 靜態視角':entered?'已停下 · 依你的步調閱讀':'空橋已在眼前，隨時可以啟程。';if(entered)showReading();}
@@ -28,3 +28,58 @@ if(location.hash.toLowerCase()==='#lucy')selectViewpoint('Lucy');
 window.addEventListener('hashchange',()=>{const requested=location.hash.toLowerCase()==='#lucy'?'Lucy':location.hash.toLowerCase()==='#michael'?'Michael':null;if(!requested)return;if(playing){history.replaceState(null,'',activeViewpoint==='Lucy'?'#lucy':'#michael');return;}if(requested!==activeViewpoint)selectViewpoint(requested);});
 
 $('project-status').onclick=()=>{if(!playing&&!switching)$('project-dialog').showModal();};
+
+// Room navigation is separate from playback; neither resets reading state.
+$('visit-lucy').onclick=()=>selectViewpoint('Lucy');
+$('return-bridge').onclick=()=>selectViewpoint('Michael');
+(() => {
+ const cut=$('lucy-cut'),mount=$('lucy-video-frame'),trigger=$('lucy-video-start'),back=$('lucy-video-return');
+ const background=[...cut.parentElement.children].filter(node=>node!==cut).concat([...document.querySelectorAll('body > header, main > .caption, main > .stopbar')]);
+ let player,api,restore=[];
+ function connectAPI(){
+   if(window.YT?.Player)return Promise.resolve(window.YT);
+   if(api)return api;
+   api=new Promise((resolve,reject)=>{
+     window.onYouTubeIframeAPIReady=()=>resolve(window.YT);
+     const script=document.createElement('script');
+     script.src='https://www.youtube.com/iframe_api';
+     script.onerror=()=>{script.remove();api=undefined;reject(new Error('YouTube player unavailable'));};
+     document.head.append(script);
+   });
+   return api;
+ }
+ function unload(){if(player){player.destroy();player=undefined;}mount.replaceChildren();}
+ function close(){
+   if(cut.hidden)return;
+   cut.hidden=true;unload();restore.forEach(([node,inert])=>node.inert=inert);restore=[];
+   document.body.classList.remove('lucy-cut-open');
+   if(activeViewpoint==='Lucy')trigger.focus({preventScroll:true});
+ }
+ function play(){
+   const frame=document.createElement('iframe');
+   frame.title='她沒有催他 · Lucy 的畫桌';
+   frame.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';
+   frame.allowFullscreen=true;frame.referrerPolicy='strict-origin-when-cross-origin';
+   const url=new URL('https://www.youtube-nocookie.com/embed/k0DWPrPXqFw');
+   url.search=new URLSearchParams({autoplay:'1',playsinline:'1',enablejsapi:'1',origin:location.origin,rel:'0',controls:'1'}).toString();
+   frame.src=url.href;mount.append(frame);
+   // YouTube keeps its native play/control UI if audible autoplay is blocked.
+   connectAPI().then(YT=>{
+     if(cut.hidden||!frame.isConnected)return;
+     player=new YT.Player(frame,{events:{onReady:e=>{
+       if(frame.isConnected)e.target.playVideo();
+     },onStateChange:e=>{
+       if(e.data===YT.PlayerState.ENDED&&!cut.hidden&&frame.isConnected)close();
+     }}});
+   }).catch(()=>{});
+ }
+ trigger.onclick=()=>{
+   if(activeViewpoint!=='Lucy'||switching||!cut.hidden)return;
+   cut.hidden=false;restore=background.map(node=>[node,node.inert]);
+   background.forEach(node=>node.inert=true);document.body.classList.add('lucy-cut-open');
+   play();back.focus({preventScroll:true});
+ };
+ back.onclick=close;
+ document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!cut.hidden){event.preventDefault();close();}});
+ window.addEventListener('hashchange',close);
+})();
