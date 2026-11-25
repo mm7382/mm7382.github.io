@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 673,
+    "day": 674,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -41,10 +41,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 1,
+          "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 2815,
-    "deficits": 5496
+    "turn": 2818,
+    "deficits": 5507
   },
   "history": [
     {
@@ -31198,6 +31198,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 2816,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 673,
+      "say": "我先休息恢復體力，再協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2817,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 673,
+      "say": "我先休息恢復體力，再協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 2818,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 674,
+      "say": "農田已荒廢，我先照料作物，協助恢復糧食供應。",
+      "action": "tend",
+      "kind": "農田",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -31285,18 +31318,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795628007.382586,
+    "updated": 1795628044.43052,
     "reason": ""
   },
-  "seconds": 40346.23089551646,
+  "seconds": 40383.252680349455,
   "council": {
     "food": 0,
-    "water": 1,
+    "water": 0,
     "shelter": false,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795628008.101901,
+  "snapshotAt": 1795628045.098766,
   "recipes": {
     "茅舍": {
       "sites": [
