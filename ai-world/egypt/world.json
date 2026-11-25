@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 40,
+    "day": 44,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "field",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0
         },
-        "energy": 1,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -21,7 +21,7 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "field",
+        "site": "bank",
         "bag": {
           "water": 1,
           "food": 0
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -180,8 +180,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 166,
-    "deficits": 120
+    "turn": 182,
+    "deficits": 135
   },
   "history": [
     {
@@ -2009,6 +2009,182 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 167,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 40,
+      "say": "我先休息，恢復體力後再協助播種。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 168,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 40,
+      "say": "我先休息恢復體力，等梅莉帶來食物後再一起播種。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 169,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 40,
+      "say": "我先休息恢復體力，再把食物帶去田裡。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 170,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 41,
+      "say": "我把身上的水放在田邊，讓播種所需的水先備妥。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "材料或補給不足"
+    },
+    {
+      "id": 171,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 41,
+      "say": "我去河岸採些食物，帶回田裡播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 172,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 41,
+      "say": "我先採些食物，帶去田裡播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 173,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 41,
+      "say": "田邊的水不夠了，我去河岸取水，帶回來供播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 174,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 42,
+      "say": "我先休息恢復體力，再協助準備播種。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 175,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 42,
+      "say": "我先取水，帶去田裡和食物一起準備播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 176,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 42,
+      "say": "我先休息恢復體力，再取水支援播種。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 177,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 42,
+      "say": "我先採些食物，帶到田裡準備播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 178,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 43,
+      "say": "我先休息恢復體力，再把食物和水帶到田裡。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 179,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 43,
+      "say": "我先採些水，和大家一起帶去田裡播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 180,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 43,
+      "say": "我把食物帶去田裡，準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 181,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 43,
+      "say": "納赫特已把食物帶到田邊，我把水送過去。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 182,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 44,
+      "say": "我把水帶去田邊，讓大家準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -2095,13 +2271,13 @@
     }
   ],
   "status": {
-    "phase": "waiting",
+    "phase": "deciding",
     "reason": "",
-    "updated": 1795577318.792568
+    "updated": 1795577548.1441212
   },
-  "seconds": 2358.7120067470532,
-  "season": "退水",
-  "snapshotAt": 1795577318.836938,
+  "seconds": 2582.8340727050672,
+  "season": "乾季",
+  "snapshotAt": 1795577548.217536,
   "recipes": {
     "茅舍": {
       "sites": [
