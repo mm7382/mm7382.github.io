@@ -1,16 +1,16 @@
 {
   "state": {
-    "day": 50,
+    "day": 51,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 1,
-          "water": 2
+          "food": 2,
+          "water": 1
         },
-        "energy": 5,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -24,9 +24,9 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 2
+          "food": 1
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,9 +40,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 2
+          "water": 1
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -63,7 +63,7 @@
           "terrace"
         ],
         "source": {
-          "water": 156,
+          "water": 160,
           "reed": 48,
           "food": 22
         },
@@ -180,8 +180,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 211,
-    "deficits": 161
+    "turn": 214,
+    "deficits": 163
   },
   "history": [
     {
@@ -2504,6 +2504,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 212,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 51,
+      "say": "我把食物帶到田裡，和大家一起準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 213,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 51,
+      "say": "我帶水去田裡，準備播種。",
+      "action": "move",
+      "kind": "",
+      "ok": false,
+      "message": "淹水阻斷步行"
+    },
+    {
+      "id": 214,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 51,
+      "say": "河水擋住了去田裡的路，我先採些食物，等水退後再準備播種。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -2592,11 +2625,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795577962.5496562
+    "updated": 1795578003.539094
   },
-  "seconds": 2997.041967955156,
+  "seconds": 3038.029544288147,
   "season": "洪水",
-  "snapshotAt": 1795577962.615638,
+  "snapshotAt": 1795578003.619358,
   "recipes": {
     "茅舍": {
       "sites": [
