@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 798,
+    "day": 799,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -25,9 +25,9 @@
         "site": "bank",
         "bag": {
           "water": 0,
-          "food": 0
+          "food": 2
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -91,10 +91,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 1,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -113,8 +113,8 @@
         ],
         "source": {
           "water": 160,
-          "reed": 46,
-          "food": 24
+          "reed": 48,
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 3407,
-    "deficits": 6537
+    "turn": 3410,
+    "deficits": 6548
   },
   "history": [
     {
@@ -37710,6 +37710,39 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 2 reed"
+    },
+    {
+      "id": 3408,
+      "name": "塞努",
+      "actor": 5,
+      "day": 798,
+      "say": "河岸缺水，我先採水補充共同庫存。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 3409,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 799,
+      "say": "茅舍已受損，營地已有蘆葦，我先動手修繕。",
+      "action": "maintain",
+      "kind": "茅舍",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 3410,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 799,
+      "say": "我在河岸採集食物，補充聚落口糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -37797,18 +37830,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795635542.883991,
+    "updated": 1795635581.504929,
     "reason": ""
   },
-  "seconds": 47865.056666307064,
+  "seconds": 47903.66788609908,
   "council": {
-    "food": 0,
-    "water": 0,
+    "food": 2,
+    "water": 1,
     "shelter": false,
     "ready": false
   },
-  "season": "退水",
-  "snapshotAt": 1795635543.552931,
+  "season": "乾季",
+  "snapshotAt": 1795635582.1657012,
   "recipes": {
     "茅舍": {
       "sites": [
