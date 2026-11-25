@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 66,
+    "day": 67,
     "actors": [
       {
         "name": "梅莉",
@@ -10,7 +10,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 1,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -26,7 +26,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -42,7 +42,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -152,7 +152,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 11
+        "condition": 10
       }
     },
     "needs": {
@@ -181,8 +181,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 278,
-    "deficits": 218
+    "turn": 281,
+    "deficits": 224
   },
   "history": [
     {
@@ -3242,6 +3242,39 @@
       "kind": "",
       "ok": true,
       "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 279,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 67,
+      "say": "農田需要照料，我先留在這裡維護作物。",
+      "action": "tend",
+      "kind": "農田",
+      "ok": false,
+      "message": "無可照料農田或正淹水"
+    },
+    {
+      "id": 280,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 67,
+      "say": "我先休息恢復體力，再採集食物和水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 281,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 67,
+      "say": "我先休息恢復體力，再幫忙採集食物和水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -3330,11 +3363,11 @@
   "status": {
     "phase": "deciding",
     "reason": "",
-    "updated": 1795578913.53438
+    "updated": 1795578970.3828201
   },
-  "seconds": 3947.6173246201943,
-  "season": "乾季",
-  "snapshotAt": 1795578913.623393,
+  "seconds": 4004.4560078711947,
+  "season": "洪水",
+  "snapshotAt": 1795578970.4393961,
   "recipes": {
     "茅舍": {
       "sites": [
