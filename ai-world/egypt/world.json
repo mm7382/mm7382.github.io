@@ -6,7 +6,7 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -28,7 +28,7 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "quarry",
+        "site": "desert",
         "bag": {
           "water": 0,
           "food": 0,
@@ -36,7 +36,7 @@
           "stone": 5,
           "block": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -94,7 +94,7 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
@@ -102,7 +102,7 @@
           "stone": 6,
           "block": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -120,10 +120,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 4,
+          "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -204,7 +204,7 @@
         ],
         "source": {},
         "stock": {
-          "reed": 0,
+          "reed": 4,
           "stone": 7,
           "block": 8
         }
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6262,
+    "turn": 6267,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -604,7 +604,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6661,
         "observation": "eae1ed13413ec8b52efcdbb99b1656126944ae68f04f68f1de8fdc781b4f8abe",
@@ -1010,7 +1010,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6657,
         "observation": "3cb5dcd15f3819195eaec754b6f115cb225f64f6522baceb4564f05587601480",
@@ -1139,7 +1139,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6635,
         "observation": "32a49a7e73520cfbb70344d3a9f6a71b5413e96af25bd6561db6adcb35b81564",
@@ -84932,6 +84932,71 @@
       "site": "desert",
       "ok": true,
       "message": "施工架，已結算一工次"
+    },
+    {
+      "id": 6263,
+      "eventSeq": 6680,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 6264,
+      "eventSeq": 6681,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1206,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 4 reed"
+    },
+    {
+      "id": 6265,
+      "eventSeq": 6682,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 6266,
+      "eventSeq": 6683,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 6267,
+      "eventSeq": 6684,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -85359,10 +85424,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795687319.794276,
+    "updated": 1795687357.3519151,
     "reason": ""
   },
-  "seconds": 72319.82855411875,
+  "seconds": 72321.39266741042,
   "council": {
     "food": 49,
     "water": 33,
@@ -85370,7 +85435,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687321.148915,
+  "snapshotAt": 1795687358.7489522,
   "recipes": {
     "茅舍": {
       "sites": [
