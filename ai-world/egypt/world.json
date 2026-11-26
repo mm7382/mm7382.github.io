@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5401,
+  "aiDecisions": 5402,
   "state": {
     "day": 1202,
     "actors": [
@@ -12,7 +12,7 @@
           "water": 5,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace",
@@ -30,7 +30,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 2,
         "survey": [
           "terrace",
@@ -105,7 +105,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -286,7 +286,7 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5813,
+    "turn": 5816,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -725,40 +725,22 @@
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
+            "type": "gather",
             "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
+            "kind": "stone",
+            "material": "stone",
+            "amount": 2,
             "repeat": 1,
             "until": "count"
           },
           {
-            "type": "agree",
+            "type": "drop",
             "site": "quarry",
-            "kind": "獅身人面像",
-            "material": "",
-            "amount": 1,
+            "kind": "stone",
+            "material": "stone",
+            "amount": 2,
             "repeat": 1,
             "until": "count"
-          },
-          {
-            "type": "survey",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "build",
-            "site": "quarry",
-            "kind": "獅身人面像",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "complete"
           },
           {
             "type": "think",
@@ -770,10 +752,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 6094,
-        "observation": "f4bc1269a545d34f788defe10b5efce5e0a27a82d7d15e2bd1b5130b0cef4b4c",
+        "seen": 6104,
+        "observation": "3ad395543ae4e4b072d2dedba1461796f5ca591e4c750b2577ab4a9f629cce56",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -76394,6 +76376,65 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p6105",
+      "eventSeq": 6105,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "胡伊，我剛才沒找到獅身人面像的提案。你願意在這裡提出嗎？我會準備原石。",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "request",
+        "recipients": [
+          4
+        ],
+        "requiresResponse": true
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5814,
+      "eventSeq": 6106,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5815,
+      "eventSeq": 6107,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5816,
+      "eventSeq": 6108,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -76587,10 +76628,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795682289.090421,
+    "updated": 1795682329.273822,
     "reason": ""
   },
-  "seconds": 72110.33889307381,
+  "seconds": 72112.01240699223,
   "council": {
     "food": 55,
     "water": 27,
@@ -76598,7 +76639,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682291.4403908,
+  "snapshotAt": 1795682331.8260102,
   "recipes": {
     "茅舍": {
       "sites": [
