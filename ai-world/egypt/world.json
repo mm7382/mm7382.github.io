@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5535,
+  "aiDecisions": 5537,
   "state": {
     "day": 1206,
     "actors": [
@@ -80,14 +80,14 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "協助完成沙漠台地神廟的刻飾"
+        "goal": "神廟已完工，休息後與同伴商量聚落接下來的需要"
       },
       {
         "name": "胡伊",
@@ -102,14 +102,14 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "協助完成沙漠台地神廟的刻飾"
+        "goal": "休息後評估聚落接下來的需要"
       },
       {
         "name": "塞努",
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6303,
+    "turn": 6305,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -768,17 +768,17 @@
         "blocked": ""
       },
       "3": {
-        "goal": "協助完成沙漠台地神廟的刻飾",
+        "goal": "神廟已完工，休息後與同伴商量聚落接下來的需要",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "build",
+            "type": "rest",
             "site": "desert",
-            "kind": "神廟",
+            "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "complete"
+            "until": "count"
           },
           {
             "type": "think",
@@ -790,10 +790,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 1,
-        "seen": 6719,
-        "observation": "e154e8b9532e04a59e18fd7c25042d30b1e89ac73db05cedfaa96363e338f66a",
+        "cursor": 1,
+        "done": 0,
+        "seen": 6728,
+        "observation": "1e453b265666a8b8002eb39b8b409859a0ad53a4fc9580f8098b4ff1a170dbb4",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -898,17 +898,17 @@
         "blocked": ""
       },
       "4": {
-        "goal": "協助完成沙漠台地神廟的刻飾",
+        "goal": "休息後評估聚落接下來的需要",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "build",
+            "type": "rest",
             "site": "desert",
-            "kind": "神廟",
+            "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "complete"
+            "until": "count"
           },
           {
             "type": "think",
@@ -920,10 +920,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 1,
-        "seen": 6721,
-        "observation": "b9aa9805f912d6eba57e9d2578af10526ab72624cba6ffe6e61e00fc41418a12",
+        "cursor": 1,
+        "done": 0,
+        "seen": 6730,
+        "observation": "14d4f4f86c4d2653b82fb4ab30be80d7c24a51f30fbbc2f1dc599e62d6b98f88",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -85483,6 +85483,70 @@
       "site": "desert",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p6729",
+      "eventSeq": 6729,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "沙漠台地的神廟已完工。大家覺得接下來聚落最需要做什麼？",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "question",
+        "recipients": [],
+        "requiresResponse": true
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6304,
+      "eventSeq": 6730,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p6731",
+      "eventSeq": 6731,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "蒂雅，我覺得可以先休息，再看看農田和補給是否需要人手；目前幾座大型工程都已完工。",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "conversation",
+        "recipients": [
+          3
+        ],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6305,
+      "eventSeq": 6732,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -85910,10 +85974,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795687720.542521,
+    "updated": 1795687757.417603,
     "reason": ""
   },
-  "seconds": 72336.16387484103,
+  "seconds": 72337.69859305111,
   "council": {
     "food": 49,
     "water": 33,
@@ -85921,7 +85985,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687721.988837,
+  "snapshotAt": 1795687758.855934,
   "recipes": {
     "茅舍": {
       "sites": [
