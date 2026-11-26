@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5532,
+  "aiDecisions": 5534,
   "state": {
     "day": 1206,
     "actors": [
@@ -80,14 +80,14 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "從石灰岩露頭運送原石，支援沙漠台地神廟後續施工"
+        "goal": "協助完成沙漠台地神廟的刻飾"
       },
       {
         "name": "胡伊",
@@ -102,14 +102,14 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "為沙漠台地神廟補足石塊並推進施工"
+        "goal": "協助完成沙漠台地神廟的刻飾"
       },
       {
         "name": "塞努",
@@ -123,7 +123,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -206,7 +206,7 @@
         "stock": {
           "reed": 8,
           "stone": 8,
-          "block": 6
+          "block": 4
         }
       },
       "quarry": {
@@ -294,7 +294,7 @@
         "kind": "神廟",
         "site": "desert",
         "stage": 4,
-        "work": 0,
+        "work": 3,
         "complete": false,
         "condition": 0
       }
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6297,
+    "turn": 6300,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -804,44 +804,17 @@
         "blocked": ""
       },
       "3": {
-        "goal": "從石灰岩露頭運送原石，支援沙漠台地神廟後續施工",
+        "goal": "協助完成沙漠台地神廟的刻飾",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
+            "type": "build",
+            "site": "desert",
+            "kind": "神廟",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "desert",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "desert",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
@@ -853,10 +826,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
-        "done": 0,
-        "seen": 6684,
-        "observation": "42d832ddfe41b0b67551a77d31be2ff13c7abce57170ad24e193014e8d18e197",
+        "cursor": 0,
+        "done": 1,
+        "seen": 6719,
+        "observation": "e154e8b9532e04a59e18fd7c25042d30b1e89ac73db05cedfaa96363e338f66a",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -961,53 +934,17 @@
         "blocked": ""
       },
       "4": {
-        "goal": "為沙漠台地神廟補足石塊並推進施工",
+        "goal": "協助完成沙漠台地神廟的刻飾",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
+            "type": "build",
+            "site": "desert",
+            "kind": "神廟",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "desert",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "desert",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "shape",
-            "site": "desert",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 3,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
@@ -1019,10 +956,10 @@
             "until": "count"
           }
         ],
-        "cursor": 5,
-        "done": 0,
-        "seen": 6657,
-        "observation": "3cb5dcd15f3819195eaec754b6f115cb225f64f6522baceb4564f05587601480",
+        "cursor": 0,
+        "done": 1,
+        "seen": 6721,
+        "observation": "b9aa9805f912d6eba57e9d2578af10526ab72624cba6ffe6e61e00fc41418a12",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -1113,7 +1050,7 @@
           }
         ],
         "cursor": 0,
-        "done": 2,
+        "done": 3,
         "seen": 6708,
         "observation": "2bba43ae8ebd91fcc73dea45125a3e84e03d0736e810d59ecafee8d63e693c1d",
         "proposals": {
@@ -85450,6 +85387,81 @@
       "site": "desert",
       "ok": true,
       "message": "柱廊與屋頂，已結算一工次"
+    },
+    {
+      "id": "p6720",
+      "eventSeq": 6720,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6298,
+      "eventSeq": 6721,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "刻飾，已結算一工次"
+    },
+    {
+      "id": "p6722",
+      "eventSeq": 6722,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6299,
+      "eventSeq": 6723,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "刻飾，已結算一工次"
+    },
+    {
+      "id": 6300,
+      "eventSeq": 6724,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "刻飾，已結算一工次"
     }
   ],
   "needs": [
@@ -85877,10 +85889,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795687636.1545331,
+    "updated": 1795687679.737571,
     "reason": ""
   },
-  "seconds": 72333.00274383408,
+  "seconds": 72334.81746019174,
   "council": {
     "food": 49,
     "water": 33,
@@ -85888,7 +85900,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687637.552246,
+  "snapshotAt": 1795687681.118208,
   "recipes": {
     "茅舍": {
       "sites": [
