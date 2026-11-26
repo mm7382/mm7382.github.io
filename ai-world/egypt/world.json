@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5472,
+  "aiDecisions": 5473,
   "state": {
     "day": 1204,
     "actors": [
@@ -10,10 +10,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 5,
+          "reed": 0,
           "stone": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -31,9 +31,9 @@
           "water": 0,
           "food": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 6
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -41,7 +41,7 @@
           "bank",
           "quarry"
         ],
-        "goal": "補足河階營地工坊組裝所需的原石，並協助完工。"
+        "goal": "協助準備沙漠台地金字塔的原石。"
       },
       {
         "name": "納赫特",
@@ -49,11 +49,11 @@
         "site": "terrace",
         "bag": {
           "food": 0,
-          "water": 6,
+          "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -115,7 +115,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace",
@@ -178,9 +178,9 @@
         "source": {},
         "stock": {
           "food": 51,
-          "water": 0,
+          "water": 6,
           "reed": 0,
-          "stone": 14,
+          "stone": 8,
           "block": 2
         }
       },
@@ -195,7 +195,9 @@
           "quarry"
         ],
         "source": {},
-        "stock": {}
+        "stock": {
+          "reed": 5
+        }
       },
       "quarry": {
         "name": "石灰岩露頭",
@@ -347,7 +349,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 6035,
+    "turn": 6039,
     "deficits": 10226,
     "autonomy": {
       "0": {
@@ -391,7 +393,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6385,
         "observation": "22159a2bb1d1294fb3d2db05cf4ac6ea87ac8f73b9679cfa5f5cf8e825c89a19",
@@ -451,30 +453,21 @@
         "blocked": ""
       },
       "1": {
-        "goal": "補足河階營地工坊組裝所需的原石，並協助完工。",
+        "goal": "協助準備沙漠台地金字塔的原石。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
+            "type": "take",
+            "site": "terrace",
             "kind": "",
             "material": "stone",
-            "amount": 4,
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
           {
             "type": "move",
-            "site": "terrace",
+            "site": "desert",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -483,25 +476,16 @@
           },
           {
             "type": "drop",
-            "site": "terrace",
+            "site": "desert",
             "kind": "",
             "material": "stone",
-            "amount": 4,
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
           {
-            "type": "build",
-            "site": "terrace",
-            "kind": "工坊",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "complete"
-          },
-          {
             "type": "think",
-            "site": "terrace",
+            "site": "desert",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -509,10 +493,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
+        "cursor": 1,
         "done": 0,
-        "seen": 6360,
-        "observation": "4584a5522a8fc35a5e131717e6ce1f06e83b94de69cf444dee0987942a91d3f9",
+        "seen": 6399,
+        "observation": "32ec64a106a4b28ae335173a6bc863cf88c8ff131ddeaf7cbfb5021ff66c0421",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -642,7 +626,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6377,
         "observation": "8491b3644f97ef3d2fe82c9942197402c1f701935802e8efc6a56a134b20d276",
@@ -954,7 +938,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6383,
         "observation": "68f5d2edf9dccd08d1905a4c86007353d536a0ba772d643302df1cde3ea62b23",
@@ -80778,6 +80762,76 @@
       "site": "desert",
       "ok": true,
       "message": "已勘查沙漠台地"
+    },
+    {
+      "id": 6036,
+      "eventSeq": 6398,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已勘查沙漠台地"
+    },
+    {
+      "id": 6037,
+      "eventSeq": 6399,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 5 reed"
+    },
+    {
+      "id": "p6400",
+      "eventSeq": 6400,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6038,
+      "eventSeq": 6401,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "take",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6039,
+      "eventSeq": 6402,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1204,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 water"
     }
   ],
   "needs": [
@@ -81086,10 +81140,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795684975.345464,
+    "updated": 1795685016.374599,
     "reason": ""
   },
-  "seconds": 72222.20098242094,
+  "seconds": 72223.90947022302,
   "council": {
     "food": 51,
     "water": 40,
@@ -81097,7 +81151,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795684976.5987551,
+  "snapshotAt": 1795685017.633002,
   "recipes": {
     "茅舍": {
       "sites": [
