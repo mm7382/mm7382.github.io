@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5395,
+  "aiDecisions": 5396,
   "state": {
     "day": 1202,
     "actors": [
@@ -12,7 +12,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -30,14 +30,14 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
-        "research": 0,
+        "energy": 1,
+        "research": 1,
         "survey": [
           "terrace",
           "field",
           "bank"
         ],
-        "goal": "補足河階營地金字塔施工所需的原石。"
+        "goal": "研究施工技術，協助完成河階營地的金字塔。"
       },
       {
         "name": "納赫特",
@@ -49,7 +49,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace",
@@ -67,7 +67,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace"
@@ -168,9 +168,9 @@
         "source": {},
         "stock": {
           "food": 55,
-          "water": 11,
+          "water": 10,
           "reed": 3,
-          "stone": 8,
+          "stone": 7,
           "block": 5
         }
       },
@@ -227,10 +227,10 @@
       "terrace/金字塔": {
         "kind": "金字塔",
         "site": "terrace",
-        "stage": 4,
-        "work": 2,
-        "complete": false,
-        "condition": 0
+        "stage": 5,
+        "work": 0,
+        "complete": true,
+        "condition": 12
       }
     },
     "needs": {
@@ -286,7 +286,7 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5802,
+    "turn": 5806,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -322,7 +322,7 @@
           }
         ],
         "cursor": 1,
-        "done": 5,
+        "done": 6,
         "seen": 6032,
         "observation": "6a61485ee6eb15a784f4678ddfc92c5bed3ee89e1a2aa1127d730a41dbef6469",
         "proposals": {
@@ -357,43 +357,25 @@
         "blocked": ""
       },
       "1": {
-        "goal": "補足河階營地金字塔施工所需的原石。",
+        "goal": "研究施工技術，協助完成河階營地的金字塔。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
+            "type": "research",
+            "site": "terrace",
+            "kind": "金字塔",
             "material": "",
             "amount": 1,
-            "repeat": 1,
+            "repeat": 3,
             "until": "count"
           },
           {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
+            "type": "build",
             "site": "terrace",
-            "kind": "",
+            "kind": "金字塔",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "terrace",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
+            "repeat": 2,
             "until": "count"
           },
           {
@@ -406,10 +388,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
-        "done": 0,
-        "seen": 6057,
-        "observation": "b31051e98e31afa3fac9d818a1223d460b74b23881e3f838b93cec24c7988c86",
+        "cursor": 0,
+        "done": 1,
+        "seen": 6088,
+        "observation": "9817131d9a779af4f52337bfa2a0a3258dc6b3857005d375c1ca93f4794cc2d5",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -498,7 +480,7 @@
           }
         ],
         "cursor": 1,
-        "done": 3,
+        "done": 4,
         "seen": 6045,
         "observation": "e8167181c8642f0ef357614202e6fd9675e71e205ee6688ea22f914b7c17ba4a",
         "proposals": {
@@ -574,8 +556,8 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
-        "done": 5,
+        "cursor": 2,
+        "done": 0,
         "seen": 6037,
         "observation": "b908d1450e1a36007f6253ec6ca8c47c885c035fd4a00a7fd386c5750f2b1b66",
         "proposals": {
@@ -76103,6 +76085,76 @@
       "site": "terrace",
       "ok": true,
       "message": "外層修整，已結算一工次"
+    },
+    {
+      "id": 5803,
+      "eventSeq": 6088,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "外層修整，已結算一工次"
+    },
+    {
+      "id": "p6089",
+      "eventSeq": 6089,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5804,
+      "eventSeq": 6090,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "research",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "已完成實作研究"
+    },
+    {
+      "id": 5805,
+      "eventSeq": 6091,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1202,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "外層修整，已結算一工次"
+    },
+    {
+      "id": 5806,
+      "eventSeq": 6092,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "已完工"
     }
   ],
   "needs": [
@@ -76291,23 +76343,23 @@
       },
       "asset": {},
       "implementation": "已支援",
-      "construction": "施工中"
+      "construction": "完工"
     }
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795682123.7293189,
+    "updated": 1795682165.527183,
     "reason": ""
   },
-  "seconds": 72103.45228864148,
+  "seconds": 72105.19306275086,
   "council": {
     "food": 55,
-    "water": 29,
+    "water": 28,
     "shelter": true,
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682124.940605,
+  "snapshotAt": 1795682166.7147698,
   "recipes": {
     "茅舍": {
       "sites": [
