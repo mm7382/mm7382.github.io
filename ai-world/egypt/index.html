@@ -185,7 +185,7 @@ function render(){const s=data.state;el('population').textContent='聚落居民 
  }
  el('activity').textContent=last?last.name+' · '+last.message:'等待第一筆決策';
  listRecords('latest',data.history.slice(-15).reverse(),'等待第一筆真實居民決策。');replayFrame();lines('milestones',data.history.filter(h=>['propose','agree','build','research'].includes(h.action)||!h.ok).slice(-8).reverse().map(line),'尚無已記錄的發展事件。');
- el('count').textContent='真實 AI 決策 '+s.turn+' 次';el('phase').title=friendlyReason(data.status);history();clock()}
+ el('count').textContent='真實 AI 決策 '+(data.aiDecisions??s.turn)+' 次';el('phase').title=friendlyReason(data.status);history();clock()}
 function friendlyReason(status){
  if(!status.reason)return '';
  if(/逾時|timed out/i.test(status.reason))return '居民的 AI 回覆逾時，這一輪尚未計入。';
