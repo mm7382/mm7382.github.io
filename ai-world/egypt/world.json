@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5162,
+  "aiDecisions": 5163,
   "state": {
     "day": 1197,
     "actors": [
@@ -95,7 +95,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": "照料農田，維持莊稼生長"
@@ -134,7 +134,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 18,
+          "water": 17,
           "food": 0,
           "reed": 7
         }
@@ -236,7 +236,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5213,
+    "turn": 5214,
     "deficits": 10190,
     "autonomy": {
       "0": {
@@ -566,6 +566,15 @@
         "restWhenTired": true,
         "steps": [
           {
+            "type": "tend",
+            "site": "field",
+            "kind": "農田",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
             "type": "wait",
             "site": "field",
             "kind": "",
@@ -586,8 +595,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5256,
-        "observation": "043044d1ff2454d36ec9c173e7c896f778c457986752f93a2a9a7ee2e12a9abd",
+        "seen": 5265,
+        "observation": "8bdab830fe331a0328de93091a3340d41c3743f6f251a330ed6cd5fcd2461a38",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -64071,6 +64080,37 @@
       "site": "bank",
       "ok": true,
       "message": "已移轉 6 water"
+    },
+    {
+      "id": "p5266",
+      "eventSeq": 5266,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1197,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5214,
+      "eventSeq": 5267,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1197,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
     }
   ],
   "needs": [
@@ -64157,19 +64197,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795674755.678674,
+    "phase": "deciding",
+    "updated": 1795674790.366239,
     "reason": ""
   },
-  "seconds": 71797.44452922589,
+  "seconds": 71798.48669381272,
   "council": {
     "food": 31,
-    "water": 35,
+    "water": 34,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795674757.3409479,
+  "snapshotAt": 1795674791.416565,
   "recipes": {
     "茅舍": {
       "sites": [
