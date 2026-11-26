@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 1151,
+    "day": 1152,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -90,11 +90,11 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 1,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4955,
-    "deficits": 9673
+    "turn": 4958,
+    "deficits": 9684
   },
   "history": [
     {
@@ -54738,6 +54738,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 4956,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1151,
+      "say": "我先採集食物，補充聚落糧食。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
+    },
+    {
+      "id": 4957,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1152,
+      "say": "河岸還沒有儲水，我先採集飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 4958,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1152,
+      "say": "我先休息恢復體力，之後採集河岸的食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -54825,18 +54858,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795656959.7675672,
+    "updated": 1795657006.164799,
     "reason": ""
   },
-  "seconds": 69029.05167159386,
+  "seconds": 69075.45183980087,
   "council": {
-    "food": 0,
+    "food": 1,
     "water": 0,
     "shelter": false,
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795656960.7164302,
+  "snapshotAt": 1795657007.105269,
   "recipes": {
     "茅舍": {
       "sites": [
