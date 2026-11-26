@@ -23,12 +23,12 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "water": 6,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -45,7 +45,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,10 +60,10 @@
         "joinedDay": 72,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 6,
           "water": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": "協助補充聚落食物儲備"
@@ -79,7 +79,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": "照料農田並補充灌溉用水"
@@ -95,7 +95,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": "補充農田用水，維持莊稼的照料"
@@ -115,7 +115,7 @@
         "source": {
           "water": 154,
           "reed": 45,
-          "food": 16
+          "food": 10
         },
         "stock": {
           "food": 0,
@@ -134,7 +134,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 2,
+          "water": 0,
           "food": 4,
           "reed": 7
         }
@@ -203,10 +203,10 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 11,
-        "care": 1199,
-        "lastTended": 1196,
-        "cultivatedDays": 1,
+        "condition": 12,
+        "care": 1200,
+        "lastTended": 1197,
+        "cultivatedDays": 2,
         "plots": 1
       }
     },
@@ -236,7 +236,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5149,
+    "turn": 5154,
     "deficits": 10190,
     "autonomy": {
       "0": {
@@ -346,7 +346,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5148,
         "observation": "628832402f6495f897d982445936c6828744551c9ae2cf7e124a61622e6653f3",
@@ -410,7 +410,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5171,
         "observation": "9405ea33526b4f904fb7be2083ddd2c116158648021af2633c074549b50c9007",
@@ -492,7 +492,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5162,
         "observation": "7e51f530e5b811f0f795b377e3e7b983567c1720d4b1f802e8f468dea8744c4f",
@@ -583,7 +583,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 5174,
         "observation": "be70181c810cea16ce23f1d8806341065d9109c4a80c1edb7535544f5ece65cc",
@@ -62924,6 +62924,71 @@
       "site": "bank",
       "ok": true,
       "message": "已移轉 6 food"
+    },
+    {
+      "id": 5150,
+      "eventSeq": 5180,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 5151,
+      "eventSeq": 5181,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1197,
+      "say": "",
+      "action": "tend",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5152,
+      "eventSeq": 5182,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1197,
+      "say": "",
+      "action": "gather",
+      "kind": "food",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 food"
+    },
+    {
+      "id": 5153,
+      "eventSeq": 5183,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1197,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5154,
+      "eventSeq": 5184,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1197,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -63011,18 +63076,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795673933.184902,
+    "updated": 1795673974.720685,
     "reason": ""
   },
-  "seconds": 71763.91896776936,
+  "seconds": 71765.64890018942,
   "council": {
-    "food": 15,
-    "water": 13,
+    "food": 21,
+    "water": 11,
     "shelter": true,
-    "ready": true
+    "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795673935.318357,
+  "snapshotAt": 1795673976.916234,
   "recipes": {
     "茅舍": {
       "sites": [
