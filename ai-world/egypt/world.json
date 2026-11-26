@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5465,
+  "aiDecisions": 5467,
   "state": {
     "day": 1204,
     "actors": [
@@ -21,7 +21,7 @@
           "bank",
           "quarry"
         ],
-        "goal": "協助河階營地完成工坊建設。"
+        "goal": "照料農田，維持聚落的食物來源。"
       },
       {
         "name": "帕伊",
@@ -31,9 +31,9 @@
           "water": 0,
           "food": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 4
         },
-        "energy": 7,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
@@ -114,14 +114,14 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
           "desert",
           "quarry"
         ],
-        "goal": "為河階營地的工坊補充原石"
+        "goal": "協助完成河階營地的工坊"
       }
     ],
     "sites": {
@@ -207,7 +207,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 120
+          "stone": 116
         },
         "stock": {
           "water": 16,
@@ -263,10 +263,10 @@
       "terrace/工坊": {
         "kind": "工坊",
         "site": "terrace",
-        "stage": 1,
-        "work": 2,
-        "complete": false,
-        "condition": 0
+        "stage": 2,
+        "work": 0,
+        "complete": true,
+        "condition": 12
       }
     },
     "needs": {
@@ -346,16 +346,16 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 6017,
+    "turn": 6020,
     "deficits": 10226,
     "autonomy": {
       "0": {
-        "goal": "協助河階營地完成工坊建設。",
+        "goal": "照料農田，維持聚落的食物來源。",
         "restWhenTired": true,
         "steps": [
           {
             "type": "move",
-            "site": "terrace",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -363,17 +363,17 @@
             "until": "count"
           },
           {
-            "type": "build",
-            "site": "terrace",
-            "kind": "工坊",
+            "type": "tend",
+            "site": "field",
+            "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "complete"
+            "until": "count"
           },
           {
             "type": "think",
-            "site": "terrace",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -381,10 +381,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
-        "done": 1,
-        "seen": 6352,
-        "observation": "431bb518d53adc29d6dae141561b47b71dd5e6206e485662881495db0cd08e32",
+        "cursor": 0,
+        "done": 0,
+        "seen": 6374,
+        "observation": "299ecb45b34f2e6307ddf01a0ab452a952d005329d49b233801f13e98173943a",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -438,7 +438,7 @@
             "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
           }
         },
-        "blocked": ""
+        "blocked": "計畫路徑中斷"
       },
       "1": {
         "goal": "補足河階營地工坊組裝所需的原石，並協助完工。",
@@ -499,7 +499,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6360,
         "observation": "4584a5522a8fc35a5e131717e6ce1f06e83b94de69cf444dee0987942a91d3f9",
@@ -886,35 +886,17 @@
         "blocked": ""
       },
       "5": {
-        "goal": "為河階營地的工坊補充原石",
+        "goal": "協助完成河階營地的工坊",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
+            "type": "build",
             "site": "terrace",
-            "kind": "",
+            "kind": "工坊",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "terrace",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
@@ -926,10 +908,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 1,
         "done": 0,
-        "seen": 6350,
-        "observation": "86d15a13aeb8f07673bda760dd5b09c69321fb9020719f2028306d84b4157e68",
+        "seen": 6372,
+        "observation": "ed78728f975352acb7c580f5acec4f6f06792413723bde926b0415c8fd913bd1",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -80386,6 +80368,81 @@
       "site": "terrace",
       "ok": true,
       "message": "組裝，已結算一工次"
+    },
+    {
+      "id": "p6373",
+      "eventSeq": 6373,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6018,
+      "eventSeq": 6374,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "build",
+      "kind": "工坊",
+      "site": "terrace",
+      "ok": true,
+      "message": "已完工"
+    },
+    {
+      "id": "p6375",
+      "eventSeq": 6375,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6019,
+      "eventSeq": 6376,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "terrace",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": 6020,
+      "eventSeq": 6377,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 4 stone"
     }
   ],
   "needs": [
@@ -80512,7 +80569,7 @@
       },
       "asset": {},
       "implementation": "已支援",
-      "construction": "施工中"
+      "construction": "完工"
     },
     {
       "id": "N5733",
@@ -80694,10 +80751,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795684771.692893,
+    "updated": 1795684814.373634,
     "reason": ""
   },
-  "seconds": 72213.3654602959,
+  "seconds": 72215.14727622303,
   "council": {
     "food": 51,
     "water": 34,
@@ -80705,7 +80762,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795684773.0042071,
+  "snapshotAt": 1795684815.681848,
   "recipes": {
     "茅舍": {
       "sites": [
