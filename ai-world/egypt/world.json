@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5214,
+  "aiDecisions": 5216,
   "state": {
     "day": 1198,
     "actors": [
@@ -9,10 +9,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,15 +60,15 @@
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "field",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
-        "goal": "照料農田，維持糧食供應"
+        "goal": "補充農田的水，維持糧食供應"
       },
       {
         "name": "胡伊",
@@ -82,7 +82,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 1,
         "survey": [
           "terrace"
@@ -118,7 +118,7 @@
           "terrace"
         ],
         "source": {
-          "water": 100,
+          "water": 94,
           "reed": 42,
           "food": 0
         },
@@ -161,8 +161,8 @@
           "food": 28,
           "water": 27,
           "reed": 10,
-          "stone": 2,
-          "block": 6
+          "stone": 0,
+          "block": 7
         }
       },
       "desert": {
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5349,
+    "turn": 5353,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -295,7 +295,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5440,
         "observation": "9f237187a992eef7a8b00b57b6e064e5a74dda1a03d6e5708514e6ae9b213d86",
@@ -458,15 +458,42 @@
         "blocked": ""
       },
       "3": {
-        "goal": "照料農田，維持糧食供應",
+        "goal": "補充農田的水，維持糧食供應",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "tend",
-            "site": "field",
-            "kind": "農田",
+            "type": "move",
+            "site": "bank",
+            "kind": "",
             "material": "",
             "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "bank",
+            "kind": "",
+            "material": "water",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "field",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "field",
+            "kind": "",
+            "material": "water",
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
@@ -482,8 +509,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5446,
-        "observation": "c25336daca758d57fd81baeb32d27c7edad47e58046d95a89d283bed64d1666d",
+        "seen": 5453,
+        "observation": "8c201a73191d402f4a208c96eb4c29c494b9be89c0b5644861c09b21ae685d56",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -571,8 +598,8 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
-        "done": 2,
+        "cursor": 5,
+        "done": 0,
         "seen": 5396,
         "observation": "ec7e605a8bceb53992ed7d9351f10556e323e93b03e74b484685756e62bc8b4b",
         "proposals": {
@@ -635,10 +662,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 1,
         "done": 0,
-        "seen": 5438,
-        "observation": "6463e593309f1f83efebcbaaab8c2abb882d0eb964e5beca5bb1f97ed5fd8812",
+        "seen": 5456,
+        "observation": "053c45228a37c9b3beb44f3f9a94d6ad68522e7fc6b748c2a5941478cbd04687",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -66826,6 +66853,94 @@
       "site": "field",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p5454",
+      "eventSeq": 5454,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5350,
+      "eventSeq": 5455,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 5351,
+      "eventSeq": 5456,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1198,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": "p5457",
+      "eventSeq": 5457,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5352,
+      "eventSeq": 5458,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1198,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5353,
+      "eventSeq": 5459,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1198,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
     }
   ],
   "needs": [
@@ -66912,19 +67027,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795676296.4442382,
+    "phase": "waiting",
+    "updated": 1795676337.394192,
     "reason": ""
   },
-  "seconds": 71861.25919291716,
+  "seconds": 71863.31396656824,
   "council": {
     "food": 38,
-    "water": 34,
+    "water": 40,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795676297.544723,
+  "snapshotAt": 1795676338.471909,
   "recipes": {
     "茅舍": {
       "sites": [
