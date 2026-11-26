@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5387,
+  "aiDecisions": 5389,
   "state": {
     "day": 1202,
     "actors": [
@@ -12,13 +12,13 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
-        "research": 1,
+        "energy": 0,
+        "research": 2,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "取得施工知識，協助建造河階營地的金字塔。"
+        "goal": "完成施工研究，協助建造河階營地的金字塔。"
       },
       {
         "name": "帕伊",
@@ -85,12 +85,12 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace"
         ],
-        "goal": "在河階營地推進金字塔工程，先交付原石並施工"
+        "goal": "在河階營地建造金字塔"
       },
       {
         "name": "塞努",
@@ -167,9 +167,9 @@
         "source": {},
         "stock": {
           "food": 55,
-          "water": 21,
+          "water": 20,
           "reed": 9,
-          "stone": 10,
+          "stone": 9,
           "block": 27
         }
       },
@@ -271,16 +271,17 @@
         "approved": [
           2,
           3,
-          4
+          4,
+          5
         ],
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5752,
+    "turn": 5755,
     "deficits": 10217,
     "autonomy": {
       "0": {
-        "goal": "取得施工知識，協助建造河階營地的金字塔。",
+        "goal": "完成施工研究，協助建造河階營地的金字塔。",
         "restWhenTired": true,
         "steps": [
           {
@@ -289,7 +290,7 @@
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 3,
+            "repeat": 2,
             "until": "count"
           },
           {
@@ -313,8 +314,8 @@
         ],
         "cursor": 0,
         "done": 1,
-        "seen": 6022,
-        "observation": "c33f4c77e0374e6c5b4f306b76e663b293abae0e35ef75892c0e5c187b0d4a7c",
+        "seen": 6032,
+        "observation": "6a61485ee6eb15a784f4678ddfc92c5bed3ee89e1a2aa1127d730a41dbef6469",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -338,7 +339,8 @@
             "approved": [
               2,
               3,
-              4
+              4,
+              5
             ],
             "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
@@ -639,27 +641,9 @@
         "blocked": ""
       },
       "4": {
-        "goal": "在河階營地推進金字塔工程，先交付原石並施工",
+        "goal": "在河階營地建造金字塔",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "drop",
-            "site": "terrace",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "agree",
-            "site": "terrace",
-            "kind": "金字塔",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "build",
             "site": "terrace",
@@ -679,10 +663,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 0,
         "done": 0,
-        "seen": 6008,
-        "observation": "0bc43e65fa3f9dff7edbea36427476144f0c7e71243dd7c10b7ab8fcd5a59e92",
+        "seen": 6029,
+        "observation": "3a5ce1045730e42b3f7d80f7d0eb18e4ae3c0e444664449caf316020c2966636",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -716,7 +700,8 @@
             "proposer": 2,
             "approved": [
               2,
-              3
+              3,
+              4
             ],
             "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
@@ -773,7 +758,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6020,
         "observation": "0824ff7eefa02b102b5b23c143f34c8c0fd6d4cae97a5cb79953b071d11c1349",
@@ -75347,6 +75332,81 @@
       "site": "terrace",
       "ok": true,
       "message": "已完成實作研究"
+    },
+    {
+      "id": "p6030",
+      "eventSeq": 6030,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5753,
+      "eventSeq": 6031,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5754,
+      "eventSeq": 6032,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "agree",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "本人已同意此處的提案"
+    },
+    {
+      "id": "p6033",
+      "eventSeq": 6033,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5755,
+      "eventSeq": 6034,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "research",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已完成實作研究"
     }
   ],
   "needs": [
@@ -75484,7 +75544,8 @@
       "approved": [
         2,
         3,
-        4
+        4,
+        5
       ],
       "purpose": "在河階營地提議興建金字塔，並準備所需原石",
       "source": "data/records/plan-000005995.json",
@@ -75539,18 +75600,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795681675.868665,
+    "updated": 1795681718.732542,
     "reason": ""
   },
-  "seconds": 72084.45278472295,
+  "seconds": 72086.25249759795,
   "council": {
     "food": 55,
-    "water": 39,
+    "water": 38,
     "shelter": true,
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681677.111247,
+  "snapshotAt": 1795681719.987951,
   "recipes": {
     "茅舍": {
       "sites": [
