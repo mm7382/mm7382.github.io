@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5427,
+  "aiDecisions": 5429,
   "state": {
     "day": 1203,
     "actors": [
@@ -70,12 +70,12 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace"
         ],
-        "goal": "補足河階神廟施工架所需的蘆葦"
+        "goal": "協助完成河階神廟施工"
       },
       {
         "name": "胡伊",
@@ -95,7 +95,7 @@
           "terrace",
           "quarry"
         ],
-        "goal": "與塞努在石灰岩露頭合作興建獅身人面像"
+        "goal": "與塞努合作推進石灰岩露頭的獅身人面像"
       },
       {
         "name": "塞努",
@@ -243,7 +243,7 @@
         "kind": "神廟",
         "site": "terrace",
         "stage": 2,
-        "work": 1,
+        "work": 2,
         "complete": false,
         "condition": 0
       },
@@ -333,7 +333,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5889,
+    "turn": 5891,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -623,44 +623,17 @@
         "blocked": ""
       },
       "3": {
-        "goal": "補足河階神廟施工架所需的蘆葦",
+        "goal": "協助完成河階神廟施工",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "bank",
-            "kind": "",
+            "type": "build",
+            "site": "terrace",
+            "kind": "神廟",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "bank",
-            "kind": "",
-            "material": "reed",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "terrace",
-            "kind": "",
-            "material": "reed",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
@@ -672,10 +645,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
-        "done": 0,
-        "seen": 6174,
-        "observation": "61eb31ae9b7f36ebf29377b6f7dfb2a414493fb9cbc943481599d1d0986a33ac",
+        "cursor": 0,
+        "done": 1,
+        "seen": 6206,
+        "observation": "239be322a5093120948929b3497be8b354bc5d4453042037e84eb4913a6ce4f4",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -756,45 +729,9 @@
         "blocked": ""
       },
       "4": {
-        "goal": "與塞努在石灰岩露頭合作興建獅身人面像",
+        "goal": "與塞努合作推進石灰岩露頭的獅身人面像",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "build",
-            "site": "quarry",
-            "kind": "獅身人面像",
-            "material": "",
-            "amount": 1,
-            "repeat": 6,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 2,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 2,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "build",
-            "site": "quarry",
-            "kind": "獅身人面像",
-            "material": "",
-            "amount": 1,
-            "repeat": 5,
-            "until": "count"
-          },
           {
             "type": "think",
             "site": "quarry",
@@ -805,10 +742,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 0,
         "done": 0,
-        "seen": 6132,
-        "observation": "c33fea36482484bb3ab5033825473bf928fa40acac086c63fecb6bcdf5ef88b2",
+        "seen": 6208,
+        "observation": "5b8ae21a104825602c51eb97d1ea7211088e649ee212c588584aedbe05b91867",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -77989,6 +77926,68 @@
       "site": "terrace",
       "ok": true,
       "message": "施工架，已結算一工次"
+    },
+    {
+      "id": "p6207",
+      "eventSeq": 6207,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5890,
+      "eventSeq": 6208,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "施工架，已結算一工次"
+    },
+    {
+      "id": "p6209",
+      "eventSeq": 6209,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5891,
+      "eventSeq": 6210,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
     }
   ],
   "needs": [
@@ -78296,11 +78295,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795683277.0481339,
+    "phase": "deciding",
+    "updated": 1795683320.43094,
     "reason": ""
   },
-  "seconds": 72151.48252351671,
+  "seconds": 72152.93218884309,
   "council": {
     "food": 53,
     "water": 20,
@@ -78308,7 +78307,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683278.382452,
+  "snapshotAt": 1795683321.773516,
   "recipes": {
     "茅舍": {
       "sites": [
