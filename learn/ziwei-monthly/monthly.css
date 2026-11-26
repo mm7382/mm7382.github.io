@@ -8,12 +8,13 @@ header,main{width:min(1200px,100% - 2rem);margin:0 auto}
 header{display:flex;justify-content:space-between;gap:1rem;padding:1rem 0}
 header a{min-height:44px;display:inline-flex;align-items:center}
 .hero{display:grid;grid-template-columns:4fr 6fr;align-items:center;background:var(--violet);border-block:1px solid var(--line)}
-.hero-copy{padding:clamp(1.25rem,4.4vw,4.8rem)}
+.hero-copy{min-width:0;padding:clamp(1.25rem,4.4vw,4.8rem)}
 img{display:block;width:100%;height:auto}
 .hero img{height:100%;object-fit:cover}
 .date,h1,h2,h3,.headline{font-family:"Songti TC","Noto Serif TC",Georgia,serif}
 .date{margin:0;color:var(--gold);letter-spacing:.15em;font-size:clamp(1.4rem,3vw,2.5rem)}
-h1{font-size:clamp(2.4rem,6vw,5rem);line-height:1.12;color:var(--gold);margin:.24em 0}
+h1{font-size:clamp(2.4rem,6vw,5rem);text-wrap:balance;line-height:1.12;color:var(--gold);margin:.24em 0}
+:lang(zh-Hant) h1{font-size:clamp(2.15rem,4.75vw,4.25rem)}
 .headline{font-size:1.35rem;margin:.75rem 0 1.5rem}
 .read{display:inline-block;background:linear-gradient(112deg,#ffedb5,#d29a53);color:#26172b;padding:.65rem 1.3rem;border-radius:50px;text-decoration:none;font-weight:700}
 .reading{max-width:900px;margin:auto}
