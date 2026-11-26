@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5492,
+  "aiDecisions": 5493,
   "state": {
     "day": 1205,
     "actors": [
@@ -23,7 +23,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "勘查沙漠台地，待石塊備足後協助興建金字塔。"
+        "goal": "支援沙漠台地金字塔分層堆砌，待材料或工程狀況變化後再評估。"
       },
       {
         "name": "帕伊",
@@ -98,9 +98,9 @@
           "water": 0,
           "reed": 0,
           "stone": 0,
-          "block": 2
+          "block": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -121,7 +121,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -203,8 +203,8 @@
         "source": {},
         "stock": {
           "reed": 0,
-          "stone": 2,
-          "block": 11
+          "stone": 0,
+          "block": 14
         }
       },
       "quarry": {
@@ -378,21 +378,21 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6124,
+    "turn": 6127,
     "deficits": 10232,
     "autonomy": {
       "0": {
-        "goal": "勘查沙漠台地，待石塊備足後協助興建金字塔。",
+        "goal": "支援沙漠台地金字塔分層堆砌，待材料或工程狀況變化後再評估。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "survey",
+            "type": "build",
             "site": "desert",
-            "kind": "",
+            "kind": "金字塔",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
@@ -404,10 +404,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 6493,
-        "observation": "296d99cdf53c738d8cef073d5a0996f8c0c23fb75c649d9828649898c0179db8",
+        "seen": 6508,
+        "observation": "a802611feb2e5c18092e04821aa469f96c294ebcb0cdc0d948ba2da4c485ce2c",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -473,7 +473,7 @@
             "purpose": "在沙漠台地探索興建另一座金字塔"
           }
         },
-        "blocked": ""
+        "blocked": "材料或補給不足"
       },
       "1": {
         "goal": "加工石塊，支援沙漠台地金字塔。",
@@ -952,7 +952,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6483,
         "observation": "e3f51968448984952bee052afe5887abcf3b6ff96b9e12e53afd2b1cee4f1d02",
@@ -1033,8 +1033,8 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 2,
+        "cursor": 1,
+        "done": 0,
         "seen": 6485,
         "observation": "ab53bc736438559fa80aa9e2845b9561e52d80e714f0c76498138a822fb9e759",
         "proposals": {
@@ -82386,6 +82386,63 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6125,
+      "eventSeq": 6507,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 2 block"
+    },
+    {
+      "id": 6126,
+      "eventSeq": 6508,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1205,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": "p6509",
+      "eventSeq": 6509,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6127,
+      "eventSeq": 6510,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "desert",
+      "ok": false,
+      "message": "材料或補給不足"
     }
   ],
   "needs": [
@@ -82753,11 +82810,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795685885.858936,
+    "phase": "deciding",
+    "updated": 1795685926.630655,
     "reason": ""
   },
-  "seconds": 72260.11659174907,
+  "seconds": 72261.46682461366,
   "council": {
     "food": 50,
     "water": 35,
@@ -82765,7 +82822,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685887.171013,
+  "snapshotAt": 1795685927.9974248,
   "recipes": {
     "茅舍": {
       "sites": [
