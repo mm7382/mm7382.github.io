@@ -36,7 +36,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -73,14 +73,14 @@
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
           "stone": 6,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -102,7 +102,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -205,8 +205,8 @@
         "source": {},
         "stock": {
           "reed": 8,
-          "stone": 10,
-          "block": 2
+          "stone": 8,
+          "block": 3
         }
       },
       "quarry": {
@@ -294,7 +294,7 @@
         "kind": "神廟",
         "site": "desert",
         "stage": 3,
-        "work": 1,
+        "work": 2,
         "complete": false,
         "condition": 0
       }
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6283,
+    "turn": 6287,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -723,7 +723,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6698,
         "observation": "8735dd1e0a51cb1391ffdf12172119a8dac98d4739c7f7cc3509e65b7af05e10",
         "proposals": {
@@ -853,7 +853,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6684,
         "observation": "42d832ddfe41b0b67551a77d31be2ff13c7abce57170ad24e193014e8d18e197",
@@ -1020,7 +1020,7 @@
           }
         ],
         "cursor": 4,
-        "done": 1,
+        "done": 2,
         "seen": 6657,
         "observation": "3cb5dcd15f3819195eaec754b6f115cb225f64f6522baceb4564f05587601480",
         "proposals": {
@@ -85250,6 +85250,58 @@
       "site": "desert",
       "ok": true,
       "message": "已移轉 4 reed"
+    },
+    {
+      "id": 6284,
+      "eventSeq": 6705,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6285,
+      "eventSeq": 6706,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "柱廊與屋頂，已結算一工次"
+    },
+    {
+      "id": 6286,
+      "eventSeq": 6707,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 6287,
+      "eventSeq": 6708,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
     }
   ],
   "needs": [
@@ -85676,11 +85728,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795687520.41892,
+    "phase": "deciding",
+    "updated": 1795687559.4315488,
     "reason": ""
   },
-  "seconds": 72328.1830095667,
+  "seconds": 72329.43397135666,
   "council": {
     "food": 49,
     "water": 33,
@@ -85688,7 +85740,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687521.7821782,
+  "snapshotAt": 1795687560.870434,
   "recipes": {
     "茅舍": {
       "sites": [
