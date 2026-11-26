@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5360,
+  "aiDecisions": 5362,
   "state": {
     "day": 1201,
     "actors": [
@@ -18,7 +18,7 @@
           "terrace",
           "field"
         ],
-        "goal": "將身上的水送到農田儲備"
+        "goal": "將身上的水送到農田儲備，之後再評估需要"
       },
       {
         "name": "帕伊",
@@ -258,11 +258,11 @@
         "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
       }
     },
-    "turn": 5718,
+    "turn": 5720,
     "deficits": 10212,
     "autonomy": {
       "0": {
-        "goal": "將身上的水送到農田儲備",
+        "goal": "將身上的水送到農田儲備，之後再評估需要",
         "restWhenTired": true,
         "steps": [
           {
@@ -295,9 +295,22 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5956,
-        "observation": "f41d6cbfd837045a45cb28a81eaf2fa7379a27037fac3fa888bb8c87fd708ca8",
-        "proposals": {},
+        "seen": 5968,
+        "observation": "6e664c439042706dc67652f2f28dc626d8ac86264610a3e6719fee6f0cd4ef36",
+        "proposals": {
+          "terrace/工坊": {
+            "id": "N5717",
+            "record": 5717,
+            "kind": "工坊",
+            "site": "terrace",
+            "proposer": 4,
+            "approved": [
+              4,
+              5
+            ],
+            "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
+          }
+        },
         "blocked": "計畫路徑中斷"
       },
       "1": {
@@ -334,8 +347,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5958,
-        "observation": "24738bf58db2e7651fa71e147e72fe267e4a76af9eb595efa4eb14da9024a470",
+        "seen": 5970,
+        "observation": "95b0c7c4f89a8a787b20c590e3ea0dfc0dfd1c84874d5d1fdea6333c18b0d870",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -360,6 +373,18 @@
               2
             ],
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
+          },
+          "terrace/工坊": {
+            "id": "N5717",
+            "record": 5717,
+            "kind": "工坊",
+            "site": "terrace",
+            "proposer": 4,
+            "approved": [
+              4,
+              5
+            ],
+            "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
         },
         "blocked": "計畫路徑中斷"
@@ -74244,6 +74269,68 @@
       "site": "terrace",
       "ok": true,
       "message": "本人已同意此處的提案"
+    },
+    {
+      "id": "p5969",
+      "eventSeq": 5969,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5719,
+      "eventSeq": 5970,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5971",
+      "eventSeq": 5971,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5720,
+      "eventSeq": 5972,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
     }
   ],
   "needs": [
@@ -74373,11 +74460,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795680959.702316,
+    "phase": "waiting",
+    "updated": 1795681003.3654962,
     "reason": ""
   },
-  "seconds": 72055.09062218654,
+  "seconds": 72057.62233691396,
   "council": {
     "food": 58,
     "water": 45,
@@ -74385,7 +74472,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795680965.606446,
+  "snapshotAt": 1795681014.8591459,
   "recipes": {
     "茅舍": {
       "sites": [
