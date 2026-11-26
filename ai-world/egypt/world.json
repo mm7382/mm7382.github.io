@@ -1,19 +1,19 @@
 {
-  "aiDecisions": 5454,
+  "aiDecisions": 5455,
   "state": {
     "day": 1204,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 6,
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -28,12 +28,12 @@
         "age": 31,
         "site": "quarry",
         "bag": {
-          "water": 6,
+          "water": 0,
           "food": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -53,7 +53,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -210,7 +210,7 @@
           "stone": 132
         },
         "stock": {
-          "water": 0,
+          "water": 4,
           "stone": 4
         }
       }
@@ -256,7 +256,7 @@
         "kind": "獅身人面像",
         "site": "quarry",
         "stage": 4,
-        "work": 0,
+        "work": 1,
         "complete": false,
         "condition": 0
       }
@@ -338,7 +338,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5981,
+    "turn": 5985,
     "deficits": 10226,
     "autonomy": {
       "0": {
@@ -391,7 +391,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6307,
         "observation": "a42116a66929a280dafd6bace1f1d7c2fdb9d8737e59b434e996788c49781736",
@@ -509,7 +509,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6283,
         "observation": "2782ed7c0093fd81d6ce51e75b06b71f007601407e01c92a9893120e2e3ecd4d",
@@ -616,9 +616,9 @@
           }
         ],
         "cursor": 0,
-        "done": 0,
-        "seen": 6294,
-        "observation": "df65d76a233df876feeb68d4b78ef098390656304f5e93880cf2c0bd3d955e85",
+        "done": 1,
+        "seen": 6328,
+        "observation": "752653e1aaefa641b2d819056d2ca6331f7247fa323aa35248032fc127c19639",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -670,7 +670,7 @@
             "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
           }
         },
-        "blocked": "材料或補給不足"
+        "blocked": ""
       },
       "3": {
         "goal": "協助完成石灰岩露頭的獅身人面像",
@@ -79703,6 +79703,76 @@
       "site": "terrace",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 5982,
+      "eventSeq": 6326,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5983,
+      "eventSeq": 6327,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 5984,
+      "eventSeq": 6328,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": "p6329",
+      "eventSeq": 6329,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5985,
+      "eventSeq": 6330,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1204,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "細雕與修面，已結算一工次"
     }
   ],
   "needs": [
@@ -80011,18 +80081,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795684379.576722,
+    "updated": 1795684421.209845,
     "reason": ""
   },
-  "seconds": 72197.39180489845,
+  "seconds": 72199.12548703382,
   "council": {
     "food": 51,
-    "water": 36,
+    "water": 34,
     "shelter": true,
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795684380.82982,
+  "snapshotAt": 1795684422.4928691,
   "recipes": {
     "茅舍": {
       "sites": [
