@@ -68,13 +68,6 @@ body[data-viewpoint="Michael"] .stopbar {position:absolute;right:18px;top:10px;b
 main:has(#book-reading .hud:not([hidden])) .stopbar {display:none;}
 body[data-viewpoint="Michael"] #hotspots {opacity:.85;}
 body:has(dialog[open]) .book-page {visibility:hidden;}
-body:has(#lucy-video-frame iframe) #lucy-cut {
-  position:fixed;inset:0;width:100%;height:100%;transform:none;margin:0;background:#080807;
-  display:flex;align-items:center;justify-content:center;
-}
-body:has(#lucy-video-frame iframe) .lucy-cut::before {display:none;}
-body:has(#lucy-video-frame iframe) .lucy-cut-screen {width:min(100vw,calc((100dvh - 96px)*16/9));border:0;border-radius:0;box-shadow:none;}
-body:has(#lucy-video-frame iframe) .lucy-video-controls {right:max(10px,env(safe-area-inset-right));top:max(3px,env(safe-area-inset-top));bottom:auto;}
 @media (max-width:900px) {
   .book-page,.book-page:has(.hud:not([hidden])) {grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;}
   #book-reading {grid-column:1/-1;grid-row:2;}
@@ -119,15 +112,27 @@ body[data-viewpoint="Lucy"] :is(#project-status,.book-nav) {display:none;}
 body[data-viewpoint="Lucy"] #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
 #return-bridge {border-left:1px solid var(--rule);padding-inline:clamp(10px,1.6vw,24px) 0;white-space:nowrap;}
 #return-bridge span {margin-left:.65em;}
-.study-play {
-  position:absolute;z-index:4;left:max(3.6vw,env(safe-area-inset-left));
-  bottom:clamp(12px,2.7vh,28px);min-height:44px;padding:6px 15px;
-  color:#fff9ee;background:#29221be8;border:1px solid #fff9ee72;
-  font:15px/1.4 var(--serif);letter-spacing:.06em;
+/* A film window in the room, matching the homepage’s inline placement. */
+#lucy-cut {
+  left:max(3.6vw,env(safe-area-inset-left));
+  bottom:clamp(12px,2.7vh,28px);
+  width:clamp(205px,26vw,390px);
+  max-width:calc(100% - 32px);
 }
-.study-play:hover {background:#45382c;}
-.study-play span {margin-right:.4em;}
-body.switching .study-play,body:has(dialog[open]) .study-play {visibility:hidden;}
+.lucy-cut-screen {border:1px solid #a88b5f;border-radius:6px;overflow:hidden;}
+.lucy-cut-screen .study-play {
+  position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;color:#fff9ee;
+  background:#29221b;font:15px/1.4 var(--serif);
+}
+.scene #lucy-video-start img {width:100%;height:100%;object-fit:cover;display:block;}
+.inline-play-label {
+  position:absolute;inset:auto 0 0;display:flex;align-items:center;gap:.6em;
+  min-height:44px;padding:7px 12px;
+  background:linear-gradient(transparent,#211a14f5);text-shadow:0 1px 3px #000;
+}
+#lucy-video-start:focus-visible {outline-offset:-4px;}
+.lucy-video-controls {bottom:calc(100% + 5px);right:0;}
+body.switching #lucy-cut,body:has(dialog[open]) #lucy-cut {visibility:hidden;}
 @media (max-width:900px) {
   #return-bridge {grid-column:2;grid-row:1;justify-self:end;}
 }
@@ -137,3 +142,13 @@ body.switching .study-play,body:has(dialog[open]) .study-play {visibility:hidden
 @media (max-height:520px) {
   .book-page:has(.hud:not([hidden])) #return-bridge {grid-column:3;}
 }
+
+@media(max-width:600px) {#lucy-cut {left:max(16px,env(safe-area-inset-left));width:min(65vw,265px);}}
+
+.scene #study-video {
+  position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;
+  object-fit:contain;background:#09101a;border:2px solid #a88b5f;border-radius:6px;
+}
+#lucy-cut {padding:8px;background:#101722e8;border:1px solid #846c46;}
+.study-caption {display:flex;align-items:center;justify-content:space-between;gap:6px;color:#fff5df;font:14px/1.4 var(--serif);padding-left:4px;}
+.study-caption button {padding:5px 7px;min-height:40px;border:0;}
