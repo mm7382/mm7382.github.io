@@ -10,10 +10,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 1,
+          "reed": 0,
           "stone": 0
         },
-        "energy": 7,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
@@ -33,7 +33,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -54,7 +54,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -73,10 +73,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "stone": 6,
+          "stone": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -94,9 +94,9 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 4
+          "stone": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -117,7 +117,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -182,7 +182,7 @@
           "food": 50,
           "water": 5,
           "reed": 0,
-          "stone": 0,
+          "stone": 6,
           "block": 3
         }
       },
@@ -198,8 +198,8 @@
         ],
         "source": {},
         "stock": {
-          "reed": 5,
-          "stone": 6,
+          "reed": 6,
+          "stone": 10,
           "block": 3
         }
       },
@@ -218,7 +218,8 @@
         },
         "stock": {
           "water": 12,
-          "stone": 6
+          "stone": 4,
+          "block": 1
         }
       }
     },
@@ -278,8 +279,8 @@
       "desert/金字塔": {
         "kind": "金字塔",
         "site": "desert",
-        "stage": 1,
-        "work": 3,
+        "stage": 2,
+        "work": 0,
         "complete": false,
         "condition": 0
       }
@@ -373,7 +374,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6083,
+    "turn": 6089,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -462,7 +463,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6406,
         "observation": "17367231130d4c5baef452c6f38bbc67d7038988401cb79f16c70d99139e6604",
@@ -611,7 +612,7 @@
           }
         ],
         "cursor": 3,
-        "done": 0,
+        "done": 1,
         "seen": 6432,
         "observation": "ba30459eeffaef3df6f2515d4b0a724b1514527879a6470aa2cd61417ba86283",
         "proposals": {
@@ -874,7 +875,7 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
+        "cursor": 5,
         "done": 0,
         "seen": 6412,
         "observation": "517f9fa285d0fc7a2d89cce25cadab9f10f1d7c055edc1e77fed0de5aa2c7fe7",
@@ -1019,7 +1020,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6436,
         "observation": "9ec8682988d331656c16b79ac3470d5c7ada2c119a7adced0a611f768a4d25f2",
@@ -1137,7 +1138,7 @@
           }
         ],
         "cursor": 4,
-        "done": 0,
+        "done": 1,
         "seen": 6423,
         "observation": "625e08b3c44fc28da03b285ce484d319ff99385696a877d71c20f46253f833ca",
         "proposals": {
@@ -81812,6 +81813,84 @@
       "site": "desert",
       "ok": true,
       "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 6084,
+      "eventSeq": 6458,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1205,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "desert",
+      "ok": true,
+      "message": "整平基礎，已結算一工次"
+    },
+    {
+      "id": 6085,
+      "eventSeq": 6459,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 1 reed"
+    },
+    {
+      "id": 6086,
+      "eventSeq": 6460,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": 6087,
+      "eventSeq": 6461,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6088,
+      "eventSeq": 6462,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6089,
+      "eventSeq": 6463,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 4 stone"
     }
   ],
   "needs": [
@@ -82180,10 +82259,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795685486.6669078,
+    "updated": 1795685530.7382898,
     "reason": ""
   },
-  "seconds": 72243.49303950772,
+  "seconds": 72245.32841755808,
   "council": {
     "food": 50,
     "water": 35,
@@ -82191,7 +82270,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685487.96076,
+  "snapshotAt": 1795685532.025995,
   "recipes": {
     "茅舍": {
       "sites": [
