@@ -6,14 +6,14 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 6,
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -26,14 +26,14 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "water": 6,
           "food": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -94,7 +94,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 9,
         "research": 3,
         "survey": [
           "terrace",
@@ -338,7 +338,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5976,
+    "turn": 5981,
     "deficits": 10226,
     "autonomy": {
       "0": {
@@ -509,7 +509,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6283,
         "observation": "2782ed7c0093fd81d6ce51e75b06b71f007601407e01c92a9893120e2e3ecd4d",
@@ -79638,6 +79638,71 @@
       "site": "quarry",
       "ok": true,
       "message": "等候"
+    },
+    {
+      "id": 5977,
+      "eventSeq": 6321,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5978,
+      "eventSeq": 6322,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 5979,
+      "eventSeq": 6323,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1204,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5980,
+      "eventSeq": 6324,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1204,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5981,
+      "eventSeq": 6325,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1204,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -79946,10 +80011,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795684343.218994,
+    "updated": 1795684379.576722,
     "reason": ""
   },
-  "seconds": 72195.87760405816,
+  "seconds": 72197.39180489845,
   "council": {
     "food": 51,
     "water": 36,
@@ -79957,7 +80022,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795684344.4516711,
+  "snapshotAt": 1795684380.82982,
   "recipes": {
     "茅舍": {
       "sites": [
