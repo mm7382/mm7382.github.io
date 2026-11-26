@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5398,
+  "aiDecisions": 5399,
   "state": {
     "day": 1202,
     "actors": [
@@ -9,16 +9,16 @@
         "site": "terrace",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 5,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "完成施工研究，協助建造河階營地的金字塔。"
+        "goal": "為石灰岩露頭的獅身人面像準備施工用水。"
       },
       {
         "name": "帕伊",
@@ -30,8 +30,8 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
-        "research": 1,
+        "energy": 0,
+        "research": 2,
         "survey": [
           "terrace",
           "field",
@@ -168,9 +168,9 @@
         "source": {},
         "stock": {
           "food": 55,
-          "water": 10,
+          "water": 4,
           "reed": 3,
-          "stone": 7,
+          "stone": 6,
           "block": 5
         }
       },
@@ -286,34 +286,43 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5808,
+    "turn": 5810,
     "deficits": 10217,
     "autonomy": {
       "0": {
-        "goal": "完成施工研究，協助建造河階營地的金字塔。",
+        "goal": "為石灰岩露頭的獅身人面像準備施工用水。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "research",
+            "type": "take",
             "site": "terrace",
             "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 2,
+            "material": "water",
+            "amount": 5,
+            "repeat": 1,
             "until": "count"
           },
           {
-            "type": "build",
-            "site": "terrace",
-            "kind": "金字塔",
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "complete"
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "quarry",
+            "kind": "",
+            "material": "water",
+            "amount": 5,
+            "repeat": 1,
+            "until": "count"
           },
           {
             "type": "think",
-            "site": "terrace",
+            "site": "quarry",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -322,9 +331,9 @@
           }
         ],
         "cursor": 1,
-        "done": 6,
-        "seen": 6032,
-        "observation": "6a61485ee6eb15a784f4678ddfc92c5bed3ee89e1a2aa1127d730a41dbef6469",
+        "done": 0,
+        "seen": 6096,
+        "observation": "64bd0be3848e6146f6a4c078b9f1597fd49ae9f256f0976d1231d092ad4ab938",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -389,7 +398,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6088,
         "observation": "9817131d9a779af4f52337bfa2a0a3258dc6b3857005d375c1ca93f4794cc2d5",
         "proposals": {
@@ -76257,6 +76266,50 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p6097",
+      "eventSeq": 6097,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5809,
+      "eventSeq": 6098,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "take",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 5 water"
+    },
+    {
+      "id": 5810,
+      "eventSeq": 6099,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "research",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "已完成實作研究"
     }
   ],
   "needs": [
@@ -76449,19 +76502,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795682204.953703,
+    "phase": "deciding",
+    "updated": 1795682247.5805938,
     "reason": ""
   },
-  "seconds": 72106.83485554601,
+  "seconds": 72108.18721659639,
   "council": {
     "food": 55,
-    "water": 28,
+    "water": 27,
     "shelter": true,
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682207.865092,
+  "snapshotAt": 1795682250.033389,
   "recipes": {
     "茅舍": {
       "sites": [
