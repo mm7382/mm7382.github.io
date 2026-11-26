@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 1147,
+    "day": 1148,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4942,
-    "deficits": 9627
+    "turn": 4945,
+    "deficits": 9639
   },
   "history": [
     {
@@ -54595,6 +54595,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 4943,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1148,
+      "say": "河岸沒有儲水，我先採集飲水，補充聚落急需。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 4944,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1148,
+      "say": "我先休息恢復體力，才能採集聚落急需的食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 4945,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1148,
+      "say": "我先休息恢復體力，才能採集食水並修復住所。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -54682,10 +54715,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795656743.143146,
+    "updated": 1795656794.940392,
     "reason": ""
   },
-  "seconds": 68812.37359409302,
+  "seconds": 68864.50117300998,
   "council": {
     "food": 0,
     "water": 0,
@@ -54693,7 +54726,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795656744.164114,
+  "snapshotAt": 1795656795.88531,
   "recipes": {
     "茅舍": {
       "sites": [
