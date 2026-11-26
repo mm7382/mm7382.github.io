@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5517,
+  "aiDecisions": 5518,
   "state": {
     "day": 1206,
     "actors": [
@@ -50,7 +50,7 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "desert",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -66,21 +66,21 @@
           "quarry",
           "desert"
         ],
-        "goal": "協助完成沙漠台地神廟的測量與基礎，並視材料情況繼續施工"
+        "goal": "從採石場補充原石，支援沙漠台地神廟後續石塊加工"
       },
       {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "stone": 0,
           "reed": 0
         },
-        "energy": 8,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
@@ -102,7 +102,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6224,
+    "turn": 6227,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -637,16 +637,43 @@
         "blocked": ""
       },
       "2": {
-        "goal": "協助完成沙漠台地神廟的測量與基礎，並視材料情況繼續施工",
+        "goal": "從採石場補充原石，支援沙漠台地神廟後續石塊加工",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "build",
-            "site": "desert",
-            "kind": "神廟",
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 4,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "desert",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "desert",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
             "until": "count"
           },
           {
@@ -659,10 +686,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 1,
-        "seen": 6617,
-        "observation": "9b43bf5a866506275dca895a2af8c36a0a2c59c12f4be266558560de1a3aedaa",
+        "cursor": 1,
+        "done": 0,
+        "seen": 6631,
+        "observation": "f0b041387d58e3d2464ccd11c750ee876f02c5ad01806cb9d1231b2f4ebf69c2",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -790,7 +817,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 6619,
         "observation": "1b6f1e6b431c7132f4ed9480543a55942d250055edcd2d2ca639ca2e0931da8a",
@@ -84132,6 +84159,63 @@
       "site": "desert",
       "ok": true,
       "message": "基礎，已結算一工次"
+    },
+    {
+      "id": "p6632",
+      "eventSeq": 6632,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6225,
+      "eventSeq": 6633,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 6226,
+      "eventSeq": 6634,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 6227,
+      "eventSeq": 6635,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -84559,10 +84643,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795686926.261172,
+    "updated": 1795686959.801396,
     "reason": ""
   },
-  "seconds": 72303.08998944523,
+  "seconds": 72304.4928826952,
   "council": {
     "food": 49,
     "water": 33,
@@ -84570,7 +84654,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795686927.692333,
+  "snapshotAt": 1795686961.207992,
   "recipes": {
     "茅舍": {
       "sites": [
