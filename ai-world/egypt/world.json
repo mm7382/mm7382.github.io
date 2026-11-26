@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5542,
+  "aiDecisions": 5544,
   "state": {
     "day": 1206,
     "actors": [
@@ -109,28 +109,28 @@
           "quarry",
           "desert"
         ],
-        "goal": "休息後評估聚落接下來的需要"
+        "goal": "等待聚落出現新的需要，避免重複同伴的工作"
       },
       {
         "name": "塞努",
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "desert",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
           "desert",
           "quarry"
         ],
-        "goal": "休息後觀察聚落補給與農田的需要"
+        "goal": "查看農田狀況，避免與同伴的補給及石材工作重複"
       }
     ],
     "sites": {
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6310,
+    "turn": 6312,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -898,32 +898,13 @@
         "blocked": ""
       },
       "4": {
-        "goal": "休息後評估聚落接下來的需要",
+        "goal": "等待聚落出現新的需要，避免重複同伴的工作",
         "restWhenTired": true,
-        "steps": [
-          {
-            "type": "rest",
-            "site": "desert",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "think",
-            "site": "desert",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          }
-        ],
-        "cursor": 1,
+        "steps": [],
+        "cursor": 0,
         "done": 0,
-        "seen": 6730,
-        "observation": "14d4f4f86c4d2653b82fb4ab30be80d7c24a51f30fbbc2f1dc599e62d6b98f88",
+        "seen": 6742,
+        "observation": "0e0591680b5f5ab02fc9cbb1c98e75cd064217fd83824427268ff96a86c8dec1",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -991,12 +972,12 @@
         "blocked": ""
       },
       "5": {
-        "goal": "休息後觀察聚落補給與農田的需要",
+        "goal": "查看農田狀況，避免與同伴的補給及石材工作重複",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "rest",
-            "site": "desert",
+            "type": "move",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -1005,7 +986,7 @@
           },
           {
             "type": "think",
-            "site": "desert",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -1015,8 +996,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6732,
-        "observation": "0a5bb54d7a7bc67b24b3660438c7e53aa43d89c67335f3f9b7e8ca8c36fa48dc",
+        "seen": 6744,
+        "observation": "a600d05e9205e9ea79c77c8ac2592eb5114e56db32b7167880f55b749174c42f",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -85711,6 +85692,68 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p6743",
+      "eventSeq": 6743,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6311,
+      "eventSeq": 6744,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": "p6745",
+      "eventSeq": 6745,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6312,
+      "eventSeq": 6746,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -86138,10 +86181,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795687842.2652018,
+    "updated": 1795687877.1379251,
     "reason": ""
   },
-  "seconds": 72341.58500975768,
+  "seconds": 72343.03698920038,
   "council": {
     "food": 49,
     "water": 33,
@@ -86149,7 +86192,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687843.694289,
+  "snapshotAt": 1795687878.572454,
   "recipes": {
     "茅舍": {
       "sites": [
