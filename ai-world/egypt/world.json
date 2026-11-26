@@ -9,11 +9,11 @@
         "site": "terrace",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 1,
           "reed": 0,
           "stone": 0
         },
-        "energy": 8,
+        "energy": 7,
         "research": 3,
         "survey": [
           "terrace",
@@ -43,14 +43,14 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -69,7 +69,7 @@
           "water": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace"
@@ -88,7 +88,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -108,7 +108,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -171,7 +171,7 @@
         "source": {},
         "stock": {
           "food": 53,
-          "water": 1,
+          "water": 0,
           "reed": 3,
           "stone": 2,
           "block": 7
@@ -249,8 +249,8 @@
       "quarry/獅身人面像": {
         "kind": "獅身人面像",
         "site": "quarry",
-        "stage": 1,
-        "work": 2,
+        "stage": 2,
+        "work": 0,
         "complete": false,
         "condition": 0
       }
@@ -332,7 +332,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5852,
+    "turn": 5857,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -385,7 +385,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6152,
         "observation": "bc1ffce3c1e2a667027c23dc60a41ad1e204e85c9c16afa1ca05dd66478ff414",
@@ -654,7 +654,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6140,
         "observation": "62f3e9cebabbb7c826ad5f7bcdc500bfdc9b9003334a840337785d97fd6f6f8b",
@@ -967,7 +967,7 @@
           }
         ],
         "cursor": 2,
-        "done": 1,
+        "done": 2,
         "seen": 6134,
         "observation": "cea47277968e11b3b1f939e825466ee4dd66afe0d7f787e422a7114c5d2622a0",
         "proposals": {
@@ -77453,6 +77453,71 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": 5853,
+      "eventSeq": 6162,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5854,
+      "eventSeq": 6163,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5855,
+      "eventSeq": 6164,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5856,
+      "eventSeq": 6165,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "圈定岩床，已結算一工次"
+    },
+    {
+      "id": 5857,
+      "eventSeq": 6166,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "take",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 1 water"
     }
   ],
   "needs": [
@@ -77761,10 +77826,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795682860.316538,
+    "updated": 1795682904.1160572,
     "reason": ""
   },
-  "seconds": 72134.1276077179,
+  "seconds": 72135.9507332492,
   "council": {
     "food": 53,
     "water": 20,
@@ -77772,7 +77837,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682862.721283,
+  "snapshotAt": 1795682906.5795488,
   "recipes": {
     "茅舍": {
       "sites": [
