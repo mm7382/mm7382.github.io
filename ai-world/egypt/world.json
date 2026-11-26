@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5199,
+  "aiDecisions": 5200,
   "state": {
     "day": 1198,
     "actors": [
@@ -8,11 +8,11 @@
         "age": 26,
         "site": "terrace",
         "bag": {
-          "food": 0,
+          "food": 6,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -25,11 +25,11 @@
         "age": 31,
         "site": "field",
         "bag": {
-          "water": 6,
+          "water": 0,
           "food": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -43,11 +43,11 @@
         "age": 39,
         "site": "terrace",
         "bag": {
-          "food": 4,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -139,7 +139,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 13,
+          "water": 19,
           "food": 4,
           "reed": 7
         }
@@ -158,7 +158,7 @@
         ],
         "source": {},
         "stock": {
-          "food": 30,
+          "food": 28,
           "water": 27,
           "reed": 10,
           "stone": 0,
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5309,
+    "turn": 5313,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -304,7 +304,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5384,
         "observation": "c67fb5d12851343aa7e08f7a219948a670d52839eeb4aa59b48be825bb019d09",
@@ -352,7 +352,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5386,
         "observation": "a4af5cec1739ee7d942191360b8597f6c132e6da12f68ac90a390ff26abe9b9f",
@@ -443,7 +443,7 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
+        "cursor": 5,
         "done": 0,
         "seen": 5362,
         "observation": "bc4459f6b6170e83c85c3e997bfe8c094447498e0e779e2b4fe9cd7c77036784",
@@ -671,10 +671,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 1,
         "done": 0,
-        "seen": 5382,
-        "observation": "0d858d671794280c579f0f1bfbb63ad143d94ed25d8c0fa1745cc17b637e045f",
+        "seen": 5398,
+        "observation": "028122d3e4358eed72fcf66faa602f8148556c6348375292040fda16cf2b7c17",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -66072,6 +66072,76 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p5399",
+      "eventSeq": 5399,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5310,
+      "eventSeq": 5400,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1198,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5311,
+      "eventSeq": 5401,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1198,
+      "say": "",
+      "action": "take",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 food"
+    },
+    {
+      "id": 5312,
+      "eventSeq": 5402,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "drop",
+      "kind": "water",
+      "site": "field",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5313,
+      "eventSeq": 5403,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1198,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 4 food"
     }
   ],
   "needs": [
@@ -66158,11 +66228,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795675843.372746,
+    "phase": "deciding",
+    "updated": 1795675892.17486,
     "reason": ""
   },
-  "seconds": 71842.74104462034,
+  "seconds": 71844.44934901968,
   "council": {
     "food": 38,
     "water": 46,
@@ -66170,7 +66240,7 @@
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795675845.9314198,
+  "snapshotAt": 1795675893.239516,
   "recipes": {
     "茅舍": {
       "sites": [
