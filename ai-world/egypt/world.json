@@ -82,7 +82,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace"
@@ -100,11 +100,12 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
-          "desert"
+          "desert",
+          "quarry"
         ],
         "goal": "勘查聚落周邊，了解可用地形"
       }
@@ -245,7 +246,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5698,
+    "turn": 5703,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -620,7 +621,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5904,
         "observation": "17eda0fe12c1820c38d894fda5d80507b0803ad8406be11504a3590039296af6",
@@ -73760,6 +73761,71 @@
       "site": "bank",
       "ok": false,
       "message": "計畫路徑中斷"
+    },
+    {
+      "id": 5699,
+      "eventSeq": 5937,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1201,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5700,
+      "eventSeq": 5938,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已勘查石灰岩露頭"
+    },
+    {
+      "id": 5701,
+      "eventSeq": 5939,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5702,
+      "eventSeq": 5940,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5703,
+      "eventSeq": 5941,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "等候"
     }
   ],
   "needs": [
@@ -73847,10 +73913,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795680516.563384,
+    "updated": 1795680553.607769,
     "reason": ""
   },
-  "seconds": 72037.35044963453,
+  "seconds": 72038.89305685848,
   "council": {
     "food": 58,
     "water": 45,
@@ -73858,7 +73924,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795680517.812911,
+  "snapshotAt": 1795680556.507333,
   "recipes": {
     "茅舍": {
       "sites": [
