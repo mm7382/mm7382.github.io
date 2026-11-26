@@ -11,10 +11,10 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0,
+          "stone": 2,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -36,7 +36,7 @@
           "stone": 2,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -58,7 +58,7 @@
           "stone": 6,
           "block": 0
         },
-        "energy": 1,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace",
@@ -77,10 +77,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "stone": 6,
+          "stone": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -102,7 +102,7 @@
           "stone": 6,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -116,14 +116,14 @@
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "desert",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -205,7 +205,7 @@
         "source": {},
         "stock": {
           "reed": 0,
-          "stone": 0,
+          "stone": 6,
           "block": 5
         }
       },
@@ -220,7 +220,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 62
+          "stone": 60
         },
         "stock": {
           "water": 12,
@@ -380,7 +380,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6177,
+    "turn": 6183,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -469,7 +469,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6569,
         "observation": "a91f112ac3d07615f568c2db29bea2abde64ebd7fd0ea16bedc2a97d8d1dcf0c",
@@ -881,7 +881,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6543,
         "observation": "97357c996c1c4984ff931ca1a2bc2f095707600f07b2c19ea269a632ed655a96",
@@ -1152,7 +1152,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 6567,
         "observation": "83c2ec17a874f685530862063e4e641e2108a88e8826627ae976022407c58ca5",
@@ -83446,6 +83446,84 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6178,
+      "eventSeq": 6574,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6179,
+      "eventSeq": 6575,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6180,
+      "eventSeq": 6576,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 6181,
+      "eventSeq": 6577,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 2 stone"
+    },
+    {
+      "id": 6182,
+      "eventSeq": 6578,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6183,
+      "eventSeq": 6579,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -83814,10 +83892,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795686439.153887,
+    "updated": 1795686483.872144,
     "reason": ""
   },
-  "seconds": 72283.15712289159,
+  "seconds": 72285.01939526129,
   "council": {
     "food": 50,
     "water": 35,
@@ -83825,7 +83903,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795686440.4732249,
+  "snapshotAt": 1795686485.261942,
   "recipes": {
     "茅舍": {
       "sites": [
