@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5508,
+  "aiDecisions": 5510,
   "state": {
     "day": 1205,
     "actors": [
@@ -45,7 +45,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "補足沙漠台地金字塔外層修整所需的石塊。"
+        "goal": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       },
       {
         "name": "納赫特",
@@ -66,7 +66,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "補足沙漠台地金字塔外層修整所需的石塊"
+        "goal": "與帕伊合作興建沙漠台地神廟，先同意提案並開始測量軸線"
       },
       {
         "name": "蒂雅",
@@ -378,9 +378,21 @@
           5
         ],
         "purpose": "在沙漠台地探索興建另一座金字塔"
+      },
+      "desert/神廟": {
+        "id": "N6206",
+        "record": 6206,
+        "kind": "神廟",
+        "site": "desert",
+        "proposer": 1,
+        "approved": [
+          1,
+          2
+        ],
+        "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6205,
+    "turn": 6207,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -541,62 +553,17 @@
         "blocked": ""
       },
       "1": {
-        "goal": "補足沙漠台地金字塔外層修整所需的石塊。",
+        "goal": "改在沙漠台地提議興建神廟，邀請同伴合作。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
+            "type": "propose",
+            "site": "desert",
+            "kind": "神廟",
             "material": "",
             "amount": 1,
             "repeat": 1,
             "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 2,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "desert",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "desert",
-            "kind": "",
-            "material": "stone",
-            "amount": 2,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "shape",
-            "site": "desert",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "build",
-            "site": "desert",
-            "kind": "金字塔",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "complete"
           },
           {
             "type": "think",
@@ -608,10 +575,10 @@
             "until": "count"
           }
         ],
-        "cursor": 5,
+        "cursor": 1,
         "done": 0,
-        "seen": 6561,
-        "observation": "6fe112169f99f3f3fcb7787e4c0b7f8ef338a730dc52643265e9fea90ce90dbe",
+        "seen": 6603,
+        "observation": "6c275ff98f0774d9c4a0c3525540fec117ee81a3d3b6333074bfaddf87cd08bc",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -704,52 +671,25 @@
         "blocked": ""
       },
       "2": {
-        "goal": "補足沙漠台地金字塔外層修整所需的石塊",
+        "goal": "與帕伊合作興建沙漠台地神廟，先同意提案並開始測量軸線",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
+            "type": "agree",
+            "site": "desert",
+            "kind": "神廟",
             "material": "",
             "amount": 1,
             "repeat": 1,
             "until": "count"
           },
           {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
+            "type": "build",
             "site": "desert",
-            "kind": "",
+            "kind": "神廟",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "desert",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "shape",
-            "site": "desert",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 3,
+            "repeat": 2,
             "until": "count"
           },
           {
@@ -762,10 +702,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
-        "done": 1,
-        "seen": 6563,
-        "observation": "ae0aef4bb577e37c7dc8ac51960f583ec7a463574d17e03ee8c657f2199fe68d",
+        "cursor": 1,
+        "done": 0,
+        "seen": 6605,
+        "observation": "94b66aed2f375d873b5c237f6d2acee5099b15d4371b7ff39d33f9587062abd6",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -827,6 +767,17 @@
               5
             ],
             "purpose": "在沙漠台地探索興建另一座金字塔"
+          },
+          "desert/神廟": {
+            "id": "N6206",
+            "record": 6206,
+            "kind": "神廟",
+            "site": "desert",
+            "proposer": 1,
+            "approved": [
+              1
+            ],
+            "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
           }
         },
         "blocked": ""
@@ -83801,6 +83752,72 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 1 block"
+    },
+    {
+      "id": "p6604",
+      "eventSeq": 6604,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "沙漠台地的金字塔已完工。我想在這裡興建神廟，納赫特，你願意一起參與嗎？",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "proposal",
+        "recipients": [
+          2
+        ],
+        "requiresResponse": true
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6206,
+      "eventSeq": 6605,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "propose",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "已登記提案"
+    },
+    {
+      "id": "p6606",
+      "eventSeq": 6606,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "帕伊，我願意一起在沙漠台地興建神廟，我先同意提案並開始測量軸線。",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "conversation",
+        "recipients": [
+          1
+        ],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6207,
+      "eventSeq": 6607,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "agree",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "本人已同意此處的提案"
     }
   ],
   "needs": [
@@ -84165,14 +84182,73 @@
       "asset": {},
       "implementation": "已支援",
       "construction": "完工"
+    },
+    {
+      "id": "N6206",
+      "record": 6206,
+      "kind": "神廟",
+      "site": "desert",
+      "proposer": 1,
+      "approved": [
+        1,
+        2
+      ],
+      "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。",
+      "source": "data/records/plan-000006604.json",
+      "version": "nile-v4",
+      "cost": {
+        "sites": [
+          "terrace",
+          "desert"
+        ],
+        "research": 3,
+        "stages": [
+          {
+            "name": "測量軸線",
+            "cost": {},
+            "work": 2
+          },
+          {
+            "name": "基礎",
+            "cost": {
+              "stone": 5
+            },
+            "work": 3
+          },
+          {
+            "name": "施工架",
+            "cost": {
+              "reed": 4
+            },
+            "work": 3
+          },
+          {
+            "name": "柱廊與屋頂",
+            "cost": {
+              "block": 10
+            },
+            "work": 8
+          },
+          {
+            "name": "刻飾",
+            "cost": {
+              "block": 2
+            },
+            "work": 4
+          }
+        ]
+      },
+      "asset": {},
+      "implementation": "已支援",
+      "construction": "提案"
     }
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795686681.243351,
+    "updated": 1795686718.523089,
     "reason": ""
   },
-  "seconds": 72292.88844172312,
+  "seconds": 72294.43759725086,
   "council": {
     "food": 50,
     "water": 35,
@@ -84180,7 +84256,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795686682.644738,
+  "snapshotAt": 1795686719.930482,
   "recipes": {
     "茅舍": {
       "sites": [
