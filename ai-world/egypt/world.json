@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5208,
+  "aiDecisions": 5209,
   "state": {
     "day": 1198,
     "actors": [
@@ -82,7 +82,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 7,
+        "energy": 6,
         "research": 1,
         "survey": [
           "terrace"
@@ -161,8 +161,8 @@
           "food": 28,
           "water": 27,
           "reed": 10,
-          "stone": 6,
-          "block": 4
+          "stone": 4,
+          "block": 5
         }
       },
       "desert": {
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5337,
+    "turn": 5339,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -426,9 +426,9 @@
         "restWhenTired": true,
         "steps": [
           {
-            "type": "tend",
+            "type": "wait",
             "site": "field",
-            "kind": "農田",
+            "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
@@ -446,8 +446,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5426,
-        "observation": "fd20c9be5aa2ab55ff9732ecbc0173939957262e1f82259af79f5d47167dce5f",
+        "seen": 5435,
+        "observation": "374831b36910ab49fdf85a335ef4c7b4fa0cc4edb0dafa9e4b9034bbb16dbca0",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -536,7 +536,7 @@
           }
         ],
         "cursor": 4,
-        "done": 0,
+        "done": 1,
         "seen": 5396,
         "observation": "ec7e605a8bceb53992ed7d9351f10556e323e93b03e74b484685756e62bc8b4b",
         "proposals": {
@@ -66526,6 +66526,50 @@
       "site": "field",
       "ok": true,
       "message": "已照料，可生產三日"
+    },
+    {
+      "id": "p5436",
+      "eventSeq": 5436,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5338,
+      "eventSeq": 5437,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1198,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5339,
+      "eventSeq": 5438,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1198,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "加工一份石塊"
     }
   ],
   "needs": [
@@ -66612,11 +66656,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795676133.23028,
+    "phase": "deciding",
+    "updated": 1795676167.3597891,
     "reason": ""
   },
-  "seconds": 71854.81168992755,
+  "seconds": 71855.90420043447,
   "council": {
     "food": 38,
     "water": 36,
@@ -66624,7 +66668,7 @@
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795676134.278142,
+  "snapshotAt": 1795676168.446274,
   "recipes": {
     "茅舍": {
       "sites": [
