@@ -1,17 +1,17 @@
 {
   "state": {
-    "day": 1065,
+    "day": 1066,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 6,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 8,
+        "energy": 6,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 9
+        "condition": 8
       },
       "field/農田": {
         "kind": "農田",
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4619,
-    "deficits": 8811
+    "turn": 4622,
+    "deficits": 8823
   },
   "history": [
     {
@@ -51042,6 +51042,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 4620,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1065,
+      "say": "我先休息恢復體力，再採集河岸的食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 4621,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1065,
+      "say": "營地缺食水，我先到河岸採集補給。",
+      "action": "move",
+      "kind": "",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 4622,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1066,
+      "say": "我在河岸採集食物，補充聚落存糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -51129,10 +51162,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795651575.7263381,
+    "updated": 1795651620.31689,
     "reason": ""
   },
-  "seconds": 63863.14131133686,
+  "seconds": 63907.91060675486,
   "council": {
     "food": 0,
     "water": 0,
@@ -51140,7 +51173,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795651576.5952551,
+  "snapshotAt": 1795651621.255497,
   "recipes": {
     "茅舍": {
       "sites": [
