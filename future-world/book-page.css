@@ -21,10 +21,10 @@ header { padding: max(10px,env(safe-area-inset-top)) max(3vw,env(safe-area-inset
   color: #fff9ee; text-shadow: 0 1px 4px #20160d;
 }
 .site-nav a:hover, .book-page button:hover:not(:disabled) {text-decoration: underline; text-underline-offset: .3em;}
-body[data-viewpoint="Michael"] main {display: grid; grid-template-rows: minmax(0,1fr) auto;}
-body[data-viewpoint="Michael"] .scene {position:relative; inset:auto;}
+main {display: grid; grid-template-rows: minmax(0,1fr) auto;}
+.scene {position:relative; inset:auto;}
 .scene #lm-city {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:53% 52%;}
-body[data-viewpoint="Lucy"] #lm-city, body[data-viewpoint="Lucy"] .book-page,
+body[data-viewpoint="Lucy"] #lm-city,
 body[data-viewpoint="Michael"]:not(.moving) #motion {display:none;}
 .scene #stop-frame {object-position:53% 52%;}
 .book-page {
@@ -108,3 +108,32 @@ header .more-site {position:relative;pointer-events:auto;align-self:flex-start;f
 .more-site[open] summary::after {content:"⌃";}
 .more-site nav.lab-world-nav {position:absolute;top:100%;right:0;width:max-content;display:grid;grid-template-columns:repeat(2,minmax(5em,1fr));grid-template-rows:auto;padding:6px 12px;gap:0 12px;background:#302a23fa;}
 .more-site nav.lab-world-nav a {justify-content:flex-start;font:15px/1.5 var(--serif);}
+
+/* Lucy's stop uses the same illustrated page as the bridge. */
+.study-viewpoint {display:none;margin:.35em 0 0;font-size:14px;color:#655a49;}
+.study-viewpoint i {padding:0;margin:0;border:0;font-style:italic;}
+body[data-viewpoint="Lucy"] .study-viewpoint {display:block;}
+body[data-viewpoint="Lucy"] :is(#project-status,.book-nav) {display:none;}
+.scene #lucy-room {object-position:50% 54%;}
+#lucy-opening {margin:0;letter-spacing:.04em;line-height:1.75;font-size:clamp(16px,1.45vw,23px);}
+body[data-viewpoint="Lucy"] #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
+#return-bridge {border-left:1px solid var(--rule);padding-inline:clamp(10px,1.6vw,24px) 0;white-space:nowrap;}
+#return-bridge span {margin-left:.65em;}
+.study-play {
+  position:absolute;z-index:4;left:max(3.6vw,env(safe-area-inset-left));
+  bottom:clamp(12px,2.7vh,28px);min-height:44px;padding:6px 15px;
+  color:#fff9ee;background:#29221be8;border:1px solid #fff9ee72;
+  font:15px/1.4 var(--serif);letter-spacing:.06em;
+}
+.study-play:hover {background:#45382c;}
+.study-play span {margin-right:.4em;}
+body.switching .study-play,body:has(dialog[open]) .study-play {visibility:hidden;}
+@media (max-width:900px) {
+  #return-bridge {grid-column:2;grid-row:1;justify-self:end;}
+}
+@media (max-width:600px) {
+  .scene #lucy-room {object-position:59% 53%;}
+}
+@media (max-height:520px) {
+  .book-page:has(.hud:not([hidden])) #return-bridge {grid-column:3;}
+}
