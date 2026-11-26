@@ -10,11 +10,11 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 0,
+          "reed": 4,
           "stone": 0,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -33,10 +33,10 @@
           "water": 0,
           "food": 0,
           "reed": 0,
-          "stone": 0,
+          "stone": 5,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -102,7 +102,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -116,14 +116,14 @@
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 4,
           "stone": 0
         },
-        "energy": 6,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -146,7 +146,7 @@
         ],
         "source": {
           "water": 75,
-          "reed": 40,
+          "reed": 36,
           "food": 20
         },
         "stock": {
@@ -220,7 +220,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 52
+          "stone": 47
         },
         "stock": {
           "water": 11,
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6250,
+    "turn": 6254,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -462,7 +462,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6644,
         "observation": "cbe08fcd4c9eb95a361a4cc1356a9e2aaddeaa4947dd238c0b8f79845ff1e2c2",
@@ -604,7 +604,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6661,
         "observation": "eae1ed13413ec8b52efcdbb99b1656126944ae68f04f68f1de8fdc781b4f8abe",
@@ -84776,6 +84776,58 @@
       "site": "desert",
       "ok": true,
       "message": "已移轉 4 reed"
+    },
+    {
+      "id": 6251,
+      "eventSeq": 6666,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6252,
+      "eventSeq": 6667,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 6253,
+      "eventSeq": 6668,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1206,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 4 reed"
+    },
+    {
+      "id": 6254,
+      "eventSeq": 6669,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 5 stone"
     }
   ],
   "needs": [
@@ -85202,11 +85254,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795687204.641598,
+    "phase": "deciding",
+    "updated": 1795687243.6360781,
     "reason": ""
   },
-  "seconds": 72315.03317971951,
+  "seconds": 72316.28836050245,
   "council": {
     "food": 49,
     "water": 33,
@@ -85214,7 +85266,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687206.12741,
+  "snapshotAt": 1795687245.082664,
   "recipes": {
     "茅舍": {
       "sites": [
