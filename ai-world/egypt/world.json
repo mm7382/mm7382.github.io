@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5487,
+  "aiDecisions": 5488,
   "state": {
     "day": 1205,
     "actors": [
@@ -77,7 +77,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 8,
+        "energy": 7,
         "research": 3,
         "survey": [
           "terrace",
@@ -95,16 +95,17 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 0,
+          "block": 2
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "支援沙漠台地金字塔，將河階營地的石塊運到工地"
+        "goal": "將河階營地現有石塊運至沙漠台地金字塔工地"
       },
       {
         "name": "塞努",
@@ -183,8 +184,8 @@
           "food": 50,
           "water": 5,
           "reed": 0,
-          "stone": 4,
-          "block": 1
+          "stone": 2,
+          "block": 0
         }
       },
       "desert": {
@@ -375,7 +376,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6105,
+    "turn": 6107,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -895,7 +896,7 @@
           }
         ],
         "cursor": 5,
-        "done": 1,
+        "done": 2,
         "seen": 6412,
         "observation": "517f9fa285d0fc7a2d89cce25cadab9f10f1d7c055edc1e77fed0de5aa2c7fe7",
         "proposals": {
@@ -990,24 +991,15 @@
         "blocked": ""
       },
       "4": {
-        "goal": "支援沙漠台地金字塔，將河階營地的石塊運到工地",
+        "goal": "將河階營地現有石塊運至沙漠台地金字塔工地",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "move",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "take",
             "site": "terrace",
             "kind": "",
             "material": "block",
-            "amount": 4,
+            "amount": 2,
             "repeat": 1,
             "until": "count"
           },
@@ -1025,7 +1017,7 @@
             "site": "desert",
             "kind": "",
             "material": "block",
-            "amount": 4,
+            "amount": 2,
             "repeat": 1,
             "until": "count"
           },
@@ -1041,8 +1033,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6468,
-        "observation": "e61e33d6d523a3d0653704ad2ffaaf1da0aa454c33f30e03e1cbab137478d6fb",
+        "seen": 6483,
+        "observation": "e3f51968448984952bee052afe5887abcf3b6ff96b9e12e53afd2b1cee4f1d02",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -82172,6 +82164,50 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 6106,
+      "eventSeq": 6483,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": "p6484",
+      "eventSeq": 6484,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6107,
+      "eventSeq": 6485,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "take",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 2 block"
     }
   ],
   "needs": [
@@ -82539,11 +82575,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795685686.621213,
+    "phase": "deciding",
+    "updated": 1795685724.482473,
     "reason": ""
   },
-  "seconds": 72251.81998156683,
+  "seconds": 72252.98965897133,
   "council": {
     "food": 50,
     "water": 35,
@@ -82551,7 +82587,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685687.9625401,
+  "snapshotAt": 1795685725.853632,
   "recipes": {
     "茅舍": {
       "sites": [
