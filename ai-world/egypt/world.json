@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5147,
+  "aiDecisions": 5149,
   "state": {
     "day": 1197,
     "actors": [
@@ -9,16 +9,16 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "補充聚落食物，支持農田持續耕作"
+        "goal": "補充農田用水，支持持續耕作"
       },
       {
         "name": "帕伊",
@@ -28,7 +28,7 @@
           "water": 0,
           "food": 4
         },
-        "energy": 0,
+        "energy": 8,
         "research": 0,
         "survey": [
           "terrace",
@@ -39,19 +39,19 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "terrace",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 7,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "補充營地食物，維持聚落糧食儲備"
+        "goal": "把農田儲存的食物運回河階營地"
       },
       {
         "name": "蒂雅",
@@ -113,7 +113,7 @@
           "terrace"
         ],
         "source": {
-          "water": 142,
+          "water": 136,
           "reed": 45,
           "food": 0
         },
@@ -236,28 +236,19 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5184,
+    "turn": 5187,
     "deficits": 10190,
     "autonomy": {
       "0": {
-        "goal": "補充聚落食物，支持農田持續耕作",
+        "goal": "補充農田用水，支持持續耕作",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "move",
-            "site": "bank",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "gather",
             "site": "bank",
             "kind": "",
-            "material": "food",
-            "amount": 4,
+            "material": "water",
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
@@ -274,8 +265,8 @@
             "type": "drop",
             "site": "field",
             "kind": "",
-            "material": "food",
-            "amount": 4,
+            "material": "water",
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
@@ -291,8 +282,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5205,
-        "observation": "e6822642039facbc9867f5d8d5382cffd73881c34566f70f25db36caa46dbbaa",
+        "seen": 5221,
+        "observation": "75bd541e490e3abbd9b63f806af060c431fd079e5a9702d00c80cf8912c0d09a",
         "proposals": {},
         "blocked": ""
       },
@@ -370,12 +361,12 @@
         "blocked": ""
       },
       "2": {
-        "goal": "補充營地食物，維持聚落糧食儲備",
+        "goal": "把農田儲存的食物運回河階營地",
         "restWhenTired": true,
         "steps": [
           {
             "type": "move",
-            "site": "bank",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -383,8 +374,8 @@
             "until": "count"
           },
           {
-            "type": "gather",
-            "site": "bank",
+            "type": "take",
+            "site": "field",
             "kind": "",
             "material": "food",
             "amount": 6,
@@ -419,10 +410,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
+        "cursor": 1,
         "done": 0,
-        "seen": 5186,
-        "observation": "e2d7b83394305164de52f164088e2898b36db95ac8f0c9391da5fd217e1d93b0",
+        "seen": 5224,
+        "observation": "f246db27ed3e0e0397c9620ffb19d9cfba1d288ef38938d52b9c5bb141a49234",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -63487,6 +63478,81 @@
       "site": "field",
       "ok": true,
       "message": "已照料，可生產三日"
+    },
+    {
+      "id": "p5222",
+      "eventSeq": 5222,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1197,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5185,
+      "eventSeq": 5223,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1197,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5186,
+      "eventSeq": 5224,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1197,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p5225",
+      "eventSeq": 5225,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1197,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5187,
+      "eventSeq": 5226,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
     }
   ],
   "needs": [
@@ -63573,19 +63639,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795674338.1195729,
+    "phase": "waiting",
+    "updated": 1795674381.0945768,
     "reason": ""
   },
-  "seconds": 71779.63376501226,
+  "seconds": 71781.84873681264,
   "council": {
     "food": 31,
-    "water": 22,
+    "water": 28,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795674340.231668,
+  "snapshotAt": 1795674384.165647,
   "recipes": {
     "茅舍": {
       "sites": [
