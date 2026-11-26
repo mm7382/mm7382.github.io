@@ -6,14 +6,14 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 1,
           "reed": 0,
           "stone": 0
         },
-        "energy": 7,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace",
@@ -31,7 +31,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace",
@@ -50,7 +50,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace",
@@ -332,7 +332,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5862,
+    "turn": 5865,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -385,7 +385,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6152,
         "observation": "bc1ffce3c1e2a667027c23dc60a41ad1e204e85c9c16afa1ca05dd66478ff414",
@@ -77583,6 +77583,45 @@
       "site": "quarry",
       "ok": true,
       "message": "開槽隔離岩體，已結算一工次"
+    },
+    {
+      "id": 5863,
+      "eventSeq": 6172,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 5864,
+      "eventSeq": 6173,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5865,
+      "eventSeq": 6174,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -77890,11 +77929,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795682947.4382,
+    "phase": "deciding",
+    "updated": 1795682983.117727,
     "reason": ""
   },
-  "seconds": 72137.75495842632,
+  "seconds": 72138.82187498712,
   "council": {
     "food": 53,
     "water": 20,
@@ -77902,7 +77941,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682949.894916,
+  "snapshotAt": 1795682984.986146,
   "recipes": {
     "茅舍": {
       "sites": [
