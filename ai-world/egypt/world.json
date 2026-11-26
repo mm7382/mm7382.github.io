@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5460,
+  "aiDecisions": 5462,
   "state": {
     "day": 1204,
     "actors": [
@@ -92,15 +92,15 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 6
         },
-        "energy": 6,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace",
           "quarry"
         ],
-        "goal": "支援石灰岩露頭的獅身人面像細雕"
+        "goal": "搬運原石支援河階營地的工坊建設"
       },
       {
         "name": "塞努",
@@ -112,16 +112,16 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 6
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
           "desert",
           "quarry"
         ],
-        "goal": "協助完成石灰岩露頭獅身人面像的細雕"
+        "goal": "為河階營地的工坊補充原石"
       }
     ],
     "sites": {
@@ -207,7 +207,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 132
+          "stone": 120
         },
         "stock": {
           "water": 16,
@@ -338,7 +338,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5998,
+    "turn": 6000,
     "deficits": 10226,
     "autonomy": {
       "0": {
@@ -797,30 +797,21 @@
         "blocked": ""
       },
       "4": {
-        "goal": "支援石灰岩露頭的獅身人面像細雕",
+        "goal": "搬運原石支援河階營地的工坊建設",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "bank",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
             "type": "gather",
-            "site": "bank",
+            "site": "quarry",
             "kind": "",
-            "material": "water",
+            "material": "stone",
             "amount": 6,
             "repeat": 1,
             "until": "count"
           },
           {
             "type": "move",
-            "site": "quarry",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -829,25 +820,16 @@
           },
           {
             "type": "drop",
-            "site": "quarry",
+            "site": "terrace",
             "kind": "",
-            "material": "water",
+            "material": "stone",
             "amount": 6,
             "repeat": 1,
             "until": "count"
           },
           {
-            "type": "build",
-            "site": "quarry",
-            "kind": "獅身人面像",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "complete"
-          },
-          {
             "type": "think",
-            "site": "quarry",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -855,10 +837,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
+        "cursor": 1,
         "done": 0,
-        "seen": 6289,
-        "observation": "67732a7e091deb81e321e53c875000a8f219f19d7d8b8340ecef669320c31410",
+        "seen": 6348,
+        "observation": "b490f25f6724a3c2d253fccc72d5bb9120f9dc632c4e2576097ef368298a0078",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -914,21 +896,39 @@
         "blocked": ""
       },
       "5": {
-        "goal": "協助完成石灰岩露頭獅身人面像的細雕",
+        "goal": "為河階營地的工坊補充原石",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "build",
+            "type": "gather",
             "site": "quarry",
-            "kind": "獅身人面像",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "terrace",
+            "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "complete"
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "terrace",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
           },
           {
             "type": "think",
-            "site": "quarry",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -938,8 +938,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6333,
-        "observation": "92c2de5c48ea7e6f6c249dd4969156e2dc1b6ca87a2a30b699b0cccb2cfc8ac5",
+        "seen": 6350,
+        "observation": "86d15a13aeb8f07673bda760dd5b09c69321fb9020719f2028306d84b4157e68",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -80059,6 +80059,68 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 4 stone"
+    },
+    {
+      "id": "p6349",
+      "eventSeq": 6349,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5999,
+      "eventSeq": 6350,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1204,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": "p6351",
+      "eventSeq": 6351,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6000,
+      "eventSeq": 6352,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
     }
   ],
   "needs": [
@@ -80367,10 +80429,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795684577.791548,
+    "updated": 1795684614.344268,
     "reason": ""
   },
-  "seconds": 72205.29666965354,
+  "seconds": 72206.82803676462,
   "council": {
     "food": 51,
     "water": 34,
@@ -80378,7 +80440,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795684579.1122198,
+  "snapshotAt": 1795684615.6493409,
   "recipes": {
     "茅舍": {
       "sites": [
