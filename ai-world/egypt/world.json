@@ -10,10 +10,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 0,
+          "reed": 1,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -95,7 +95,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -114,9 +114,9 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 6
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -139,7 +139,7 @@
         ],
         "source": {
           "water": 51,
-          "reed": 45,
+          "reed": 44,
           "food": 12
         },
         "stock": {
@@ -198,7 +198,7 @@
         "source": {},
         "stock": {
           "reed": 5,
-          "stone": 6
+          "stone": 0
         }
       },
       "quarry": {
@@ -212,7 +212,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 116
+          "stone": 110
         },
         "stock": {
           "water": 16,
@@ -277,7 +277,7 @@
         "kind": "金字塔",
         "site": "desert",
         "stage": 1,
-        "work": 0,
+        "work": 1,
         "complete": false,
         "condition": 0
       }
@@ -371,7 +371,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6058,
+    "turn": 6061,
     "deficits": 10226,
     "autonomy": {
       "0": {
@@ -460,7 +460,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6406,
         "observation": "17367231130d4c5baef452c6f38bbc67d7038988401cb79f16c70d99139e6604",
@@ -954,8 +954,8 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 2,
+        "cursor": 1,
+        "done": 0,
         "seen": 6414,
         "observation": "52286aca48450a4da9dba9487a1280895df287f37b79cb2a42e33fb20148c75b",
         "proposals": {
@@ -1071,7 +1071,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6423,
         "observation": "625e08b3c44fc28da03b285ce484d319ff99385696a877d71c20f46253f833ca",
@@ -81368,6 +81368,45 @@
       "site": "terrace",
       "ok": true,
       "message": "加工一份石塊"
+    },
+    {
+      "id": 6059,
+      "eventSeq": 6430,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1204,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "desert",
+      "ok": true,
+      "message": "整平基礎，已結算一工次"
+    },
+    {
+      "id": 6060,
+      "eventSeq": 6431,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6061,
+      "eventSeq": 6432,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 1 reed"
     }
   ],
   "needs": [
@@ -81735,11 +81774,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795685253.16682,
+    "phase": "deciding",
+    "updated": 1795685284.790868,
     "reason": ""
   },
-  "seconds": 72233.76908439663,
+  "seconds": 72234.70722241225,
   "council": {
     "food": 51,
     "water": 40,
@@ -81747,7 +81786,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685254.474729,
+  "snapshotAt": 1795685286.2178528,
   "recipes": {
     "茅舍": {
       "sites": [
