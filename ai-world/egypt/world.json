@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -36,7 +36,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -102,7 +102,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -123,7 +123,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -205,8 +205,8 @@
         "source": {},
         "stock": {
           "reed": 8,
-          "stone": 12,
-          "block": 4
+          "stone": 8,
+          "block": 6
         }
       },
       "quarry": {
@@ -293,8 +293,8 @@
       "desert/神廟": {
         "kind": "神廟",
         "site": "desert",
-        "stage": 3,
-        "work": 5,
+        "stage": 4,
+        "work": 0,
         "complete": false,
         "condition": 0
       }
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6292,
+    "turn": 6297,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -463,7 +463,7 @@
           }
         ],
         "cursor": 4,
-        "done": 1,
+        "done": 2,
         "seen": 6644,
         "observation": "cbe08fcd4c9eb95a361a4cc1356a9e2aaddeaa4947dd238c0b8f79845ff1e2c2",
         "proposals": {
@@ -604,8 +604,8 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
-        "done": 2,
+        "cursor": 5,
+        "done": 0,
         "seen": 6661,
         "observation": "eae1ed13413ec8b52efcdbb99b1656126944ae68f04f68f1de8fdc781b4f8abe",
         "proposals": {
@@ -723,7 +723,7 @@
           }
         ],
         "cursor": 0,
-        "done": 3,
+        "done": 4,
         "seen": 6698,
         "observation": "8735dd1e0a51cb1391ffdf12172119a8dac98d4739c7f7cc3509e65b7af05e10",
         "proposals": {
@@ -1019,8 +1019,8 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
-        "done": 2,
+        "cursor": 5,
+        "done": 0,
         "seen": 6657,
         "observation": "3cb5dcd15f3819195eaec754b6f115cb225f64f6522baceb4564f05587601480",
         "proposals": {
@@ -1113,7 +1113,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6708,
         "observation": "2bba43ae8ebd91fcc73dea45125a3e84e03d0736e810d59ecafee8d63e693c1d",
         "proposals": {
@@ -85385,6 +85385,71 @@
       "site": "desert",
       "ok": true,
       "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6293,
+      "eventSeq": 6715,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": 6294,
+      "eventSeq": 6716,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "柱廊與屋頂，已結算一工次"
+    },
+    {
+      "id": 6295,
+      "eventSeq": 6717,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "柱廊與屋頂，已結算一工次"
+    },
+    {
+      "id": 6296,
+      "eventSeq": 6718,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": 6297,
+      "eventSeq": 6719,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "柱廊與屋頂，已結算一工次"
     }
   ],
   "needs": [
@@ -85812,10 +85877,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795687598.349987,
+    "updated": 1795687636.1545331,
     "reason": ""
   },
-  "seconds": 72331.42840035316,
+  "seconds": 72333.00274383408,
   "council": {
     "food": 49,
     "water": 33,
@@ -85823,7 +85888,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687599.7179232,
+  "snapshotAt": 1795687637.552246,
   "recipes": {
     "茅舍": {
       "sites": [
