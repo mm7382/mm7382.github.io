@@ -9,10 +9,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -29,7 +29,7 @@
           "food": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,10 +44,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,12 +60,12 @@
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 6
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": "照料農田並維持灌溉用水"
@@ -80,9 +80,9 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 6
         },
-        "energy": 3,
+        "energy": 2,
         "research": 1,
         "survey": [
           "terrace"
@@ -118,7 +118,7 @@
           "terrace"
         ],
         "source": {
-          "water": 64,
+          "water": 52,
           "reed": 45,
           "food": 0
         },
@@ -189,7 +189,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 210
+          "stone": 204
         },
         "stock": {}
       }
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5508,
+    "turn": 5513,
     "deficits": 10200,
     "autonomy": {
       "0": {
@@ -295,7 +295,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5662,
         "observation": "af3ec9f638c714c777e774319606f3e85876a2be848da0873507fb9c8af942e3",
@@ -434,7 +434,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5665,
         "observation": "3864e64dfae71b4a3e7519edcc6459784e047b1dfe23c107b8acf8cccb80876b",
@@ -516,7 +516,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5649,
         "observation": "685feb5a26fc55bf86324fcc7f298ca78a81e892c7277d67145a278f84a7de26",
@@ -607,7 +607,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5668,
         "observation": "6cd8d2a503848fd9c74eaf23fc29334a5bd743117f52f1304fe4573555507a6c",
@@ -70018,6 +70018,71 @@
       "site": "bank",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 5509,
+      "eventSeq": 5672,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1199,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5510,
+      "eventSeq": 5673,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1199,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5511,
+      "eventSeq": 5674,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1199,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5512,
+      "eventSeq": 5675,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1199,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 5513,
+      "eventSeq": 5676,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1199,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
     }
   ],
   "needs": [
@@ -70105,18 +70170,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795678129.05704,
+    "updated": 1795678164.137822,
     "reason": ""
   },
-  "seconds": 71937.92518744533,
+  "seconds": 71939.38759508074,
   "council": {
     "food": 45,
-    "water": 40,
+    "water": 52,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795678130.212613,
+  "snapshotAt": 1795678165.2570949,
   "recipes": {
     "茅舍": {
       "sites": [
