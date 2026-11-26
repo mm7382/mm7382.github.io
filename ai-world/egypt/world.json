@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5378,
+  "aiDecisions": 5380,
   "state": {
     "day": 1202,
     "actors": [
@@ -80,35 +80,35 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 6
+          "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace"
         ],
-        "goal": "支持河階營地的金字塔工程，先送回原石並推進施工"
+        "goal": "在河階營地推進金字塔工程，先交付原石並施工"
       },
       {
         "name": "塞努",
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
           "desert",
           "quarry"
         ],
-        "goal": "支持河階營地金字塔，送回原石並同意提案"
+        "goal": "支持河階營地金字塔，送回原石並取得施工知識"
       }
     ],
     "sites": {
@@ -166,7 +166,7 @@
           "food": 55,
           "water": 18,
           "reed": 9,
-          "stone": 0,
+          "stone": 6,
           "block": 27
         }
       },
@@ -272,7 +272,7 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5740,
+    "turn": 5742,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -764,18 +764,9 @@
         "blocked": ""
       },
       "4": {
-        "goal": "支持河階營地的金字塔工程，先送回原石並推進施工",
+        "goal": "在河階營地推進金字塔工程，先交付原石並施工",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "move",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "drop",
             "site": "terrace",
@@ -815,8 +806,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5998,
-        "observation": "05faffd29865dafcee5d5a8887b7353e58eac601870610fe3308412dfc1d5da1",
+        "seen": 6008,
+        "observation": "0bc43e65fa3f9dff7edbea36427476144f0c7e71243dd7c10b7ab8fcd5a59e92",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -849,7 +840,8 @@
             "site": "terrace",
             "proposer": 2,
             "approved": [
-              2
+              2,
+              3
             ],
             "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
@@ -857,7 +849,7 @@
         "blocked": ""
       },
       "5": {
-        "goal": "支持河階營地金字塔，送回原石並同意提案",
+        "goal": "支持河階營地金字塔，送回原石並取得施工知識",
         "restWhenTired": true,
         "steps": [
           {
@@ -888,6 +880,15 @@
             "until": "count"
           },
           {
+            "type": "research",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 3,
+            "until": "count"
+          },
+          {
             "type": "think",
             "site": "terrace",
             "kind": "",
@@ -897,10 +898,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 6000,
-        "observation": "ebbbe1371618983b551df75404e46eab7c62ff471a28e5ef0dc67e87a71778a9",
+        "seen": 6010,
+        "observation": "acbd26453afe74c7d8874b6e997cfed5de850b42fc77d19d8028656d0bcb182a",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -946,7 +947,8 @@
             "site": "terrace",
             "proposer": 2,
             "approved": [
-              2
+              2,
+              3
             ],
             "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
@@ -75151,6 +75153,68 @@
       "site": "terrace",
       "ok": true,
       "message": "本人已同意此處的提案"
+    },
+    {
+      "id": "p6009",
+      "eventSeq": 6009,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5741,
+      "eventSeq": 6010,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": "p6011",
+      "eventSeq": 6011,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5742,
+      "eventSeq": 6012,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -75341,11 +75405,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795681469.254511,
+    "phase": "waiting",
+    "updated": 1795681504.806813,
     "reason": ""
   },
-  "seconds": 72075.77983806671,
+  "seconds": 72077.68335743308,
   "council": {
     "food": 55,
     "water": 41,
@@ -75353,7 +75417,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681471.9493592,
+  "snapshotAt": 1795681508.168991,
   "recipes": {
     "茅舍": {
       "sites": [
