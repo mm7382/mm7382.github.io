@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5424,
+  "aiDecisions": 5426,
   "state": {
     "day": 1203,
     "actors": [
@@ -56,7 +56,7 @@
           "terrace",
           "field"
         ],
-        "goal": "與帕伊合作興建河階神廟，推進施工架工程"
+        "goal": "與帕伊合作推進河階神廟，待蘆葦補足後完成施工架"
       },
       {
         "name": "蒂雅",
@@ -68,9 +68,9 @@
           "food": 0,
           "water": 0,
           "stone": 0,
-          "reed": 6
+          "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace"
@@ -89,7 +89,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -116,7 +116,7 @@
           "desert",
           "quarry"
         ],
-        "goal": "與胡伊合作在石灰岩露頭建造獅身人面像"
+        "goal": "與胡伊合作推進石灰岩露頭的獅身人面像"
       }
     ],
     "sites": {
@@ -173,7 +173,7 @@
         "stock": {
           "food": 53,
           "water": 0,
-          "reed": 3,
+          "reed": 9,
           "stone": 8,
           "block": 10
         }
@@ -333,7 +333,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5882,
+    "turn": 5886,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -543,16 +543,16 @@
         "blocked": ""
       },
       "2": {
-        "goal": "與帕伊合作興建河階神廟，推進施工架工程",
+        "goal": "與帕伊合作推進河階神廟，待蘆葦補足後完成施工架",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "build",
+            "type": "wait",
             "site": "terrace",
-            "kind": "神廟",
+            "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 3,
+            "repeat": 1,
             "until": "count"
           },
           {
@@ -565,10 +565,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 6189,
-        "observation": "871a4a4c8704694d50c3192be6ff889f85c7ca7ff955f649967311f9c547864f",
+        "seen": 6196,
+        "observation": "803df02baa3814e650ccec8edf1d03030f3d7a3428518693c8d072ad41530b31",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -620,7 +620,7 @@
             "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
           }
         },
-        "blocked": "材料或補給不足"
+        "blocked": ""
       },
       "3": {
         "goal": "補足河階神廟施工架所需的蘆葦",
@@ -672,7 +672,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6174,
         "observation": "61eb31ae9b7f36ebf29377b6f7dfb2a414493fb9cbc943481599d1d0986a33ac",
@@ -864,36 +864,9 @@
         "blocked": ""
       },
       "5": {
-        "goal": "與胡伊合作在石灰岩露頭建造獅身人面像",
+        "goal": "與胡伊合作推進石灰岩露頭的獅身人面像",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "stone",
-            "material": "stone",
-            "amount": 2,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "quarry",
-            "kind": "stone",
-            "material": "stone",
-            "amount": 2,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "build",
-            "site": "quarry",
-            "kind": "獅身人面像",
-            "material": "",
-            "amount": 1,
-            "repeat": 11,
-            "until": "count"
-          },
           {
             "type": "think",
             "site": "quarry",
@@ -904,10 +877,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
-        "done": 5,
-        "seen": 6134,
-        "observation": "cea47277968e11b3b1f939e825466ee4dd66afe0d7f787e422a7114c5d2622a0",
+        "cursor": 0,
+        "done": 0,
+        "seen": 6200,
+        "observation": "ebea62c6f81dc1f29065dc2b342830d71f36151212690229822628404e1361ad",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -77871,6 +77844,94 @@
       "site": "terrace",
       "ok": true,
       "message": "加工一份石塊"
+    },
+    {
+      "id": "p6197",
+      "eventSeq": 6197,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5883,
+      "eventSeq": 6198,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5884,
+      "eventSeq": 6199,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 reed"
+    },
+    {
+      "id": 5885,
+      "eventSeq": 6200,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p6201",
+      "eventSeq": 6201,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5886,
+      "eventSeq": 6202,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
     }
   ],
   "needs": [
@@ -78178,11 +78239,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795683196.3130739,
+    "phase": "waiting",
+    "updated": 1795683242.369985,
     "reason": ""
   },
-  "seconds": 72147.74531400803,
+  "seconds": 72150.038274074,
   "council": {
     "food": 53,
     "water": 20,
@@ -78190,7 +78251,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683197.765295,
+  "snapshotAt": 1795683243.704791,
   "recipes": {
     "茅舍": {
       "sites": [
