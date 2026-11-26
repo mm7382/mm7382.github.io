@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5429,
+  "aiDecisions": 5430,
   "state": {
     "day": 1203,
     "actors": [
@@ -13,11 +13,12 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
-          "field"
+          "field",
+          "bank"
         ],
         "goal": "支援露頭的獅身人面像工程，補足粗雕所需的水。"
       },
@@ -31,7 +32,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -50,7 +51,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 7,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
@@ -70,7 +71,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace"
@@ -174,8 +175,8 @@
           "food": 53,
           "water": 0,
           "reed": 5,
-          "stone": 6,
-          "block": 11
+          "stone": 4,
+          "block": 12
         }
       },
       "desert": {
@@ -242,8 +243,8 @@
       "terrace/神廟": {
         "kind": "神廟",
         "site": "terrace",
-        "stage": 2,
-        "work": 2,
+        "stage": 3,
+        "work": 0,
         "complete": false,
         "condition": 0
       },
@@ -333,7 +334,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5891,
+    "turn": 5896,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -368,7 +369,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6186,
         "observation": "3872d2e3642e0870c5da675e5b37d575b6f1bd254b50e56189583595b57e6160",
@@ -459,8 +460,8 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 4,
+        "cursor": 1,
+        "done": 0,
         "seen": 6179,
         "observation": "6bf2aba0fd4bcff99cb253a3484049faa71b13c9310d9d4274631b1808f270eb",
         "proposals": {
@@ -566,7 +567,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6204,
         "observation": "f8abeaac78a2df4d8ae5d0de3ab366fe7ae2e9df78c3eb6574e72f5e0f20f2f5",
         "proposals": {
@@ -816,8 +817,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 6200,
-        "observation": "ebea62c6f81dc1f29065dc2b342830d71f36151212690229822628404e1361ad",
+        "seen": 6210,
+        "observation": "c06e41271012001c6a010e86d5fd613f356ab107b7183525ca83ef46c2a4b06d",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -77988,6 +77989,89 @@
       "site": "quarry",
       "ok": true,
       "message": "等候"
+    },
+    {
+      "id": "p6211",
+      "eventSeq": 6211,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5892,
+      "eventSeq": 6212,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5893,
+      "eventSeq": 6213,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已勘查蘆葦河岸"
+    },
+    {
+      "id": 5894,
+      "eventSeq": 6214,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": 5895,
+      "eventSeq": 6215,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "施工架，已結算一工次"
+    },
+    {
+      "id": 5896,
+      "eventSeq": 6216,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -78296,10 +78380,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795683320.43094,
+    "updated": 1795683368.09258,
     "reason": ""
   },
-  "seconds": 72152.93218884309,
+  "seconds": 72154.89345623538,
   "council": {
     "food": 53,
     "water": 20,
@@ -78307,7 +78391,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683321.773516,
+  "snapshotAt": 1795683369.428311,
   "recipes": {
     "茅舍": {
       "sites": [
