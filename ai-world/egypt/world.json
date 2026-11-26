@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5372,
+  "aiDecisions": 5374,
   "state": {
     "day": 1202,
     "actors": [
@@ -53,22 +53,22 @@
           "terrace",
           "field"
         ],
-        "goal": "前往氾濫平原照料農田，維持聚落的食物來源"
+        "goal": "在河階營地提議興建金字塔，並準備所需原石"
       },
       {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [],
-        "goal": "照料農田，維持聚落的食物來源"
+        "goal": "支持河階營地的金字塔工程，先取得施工所需知識"
       },
       {
         "name": "胡伊",
@@ -258,9 +258,20 @@
           2
         ],
         "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
+      },
+      "terrace/金字塔": {
+        "id": "N5733",
+        "record": 5733,
+        "kind": "金字塔",
+        "site": "terrace",
+        "proposer": 2,
+        "approved": [
+          2
+        ],
+        "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5732,
+    "turn": 5734,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -394,12 +405,21 @@
         "blocked": "計畫路徑中斷"
       },
       "2": {
-        "goal": "前往氾濫平原照料農田，維持聚落的食物來源",
+        "goal": "在河階營地提議興建金字塔，並準備所需原石",
         "restWhenTired": true,
         "steps": [
           {
+            "type": "propose",
+            "site": "terrace",
+            "kind": "金字塔",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
             "type": "move",
-            "site": "field",
+            "site": "quarry",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -407,17 +427,35 @@
             "until": "count"
           },
           {
-            "type": "tend",
-            "site": "field",
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "terrace",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
           {
             "type": "think",
-            "site": "field",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -425,10 +463,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5984,
-        "observation": "f500907bad781e4db2c4620db44cb0ae5f40af3f6064c54a0a16868cb7593bb7",
+        "seen": 5994,
+        "observation": "68820e85ef03ba825690ec5e19978bdb2ba4324558475d5243c639af5da7b27b",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -468,15 +506,15 @@
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
         },
-        "blocked": "計畫路徑中斷"
+        "blocked": ""
       },
       "3": {
-        "goal": "照料農田，維持聚落的食物來源",
+        "goal": "支持河階營地的金字塔工程，先取得施工所需知識",
         "restWhenTired": true,
         "steps": [
           {
             "type": "move",
-            "site": "field",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -484,17 +522,80 @@
             "until": "count"
           },
           {
-            "type": "tend",
-            "site": "field",
+            "type": "agree",
+            "site": "terrace",
+            "kind": "金字塔",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "survey",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
             "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "terrace",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "research",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 3,
+            "until": "count"
+          },
+          {
+            "type": "build",
+            "site": "terrace",
+            "kind": "金字塔",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "complete"
           },
           {
             "type": "think",
-            "site": "field",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -502,10 +603,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5986,
-        "observation": "977554e994f52f7f0c2fd1f3a81eadb5c3c394d9dc64802d38a56970dab77d34",
+        "seen": 5996,
+        "observation": "c53d4ecf6454cbd7ded45291b93aba83412221795cb5ae791da1b78046836805",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -543,9 +644,20 @@
               2
             ],
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
+          },
+          "terrace/金字塔": {
+            "id": "N5733",
+            "record": 5733,
+            "kind": "金字塔",
+            "site": "terrace",
+            "proposer": 2,
+            "approved": [
+              2
+            ],
+            "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
         },
-        "blocked": "計畫路徑中斷"
+        "blocked": ""
       },
       "4": {
         "goal": "在河階營地興建工坊，為石材加工提供場所",
@@ -74726,6 +74838,70 @@
       "site": "bank",
       "ok": false,
       "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5995",
+      "eventSeq": 5995,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1202,
+      "say": "胡伊，營地已有不少石塊，我想提議在河階營地興建金字塔，你願意同意這項提案嗎？我會先去搬運原石。",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "proposal",
+        "recipients": [
+          4
+        ],
+        "requiresResponse": true
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5733,
+      "eventSeq": 5996,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1202,
+      "say": "",
+      "action": "propose",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "已登記提案"
+    },
+    {
+      "id": "p5997",
+      "eventSeq": 5997,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "帕伊去照料農田，我會支持納赫特提出的金字塔工程，先到營地勘查與研究。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5734,
+      "eventSeq": 5998,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -74853,14 +75029,73 @@
       "asset": {},
       "implementation": "已支援",
       "construction": "提案"
+    },
+    {
+      "id": "N5733",
+      "record": 5733,
+      "kind": "金字塔",
+      "site": "terrace",
+      "proposer": 2,
+      "approved": [
+        2
+      ],
+      "purpose": "在河階營地提議興建金字塔，並準備所需原石",
+      "source": "data/records/plan-000005995.json",
+      "version": "nile-v4",
+      "cost": {
+        "sites": [
+          "terrace",
+          "desert"
+        ],
+        "research": 3,
+        "stages": [
+          {
+            "name": "測量定位",
+            "cost": {},
+            "work": 3
+          },
+          {
+            "name": "整平基礎",
+            "cost": {
+              "stone": 6
+            },
+            "work": 4
+          },
+          {
+            "name": "施工坡道",
+            "cost": {
+              "reed": 6,
+              "stone": 4
+            },
+            "work": 4
+          },
+          {
+            "name": "分層堆砌",
+            "cost": {
+              "block": 16
+            },
+            "work": 12
+          },
+          {
+            "name": "外層修整",
+            "cost": {
+              "block": 6
+            },
+            "work": 5
+          }
+        ]
+      },
+      "asset": {},
+      "implementation": "已支援",
+      "construction": "提案"
     }
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795681294.664279,
+    "updated": 1795681345.964063,
     "reason": ""
   },
-  "seconds": 72069.24325802331,
+  "seconds": 72071.00847187574,
   "council": {
     "food": 55,
     "water": 41,
@@ -74868,7 +75103,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681297.048217,
+  "snapshotAt": 1795681348.380853,
   "recipes": {
     "茅舍": {
       "sites": [
