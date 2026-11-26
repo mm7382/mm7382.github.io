@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5510,
+  "aiDecisions": 5512,
   "state": {
     "day": 1205,
     "actors": [
@@ -87,7 +87,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "加工沙漠台地的原石，補足金字塔外層修整所需石塊並施工"
+        "goal": "為沙漠台地神廟準備施工架所需蘆葦"
       },
       {
         "name": "胡伊",
@@ -102,14 +102,14 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "完成沙漠台地金字塔的外層修整"
+        "goal": "為沙漠台地的神廟加工石塊"
       },
       {
         "name": "塞努",
@@ -392,7 +392,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6207,
+    "turn": 6209,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -783,11 +783,29 @@
         "blocked": ""
       },
       "3": {
-        "goal": "加工沙漠台地的原石，補足金字塔外層修整所需石塊並施工",
+        "goal": "為沙漠台地神廟準備施工架所需蘆葦",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "shape",
+            "type": "move",
+            "site": "fieldian",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "take",
+            "site": "field",
+            "kind": "",
+            "material": "reed",
+            "amount": 4,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
             "site": "desert",
             "kind": "",
             "material": "",
@@ -796,13 +814,13 @@
             "until": "count"
           },
           {
-            "type": "build",
+            "type": "drop",
             "site": "desert",
-            "kind": "金字塔",
-            "material": "",
-            "amount": 1,
+            "kind": "",
+            "material": "reed",
+            "amount": 4,
             "repeat": 1,
-            "until": "complete"
+            "until": "count"
           },
           {
             "type": "think",
@@ -814,10 +832,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
-        "done": 2,
-        "seen": 6579,
-        "observation": "a2749832e047624d23a1c683bbf0f664a12664de9bbad08bd20d6df082c7f21d",
+        "cursor": 0,
+        "done": 0,
+        "seen": 6607,
+        "observation": "d9024ba69bfb70c110d176de6d09f519aeddac329f54da36e439ba1fbf9b7054",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -905,22 +923,34 @@
               5
             ],
             "purpose": "在沙漠台地探索興建另一座金字塔"
+          },
+          "desert/神廟": {
+            "id": "N6206",
+            "record": 6206,
+            "kind": "神廟",
+            "site": "desert",
+            "proposer": 1,
+            "approved": [
+              1,
+              2
+            ],
+            "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
           }
         },
-        "blocked": ""
+        "blocked": "計畫路徑中斷"
       },
       "4": {
-        "goal": "完成沙漠台地金字塔的外層修整",
+        "goal": "為沙漠台地的神廟加工石塊",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "build",
+            "type": "shape",
             "site": "desert",
-            "kind": "金字塔",
+            "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "complete"
+            "repeat": 7,
+            "until": "count"
           },
           {
             "type": "think",
@@ -932,10 +962,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 6587,
-        "observation": "2a1fbc797d0b96737de10b11313f43f36b8c87d5ed84683c554064aaa281c1a2",
+        "seen": 6609,
+        "observation": "d4948e99bff2b22fb6aa732ad70eeafc274aec9286b0a394e8d7e19c6a13b4c6",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -986,6 +1016,18 @@
               1
             ],
             "purpose": "與帕伊合作在河階營地興建神廟"
+          },
+          "desert/神廟": {
+            "id": "N6206",
+            "record": 6206,
+            "kind": "神廟",
+            "site": "desert",
+            "proposer": 1,
+            "approved": [
+              1,
+              2
+            ],
+            "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
           }
         },
         "blocked": ""
@@ -83818,6 +83860,68 @@
       "site": "desert",
       "ok": true,
       "message": "本人已同意此處的提案"
+    },
+    {
+      "id": "p6608",
+      "eventSeq": 6608,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6208,
+      "eventSeq": 6609,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "desert",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p6610",
+      "eventSeq": 6610,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6209,
+      "eventSeq": 6611,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -84245,10 +84349,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795686718.523089,
+    "updated": 1795686759.228812,
     "reason": ""
   },
-  "seconds": 72294.43759725086,
+  "seconds": 72296.1348634314,
   "council": {
     "food": 50,
     "water": 35,
@@ -84256,7 +84360,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795686719.930482,
+  "snapshotAt": 1795686760.630952,
   "recipes": {
     "茅舍": {
       "sites": [
