@@ -1,24 +1,24 @@
 {
-  "aiDecisions": 5376,
+  "aiDecisions": 5377,
   "state": {
     "day": 1202,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 5,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "將身上的水送到農田儲備，之後再評估需要"
+        "goal": "支持河階營地的金字塔工程，先送水並同意提案，再取得施工知識。"
       },
       {
         "name": "帕伊",
@@ -271,16 +271,16 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5736,
+    "turn": 5737,
     "deficits": 10217,
     "autonomy": {
       "0": {
-        "goal": "將身上的水送到農田儲備，之後再評估需要",
+        "goal": "支持河階營地的金字塔工程，先送水並同意提案，再取得施工知識。",
         "restWhenTired": true,
         "steps": [
           {
             "type": "move",
-            "site": "field",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -289,7 +289,7 @@
           },
           {
             "type": "drop",
-            "site": "field",
+            "site": "terrace",
             "kind": "",
             "material": "water",
             "amount": 5,
@@ -297,8 +297,71 @@
             "until": "count"
           },
           {
+            "type": "agree",
+            "site": "terrace",
+            "kind": "金字塔",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "terrace",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "research",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 3,
+            "until": "count"
+          },
+          {
+            "type": "build",
+            "site": "terrace",
+            "kind": "金字塔",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "complete"
+          },
+          {
             "type": "think",
-            "site": "field",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -306,10 +369,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5990,
-        "observation": "fa7b88b52349c982f5b96485183d85a0b6f99d715258d6916e4076a2506dac50",
+        "seen": 6002,
+        "observation": "841c1249c07acf9af7a8d42c277c8c2351779396c80c765ef781da70d142623b",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -323,9 +386,20 @@
               2
             ],
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
+          },
+          "terrace/金字塔": {
+            "id": "N5733",
+            "record": 5733,
+            "kind": "金字塔",
+            "site": "terrace",
+            "proposer": 2,
+            "approved": [
+              2
+            ],
+            "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
         },
-        "blocked": "計畫路徑中斷"
+        "blocked": ""
       },
       "1": {
         "goal": "前往農田照料作物，之後重新評估。",
@@ -74959,6 +75033,37 @@
       "site": "quarry",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p6003",
+      "eventSeq": 6003,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5737,
+      "eventSeq": 6004,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -75148,11 +75253,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795681390.733459,
+    "phase": "deciding",
+    "updated": 1795681427.589795,
     "reason": ""
   },
-  "seconds": 72072.93216520558,
+  "seconds": 72073.97032952329,
   "council": {
     "food": 55,
     "water": 41,
@@ -75160,7 +75265,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681393.120353,
+  "snapshotAt": 1795681429.985398,
   "recipes": {
     "茅舍": {
       "sites": [
