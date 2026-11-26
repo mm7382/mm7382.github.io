@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5374,
+  "aiDecisions": 5376,
   "state": {
     "day": 1202,
     "actors": [
@@ -75,19 +75,19 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace"
         ],
-        "goal": "在河階營地興建工坊，為石材加工提供場所"
+        "goal": "支持河階營地的金字塔工程，先送回原石並推進施工"
       },
       {
         "name": "塞努",
@@ -101,14 +101,14 @@
           "reed": 0,
           "stone": 6
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
           "desert",
           "quarry"
         ],
-        "goal": "支持興建河階營地工坊，並補足施工所需石材"
+        "goal": "支持河階營地金字塔，送回原石並同意提案"
       }
     ],
     "sites": {
@@ -271,7 +271,7 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5734,
+    "turn": 5736,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -660,27 +660,9 @@
         "blocked": ""
       },
       "4": {
-        "goal": "在河階營地興建工坊，為石材加工提供場所",
+        "goal": "支持河階營地的金字塔工程，先送回原石並推進施工",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "move",
             "site": "terrace",
@@ -700,9 +682,18 @@
             "until": "count"
           },
           {
+            "type": "agree",
+            "site": "terrace",
+            "kind": "金字塔",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
             "type": "build",
             "site": "terrace",
-            "kind": "工坊",
+            "kind": "金字塔",
             "material": "",
             "amount": 1,
             "repeat": 1,
@@ -718,10 +709,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 1,
         "done": 0,
-        "seen": 5976,
-        "observation": "dbc618d6562583e4974614bc5ec0d48d17c98acf8406672a140e346201da792d",
+        "seen": 5998,
+        "observation": "05faffd29865dafcee5d5a8887b7353e58eac601870610fe3308412dfc1d5da1",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -746,32 +737,25 @@
               2
             ],
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
+          },
+          "terrace/金字塔": {
+            "id": "N5733",
+            "record": 5733,
+            "kind": "金字塔",
+            "site": "terrace",
+            "proposer": 2,
+            "approved": [
+              2
+            ],
+            "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
         },
         "blocked": ""
       },
       "5": {
-        "goal": "支持興建河階營地工坊，並補足施工所需石材",
+        "goal": "支持河階營地金字塔，送回原石並同意提案",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "move",
             "site": "terrace",
@@ -791,13 +775,13 @@
             "until": "count"
           },
           {
-            "type": "build",
+            "type": "agree",
             "site": "terrace",
-            "kind": "工坊",
+            "kind": "金字塔",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "complete"
+            "until": "count"
           },
           {
             "type": "think",
@@ -809,10 +793,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 0,
         "done": 0,
-        "seen": 5978,
-        "observation": "22856f00d4c342875cb5b9edab717447fe2e8a837ca36c49a78b23de8ae9675e",
+        "seen": 6000,
+        "observation": "ebbbe1371618983b551df75404e46eab7c62ff471a28e5ef0dc67e87a71778a9",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -850,6 +834,17 @@
               2
             ],
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
+          },
+          "terrace/金字塔": {
+            "id": "N5733",
+            "record": 5733,
+            "kind": "金字塔",
+            "site": "terrace",
+            "proposer": 2,
+            "approved": [
+              2
+            ],
+            "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
         },
         "blocked": ""
@@ -74902,6 +74897,68 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": "p5999",
+      "eventSeq": 5999,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5735,
+      "eventSeq": 6000,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": "p6001",
+      "eventSeq": 6001,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5736,
+      "eventSeq": 6002,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -75091,11 +75148,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795681345.964063,
+    "phase": "waiting",
+    "updated": 1795681390.733459,
     "reason": ""
   },
-  "seconds": 72071.00847187574,
+  "seconds": 72072.93216520558,
   "council": {
     "food": 55,
     "water": 41,
@@ -75103,7 +75160,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681348.380853,
+  "snapshotAt": 1795681393.120353,
   "recipes": {
     "茅舍": {
       "sites": [
