@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5455,
+  "aiDecisions": 5457,
   "state": {
     "day": 1204,
     "actors": [
@@ -74,7 +74,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -87,14 +87,14 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 6,
           "reed": 0,
           "stone": 0
         },
-        "energy": 9,
+        "energy": 7,
         "research": 3,
         "survey": [
           "terrace",
@@ -114,14 +114,14 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 7,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
           "desert",
           "quarry"
         ],
-        "goal": "待同伴送水後協助完成獅身人面像的細雕"
+        "goal": "協助完成石灰岩露頭獅身人面像的細雕"
       }
     ],
     "sites": {
@@ -256,7 +256,7 @@
         "kind": "獅身人面像",
         "site": "quarry",
         "stage": 4,
-        "work": 1,
+        "work": 3,
         "complete": false,
         "condition": 0
       }
@@ -338,7 +338,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5985,
+    "turn": 5988,
     "deficits": 10226,
     "autonomy": {
       "0": {
@@ -696,9 +696,9 @@
           }
         ],
         "cursor": 0,
-        "done": 0,
-        "seen": 6287,
-        "observation": "52bceb8e931c326301003feb5235aed7ad11096165062fb41710ef42fae6c789",
+        "done": 1,
+        "seen": 6330,
+        "observation": "3f1b26b7baf1e9373722da63a109a2afe65fda23630d8259d7f81df853532a2d",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -776,7 +776,7 @@
             "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
           }
         },
-        "blocked": "材料或補給不足"
+        "blocked": ""
       },
       "4": {
         "goal": "支援石灰岩露頭的獅身人面像細雕",
@@ -837,7 +837,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6289,
         "observation": "67732a7e091deb81e321e53c875000a8f219f19d7d8b8340ecef669320c31410",
@@ -896,7 +896,7 @@
         "blocked": ""
       },
       "5": {
-        "goal": "待同伴送水後協助完成獅身人面像的細雕",
+        "goal": "協助完成石灰岩露頭獅身人面像的細雕",
         "restWhenTired": true,
         "steps": [
           {
@@ -907,12 +907,21 @@
             "amount": 1,
             "repeat": 1,
             "until": "complete"
+          },
+          {
+            "type": "think",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
           }
         ],
         "cursor": 0,
-        "done": 0,
-        "seen": 6305,
-        "observation": "4465f44bc6bcb6e09e3c788acb38984a8212a013df9d8015008f96c0fd1243bc",
+        "done": 1,
+        "seen": 6333,
+        "observation": "92c2de5c48ea7e6f6c249dd4969156e2dc1b6ca87a2a30b699b0cccb2cfc8ac5",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -990,7 +999,7 @@
             "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
           }
         },
-        "blocked": "材料或補給不足"
+        "blocked": ""
       }
     }
   },
@@ -79773,6 +79782,81 @@
       "site": "quarry",
       "ok": true,
       "message": "細雕與修面，已結算一工次"
+    },
+    {
+      "id": "p6331",
+      "eventSeq": 6331,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5986,
+      "eventSeq": 6332,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1204,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "細雕與修面，已結算一工次"
+    },
+    {
+      "id": 5987,
+      "eventSeq": 6333,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1204,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p6334",
+      "eventSeq": 6334,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5988,
+      "eventSeq": 6335,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "細雕與修面，已結算一工次"
     }
   ],
   "needs": [
@@ -80081,10 +80165,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795684421.209845,
+    "updated": 1795684463.158936,
     "reason": ""
   },
-  "seconds": 72199.12548703382,
+  "seconds": 72200.87217788449,
   "council": {
     "food": 51,
     "water": 34,
@@ -80092,7 +80176,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795684422.4928691,
+  "snapshotAt": 1795684464.440198,
   "recipes": {
     "茅舍": {
       "sites": [
