@@ -1,7 +1,7 @@
 {
-  "aiDecisions": 5111,
+  "aiDecisions": 5113,
   "state": {
-    "day": 1195,
+    "day": 1196,
     "actors": [
       {
         "name": "梅莉",
@@ -12,13 +12,13 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": ""
+        "goal": "修復農田，讓聚落能重新種植"
       },
       {
         "name": "帕伊",
@@ -63,7 +63,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -79,7 +79,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -95,7 +95,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -231,8 +231,67 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5111,
-    "deficits": 10171
+    "turn": 5113,
+    "deficits": 10183,
+    "autonomy": {
+      "0": {
+        "goal": "修復農田，讓聚落能重新種植",
+        "restWhenTired": true,
+        "steps": [
+          {
+            "type": "rest",
+            "site": "bank",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "field",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "field",
+            "kind": "",
+            "material": "reed",
+            "amount": 2,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "maintain",
+            "site": "field",
+            "kind": "農田",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "think",
+            "site": "field",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          }
+        ],
+        "cursor": 1,
+        "done": 0,
+        "seen": 5113,
+        "observation": "4d5278325c3ab78cf0f9c632900851c9b039f4894d54a69ea33d664cbacc3e7c",
+        "proposals": {},
+        "blocked": ""
+      }
+    }
   },
   "history": [
     {
@@ -61566,6 +61625,44 @@
       "eventSeq": 5112,
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 5112,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1196,
+      "say": "我先休息恢復體力，才能繼續補給。",
+      "action": "rest",
+      "kind": "",
+      "eventSeq": 5113,
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p5115",
+      "eventSeq": 5115,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1196,
+      "say": "農田已經荒廢了，我先休息，再帶蘆葦去修復。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5113,
+      "eventSeq": 5116,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1196,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -61581,7 +61678,7 @@
       ],
       "purpose": "我想先在營地搭建茅舍，讓大家有地方遮風避日。",
       "source": "data/records/000000001.json",
-      "version": "nile-v2",
+      "version": "nile-v4",
       "cost": {
         "sites": [
           "terrace",
@@ -61624,7 +61721,7 @@
       ],
       "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。",
       "source": "data/records/000000016.json",
-      "version": "nile-v2",
+      "version": "nile-v4",
       "cost": {
         "sites": [
           "field"
@@ -61652,11 +61749,11 @@
     }
   ],
   "status": {
-    "phase": "attention",
-    "updated": 1795659667.340222,
-    "reason": "居民決策暫停，已保留最近的世界紀錄。"
+    "phase": "deciding",
+    "updated": 1795673212.151674,
+    "reason": ""
   },
-  "seconds": 71678.63913434639,
+  "seconds": 71733.9102882797,
   "council": {
     "food": 0,
     "water": 0,
@@ -61664,7 +61761,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795667024.475716,
+  "snapshotAt": 1795673214.236164,
   "recipes": {
     "茅舍": {
       "sites": [
@@ -61984,5 +62081,5 @@
       ]
     }
   },
-  "realSecondsPerDay": 60
+  "realSecondsPerDay": 1440
 }
