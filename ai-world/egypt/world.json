@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5201,
+  "aiDecisions": 5203,
   "state": {
     "day": 1198,
     "actors": [
@@ -29,43 +29,43 @@
           "food": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
           "field",
           "bank"
         ],
-        "goal": "從河岸取水，補充農田的儲水。"
+        "goal": "照料農田，維持作物生長。"
       },
       {
         "name": "納赫特",
         "age": 39,
-        "site": "terrace",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "恢復體力後採集河岸食物，補充營地儲備"
+        "goal": "照料農田，維持聚落的食物來源"
       },
       {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 0
         },
-        "energy": 8,
+        "energy": 6,
         "research": 0,
         "survey": [],
         "goal": "恢復體力後照料農田，維持糧食供應"
@@ -75,14 +75,14 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 2,
+        "energy": 0,
         "research": 1,
         "survey": [
           "terrace"
@@ -139,7 +139,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 18,
+          "water": 17,
           "food": 4,
           "reed": 7
         }
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5317,
+    "turn": 5321,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -312,33 +312,15 @@
         "blocked": ""
       },
       "1": {
-        "goal": "從河岸取水，補充農田的儲水。",
+        "goal": "照料農田，維持作物生長。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "gather",
-            "site": "bank",
-            "kind": "water",
-            "material": "water",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
+            "type": "tend",
             "site": "field",
-            "kind": "",
+            "kind": "農田",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "field",
-            "kind": "water",
-            "material": "water",
-            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
@@ -352,10 +334,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 1,
         "done": 0,
-        "seen": 5386,
-        "observation": "a4af5cec1739ee7d942191360b8597f6c132e6da12f68ac90a390ff26abe9b9f",
+        "seen": 5408,
+        "observation": "abaa78978d40788ff974930f7f02f1cfb6383beab2765e002fc1f4528ef630de",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -385,11 +367,11 @@
         "blocked": ""
       },
       "2": {
-        "goal": "恢復體力後採集河岸食物，補充營地儲備",
+        "goal": "照料農田，維持聚落的食物來源",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "rest",
+            "type": "move",
             "site": "field",
             "kind": "",
             "material": "",
@@ -398,44 +380,17 @@
             "until": "count"
           },
           {
-            "type": "move",
-            "site": "bank",
+            "type": "tend",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "bank",
-            "kind": "",
-            "material": "food",
-            "amount": 4,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "terrace",
-            "kind": "",
-            "material": "food",
-            "amount": 4,
             "repeat": 1,
             "until": "count"
           },
           {
             "type": "think",
-            "site": "terrace",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -443,10 +398,10 @@
             "until": "count"
           }
         ],
-        "cursor": 5,
+        "cursor": 1,
         "done": 0,
-        "seen": 5362,
-        "observation": "bc4459f6b6170e83c85c3e997bfe8c094447498e0e779e2b4fe9cd7c77036784",
+        "seen": 5410,
+        "observation": "b84a79c5754a891260f3d2b6cfd9bdfbe082f47a9c19f152ee505a748e298dd5",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -516,7 +471,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5403,
         "observation": "f1f8c25f9a00c05ec52bf3c6f2906d83b639409570d6e5cef2933eac78616c1a",
@@ -607,7 +562,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5396,
         "observation": "ec7e605a8bceb53992ed7d9351f10556e323e93b03e74b484685756e62bc8b4b",
@@ -66212,6 +66167,94 @@
       "site": "field",
       "ok": true,
       "message": "已抵達氾濫平原"
+    },
+    {
+      "id": "p5409",
+      "eventSeq": 5409,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5318,
+      "eventSeq": 5410,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": "p5411",
+      "eventSeq": 5411,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5319,
+      "eventSeq": 5412,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 5320,
+      "eventSeq": 5413,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 5321,
+      "eventSeq": 5414,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -66298,19 +66341,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795675930.272995,
+    "phase": "waiting",
+    "updated": 1795675970.8694808,
     "reason": ""
   },
-  "seconds": 71846.0255787176,
+  "seconds": 71848.0504750891,
   "council": {
     "food": 38,
-    "water": 45,
+    "water": 44,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795675931.364598,
+  "snapshotAt": 1795675971.8943858,
   "recipes": {
     "茅舍": {
       "sites": [
