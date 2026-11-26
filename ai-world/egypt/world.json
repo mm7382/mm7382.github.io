@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5498,
+  "aiDecisions": 5499,
   "state": {
     "day": 1205,
     "actors": [
@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 1,
+        "energy": 9,
         "research": 3,
         "survey": [
           "terrace",
@@ -23,7 +23,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "將河階營地的石塊運至沙漠台地，補足金字塔分層堆砌的材料。"
+        "goal": "協助完成沙漠台地金字塔，優先推進分層堆砌。"
       },
       {
         "name": "帕伊",
@@ -36,7 +36,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -122,7 +122,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -204,8 +204,8 @@
         "source": {},
         "stock": {
           "reed": 0,
-          "stone": 10,
-          "block": 15
+          "stone": 8,
+          "block": 0
         }
       },
       "quarry": {
@@ -285,7 +285,7 @@
         "kind": "金字塔",
         "site": "desert",
         "stage": 3,
-        "work": 0,
+        "work": 2,
         "complete": false,
         "condition": 0
       }
@@ -379,45 +379,18 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6137,
+    "turn": 6141,
     "deficits": 10232,
     "autonomy": {
       "0": {
-        "goal": "將河階營地的石塊運至沙漠台地，補足金字塔分層堆砌的材料。",
+        "goal": "協助完成沙漠台地金字塔，優先推進分層堆砌。",
         "restWhenTired": true,
         "steps": [
           {
             "type": "move",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "take",
-            "site": "terrace",
-            "kind": "",
-            "material": "block",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
             "site": "desert",
             "kind": "",
             "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "desert",
-            "kind": "",
-            "material": "block",
             "amount": 1,
             "repeat": 1,
             "until": "count"
@@ -441,10 +414,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 6518,
-        "observation": "a62561837a5de11824f855643980b5caacda790e055bf981a288dc1a67a9a911",
+        "seen": 6526,
+        "observation": "4d8ccef201e20d545361e160b27a7bed15fad8ab93911c8edf62e41882f40e84",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -545,7 +518,7 @@
           }
         ],
         "cursor": 1,
-        "done": 0,
+        "done": 1,
         "seen": 6510,
         "observation": "2b6c16078939194845f5545d33569d5aaaf3edc46802c0702ff3ca694df0efdc",
         "proposals": {
@@ -663,7 +636,7 @@
           }
         ],
         "cursor": 0,
-        "done": 0,
+        "done": 1,
         "seen": 6521,
         "observation": "3f4ed359ef120bec700a8f2ade56c78064f479a5c7f67eeece8f174a2c74e115",
         "proposals": {
@@ -1017,7 +990,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6516,
         "observation": "d1a2a8fde80383636c101899c1909cd3c1c67deee0e1b97092590eb4ccb4b85d",
         "proposals": {
@@ -82646,6 +82619,76 @@
       "site": "terrace",
       "ok": true,
       "message": "已移轉 1 block"
+    },
+    {
+      "id": 6138,
+      "eventSeq": 6526,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1205,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": "p6527",
+      "eventSeq": 6527,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6139,
+      "eventSeq": 6528,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6140,
+      "eventSeq": 6529,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "desert",
+      "ok": true,
+      "message": "分層堆砌，已結算一工次"
+    },
+    {
+      "id": 6141,
+      "eventSeq": 6530,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "desert",
+      "ok": true,
+      "message": "分層堆砌，已結算一工次"
     }
   ],
   "needs": [
@@ -83014,10 +83057,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795686046.177823,
+    "updated": 1795686086.6216059,
     "reason": ""
   },
-  "seconds": 72266.79233744882,
+  "seconds": 72268.476504586,
   "council": {
     "food": 50,
     "water": 35,
@@ -83025,7 +83068,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795686047.474953,
+  "snapshotAt": 1795686087.917577,
   "recipes": {
     "茅舍": {
       "sites": [
