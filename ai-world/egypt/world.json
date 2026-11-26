@@ -13,7 +13,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -33,12 +33,13 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
           "field",
-          "bank"
+          "bank",
+          "quarry"
         ],
         "goal": "前往石灰岩露頭，協助完成獅身人面像。"
       },
@@ -52,11 +53,12 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
-          "field"
+          "field",
+          "quarry"
         ],
         "goal": "協助完成石灰岩露頭的獅身人面像"
       },
@@ -72,7 +74,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -92,7 +94,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -254,7 +256,7 @@
         "kind": "獅身人面像",
         "site": "quarry",
         "stage": 3,
-        "work": 2,
+        "work": 5,
         "complete": false,
         "condition": 0
       }
@@ -336,7 +338,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5934,
+    "turn": 5939,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -372,7 +374,7 @@
           }
         ],
         "cursor": 1,
-        "done": 0,
+        "done": 1,
         "seen": 6261,
         "observation": "736c3dba26b6111a26e64fea6c3c6a465261c06bfbd546fb81181f5886c1e2f5",
         "proposals": {
@@ -471,7 +473,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6263,
         "observation": "cd2f7d57983cdf5a91e308a69d62389b6a8073edce40fefd9842c7170a6b535a",
@@ -595,7 +597,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6254,
         "observation": "1bc94b687b05c8cd5f4485e2d5fadb225d2985f52d30a3bd2aad4966cc078333",
@@ -694,7 +696,7 @@
           }
         ],
         "cursor": 2,
-        "done": 0,
+        "done": 1,
         "seen": 6256,
         "observation": "3ab783cb7f4a44b2a2f8f2f73a75f5aa5e5b44b8d6afc47dcb455f6df2f5a8d3",
         "proposals": {
@@ -800,7 +802,7 @@
           }
         ],
         "cursor": 0,
-        "done": 2,
+        "done": 3,
         "seen": 6258,
         "observation": "d5b03a70f1ae537b71d7c41c0a8dcb64db4daa2c2dea803406cd6bad0bbf2faa",
         "proposals": {
@@ -78937,6 +78939,71 @@
       "site": "bank",
       "ok": true,
       "message": "已移轉 1 water"
+    },
+    {
+      "id": 5935,
+      "eventSeq": 6270,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "原岩粗雕，已結算一工次"
+    },
+    {
+      "id": 5936,
+      "eventSeq": 6271,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已勘查石灰岩露頭"
+    },
+    {
+      "id": 5937,
+      "eventSeq": 6272,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已勘查石灰岩露頭"
+    },
+    {
+      "id": 5938,
+      "eventSeq": 6273,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "原岩粗雕，已結算一工次"
+    },
+    {
+      "id": 5939,
+      "eventSeq": 6274,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "原岩粗雕，已結算一工次"
     }
   ],
   "needs": [
@@ -79245,10 +79312,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795683903.2090611,
+    "updated": 1795683939.850207,
     "reason": ""
   },
-  "seconds": 72177.55995389682,
+  "seconds": 72179.08591901833,
   "council": {
     "food": 53,
     "water": 24,
@@ -79256,7 +79323,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683904.546537,
+  "snapshotAt": 1795683941.1274161,
   "recipes": {
     "茅舍": {
       "sites": [
