@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5430,
+  "aiDecisions": 5432,
   "state": {
     "day": 1203,
     "actors": [
@@ -334,7 +334,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5896,
+    "turn": 5898,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -745,8 +745,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 6208,
-        "observation": "5b8ae21a104825602c51eb97d1ea7211088e649ee212c588584aedbe05b91867",
+        "seen": 6216,
+        "observation": "b69b7e3217afe2f1895cfab98f65b61a38752b62ff939d65d1b373bcc4f3829b",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -806,6 +806,15 @@
         "restWhenTired": true,
         "steps": [
           {
+            "type": "build",
+            "site": "quarry",
+            "kind": "獅身人面像",
+            "material": "",
+            "amount": 1,
+            "repeat": 8,
+            "until": "count"
+          },
+          {
             "type": "think",
             "site": "quarry",
             "kind": "",
@@ -817,8 +826,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 6210,
-        "observation": "c06e41271012001c6a010e86d5fd613f356ab107b7183525ca83ef46c2a4b06d",
+        "seen": 6218,
+        "observation": "2bd7d9cb7fcff0c460efa06a09136fe87639aa5254b5b3efc968ef6cb7e4af23",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -896,7 +905,7 @@
             "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
           }
         },
-        "blocked": ""
+        "blocked": "材料或補給不足"
       }
     }
   },
@@ -78072,6 +78081,68 @@
       "site": "terrace",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p6217",
+      "eventSeq": 6217,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5897,
+      "eventSeq": 6218,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": "p6219",
+      "eventSeq": 6219,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5898,
+      "eventSeq": 6220,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": false,
+      "message": "材料或補給不足"
     }
   ],
   "needs": [
@@ -78380,10 +78451,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795683368.09258,
+    "updated": 1795683404.545621,
     "reason": ""
   },
-  "seconds": 72154.89345623538,
+  "seconds": 72156.4124292996,
   "council": {
     "food": 53,
     "water": 20,
@@ -78391,7 +78462,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683369.428311,
+  "snapshotAt": 1795683406.061982,
   "recipes": {
     "茅舍": {
       "sites": [
