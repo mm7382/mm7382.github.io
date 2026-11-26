@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5224,
+  "aiDecisions": 5225,
   "state": {
     "day": 1198,
     "actors": [
@@ -29,25 +29,25 @@
           "food": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 7,
         "research": 0,
         "survey": [
           "terrace",
           "field",
           "bank"
         ],
-        "goal": "休息後照料農田，維持作物生長。"
+        "goal": "休息並留意農田，等待需要照料時再行動。"
       },
       {
         "name": "納赫特",
         "age": 39,
-        "site": "field",
+        "site": "terrace",
         "bag": {
           "food": 4,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5383,
+    "turn": 5385,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -303,13 +303,22 @@
         "blocked": ""
       },
       "1": {
-        "goal": "休息後照料農田，維持作物生長。",
+        "goal": "休息並留意農田，等待需要照料時再行動。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "tend",
+            "type": "rest",
             "site": "field",
-            "kind": "農田",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "wait",
+            "site": "field",
+            "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
@@ -327,8 +336,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5481,
-        "observation": "694f20da0e877124b553957300c46f4da161cf81ee47e87bd70ce1aa8d21168b",
+        "seen": 5497,
+        "observation": "844381e371b9488f3a10558f6f8cb131eaec98d1ad3c2e6e37803bcccff2f163",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -407,7 +416,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5474,
         "observation": "e4d28cbd4aee19600ae523641d142387c0751e4f6f627e1f985c8df538603fc5",
@@ -67430,6 +67439,50 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": "p5498",
+      "eventSeq": 5498,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5384,
+      "eventSeq": 5499,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5385,
+      "eventSeq": 5500,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -67516,11 +67569,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795676653.783882,
+    "phase": "deciding",
+    "updated": 1795676688.8998232,
     "reason": ""
   },
-  "seconds": 71876.49043817243,
+  "seconds": 71877.61957274536,
   "council": {
     "food": 38,
     "water": 47,
@@ -67528,7 +67581,7 @@
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795676654.910291,
+  "snapshotAt": 1795676689.992595,
   "recipes": {
     "茅舍": {
       "sites": [
