@@ -6,7 +6,7 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "desert",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 8,
+        "energy": 7,
         "research": 3,
         "survey": [
           "terrace",
@@ -77,10 +77,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "stone": 0,
+          "stone": 6,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -205,8 +205,8 @@
         "source": {},
         "stock": {
           "reed": 8,
-          "stone": 8,
-          "block": 4
+          "stone": 6,
+          "block": 5
         }
       },
       "quarry": {
@@ -220,7 +220,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 35
+          "stone": 29
         },
         "stock": {
           "water": 11,
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6312,
+    "turn": 6316,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -435,7 +435,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6734,
         "observation": "5f22c2895cfe90d513f76bcaf8b8f28d53fd27ed7039d6a7c8c0fd48671fd6a9",
@@ -541,7 +541,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6736,
         "observation": "30b0ce4566f458f7823a697688c81a34513cb6ed7d393637dd1dd9fc26e59140",
@@ -669,7 +669,7 @@
           }
         ],
         "cursor": 1,
-        "done": 0,
+        "done": 1,
         "seen": 6738,
         "observation": "3aa03310db4a1923f996c4eab109c207984bf33d0428fe12b77e9cf846f5bc46",
         "proposals": {
@@ -790,7 +790,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6740,
         "observation": "b4f0ff5f680fe8b60e592fdcf6967af119cf0957c874a32a2ad4ec3e7514bfd0",
@@ -85754,6 +85754,58 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": 6313,
+      "eventSeq": 6747,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 6314,
+      "eventSeq": 6748,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 6315,
+      "eventSeq": 6749,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": 6316,
+      "eventSeq": 6750,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
     }
   ],
   "needs": [
@@ -86180,11 +86232,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795687877.1379251,
+    "phase": "deciding",
+    "updated": 1795687915.8123882,
     "reason": ""
   },
-  "seconds": 72343.03698920038,
+  "seconds": 72344.29500081492,
   "council": {
     "food": 49,
     "water": 33,
@@ -86192,7 +86244,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687878.572454,
+  "snapshotAt": 1795687917.259774,
   "recipes": {
     "茅舍": {
       "sites": [
