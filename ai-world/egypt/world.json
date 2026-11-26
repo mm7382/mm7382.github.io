@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5332,
+  "aiDecisions": 5340,
   "state": {
     "day": 1201,
     "actors": [
@@ -18,7 +18,7 @@
           "terrace",
           "field"
         ],
-        "goal": "河岸食物不足，改為補充農田的水儲備"
+        "goal": "將已採集的水送到農田儲備"
       },
       {
         "name": "帕伊",
@@ -36,24 +36,24 @@
           "field",
           "bank"
         ],
-        "goal": "照料已有水源的農田，維持聚落糧食生產。"
+        "goal": "前往農田照料作物，之後重新評估。"
       },
       {
         "name": "納赫特",
         "age": 39,
         "site": "terrace",
         "bag": {
-          "food": 4,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "補充營地食物後再評估農田需求"
+        "goal": "照料農田，維持聚落的食物來源"
       },
       {
         "name": "蒂雅",
@@ -75,35 +75,37 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 6
         },
-        "energy": 3,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace"
         ],
-        "goal": "將營地石材加工成石塊"
+        "goal": "從石灰岩露頭運回石材並加工成石塊"
       },
       {
         "name": "塞努",
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "field",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 6,
+        "energy": 1,
         "research": 0,
-        "survey": [],
-        "goal": "維持農田照料，之後再評估情況"
+        "survey": [
+          "terrace"
+        ],
+        "goal": "勘查聚落周邊，了解可用地形"
       }
     ],
     "sites": {
@@ -158,7 +160,7 @@
         ],
         "source": {},
         "stock": {
-          "food": 54,
+          "food": 58,
           "water": 21,
           "reed": 9,
           "stone": 0,
@@ -189,7 +191,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 192
+          "stone": 186
         },
         "stock": {}
       }
@@ -242,22 +244,13 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5662,
+    "turn": 5680,
     "deficits": 10212,
     "autonomy": {
       "0": {
-        "goal": "河岸食物不足，改為補充農田的水儲備",
+        "goal": "將已採集的水送到農田儲備",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "gather",
-            "site": "bank",
-            "kind": "",
-            "material": "water",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "move",
             "site": "field",
@@ -286,15 +279,15 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 5877,
-        "observation": "5d995f05b3c938ac09257143ad48ff45bd3a363aac3ef529b4087f77215b90cd",
+        "seen": 5896,
+        "observation": "beba3133600740d226145729b911730066a3c3b1b671ee088cc5ccb29499a4a8",
         "proposals": {},
-        "blocked": ""
+        "blocked": "計畫路徑中斷"
       },
       "1": {
-        "goal": "照料已有水源的農田，維持聚落糧食生產。",
+        "goal": "前往農田照料作物，之後重新評估。",
         "restWhenTired": true,
         "steps": [
           {
@@ -327,8 +320,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5879,
-        "observation": "8e94457eb2b4d62e19a7b9a5bdf745393d8f32fbe70838b31f5dc7a09eae29d7",
+        "seen": 5898,
+        "observation": "8333d1f62184550c7eb988b66b52c3601771e241dab925bbc09d4cfec5192085",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -358,12 +351,12 @@
         "blocked": "計畫路徑中斷"
       },
       "2": {
-        "goal": "補充營地食物後再評估農田需求",
+        "goal": "照料農田，維持聚落的食物來源",
         "restWhenTired": true,
         "steps": [
           {
             "type": "move",
-            "site": "bank",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -371,35 +364,17 @@
             "until": "count"
           },
           {
-            "type": "gather",
-            "site": "bank",
-            "kind": "",
-            "material": "food",
-            "amount": 4,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "terrace",
+            "type": "tend",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "terrace",
-            "kind": "",
-            "material": "food",
-            "amount": 4,
             "repeat": 1,
             "until": "count"
           },
           {
             "type": "think",
-            "site": "terrace",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -407,10 +382,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 0,
         "done": 0,
-        "seen": 5852,
-        "observation": "1b9b3a6048e1a31f7ccef21830b054af0cb1a62a08b2565693ec3c03e0ac4eb9",
+        "seen": 5900,
+        "observation": "5a86fb6f5b0369d9380ba78e6e3a889ea595373bd55ea2f2903476b3cfc41914",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -437,7 +412,7 @@
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
           }
         },
-        "blocked": ""
+        "blocked": "計畫路徑中斷"
       },
       "3": {
         "goal": "照料農田，維持聚落的食物來源",
@@ -473,8 +448,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5882,
-        "observation": "b39e8b34337b527123707322b09c92425f7ae94ded8b57d1bce4cc268f0c4820",
+        "seen": 5892,
+        "observation": "30d12ed25fa2ae35afe19afe5cbc6a9c80d74c68520c5eeb9107aecc2806bd3e",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -504,16 +479,52 @@
         "blocked": "計畫路徑中斷"
       },
       "4": {
-        "goal": "將營地石材加工成石塊",
+        "goal": "從石灰岩露頭運回石材並加工成石塊",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "terrace",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
           {
             "type": "shape",
             "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 5,
+            "repeat": 3,
             "until": "count"
           },
           {
@@ -526,10 +537,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
-        "seen": 5831,
-        "observation": "7b5fe0b418304b088e6640dd34f60b16b9dbc31292b99b27ceb24340040ca716",
+        "seen": 5884,
+        "observation": "1f44691bcd46adc22a53acfd87828cd62c57472a2ef96d826207f8015a7b26f8",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -559,21 +570,39 @@
         "blocked": ""
       },
       "5": {
-        "goal": "維持農田照料，之後再評估情況",
+        "goal": "勘查聚落周邊，了解可用地形",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "tend",
-            "site": "field",
-            "kind": "農田",
+            "type": "move",
+            "site": "desert",
+            "kind": "",
             "material": "",
             "amount": 1,
             "repeat": 1,
             "until": "count"
           },
           {
-            "type": "wait",
-            "site": "field",
+            "type": "survey",
+            "site": "desert",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "survey",
+            "site": "quarry",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -582,7 +611,7 @@
           },
           {
             "type": "think",
-            "site": "field",
+            "site": "quarry",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -590,10 +619,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5875,
-        "observation": "5821645466c073483664f36015e134145f0060720fbed3613d23f4970fe3c2f9",
+        "seen": 5904,
+        "observation": "17eda0fe12c1820c38d894fda5d80507b0803ad8406be11504a3590039296af6",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -620,7 +649,7 @@
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
           }
         },
-        "blocked": "無可照料農田或正淹水"
+        "blocked": ""
       }
     }
   },
@@ -72974,6 +73003,384 @@
       "site": "bank",
       "ok": false,
       "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5885",
+      "eventSeq": 5885,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5663,
+      "eventSeq": 5886,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1201,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p5887",
+      "eventSeq": 5887,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5664,
+      "eventSeq": 5888,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": "p5889",
+      "eventSeq": 5889,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5665,
+      "eventSeq": 5890,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": 5666,
+      "eventSeq": 5891,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5667,
+      "eventSeq": 5892,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 4 food"
+    },
+    {
+      "id": "p5893",
+      "eventSeq": 5893,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5668,
+      "eventSeq": 5894,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": 5669,
+      "eventSeq": 5895,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1201,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 5670,
+      "eventSeq": 5896,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已勘查河階營地"
+    },
+    {
+      "id": "p5897",
+      "eventSeq": 5897,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5671,
+      "eventSeq": 5898,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5899",
+      "eventSeq": 5899,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5672,
+      "eventSeq": 5900,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5901",
+      "eventSeq": 5901,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5673,
+      "eventSeq": 5902,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "terrace",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": 5674,
+      "eventSeq": 5903,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5675,
+      "eventSeq": 5904,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1201,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p5905",
+      "eventSeq": 5905,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5676,
+      "eventSeq": 5906,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 5677,
+      "eventSeq": 5907,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5678,
+      "eventSeq": 5908,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5679,
+      "eventSeq": 5909,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5680,
+      "eventSeq": 5910,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
     }
   ],
   "needs": [
@@ -73060,11 +73467,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795679968.929455,
+    "phase": "waiting",
+    "updated": 1795680225.446607,
     "reason": ""
   },
-  "seconds": 72014.16089703223,
+  "seconds": 72025.2267866139,
   "council": {
     "food": 58,
     "water": 45,
@@ -73072,7 +73479,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795679971.2456179,
+  "snapshotAt": 1795680226.673279,
   "recipes": {
     "茅舍": {
       "sites": [
