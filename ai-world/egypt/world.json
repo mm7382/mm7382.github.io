@@ -1,19 +1,19 @@
 {
-  "aiDecisions": 5438,
+  "aiDecisions": 5439,
   "state": {
     "day": 1203,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 6,
           "reed": 0,
           "stone": 0
         },
-        "energy": 8,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
@@ -32,7 +32,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace",
@@ -51,7 +51,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -103,21 +103,21 @@
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
           "desert",
           "quarry"
         ],
-        "goal": "與胡伊合作完成石灰岩露頭的獅身人面像"
+        "goal": "與胡伊合作完成石灰岩露頭的獅身人面像，先補足粗雕所需的水"
       }
     ],
     "sites": {
@@ -244,7 +244,7 @@
         "kind": "神廟",
         "site": "terrace",
         "stage": 4,
-        "work": 1,
+        "work": 2,
         "complete": false,
         "condition": 0
       },
@@ -334,7 +334,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5915,
+    "turn": 5919,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -378,7 +378,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6220,
         "observation": "edf9d12d5b72235a317fc25958e882ffe8ae183618edd9046f99e467c5e66e3a",
@@ -576,7 +576,7 @@
           }
         ],
         "cursor": 0,
-        "done": 5,
+        "done": 6,
         "seen": 6204,
         "observation": "f8abeaac78a2df4d8ae5d0de3ab366fe7ae2e9df78c3eb6574e72f5e0f20f2f5",
         "proposals": {
@@ -820,9 +820,54 @@
         "blocked": ""
       },
       "5": {
-        "goal": "與胡伊合作完成石灰岩露頭的獅身人面像",
+        "goal": "與胡伊合作完成石灰岩露頭的獅身人面像，先補足粗雕所需的水",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "move",
+            "site": "bank",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "bank",
+            "kind": "",
+            "material": "water",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "quarry",
+            "kind": "",
+            "material": "water",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "build",
+            "site": "quarry",
+            "kind": "獅身人面像",
+            "material": "",
+            "amount": 1,
+            "repeat": 8,
+            "until": "count"
+          },
           {
             "type": "think",
             "site": "quarry",
@@ -835,8 +880,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 6235,
-        "observation": "092b40ab1efd2b4fe91957ef2324aae1a3ab6c683f1e427e626eebb9a3bedcd4",
+        "seen": 6243,
+        "observation": "d49d72d4364530301e9af7746ba63bfdeb0d3c8b31261da286a788fa20bbcfb5",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -78481,6 +78526,76 @@
       "site": "quarry",
       "ok": true,
       "message": "等候"
+    },
+    {
+      "id": "p6244",
+      "eventSeq": 6244,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5916,
+      "eventSeq": 6245,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5917,
+      "eventSeq": 6246,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 5918,
+      "eventSeq": 6247,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5919,
+      "eventSeq": 6248,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "刻飾，已結算一工次"
     }
   ],
   "needs": [
@@ -78789,10 +78904,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795683616.207495,
+    "updated": 1795683672.753765,
     "reason": ""
   },
-  "seconds": 72165.60649906873,
+  "seconds": 72167.96152352357,
   "council": {
     "food": 53,
     "water": 26,
@@ -78800,7 +78915,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683620.019614,
+  "snapshotAt": 1795683674.012971,
   "recipes": {
     "茅舍": {
       "sites": [
