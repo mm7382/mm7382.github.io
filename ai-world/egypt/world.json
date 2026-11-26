@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5341,
+  "aiDecisions": 5343,
   "state": {
     "day": 1201,
     "actors": [
@@ -47,7 +47,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 10,
         "research": 0,
         "survey": [
           "terrace",
@@ -245,7 +245,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5689,
+    "turn": 5691,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -321,8 +321,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5898,
-        "observation": "8333d1f62184550c7eb988b66b52c3601771e241dab925bbc09d4cfec5192085",
+        "seen": 5920,
+        "observation": "6f33116f4140e148e9d29b14692a02f6d1904319b3d86d7b45814b0dd221f124",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -356,6 +356,15 @@
         "restWhenTired": true,
         "steps": [
           {
+            "type": "rest",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
             "type": "move",
             "site": "field",
             "kind": "",
@@ -383,10 +392,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5900,
-        "observation": "5a86fb6f5b0369d9380ba78e6e3a889ea595373bd55ea2f2903476b3cfc41914",
+        "seen": 5922,
+        "observation": "45ca79f5d22530718e7e9c02880e2e99aaf1ba2f900b4555a97a1853173e41ed",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -413,7 +422,7 @@
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
           }
         },
-        "blocked": "計畫路徑中斷"
+        "blocked": ""
       },
       "3": {
         "goal": "照料農田，維持聚落的食物來源",
@@ -73517,6 +73526,68 @@
       "site": "bank",
       "ok": false,
       "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5921",
+      "eventSeq": 5921,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5690,
+      "eventSeq": 5922,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5923",
+      "eventSeq": 5923,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5691,
+      "eventSeq": 5924,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -73603,11 +73674,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795680308.806263,
+    "phase": "waiting",
+    "updated": 1795680342.3590012,
     "reason": ""
   },
-  "seconds": 72028.35444222661,
+  "seconds": 72030.0957968967,
   "council": {
     "food": 58,
     "water": 45,
@@ -73615,7 +73686,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795680310.036132,
+  "snapshotAt": 1795680345.958575,
   "recipes": {
     "茅舍": {
       "sites": [
