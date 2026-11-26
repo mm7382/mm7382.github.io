@@ -6,7 +6,7 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 9,
+        "energy": 7,
         "research": 3,
         "survey": [
           "terrace",
@@ -36,7 +36,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -80,7 +80,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -101,7 +101,7 @@
           "stone": 0,
           "block": 1
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace",
@@ -122,7 +122,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -204,8 +204,8 @@
         "source": {},
         "stock": {
           "reed": 0,
-          "stone": 8,
-          "block": 0
+          "stone": 6,
+          "block": 1
         }
       },
       "quarry": {
@@ -285,7 +285,7 @@
         "kind": "金字塔",
         "site": "desert",
         "stage": 3,
-        "work": 2,
+        "work": 3,
         "complete": false,
         "condition": 0
       }
@@ -379,7 +379,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6141,
+    "turn": 6146,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -414,7 +414,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 6526,
         "observation": "4d8ccef201e20d545361e160b27a7bed15fad8ab93911c8edf62e41882f40e84",
@@ -518,7 +518,7 @@
           }
         ],
         "cursor": 1,
-        "done": 1,
+        "done": 2,
         "seen": 6510,
         "observation": "2b6c16078939194845f5545d33569d5aaaf3edc46802c0702ff3ca694df0efdc",
         "proposals": {
@@ -989,8 +989,8 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 2,
+        "cursor": 1,
+        "done": 0,
         "seen": 6516,
         "observation": "d1a2a8fde80383636c101899c1909cd3c1c67deee0e1b97092590eb4ccb4b85d",
         "proposals": {
@@ -82689,6 +82689,71 @@
       "site": "desert",
       "ok": true,
       "message": "分層堆砌，已結算一工次"
+    },
+    {
+      "id": 6142,
+      "eventSeq": 6531,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6143,
+      "eventSeq": 6532,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6144,
+      "eventSeq": 6533,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1205,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": 6145,
+      "eventSeq": 6534,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 6146,
+      "eventSeq": 6535,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "desert",
+      "ok": true,
+      "message": "分層堆砌，已結算一工次"
     }
   ],
   "needs": [
@@ -83057,10 +83122,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795686086.6216059,
+    "updated": 1795686123.5969431,
     "reason": ""
   },
-  "seconds": 72268.476504586,
+  "seconds": 72270.01635996797,
   "council": {
     "food": 50,
     "water": 35,
@@ -83068,7 +83133,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795686087.917577,
+  "snapshotAt": 1795686124.952724,
   "recipes": {
     "茅舍": {
       "sites": [
