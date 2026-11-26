@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4860,
+    "turn": 4863,
     "deficits": 9403
   },
   "history": [
@@ -53693,6 +53693,39 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 4861,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1126,
+      "say": "我先休息恢復體力，準備補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 4862,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1126,
+      "say": "我先休息恢復體力，準備補充河岸食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 4863,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1126,
+      "say": "我先休息恢復體力，再採集食物。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -53780,10 +53813,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795655220.557235,
+    "updated": 1795655267.265585,
     "reason": ""
   },
-  "seconds": 67500.57587442693,
+  "seconds": 67546.80139084294,
   "council": {
     "food": 0,
     "water": 0,
@@ -53791,7 +53824,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795655221.553832,
+  "snapshotAt": 1795655268.251132,
   "recipes": {
     "茅舍": {
       "sites": [
