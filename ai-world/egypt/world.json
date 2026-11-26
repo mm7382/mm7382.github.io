@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5122,
+  "aiDecisions": 5124,
   "state": {
     "day": 1196,
     "actors": [
@@ -79,7 +79,7 @@
           "water": 6,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 5,
         "research": 0,
         "survey": [],
         "goal": "補充營地飲水"
@@ -89,13 +89,13 @@
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 6
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": "為農田修復補充蘆葦"
@@ -231,7 +231,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5122,
+    "turn": 5124,
     "deficits": 10183,
     "autonomy": {
       "0": {
@@ -488,15 +488,6 @@
         "restWhenTired": true,
         "steps": [
           {
-            "type": "gather",
-            "site": "bank",
-            "kind": "water",
-            "material": "water",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
             "type": "move",
             "site": "terrace",
             "kind": "",
@@ -524,10 +515,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 5122,
-        "observation": "3db2ffac81d54a28e707323fc522d067f6301671dafaf202f4334fa0b8a48d98",
+        "seen": 5134,
+        "observation": "956526521a8c2ca6d5bf9a187b46d5e95e1a390c340c62963c948fac78b0f776",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -561,15 +552,6 @@
         "restWhenTired": true,
         "steps": [
           {
-            "type": "gather",
-            "site": "bank",
-            "kind": "reed",
-            "material": "reed",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
             "type": "move",
             "site": "field",
             "kind": "",
@@ -599,8 +581,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5124,
-        "observation": "fe9a8d1e0b8848ec88f78836de454eec1e61cb070d63547498962127c1dec5f0",
+        "seen": 5136,
+        "observation": "1161a4938decf00573d8daa49e36de98ef7dbc2556e6f81e577d22a67d147ef3",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -62235,6 +62217,58 @@
       "site": "bank",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p5135",
+      "eventSeq": 5135,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1196,
+      "say": "我已經裝好水，休息一下就送回營地。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5123,
+      "eventSeq": 5136,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1196,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p5137",
+      "eventSeq": 5137,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1196,
+      "say": "我帶蘆葦去農田，讓梅莉修復時可以使用。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5124,
+      "eventSeq": 5138,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1196,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
     }
   ],
   "needs": [
@@ -62322,10 +62356,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795673381.37779,
+    "updated": 1795673422.987128,
     "reason": ""
   },
-  "seconds": 71741.35247859743,
+  "seconds": 71743.08575383876,
   "council": {
     "food": 6,
     "water": 12,
@@ -62333,7 +62367,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795673382.37616,
+  "snapshotAt": 1795673424.457531,
   "recipes": {
     "茅舍": {
       "sites": [
