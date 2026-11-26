@@ -1,12 +1,12 @@
 {
-  "aiDecisions": 5524,
+  "aiDecisions": 5525,
   "state": {
     "day": 1206,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -28,7 +28,7 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "desert",
+        "site": "quarry",
         "bag": {
           "water": 0,
           "food": 0,
@@ -36,7 +36,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -45,7 +45,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "協助補足沙漠台地神廟所需石塊，待蘆葦送達後推進施工。"
+        "goal": "先取得原石，在沙漠台地加工石塊，為神廟後續工程備料。"
       },
       {
         "name": "納赫特",
@@ -55,10 +55,10 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 6,
+          "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -78,9 +78,9 @@
           "food": 0,
           "water": 0,
           "stone": 0,
-          "reed": 4
+          "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -204,8 +204,8 @@
         ],
         "source": {},
         "stock": {
-          "reed": 0,
-          "stone": 1,
+          "reed": 4,
+          "stone": 7,
           "block": 8
         }
       },
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6246,
+    "turn": 6250,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -462,7 +462,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 6644,
         "observation": "cbe08fcd4c9eb95a361a4cc1356a9e2aaddeaa4947dd238c0b8f79845ff1e2c2",
@@ -546,16 +546,52 @@
         "blocked": ""
       },
       "1": {
-        "goal": "協助補足沙漠台地神廟所需石塊，待蘆葦送達後推進施工。",
+        "goal": "先取得原石，在沙漠台地加工石塊，為神廟後續工程備料。",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 5,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "desert",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "desert",
+            "kind": "",
+            "material": "stone",
+            "amount": 5,
+            "repeat": 1,
+            "until": "count"
+          },
           {
             "type": "shape",
             "site": "desert",
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 1,
+            "repeat": 3,
             "until": "count"
           },
           {
@@ -570,8 +606,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6653,
-        "observation": "ff89fb436e1956aaa84b45967f950d66e5e1584fa3db635cf21472d617be854a",
+        "seen": 6661,
+        "observation": "eae1ed13413ec8b52efcdbb99b1656126944ae68f04f68f1de8fdc781b4f8abe",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -713,7 +749,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6631,
         "observation": "f0b041387d58e3d2464ccd11c750ee876f02c5ad01806cb9d1231b2f4ebf69c2",
@@ -844,7 +880,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6619,
         "observation": "1b6f1e6b431c7132f4ed9480543a55942d250055edcd2d2ca639ca2e0931da8a",
@@ -84670,6 +84706,76 @@
       "site": "bank",
       "ok": true,
       "message": "已移轉 4 reed"
+    },
+    {
+      "id": 6247,
+      "eventSeq": 6661,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": "p6662",
+      "eventSeq": 6662,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6248,
+      "eventSeq": 6663,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 6249,
+      "eventSeq": 6664,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6250,
+      "eventSeq": 6665,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 4 reed"
     }
   ],
   "needs": [
@@ -85097,10 +85203,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795687162.317824,
+    "updated": 1795687204.641598,
     "reason": ""
   },
-  "seconds": 72313.2707898636,
+  "seconds": 72315.03317971951,
   "council": {
     "food": 49,
     "water": 33,
@@ -85108,7 +85214,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687163.70482,
+  "snapshotAt": 1795687206.12741,
   "recipes": {
     "茅舍": {
       "sites": [
