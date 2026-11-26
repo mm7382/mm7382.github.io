@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5249,
+  "aiDecisions": 5251,
   "state": {
     "day": 1199,
     "actors": [
@@ -75,19 +75,19 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 6,
+        "energy": 4,
         "research": 1,
         "survey": [
           "terrace"
         ],
-        "goal": "補充河階營地的石塊"
+        "goal": "繼續補充河階營地的石塊"
       },
       {
         "name": "塞努",
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5458,
+    "turn": 5460,
     "deficits": 10200,
     "autonomy": {
       "0": {
@@ -531,7 +531,7 @@
         "blocked": ""
       },
       "4": {
-        "goal": "補充河階營地的石塊",
+        "goal": "繼續補充河階營地的石塊",
         "restWhenTired": true,
         "steps": [
           {
@@ -589,10 +589,10 @@
             "until": "count"
           }
         ],
-        "cursor": 5,
+        "cursor": 1,
         "done": 0,
-        "seen": 5533,
-        "observation": "d8e22d84a73bc3d8bcc126f38eb6a8c011f651e1ca0e6a530637c8f94283d49a",
+        "seen": 5597,
+        "observation": "e58c5a196a9e9cca59374786e65d9c9c6efc57e56ee1f02f75a94dea29e68886",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -653,10 +653,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 1,
         "done": 0,
-        "seen": 5582,
-        "observation": "eae4457da5786b2d2c6de77026a75ee6a97832d736efc150deaab787da3604a4",
+        "seen": 5599,
+        "observation": "bd8e02c2ece922cc6d2aad9bb41d4ce2fcd26871b22aadb6557033b5f49471fd",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -68891,6 +68891,68 @@
       "site": "field",
       "ok": true,
       "message": "已抵達氾濫平原"
+    },
+    {
+      "id": "p5598",
+      "eventSeq": 5598,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1199,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5459,
+      "eventSeq": 5599,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1199,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p5600",
+      "eventSeq": 5600,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1199,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5460,
+      "eventSeq": 5601,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1199,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "等候"
     }
   ],
   "needs": [
@@ -68978,10 +69040,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795677517.464179,
+    "updated": 1795677553.541348,
     "reason": ""
   },
-  "seconds": 71912.13088825418,
+  "seconds": 71913.62691782015,
   "council": {
     "food": 45,
     "water": 44,
@@ -68989,7 +69051,7 @@
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795677518.642812,
+  "snapshotAt": 1795677554.672655,
   "recipes": {
     "茅舍": {
       "sites": [
