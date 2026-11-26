@@ -1,18 +1,18 @@
 {
-  "aiDecisions": 5136,
+  "aiDecisions": 5137,
   "state": {
-    "day": 1196,
+    "day": 1197,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "field",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -25,10 +25,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 6,
           "food": 0
         },
-        "energy": 7,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -95,7 +95,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": "照料農田，增加聚落的食物供應"
@@ -113,9 +113,9 @@
           "terrace"
         ],
         "source": {
-          "water": 148,
-          "reed": 42,
-          "food": 18
+          "water": 154,
+          "reed": 45,
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -134,8 +134,8 @@
         ],
         "source": {},
         "stock": {
-          "water": 5,
-          "food": 0,
+          "water": 2,
+          "food": 4,
           "reed": 7
         }
       },
@@ -153,8 +153,8 @@
         ],
         "source": {},
         "stock": {
-          "food": 6,
-          "water": 6,
+          "food": 5,
+          "water": 5,
           "reed": 4,
           "stone": 3
         }
@@ -203,7 +203,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 12,
+        "condition": 11,
         "care": 1199,
         "lastTended": 1196,
         "cultivatedDays": 1,
@@ -236,8 +236,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5142,
-    "deficits": 10183,
+    "turn": 5144,
+    "deficits": 10190,
     "autonomy": {
       "0": {
         "goal": "補充聚落食物，支持農田持續耕作",
@@ -289,10 +289,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5157,
-        "observation": "2faa4e532732d485ea3e9685f65db363418419be8b3c8d043380f5b44ff8ed69",
+        "seen": 5168,
+        "observation": "55734c488866fa917b8cce4cac92efe782df35b0302f0abb8a4b73cc889e5fb2",
         "proposals": {},
         "blocked": ""
       },
@@ -346,7 +346,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5148,
         "observation": "628832402f6495f897d982445936c6828744551c9ae2cf7e124a61622e6653f3",
@@ -62682,6 +62682,45 @@
       "site": "field",
       "ok": true,
       "message": "已照料，可生產三日"
+    },
+    {
+      "id": "p5169",
+      "eventSeq": 5169,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1196,
+      "say": "蒂雅也去採集食物了，我先帶一趟回農田。",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5143,
+      "eventSeq": 5170,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 5144,
+      "eventSeq": 5171,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1197,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
     }
   ],
   "needs": [
@@ -62768,19 +62807,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795673789.5918899,
+    "phase": "deciding",
+    "updated": 1795673853.6820312,
     "reason": ""
   },
-  "seconds": 71758.35294627804,
+  "seconds": 71760.59794823812,
   "council": {
-    "food": 6,
-    "water": 11,
+    "food": 9,
+    "water": 13,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795673792.746529,
+  "snapshotAt": 1795673855.9704902,
   "recipes": {
     "茅舍": {
       "sites": [
