@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5135,
+  "aiDecisions": 5136,
   "state": {
     "day": 1196,
     "actors": [
@@ -95,7 +95,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": "照料農田，增加聚落的食物供應"
@@ -134,7 +134,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 6,
+          "water": 5,
           "food": 0,
           "reed": 7
         }
@@ -203,7 +203,11 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 12
+        "condition": 12,
+        "care": 1199,
+        "lastTended": 1196,
+        "cultivatedDays": 1,
+        "plots": 1
       }
     },
     "needs": {
@@ -232,7 +236,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5141,
+    "turn": 5142,
     "deficits": 10183,
     "autonomy": {
       "0": {
@@ -598,10 +602,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5155,
-        "observation": "4c65e6cc7505e9d0161235b4754dacd8639bf08cffd35bde28971a8474cc6544",
+        "seen": 5166,
+        "observation": "34e9fd3540cebeb9ff7962eba182e73d2be3e42946866225b7d7e61ea065f422",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -62652,6 +62656,32 @@
       "site": "field",
       "ok": true,
       "message": "已抵達氾濫平原"
+    },
+    {
+      "id": "p5167",
+      "eventSeq": 5167,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1196,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5142,
+      "eventSeq": 5168,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1196,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
     }
   ],
   "needs": [
@@ -62739,18 +62769,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795673760.7097769,
+    "updated": 1795673789.5918899,
     "reason": ""
   },
-  "seconds": 71757.14995766521,
+  "seconds": 71758.35294627804,
   "council": {
     "food": 6,
-    "water": 12,
+    "water": 11,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795673766.552454,
+  "snapshotAt": 1795673792.746529,
   "recipes": {
     "茅舍": {
       "sites": [
