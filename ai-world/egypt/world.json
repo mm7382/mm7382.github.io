@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5366,
+  "aiDecisions": 5368,
   "state": {
     "day": 1202,
     "actors": [
@@ -12,7 +12,7 @@
           "water": 5,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -29,14 +29,14 @@
           "food": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
           "field",
           "bank"
         ],
-        "goal": "前往農田照料作物，之後重新評估。"
+        "goal": "先休息，再前往農田照料作物，之後重新評估。"
       },
       {
         "name": "納赫特",
@@ -259,7 +259,7 @@
         "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
       }
     },
-    "turn": 5724,
+    "turn": 5726,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -280,7 +280,7 @@
             "site": "field",
             "kind": "",
             "material": "water",
-            "amount": 6,
+            "amount": 5,
             "repeat": 1,
             "until": "count"
           },
@@ -296,8 +296,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5968,
-        "observation": "6e664c439042706dc67652f2f28dc626d8ac86264610a3e6719fee6f0cd4ef36",
+        "seen": 5980,
+        "observation": "55fadf74189c6a21768df8efccbe9e8a0ec78700565ac784103dcdbaabe61570",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -307,17 +307,27 @@
             "proposer": 4,
             "approved": [
               4,
-              5
+              5,
+              2
             ],
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
         },
-        "blocked": "計畫路徑中斷"
+        "blocked": ""
       },
       "1": {
-        "goal": "前往農田照料作物，之後重新評估。",
+        "goal": "先休息，再前往農田照料作物，之後重新評估。",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "rest",
+            "site": "bank",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
           {
             "type": "move",
             "site": "field",
@@ -346,10 +356,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5970,
-        "observation": "95b0c7c4f89a8a787b20c590e3ea0dfc0dfd1c84874d5d1fdea6333c18b0d870",
+        "seen": 5982,
+        "observation": "5b9eaa42cc3b52712214a2eebbdc172bf416863cfb8611738d3681c23e381aa0",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -383,12 +393,13 @@
             "proposer": 4,
             "approved": [
               4,
-              5
+              5,
+              2
             ],
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
         },
-        "blocked": "計畫路徑中斷"
+        "blocked": ""
       },
       "2": {
         "goal": "前往氾濫平原照料農田，維持聚落的食物來源",
@@ -74519,6 +74530,68 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p5981",
+      "eventSeq": 5981,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5725,
+      "eventSeq": 5982,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p5983",
+      "eventSeq": 5983,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5726,
+      "eventSeq": 5984,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -74649,11 +74722,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795681125.572649,
+    "phase": "waiting",
+    "updated": 1795681176.9257998,
     "reason": ""
   },
-  "seconds": 72061.88903736534,
+  "seconds": 72064.84946643305,
   "council": {
     "food": 55,
     "water": 41,
@@ -74661,7 +74734,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681132.2438211,
+  "snapshotAt": 1795681180.6503239,
   "recipes": {
     "茅舍": {
       "sites": [
