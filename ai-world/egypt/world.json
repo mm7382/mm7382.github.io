@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5362,
+  "aiDecisions": 5363,
   "state": {
     "day": 1201,
     "actors": [
@@ -253,12 +253,13 @@
         "proposer": 4,
         "approved": [
           4,
-          5
+          5,
+          2
         ],
         "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
       }
     },
-    "turn": 5720,
+    "turn": 5721,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -394,6 +395,15 @@
         "restWhenTired": true,
         "steps": [
           {
+            "type": "agree",
+            "site": "terrace",
+            "kind": "工坊",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
             "type": "move",
             "site": "field",
             "kind": "",
@@ -421,10 +431,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5960,
-        "observation": "0232e186b344b3f2a1fe9a9ccf8457da4e10f13c3a95bbf064cf72423137cb4b",
+        "seen": 5972,
+        "observation": "56ca4dce6f5b8dea225169a8eb66a3e04c19f6f931eb4b20d4420ce2ffca7368",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -449,9 +459,21 @@
               2
             ],
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
+          },
+          "terrace/工坊": {
+            "id": "N5717",
+            "record": 5717,
+            "kind": "工坊",
+            "site": "terrace",
+            "proposer": 4,
+            "approved": [
+              4,
+              5
+            ],
+            "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
         },
-        "blocked": "計畫路徑中斷"
+        "blocked": ""
       },
       "3": {
         "goal": "照料農田，維持聚落的食物來源",
@@ -74331,6 +74353,37 @@
       "site": "bank",
       "ok": false,
       "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5973",
+      "eventSeq": 5973,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "胡伊，我支持興建工坊；我先去照料農田。",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5721,
+      "eventSeq": 5974,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "agree",
+      "kind": "工坊",
+      "site": "terrace",
+      "ok": true,
+      "message": "本人已同意此處的提案"
     }
   ],
   "needs": [
@@ -74423,7 +74476,8 @@
       "proposer": 4,
       "approved": [
         4,
-        5
+        5,
+        2
       ],
       "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所",
       "source": "data/records/plan-000005965.json",
@@ -74460,11 +74514,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795681003.3654962,
+    "phase": "deciding",
+    "updated": 1795681051.2805,
     "reason": ""
   },
-  "seconds": 72057.62233691396,
+  "seconds": 72059.21012061188,
   "council": {
     "food": 58,
     "water": 45,
@@ -74472,7 +74526,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681014.8591459,
+  "snapshotAt": 1795681052.560846,
   "recipes": {
     "茅舍": {
       "sites": [
