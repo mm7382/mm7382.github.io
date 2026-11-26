@@ -1,7 +1,7 @@
 {
   "aiDecisions": 5273,
   "state": {
-    "day": 1199,
+    "day": 1200,
     "actors": [
       {
         "name": "梅莉",
@@ -9,10 +9,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 6,
+          "water": 5,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -23,13 +23,13 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "bank",
+        "site": "field",
         "bag": {
-          "water": 6,
+          "water": 5,
           "food": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,10 +44,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 6,
+          "water": 5,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -63,9 +63,9 @@
         "site": "field",
         "bag": {
           "food": 0,
-          "water": 6
+          "water": 5
         },
-        "energy": 1,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": "照料農田並維持灌溉用水"
@@ -82,7 +82,7 @@
           "reed": 0,
           "stone": 6
         },
-        "energy": 2,
+        "energy": 4,
         "research": 1,
         "survey": [
           "terrace"
@@ -97,10 +97,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 5,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": "補充農田用水，持續照料莊稼"
@@ -118,9 +118,9 @@
           "terrace"
         ],
         "source": {
-          "water": 52,
-          "reed": 45,
-          "food": 0
+          "water": 58,
+          "reed": 48,
+          "food": 4
         },
         "stock": {
           "food": 0,
@@ -140,7 +140,7 @@
         "source": {},
         "stock": {
           "water": 4,
-          "food": 0,
+          "food": 6,
           "reed": 7
         }
       },
@@ -201,7 +201,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 12
+        "condition": 11
       },
       "field/農田": {
         "kind": "農田",
@@ -242,8 +242,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5513,
-    "deficits": 10200,
+    "turn": 5519,
+    "deficits": 10207,
     "autonomy": {
       "0": {
         "goal": "補充農田用水，維持耕作",
@@ -352,7 +352,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5655,
         "observation": "50f5fde0b690565782857c82e215d5cafdfd72fe3b851e281a4f51a6e1dcc4b1",
@@ -698,7 +698,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5660,
         "observation": "308a9b67c2032bc9ea8cf2710af3338fc75302a8e3e39482658ce5a4af3a995d",
@@ -70083,6 +70083,84 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 6 stone"
+    },
+    {
+      "id": 5514,
+      "eventSeq": 5677,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1199,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5515,
+      "eventSeq": 5678,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1199,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5516,
+      "eventSeq": 5679,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1200,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 5517,
+      "eventSeq": 5680,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1200,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5518,
+      "eventSeq": 5681,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1200,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5519,
+      "eventSeq": 5682,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1200,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -70170,18 +70248,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795678164.137822,
+    "updated": 1795678206.130187,
     "reason": ""
   },
-  "seconds": 71939.38759508074,
+  "seconds": 71941.13680278562,
   "council": {
-    "food": 45,
-    "water": 52,
+    "food": 51,
+    "water": 53,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795678165.2570949,
+  "snapshotAt": 1795678207.2419672,
   "recipes": {
     "茅舍": {
       "sites": [
