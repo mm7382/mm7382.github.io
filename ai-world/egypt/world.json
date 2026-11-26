@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5442,
+  "aiDecisions": 5444,
   "state": {
     "day": 1203,
     "actors": [
@@ -13,14 +13,15 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
           "field",
-          "bank"
+          "bank",
+          "quarry"
         ],
-        "goal": "將河水運到石灰岩露頭，支援獅身人面像雕刻。"
+        "goal": "勘查石灰岩露頭並協助完成獅身人面像。"
       },
       {
         "name": "帕伊",
@@ -90,13 +91,13 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
           "quarry"
         ],
-        "goal": "等待露頭的水足以開始粗雕，再推進獅身人面像"
+        "goal": "在石灰岩露頭完成獅身人面像的粗雕與細雕"
       },
       {
         "name": "塞努",
@@ -110,7 +111,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -206,7 +207,7 @@
           "stone": 132
         },
         "stock": {
-          "water": 8,
+          "water": 5,
           "stone": 4
         }
       }
@@ -252,7 +253,7 @@
         "kind": "獅身人面像",
         "site": "quarry",
         "stage": 3,
-        "work": 0,
+        "work": 1,
         "complete": false,
         "condition": 0
       }
@@ -334,24 +335,15 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5926,
+    "turn": 5929,
     "deficits": 10221,
     "autonomy": {
       "0": {
-        "goal": "將河水運到石灰岩露頭，支援獅身人面像雕刻。",
+        "goal": "勘查石灰岩露頭並協助完成獅身人面像。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "gather",
-            "site": "bank",
-            "kind": "water",
-            "material": "water",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
+            "type": "survey",
             "site": "quarry",
             "kind": "",
             "material": "",
@@ -360,13 +352,13 @@
             "until": "count"
           },
           {
-            "type": "drop",
+            "type": "build",
             "site": "quarry",
-            "kind": "water",
-            "material": "water",
-            "amount": 6,
+            "kind": "獅身人面像",
+            "material": "",
+            "amount": 1,
             "repeat": 1,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
@@ -378,10 +370,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 1,
         "done": 0,
-        "seen": 6220,
-        "observation": "edf9d12d5b72235a317fc25958e882ffe8ae183618edd9046f99e467c5e66e3a",
+        "seen": 6261,
+        "observation": "736c3dba26b6111a26e64fea6c3c6a465261c06bfbd546fb81181f5886c1e2f5",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -775,17 +767,17 @@
         "blocked": ""
       },
       "4": {
-        "goal": "等待露頭的水足以開始粗雕，再推進獅身人面像",
+        "goal": "在石灰岩露頭完成獅身人面像的粗雕與細雕",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "wait",
+            "type": "build",
             "site": "quarry",
-            "kind": "",
+            "kind": "獅身人面像",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
@@ -797,10 +789,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
-        "done": 0,
-        "seen": 6249,
-        "observation": "95691b13909cf75350faf9050343958fa37b588e63781a1be0b257793f86f8a8",
+        "cursor": 0,
+        "done": 1,
+        "seen": 6258,
+        "observation": "d5b03a70f1ae537b71d7c41c0a8dcb64db4daa2c2dea803406cd6bad0bbf2faa",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -78777,6 +78769,81 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p6259",
+      "eventSeq": 6259,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5927,
+      "eventSeq": 6260,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "原岩粗雕，已結算一工次"
+    },
+    {
+      "id": 5928,
+      "eventSeq": 6261,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p6262",
+      "eventSeq": 6262,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5929,
+      "eventSeq": 6263,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已勘查石灰岩露頭"
     }
   ],
   "needs": [
@@ -79085,18 +79152,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795683809.931423,
+    "updated": 1795683862.86076,
     "reason": ""
   },
-  "seconds": 72173.30617997493,
+  "seconds": 72175.51682503914,
   "council": {
     "food": 53,
-    "water": 26,
+    "water": 23,
     "shelter": true,
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683811.376276,
+  "snapshotAt": 1795683864.229624,
   "recipes": {
     "茅舍": {
       "sites": [
