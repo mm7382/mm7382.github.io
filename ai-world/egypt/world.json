@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5257,
+  "aiDecisions": 5259,
   "state": {
     "day": 1199,
     "actors": [
@@ -12,7 +12,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -65,7 +65,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": "照料農田裡的莊稼"
@@ -80,9 +80,9 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 6
+          "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 1,
         "survey": [
           "terrace"
@@ -139,7 +139,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 13,
+          "water": 12,
           "food": 0,
           "reed": 7
         }
@@ -161,7 +161,7 @@
           "food": 42,
           "water": 24,
           "reed": 10,
-          "stone": 0,
+          "stone": 6,
           "block": 13
         }
       },
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5475,
+    "turn": 5479,
     "deficits": 10200,
     "autonomy": {
       "0": {
@@ -270,8 +270,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5617,
-        "observation": "abd9c19e1db2a79a41e3bc886b34559756a3ca84a2f1d3786e303c8601ed4390",
+        "seen": 5626,
+        "observation": "47ce9957899eb0f52fb3f9d9170b4eb47c28885883737e9b49e6477acbd849ca",
         "proposals": {},
         "blocked": ""
       },
@@ -471,10 +471,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 5612,
-        "observation": "ad23ab9e0581060bf1925609c76718faf93b35e0114f63ba9ac5993532070c7a",
+        "seen": 5622,
+        "observation": "776ac63cf439b8054a25d85aad1a4b3820798db21a4633951f7f9cb74851be2c",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -562,7 +562,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5597,
         "observation": "e58c5a196a9e9cca59374786e65d9c9c6efc57e56ee1f02f75a94dea29e68886",
@@ -635,7 +635,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5615,
         "observation": "31732daf3fe54e584a449dcfb8ad12d768a3bb1fbc227ac9e0af6850ce87799b",
@@ -69238,6 +69238,94 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": "p5623",
+      "eventSeq": 5623,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1199,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5476,
+      "eventSeq": 5624,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1199,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5477,
+      "eventSeq": 5625,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1199,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 5478,
+      "eventSeq": 5626,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1199,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": "p5627",
+      "eventSeq": 5627,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1199,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5479,
+      "eventSeq": 5628,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1199,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
     }
   ],
   "needs": [
@@ -69324,19 +69412,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795677717.5596201,
+    "phase": "waiting",
+    "updated": 1795677758.092247,
     "reason": ""
   },
-  "seconds": 71920.4397023862,
+  "seconds": 71922.47657315183,
   "council": {
     "food": 45,
-    "water": 37,
+    "water": 36,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795677718.68852,
+  "snapshotAt": 1795677759.193886,
   "recipes": {
     "茅舍": {
       "sites": [
