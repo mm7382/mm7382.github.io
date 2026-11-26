@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 1139,
+    "day": 1140,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4912,
-    "deficits": 9543
+    "turn": 4915,
+    "deficits": 9555
   },
   "history": [
     {
@@ -54265,6 +54265,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 4913,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1139,
+      "say": "我先休息恢復體力，接著前往營地修繕茅舍。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 4914,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1140,
+      "say": "我先採水，補充聚落急需的飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 4915,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1140,
+      "say": "我把身上的蘆葦放進河岸共用庫存，供修繕住所使用。",
+      "action": "drop",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -54352,10 +54385,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795656241.543672,
+    "updated": 1795656288.411328,
     "reason": ""
   },
-  "seconds": 68319.17983526006,
+  "seconds": 68366.00402196805,
   "council": {
     "food": 0,
     "water": 0,
@@ -54363,7 +54396,7 @@
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795656242.468725,
+  "snapshotAt": 1795656289.325283,
   "recipes": {
     "茅舍": {
       "sites": [
