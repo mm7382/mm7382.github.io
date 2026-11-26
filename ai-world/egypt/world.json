@@ -1,7 +1,7 @@
 {
-  "aiDecisions": 5317,
+  "aiDecisions": 5318,
   "state": {
-    "day": 1200,
+    "day": 1201,
     "actors": [
       {
         "name": "梅莉",
@@ -12,7 +12,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -29,7 +29,7 @@
           "food": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -47,7 +47,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -65,7 +65,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 0,
         "survey": [],
         "goal": "維持農田照料並節省體力"
@@ -82,7 +82,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 7,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace"
@@ -100,10 +100,10 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [],
-        "goal": "休息後照料農田，並留意用水"
+        "goal": "休息後繼續照料農田，留意用水"
       }
     ],
     "sites": {
@@ -118,9 +118,9 @@
           "terrace"
         ],
         "source": {
-          "water": 40,
+          "water": 52,
           "reed": 48,
-          "food": 0
+          "food": 4
         },
         "stock": {
           "food": 0,
@@ -139,7 +139,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 23,
+          "water": 18,
           "food": 0,
           "reed": 7
         }
@@ -158,11 +158,11 @@
         ],
         "source": {},
         "stock": {
-          "food": 55,
-          "water": 22,
+          "food": 54,
+          "water": 21,
           "reed": 9,
-          "stone": 8,
-          "block": 20
+          "stone": 6,
+          "block": 21
         }
       },
       "desert": {
@@ -242,8 +242,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5638,
-    "deficits": 10207,
+    "turn": 5640,
+    "deficits": 10212,
     "autonomy": {
       "0": {
         "goal": "補充農田用水，支持持續照料",
@@ -545,7 +545,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 5831,
         "observation": "7b5fe0b418304b088e6640dd34f60b16b9dbc31292b99b27ceb24340040ca716",
         "proposals": {
@@ -577,7 +577,7 @@
         "blocked": ""
       },
       "5": {
-        "goal": "休息後照料農田，並留意用水",
+        "goal": "休息後繼續照料農田，留意用水",
         "restWhenTired": true,
         "steps": [
           {
@@ -608,10 +608,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 0,
         "done": 0,
-        "seen": 5824,
-        "observation": "44313ee44c12cff528f7d4c14bd376d829b0790fa2caf209ea7caeb26dd065bd",
+        "seen": 5846,
+        "observation": "a6775fa8622dc9e2e10a811377c5da67796ce513fa60ec957b6e86742f7487ee",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -638,7 +638,7 @@
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
           }
         },
-        "blocked": ""
+        "blocked": "無可照料農田或正淹水"
       }
     }
   },
@@ -72410,6 +72410,50 @@
       "site": "field",
       "ok": true,
       "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5639,
+      "eventSeq": 5846,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1200,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": "p5847",
+      "eventSeq": 5847,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1200,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5640,
+      "eventSeq": 5848,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": false,
+      "message": "無可照料農田或正淹水"
     }
   ],
   "needs": [
@@ -72496,19 +72540,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795679602.047922,
+    "phase": "deciding",
+    "updated": 1795679637.456048,
     "reason": ""
   },
-  "seconds": 71999.26788175627,
+  "seconds": 72000.40767463297,
   "council": {
-    "food": 55,
-    "water": 45,
+    "food": 54,
+    "water": 39,
     "shelter": true,
     "ready": true
   },
-  "season": "乾季",
-  "snapshotAt": 1795679603.1619148,
+  "season": "洪水",
+  "snapshotAt": 1795679638.607936,
   "recipes": {
     "茅舍": {
       "sites": [
