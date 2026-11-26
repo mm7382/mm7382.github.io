@@ -152,3 +152,29 @@ body.switching #lucy-cut,body:has(dialog[open]) #lucy-cut {visibility:hidden;}
 #lucy-cut {padding:8px;background:#101722e8;border:1px solid #846c46;}
 .study-caption {display:flex;align-items:center;justify-content:space-between;gap:6px;color:#fff5df;font:14px/1.4 var(--serif);padding-left:4px;}
 .study-caption button {padding:5px 7px;min-height:40px;border:0;}
+
+#bridge-film-open {
+  position:absolute;z-index:4;left:max(3.6vw,env(safe-area-inset-left));
+  bottom:clamp(12px,2.7vh,28px);min-height:44px;padding:6px 15px;
+  background:#29221be8;border:1px solid #fff9ee72;color:#fff9ee;
+  font:15px/1.4 var(--serif);letter-spacing:.06em;
+}
+#bridge-film-open span {margin-right:.4em;}
+#bridge-film-open:hover {background:#45382c;}
+body:is(.moving,.switching,[data-viewpoint="Lucy"]) #bridge-film-open {display:none;}
+
+#bridge-film[open] {
+  position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;
+  margin:0;padding:0;display:grid;place-items:center;
+  background:#080807;color:#fff9ee;text-shadow:none;-webkit-text-stroke:0;
+}
+#bridge-film .bridge-film-player {position:relative;width:min(100vw,calc((100dvh - 104px)*16/9));}
+#bridge-film-mount {position:relative;aspect-ratio:16/9;}
+#bridge-film-mount iframe,#bridge-film-mount video {
+  position:absolute;inset:0;width:100%;height:100%;border:0;
+}
+#bridge-film-close {
+  position:absolute;right:max(8px,env(safe-area-inset-right));bottom:calc(100% + 4px);
+  display:grid;place-items:center;width:44px;height:44px;padding:0;border-radius:50%;
+  color:#fff9ee;background:#29221b;border:1px solid #fff9ee72;font:1.5rem/1 system-ui;
+}
