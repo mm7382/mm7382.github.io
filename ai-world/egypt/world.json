@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -36,7 +36,7 @@
           "stone": 5,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -80,7 +80,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -116,14 +116,14 @@
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 4,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -293,8 +293,8 @@
       "desert/神廟": {
         "kind": "神廟",
         "site": "desert",
-        "stage": 2,
-        "work": 1,
+        "stage": 3,
+        "work": 0,
         "complete": false,
         "condition": 0
       }
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6257,
+    "turn": 6262,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -732,7 +732,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6669,
         "observation": "e8fd78c51326cf3f0b0ed1acca231436e64234c9ed48a1ebb1fac7ef90c0437f",
         "proposals": {
@@ -845,7 +845,7 @@
           }
         ],
         "cursor": 0,
-        "done": 0,
+        "done": 1,
         "seen": 6671,
         "observation": "7d4966efe7c7a204596cf88cd9c41cc0374a1cde62c222bec7330bbacaac53a0",
         "proposals": {
@@ -1139,7 +1139,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6635,
         "observation": "32a49a7e73520cfbb70344d3a9f6a71b5413e96af25bd6561db6adcb35b81564",
@@ -84867,6 +84867,71 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6258,
+      "eventSeq": 6675,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 6259,
+      "eventSeq": 6676,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6260,
+      "eventSeq": 6677,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6261,
+      "eventSeq": 6678,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "施工架，已結算一工次"
+    },
+    {
+      "id": 6262,
+      "eventSeq": 6679,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "施工架，已結算一工次"
     }
   ],
   "needs": [
@@ -85294,10 +85359,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795687282.2870111,
+    "updated": 1795687319.794276,
     "reason": ""
   },
-  "seconds": 72318.2664952472,
+  "seconds": 72319.82855411875,
   "council": {
     "food": 49,
     "water": 33,
@@ -85305,7 +85370,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687283.636656,
+  "snapshotAt": 1795687321.148915,
   "recipes": {
     "茅舍": {
       "sites": [
