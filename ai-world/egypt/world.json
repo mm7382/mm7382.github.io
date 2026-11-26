@@ -9,10 +9,10 @@
         "site": "field",
         "bag": {
           "food": 0,
-          "water": 6,
+          "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,9 +27,9 @@
         "bag": {
           "water": 0,
           "food": 0,
-          "reed": 6
+          "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -74,14 +74,14 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 3,
+        "energy": 1,
         "research": 1,
         "survey": [
           "terrace"
@@ -99,7 +99,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": "照料農田，維持莊稼生長"
@@ -138,7 +138,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 13,
+          "water": 18,
           "food": 4,
           "reed": 7
         }
@@ -159,7 +159,7 @@
         "stock": {
           "food": 30,
           "water": 21,
-          "reed": 4,
+          "reed": 10,
           "stone": 0,
           "block": 1
         }
@@ -241,7 +241,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5272,
+    "turn": 5276,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -294,7 +294,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5320,
         "observation": "2f25cb259251b5d14682668db9857f95a9a24e7699d5653b0100d24a9885fe5c",
@@ -351,7 +351,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5322,
         "observation": "1af4da904e12cb8aed9e3a229248968f6351721240e206a6d8da98356cdacd50",
@@ -570,7 +570,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5326,
         "observation": "f3ef52a58a1aa239110f7244c27726f7237390ce19f173cf23a0a0703dc4500f",
@@ -634,7 +634,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 5341,
         "observation": "c18e8337828eedd8737fe7726d79f823124acdac26b038ef357e9a903c96dbce",
@@ -65338,6 +65338,58 @@
       "site": "field",
       "ok": true,
       "message": "已移轉 5 water"
+    },
+    {
+      "id": 5273,
+      "eventSeq": 5350,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5274,
+      "eventSeq": 5351,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1198,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5275,
+      "eventSeq": 5352,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1198,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5276,
+      "eventSeq": 5353,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 reed"
     }
   ],
   "needs": [
@@ -65424,19 +65476,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795675447.585898,
+    "phase": "deciding",
+    "updated": 1795675482.699883,
     "reason": ""
   },
-  "seconds": 71826.25848209945,
+  "seconds": 71827.38759091542,
   "council": {
     "food": 34,
-    "water": 40,
+    "water": 39,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795675448.629876,
+  "snapshotAt": 1795675483.8126569,
   "recipes": {
     "茅舍": {
       "sites": [
