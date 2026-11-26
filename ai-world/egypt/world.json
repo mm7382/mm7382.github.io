@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5382,
+  "aiDecisions": 5383,
   "state": {
     "day": 1202,
     "actors": [
@@ -66,10 +66,12 @@
           "food": 0,
           "water": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
-        "survey": [],
-        "goal": "支持河階營地的金字塔工程，先取得施工所需知識"
+        "survey": [
+          "terrace"
+        ],
+        "goal": "取得金字塔施工知識並在河階營地參與建造"
       },
       {
         "name": "胡伊",
@@ -268,12 +270,13 @@
         "proposer": 2,
         "approved": [
           2,
-          3
+          3,
+          4
         ],
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5745,
+    "turn": 5747,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -562,69 +565,15 @@
         "blocked": ""
       },
       "3": {
-        "goal": "支持河階營地的金字塔工程，先取得施工所需知識",
+        "goal": "取得金字塔施工知識並在河階營地參與建造",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "move",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "agree",
-            "site": "terrace",
-            "kind": "金字塔",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "survey",
             "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "terrace",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
@@ -656,10 +605,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 1,
         "done": 0,
-        "seen": 5996,
-        "observation": "c53d4ecf6454cbd7ded45291b93aba83412221795cb5ae791da1b78046836805",
+        "seen": 6017,
+        "observation": "330fa39a7213bc8e4bb38783f492c24965c71c5e010461a29e11619cea321eb8",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -705,7 +654,8 @@
             "site": "terrace",
             "proposer": 2,
             "approved": [
-              2
+              2,
+              3
             ],
             "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
@@ -753,7 +703,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6008,
         "observation": "0bc43e65fa3f9dff7edbea36427476144f0c7e71243dd7c10b7ab8fcd5a59e92",
@@ -75239,6 +75189,50 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 6 stone"
+    },
+    {
+      "id": "p6018",
+      "eventSeq": 6018,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5746,
+      "eventSeq": 6019,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已勘查河階營地"
+    },
+    {
+      "id": 5747,
+      "eventSeq": 6020,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "agree",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "本人已同意此處的提案"
     }
   ],
   "needs": [
@@ -75375,7 +75369,8 @@
       "proposer": 2,
       "approved": [
         2,
-        3
+        3,
+        4
       ],
       "purpose": "在河階營地提議興建金字塔，並準備所需原石",
       "source": "data/records/plan-000005995.json",
@@ -75429,11 +75424,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795681555.035468,
+    "phase": "deciding",
+    "updated": 1795681590.7456279,
     "reason": ""
   },
-  "seconds": 72079.77508065874,
+  "seconds": 72080.89064015003,
   "council": {
     "food": 55,
     "water": 41,
@@ -75441,7 +75436,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681556.276481,
+  "snapshotAt": 1795681592.160172,
   "recipes": {
     "茅舍": {
       "sites": [
