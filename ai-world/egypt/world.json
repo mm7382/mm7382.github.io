@@ -13,7 +13,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -33,7 +33,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -53,7 +53,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -74,7 +74,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -90,11 +90,11 @@
         "site": "quarry",
         "bag": {
           "food": 0,
-          "water": 6,
+          "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 7,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
@@ -210,7 +210,7 @@
           "stone": 132
         },
         "stock": {
-          "water": 4,
+          "water": 10,
           "stone": 4
         }
       }
@@ -256,7 +256,7 @@
         "kind": "獅身人面像",
         "site": "quarry",
         "stage": 4,
-        "work": 3,
+        "work": 5,
         "complete": false,
         "condition": 0
       }
@@ -338,7 +338,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5988,
+    "turn": 5993,
     "deficits": 10226,
     "autonomy": {
       "0": {
@@ -616,7 +616,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6328,
         "observation": "752653e1aaefa641b2d819056d2ca6331f7247fa323aa35248032fc127c19639",
         "proposals": {
@@ -696,7 +696,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6330,
         "observation": "3f1b26b7baf1e9373722da63a109a2afe65fda23630d8259d7f81df853532a2d",
         "proposals": {
@@ -837,7 +837,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6289,
         "observation": "67732a7e091deb81e321e53c875000a8f219f19d7d8b8340ecef669320c31410",
@@ -79857,6 +79857,71 @@
       "site": "quarry",
       "ok": true,
       "message": "細雕與修面，已結算一工次"
+    },
+    {
+      "id": 5989,
+      "eventSeq": 6336,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5990,
+      "eventSeq": 6337,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5991,
+      "eventSeq": 6338,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1204,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "細雕與修面，已結算一工次"
+    },
+    {
+      "id": 5992,
+      "eventSeq": 6339,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1204,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "細雕與修面，已結算一工次"
+    },
+    {
+      "id": 5993,
+      "eventSeq": 6340,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1204,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 water"
     }
   ],
   "needs": [
@@ -80165,10 +80230,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795684463.158936,
+    "updated": 1795684499.524533,
     "reason": ""
   },
-  "seconds": 72200.87217788449,
+  "seconds": 72202.38664162924,
   "council": {
     "food": 51,
     "water": 34,
@@ -80176,7 +80241,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795684464.440198,
+  "snapshotAt": 1795684500.769216,
   "recipes": {
     "茅舍": {
       "sites": [
