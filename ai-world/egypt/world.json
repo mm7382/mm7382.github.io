@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5115,
+  "aiDecisions": 5117,
   "state": {
     "day": 1196,
     "actors": [
@@ -61,12 +61,12 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0
+          "water": 6
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
-        "goal": ""
+        "goal": "為修復後的農田準備灌溉用水"
       },
       {
         "name": "胡伊",
@@ -76,13 +76,13 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
-        "goal": ""
+        "goal": "補充營地飲水"
       },
       {
         "name": "塞努",
@@ -113,7 +113,7 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 148,
           "reed": 48,
           "food": 24
         },
@@ -231,7 +231,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5115,
+    "turn": 5117,
     "deficits": 10183,
     "autonomy": {
       "0": {
@@ -400,6 +400,152 @@
         "done": 0,
         "seen": 5118,
         "observation": "b111f9347ae3906c2998a85e90d4c9192610f016bdfd63f258e189eb70608324",
+        "proposals": {
+          "terrace/茅舍": {
+            "id": "N1",
+            "record": 1,
+            "kind": "茅舍",
+            "site": "terrace",
+            "proposer": 0,
+            "approved": [
+              0,
+              1
+            ],
+            "purpose": "我想先在營地搭建茅舍，讓大家有地方遮風避日。"
+          },
+          "field/農田": {
+            "id": "N16",
+            "record": 16,
+            "kind": "農田",
+            "site": "field",
+            "proposer": 0,
+            "approved": [
+              0,
+              2
+            ],
+            "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
+          }
+        },
+        "blocked": ""
+      },
+      "3": {
+        "goal": "為修復後的農田準備灌溉用水",
+        "restWhenTired": true,
+        "steps": [
+          {
+            "type": "gather",
+            "site": "bank",
+            "kind": "water",
+            "material": "water",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "field",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "field",
+            "kind": "water",
+            "material": "water",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "think",
+            "site": "field",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          }
+        ],
+        "cursor": 1,
+        "done": 0,
+        "seen": 5120,
+        "observation": "394c04dc7cf34795244d600b5238a186dd23c125191473c63ca82a3424167fa1",
+        "proposals": {
+          "terrace/茅舍": {
+            "id": "N1",
+            "record": 1,
+            "kind": "茅舍",
+            "site": "terrace",
+            "proposer": 0,
+            "approved": [
+              0,
+              1
+            ],
+            "purpose": "我想先在營地搭建茅舍，讓大家有地方遮風避日。"
+          },
+          "field/農田": {
+            "id": "N16",
+            "record": 16,
+            "kind": "農田",
+            "site": "field",
+            "proposer": 0,
+            "approved": [
+              0,
+              2
+            ],
+            "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
+          }
+        },
+        "blocked": ""
+      },
+      "4": {
+        "goal": "補充營地飲水",
+        "restWhenTired": true,
+        "steps": [
+          {
+            "type": "gather",
+            "site": "bank",
+            "kind": "water",
+            "material": "water",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "terrace",
+            "kind": "water",
+            "material": "water",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "think",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          }
+        ],
+        "cursor": 1,
+        "done": 0,
+        "seen": 5122,
+        "observation": "3db2ffac81d54a28e707323fc522d067f6301671dafaf202f4334fa0b8a48d98",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -61852,6 +61998,58 @@
       "site": "bank",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p5121",
+      "eventSeq": 5121,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1196,
+      "say": "梅莉正在修復農田，我先帶水過去，準備照料作物。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5116,
+      "eventSeq": 5122,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1196,
+      "say": "",
+      "action": "gather",
+      "kind": "water",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": "p5123",
+      "eventSeq": 5123,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1196,
+      "say": "大家正在修復建築和搬運食物，我來把河水送到營地。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5117,
+      "eventSeq": 5124,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1196,
+      "say": "",
+      "action": "gather",
+      "kind": "water",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
     }
   ],
   "needs": [
@@ -61939,18 +62137,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795673250.997171,
+    "updated": 1795673292.952957,
     "reason": ""
   },
-  "seconds": 71735.55695105574,
+  "seconds": 71737.20235412003,
   "council": {
     "food": 0,
-    "water": 0,
+    "water": 12,
     "shelter": false,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795673253.0324512,
+  "snapshotAt": 1795673295.127564,
   "recipes": {
     "茅舍": {
       "sites": [
