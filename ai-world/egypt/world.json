@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5412,
+  "aiDecisions": 5413,
   "state": {
     "day": 1203,
     "actors": [
@@ -87,7 +87,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -243,6 +243,14 @@
         "work": 1,
         "complete": false,
         "condition": 0
+      },
+      "quarry/獅身人面像": {
+        "kind": "獅身人面像",
+        "site": "quarry",
+        "stage": 0,
+        "work": 1,
+        "complete": false,
+        "condition": 0
       }
     },
     "needs": {
@@ -322,7 +330,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5830,
+    "turn": 5831,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -756,12 +764,39 @@
         "restWhenTired": true,
         "steps": [
           {
-            "type": "propose",
+            "type": "build",
             "site": "quarry",
             "kind": "獅身人面像",
             "material": "",
             "amount": 1,
+            "repeat": 6,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 2,
             "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 2,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "build",
+            "site": "quarry",
+            "kind": "獅身人面像",
+            "material": "",
+            "amount": 1,
+            "repeat": 5,
             "until": "count"
           },
           {
@@ -774,10 +809,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
-        "done": 0,
-        "seen": 6120,
-        "observation": "a5416b8aaf41db120c86bd9f4343203b4fd2633643de0de8886abaf8f22c7c2f",
+        "cursor": 0,
+        "done": 1,
+        "seen": 6132,
+        "observation": "c33fea36482484bb3ab5033825473bf928fa40acac086c63fecb6bcdf5ef88b2",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -824,7 +859,8 @@
             "site": "terrace",
             "proposer": 2,
             "approved": [
-              2
+              2,
+              1
             ],
             "purpose": "與帕伊合作在河階營地興建神廟"
           }
@@ -76954,6 +76990,37 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": "p6133",
+      "eventSeq": 6133,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5831,
+      "eventSeq": 6134,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "岩體勘查，已結算一工次"
     }
   ],
   "needs": [
@@ -77257,15 +77324,15 @@
       },
       "asset": {},
       "implementation": "已支援",
-      "construction": "提案"
+      "construction": "施工中"
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795682573.498152,
+    "phase": "deciding",
+    "updated": 1795682614.167264,
     "reason": ""
   },
-  "seconds": 72122.18298322495,
+  "seconds": 72123.42806540724,
   "council": {
     "food": 53,
     "water": 20,
@@ -77273,7 +77340,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682575.9196422,
+  "snapshotAt": 1795682616.906933,
   "recipes": {
     "茅舍": {
       "sites": [
