@@ -1,18 +1,18 @@
 {
-  "aiDecisions": 5403,
+  "aiDecisions": 5404,
   "state": {
     "day": 1202,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 5,
           "reed": 0
         },
-        "energy": 8,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
@@ -30,8 +30,8 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 8,
-        "research": 2,
+        "energy": 7,
+        "research": 3,
         "survey": [
           "terrace",
           "field",
@@ -169,9 +169,9 @@
         "source": {},
         "stock": {
           "food": 55,
-          "water": 4,
+          "water": 3,
           "reed": 3,
-          "stone": 2,
+          "stone": 1,
           "block": 7
         }
       },
@@ -287,7 +287,7 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5819,
+    "turn": 5822,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -331,7 +331,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6096,
         "observation": "64bd0be3848e6146f6a4c078b9f1597fd49ae9f256f0976d1231d092ad4ab938",
@@ -398,8 +398,8 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 2,
+        "cursor": 1,
+        "done": 0,
         "seen": 6088,
         "observation": "9817131d9a779af4f52337bfa2a0a3258dc6b3857005d375c1ca93f4794cc2d5",
         "proposals": {
@@ -717,6 +717,15 @@
         "restWhenTired": true,
         "steps": [
           {
+            "type": "agree",
+            "site": "quarry",
+            "kind": "獅身人面像",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
             "type": "gather",
             "site": "quarry",
             "kind": "stone",
@@ -735,6 +744,15 @@
             "until": "count"
           },
           {
+            "type": "build",
+            "site": "quarry",
+            "kind": "獅身人面像",
+            "material": "",
+            "amount": 1,
+            "repeat": 11,
+            "until": "count"
+          },
+          {
             "type": "think",
             "site": "quarry",
             "kind": "",
@@ -746,8 +764,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 6104,
-        "observation": "3ad395543ae4e4b072d2dedba1461796f5ca591e4c750b2577ab4a9f629cce56",
+        "seen": 6112,
+        "observation": "d4a90894c9bb7aa643ae41a2743f18221078fa601b972cfd167d5d5c246a28d9",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -801,7 +819,7 @@
             "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
         },
-        "blocked": ""
+        "blocked": "提案不存在或已同意"
       }
     }
   },
@@ -76486,6 +76504,63 @@
       "site": "quarry",
       "ok": true,
       "message": "已勘查石灰岩露頭"
+    },
+    {
+      "id": "p6113",
+      "eventSeq": 6113,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5820,
+      "eventSeq": 6114,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "agree",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": false,
+      "message": "提案不存在或已同意"
+    },
+    {
+      "id": 5821,
+      "eventSeq": 6115,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 5822,
+      "eventSeq": 6116,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "research",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "已完成實作研究"
     }
   ],
   "needs": [
@@ -76679,18 +76754,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795682376.2897081,
+    "updated": 1795682410.873575,
     "reason": ""
   },
-  "seconds": 72113.61498913461,
+  "seconds": 72115.06793911032,
   "council": {
     "food": 55,
-    "water": 27,
+    "water": 26,
     "shelter": true,
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682377.54277,
+  "snapshotAt": 1795682412.113869,
   "recipes": {
     "茅舍": {
       "sites": [
