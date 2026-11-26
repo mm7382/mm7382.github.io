@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5120,
+  "aiDecisions": 5122,
   "state": {
     "day": 1196,
     "actors": [
@@ -41,11 +41,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 6,
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -63,10 +63,10 @@
           "food": 0,
           "water": 6
         },
-        "energy": 1,
+        "energy": 5,
         "research": 0,
         "survey": [],
-        "goal": "為修復後的農田準備灌溉用水"
+        "goal": "把灌溉用水送到農田，視修復進度再決定下一步"
       },
       {
         "name": "胡伊",
@@ -115,7 +115,7 @@
         "source": {
           "water": 148,
           "reed": 42,
-          "food": 24
+          "food": 18
         },
         "stock": {
           "food": 0,
@@ -231,7 +231,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5120,
+    "turn": 5122,
     "deficits": 10183,
     "autonomy": {
       "0": {
@@ -387,10 +387,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5118,
-        "observation": "b111f9347ae3906c2998a85e90d4c9192610f016bdfd63f258e189eb70608324",
+        "seen": 5130,
+        "observation": "4abbb7a57b2a7a4a551fa8d409127425528afbc1a8e0ba0c321d07cb5528230a",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -420,18 +420,9 @@
         "blocked": ""
       },
       "3": {
-        "goal": "為修復後的農田準備灌溉用水",
+        "goal": "把灌溉用水送到農田，視修復進度再決定下一步",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "gather",
-            "site": "bank",
-            "kind": "water",
-            "material": "water",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "move",
             "site": "field",
@@ -460,10 +451,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 5120,
-        "observation": "394c04dc7cf34795244d600b5238a186dd23c125191473c63ca82a3424167fa1",
+        "seen": 5132,
+        "observation": "9663790b031265ad20ce69a4459a12dcfcb8457fefa563b437b319d1cbc724b1",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -62192,6 +62183,58 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": "p5131",
+      "eventSeq": 5131,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1196,
+      "say": "我會把河岸的食物帶回營地，讓大家有口糧。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5121,
+      "eventSeq": 5132,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1196,
+      "say": "",
+      "action": "gather",
+      "kind": "food",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 food"
+    },
+    {
+      "id": "p5133",
+      "eventSeq": 5133,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1196,
+      "say": "我已經裝好水，現在送到農田。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5122,
+      "eventSeq": 5134,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1196,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -62279,18 +62322,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795673343.713495,
+    "updated": 1795673381.37779,
     "reason": ""
   },
-  "seconds": 71739.78295957836,
+  "seconds": 71741.35247859743,
   "council": {
-    "food": 0,
+    "food": 6,
     "water": 12,
     "shelter": false,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795673344.680866,
+  "snapshotAt": 1795673382.37616,
   "recipes": {
     "茅舍": {
       "sites": [
