@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5065,
+    "turn": 5067,
     "deficits": 10021
   },
   "history": [
@@ -55948,6 +55948,28 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 5066,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1182,
+      "say": "我在河岸採集食物，補充聚落存糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 5067,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1182,
+      "say": "我先休息恢復體力，準備補充聚落食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -56034,11 +56056,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795658794.889529,
+    "phase": "deciding",
+    "updated": 1795658846.00647,
     "reason": ""
   },
-  "seconds": 70870.41329930298,
+  "seconds": 70913.93310042901,
   "council": {
     "food": 0,
     "water": 0,
@@ -56046,7 +56068,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795658795.838698,
+  "snapshotAt": 1795658846.981738,
   "recipes": {
     "茅舍": {
       "sites": [
