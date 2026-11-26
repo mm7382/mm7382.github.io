@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5490,
+  "aiDecisions": 5492,
   "state": {
     "day": 1205,
     "actors": [
@@ -53,10 +53,10 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0,
+          "stone": 6,
           "block": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -64,27 +64,27 @@
           "quarry",
           "desert"
         ],
-        "goal": "運送採石場石塊，支援沙漠台地金字塔後續施工"
+        "goal": "採運原石至沙漠台地，支援金字塔石塊加工"
       },
       {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
           "stone": 0,
           "reed": 0
         },
-        "energy": 6,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
           "quarry"
         ],
-        "goal": "加工石塊，支援沙漠台地金字塔"
+        "goal": "運送採石場原石至沙漠台地，支援金字塔施工"
       },
       {
         "name": "胡伊",
@@ -99,7 +99,7 @@
           "stone": 0,
           "block": 2
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -217,7 +217,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 94
+          "stone": 88
         },
         "stock": {
           "water": 12,
@@ -377,7 +377,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6116,
+    "turn": 6119,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -647,24 +647,15 @@
         "blocked": ""
       },
       "2": {
-        "goal": "運送採石場石塊，支援沙漠台地金字塔後續施工",
+        "goal": "採運原石至沙漠台地，支援金字塔石塊加工",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
+            "type": "gather",
             "site": "quarry",
             "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "take",
-            "site": "quarry",
-            "kind": "",
-            "material": "block",
-            "amount": 3,
+            "material": "stone",
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
@@ -681,8 +672,8 @@
             "type": "drop",
             "site": "desert",
             "kind": "",
-            "material": "block",
-            "amount": 3,
+            "material": "stone",
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
@@ -698,8 +689,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6480,
-        "observation": "31fe64f4c74ca5f16d9418290567cd5aa1d0e96ced8d826d9715c5891bc99402",
+        "seen": 6496,
+        "observation": "6595db341d974d7ff3286a0eaf5f174fe46209693abbdbe654d4216613dee6e0",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -766,18 +757,9 @@
         "blocked": ""
       },
       "3": {
-        "goal": "加工石塊，支援沙漠台地金字塔",
+        "goal": "運送採石場原石至沙漠台地，支援金字塔施工",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "shape",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 3,
-            "until": "count"
-          },
           {
             "type": "move",
             "site": "quarry",
@@ -798,7 +780,7 @@
           },
           {
             "type": "move",
-            "site": "terrace",
+            "site": "desert",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -807,7 +789,7 @@
           },
           {
             "type": "drop",
-            "site": "terrace",
+            "site": "desert",
             "kind": "",
             "material": "stone",
             "amount": 6,
@@ -815,17 +797,17 @@
             "until": "count"
           },
           {
-            "type": "shape",
-            "site": "terrace",
+            "type": "survey",
+            "site": "desert",
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 3,
+            "repeat": 1,
             "until": "count"
           },
           {
             "type": "think",
-            "site": "terrace",
+            "site": "desert",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -833,10 +815,10 @@
             "until": "count"
           }
         ],
-        "cursor": 6,
+        "cursor": 1,
         "done": 0,
-        "seen": 6412,
-        "observation": "517f9fa285d0fc7a2d89cce25cadab9f10f1d7c055edc1e77fed0de5aa2c7fe7",
+        "seen": 6498,
+        "observation": "db775a4ee3b09069b9e5ef38070747fed8436128e8bb5dabeb148ee0fd4ee308",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -82263,6 +82245,81 @@
       "site": "desert",
       "ok": true,
       "message": "已抵達沙漠台地"
+    },
+    {
+      "id": "p6497",
+      "eventSeq": 6497,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6117,
+      "eventSeq": 6498,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": "p6499",
+      "eventSeq": 6499,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6118,
+      "eventSeq": 6500,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 6119,
+      "eventSeq": 6501,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -82631,10 +82688,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795685803.5748758,
+    "updated": 1795685848.9536169,
     "reason": ""
   },
-  "seconds": 72256.6901656432,
+  "seconds": 72258.57969041579,
   "council": {
     "food": 50,
     "water": 35,
@@ -82642,7 +82699,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685804.8767989,
+  "snapshotAt": 1795685850.2589078,
   "recipes": {
     "茅舍": {
       "sites": [
