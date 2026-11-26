@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5359,
+  "aiDecisions": 5360,
   "state": {
     "day": 1201,
     "actors": [
@@ -107,7 +107,7 @@
           "desert",
           "quarry"
         ],
-        "goal": "勘查氾濫平原與河岸，了解聚落周邊地形"
+        "goal": "支持興建河階營地工坊，並補足施工所需石材"
       }
     ],
     "sites": {
@@ -252,12 +252,13 @@
         "site": "terrace",
         "proposer": 4,
         "approved": [
-          4
+          4,
+          5
         ],
         "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
       }
     },
-    "turn": 5717,
+    "turn": 5718,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -547,9 +548,36 @@
         "blocked": ""
       },
       "5": {
-        "goal": "勘查氾濫平原與河岸，了解聚落周邊地形",
+        "goal": "支持興建河階營地工坊，並補足施工所需石材",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "agree",
+            "site": "terrace",
+            "kind": "工坊",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
           {
             "type": "move",
             "site": "terrace",
@@ -560,44 +588,26 @@
             "until": "count"
           },
           {
-            "type": "move",
-            "site": "field",
+            "type": "drop",
+            "site": "terrace",
             "kind": "",
-            "material": "",
-            "amount": 1,
+            "material": "stone",
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
           {
-            "type": "survey",
-            "site": "field",
-            "kind": "",
+            "type": "build",
+            "site": "terrace",
+            "kind": "工坊",
             "material": "",
             "amount": 1,
             "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "bank",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "survey",
-            "site": "bank",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
-            "site": "bank",
+            "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -607,8 +617,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5954,
-        "observation": "ea683263253b26e0d0bbe0a057b9b43b6b44fa2590918c0b8b2d3e356200c037",
+        "seen": 5966,
+        "observation": "1eddaea7e3e24e32ae311540388440d73a054c8da87d305950d55482a3ad15e3",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -633,6 +643,17 @@
               2
             ],
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
+          },
+          "terrace/工坊": {
+            "id": "N5717",
+            "record": 5717,
+            "kind": "工坊",
+            "site": "terrace",
+            "proposer": 4,
+            "approved": [
+              4
+            ],
+            "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
         },
         "blocked": ""
@@ -74190,6 +74211,39 @@
       "site": "terrace",
       "ok": true,
       "message": "已登記提案"
+    },
+    {
+      "id": "p5967",
+      "eventSeq": 5967,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "胡伊，我願意支持在營地興建工坊；我先去採石，帶回施工所需的石材。",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [
+          4
+        ],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5718,
+      "eventSeq": 5968,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "agree",
+      "kind": "工坊",
+      "site": "terrace",
+      "ok": true,
+      "message": "本人已同意此處的提案"
     }
   ],
   "needs": [
@@ -74281,7 +74335,8 @@
       "site": "terrace",
       "proposer": 4,
       "approved": [
-        4
+        4,
+        5
       ],
       "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所",
       "source": "data/records/plan-000005965.json",
@@ -74319,10 +74374,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795680923.461223,
+    "updated": 1795680959.702316,
     "reason": ""
   },
-  "seconds": 72053.64182792959,
+  "seconds": 72055.09062218654,
   "council": {
     "food": 58,
     "water": 45,
@@ -74330,7 +74385,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795680931.358206,
+  "snapshotAt": 1795680965.606446,
   "recipes": {
     "茅舍": {
       "sites": [
