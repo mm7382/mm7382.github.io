@@ -106,3 +106,79 @@ html[data-design="dream"] .wave-conversations { border-color:#aa775a!important; 
  }
  html[data-design="dream"] .wave-stage::before { background:#321b3a72; }
 }
+
+/* Put the world itself first in the Golden Scroll layout. */
+html[data-design="golden"] main { padding-inline:clamp(8px,1.6vw,28px); }
+html[data-design="golden"] .visitor-summary { margin-block:6px; padding-block:4px; }
+html[data-design="golden"] .design-picker { padding-bottom:9px; }
+html[data-design="golden"] .wave-stage {
+ padding:clamp(12px,2vw,26px) clamp(9px,1.6vw,24px) clamp(12px,1.9vw,24px);
+ background-position:center 42%;
+}
+html[data-design="golden"] .wave-stage .hero { margin:0 0 12px; }
+html[data-design="golden"] .wave-stage .hero h1 { font-size:clamp(.95rem,1.6vw,1.3rem); }
+html[data-design="golden"] .poster-title {
+ font-size:clamp(2.35rem,5.2vw,5.5rem); margin:2px auto 0; line-height:.95;
+}
+html[data-design="golden"] .poster-edition { margin:3px 0; }
+html[data-design="golden"] .poster-edition b { font-size:clamp(.8rem,1.35vw,1rem); padding:2px 0; }
+html[data-design="golden"] .wave-stage .hero .world-run { margin:0; }
+html[data-design="golden"] .wave-stage .live-world-clock {
+ display:flex; flex-flow:row wrap; align-items:baseline; justify-content:center;
+ column-gap:12px; row-gap:1px; max-width:100%; text-shadow:0 1px 3px #081a32;
+}
+html[data-design="golden"] .wave-stage :is(#world-clock-time,#ai-reply-count) { margin:0; }
+html[data-design="golden"] .wave-stage #world-clock-time { font-size:.82rem; text-align:center; }
+html[data-design="golden"] .wave-stage .live-world-clock span { font-size:.72rem; }
+html[data-design="golden"] .wave-stage #clock-status-note:empty { display:none; }
+html[data-design="golden"] .observe-link { display:none; }
+html[data-design="golden"] .wave-stage .layout>.world {
+ border-radius:26% 26% 6px 6px / 7% 7% 6px 6px;
+}
+
+/* Small location cards use real crops from the map rather than extra scene artwork. */
+.territory-panel { margin-block:22px; padding:clamp(12px,2vw,24px); }
+.territory-panel h2 { margin:0 0 6px; font-size:clamp(1.25rem,2.4vw,1.7rem); }
+.territory-panel h2::after { margin-top:5px; }
+.territory-panel>p { margin:0 0 9px; font-size:.81rem; }
+.territory-cards {
+ display:grid; grid-template-columns:repeat(auto-fit,minmax(min(164px,100%),1fr)); gap:7px;
+}
+.territory-place {
+ display:grid; grid-template-columns:48px minmax(0,1fr); align-items:start;
+ gap:7px; min-width:0; border:1px solid #c3a46c; padding:5px; background:#fff3d8;
+}
+.territory-thumbnail {
+ width:100%; aspect-ratio:1; border-radius:3px; background-color:#58665d;
+ background-image:url('./assets/bay.png'); background-repeat:no-repeat;
+ background-size:auto 400%; background-position:var(--site-x,50%) var(--site-y,50%);
+}
+.territory-place-copy { min-width:0; }
+.territory-place h3 { margin:0 0 2px; font-size:.9rem; color:#1c3850; overflow-wrap:anywhere; }
+.territory-place .territory-use { margin:0 0 2px; font-size:.73rem; color:#344959; line-height:1.3; }
+.territory-meta {
+ display:flex; flex-wrap:wrap; gap:0 5px; font-size:.68rem; line-height:1.35; color:#3d4b55;
+}
+.territory-meta span { overflow-wrap:anywhere; }
+@media(max-width:420px) {
+ .territory-cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .territory-place { grid-template-columns:35px minmax(0,1fr); gap:5px; }
+ html[data-design="golden"] .wave-stage .live-world-clock { column-gap:8px; }
+}
+
+/* Use an opaque writing surface so navy never darkens text behind it. */
+#dialogue-history,#visitor-comments { background:#fff6e3; color:#1a3045; border-color:#ba9456; }
+#dialogue-history :is(h2,summary,label),#visitor-comments :is(h2,h3,p,label,small) { color:#1a3045; }
+#dialogue-history :is(p,time),#dialogue-history .life-row .narration { color:#3e4c59; }
+#dialogue-history .life-row .spoken { color:#16394c; }
+#dialogue-history .life-row[data-actor="craft"] .spoken { color:#653d16; }
+#dialogue-history .life-row[data-actor="merchant"] .spoken { color:#363c77; }
+#dialogue-history .life-row { border-top-color:#d1bc96; }
+#dialogue-history :is(input,select),#visitor-comments :is(input,textarea) {
+ background:#fffbef; color:#172b41; border-color:#8a7350;
+}
+#dialogue-history input::placeholder,#visitor-comments :is(input,textarea)::placeholder { color:#515c66; }
+#visitor-comments .comments-status { color:#593c18; }
+#visitor-comments .owner-reply { background:#f3e5c7; color:#1a3045; border-color:#a77b3a; }
+#visitor-comments button { background:#173651; color:#fff6e3; }
+#visitor-comments button:disabled { opacity:1; background:#e4d6bc; color:#504535; }
