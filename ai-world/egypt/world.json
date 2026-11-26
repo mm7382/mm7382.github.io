@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5437,
+  "aiDecisions": 5438,
   "state": {
     "day": 1203,
     "actors": [
@@ -51,7 +51,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -71,7 +71,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace"
@@ -96,7 +96,7 @@
           "terrace",
           "quarry"
         ],
-        "goal": "等待露頭補水後，與塞努推進獅身人面像粗雕"
+        "goal": "等待露頭補足粗雕所需的水，再與塞努推進獅身人面像"
       },
       {
         "name": "塞努",
@@ -176,7 +176,7 @@
           "water": 0,
           "reed": 5,
           "stone": 4,
-          "block": 2
+          "block": 0
         }
       },
       "desert": {
@@ -243,8 +243,8 @@
       "terrace/神廟": {
         "kind": "神廟",
         "site": "terrace",
-        "stage": 3,
-        "work": 7,
+        "stage": 4,
+        "work": 1,
         "complete": false,
         "condition": 0
       },
@@ -334,7 +334,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5912,
+    "turn": 5915,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -576,7 +576,7 @@
           }
         ],
         "cursor": 0,
-        "done": 4,
+        "done": 5,
         "seen": 6204,
         "observation": "f8abeaac78a2df4d8ae5d0de3ab366fe7ae2e9df78c3eb6574e72f5e0f20f2f5",
         "proposals": {
@@ -656,7 +656,7 @@
           }
         ],
         "cursor": 0,
-        "done": 3,
+        "done": 4,
         "seen": 6206,
         "observation": "239be322a5093120948929b3497be8b354bc5d4453042037e84eb4913a6ce4f4",
         "proposals": {
@@ -739,9 +739,18 @@
         "blocked": ""
       },
       "4": {
-        "goal": "等待露頭補水後，與塞努推進獅身人面像粗雕",
+        "goal": "等待露頭補足粗雕所需的水，再與塞努推進獅身人面像",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "wait",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
           {
             "type": "think",
             "site": "quarry",
@@ -752,10 +761,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 6233,
-        "observation": "7e9a0ec23aca0e0bfeee121381ee2e8f02f3d165c57245640b7acc16cab2e415",
+        "seen": 6241,
+        "observation": "a82f1a83c56446da0c3088535eeba32dd7c0ea05c75c276c1b414f6b3e8ed55a",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -78415,6 +78424,63 @@
       "site": "terrace",
       "ok": true,
       "message": "柱廊與屋頂，已結算一工次"
+    },
+    {
+      "id": 5913,
+      "eventSeq": 6240,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "柱廊與屋頂，已結算一工次"
+    },
+    {
+      "id": 5914,
+      "eventSeq": 6241,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "刻飾，已結算一工次"
+    },
+    {
+      "id": "p6242",
+      "eventSeq": 6242,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5915,
+      "eventSeq": 6243,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
     }
   ],
   "needs": [
@@ -78723,10 +78789,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795683579.711185,
+    "updated": 1795683616.207495,
     "reason": ""
   },
-  "seconds": 72164.0866349472,
+  "seconds": 72165.60649906873,
   "council": {
     "food": 53,
     "water": 26,
@@ -78734,7 +78800,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683581.108164,
+  "snapshotAt": 1795683620.019614,
   "recipes": {
     "茅舍": {
       "sites": [
