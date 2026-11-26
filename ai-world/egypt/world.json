@@ -6,13 +6,13 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 6,
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -58,12 +58,12 @@
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 6,
           "water": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": "協助補充聚落食物儲備"
@@ -73,13 +73,13 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "field",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": "照料農田並補充灌溉用水"
@@ -92,10 +92,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": "補充農田用水，維持莊稼的照料"
@@ -113,7 +113,7 @@
           "terrace"
         ],
         "source": {
-          "water": 154,
+          "water": 148,
           "reed": 45,
           "food": 10
         },
@@ -236,7 +236,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5157,
+    "turn": 5161,
     "deficits": 10190,
     "autonomy": {
       "0": {
@@ -289,7 +289,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5168,
         "observation": "55734c488866fa917b8cce4cac92efe782df35b0302f0abb8a4b73cc889e5fb2",
@@ -510,7 +510,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5162,
         "observation": "7e51f530e5b811f0f795b377e3e7b983567c1720d4b1f802e8f468dea8744c4f",
@@ -601,7 +601,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5174,
         "observation": "be70181c810cea16ce23f1d8806341065d9109c4a80c1edb7535544f5ece65cc",
@@ -683,7 +683,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5176,
         "observation": "5c4ca4c03576d31b821327ec81a38914710a846a40a41c865377fc4b7c139b07",
@@ -63064,6 +63064,58 @@
       "site": "bank",
       "ok": true,
       "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 5158,
+      "eventSeq": 5189,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5159,
+      "eventSeq": 5190,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 5160,
+      "eventSeq": 5191,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1197,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5161,
+      "eventSeq": 5192,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
     }
   ],
   "needs": [
@@ -63150,19 +63202,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795674013.322794,
+    "phase": "deciding",
+    "updated": 1795674057.232084,
     "reason": ""
   },
-  "seconds": 71767.25653949671,
+  "seconds": 71768.67045969985,
   "council": {
     "food": 21,
-    "water": 11,
+    "water": 17,
     "shelter": true,
-    "ready": false
+    "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795674016.5238242,
+  "snapshotAt": 1795674059.34109,
   "recipes": {
     "茅舍": {
       "sites": [
