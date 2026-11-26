@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5327,
+  "aiDecisions": 5329,
   "state": {
     "day": 1201,
     "actors": [
@@ -82,7 +82,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace"
@@ -103,7 +103,7 @@
         "energy": 6,
         "research": 0,
         "survey": [],
-        "goal": "洪水期間先休息，待情況改變後再評估農田"
+        "goal": "維持農田照料，之後再評估情況"
       }
     ],
     "sites": {
@@ -161,8 +161,8 @@
           "food": 54,
           "water": 21,
           "reed": 9,
-          "stone": 2,
-          "block": 23
+          "stone": 0,
+          "block": 24
         }
       },
       "desert": {
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5655,
+    "turn": 5658,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -482,8 +482,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5864,
-        "observation": "003924cf9e25c2f2e50e444a52b8fc5ddfc7d6789449104dfaa6d0ee24e8e9ee",
+        "seen": 5872,
+        "observation": "dd0e102801a42901cebe6a28e9bb23f341091122bd0cd992c0827833a6aff6f8",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -535,8 +535,8 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 4,
+        "cursor": 1,
+        "done": 0,
         "seen": 5831,
         "observation": "7b5fe0b418304b088e6640dd34f60b16b9dbc31292b99b27ceb24340040ca716",
         "proposals": {
@@ -568,13 +568,13 @@
         "blocked": ""
       },
       "5": {
-        "goal": "洪水期間先休息，待情況改變後再評估農田",
+        "goal": "維持農田照料，之後再評估情況",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "rest",
+            "type": "tend",
             "site": "field",
-            "kind": "",
+            "kind": "農田",
             "material": "",
             "amount": 1,
             "repeat": 1,
@@ -599,10 +599,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 0,
         "done": 0,
-        "seen": 5857,
-        "observation": "45b09d2b18330dedcf8d6ffa51e4f4eea93f54731f6c6d3e293a4af2fd7892a0",
+        "seen": 5875,
+        "observation": "5821645466c073483664f36015e134145f0060720fbed3613d23f4970fe3c2f9",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -629,7 +629,7 @@
             "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
           }
         },
-        "blocked": ""
+        "blocked": "無可照料農田或正淹水"
       }
     }
   },
@@ -72802,6 +72802,81 @@
       "site": "bank",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p5873",
+      "eventSeq": 5873,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5656,
+      "eventSeq": 5874,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": 5657,
+      "eventSeq": 5875,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1201,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": "p5876",
+      "eventSeq": 5876,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5658,
+      "eventSeq": 5877,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": false,
+      "message": "無可照料農田或正淹水"
     }
   ],
   "needs": [
@@ -72888,11 +72963,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795679848.9664378,
+    "phase": "waiting",
+    "updated": 1795679890.06336,
     "reason": ""
   },
-  "seconds": 72009.18789928053,
+  "seconds": 72011.26012560344,
   "council": {
     "food": 58,
     "water": 39,
@@ -72900,7 +72975,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795679850.137562,
+  "snapshotAt": 1795679892.3406348,
   "recipes": {
     "茅舍": {
       "sites": [
