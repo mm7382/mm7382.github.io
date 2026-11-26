@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5331,
+  "aiDecisions": 5332,
   "state": {
     "day": 1201,
     "actors": [
@@ -41,13 +41,13 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "food": 4,
           "water": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5660,
+    "turn": 5662,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -407,7 +407,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5852,
         "observation": "1b9b3a6048e1a31f7ccef21830b054af0cb1a62a08b2565693ec3c03e0ac4eb9",
@@ -473,8 +473,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5872,
-        "observation": "dd0e102801a42901cebe6a28e9bb23f341091122bd0cd992c0827833a6aff6f8",
+        "seen": 5882,
+        "observation": "b39e8b34337b527123707322b09c92425f7ae94ded8b57d1bce4cc268f0c4820",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -72930,6 +72930,50 @@
       "site": "bank",
       "ok": false,
       "message": "計畫路徑中斷"
+    },
+    {
+      "id": 5661,
+      "eventSeq": 5882,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": "p5883",
+      "eventSeq": 5883,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5662,
+      "eventSeq": 5884,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
     }
   ],
   "needs": [
@@ -73016,11 +73060,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795679931.388587,
+    "phase": "deciding",
+    "updated": 1795679968.929455,
     "reason": ""
   },
-  "seconds": 72012.98116784303,
+  "seconds": 72014.16089703223,
   "council": {
     "food": 58,
     "water": 45,
@@ -73028,7 +73072,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795679933.712548,
+  "snapshotAt": 1795679971.2456179,
   "recipes": {
     "茅舍": {
       "sites": [
