@@ -75,14 +75,14 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace"
@@ -100,10 +100,11 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
-          "terrace"
+          "terrace",
+          "desert"
         ],
         "goal": "勘查聚落周邊，了解可用地形"
       }
@@ -244,7 +245,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5680,
+    "turn": 5686,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -537,7 +538,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5884,
         "observation": "1f44691bcd46adc22a53acfd87828cd62c57472a2ef96d826207f8015a7b26f8",
@@ -619,7 +620,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5904,
         "observation": "17eda0fe12c1820c38d894fda5d80507b0803ad8406be11504a3590039296af6",
@@ -73381,6 +73382,84 @@
       "site": "bank",
       "ok": true,
       "message": "等候"
+    },
+    {
+      "id": 5681,
+      "eventSeq": 5911,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1201,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5682,
+      "eventSeq": 5912,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "survey",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已勘查沙漠台地"
+    },
+    {
+      "id": 5683,
+      "eventSeq": 5913,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5684,
+      "eventSeq": 5914,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5685,
+      "eventSeq": 5915,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5686,
+      "eventSeq": 5916,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "等候"
     }
   ],
   "needs": [
@@ -73468,10 +73547,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795680225.446607,
+    "updated": 1795680268.0966651,
     "reason": ""
   },
-  "seconds": 72025.2267866139,
+  "seconds": 72027.00303570236,
   "council": {
     "food": 58,
     "water": 45,
@@ -73479,7 +73558,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795680226.673279,
+  "snapshotAt": 1795680269.258515,
   "recipes": {
     "茅舍": {
       "sites": [
