@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5365,
+  "aiDecisions": 5366,
   "state": {
     "day": 1202,
     "actors": [
@@ -94,13 +94,13 @@
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -259,7 +259,7 @@
         "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
       }
     },
-    "turn": 5723,
+    "turn": 5724,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -648,15 +648,6 @@
         "restWhenTired": true,
         "steps": [
           {
-            "type": "agree",
-            "site": "terrace",
-            "kind": "工坊",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
             "type": "move",
             "site": "quarry",
             "kind": "",
@@ -713,8 +704,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5966,
-        "observation": "1eddaea7e3e24e32ae311540388440d73a054c8da87d305950d55482a3ad15e3",
+        "seen": 5978,
+        "observation": "22856f00d4c342875cb5b9edab717447fe2e8a837ca36c49a78b23de8ae9675e",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -747,7 +738,9 @@
             "site": "terrace",
             "proposer": 4,
             "approved": [
-              4
+              4,
+              5,
+              2
             ],
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
@@ -74495,6 +74488,37 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": "p5979",
+      "eventSeq": 5979,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5724,
+      "eventSeq": 5980,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
     }
   ],
   "needs": [
@@ -74626,10 +74650,10 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795681090.0657659,
+    "updated": 1795681125.572649,
     "reason": ""
   },
-  "seconds": 72060.79178304068,
+  "seconds": 72061.88903736534,
   "council": {
     "food": 55,
     "water": 41,
@@ -74637,7 +74661,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681094.420994,
+  "snapshotAt": 1795681132.2438211,
   "recipes": {
     "茅舍": {
       "sites": [
