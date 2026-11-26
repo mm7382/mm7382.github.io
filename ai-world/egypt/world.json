@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5131,
+  "aiDecisions": 5132,
   "state": {
     "day": 1196,
     "actors": [
@@ -12,23 +12,23 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "修復農田，讓聚落能重新種植"
+        "goal": "補充聚落食物，支持農田持續耕作"
       },
       {
         "name": "帕伊",
         "age": 31,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "water": 0,
           "food": 0
         },
-        "energy": 9,
+        "energy": 7,
         "research": 0,
         "survey": [
           "terrace",
@@ -232,13 +232,31 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5136,
+    "turn": 5138,
     "deficits": 10183,
     "autonomy": {
       "0": {
-        "goal": "修復農田，讓聚落能重新種植",
+        "goal": "補充聚落食物，支持農田持續耕作",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "move",
+            "site": "bank",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "bank",
+            "kind": "",
+            "material": "food",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
           {
             "type": "move",
             "site": "field",
@@ -252,17 +270,8 @@
             "type": "drop",
             "site": "field",
             "kind": "",
-            "material": "reed",
-            "amount": 2,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "maintain",
-            "site": "field",
-            "kind": "農田",
-            "material": "",
-            "amount": 1,
+            "material": "food",
+            "amount": 6,
             "repeat": 1,
             "until": "count"
           },
@@ -276,10 +285,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 0,
         "done": 0,
-        "seen": 5126,
-        "observation": "482cdcf0a287b6c0649955cf35aca3c5f892fefb2db8e6f3744a29b9c19a1166",
+        "seen": 5157,
+        "observation": "2faa4e532732d485ea3e9685f65db363418419be8b3c8d043380f5b44ff8ed69",
         "proposals": {},
         "blocked": ""
       },
@@ -333,7 +342,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 5148,
         "observation": "628832402f6495f897d982445936c6828744551c9ae2cf7e124a61622e6653f3",
@@ -62499,6 +62508,45 @@
       "site": "field",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p5158",
+      "eventSeq": 5158,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1196,
+      "say": "農田已經修好了，塞努正在照料，我去河岸採集食物補充儲備。",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5137,
+      "eventSeq": 5159,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1196,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5138,
+      "eventSeq": 5160,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1196,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
     }
   ],
   "needs": [
@@ -62585,11 +62633,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795673647.471433,
+    "phase": "deciding",
+    "updated": 1795673680.997084,
     "reason": ""
   },
-  "seconds": 71752.43588638912,
+  "seconds": 71753.49447207667,
   "council": {
     "food": 6,
     "water": 12,
@@ -62597,7 +62645,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795673648.572395,
+  "snapshotAt": 1795673682.158331,
   "recipes": {
     "茅舍": {
       "sites": [
