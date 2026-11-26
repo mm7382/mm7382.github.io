@@ -32,7 +32,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 8,
+        "energy": 7,
         "research": 3,
         "survey": [
           "terrace",
@@ -243,10 +243,10 @@
       "terrace/神廟": {
         "kind": "神廟",
         "site": "terrace",
-        "stage": 4,
-        "work": 3,
-        "complete": false,
-        "condition": 0
+        "stage": 5,
+        "work": 0,
+        "complete": true,
+        "condition": 12
       },
       "quarry/獅身人面像": {
         "kind": "獅身人面像",
@@ -334,7 +334,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5923,
+    "turn": 5924,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -469,8 +469,8 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
-        "done": 3,
+        "cursor": 2,
+        "done": 0,
         "seen": 6179,
         "observation": "6bf2aba0fd4bcff99cb253a3484049faa71b13c9310d9d4274631b1808f270eb",
         "proposals": {
@@ -78666,6 +78666,19 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 6 water"
+    },
+    {
+      "id": 5924,
+      "eventSeq": 6254,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "已完工"
     }
   ],
   "needs": [
@@ -78913,7 +78926,7 @@
       },
       "asset": {},
       "implementation": "已支援",
-      "construction": "施工中"
+      "construction": "完工"
     },
     {
       "id": "N5825",
@@ -78973,11 +78986,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795683719.1423109,
+    "phase": "deciding",
+    "updated": 1795683736.525027,
     "reason": ""
   },
-  "seconds": 72169.89355645415,
+  "seconds": 72170.22085205656,
   "council": {
     "food": 53,
     "water": 26,
@@ -78985,7 +78998,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683720.940202,
+  "snapshotAt": 1795683738.425622,
   "recipes": {
     "茅舍": {
       "sites": [
