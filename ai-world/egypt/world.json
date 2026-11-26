@@ -6,14 +6,14 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 1,
           "stone": 0
         },
-        "energy": 9,
+        "energy": 7,
         "research": 3,
         "survey": [
           "terrace",
@@ -31,9 +31,9 @@
           "water": 0,
           "food": 0,
           "reed": 0,
-          "stone": 6
+          "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -54,7 +54,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -69,14 +69,14 @@
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "stone": 6,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -89,14 +89,14 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 4
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -218,7 +218,7 @@
         },
         "stock": {
           "water": 12,
-          "stone": 0
+          "stone": 6
         }
       }
     },
@@ -279,7 +279,7 @@
         "kind": "金字塔",
         "site": "desert",
         "stage": 1,
-        "work": 2,
+        "work": 3,
         "complete": false,
         "condition": 0
       }
@@ -373,7 +373,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6078,
+    "turn": 6083,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -462,7 +462,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6406,
         "observation": "17367231130d4c5baef452c6f38bbc67d7038988401cb79f16c70d99139e6604",
@@ -610,7 +610,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6432,
         "observation": "ba30459eeffaef3df6f2515d4b0a724b1514527879a6470aa2cd61417ba86283",
@@ -738,7 +738,7 @@
           }
         ],
         "cursor": 1,
-        "done": 1,
+        "done": 2,
         "seen": 6441,
         "observation": "557044a891864d47efd8038b6fb6dedc268b9f321a83c15961f9e40453498d35",
         "proposals": {
@@ -874,7 +874,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6412,
         "observation": "517f9fa285d0fc7a2d89cce25cadab9f10f1d7c055edc1e77fed0de5aa2c7fe7",
@@ -1019,7 +1019,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6436,
         "observation": "9ec8682988d331656c16b79ac3470d5c7ada2c119a7adced0a611f768a4d25f2",
@@ -81747,6 +81747,71 @@
       "site": "desert",
       "ok": true,
       "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6079,
+      "eventSeq": 6453,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 6080,
+      "eventSeq": 6454,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6081,
+      "eventSeq": 6455,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "desert",
+      "ok": true,
+      "message": "整平基礎，已結算一工次"
+    },
+    {
+      "id": 6082,
+      "eventSeq": 6456,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 6083,
+      "eventSeq": 6457,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
     }
   ],
   "needs": [
@@ -82115,10 +82180,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795685449.841544,
+    "updated": 1795685486.6669078,
     "reason": ""
   },
-  "seconds": 72241.9594235043,
+  "seconds": 72243.49303950772,
   "council": {
     "food": 50,
     "water": 35,
@@ -82126,7 +82191,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685451.1511831,
+  "snapshotAt": 1795685487.96076,
   "recipes": {
     "茅舍": {
       "sites": [
