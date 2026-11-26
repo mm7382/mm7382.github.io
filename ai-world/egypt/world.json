@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 1187,
+    "day": 1188,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 0,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5082,
-    "deficits": 10079
+    "turn": 5085,
+    "deficits": 10090
   },
   "history": [
     {
@@ -56135,6 +56135,39 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 5083,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1187,
+      "say": "我先休息恢復體力，再協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5084,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1187,
+      "say": "我先在河岸採集食物，補充聚落存糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 1 food"
+    },
+    {
+      "id": 5085,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1188,
+      "say": "我在河岸取水，補充聚落飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -56221,11 +56254,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795659111.1284459,
+    "phase": "waiting",
+    "updated": 1795659157.2216399,
     "reason": ""
   },
-  "seconds": 71177.69031284598,
+  "seconds": 71232.46956117905,
   "council": {
     "food": 0,
     "water": 0,
@@ -56233,7 +56266,7 @@
     "ready": false
   },
   "season": "洪水",
-  "snapshotAt": 1795659112.0957282,
+  "snapshotAt": 1795659158.1558871,
   "recipes": {
     "茅舍": {
       "sites": [
