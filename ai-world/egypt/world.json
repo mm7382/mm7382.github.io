@@ -32,7 +32,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -51,7 +51,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -71,7 +71,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 7,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace"
@@ -244,7 +244,7 @@
         "kind": "神廟",
         "site": "terrace",
         "stage": 3,
-        "work": 3,
+        "work": 6,
         "complete": false,
         "condition": 0
       },
@@ -334,7 +334,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5905,
+    "turn": 5908,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -470,7 +470,7 @@
           }
         ],
         "cursor": 1,
-        "done": 1,
+        "done": 2,
         "seen": 6179,
         "observation": "6bf2aba0fd4bcff99cb253a3484049faa71b13c9310d9d4274631b1808f270eb",
         "proposals": {
@@ -576,7 +576,7 @@
           }
         ],
         "cursor": 0,
-        "done": 3,
+        "done": 4,
         "seen": 6204,
         "observation": "f8abeaac78a2df4d8ae5d0de3ab366fe7ae2e9df78c3eb6574e72f5e0f20f2f5",
         "proposals": {
@@ -656,7 +656,7 @@
           }
         ],
         "cursor": 0,
-        "done": 2,
+        "done": 3,
         "seen": 6206,
         "observation": "239be322a5093120948929b3497be8b354bc5d4453042037e84eb4913a6ce4f4",
         "proposals": {
@@ -78297,6 +78297,45 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": 5906,
+      "eventSeq": 6231,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "柱廊與屋頂，已結算一工次"
+    },
+    {
+      "id": 5907,
+      "eventSeq": 6232,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "柱廊與屋頂，已結算一工次"
+    },
+    {
+      "id": 5908,
+      "eventSeq": 6233,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "柱廊與屋頂，已結算一工次"
     }
   ],
   "needs": [
@@ -78604,11 +78643,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795683493.981442,
+    "phase": "deciding",
+    "updated": 1795683529.9812212,
     "reason": ""
   },
-  "seconds": 72160.51637400445,
+  "seconds": 72161.59057357567,
   "council": {
     "food": 53,
     "water": 26,
@@ -78616,7 +78655,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683496.575077,
+  "snapshotAt": 1795683532.5777652,
   "recipes": {
     "茅舍": {
       "sites": [
