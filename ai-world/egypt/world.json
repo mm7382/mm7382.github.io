@@ -1,12 +1,12 @@
 {
-  "aiDecisions": 5486,
+  "aiDecisions": 5487,
   "state": {
     "day": 1205,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "terrace",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 3
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -34,7 +34,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -47,7 +47,7 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "desert",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
@@ -55,7 +55,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -63,7 +63,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "支援沙漠台地金字塔，完成整平基礎並視材料情況推進施工坡道"
+        "goal": "運送採石場石塊，支援沙漠台地金字塔後續施工"
       },
       {
         "name": "蒂雅",
@@ -375,7 +375,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6102,
+    "turn": 6105,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -464,7 +464,7 @@
             "until": "count"
           }
         ],
-        "cursor": 6,
+        "cursor": 7,
         "done": 0,
         "seen": 6406,
         "observation": "17367231130d4c5baef452c6f38bbc67d7038988401cb79f16c70d99139e6604",
@@ -708,16 +708,43 @@
         "blocked": ""
       },
       "2": {
-        "goal": "支援沙漠台地金字塔，完成整平基礎並視材料情況推進施工坡道",
+        "goal": "運送採石場石塊，支援沙漠台地金字塔後續施工",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "build",
-            "site": "desert",
-            "kind": "金字塔",
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 2,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "take",
+            "site": "quarry",
+            "kind": "",
+            "material": "block",
+            "amount": 3,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "desert",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "desert",
+            "kind": "",
+            "material": "block",
+            "amount": 3,
+            "repeat": 1,
             "until": "count"
           },
           {
@@ -730,10 +757,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 1,
-        "seen": 6473,
-        "observation": "e3f26ed93f06c286709cf36b9e126f68b5be1563ca8e126b37d32ab65ebe5628",
+        "cursor": 1,
+        "done": 0,
+        "seen": 6480,
+        "observation": "31fe64f4c74ca5f16d9418290567cd5aa1d0e96ced8d826d9715c5891bc99402",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -82088,6 +82115,63 @@
       "site": "desert",
       "ok": true,
       "message": "施工坡道，已結算一工次"
+    },
+    {
+      "id": 6103,
+      "eventSeq": 6479,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": 6104,
+      "eventSeq": 6480,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p6481",
+      "eventSeq": 6481,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6105,
+      "eventSeq": 6482,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
     }
   ],
   "needs": [
@@ -82456,10 +82540,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795685650.797258,
+    "updated": 1795685686.621213,
     "reason": ""
   },
-  "seconds": 72250.32813035845,
+  "seconds": 72251.81998156683,
   "council": {
     "food": 50,
     "water": 35,
@@ -82467,7 +82551,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685652.091275,
+  "snapshotAt": 1795685687.9625401,
   "recipes": {
     "茅舍": {
       "sites": [
