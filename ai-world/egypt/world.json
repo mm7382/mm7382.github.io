@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5525,
+  "aiDecisions": 5527,
   "state": {
     "day": 1206,
     "actors": [
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -66,7 +66,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "從採石場補充原石，支援沙漠台地神廟後續石塊加工"
+        "goal": "推進沙漠台地神廟施工，並利用現有原石加工石塊"
       },
       {
         "name": "蒂雅",
@@ -80,14 +80,14 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "從河岸採集蘆葦，供沙漠台地神廟施工架使用"
+        "goal": "在沙漠台地支援神廟施工並加工石塊"
       },
       {
         "name": "胡伊",
@@ -99,10 +99,10 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0,
+          "stone": 6,
           "block": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -204,7 +204,7 @@
         ],
         "source": {},
         "stock": {
-          "reed": 4,
+          "reed": 0,
           "stone": 7,
           "block": 8
         }
@@ -220,7 +220,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 47
+          "stone": 41
         },
         "stock": {
           "water": 11,
@@ -294,7 +294,7 @@
         "kind": "神廟",
         "site": "desert",
         "stage": 2,
-        "work": 0,
+        "work": 1,
         "complete": false,
         "condition": 0
       }
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6254,
+    "turn": 6257,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -700,43 +700,25 @@
         "blocked": ""
       },
       "2": {
-        "goal": "從採石場補充原石，支援沙漠台地神廟後續石塊加工",
+        "goal": "推進沙漠台地神廟施工，並利用現有原石加工石塊",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
+            "type": "build",
+            "site": "desert",
+            "kind": "神廟",
             "material": "",
             "amount": 1,
-            "repeat": 1,
+            "repeat": 3,
             "until": "count"
           },
           {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
+            "type": "shape",
             "site": "desert",
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "desert",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
+            "repeat": 3,
             "until": "count"
           },
           {
@@ -749,10 +731,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
-        "done": 0,
-        "seen": 6631,
-        "observation": "f0b041387d58e3d2464ccd11c750ee876f02c5ad01806cb9d1231b2f4ebf69c2",
+        "cursor": 0,
+        "done": 1,
+        "seen": 6669,
+        "observation": "e8fd78c51326cf3f0b0ed1acca231436e64234c9ed48a1ebb1fac7ef90c0437f",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -831,43 +813,25 @@
         "blocked": ""
       },
       "3": {
-        "goal": "從河岸採集蘆葦，供沙漠台地神廟施工架使用",
+        "goal": "在沙漠台地支援神廟施工並加工石塊",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "bank",
-            "kind": "",
+            "type": "build",
+            "site": "desert",
+            "kind": "神廟",
             "material": "",
             "amount": 1,
-            "repeat": 1,
+            "repeat": 2,
             "until": "count"
           },
           {
-            "type": "gather",
-            "site": "bank",
-            "kind": "",
-            "material": "reed",
-            "amount": 4,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
+            "type": "shape",
             "site": "desert",
             "kind": "",
-            "material": "",
+            "material": "stone",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "desert",
-            "kind": "",
-            "material": "reed",
-            "amount": 4,
-            "repeat": 1,
+            "repeat": 2,
             "until": "count"
           },
           {
@@ -880,10 +844,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
+        "cursor": 0,
         "done": 0,
-        "seen": 6619,
-        "observation": "1b6f1e6b431c7132f4ed9480543a55942d250055edcd2d2ca639ca2e0931da8a",
+        "seen": 6671,
+        "observation": "7d4966efe7c7a204596cf88cd9c41cc0374a1cde62c222bec7330bbacaac53a0",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -1046,7 +1010,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6657,
         "observation": "3cb5dcd15f3819195eaec754b6f115cb225f64f6522baceb4564f05587601480",
@@ -84828,6 +84792,81 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 5 stone"
+    },
+    {
+      "id": "p6670",
+      "eventSeq": 6670,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6255,
+      "eventSeq": 6671,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "desert",
+      "ok": true,
+      "message": "施工架，已結算一工次"
+    },
+    {
+      "id": "p6672",
+      "eventSeq": 6672,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6256,
+      "eventSeq": 6673,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6257,
+      "eventSeq": 6674,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1206,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
     }
   ],
   "needs": [
@@ -85254,11 +85293,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795687243.6360781,
+    "phase": "waiting",
+    "updated": 1795687282.2870111,
     "reason": ""
   },
-  "seconds": 72316.28836050245,
+  "seconds": 72318.2664952472,
   "council": {
     "food": 49,
     "water": 33,
@@ -85266,7 +85305,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687245.082664,
+  "snapshotAt": 1795687283.636656,
   "recipes": {
     "茅舍": {
       "sites": [
