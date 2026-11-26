@@ -67,9 +67,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "stone": 0
+          "stone": 0,
+          "reed": 6
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace"
@@ -86,9 +87,9 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 2
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -108,7 +109,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -131,7 +132,7 @@
         ],
         "source": {
           "water": 70,
-          "reed": 48,
+          "reed": 42,
           "food": 8
         },
         "stock": {
@@ -201,7 +202,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 134
+          "stone": 132
         },
         "stock": {
           "water": 2,
@@ -249,8 +250,8 @@
       "quarry/獅身人面像": {
         "kind": "獅身人面像",
         "site": "quarry",
-        "stage": 2,
-        "work": 4,
+        "stage": 3,
+        "work": 0,
         "complete": false,
         "condition": 0
       }
@@ -332,7 +333,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5871,
+    "turn": 5874,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -680,7 +681,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6174,
         "observation": "61eb31ae9b7f36ebf29377b6f7dfb2a414493fb9cbc943481599d1d0986a33ac",
@@ -813,7 +814,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6132,
         "observation": "c33fea36482484bb3ab5033825473bf928fa40acac086c63fecb6bcdf5ef88b2",
@@ -913,7 +914,7 @@
           }
         ],
         "cursor": 2,
-        "done": 4,
+        "done": 5,
         "seen": 6134,
         "observation": "cea47277968e11b3b1f939e825466ee4dd66afe0d7f787e422a7114c5d2622a0",
         "proposals": {
@@ -77700,6 +77701,45 @@
       "site": "terrace",
       "ok": false,
       "message": "計畫路徑中斷"
+    },
+    {
+      "id": 5872,
+      "eventSeq": 6184,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 reed"
+    },
+    {
+      "id": 5873,
+      "eventSeq": 6185,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 2 stone"
+    },
+    {
+      "id": 5874,
+      "eventSeq": 6186,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "開槽隔離岩體，已結算一工次"
     }
   ],
   "needs": [
@@ -78007,11 +78047,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795683069.671394,
+    "phase": "deciding",
+    "updated": 1795683105.8726,
     "reason": ""
   },
-  "seconds": 72142.8459953257,
+  "seconds": 72143.98532177361,
   "council": {
     "food": 53,
     "water": 20,
@@ -78019,7 +78059,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683073.561717,
+  "snapshotAt": 1795683107.335208,
   "recipes": {
     "茅舍": {
       "sites": [
