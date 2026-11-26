@@ -12,7 +12,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -49,7 +49,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -67,7 +67,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace"
@@ -86,7 +86,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace"
@@ -105,7 +105,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace",
@@ -169,9 +169,9 @@
         "stock": {
           "food": 55,
           "water": 11,
-          "reed": 9,
-          "stone": 6,
-          "block": 27
+          "reed": 3,
+          "stone": 2,
+          "block": 11
         }
       },
       "desert": {
@@ -227,8 +227,8 @@
       "terrace/金字塔": {
         "kind": "金字塔",
         "site": "terrace",
-        "stage": 2,
-        "work": 0,
+        "stage": 3,
+        "work": 1,
         "complete": false,
         "condition": 0
       }
@@ -286,7 +286,7 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5780,
+    "turn": 5785,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -322,7 +322,7 @@
           }
         ],
         "cursor": 1,
-        "done": 2,
+        "done": 3,
         "seen": 6032,
         "observation": "6a61485ee6eb15a784f4678ddfc92c5bed3ee89e1a2aa1127d730a41dbef6469",
         "proposals": {
@@ -498,7 +498,7 @@
           }
         ],
         "cursor": 1,
-        "done": 0,
+        "done": 1,
         "seen": 6045,
         "observation": "e8167181c8642f0ef357614202e6fd9675e71e205ee6688ea22f914b7c17ba4a",
         "proposals": {
@@ -575,7 +575,7 @@
           }
         ],
         "cursor": 1,
-        "done": 1,
+        "done": 2,
         "seen": 6037,
         "observation": "b908d1450e1a36007f6253ec6ca8c47c885c035fd4a00a7fd386c5750f2b1b66",
         "proposals": {
@@ -657,7 +657,7 @@
           }
         ],
         "cursor": 0,
-        "done": 4,
+        "done": 5,
         "seen": 6039,
         "observation": "f779eb5d218bcd38de6037996f8f5829e34b71ac55f3753f8baf34fc5942095e",
         "proposals": {
@@ -735,7 +735,7 @@
           }
         ],
         "cursor": 1,
-        "done": 0,
+        "done": 1,
         "seen": 6041,
         "observation": "78619501c29a2783ab5cde124456ad0ec78e9741efec9435d136f0d5fab04441",
         "proposals": {
@@ -75817,6 +75817,71 @@
       "site": "quarry",
       "ok": true,
       "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 5781,
+      "eventSeq": 6066,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1202,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "施工坡道，已結算一工次"
+    },
+    {
+      "id": 5782,
+      "eventSeq": 6067,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "施工坡道，已結算一工次"
+    },
+    {
+      "id": 5783,
+      "eventSeq": 6068,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "施工坡道，已結算一工次"
+    },
+    {
+      "id": 5784,
+      "eventSeq": 6069,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "施工坡道，已結算一工次"
+    },
+    {
+      "id": 5785,
+      "eventSeq": 6070,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "terrace",
+      "ok": true,
+      "message": "分層堆砌，已結算一工次"
     }
   ],
   "needs": [
@@ -76010,10 +76075,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795681965.324325,
+    "updated": 1795682001.242215,
     "reason": ""
   },
-  "seconds": 72096.85522986198,
+  "seconds": 72098.35114937238,
   "council": {
     "food": 55,
     "water": 29,
@@ -76021,7 +76086,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681966.563456,
+  "snapshotAt": 1795682002.4217541,
   "recipes": {
     "茅舍": {
       "sites": [
