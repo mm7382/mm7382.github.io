@@ -1,18 +1,18 @@
 {
-  "aiDecisions": 5315,
+  "aiDecisions": 5316,
   "state": {
     "day": 1200,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 6,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -65,7 +65,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 8,
+        "energy": 7,
         "research": 0,
         "survey": [],
         "goal": "維持農田照料並節省體力"
@@ -82,12 +82,12 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace"
         ],
-        "goal": "繼續研究石工技術並補充石材"
+        "goal": "將營地石材加工成石塊"
       },
       {
         "name": "塞努",
@@ -100,7 +100,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [],
         "goal": "休息後照料農田，並留意用水"
@@ -139,7 +139,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 15,
+          "water": 13,
           "food": 0,
           "reed": 7
         }
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5625,
+    "turn": 5629,
     "deficits": 10207,
     "autonomy": {
       "0": {
@@ -295,7 +295,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5810,
         "observation": "9889828dd2546733bd512f5194fd932f67fdc72b59ce9887c834b0c95c5f9eb3",
@@ -489,7 +489,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5821,
         "observation": "25a7ee3b6087787df3418f62bf94c9d0ef271066db599a712ab1354252dffd40",
@@ -522,52 +522,16 @@
         "blocked": ""
       },
       "4": {
-        "goal": "繼續研究石工技術並補充石材",
+        "goal": "將營地石材加工成石塊",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "research",
+            "type": "shape",
             "site": "terrace",
             "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "terrace",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
+            "repeat": 5,
             "until": "count"
           },
           {
@@ -580,10 +544,10 @@
             "until": "count"
           }
         ],
-        "cursor": 5,
+        "cursor": 0,
         "done": 0,
-        "seen": 5788,
-        "observation": "1649328823490af6e0167c1746214ff74242486ab3edb2709a422cda7c3c5695",
+        "seen": 5831,
+        "observation": "7b5fe0b418304b088e6640dd34f60b16b9dbc31292b99b27ceb24340040ca716",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -644,7 +608,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 5824,
         "observation": "44313ee44c12cff528f7d4c14bd376d829b0790fa2caf209ea7caeb26dd065bd",
@@ -72241,6 +72205,76 @@
       "site": "terrace",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 5626,
+      "eventSeq": 5831,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1200,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": "p5832",
+      "eventSeq": 5832,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1200,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5627,
+      "eventSeq": 5833,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1200,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5628,
+      "eventSeq": 5834,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1200,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5629,
+      "eventSeq": 5835,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1200,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
     }
   ],
   "needs": [
@@ -72328,18 +72362,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795679483.241832,
+    "updated": 1795679524.350007,
     "reason": ""
   },
-  "seconds": 71994.31994963827,
+  "seconds": 71996.03197134486,
   "council": {
     "food": 55,
-    "water": 49,
+    "water": 47,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795679484.373858,
+  "snapshotAt": 1795679525.4549818,
   "recipes": {
     "茅舍": {
       "sites": [
