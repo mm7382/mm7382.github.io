@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5415,
+  "aiDecisions": 5417,
   "state": {
     "day": 1203,
     "actors": [
@@ -31,7 +31,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 7,
+        "energy": 6,
         "research": 3,
         "survey": [
           "terrace",
@@ -43,20 +43,20 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "與帕伊合作在河階營地興建神廟"
+        "goal": "與帕伊合作在河階營地興建神廟，先補足基礎所需原石"
       },
       {
         "name": "蒂雅",
@@ -240,8 +240,8 @@
       "terrace/神廟": {
         "kind": "神廟",
         "site": "terrace",
-        "stage": 0,
-        "work": 1,
+        "stage": 1,
+        "work": 0,
         "complete": false,
         "condition": 0
       },
@@ -331,7 +331,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5833,
+    "turn": 5835,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -430,7 +430,7 @@
         "restWhenTired": true,
         "steps": [
           {
-            "type": "agree",
+            "type": "build",
             "site": "terrace",
             "kind": "神廟",
             "material": "",
@@ -480,7 +480,7 @@
             "kind": "神廟",
             "material": "",
             "amount": 1,
-            "repeat": 5,
+            "repeat": 3,
             "until": "count"
           },
           {
@@ -495,8 +495,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6126,
-        "observation": "4f6bfa4a0377920fb4b0eaf245b8fb49018c54442a0ef9838a4572d95b9257ed",
+        "seen": 6138,
+        "observation": "cd332cfe13d716cb24d3716518ba8f3bd8d465130c734be147ab6cf1962b2137",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -556,7 +556,8 @@
             "site": "terrace",
             "proposer": 2,
             "approved": [
-              2
+              2,
+              1
             ],
             "purpose": "與帕伊合作在河階營地興建神廟"
           },
@@ -576,16 +577,52 @@
         "blocked": ""
       },
       "2": {
-        "goal": "與帕伊合作在河階營地興建神廟",
+        "goal": "與帕伊合作在河階營地興建神廟，先補足基礎所需原石",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "move",
+            "site": "quarry",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "terrace",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
           {
             "type": "build",
             "site": "terrace",
             "kind": "神廟",
             "material": "",
             "amount": 1,
-            "repeat": 2,
+            "repeat": 3,
             "until": "count"
           },
           {
@@ -598,10 +635,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 1,
-        "seen": 6128,
-        "observation": "0b8b42ea881f4382002ec67106f3b6be2231ebf399c7e246d49e33eb69633251",
+        "cursor": 1,
+        "done": 0,
+        "seen": 6140,
+        "observation": "62f3e9cebabbb7c826ad5f7bcdc500bfdc9b9003334a840337785d97fd6f6f8b",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -77087,6 +77124,68 @@
       "site": "quarry",
       "ok": true,
       "message": "已移轉 2 stone"
+    },
+    {
+      "id": "p6139",
+      "eventSeq": 6139,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5834,
+      "eventSeq": 6140,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "測量軸線，已結算一工次"
+    },
+    {
+      "id": "p6141",
+      "eventSeq": 6141,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5835,
+      "eventSeq": 6142,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1203,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
     }
   ],
   "needs": [
@@ -77394,11 +77493,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795682658.607906,
+    "phase": "waiting",
+    "updated": 1795682694.622001,
     "reason": ""
   },
-  "seconds": 72125.3598785392,
+  "seconds": 72127.22711532736,
   "council": {
     "food": 53,
     "water": 20,
@@ -77406,7 +77505,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682660.310303,
+  "snapshotAt": 1795682698.409508,
   "recipes": {
     "茅舍": {
       "sites": [
