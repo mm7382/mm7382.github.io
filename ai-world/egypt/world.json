@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5369,
+  "aiDecisions": 5371,
   "state": {
     "day": 1202,
     "actors": [
@@ -80,9 +80,9 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 0
+          "stone": 6
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace"
@@ -98,9 +98,10 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 0
+          "reed": 0,
+          "stone": 6
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -193,7 +194,7 @@
           "terrace"
         ],
         "source": {
-          "stone": 186
+          "stone": 174
         },
         "stock": {}
       }
@@ -259,7 +260,7 @@
         "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
       }
     },
-    "turn": 5727,
+    "turn": 5731,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -296,8 +297,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5980,
-        "observation": "55fadf74189c6a21768df8efccbe9e8a0ec78700565ac784103dcdbaabe61570",
+        "seen": 5990,
+        "observation": "fa7b88b52349c982f5b96485183d85a0b6f99d715258d6916e4076a2506dac50",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -313,7 +314,7 @@
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
         },
-        "blocked": ""
+        "blocked": "計畫路徑中斷"
       },
       "1": {
         "goal": "先休息，再前往農田照料作物，之後重新評估。",
@@ -512,8 +513,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5974,
-        "observation": "b7c065a99208d35602eb41b7a6b4a7ad42238774599fd914333634e69896c554",
+        "seen": 5986,
+        "observation": "977554e994f52f7f0c2fd1f3a81eadb5c3c394d9dc64802d38a56970dab77d34",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -553,7 +554,7 @@
             "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所"
           }
         },
-        "blocked": ""
+        "blocked": "計畫路徑中斷"
       },
       "4": {
         "goal": "在河階營地興建工坊，為石材加工提供場所",
@@ -614,7 +615,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5976,
         "observation": "dbc618d6562583e4974614bc5ec0d48d17c98acf8406672a140e346201da792d",
@@ -705,7 +706,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5978,
         "observation": "22856f00d4c342875cb5b9edab717447fe2e8a837ca36c49a78b23de8ae9675e",
@@ -74615,6 +74616,94 @@
       "site": "terrace",
       "ok": false,
       "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5987",
+      "eventSeq": 5987,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5728,
+      "eventSeq": 5988,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": 5729,
+      "eventSeq": 5989,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1202,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 5730,
+      "eventSeq": 5990,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1202,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": "p5991",
+      "eventSeq": 5991,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5731,
+      "eventSeq": 5992,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1202,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
     }
   ],
   "needs": [
@@ -74745,11 +74834,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795681212.6451452,
+    "phase": "waiting",
+    "updated": 1795681259.925278,
     "reason": ""
   },
-  "seconds": 72065.82503382367,
+  "seconds": 72068.30593358753,
   "council": {
     "food": 55,
     "water": 41,
@@ -74757,7 +74846,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681215.1338701,
+  "snapshotAt": 1795681261.201782,
   "recipes": {
     "茅舍": {
       "sites": [
