@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5340,
+  "aiDecisions": 5341,
   "state": {
     "day": 1201,
     "actors": [
@@ -80,9 +80,9 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 6
+          "stone": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace"
@@ -100,7 +100,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -164,7 +164,7 @@
           "food": 58,
           "water": 21,
           "reed": 9,
-          "stone": 0,
+          "stone": 6,
           "block": 24
         }
       },
@@ -245,7 +245,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5686,
+    "turn": 5689,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -282,8 +282,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5896,
-        "observation": "beba3133600740d226145729b911730066a3c3b1b671ee088cc5ccb29499a4a8",
+        "seen": 5918,
+        "observation": "fbd823e125e44aba71aafdab2ba9ed602857c82ecd736e23288007fcdf6e008e",
         "proposals": {},
         "blocked": "計畫路徑中斷"
       },
@@ -538,7 +538,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5884,
         "observation": "1f44691bcd46adc22a53acfd87828cd62c57472a2ef96d826207f8015a7b26f8",
@@ -73460,6 +73460,63 @@
       "site": "bank",
       "ok": true,
       "message": "等候"
+    },
+    {
+      "id": 5687,
+      "eventSeq": 5917,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1201,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 5688,
+      "eventSeq": 5918,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p5919",
+      "eventSeq": 5919,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5689,
+      "eventSeq": 5920,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
     }
   ],
   "needs": [
@@ -73546,11 +73603,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795680268.0966651,
+    "phase": "deciding",
+    "updated": 1795680308.806263,
     "reason": ""
   },
-  "seconds": 72027.00303570236,
+  "seconds": 72028.35444222661,
   "council": {
     "food": 58,
     "water": 45,
@@ -73558,7 +73615,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795680269.258515,
+  "snapshotAt": 1795680310.036132,
   "recipes": {
     "茅舍": {
       "sites": [
