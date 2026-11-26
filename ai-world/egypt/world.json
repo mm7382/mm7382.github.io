@@ -1,18 +1,18 @@
 {
-  "aiDecisions": 5216,
+  "aiDecisions": 5217,
   "state": {
     "day": 1198,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 6,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -23,13 +23,13 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "water": 6,
           "food": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -43,11 +43,11 @@
         "age": 39,
         "site": "terrace",
         "bag": {
-          "food": 6,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -65,7 +65,7 @@
           "food": 0,
           "water": 6
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": "補充農田的水，維持糧食供應"
@@ -75,19 +75,19 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 1,
         "survey": [
           "terrace"
         ],
-        "goal": "繼續運送石材至河階營地，製作石塊"
+        "goal": "補充河階營地的石塊"
       },
       {
         "name": "塞努",
@@ -100,7 +100,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [],
         "goal": "照料農田，維持莊稼生長"
@@ -139,7 +139,7 @@
         ],
         "source": {},
         "stock": {
-          "water": 7,
+          "water": 6,
           "food": 4,
           "reed": 7
         }
@@ -158,7 +158,7 @@
         ],
         "source": {},
         "stock": {
-          "food": 28,
+          "food": 34,
           "water": 27,
           "reed": 10,
           "stone": 0,
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5356,
+    "turn": 5362,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -295,7 +295,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5440,
         "observation": "9f237187a992eef7a8b00b57b6e064e5a74dda1a03d6e5708514e6ae9b213d86",
@@ -352,7 +352,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5442,
         "observation": "82d79f5894765a9090da5762cd9e0d300b6e26483bda2ff4252406cc465419b2",
@@ -425,7 +425,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5444,
         "observation": "9d25eae1d8466115643f145efaeca9a52e351699abfc8e56d9d99a4311566618",
@@ -540,7 +540,7 @@
         "blocked": ""
       },
       "4": {
-        "goal": "繼續運送石材至河階營地，製作石塊",
+        "goal": "補充河階營地的石塊",
         "restWhenTired": true,
         "steps": [
           {
@@ -598,10 +598,10 @@
             "until": "count"
           }
         ],
-        "cursor": 5,
+        "cursor": 1,
         "done": 0,
-        "seen": 5396,
-        "observation": "ec7e605a8bceb53992ed7d9351f10556e323e93b03e74b484685756e62bc8b4b",
+        "seen": 5462,
+        "observation": "b1f18f6575d2339c7a64f53d8f6634ea6227a6671f32526a63dee6d75514744d",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -662,7 +662,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5456,
         "observation": "053c45228a37c9b3beb44f3f9a94d6ad68522e7fc6b748c2a5941478cbd04687",
@@ -66980,6 +66980,102 @@
       "site": "bank",
       "ok": true,
       "message": "已移轉 6 water"
+    },
+    {
+      "id": "p5463",
+      "eventSeq": 5463,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5357,
+      "eventSeq": 5464,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
+    },
+    {
+      "id": 5358,
+      "eventSeq": 5465,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1198,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5359,
+      "eventSeq": 5466,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 5360,
+      "eventSeq": 5467,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 5361,
+      "eventSeq": 5468,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1198,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 food"
+    },
+    {
+      "id": 5362,
+      "eventSeq": 5469,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1198,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -67066,19 +67162,19 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795676366.339895,
+    "phase": "waiting",
+    "updated": 1795676413.870453,
     "reason": ""
   },
-  "seconds": 71864.17173690678,
+  "seconds": 71866.49894168632,
   "council": {
     "food": 38,
-    "water": 52,
+    "water": 51,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795676367.4491751,
+  "snapshotAt": 1795676414.900339,
   "recipes": {
     "茅舍": {
       "sites": [
