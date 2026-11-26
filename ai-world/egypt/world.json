@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5539,
+  "aiDecisions": 5542,
   "state": {
     "day": 1206,
     "actors": [
@@ -36,7 +36,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 6,
+        "energy": 10,
         "research": 3,
         "survey": [
           "terrace",
@@ -45,7 +45,7 @@
           "quarry",
           "desert"
         ],
-        "goal": "沙漠台地神廟已完工，先休息並評估聚落接下來的需要。"
+        "goal": "回應蒂雅，休息後留意聚落是否有新的需要。"
       },
       {
         "name": "納赫特",
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 4,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace",
@@ -66,28 +66,28 @@
           "quarry",
           "desert"
         ],
-        "goal": "推進沙漠台地神廟施工"
+        "goal": "休息後加工石塊，為聚落日後所需備料"
       },
       {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "desert",
+        "site": "quarry",
         "bag": {
           "food": 0,
           "water": 0,
           "stone": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "神廟已完工，休息後與同伴商量聚落接下來的需要"
+        "goal": "在石灰岩露頭採集原石，補充可供日後加工的材料"
       },
       {
         "name": "胡伊",
@@ -400,7 +400,7 @@
         "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。"
       }
     },
-    "turn": 6307,
+    "turn": 6310,
     "deficits": 10241,
     "autonomy": {
       "0": {
@@ -519,7 +519,7 @@
         "blocked": ""
       },
       "1": {
-        "goal": "沙漠台地神廟已完工，先休息並評估聚落接下來的需要。",
+        "goal": "回應蒂雅，休息後留意聚落是否有新的需要。",
         "restWhenTired": true,
         "steps": [
           {
@@ -532,7 +532,7 @@
             "until": "count"
           },
           {
-            "type": "think",
+            "type": "wait",
             "site": "desert",
             "kind": "",
             "material": "",
@@ -543,8 +543,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6725,
-        "observation": "42022a4aa4105dc02aabc8ec5bd55cebcd3a6181e40ecc46afd3c49311ba3b64",
+        "seen": 6736,
+        "observation": "30b0ce4566f458f7823a697688c81a34513cb6ed7d393637dd1dd9fc26e59140",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -637,16 +637,25 @@
         "blocked": ""
       },
       "2": {
-        "goal": "推進沙漠台地神廟施工",
+        "goal": "休息後加工石塊，為聚落日後所需備料",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "build",
+            "type": "rest",
             "site": "desert",
-            "kind": "神廟",
+            "kind": "",
             "material": "",
             "amount": 1,
-            "repeat": 8,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "shape",
+            "site": "desert",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 4,
             "until": "count"
           },
           {
@@ -659,10 +668,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
-        "done": 4,
-        "seen": 6698,
-        "observation": "8735dd1e0a51cb1391ffdf12172119a8dac98d4739c7f7cc3509e65b7af05e10",
+        "cursor": 1,
+        "done": 0,
+        "seen": 6738,
+        "observation": "3aa03310db4a1923f996c4eab109c207984bf33d0428fe12b77e9cf846f5bc46",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -741,12 +750,12 @@
         "blocked": ""
       },
       "3": {
-        "goal": "神廟已完工，休息後與同伴商量聚落接下來的需要",
+        "goal": "在石灰岩露頭採集原石，補充可供日後加工的材料",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "rest",
-            "site": "desert",
+            "type": "move",
+            "site": "quarry",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -754,8 +763,26 @@
             "until": "count"
           },
           {
+            "type": "gather",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "quarry",
+            "kind": "",
+            "material": "stone",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
             "type": "think",
-            "site": "desert",
+            "site": "quarry",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -765,8 +792,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6728,
-        "observation": "1e453b265666a8b8002eb39b8b409859a0ad53a4fc9580f8098b4ff1a170dbb4",
+        "seen": 6740,
+        "observation": "b4f0ff5f680fe8b60e592fdcf6967af119cf0957c874a32a2ad4ec3e7514bfd0",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -85587,6 +85614,103 @@
       "site": "desert",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p6737",
+      "eventSeq": 6737,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "蒂雅，幾座大型工程都已完工，我也贊成先休息；梅莉和塞努會留意補給與農田，我先在台地休息。",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "conversation",
+        "recipients": [
+          3
+        ],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6308,
+      "eventSeq": 6738,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p6739",
+      "eventSeq": 6739,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "蒂雅，我也贊成先休息；我之後會在台地加工一些石塊，留作日後使用。",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "conversation",
+        "recipients": [
+          3
+        ],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6309,
+      "eventSeq": 6740,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1206,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p6741",
+      "eventSeq": 6741,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6310,
+      "eventSeq": 6742,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1206,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已抵達石灰岩露頭"
     }
   ],
   "needs": [
@@ -86013,11 +86137,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795687793.704864,
+    "phase": "waiting",
+    "updated": 1795687842.2652018,
     "reason": ""
   },
-  "seconds": 72339.20425073514,
+  "seconds": 72341.58500975768,
   "council": {
     "food": 49,
     "water": 33,
@@ -86025,7 +86149,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795687795.154508,
+  "snapshotAt": 1795687843.694289,
   "recipes": {
     "茅舍": {
       "sites": [
