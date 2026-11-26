@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5385,
+  "aiDecisions": 5387,
   "state": {
     "day": 1202,
     "actors": [
@@ -29,7 +29,7 @@
           "food": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -41,14 +41,14 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 7,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -66,12 +66,12 @@
           "food": 0,
           "water": 0
         },
-        "energy": 2,
-        "research": 0,
+        "energy": 1,
+        "research": 1,
         "survey": [
           "terrace"
         ],
-        "goal": "取得金字塔施工知識並在河階營地參與建造"
+        "goal": "取得施工知識並協助建造河階營地的金字塔"
       },
       {
         "name": "胡伊",
@@ -167,9 +167,9 @@
         "source": {},
         "stock": {
           "food": 55,
-          "water": 22,
+          "water": 21,
           "reed": 9,
-          "stone": 11,
+          "stone": 10,
           "block": 27
         }
       },
@@ -276,7 +276,7 @@
         "purpose": "在河階營地提議興建金字塔，並準備所需原石"
       }
     },
-    "turn": 5749,
+    "turn": 5752,
     "deficits": 10217,
     "autonomy": {
       "0": {
@@ -350,15 +350,6 @@
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
             "type": "gather",
             "site": "quarry",
             "kind": "",
@@ -395,10 +386,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 6014,
-        "observation": "c34b246aa94ce5cd2612ab9fd61e9f784458ff49291c58344aa501bb8a771318",
+        "seen": 6024,
+        "observation": "7a5407897ed8160692884326c85819462032b85d881cde81e92fefd545ba9b2f",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -445,7 +436,8 @@
             "proposer": 2,
             "approved": [
               2,
-              3
+              3,
+              4
             ],
             "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
@@ -511,7 +503,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5994,
         "observation": "68820e85ef03ba825690ec5e19978bdb2ba4324558475d5243c639af5da7b27b",
@@ -557,18 +549,9 @@
         "blocked": ""
       },
       "3": {
-        "goal": "取得金字塔施工知識並在河階營地參與建造",
+        "goal": "取得施工知識並協助建造河階營地的金字塔",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "survey",
-            "site": "terrace",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "research",
             "site": "terrace",
@@ -597,10 +580,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
-        "done": 0,
-        "seen": 6017,
-        "observation": "330fa39a7213bc8e4bb38783f492c24965c71c5e010461a29e11619cea321eb8",
+        "cursor": 0,
+        "done": 1,
+        "seen": 6027,
+        "observation": "553fa3ad1334e13ba1806af18a7bc8328cedfc433a5a5bea3e687ebde6444abd",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -647,7 +630,8 @@
             "proposer": 2,
             "approved": [
               2,
-              3
+              3,
+              4
             ],
             "purpose": "在河階營地提議興建金字塔，並準備所需原石"
           }
@@ -75288,6 +75272,81 @@
       "site": "terrace",
       "ok": true,
       "message": "已完成實作研究"
+    },
+    {
+      "id": "p6025",
+      "eventSeq": 6025,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5750,
+      "eventSeq": 6026,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1202,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5751,
+      "eventSeq": 6027,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1202,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": "p6028",
+      "eventSeq": 6028,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5752,
+      "eventSeq": 6029,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1202,
+      "say": "",
+      "action": "research",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已完成實作研究"
     }
   ],
   "needs": [
@@ -75480,18 +75539,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795681632.125216,
+    "updated": 1795681675.868665,
     "reason": ""
   },
-  "seconds": 72082.62060393303,
+  "seconds": 72084.45278472295,
   "council": {
     "food": 55,
-    "water": 40,
+    "water": 39,
     "shelter": true,
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795681633.65653,
+  "snapshotAt": 1795681677.111247,
   "recipes": {
     "茅舍": {
       "sites": [
