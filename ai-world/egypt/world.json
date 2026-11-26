@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5349,
+  "aiDecisions": 5351,
   "state": {
     "day": 1201,
     "actors": [
@@ -18,7 +18,7 @@
           "terrace",
           "field"
         ],
-        "goal": "將已採集的水送到農田儲備"
+        "goal": "將身上的水送到農田儲備"
       },
       {
         "name": "帕伊",
@@ -246,11 +246,11 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5706,
+    "turn": 5708,
     "deficits": 10212,
     "autonomy": {
       "0": {
-        "goal": "將已採集的水送到農田儲備",
+        "goal": "將身上的水送到農田儲備",
         "restWhenTired": true,
         "steps": [
           {
@@ -283,8 +283,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5928,
-        "observation": "8687307d36c75dec8c7cfee872a94acd29909c64c64fd5c01c01786e4f615bd6",
+        "seen": 5945,
+        "observation": "b4d8f381758df719a49d969f1ed173db4442de10006d3deeac66e4ae1e1aecea",
         "proposals": {},
         "blocked": "計畫路徑中斷"
       },
@@ -322,8 +322,8 @@
         ],
         "cursor": 0,
         "done": 0,
-        "seen": 5930,
-        "observation": "33b6801c51d948366ce07945390c0539a34556793fd6d105bd831235d2a35954",
+        "seen": 5947,
+        "observation": "2087c687d6ee1605282d8b6e6ef0d4382adc7ad4ea9ae2ff8a4f85945c533978",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -73883,6 +73883,68 @@
       "site": "quarry",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": "p5946",
+      "eventSeq": 5946,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5707,
+      "eventSeq": 5947,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
+    },
+    {
+      "id": "p5948",
+      "eventSeq": 5948,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5708,
+      "eventSeq": 5949,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1201,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "bank",
+      "ok": false,
+      "message": "計畫路徑中斷"
     }
   ],
   "needs": [
@@ -73969,11 +74031,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795680638.087811,
+    "phase": "waiting",
+    "updated": 1795680682.0585978,
     "reason": ""
   },
-  "seconds": 72041.74596672656,
+  "seconds": 72044.24262656506,
   "council": {
     "food": 58,
     "water": 45,
@@ -73981,7 +74043,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795680641.73295,
+  "snapshotAt": 1795680685.961232,
   "recipes": {
     "茅舍": {
       "sites": [
