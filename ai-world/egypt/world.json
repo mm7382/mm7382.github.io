@@ -62,7 +62,7 @@
           "food": 0,
           "water": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5109,
+    "turn": 5111,
     "deficits": 10171
   },
   "history": [
@@ -56432,6 +56432,28 @@
       "kind": "",
       "ok": false,
       "message": "精力不足"
+    },
+    {
+      "id": 5110,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1195,
+      "say": "我先歇息恢復體力，再採集食物。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5111,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1195,
+      "say": "我先休息恢復體力，準備協助補充食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -56518,11 +56540,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795659580.6961799,
-    "reason": ""
+    "phase": "attention",
+    "updated": 1795659667.340222,
+    "reason": "居民決策暫停，已保留最近的世界紀錄。"
   },
-  "seconds": 71647.94610893034,
+  "seconds": 71678.63913434639,
   "council": {
     "food": 0,
     "water": 0,
@@ -56530,7 +56552,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795659581.661199,
+  "snapshotAt": 1795659670.584756,
   "recipes": {
     "茅舍": {
       "sites": [
