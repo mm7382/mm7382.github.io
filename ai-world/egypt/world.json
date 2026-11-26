@@ -1,17 +1,17 @@
 {
   "state": {
-    "day": 1190,
+    "day": 1191,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
         "site": "bank",
         "bag": {
-          "food": 1,
+          "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -78,7 +78,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -91,10 +91,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 1,
+          "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -112,9 +112,9 @@
           "terrace"
         ],
         "source": {
-          "water": 159,
+          "water": 160,
           "reed": 48,
-          "food": 23
+          "food": 24
         },
         "stock": {
           "food": 0,
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5095,
-    "deficits": 10114
+    "turn": 5097,
+    "deficits": 10124
   },
   "history": [
     {
@@ -56278,6 +56278,28 @@
       "kind": "",
       "ok": true,
       "message": "已移轉 1 food"
+    },
+    {
+      "id": 5096,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1191,
+      "say": "我在河岸取水，補充聚落的飲水。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
+    },
+    {
+      "id": 5097,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1191,
+      "say": "我先休息，恢復體力後採集食水。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -56364,19 +56386,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795659322.965048,
+    "phase": "deciding",
+    "updated": 1795659363.001715,
     "reason": ""
   },
-  "seconds": 71398.06918801414,
+  "seconds": 71430.37392309721,
   "council": {
-    "food": 1,
-    "water": 1,
+    "food": 0,
+    "water": 0,
     "shelter": false,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795659323.915781,
+  "snapshotAt": 1795659364.030509,
   "recipes": {
     "茅舍": {
       "sites": [
