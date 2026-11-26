@@ -24,10 +24,10 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 2,
           "food": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -40,11 +40,11 @@
         "age": 39,
         "site": "bank",
         "bag": {
-          "food": 0,
+          "food": 2,
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -112,9 +112,9 @@
           "terrace"
         ],
         "source": {
-          "water": 160,
+          "water": 158,
           "reed": 48,
-          "food": 24
+          "food": 22
         },
         "stock": {
           "food": 0,
@@ -230,7 +230,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4771,
+    "turn": 4773,
     "deficits": 9187
   },
   "history": [
@@ -52714,6 +52714,28 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 4772,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1103,
+      "say": "河岸飲水庫存已空，我先採水補給。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 water"
+    },
+    {
+      "id": 4773,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1103,
+      "say": "河岸共用口糧已空，我先採集食物補給。",
+      "action": "gather",
+      "kind": "",
+      "ok": true,
+      "message": "已移轉 2 food"
     }
   ],
   "needs": [
@@ -52800,19 +52822,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795653843.904275,
+    "phase": "deciding",
+    "updated": 1795653880.088842,
     "reason": ""
   },
-  "seconds": 66134.82963509293,
+  "seconds": 66163.32623896791,
   "council": {
-    "food": 1,
-    "water": 1,
+    "food": 3,
+    "water": 3,
     "shelter": true,
     "ready": false
   },
   "season": "退水",
-  "snapshotAt": 1795653844.8014112,
+  "snapshotAt": 1795653881.2960021,
   "recipes": {
     "茅舍": {
       "sites": [
