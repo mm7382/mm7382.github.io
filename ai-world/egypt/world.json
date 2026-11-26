@@ -1,37 +1,17 @@
 {
-  "aiDecisions": 5474,
+  "aiDecisions": 5476,
   "state": {
     "day": 1204,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "desert",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 0
-        },
-        "energy": 4,
-        "research": 3,
-        "survey": [
-          "terrace",
-          "field",
-          "bank",
-          "quarry"
-        ],
-        "goal": "支援沙漠台地金字塔，搬運施工所需蘆葦。"
-      },
-      {
-        "name": "帕伊",
-        "age": 31,
-        "site": "terrace",
-        "bag": {
-          "water": 0,
-          "food": 0,
-          "reed": 0,
-          "stone": 6
         },
         "energy": 2,
         "research": 3,
@@ -41,7 +21,27 @@
           "bank",
           "quarry"
         ],
-        "goal": "協助準備沙漠台地金字塔的原石。"
+        "goal": "支援沙漠台地金字塔，補足施工坡道所需蘆葦並搬運石塊。"
+      },
+      {
+        "name": "帕伊",
+        "age": 31,
+        "site": "desert",
+        "bag": {
+          "water": 0,
+          "food": 0,
+          "reed": 0,
+          "stone": 6
+        },
+        "energy": 0,
+        "research": 3,
+        "survey": [
+          "terrace",
+          "field",
+          "bank",
+          "quarry"
+        ],
+        "goal": "運送原石支援沙漠台地金字塔。"
       },
       {
         "name": "納赫特",
@@ -361,19 +361,28 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6042,
+    "turn": 6044,
     "deficits": 10226,
     "autonomy": {
       "0": {
-        "goal": "支援沙漠台地金字塔，搬運施工所需蘆葦。",
+        "goal": "支援沙漠台地金字塔，補足施工坡道所需蘆葦並搬運石塊。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "take",
-            "site": "terrace",
+            "type": "move",
+            "site": "bank",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "gather",
+            "site": "bank",
             "kind": "",
             "material": "reed",
-            "amount": 5,
+            "amount": 1,
             "repeat": 1,
             "until": "count"
           },
@@ -391,7 +400,43 @@
             "site": "desert",
             "kind": "",
             "material": "reed",
-            "amount": 5,
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "take",
+            "site": "terrace",
+            "kind": "",
+            "material": "block",
+            "amount": 3,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "desert",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "desert",
+            "kind": "",
+            "material": "block",
+            "amount": 3,
             "repeat": 1,
             "until": "count"
           },
@@ -405,10 +450,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 0,
         "done": 0,
-        "seen": 6385,
-        "observation": "22159a2bb1d1294fb3d2db05cf4ac6ea87ac8f73b9679cfa5f5cf8e825c89a19",
+        "seen": 6406,
+        "observation": "17367231130d4c5baef452c6f38bbc67d7038988401cb79f16c70d99139e6604",
         "proposals": {
           "terrace/工坊": {
             "id": "N5717",
@@ -460,23 +505,26 @@
               5
             ],
             "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
+          },
+          "desert/金字塔": {
+            "id": "N6041",
+            "record": 6041,
+            "kind": "金字塔",
+            "site": "desert",
+            "proposer": 4,
+            "approved": [
+              4,
+              5
+            ],
+            "purpose": "在沙漠台地探索興建另一座金字塔"
           }
         },
         "blocked": ""
       },
       "1": {
-        "goal": "協助準備沙漠台地金字塔的原石。",
+        "goal": "運送原石支援沙漠台地金字塔。",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "take",
-            "site": "terrace",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "move",
             "site": "desert",
@@ -507,8 +555,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6399,
-        "observation": "32ec64a106a4b28ae335173a6bc863cf88c8ff131ddeaf7cbfb5021ff66c0421",
+        "seen": 6408,
+        "observation": "ef0584bc544592126b7e3f0fcc5bb070c04e10081b5b46ec0f8de45ec5eb41f6",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -584,6 +632,18 @@
               5
             ],
             "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
+          },
+          "desert/金字塔": {
+            "id": "N6041",
+            "record": 6041,
+            "kind": "金字塔",
+            "site": "desert",
+            "proposer": 4,
+            "approved": [
+              4,
+              5
+            ],
+            "purpose": "在沙漠台地探索興建另一座金字塔"
           }
         },
         "blocked": ""
@@ -80939,6 +80999,68 @@
       "site": "desert",
       "ok": true,
       "message": "本人已同意此處的提案"
+    },
+    {
+      "id": "p6407",
+      "eventSeq": 6407,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6043,
+      "eventSeq": 6408,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1204,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": "p6409",
+      "eventSeq": 6409,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6044,
+      "eventSeq": 6410,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
     }
   ],
   "needs": [
@@ -81307,10 +81429,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795685050.9500108,
+    "updated": 1795685089.183033,
     "reason": ""
   },
-  "seconds": 72225.34844426818,
+  "seconds": 72226.94035396955,
   "council": {
     "food": 51,
     "water": 40,
@@ -81318,7 +81440,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685052.250491,
+  "snapshotAt": 1795685090.479604,
   "recipes": {
     "茅舍": {
       "sites": [
