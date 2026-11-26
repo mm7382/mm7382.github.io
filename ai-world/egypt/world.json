@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5203,
+  "aiDecisions": 5205,
   "state": {
     "day": 1198,
     "actors": [
@@ -12,7 +12,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -29,7 +29,7 @@
           "food": 0,
           "reed": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 0,
         "survey": [
           "terrace",
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5321,
+    "turn": 5324,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -334,10 +334,10 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 0,
         "done": 0,
-        "seen": 5408,
-        "observation": "abaa78978d40788ff974930f7f02f1cfb6383beab2765e002fc1f4528ef630de",
+        "seen": 5417,
+        "observation": "41ec78b14cab232f4eaf64183ece171602c3d91a30459ddd07d2537fde722c82",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -626,10 +626,10 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 1,
         "done": 0,
-        "seen": 5398,
-        "observation": "028122d3e4358eed72fcf66faa602f8148556c6348375292040fda16cf2b7c17",
+        "seen": 5414,
+        "observation": "6020a2156660664f93db78e7b42f0dabee3b0a5cbd9bd5c6c7bc1465402e7aed",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -66255,6 +66255,81 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": "p5415",
+      "eventSeq": 5415,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5322,
+      "eventSeq": 5416,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1198,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5323,
+      "eventSeq": 5417,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1198,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": "p5418",
+      "eventSeq": 5418,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5324,
+      "eventSeq": 5419,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -66342,10 +66417,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795675970.8694808,
+    "updated": 1795676011.1380181,
     "reason": ""
   },
-  "seconds": 71848.0504750891,
+  "seconds": 71849.72725584947,
   "council": {
     "food": 38,
     "water": 44,
@@ -66353,7 +66428,7 @@
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795675971.8943858,
+  "snapshotAt": 1795676012.219647,
   "recipes": {
     "茅舍": {
       "sites": [
