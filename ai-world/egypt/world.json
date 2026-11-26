@@ -1,6 +1,6 @@
 {
   "state": {
-    "day": 1070,
+    "day": 1071,
     "actors": [
       {
         "name": "梅莉",
@@ -11,7 +11,7 @@
           "water": 0,
           "reed": 2
         },
-        "energy": 0,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -27,7 +27,7 @@
           "water": 0,
           "food": 0
         },
-        "energy": 0,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -60,7 +60,7 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 1
+          "water": 0
         },
         "energy": 0,
         "research": 0,
@@ -94,7 +94,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [],
         "goal": ""
@@ -193,7 +193,7 @@
         "stage": 2,
         "work": 0,
         "complete": true,
-        "condition": 4
+        "condition": 3
       },
       "field/農田": {
         "kind": "農田",
@@ -230,8 +230,8 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 4638,
-    "deficits": 8866
+    "turn": 4641,
+    "deficits": 8877
   },
   "history": [
     {
@@ -51251,6 +51251,39 @@
       "kind": "",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 4639,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1070,
+      "say": "我先休息恢復體力，再採集食物補充存糧。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 4640,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1070,
+      "say": "我先休息恢復體力，再採集食物。",
+      "action": "rest",
+      "kind": "",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 4641,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1071,
+      "say": "我先採集河岸食物，補充聚落存糧。",
+      "action": "gather",
+      "kind": "",
+      "ok": false,
+      "message": "精力不足"
     }
   ],
   "needs": [
@@ -51338,18 +51371,18 @@
   ],
   "status": {
     "phase": "deciding",
-    "updated": 1795651869.225043,
+    "updated": 1795651916.0888698,
     "reason": ""
   },
-  "seconds": 64155.95350225485,
+  "seconds": 64203.15925721385,
   "council": {
     "food": 0,
-    "water": 1,
+    "water": 0,
     "shelter": true,
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795651870.1739461,
+  "snapshotAt": 1795651917.0063941,
   "recipes": {
     "茅舍": {
       "sites": [
