@@ -14,7 +14,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 3,
         "survey": [
           "terrace",
@@ -36,7 +36,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -58,7 +58,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -102,7 +102,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -123,7 +123,7 @@
           "reed": 0,
           "stone": 2
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -205,8 +205,8 @@
         "source": {},
         "stock": {
           "reed": 0,
-          "stone": 18,
-          "block": 0
+          "stone": 14,
+          "block": 2
         }
       },
       "quarry": {
@@ -224,8 +224,8 @@
         },
         "stock": {
           "water": 12,
-          "stone": 2,
-          "block": 0
+          "stone": 0,
+          "block": 1
         }
       }
     },
@@ -286,7 +286,7 @@
         "kind": "金字塔",
         "site": "desert",
         "stage": 4,
-        "work": 2,
+        "work": 3,
         "complete": false,
         "condition": 0
       }
@@ -380,7 +380,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6196,
+    "turn": 6201,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -469,7 +469,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6569,
         "observation": "a91f112ac3d07615f568c2db29bea2abde64ebd7fd0ea16bedc2a97d8d1dcf0c",
@@ -608,7 +608,7 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
+        "cursor": 5,
         "done": 0,
         "seen": 6561,
         "observation": "6fe112169f99f3f3fcb7787e4c0b7f8ef338a730dc52643265e9fea90ce90dbe",
@@ -763,7 +763,7 @@
           }
         ],
         "cursor": 4,
-        "done": 0,
+        "done": 1,
         "seen": 6563,
         "observation": "ae0aef4bb577e37c7dc8ac51960f583ec7a463574d17e03ee8c657f2199fe68d",
         "proposals": {
@@ -982,7 +982,7 @@
           }
         ],
         "cursor": 0,
-        "done": 1,
+        "done": 2,
         "seen": 6587,
         "observation": "2a1fbc797d0b96737de10b11313f43f36b8c87d5ed84683c554064aaa281c1a2",
         "proposals": {
@@ -83684,6 +83684,71 @@
       "site": "desert",
       "ok": true,
       "message": "外層修整，已結算一工次"
+    },
+    {
+      "id": 6197,
+      "eventSeq": 6595,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "build",
+      "kind": "金字塔",
+      "site": "desert",
+      "ok": true,
+      "message": "外層修整，已結算一工次"
+    },
+    {
+      "id": 6198,
+      "eventSeq": 6596,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6199,
+      "eventSeq": 6597,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1205,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": 6200,
+      "eventSeq": 6598,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
+    },
+    {
+      "id": 6201,
+      "eventSeq": 6599,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "shape",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "加工一份石塊"
     }
   ],
   "needs": [
@@ -84052,10 +84117,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795686605.811601,
+    "updated": 1795686643.025792,
     "reason": ""
   },
-  "seconds": 72290.09714831342,
+  "seconds": 72291.64691506338,
   "council": {
     "food": 50,
     "water": 35,
@@ -84063,7 +84128,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795686607.150468,
+  "snapshotAt": 1795686644.356389,
   "recipes": {
     "茅舍": {
       "sites": [
