@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5348,
+  "aiDecisions": 5349,
   "state": {
     "day": 1201,
     "actors": [
@@ -100,14 +100,14 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
           "desert",
           "quarry"
         ],
-        "goal": "勘查聚落周邊，了解可用地形"
+        "goal": "勘查河岸與氾濫平原，了解聚落周邊地形"
       }
     ],
     "sites": {
@@ -246,7 +246,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5705,
+    "turn": 5706,
     "deficits": 10212,
     "autonomy": {
       "0": {
@@ -572,12 +572,12 @@
         "blocked": ""
       },
       "5": {
-        "goal": "勘查聚落周邊，了解可用地形",
+        "goal": "勘查河岸與氾濫平原，了解聚落周邊地形",
         "restWhenTired": true,
         "steps": [
           {
             "type": "move",
-            "site": "desert",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -586,7 +586,7 @@
           },
           {
             "type": "survey",
-            "site": "desert",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -595,7 +595,7 @@
           },
           {
             "type": "move",
-            "site": "quarry",
+            "site": "bank",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -604,7 +604,7 @@
           },
           {
             "type": "survey",
-            "site": "quarry",
+            "site": "bank",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -613,7 +613,7 @@
           },
           {
             "type": "think",
-            "site": "quarry",
+            "site": "bank",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -621,10 +621,10 @@
             "until": "count"
           }
         ],
-        "cursor": 4,
+        "cursor": 0,
         "done": 0,
-        "seen": 5904,
-        "observation": "17eda0fe12c1820c38d894fda5d80507b0803ad8406be11504a3590039296af6",
+        "seen": 5943,
+        "observation": "f9842db4b9a074f61234fc85290cf14724f8d747016886145cc5feae53921dc3",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -73852,6 +73852,37 @@
       "site": "terrace",
       "ok": true,
       "message": "加工一份石塊"
+    },
+    {
+      "id": "p5944",
+      "eventSeq": 5944,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5706,
+      "eventSeq": 5945,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1201,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
     }
   ],
   "needs": [
@@ -73938,11 +73969,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795680588.9896598,
+    "phase": "deciding",
+    "updated": 1795680638.087811,
     "reason": ""
   },
-  "seconds": 72040.3666929019,
+  "seconds": 72041.74596672656,
   "council": {
     "food": 58,
     "water": 45,
@@ -73950,7 +73981,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795680595.709101,
+  "snapshotAt": 1795680641.73295,
   "recipes": {
     "茅舍": {
       "sites": [
