@@ -1,18 +1,18 @@
 {
-  "aiDecisions": 5117,
+  "aiDecisions": 5120,
   "state": {
     "day": 1196,
     "actors": [
       {
         "name": "梅莉",
         "age": 26,
-        "site": "bank",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 2
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -23,12 +23,12 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "water": 0,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -93,12 +93,12 @@
         "bag": {
           "food": 0,
           "water": 0,
-          "reed": 0
+          "reed": 6
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [],
-        "goal": ""
+        "goal": "為農田修復補充蘆葦"
       }
     ],
     "sites": {
@@ -114,7 +114,7 @@
         ],
         "source": {
           "water": 148,
-          "reed": 48,
+          "reed": 42,
           "food": 24
         },
         "stock": {
@@ -231,22 +231,13 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5117,
+    "turn": 5120,
     "deficits": 10183,
     "autonomy": {
       "0": {
         "goal": "修復農田，讓聚落能重新種植",
         "restWhenTired": true,
         "steps": [
-          {
-            "type": "rest",
-            "site": "bank",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
           {
             "type": "move",
             "site": "field",
@@ -286,8 +277,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5113,
-        "observation": "4d5278325c3ab78cf0f9c632900851c9b039f4894d54a69ea33d664cbacc3e7c",
+        "seen": 5126,
+        "observation": "482cdcf0a287b6c0649955cf35aca3c5f892fefb2db8e6f3744a29b9c19a1166",
         "proposals": {},
         "blocked": ""
       },
@@ -323,10 +314,10 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
-        "seen": 5116,
-        "observation": "fd1b6acc20f94bf5c327577ec67aeb36ea238304e97af889abe4fa1087420fa5",
+        "seen": 5128,
+        "observation": "02816db1c34b3bb78537b2d6a7a9acc3728d210d8349a7a82fd55f6fd3f72c83",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -546,6 +537,79 @@
         "done": 0,
         "seen": 5122,
         "observation": "3db2ffac81d54a28e707323fc522d067f6301671dafaf202f4334fa0b8a48d98",
+        "proposals": {
+          "terrace/茅舍": {
+            "id": "N1",
+            "record": 1,
+            "kind": "茅舍",
+            "site": "terrace",
+            "proposer": 0,
+            "approved": [
+              0,
+              1
+            ],
+            "purpose": "我想先在營地搭建茅舍，讓大家有地方遮風避日。"
+          },
+          "field/農田": {
+            "id": "N16",
+            "record": 16,
+            "kind": "農田",
+            "site": "field",
+            "proposer": 0,
+            "approved": [
+              0,
+              2
+            ],
+            "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
+          }
+        },
+        "blocked": ""
+      },
+      "5": {
+        "goal": "為農田修復補充蘆葦",
+        "restWhenTired": true,
+        "steps": [
+          {
+            "type": "gather",
+            "site": "bank",
+            "kind": "reed",
+            "material": "reed",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "move",
+            "site": "field",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "drop",
+            "site": "field",
+            "kind": "reed",
+            "material": "reed",
+            "amount": 6,
+            "repeat": 1,
+            "until": "count"
+          },
+          {
+            "type": "think",
+            "site": "field",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          }
+        ],
+        "cursor": 1,
+        "done": 0,
+        "seen": 5124,
+        "observation": "fe9a8d1e0b8848ec88f78836de454eec1e61cb070d63547498962127c1dec5f0",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -62050,6 +62114,84 @@
       "site": "bank",
       "ok": true,
       "message": "已移轉 6 water"
+    },
+    {
+      "id": "p5125",
+      "eventSeq": 5125,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1196,
+      "say": "我帶些蘆葦到農田，支援梅莉修復。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5118,
+      "eventSeq": 5126,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1196,
+      "say": "",
+      "action": "gather",
+      "kind": "reed",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 reed"
+    },
+    {
+      "id": "p5127",
+      "eventSeq": 5127,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1196,
+      "say": "謝謝大家幫忙，我現在去修復農田。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5119,
+      "eventSeq": 5128,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1196,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": "p5129",
+      "eventSeq": 5129,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1196,
+      "say": "大家分頭照顧農田和補充物資，我先去修復營地的茅舍。",
+      "action": "plan",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5120,
+      "eventSeq": 5130,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1196,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -62136,11 +62278,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795673292.952957,
+    "phase": "waiting",
+    "updated": 1795673343.713495,
     "reason": ""
   },
-  "seconds": 71737.20235412003,
+  "seconds": 71739.78295957836,
   "council": {
     "food": 0,
     "water": 12,
@@ -62148,7 +62290,7 @@
     "ready": false
   },
   "season": "乾季",
-  "snapshotAt": 1795673295.127564,
+  "snapshotAt": 1795673344.680866,
   "recipes": {
     "茅舍": {
       "sites": [
