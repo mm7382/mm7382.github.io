@@ -9,10 +9,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0
         },
-        "energy": 2,
+        "energy": 1,
         "research": 0,
         "survey": [
           "terrace",
@@ -25,11 +25,11 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 6,
           "food": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -43,11 +43,11 @@
         "age": 39,
         "site": "terrace",
         "bag": {
-          "food": 6,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -75,14 +75,14 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace"
@@ -118,7 +118,7 @@
           "terrace"
         ],
         "source": {
-          "water": 52,
+          "water": 40,
           "reed": 48,
           "food": 0
         },
@@ -158,7 +158,7 @@
         ],
         "source": {},
         "stock": {
-          "food": 49,
+          "food": 55,
           "water": 22,
           "reed": 9,
           "stone": 4,
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5613,
+    "turn": 5619,
     "deficits": 10207,
     "autonomy": {
       "0": {
@@ -295,7 +295,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5810,
         "observation": "9889828dd2546733bd512f5194fd932f67fdc72b59ce9887c834b0c95c5f9eb3",
@@ -352,7 +352,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5812,
         "observation": "17407e135ebf7001fc001f7268d891fbe8a6b153343124b424a959239bbde4e2",
@@ -434,7 +434,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5784,
         "observation": "405524148f9a5b0a6d8a32369e0c8253e6dfa8951be58ee0d3c0a1ed26de6ba7",
@@ -498,7 +498,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5805,
         "observation": "c41b9584bc7b53e09aaf4885e7ebd90bef8c3be890cb3e7a4887b387f2f12243",
@@ -589,7 +589,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5788,
         "observation": "1649328823490af6e0167c1746214ff74242486ab3edb2709a422cda7c3c5695",
@@ -653,7 +653,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5808,
         "observation": "daaf6706afc5845ac5f34a51c5ceb5a76be18787d8e62aa1f79999db7ab38141",
@@ -72040,6 +72040,84 @@
       "site": "terrace",
       "ok": true,
       "message": "已抵達河階營地"
+    },
+    {
+      "id": 5614,
+      "eventSeq": 5816,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1200,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5615,
+      "eventSeq": 5817,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1200,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5616,
+      "eventSeq": 5818,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1200,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5617,
+      "eventSeq": 5819,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1200,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5618,
+      "eventSeq": 5820,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1200,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5619,
+      "eventSeq": 5821,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1200,
+      "say": "",
+      "action": "drop",
+      "kind": "food",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 food"
     }
   ],
   "needs": [
@@ -72127,18 +72205,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795679363.81585,
+    "updated": 1795679405.7320828,
     "reason": ""
   },
-  "seconds": 71989.3465430566,
+  "seconds": 71991.0922554438,
   "council": {
     "food": 55,
-    "water": 37,
+    "water": 49,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795679364.913132,
+  "snapshotAt": 1795679406.87034,
   "recipes": {
     "茅舍": {
       "sites": [
