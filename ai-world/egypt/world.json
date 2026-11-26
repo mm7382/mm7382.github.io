@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5252,
+  "aiDecisions": 5253,
   "state": {
     "day": 1199,
     "actors": [
@@ -12,7 +12,7 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -29,7 +29,7 @@
           "food": 0,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -43,11 +43,11 @@
         "age": 39,
         "site": "field",
         "bag": {
-          "food": 0,
+          "food": 3,
           "water": 0,
           "reed": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 0,
         "survey": [
           "terrace",
@@ -139,8 +139,8 @@
         ],
         "source": {},
         "stock": {
-          "water": 18,
-          "food": 3,
+          "water": 16,
+          "food": 0,
           "reed": 7
         }
       },
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5466,
+    "turn": 5469,
     "deficits": 10200,
     "autonomy": {
       "0": {
@@ -277,7 +277,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5601,
         "observation": "00f73b9e732388d00bcc73c332002183f2571b4d5e487781ed111020e0cfa09b",
@@ -309,8 +309,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 5593,
-        "observation": "fda3068dda4f12518193f1172b0f8604fa1c2259b919590fea8aeb302ab469f4",
+        "seen": 5609,
+        "observation": "e053e391a122d02fdd1f62f34c0676d6e9c5554b5ceb107e1ae81bc3c71ba01f",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -425,7 +425,7 @@
             "until": "count"
           }
         ],
-        "cursor": 5,
+        "cursor": 6,
         "done": 0,
         "seen": 5556,
         "observation": "5af236c7e8b75b081ac0a05ebd78933dbe37ee5d6a90d90d0afd651b770cd488",
@@ -69058,6 +69058,63 @@
       "site": "field",
       "ok": true,
       "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5467,
+      "eventSeq": 5609,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1199,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": "p5610",
+      "eventSeq": 5610,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1199,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "field",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5468,
+      "eventSeq": 5611,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1199,
+      "say": "",
+      "action": "tend",
+      "kind": "農田",
+      "site": "field",
+      "ok": true,
+      "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5469,
+      "eventSeq": 5612,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1199,
+      "say": "",
+      "action": "take",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已移轉 3 food"
     }
   ],
   "needs": [
@@ -69144,19 +69201,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795677596.774823,
+    "phase": "deciding",
+    "updated": 1795677635.642844,
     "reason": ""
   },
-  "seconds": 71915.75879540527,
+  "seconds": 71917.05285332019,
   "council": {
     "food": 45,
-    "water": 42,
+    "water": 40,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795677597.84641,
+  "snapshotAt": 1795677636.773241,
   "recipes": {
     "茅舍": {
       "sites": [
