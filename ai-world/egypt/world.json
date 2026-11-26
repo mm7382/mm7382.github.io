@@ -13,7 +13,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 8,
         "research": 3,
         "survey": [
           "terrace",
@@ -24,14 +24,14 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "quarry",
+        "site": "terrace",
         "bag": {
           "water": 0,
           "food": 0,
           "reed": 0,
           "stone": 6
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -88,7 +88,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -108,7 +108,7 @@
           "reed": 0,
           "stone": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -250,7 +250,7 @@
         "kind": "獅身人面像",
         "site": "quarry",
         "stage": 1,
-        "work": 1,
+        "work": 2,
         "complete": false,
         "condition": 0
       }
@@ -332,7 +332,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5848,
+    "turn": 5852,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -512,7 +512,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 6138,
         "observation": "cd332cfe13d716cb24d3716518ba8f3bd8d465130c734be147ab6cf1962b2137",
@@ -868,7 +868,7 @@
           }
         ],
         "cursor": 0,
-        "done": 3,
+        "done": 4,
         "seen": 6132,
         "observation": "c33fea36482484bb3ab5033825473bf928fa40acac086c63fecb6bcdf5ef88b2",
         "proposals": {
@@ -77401,6 +77401,58 @@
       "site": "terrace",
       "ok": true,
       "message": "基礎，已結算一工次"
+    },
+    {
+      "id": 5849,
+      "eventSeq": 6158,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "獅身人面像",
+      "site": "quarry",
+      "ok": true,
+      "message": "圈定岩床，已結算一工次"
+    },
+    {
+      "id": 5850,
+      "eventSeq": 6159,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5851,
+      "eventSeq": 6160,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5852,
+      "eventSeq": 6161,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1203,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -77709,10 +77761,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795682825.662598,
+    "updated": 1795682860.316538,
     "reason": ""
   },
-  "seconds": 72132.68435999224,
+  "seconds": 72134.1276077179,
   "council": {
     "food": 53,
     "water": 20,
@@ -77720,7 +77772,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795682828.139043,
+  "snapshotAt": 1795682862.721283,
   "recipes": {
     "茅舍": {
       "sites": [
