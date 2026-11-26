@@ -28,12 +28,12 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 6,
           "food": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace",
@@ -90,11 +90,11 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0,
           "stone": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 3,
         "survey": [
           "terrace",
@@ -136,7 +136,7 @@
           "terrace"
         ],
         "source": {
-          "water": 69,
+          "water": 57,
           "reed": 45,
           "food": 12
         },
@@ -338,7 +338,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5965,
+    "turn": 5970,
     "deficits": 10226,
     "autonomy": {
       "0": {
@@ -509,7 +509,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6283,
         "observation": "2782ed7c0093fd81d6ce51e75b06b71f007601407e01c92a9893120e2e3ecd4d",
@@ -837,7 +837,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 6289,
         "observation": "67732a7e091deb81e321e53c875000a8f219f19d7d8b8340ecef669320c31410",
@@ -79495,6 +79495,71 @@
       "site": "bank",
       "ok": true,
       "message": "已移轉 6 water"
+    },
+    {
+      "id": 5966,
+      "eventSeq": 6310,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1204,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5967,
+      "eventSeq": 6311,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1204,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5968,
+      "eventSeq": 6312,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1204,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5969,
+      "eventSeq": 6313,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1204,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5970,
+      "eventSeq": 6314,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1204,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
     }
   ],
   "needs": [
@@ -79803,18 +79868,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795684263.296117,
+    "updated": 1795684299.643441,
     "reason": ""
   },
-  "seconds": 72192.54915257383,
+  "seconds": 72194.06287373528,
   "council": {
     "food": 51,
-    "water": 24,
+    "water": 36,
     "shelter": true,
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795684264.566187,
+  "snapshotAt": 1795684300.889428,
   "recipes": {
     "茅舍": {
       "sites": [
