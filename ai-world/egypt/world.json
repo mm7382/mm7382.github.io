@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5493,
+  "aiDecisions": 5495,
   "state": {
     "day": 1205,
     "actors": [
@@ -36,7 +36,7 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 0,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace",
@@ -44,7 +44,7 @@
           "bank",
           "quarry"
         ],
-        "goal": "加工石塊，支援沙漠台地金字塔。"
+        "goal": "勘查沙漠台地並協助建造金字塔。"
       },
       {
         "name": "納赫特",
@@ -54,10 +54,10 @@
           "food": 0,
           "water": 0,
           "reed": 0,
-          "stone": 6,
+          "stone": 0,
           "block": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -72,14 +72,14 @@
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "quarry",
+        "site": "desert",
         "bag": {
           "food": 0,
           "water": 0,
           "stone": 6,
           "reed": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
@@ -92,7 +92,7 @@
         "age": 34,
         "role": "石匠",
         "joinedDay": 72,
-        "site": "desert",
+        "site": "terrace",
         "bag": {
           "food": 0,
           "water": 0,
@@ -100,14 +100,14 @@
           "stone": 0,
           "block": 0
         },
-        "energy": 3,
+        "energy": 1,
         "research": 3,
         "survey": [
           "terrace",
           "quarry",
           "desert"
         ],
-        "goal": "將河階營地現有石塊運至沙漠台地金字塔工地"
+        "goal": "運送河階營地剩餘石塊至沙漠台地，支援金字塔施工"
       },
       {
         "name": "塞努",
@@ -203,7 +203,7 @@
         "source": {},
         "stock": {
           "reed": 0,
-          "stone": 0,
+          "stone": 6,
           "block": 14
         }
       },
@@ -378,7 +378,7 @@
         "purpose": "在沙漠台地探索興建另一座金字塔"
       }
     },
-    "turn": 6127,
+    "turn": 6131,
     "deficits": 10232,
     "autonomy": {
       "0": {
@@ -476,56 +476,11 @@
         "blocked": "材料或補給不足"
       },
       "1": {
-        "goal": "加工石塊，支援沙漠台地金字塔。",
+        "goal": "勘查沙漠台地並協助建造金字塔。",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "move",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "gather",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "drop",
-            "site": "quarry",
-            "kind": "",
-            "material": "stone",
-            "amount": 6,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "shape",
-            "site": "quarry",
-            "kind": "",
-            "material": "",
-            "amount": 1,
-            "repeat": 3,
-            "until": "count"
-          },
-          {
-            "type": "take",
-            "site": "quarry",
-            "kind": "",
-            "material": "block",
-            "amount": 3,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
-            "type": "move",
+            "type": "survey",
             "site": "desert",
             "kind": "",
             "material": "",
@@ -534,13 +489,13 @@
             "until": "count"
           },
           {
-            "type": "drop",
+            "type": "build",
             "site": "desert",
-            "kind": "",
-            "material": "block",
-            "amount": 3,
+            "kind": "金字塔",
+            "material": "",
+            "amount": 1,
             "repeat": 1,
-            "until": "count"
+            "until": "complete"
           },
           {
             "type": "think",
@@ -552,10 +507,10 @@
             "until": "count"
           }
         ],
-        "cursor": 7,
+        "cursor": 0,
         "done": 0,
-        "seen": 6432,
-        "observation": "ba30459eeffaef3df6f2515d4b0a724b1514527879a6470aa2cd61417ba86283",
+        "seen": 6510,
+        "observation": "2b6c16078939194845f5545d33569d5aaaf3edc46802c0702ff3ca694df0efdc",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -688,7 +643,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6496,
         "observation": "6595db341d974d7ff3286a0eaf5f174fe46209693abbdbe654d4216613dee6e0",
@@ -816,7 +771,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6498,
         "observation": "db775a4ee3b09069b9e5ef38070747fed8436128e8bb5dabeb148ee0fd4ee308",
@@ -912,15 +867,24 @@
         "blocked": ""
       },
       "4": {
-        "goal": "將河階營地現有石塊運至沙漠台地金字塔工地",
+        "goal": "運送河階營地剩餘石塊至沙漠台地，支援金字塔施工",
         "restWhenTired": true,
         "steps": [
+          {
+            "type": "move",
+            "site": "terrace",
+            "kind": "",
+            "material": "",
+            "amount": 1,
+            "repeat": 1,
+            "until": "count"
+          },
           {
             "type": "take",
             "site": "terrace",
             "kind": "",
             "material": "block",
-            "amount": 2,
+            "amount": 1,
             "repeat": 1,
             "until": "count"
           },
@@ -938,7 +902,7 @@
             "site": "desert",
             "kind": "",
             "material": "block",
-            "amount": 2,
+            "amount": 1,
             "repeat": 1,
             "until": "count"
           },
@@ -952,10 +916,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 1,
         "done": 0,
-        "seen": 6483,
-        "observation": "e3f51968448984952bee052afe5887abcf3b6ff96b9e12e53afd2b1cee4f1d02",
+        "seen": 6514,
+        "observation": "c2e265c97ab3f1d567736759e28e74d663b8fa4a57b97149cd27b8fefd964974",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -82443,6 +82407,94 @@
       "site": "desert",
       "ok": false,
       "message": "材料或補給不足"
+    },
+    {
+      "id": "p6511",
+      "eventSeq": 6511,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6128,
+      "eventSeq": 6512,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1205,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 6129,
+      "eventSeq": 6513,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1205,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已移轉 6 stone"
+    },
+    {
+      "id": 6130,
+      "eventSeq": 6514,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "desert",
+      "ok": true,
+      "message": "已抵達沙漠台地"
+    },
+    {
+      "id": "p6515",
+      "eventSeq": 6515,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "desert",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 6131,
+      "eventSeq": 6516,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1205,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
     }
   ],
   "needs": [
@@ -82810,11 +82862,11 @@
     }
   ],
   "status": {
-    "phase": "deciding",
-    "updated": 1795685926.630655,
+    "phase": "waiting",
+    "updated": 1795685969.5000691,
     "reason": ""
   },
-  "seconds": 72261.46682461366,
+  "seconds": 72263.59950677167,
   "council": {
     "food": 50,
     "water": 35,
@@ -82822,7 +82874,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795685927.9974248,
+  "snapshotAt": 1795685970.85059,
   "recipes": {
     "茅舍": {
       "sites": [
