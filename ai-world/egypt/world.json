@@ -6,13 +6,13 @@
       {
         "name": "梅莉",
         "age": 26,
-        "site": "field",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -23,12 +23,12 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "water": 0,
           "food": 4
         },
-        "energy": 2,
+        "energy": 0,
         "research": 0,
         "survey": [
           "terrace",
@@ -41,11 +41,11 @@
         "age": 39,
         "site": "terrace",
         "bag": {
-          "food": 6,
+          "food": 0,
           "water": 0,
           "reed": 0
         },
-        "energy": 8,
+        "energy": 7,
         "research": 0,
         "survey": [
           "terrace",
@@ -153,7 +153,7 @@
         ],
         "source": {},
         "stock": {
-          "food": 11,
+          "food": 17,
           "water": 5,
           "reed": 4,
           "stone": 3
@@ -236,7 +236,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5178,
+    "turn": 5181,
     "deficits": 10190,
     "autonomy": {
       "0": {
@@ -289,7 +289,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 5205,
         "observation": "e6822642039facbc9867f5d8d5382cffd73881c34566f70f25db36caa46dbbaa",
@@ -337,7 +337,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5207,
         "observation": "4e5301bc3b622d8085db1e782149d4c02ceb60c2b704c8ac6c45c808233d2774",
@@ -419,7 +419,7 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 4,
         "done": 0,
         "seen": 5186,
         "observation": "e2d7b83394305164de52f164088e2898b36db95ac8f0c9391da5fd217e1d93b0",
@@ -63391,6 +63391,45 @@
       "site": "field",
       "ok": true,
       "message": "已休息"
+    },
+    {
+      "id": 5179,
+      "eventSeq": 5215,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 5180,
+      "eventSeq": 5216,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5181,
+      "eventSeq": 5217,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1197,
+      "say": "",
+      "action": "drop",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已移轉 6 food"
     }
   ],
   "needs": [
@@ -63477,11 +63516,11 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795674263.8605509,
+    "phase": "deciding",
+    "updated": 1795674297.482002,
     "reason": ""
   },
-  "seconds": 71776.96679189077,
+  "seconds": 71777.95262193242,
   "council": {
     "food": 31,
     "water": 23,
@@ -63489,7 +63528,7 @@
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795674266.026954,
+  "snapshotAt": 1795674300.1150541,
   "recipes": {
     "茅舍": {
       "sites": [
