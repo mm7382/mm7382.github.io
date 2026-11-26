@@ -25,11 +25,11 @@
         "age": 31,
         "site": "bank",
         "bag": {
-          "water": 0,
+          "water": 6,
           "food": 0,
           "reed": 0
         },
-        "energy": 4,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -41,13 +41,13 @@
       {
         "name": "納赫特",
         "age": 39,
-        "site": "field",
+        "site": "terrace",
         "bag": {
           "food": 6,
           "water": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 3,
         "research": 0,
         "survey": [
           "terrace",
@@ -63,9 +63,9 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0
+          "water": 6
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": "補充農田的水，維持糧食供應"
@@ -118,7 +118,7 @@
           "terrace"
         ],
         "source": {
-          "water": 94,
+          "water": 82,
           "reed": 42,
           "food": 0
         },
@@ -242,7 +242,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5353,
+    "turn": 5356,
     "deficits": 10197,
     "autonomy": {
       "0": {
@@ -352,7 +352,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5442,
         "observation": "82d79f5894765a9090da5762cd9e0d300b6e26483bda2ff4252406cc465419b2",
@@ -425,7 +425,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5444,
         "observation": "9d25eae1d8466115643f145efaeca9a52e351699abfc8e56d9d99a4311566618",
@@ -507,7 +507,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5453,
         "observation": "8c201a73191d402f4a208c96eb4c29c494b9be89c0b5644861c09b21ae685d56",
@@ -66941,6 +66941,45 @@
       "site": "bank",
       "ok": true,
       "message": "已移轉 6 water"
+    },
+    {
+      "id": 5354,
+      "eventSeq": 5460,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1198,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
+    },
+    {
+      "id": 5355,
+      "eventSeq": 5461,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1198,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": 5356,
+      "eventSeq": 5462,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1198,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
     }
   ],
   "needs": [
@@ -67027,19 +67066,19 @@
     }
   ],
   "status": {
-    "phase": "waiting",
-    "updated": 1795676337.394192,
+    "phase": "deciding",
+    "updated": 1795676366.339895,
     "reason": ""
   },
-  "seconds": 71863.31396656824,
+  "seconds": 71864.17173690678,
   "council": {
     "food": 38,
-    "water": 40,
+    "water": 52,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795676338.471909,
+  "snapshotAt": 1795676367.4491751,
   "recipes": {
     "茅舍": {
       "sites": [
