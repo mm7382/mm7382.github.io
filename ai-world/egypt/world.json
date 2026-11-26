@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5439,
+  "aiDecisions": 5440,
   "state": {
     "day": 1203,
     "actors": [
@@ -9,11 +9,11 @@
         "site": "quarry",
         "bag": {
           "food": 0,
-          "water": 6,
+          "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 6,
+        "energy": 5,
         "research": 3,
         "survey": [
           "terrace",
@@ -71,7 +71,7 @@
           "stone": 0,
           "reed": 0
         },
-        "energy": 5,
+        "energy": 4,
         "research": 3,
         "survey": [
           "terrace"
@@ -96,21 +96,21 @@
           "terrace",
           "quarry"
         ],
-        "goal": "等待露頭補足粗雕所需的水，再與塞努推進獅身人面像"
+        "goal": "等待露頭的水足以開始粗雕，再推進獅身人面像"
       },
       {
         "name": "塞努",
         "age": 27,
         "role": "測量員",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "bank",
         "bag": {
           "food": 0,
           "water": 0,
           "reed": 0,
           "stone": 0
         },
-        "energy": 2,
+        "energy": 0,
         "research": 3,
         "survey": [
           "terrace",
@@ -206,7 +206,7 @@
           "stone": 132
         },
         "stock": {
-          "water": 2,
+          "water": 8,
           "stone": 4
         }
       }
@@ -244,7 +244,7 @@
         "kind": "神廟",
         "site": "terrace",
         "stage": 4,
-        "work": 2,
+        "work": 3,
         "complete": false,
         "condition": 0
       },
@@ -334,7 +334,7 @@
         "purpose": "與塞努在石灰岩露頭合作興建獅身人面像"
       }
     },
-    "turn": 5919,
+    "turn": 5923,
     "deficits": 10221,
     "autonomy": {
       "0": {
@@ -378,7 +378,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 6220,
         "observation": "edf9d12d5b72235a317fc25958e882ffe8ae183618edd9046f99e467c5e66e3a",
@@ -656,7 +656,7 @@
           }
         ],
         "cursor": 0,
-        "done": 4,
+        "done": 5,
         "seen": 6206,
         "observation": "239be322a5093120948929b3497be8b354bc5d4453042037e84eb4913a6ce4f4",
         "proposals": {
@@ -739,7 +739,7 @@
         "blocked": ""
       },
       "4": {
-        "goal": "等待露頭補足粗雕所需的水，再與塞努推進獅身人面像",
+        "goal": "等待露頭的水足以開始粗雕，再推進獅身人面像",
         "restWhenTired": true,
         "steps": [
           {
@@ -763,8 +763,8 @@
         ],
         "cursor": 1,
         "done": 0,
-        "seen": 6241,
-        "observation": "a82f1a83c56446da0c3088535eeba32dd7c0ea05c75c276c1b414f6b3e8ed55a",
+        "seen": 6249,
+        "observation": "95691b13909cf75350faf9050343958fa37b588e63781a1be0b257793f86f8a8",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -878,7 +878,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 6243,
         "observation": "d49d72d4364530301e9af7746ba63bfdeb0d3c8b31261da286a788fa20bbcfb5",
@@ -78596,6 +78596,76 @@
       "site": "terrace",
       "ok": true,
       "message": "刻飾，已結算一工次"
+    },
+    {
+      "id": 5920,
+      "eventSeq": 6249,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1203,
+      "say": "",
+      "action": "build",
+      "kind": "神廟",
+      "site": "terrace",
+      "ok": true,
+      "message": "刻飾，已結算一工次"
+    },
+    {
+      "id": "p6250",
+      "eventSeq": 6250,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "quarry",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5921,
+      "eventSeq": 6251,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1203,
+      "say": "",
+      "action": "wait",
+      "kind": "",
+      "site": "quarry",
+      "ok": true,
+      "message": "等候"
+    },
+    {
+      "id": 5922,
+      "eventSeq": 6252,
+      "name": "塞努",
+      "actor": 5,
+      "day": 1203,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已抵達蘆葦河岸"
+    },
+    {
+      "id": 5923,
+      "eventSeq": 6253,
+      "name": "梅莉",
+      "actor": 0,
+      "day": 1203,
+      "say": "",
+      "action": "drop",
+      "kind": "water",
+      "site": "quarry",
+      "ok": true,
+      "message": "已移轉 6 water"
     }
   ],
   "needs": [
@@ -78904,10 +78974,10 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795683672.753765,
+    "updated": 1795683719.1423109,
     "reason": ""
   },
-  "seconds": 72167.96152352357,
+  "seconds": 72169.89355645415,
   "council": {
     "food": 53,
     "water": 26,
@@ -78915,7 +78985,7 @@
     "ready": true
   },
   "season": "洪水",
-  "snapshotAt": 1795683674.012971,
+  "snapshotAt": 1795683720.940202,
   "recipes": {
     "茅舍": {
       "sites": [
