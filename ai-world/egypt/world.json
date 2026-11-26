@@ -1,5 +1,5 @@
 {
-  "aiDecisions": 5161,
+  "aiDecisions": 5162,
   "state": {
     "day": 1197,
     "actors": [
@@ -23,12 +23,12 @@
       {
         "name": "帕伊",
         "age": 31,
-        "site": "bank",
+        "site": "terrace",
         "bag": {
           "water": 6,
           "food": 0
         },
-        "energy": 4,
+        "energy": 2,
         "research": 0,
         "survey": [
           "terrace",
@@ -45,25 +45,25 @@
           "water": 0,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 9,
         "research": 0,
         "survey": [
           "terrace",
           "field"
         ],
-        "goal": "把農田儲存的食物運回河階營地"
+        "goal": "照料氾濫平原的農田，維持食物來源"
       },
       {
         "name": "蒂雅",
         "age": 29,
         "role": "耕作者",
         "joinedDay": 72,
-        "site": "terrace",
+        "site": "field",
         "bag": {
           "food": 0,
           "water": 0
         },
-        "energy": 8,
+        "energy": 6,
         "research": 0,
         "survey": [],
         "goal": "照料農田，協助維持聚落的食物來源"
@@ -76,10 +76,10 @@
         "site": "bank",
         "bag": {
           "food": 0,
-          "water": 0,
+          "water": 6,
           "reed": 0
         },
-        "energy": 1,
+        "energy": 0,
         "research": 0,
         "survey": [],
         "goal": "補充河階營地的水，然後再視情況決定下一步"
@@ -113,7 +113,7 @@
           "terrace"
         ],
         "source": {
-          "water": 130,
+          "water": 124,
           "reed": 45,
           "food": 0
         },
@@ -236,7 +236,7 @@
         "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。"
       }
     },
-    "turn": 5209,
+    "turn": 5213,
     "deficits": 10190,
     "autonomy": {
       "0": {
@@ -319,7 +319,7 @@
             "until": "count"
           }
         ],
-        "cursor": 2,
+        "cursor": 3,
         "done": 0,
         "seen": 5241,
         "observation": "031034e0d9f1312a46e7a76dd4374b5971c59c45f72381c12fa02b6150c84cf3",
@@ -352,21 +352,12 @@
         "blocked": ""
       },
       "2": {
-        "goal": "把農田儲存的食物運回河階營地",
+        "goal": "照料氾濫平原的農田，維持食物來源",
         "restWhenTired": true,
         "steps": [
           {
-            "type": "take",
-            "site": "field",
-            "kind": "",
-            "material": "food",
-            "amount": 4,
-            "repeat": 1,
-            "until": "count"
-          },
-          {
             "type": "move",
-            "site": "terrace",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -374,17 +365,17 @@
             "until": "count"
           },
           {
-            "type": "drop",
-            "site": "terrace",
+            "type": "tend",
+            "site": "field",
             "kind": "",
-            "material": "food",
-            "amount": 4,
+            "material": "",
+            "amount": 1,
             "repeat": 1,
             "until": "count"
           },
           {
             "type": "think",
-            "site": "terrace",
+            "site": "field",
             "kind": "",
             "material": "",
             "amount": 1,
@@ -392,10 +383,10 @@
             "until": "count"
           }
         ],
-        "cursor": 3,
+        "cursor": 0,
         "done": 0,
-        "seen": 5233,
-        "observation": "2d7b388b5353ea0564db3508cd260451f9714571019c8c245c6b69f651ffc4e5",
+        "seen": 5261,
+        "observation": "a0102f4dc6f069e683b20127e33d4766cd0ac5c0640ad83b311e972280b2365a",
         "proposals": {
           "terrace/茅舍": {
             "id": "N1",
@@ -456,7 +447,7 @@
             "until": "count"
           }
         ],
-        "cursor": 0,
+        "cursor": 1,
         "done": 0,
         "seen": 5252,
         "observation": "a5dd7912170800241aac47022b4f63cac08329c7384bb73fac3cc12c161764c0",
@@ -538,7 +529,7 @@
             "until": "count"
           }
         ],
-        "cursor": 1,
+        "cursor": 2,
         "done": 0,
         "seen": 5254,
         "observation": "47166df725c39141748084a176f985dd8a08331beff712ee360c25062b4e6e8f",
@@ -64010,6 +64001,76 @@
       "site": "field",
       "ok": true,
       "message": "已照料，可生產三日"
+    },
+    {
+      "id": 5210,
+      "eventSeq": 5261,
+      "name": "帕伊",
+      "actor": 1,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已抵達河階營地"
+    },
+    {
+      "id": "p5262",
+      "eventSeq": 5262,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1197,
+      "say": "",
+      "action": "plan",
+      "kind": "",
+      "site": "terrace",
+      "speech": {
+        "intent": "status",
+        "recipients": [],
+        "requiresResponse": false
+      },
+      "ok": true,
+      "message": "已決定計畫"
+    },
+    {
+      "id": 5211,
+      "eventSeq": 5263,
+      "name": "納赫特",
+      "actor": 2,
+      "day": 1197,
+      "say": "",
+      "action": "rest",
+      "kind": "",
+      "site": "terrace",
+      "ok": true,
+      "message": "已休息"
+    },
+    {
+      "id": 5212,
+      "eventSeq": 5264,
+      "name": "蒂雅",
+      "actor": 3,
+      "day": 1197,
+      "say": "",
+      "action": "move",
+      "kind": "",
+      "site": "field",
+      "ok": true,
+      "message": "已抵達氾濫平原"
+    },
+    {
+      "id": 5213,
+      "eventSeq": 5265,
+      "name": "胡伊",
+      "actor": 4,
+      "day": 1197,
+      "say": "",
+      "action": "gather",
+      "kind": "",
+      "site": "bank",
+      "ok": true,
+      "message": "已移轉 6 water"
     }
   ],
   "needs": [
@@ -64097,18 +64158,18 @@
   ],
   "status": {
     "phase": "waiting",
-    "updated": 1795674712.570691,
+    "updated": 1795674755.678674,
     "reason": ""
   },
-  "seconds": 71795.64908623455,
+  "seconds": 71797.44452922589,
   "council": {
     "food": 31,
-    "water": 29,
+    "water": 35,
     "shelter": true,
     "ready": true
   },
   "season": "乾季",
-  "snapshotAt": 1795674713.62253,
+  "snapshotAt": 1795674757.3409479,
   "recipes": {
     "茅舍": {
       "sites": [
