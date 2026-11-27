@@ -25,7 +25,7 @@ main {display: grid; grid-template-rows: minmax(0,1fr) auto;}
 .scene {position:relative; inset:auto;}
 .scene #lm-city {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:53% 52%;}
 body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) #lm-city,
-body[data-viewpoint="Michael"]:not(.moving) #motion {display:none;}
+body:is([data-viewpoint="Michael"],[data-viewpoint="Meet"]):not(.moving) #motion {display:none;}
 .scene #stop-frame {object-position:53% 52%;}
 .book-page {
   display: grid; grid-template-columns: minmax(14rem,1.1fr) minmax(15rem,1.45fr) auto;
@@ -102,11 +102,11 @@ header .more-site {position:relative;pointer-events:auto;align-self:flex-start;f
 .study-viewpoint {display:none;margin:.35em 0 0;font-size:14px;color:#655a49;}
 .study-viewpoint i {padding:0;margin:0;border:0;font-style:italic;}
 body[data-viewpoint="Lucy"] .study-viewpoint {display:block;}
-body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) :is(#project-status,.book-nav) {display:none;}
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"]) :is(#project-status,.book-nav) {display:none;}
 .scene #lucy-room {object-position:50% 54%;}
 #lucy-opening {margin:0;letter-spacing:.04em;line-height:1.75;font-size:clamp(16px,1.45vw,23px);}
 /* Keep the illustration and controls still as Lucy's paragraphs change length. */
-body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) #book-reading .reading-content {
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"]) #book-reading .reading-content {
   flex: none;
   block-size: clamp(3.5rem,19dvh,11rem);
   max-height: none;
@@ -114,7 +114,7 @@ body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) #book-reading .reading-c
   scrollbar-gutter: stable;
   scrollbar-color: var(--rule) transparent;
 }
-body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"]) #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
 #return-bridge {border-left:1px solid var(--rule);padding-inline:clamp(10px,1.6vw,24px) 0;white-space:nowrap;}
 #return-bridge span {margin-left:.65em;}
 /* A film window in the room, matching the homepage’s inline placement. */
@@ -265,10 +265,10 @@ body.switching #lucy-cut,body:has(dialog[open]) #lucy-cut {visibility:hidden;}
 .space-map-connection {color: #655a49; font-size: 1.4rem;}
 .space-map-later {margin-top: 1rem; border-top: 1px solid var(--rule); padding-top: .75rem;}
 .space-map-later h3 {margin: 0 0 .35rem; font: 600 .875rem/1.4 var(--serif);}
-.space-map-later ol {display: flex; flex-wrap: wrap; gap: 5px 8px; list-style: none; margin: 0; padding: 0;}
+.space-map-later :is(ol, ul) {display: flex; flex-wrap: wrap; gap: 5px 8px; list-style: none; margin: 0; padding: 0;}
 .space-map-later li {padding: .2rem .45rem; border: 1px dashed var(--rule); color: #655a49; font-size: .875rem;}
 .space-map-sequence li + li::before {content: "→" / ""; margin-right: .45em;}
-.space-map-other {margin: .5rem 0 0; color: #655a49; font-size: .8rem;}
+.space-map-later .space-map-unplaced-title {margin-top: .75rem;}
 #stop-space-map {grid-column: 1 / -1; justify-self: start; text-decoration: underline; text-underline-offset: .25em;}
 
 @media (max-width: 600px) {
@@ -338,3 +338,41 @@ body:has(#space-map[open], #viewpoint-dialog[open]) .book-page {visibility: visi
 @media (max-width:440px) {
   .space-map-open {grid-template-columns:repeat(2,minmax(0,1fr));}
 }
+
+
+#room-nav {justify-self:end; display:grid; gap:4px;}
+#room-nav[hidden], #next-art[hidden] {display:none;}
+#next-meeting, #next-art {text-decoration:underline;text-underline-offset:.25em;}
+#next-meeting {grid-column:1/-1;justify-self:start;}
+#meeting-opening {margin:0;line-height:1.75;}
+.space-map-open {grid-template-columns:repeat(2,minmax(0,1fr));}
+@media (max-width:900px) {
+  #room-nav {grid-column:2;grid-row:1;}
+}
+@media (max-height:520px) {
+  .book-page:has(.hud:not([hidden])) #room-nav {grid-column:3;}
+}
+
+
+.site-exit {
+  align-self: flex-start;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: flex-start;
+  background: #28221a80;
+  border-radius: 2px;
+  pointer-events: auto;
+}
+.site-exit > #home {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 9px;
+  color: #fff8eb;
+  font: 15px/1.5 var(--serif);
+  white-space: nowrap;
+  text-shadow: 0 1px 5px #000;
+}
+.site-exit > #home:hover {text-decoration: underline; text-underline-offset: .25em;}
+.site-exit .more-site summary {min-width: 44px; justify-content: center; background: transparent;}
+.site-exit .more-site summary::after {margin-left: 0;}
