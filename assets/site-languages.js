@@ -20,7 +20,7 @@ const skip=e=>!e||e.closest('script,style,textarea,[contenteditable],[data-langu
 function calendarText(s){const m=s.match(/^([〇零一二三四五六七八九0-9]+)年(閏?)([正冬臘腊一二三四五六七八九十0-9]+)月([初一二三四五六七八九十廿卅0-9]+)(日)?$/);if(!m)return s;const digits={'〇':0,'零':0,'一':1,'二':2,'三':3,'四':4,'五':5,'六':6,'七':7,'八':8,'九':9};const number=v=>{v=v.replace(/^初/,'');if(/^\d+$/.test(v))return Number(v);if(v==='正')return 1;if(v==='冬')return 11;if(v==='臘'||v==='腊')return 12;if(v.includes('十')){const a=v.split('十');return (a[0]?digits[a[0]]:1)*10+(a[1]?digits[a[1]]:0)}if(v[0]==='廿')return 20+(digits[v[1]]||0);if(v[0]==='卅')return 30+(digits[v[1]]||0);return digits[v]??v};return m[1].replace(/[〇零一二三四五六七八九]/g,c=>digits[c])+'-'+(m[2]?'leap ':'')+number(m[3])+'-'+number(m[4]);}
 function captureText(v){return pairs.get(normalize(v))?.en||domain.get(v)||(domainOnly?.test(v)?v.replace(domainRE,m=>domain.get(m)):calendarText(v));}
 function translated(original){
- const legacy=/Michael[ _-]+Agent[ _-]+Lab|Micro[ _-]+Agent[ _-]+Lab|未來實驗室|Future Lab/gi;
+ const legacy=/(?:Michael|Micro)[ _-]+(?:AI[ _-]+)?Agent[ _-]+Lab|未來實驗室|Future Lab/gi;
  let value=translatedRaw(original);
  if(value===original&&typeof original==='string'&&/未來實驗室|Future Lab/.test(original)){
   const previous=original.replace(/未來實驗室|Future Lab/g,'Michael Agent Lab');
