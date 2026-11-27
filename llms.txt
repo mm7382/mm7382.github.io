@@ -86,6 +86,7 @@
 - [紫微斗數十四主星對照表：每顆星的本質、讀法與落宮｜The fourteen major stars of Zi Wei Dou Shu: a reference table](https://mm7382.github.io/learn/ziwei-fourteen-major-stars.html)
 - [身強身弱怎麼看？日主強弱與喜用神入門｜Is my Day Master strong or weak? Day Master strength and the favourable element](https://mm7382.github.io/learn/day-master-strength.html)
 - [空亡是什麼意思？六十甲子的旬空與常見讀法｜What does kong wang (void emptiness) mean in a Bazi chart?](https://mm7382.github.io/learn/kong-wang.html)
+- [錯卦、綜卦、互卦是什麼？一個卦能推出的四種衍生卦｜What are the opposite, inverted and nuclear hexagrams?](https://mm7382.github.io/learn/derived-hexagrams.html): 四種衍生卦的求法：之卦只翻動爻（取決於這次擲出的數字）；錯卦（旁通卦）六爻陰陽全部互換；綜卦（反卦）整卦上下顛倒；互卦（互體、中爻）取二三四爻為下卦、三四五爻為上卦。乾、坤、坎、離、頤、大過、中孚、小過這八個卦的綜卦是自己，所以卦序改用錯卦配對。六十四卦的互卦只有十六種：乾、坤、剝、復、頤、大過、家人、睽、蹇、解、夬、姤、漸、歸妹、既濟、未濟，其中只有乾與坤的互卦是自己。泰與否、既濟與未濟這四個卦的錯卦與綜卦是同一個卦。教學文章，不是吉凶預測。
 - [逆行是什麼意思？水逆（水星逆行）到底在說什麼｜What does retrograde actually mean?](https://mm7382.github.io/learn/retrograde.html)
 - [廟旺利陷是什麼意思？紫微斗數的星曜亮度｜Star brightness in Zi Wei Dou Shu](https://mm7382.github.io/learn/star-brightness.html)
 - [星盤怎麼看：太陽、月亮、上升｜How to read a birth chart](https://mm7382.github.io/learn/sun-moon-rising.html)
@@ -389,6 +390,7 @@
 - [The fourteen major stars of Zi Wei Dou Shu: a reference table](https://mm7382.github.io/learn/en/ziwei-fourteen-major-stars.html)
 - [Is my Day Master strong or weak? Day Master strength and the favourable element](https://mm7382.github.io/learn/en/day-master-strength.html)
 - [What does kong wang (void emptiness) mean in a Bazi chart?](https://mm7382.github.io/learn/en/kong-wang.html)
+- [What are the opposite, inverted and nuclear hexagrams?](https://mm7382.github.io/learn/en/derived-hexagrams.html)
 - [What does the Qian hexagram mean? The first hexagram of the I Ching in plain words](https://mm7382.github.io/learn/en/qian-hexagram.html)
 - [What does the Kun hexagram mean? The second hexagram of the I Ching in plain words](https://mm7382.github.io/learn/en/kun-hexagram.html)
 - [What does the Tai hexagram mean? Hexagram 11 of the I Ching in plain words](https://mm7382.github.io/learn/en/tai-hexagram.html)
