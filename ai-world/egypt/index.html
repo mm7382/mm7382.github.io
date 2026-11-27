@@ -61,7 +61,7 @@ h2{font-family:Georgia,"Songti TC",serif}button:focus-visible,a:focus-visible,su
 
 <article><h2>生活與對話 <small>最新在上</small></h2><div id="latest" class="scroll"></div></article>
 <details><summary>回放與觀察工具</summary><div class="controls"><button id="prev">上一筆</button><button id="play">播放紀錄</button><button id="next">下一筆</button></div><div id="frame" aria-live="polite"></div></details>
-<article><h2>人物與世界圖鑑 <small id="population"></small></h2><p>點圖片可放大查看。人物位置和建築進度來自聚落存檔。</p><div class="gallery" id="people"></div><div class="gallery" id="buildings" style="margin-top:12px"></div><details><summary>建築提案</summary><p id="agenda"></p><div id="works"></div></details></article>
+<article><h2>人物與世界圖鑑 <small id="population"></small></h2><p>點圖片可放大查看。人物位置和建築進度來自聚落存檔。</p><div class="gallery" id="people"></div><p id="era"></p><div class="gallery" id="buildings" style="margin-top:12px"></div><details><summary>建築提案</summary><p id="agenda"></p><div id="works"></div></details></article>
 <article><h2>生活重點</h2><div id="milestones" class="scroll"></div></article>
 <article><h2>歷史訊息</h2><details><summary>篩選與搜尋</summary><div class="controls"><select id="actor" aria-label="篩選居民"></select><select id="outcome" aria-label="篩選結果"><option value="">全部結果</option><option value="true">成功</option><option value="false">失敗</option></select><input id="search" placeholder="搜尋原話或行動" aria-label="搜尋歷史"></div></details><small id="recordCount"></small><div class="scroll" id="history"></div></article>
 <article><h2>給古埃及的建議</h2><p>你希望尼羅河聚落如何發展？</p><p>留言板準備中，暫時尚未開放送出。</p><fieldset disabled><label>你的暱稱<input></label><label>留言內容<textarea></textarea></label><button>送出留言</button></fieldset></article></main>
@@ -84,9 +84,9 @@ let selectedSite='',residentPositions=new Map();
 let pausedAt=0, paused=false, replayIndex=-1, playing=false;
 const buildingArt={
  '茅舍':'assets/hut-reference.webp?v=fd6c9fe4fddd','農田':'assets/farm-reference.webp?v=c54b9e5fa5c5',
- '金字塔':'assets/pyramid.webp?v=56bef9b3dacf','神廟':'assets/temple.webp?v=74ab6acdf9fe','獅身人面像':'assets/sphinx.webp?v=bb4a2473da88',
- '磚造工廠':'assets/factory.webp','發電站':'assets/power-station.webp',
- '鐵路車站':'assets/railway.webp','現代醫院':'assets/hospital.webp'
+ '金字塔':'assets/pyramid.webp?v=ca4e981ad3d9','神廟':'assets/temple.webp?v=9950a1cb4c90','獅身人面像':'assets/sphinx.webp?v=43ea8564f2f8',
+ '磚造工廠':'assets/factory.webp?v=d5d8b37b17fc','發電站':'assets/power-station.webp?v=6c93f1407b0b',
+ '鐵路車站':'assets/railway.webp?v=2d849800d2e7','現代醫院':'assets/hospital.webp?v=fc474ed83cd4'
 };
 // Width and height bound every sprite to its own footprint on the riverbank.
 const buildingLots={
@@ -199,7 +199,9 @@ function render(){const s=data.state;el('population').textContent='聚落居民 
    place(sprite,[x,y]);
   }
   if(!b.complete||!file){
-   const label=node('span',b.complete?b.kind:b.kind+' · '+stage);
+   const work=b.complete?'':data.recipes[b.kind].stages[b.stage].name+' '+b.work+'/'+data.recipes[b.kind].stages[b.stage].work;
+   const label=node('span',b.complete?b.kind:b.kind+' · '+work);
+   label.title=stage;
    label.className='work';label.style.maxWidth=width+'%';
    place(label,[x,y]);
   }
