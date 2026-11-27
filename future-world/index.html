@@ -43,8 +43,12 @@ body.door-scene .scene :is(.bridge-inline,#invitation,#show-invitation),body.doo
 body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]):not(.moving) .story-pov{display:grid;grid-template-columns:auto minmax(180px,310px) 1fr;align-items:center;gap:clamp(.55rem,1.7vw,1.15rem);padding:8px max(4%,env(safe-area-inset-left));color:#41392e;background:#e6dfd2;border-bottom:1px solid #c9beab}
 .story-pov-label{font:500 .78rem/1.35 system-ui,sans-serif;letter-spacing:.08em;white-space:nowrap}
 .story-pov-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;padding:3px;background:#d5caba;border-radius:6px}
-.story-pov-options button{min-height:44px;display:flex;flex-wrap:wrap;align-items:baseline;place-content:center;gap:2px .42rem;border:0;background:transparent;color:#413a2e;border-radius:4px;font:500 .85rem system-ui,sans-serif;cursor:pointer}
+.story-pov-options button{min-height:44px;display:grid;place-content:center;justify-items:center;gap:2px;border:0;background:transparent;color:#413a2e;border-radius:4px;font:500 .85rem system-ui,sans-serif;cursor:pointer}
 .story-pov-options button span{font-size:.74rem;white-space:nowrap}
+.story-pov-options #choose-michael span{color:#284e6b}
+.story-pov-options #choose-lucy span{color:#713e28}
+.story-pov-options #choose-michael[aria-pressed="true"] span{color:#c4def2}
+.story-pov-options #choose-lucy[aria-pressed="true"] span{color:#ffd3ad}
 .story-pov-options button[aria-pressed="true"]{background:#414b41;color:#fffaf0}
 .story-pov-options button:focus-visible{outline:2px solid #705826;outline-offset:2px}
 .story-pov-note{margin:0;color:#5f5544;font-size:.76rem}
