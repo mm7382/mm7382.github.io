@@ -89,6 +89,21 @@ function structures(snapshot){
    if(full){const cell={shelter:0,well:1,garden:2}[s.kind],size={shelter:110,well:48,garden:92}[s.kind];
     group.innerHTML='<svg x="'+(-size/2)+'" y="'+(-size*.83)+'" width="'+size+'" height="'+size+'" overflow="hidden" viewBox="'+(cell*724)+' 0 724 724"><image href="./assets/buildings.png" width="2172" height="724"/></svg>';
    }
+  }else if(['waterworks','granary','workshop','market','power_grid','urban_district'].includes(s.kind)){
+   const cityKinds=['waterworks','granary','workshop','market','power_grid','urban_district'];
+   const offsets=[[-80,52],[38,80],[137,52],[106,102],[171,5],[205,100]];
+   const [dx,dy]=offsets[cityKinds.indexOf(s.kind)];
+   group.setAttribute('transform','translate('+(x+dx)+','+(y+dy)+')');
+   const base='<path d="M-29 0 1-14 29-1 0 14Z" fill="#9b8970" stroke="#4b4437"/>';
+   const art={
+    waterworks:'<path d="M-23 0v-12l23-10 23 10V0L0 10Z" fill="#c6b395" stroke="#72604b"/><path d="m-12-11 12-5 13 6L0-4Z" fill="#47968c"/>',
+    granary:'<path d="M-16 2v-17L0-23l16 8V2L0 10Z" fill="#d0aa76" stroke="#6d563c"/><path d="m-20-14 20-14 20 14-20 8Z" fill="#84603e"/>',
+    workshop:'<path d="M-20 0v-14l24-11 17 9V1L4 10Z" fill="#bc9a71" stroke="#645548"/><path d="m-21-13 25-16 18 12L0-7Z" fill="#8d5340"/><path d="M13-20v-14l6-2v14Z" fill="#635347"/>',
+    market:'<path d="M-22-10 0-22l22 12L0 1Z" fill="#e2b072" stroke="#875742"/><path d="M-22-10V0M22-10V0M0 1v9M-11-16 11-4M0-22l22 12" stroke="#875742" stroke-width="2"/>',
+    power_grid:'<path d="M-23 0v-20l18-8 21 8V0L-4 10Z" fill="#77939c" stroke="#39494d"/><path d="M17 4l8-41 8 36M19-14h12M21-24h8" stroke="#dcd4ac" fill="none" stroke-width="2"/>',
+    urban_district:'<path d="M-23 1v-33l12-6 13 6V1l-13 6Z M4 4v-25l12-7 12 7V4l-12 7Z" fill="#b9cad4" stroke="#425c6d"/><path d="M-17-25v24m8-28v24m20-14V2m8-17V-2" stroke="#538b9e" stroke-width="2"/>'
+   };
+   group.innerHTML=base+(full?art[s.kind]:'<path d="M-15-5v-14h3V-5m18-7v-14h3v14M-14-14l23-11" stroke="#d5ac68" stroke-width="3"/>');
   }else if(s.kind==='breakwater'){
    const rubble=Array.from({length:Math.ceil(28*ratio)},(_,j)=>{const x=j*2.9-27,y=j*.65+7+Math.sin(j*2.5)*4;return `<path d="m${x.toFixed(1)} ${y.toFixed(1)}q8-6 13-1l3 5-12 4-7-4z" fill="${['#b6a386','#978c72','#847965'][j%3]}" stroke="#645b50" stroke-width=".6"/>`;}).join('');
    group.innerHTML=`<ellipse cx="0" cy="21" rx="${50*ratio}" ry="12" fill="#245b63" opacity=".45"/>${rubble}`;
@@ -98,7 +113,7 @@ function structures(snapshot){
     <path d="M-9 0v${end+4}m18-${end+4}v${end+4}" stroke="#735336" stroke-width="2"/>
     <path d="M-11 0H11V${end}H-11Z" fill="url(#plank)" stroke="#654833"/>${boards}<path d="M-12 ${end}h24v4h-24z" fill="#714d35"/>`;
   }
-  const t=as('title');t.textContent=`${({landing:'簡易碼頭',pier:'棧橋',breakwater:'防波堤'})[s.kind]||s.kind||'工程'}：${full?'完工':'施工中'}`;group.append(t);return group;
+  const t=as('title');t.textContent=`${({landing:'簡易碼頭',pier:'棧橋',breakwater:'防波堤',waterworks:'公共水道',granary:'公共糧站',workshop:'工坊',market:'市場與鋪石街',power_grid:'發電站與電網',urban_district:'現代城市街區'})[s.kind]||s.kind||'工程'}：${full?'完工':'施工中'}`;group.append(t);return group;
  }));
 }
 // Cargo counts come only from recorded snapshots. Interpolation is visual only.

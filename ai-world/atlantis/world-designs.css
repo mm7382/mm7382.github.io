@@ -182,3 +182,29 @@ html[data-design="golden"] .wave-stage .layout>.world {
 #visitor-comments .owner-reply { background:#f3e5c7; color:#1a3045; border-color:#a77b3a; }
 #visitor-comments button { background:#173651; color:#fff6e3; }
 #visitor-comments button:disabled { opacity:1; background:#e4d6bc; color:#504535; }
+
+/* Keep enough of the landmark photo visible to recognize it at a glance. */
+.territory-cards {
+ grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));
+ gap:9px;
+}
+.territory-place {
+ grid-template-columns:94px minmax(0,1fr);
+ gap:8px; padding:6px;
+}
+.territory-place .territory-use { font-size:.69rem; }
+.territory-meta { font-size:.66rem; }
+@media(max-width:500px) {
+ .territory-cards { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .territory-place { grid-template-columns:minmax(0,1fr); }
+ .territory-thumbnail { aspect-ratio:4/3; }
+}
+.city-projects.territory-panel { background:#f4e3bd; color:#23394b; }
+.city-projects ul {
+ list-style:none; margin:0; padding:0; display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(min(147px,100%),1fr)); gap:7px;
+}
+.city-projects li { display:grid; gap:3px; padding:8px; background:#fff4dc; border:1px solid #c3a46c; }
+.city-projects li span { font-size:.76rem; color:#684b27; }
+.city-projects li span[data-complete="true"] { color:#22584a; font-weight:bold; }
+.city-projects li small { font-size:.69rem; }
