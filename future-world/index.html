@@ -29,6 +29,14 @@ body[data-viewpoint="Gravity"] .scene {background:#171713;}
 #next-gravity {text-decoration:underline;text-underline-offset:.25em;}
 body[data-viewpoint="Gravity"] #book-reading .reading-content {flex:none;block-size:clamp(3.5rem,19dvh,11rem);max-height:none;overflow-y:auto;scrollbar-gutter:stable;}
 body[data-viewpoint="Gravity"] #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
+
+.study-door-entry{display:grid;justify-items:start;min-width:0;max-width:100%;gap:.2rem}
+#study-door{margin:0;width:clamp(176px,18vw,264px);max-width:100%;scroll-margin-block:1rem;color:#453d31}
+#study-door-video{box-sizing:border-box;display:block;width:100%;aspect-ratio:16/9;background:#111713;border:1px solid #846c46;border-radius:5px}
+#study-door figcaption{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0 .5rem;padding:0 .25rem;font:500 .875rem/1.45 system-ui,sans-serif}
+#study-door-sound{min-height:44px;font:inherit}
+#study-door-error{margin:0;font-size:.8rem}
+@media(max-width:600px){.book-nav .study-door-entry{flex:0 1 100%}#study-door{width:min(100%,320px)}}
 </style></head>
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
 <button type="button" id="open-space-map" aria-haspopup="dialog" aria-controls="space-map">空間地圖</button>
@@ -58,7 +66,14 @@ body[data-viewpoint="Gravity"] #book-reading .hud-reopen {margin-top:.25rem;widt
 <nav class="book-nav" aria-label="故事導覽">
 <button id="start-forward">沿空橋前進 <span aria-hidden="true">→</span><small>抵達停點後，繼續讀 Michael 的故事</small></button>
 <button id="open-viewpoint" aria-haspopup="dialog" aria-controls="viewpoint-dialog">切換視角</button>
+<div class="study-door-entry">
+<figure id="study-door" aria-labelledby="study-door-title">
+<video id="study-door-video" width="1280" height="720" controls controlslist="nodownload" muted playsinline preload="metadata" aria-labelledby="study-door-title" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/future-world-study-door.mp4"></video>
+<figcaption><span id="study-door-title">書房門還開著</span><button type="button" id="study-door-sound" aria-pressed="false" aria-controls="study-door-video">♪ 開啟聲音</button></figcaption>
+<p id="study-door-error" role="status" hidden>影片暫時無法載入，請重新整理後再試。</p>
+</figure>
 <button id="visit-lucy">前往 Lucy 的書房</button>
+</div>
 <button id="next-meeting">下一幕 · 兩人相遇 →</button>
 <button id="stop-space-map" aria-haspopup="dialog" aria-controls="space-map" hidden>查看後續空間</button>
 </nav>
@@ -431,4 +446,59 @@ $('garden-perspective').onclick=()=>{
 
 
 })();
-</script></body></html>
+</script><script>
+(() => {
+  const video = document.getElementById('study-door-video');
+  const sound = document.getElementById('study-door-sound');
+  const other = document.getElementById('bridge-video');
+  const error = document.getElementById('study-door-error');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let manual = false, visible = false;
+  const sync = () => {
+    const audible = !video.muted && video.volume > 0;
+    sound.textContent = audible ? '關閉聲音' : '♪ 開啟聲音';
+    sound.setAttribute('aria-pressed', String(audible));
+  };
+  const play = () => video.play().catch(() => {});
+  const canAutoPlay = () => visible && !manual && !document.hidden &&
+    !reduced.matches && document.body.dataset.viewpoint === 'Michael' &&
+    !document.body.classList.contains('moving') && !document.body.classList.contains('switching') &&
+    video.muted && video.paused && !video.ended;
+  sound.addEventListener('click', () => {
+    manual = true;
+    video.muted = !video.muted;
+    if (!video.muted) {
+      if (!video.volume) video.volume = 1;
+      if (video.ended) video.currentTime = 0;
+      play();
+    }
+    sync();
+  });
+  for (const event of ['pointerdown','keydown']) {
+    video.addEventListener(event, () => { manual = true; }, {passive:true});
+  }
+  video.addEventListener('play', () => other.pause());
+  other.addEventListener('play', () => { if (!video.paused) video.pause(); });
+  video.addEventListener('playing', () => { error.hidden = true; });
+  video.addEventListener('volumechange', sync);
+  video.addEventListener('error', () => { error.hidden = false; });
+  if (video.error) error.hidden = false;
+  const suspend = () => { video.pause(); video.muted = true; };
+  document.addEventListener('study-view-changing', suspend);
+  document.addEventListener('bridge-moving', suspend);
+  document.addEventListener('story-view-ready', () => { if (canAutoPlay()) play(); });
+  document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); else if (canAutoPlay()) play(); });
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(([entry]) => {
+      visible = entry.isIntersecting && entry.intersectionRatio >= .45;
+      if (!visible) video.pause();
+      else if (canAutoPlay()) play();
+    }, {threshold:.45}).observe(video);
+  } else {
+    const rect = video.getBoundingClientRect();
+    visible = rect.width > 0 && rect.height > 0 && rect.top < innerHeight && rect.bottom > 0;
+    if (canAutoPlay()) play();
+  }
+})();
+</script>
+</body></html>
