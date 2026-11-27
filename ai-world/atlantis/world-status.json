@@ -1,1 +1,1 @@
-{"running":true,"phase":"publishing","updatedAt":"2026-11-26T06:19:28.640Z","error":null,"policy":"持續觀察；補給不足持續記錄，不自動結束。每批3次決策後休息60秒。","pid":87995}
+{"running":true,"phase":"publishing","updatedAt":"2026-11-27T07:00:03.672Z","error":null,"policy":"持續觀察；補給不足持續記錄，不自動結束。每批最多12步行動，按已定計畫優先續工；只有需要規劃時才連線。","pid":1532}
