@@ -85821,7 +85821,7 @@
       ],
       "purpose": "我想先在營地搭建茅舍，讓大家有地方遮風避日。",
       "source": "data/records/000000001.json",
-      "version": "nile-v4",
+      "version": "nile-v5",
       "cost": {
         "sites": [
           "terrace",
@@ -85864,7 +85864,7 @@
       ],
       "purpose": "這片平原適合開闢農田，我提議大家一起種植，讓聚落有穩定的食物來源。",
       "source": "data/records/000000016.json",
-      "version": "nile-v4",
+      "version": "nile-v5",
       "cost": {
         "sites": [
           "field"
@@ -85903,7 +85903,7 @@
       ],
       "purpose": "探索興建工坊的合作可能，讓石材加工有合適的場所",
       "source": "data/records/plan-000005965.json",
-      "version": "nile-v4",
+      "version": "nile-v5",
       "cost": {
         "sites": [
           "terrace",
@@ -85948,7 +85948,7 @@
       ],
       "purpose": "在河階營地提議興建金字塔，並準備所需原石",
       "source": "data/records/plan-000005995.json",
-      "version": "nile-v4",
+      "version": "nile-v5",
       "cost": {
         "sites": [
           "terrace",
@@ -86008,7 +86008,7 @@
       ],
       "purpose": "與帕伊合作在河階營地興建神廟",
       "source": "data/records/plan-000006117.json",
-      "version": "nile-v4",
+      "version": "nile-v5",
       "cost": {
         "sites": [
           "terrace",
@@ -86067,7 +86067,7 @@
       ],
       "purpose": "與塞努在石灰岩露頭合作興建獅身人面像",
       "source": "data/records/plan-000006121.json",
-      "version": "nile-v4",
+      "version": "nile-v5",
       "cost": {
         "sites": [
           "quarry"
@@ -86123,7 +86123,7 @@
       ],
       "purpose": "在沙漠台地探索興建另一座金字塔",
       "source": "data/records/plan-000006382.json",
-      "version": "nile-v4",
+      "version": "nile-v5",
       "cost": {
         "sites": [
           "terrace",
@@ -86183,7 +86183,7 @@
       ],
       "purpose": "改在沙漠台地提議興建神廟，邀請同伴合作。",
       "source": "data/records/plan-000006604.json",
-      "version": "nile-v4",
+      "version": "nile-v5",
       "cost": {
         "sites": [
           "terrace",
@@ -86243,8 +86243,15 @@
     "shelter": true,
     "ready": true
   },
+  "development": {
+    "era": "工業時代",
+    "available": [
+      "磚造工廠"
+    ],
+    "completed": []
+  },
   "season": "洪水",
-  "snapshotAt": 1795688100.983205,
+  "snapshotAt": 1795745804.863528,
   "recipes": {
     "茅舍": {
       "sites": [
@@ -86560,6 +86567,96 @@
             "water": 2
           },
           "work": 6
+        }
+      ]
+    },
+    "磚造工廠": {
+      "sites": [
+        "desert"
+      ],
+      "research": 3,
+      "stages": [
+        {
+          "name": "廠房基礎",
+          "cost": {
+            "stone": 6
+          },
+          "work": 6
+        },
+        {
+          "name": "廠房與煙囪",
+          "cost": {
+            "block": 6,
+            "reed": 2
+          },
+          "work": 9
+        }
+      ]
+    },
+    "發電站": {
+      "sites": [
+        "desert"
+      ],
+      "research": 3,
+      "stages": [
+        {
+          "name": "機組基座",
+          "cost": {
+            "stone": 6
+          },
+          "work": 6
+        },
+        {
+          "name": "機組與配電設施",
+          "cost": {
+            "block": 8
+          },
+          "work": 9
+        }
+      ]
+    },
+    "鐵路車站": {
+      "sites": [
+        "terrace"
+      ],
+      "research": 3,
+      "stages": [
+        {
+          "name": "路基與月台",
+          "cost": {
+            "stone": 6
+          },
+          "work": 6
+        },
+        {
+          "name": "軌道與站房",
+          "cost": {
+            "block": 8
+          },
+          "work": 9
+        }
+      ]
+    },
+    "現代醫院": {
+      "sites": [
+        "terrace"
+      ],
+      "research": 3,
+      "stages": [
+        {
+          "name": "地基與病房",
+          "cost": {
+            "stone": 6
+          },
+          "work": 6
+        },
+        {
+          "name": "門診與設備",
+          "cost": {
+            "block": 8,
+            "water": 3
+          },
+          "work": 9
         }
       ]
     }
