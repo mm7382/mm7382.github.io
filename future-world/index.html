@@ -11,7 +11,7 @@
   bottom:clamp(12px,2.7vh,28px);width:clamp(220px,30vw,410px);
   max-width:calc(100% - 32px);
 }
-body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"]) .bridge-inline {display:none;}
+body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Workshop"]) .bridge-inline {display:none;}
 .bridge-video-box {padding:8px;background:#101722e8;border:1px solid #846c46;}
 .scene #bridge-video {
   position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;
@@ -19,11 +19,11 @@ body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"]) .brid
   max-height:40dvh;
 }
 #bridge-video-error {margin:4px;color:#fff5df;}
-</style><link rel="stylesheet" href="/assets/lab-world-nav.css?v=20261125"><link rel="stylesheet" href="book-page.css?v=20261127-site-exit"></head>
+</style><link rel="stylesheet" href="/assets/lab-world-nav.css?v=20261125"><link rel="stylesheet" href="book-page.css?v=20261127-workshop"></head>
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
 <button type="button" id="open-space-map" aria-haspopup="dialog" aria-controls="space-map">空間地圖</button>
 </nav><div class="site-exit"><a id="home" href="https://mm7382.github.io/pec-ai-agent-training/index.html?lang=zh-Hant">回首頁</a><details class="more-site"><summary aria-label="其他網站分頁"></summary><nav class="lab-world-nav" aria-label="主要分頁"><a href="/pec-ai-agent-training/index.html?lang=zh-Hant">首頁</a><a href="/pec-ai-agent-training/worlds.html?lang=zh-Hant">AI 世界</a><a href="/pec-ai-agent-training/works.html?lang=zh-Hant">作品</a><a href="/pec-ai-agent-training/learning.html?lang=zh-Hant">學習資源</a><a href="/pec-ai-agent-training/journal.html?lang=zh-Hant">學習日誌</a><a href="/pec-ai-agent-training/about.html?lang=zh-Hant">關於本站</a><a href="/pec-ai-agent-training/services.html?lang=zh-Hant">合作服務</a></nav></details></div></header>
-<main><div class="scene" id="scene"><img id="lm-city" src="lm-city.webp" width="1536" height="736" fetchpriority="high" alt="從玻璃空橋望向 LM 城市，層層露台與細長塔樓由高架橋相連"><video id="motion" width="2560" height="1440" playsinline muted preload="auto" poster="start.webp" aria-label="沿著玻璃空橋緩緩前進"><source src="forward-2m.mp4" type="video/mp4"></video><img id="stop-frame" src="lm-city.webp" alt="停在空橋上，望向 LM 的層疊城市" hidden decoding="async"><img id="lucy-room" src="lucy-study.webp" width="1536" height="768" alt="從 Lucy 的畫桌望出去，濕墨映著窗光，空椅後方是 LM 的城市" hidden decoding="async"><section class="entry" hidden id="entry" aria-labelledby="entry-title"><p class="eyebrow">01 / 空橋</p><h1 id="entry-title">她沒有催他。</h1><p>他可以再看一會兒。</p><button class="primary" id="enter">收起文字，往前 <span>→</span></button></section><section id="invitation" class="hud" hidden aria-label="非語言邀請"><p id="reading-viewpoint" class="eyebrow">感知 / Michael 視角</p><p id="reading-count" class="reading-count">1 / 8 · 依你的步調閱讀</p><div id="reading-content" class="reading-content" role="region" aria-label="閱讀正文與補敘" tabindex="0"><p id="reading-text" tabindex="-1"></p><p id="reading-detail" hidden></p></div><nav class="reading-nav" aria-label="閱讀段落"><button id="reading-prev" disabled>上一段</button><button id="reading-detail-toggle" aria-expanded="false">再讀一點</button><button id="reading-next">下一段 →</button></nav><div class="reading-actions"><button id="hide-invitation">收起文字</button><button id="reading-forward">重播這段 →</button></div></section><button id="show-invitation" class="hud-reopen" hidden>感知</button><button id="lucy-next" class="lucy-next" disabled hidden>後續移動 · Coming soon</button><img id="art-scene" src="art-room.webp" width="1672" height="941" hidden alt="藝術房間的進門視角：左牆投影出 LM 城市，後牆顯示地球與帶環星球，中央是 Lucy 的全息影像，右側是史坦威大鋼琴。"><section class="bridge-inline" aria-label="空橋影片">
+<main><div class="scene" id="scene"><img id="lm-city" src="lm-city.webp" width="1536" height="736" fetchpriority="high" alt="從玻璃空橋望向 LM 城市，層層露台與細長塔樓由高架橋相連"><video id="motion" width="2560" height="1440" playsinline muted preload="auto" poster="start.webp" aria-label="沿著玻璃空橋緩緩前進"><source src="forward-2m.mp4" type="video/mp4"></video><img id="stop-frame" src="lm-city.webp" alt="停在空橋上，望向 LM 的層疊城市" hidden decoding="async"><img id="lucy-room" src="lucy-study.webp" width="1536" height="768" alt="從 Lucy 的畫桌望出去，濕墨映著窗光，空椅後方是 LM 的城市" hidden decoding="async"><section class="entry" hidden id="entry" aria-labelledby="entry-title"><p class="eyebrow">01 / 空橋</p><h1 id="entry-title">她沒有催他。</h1><p>他可以再看一會兒。</p><button class="primary" id="enter">收起文字，往前 <span>→</span></button></section><section id="invitation" class="hud" hidden aria-label="非語言邀請"><p id="reading-viewpoint" class="eyebrow">感知 / Michael 視角</p><p id="reading-count" class="reading-count">1 / 8 · 依你的步調閱讀</p><div id="reading-content" class="reading-content" role="region" aria-label="閱讀正文與補敘" tabindex="0"><p id="reading-text" tabindex="-1"></p><p id="reading-detail" hidden></p></div><nav class="reading-nav" aria-label="閱讀段落"><button id="reading-prev" disabled>上一段</button><button id="reading-detail-toggle" aria-expanded="false">再讀一點</button><button id="reading-next">下一段 →</button></nav><div class="reading-actions"><button id="hide-invitation">收起文字</button><button id="reading-forward">重播這段 →</button></div></section><button id="show-invitation" class="hud-reopen" hidden>感知</button><button id="lucy-next" class="lucy-next" disabled hidden>後續移動 · Coming soon</button><img id="art-scene" src="art-room.webp" width="1672" height="941" hidden alt="藝術房間的進門視角：左牆投影出 LM 城市，後牆顯示地球與帶環星球，中央是 Lucy 的全息影像，右側是史坦威大鋼琴。"><img id="workshop-scene" src="workshop.webp" width="1672" height="941" hidden alt="無柱工作室裡，人形機器人在金色拱頂下操作機台，右前方的機械心臟發出紅光。"><section class="bridge-inline" aria-label="空橋影片">
 <div class="bridge-video-box">
   <video id="bridge-video" controls controlslist="nodownload" muted playsinline preload="metadata" aria-label="她也停了下來" src="bridge-lucy-stops.mp4"></video>
   <div class="study-caption"><span id="bridge-film-title">她也停了下來</span><button type="button" id="bridge-video-sound" aria-pressed="false">♪ 開啟聲音</button></div>
@@ -39,6 +39,7 @@ body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"]) .brid
 <div id="book-reading"><p id="story-speaker" class="story-speaker">Michael 的心聲｜空橋</p>
 <p id="opening-line">我先看見遠處的樓。光沿著弧形的牆滑下來，像地球的傍晚。<br>我往前挪了一步，才發現自己站在一座透明的空橋上。<br>我應該在地球。可這裡，怎麼這麼熟悉？</p>
 <p id="meeting-opening" hidden>Lucy 和 Michael 在空橋相遇。他們一起轉向窗外，在同一片城市前停了下來。</p>
+<p id="workshop-opening" hidden>琴聲落下後，Lucy 和 Michael 沿空橋走進工作室。他停在入口，望向沒有柱子擋住的遠端。各處的工作台之間，還留著寬寬的路。</p>
 <p id="art-opening" hidden>相遇後，Lucy 帶 Michael 來到她建起的藝術房間。他沿著左牆走近，在第一件作品前停了下來。</p>
 <p id="lucy-opening" hidden>忽然有點想見他。<br>他坐在旁邊就好，我還想把這張畫畫完。</p>
 </div>
@@ -52,6 +53,7 @@ body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"]) .brid
 <div id="room-nav" hidden>
 <button type="button" id="return-bridge">回到空橋 <span aria-hidden="true">→</span></button>
 <button type="button" id="next-art" hidden>下一幕 · 藝術房間 →</button>
+<button type="button" id="next-workshop" hidden>下一幕 · 工作室 →</button>
 </div>
 </footer><p id="status" class="sr-status" role="status">載入前進片段…</p>
 </main>
@@ -75,11 +77,15 @@ body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"]) .brid
       <img src="art-room.webp" alt="" loading="lazy" width="1672" height="941">
       <span>藝術房間</span><small>前往藝術房間 →</small>
     </button>
+    <button type="button" class="space-map-stop" data-view="Workshop">
+      <img src="workshop.webp" alt="" loading="lazy" width="1672" height="941">
+      <span>工作室</span><small>前往工作室 →</small>
+    </button>
   </div>
   <section class="space-map-later" aria-labelledby="space-map-later-title">
     <h3 id="space-map-later-title">後續故事 · 劇本順序</h3>
     <ol class="space-map-sequence" aria-label="後續故事順序">
-      <li>工作室</li><li>輕重庭園</li><li>無名花園</li><li>用餐空間</li><li>感官娛樂空間</li><li>共同居所</li><li>地球結尾</li>
+      <li>輕重庭園</li><li>無名花園</li><li>用餐空間</li><li>感官娛樂空間</li><li>共同居所</li><li>地球結尾</li>
     </ol>
     <h3 id="space-map-unplaced-title" class="space-map-unplaced-title">待定位</h3>
     <ul aria-labelledby="space-map-unplaced-title">
@@ -88,18 +94,23 @@ body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"]) .brid
   </section>
 </dialog>
 <dialog id="viewpoint-dialog" aria-labelledby="viewpoint-title" aria-describedby="viewpoint-note"><button class="close" data-close aria-label="關閉視角選擇">×</button><p class="eyebrow">兩種目光，同一個故事</p><h2 id="viewpoint-title">選擇你的視角</h2><div class="viewpoint-options"><button id="choose-michael" aria-pressed="true"><strong>Michael</strong><span>站在空橋，看見遠方的城市。</span><small id="michael-view-status">目前視角</small></button><button id="choose-lucy" aria-pressed="false"><strong>Lucy</strong><span>留在房間，整理想見他的心意。</span><small id="lucy-view-status">靜態敘事可閱讀 · 移動 Coming soon</small></button></div><p id="viewpoint-note">兩個視角各有不同場景與心聲。Lucy 的房間是靜態停點；後續移動與人物動畫，Coming soon。</p><button class="primary" data-close>回到目前視角</button></dialog><dialog id="project-dialog" aria-labelledby="project-title" aria-describedby="project-summary"><button class="close" data-close aria-label="關閉展示說明">×</button><p class="eyebrow">回來以後 · <time datetime="2026-11-10">2026.11.10</time></p><h2 id="project-title">Coming soon</h2><p id="project-summary">更多故事與空間，Coming soon。你可以先體驗目前開放的片段。</p><dl class="release-scope"><dt>目前可體驗</dt><dd>Michael 的空橋短段前進與文字閱讀；Lucy 的畫桌短片、房間靜態畫面與獨立敘事。</dd><dt>Coming soon</dt><dd>後續房間、完整人物動畫與連續城市探索。</dd></dl><p class="note">目前可體驗的片段保留原有閱讀與互動。</p><button class="primary" data-close>返回展示</button></dialog><script src="narrative.js?v=20261103-dual2b"></script><script>
-const $=id=>document.getElementById(id),video=$('motion'),stopImage=$('stop-frame'),room=$('lucy-room'),artScene=$('art-scene');
+const $=id=>document.getElementById(id),video=$('motion'),stopImage=$('stop-frame'),room=$('lucy-room'),artScene=$('art-scene'),workshopScene=$('workshop-scene');
+const roomImages={Lucy:room,Art:artScene,Workshop:workshopScene};
 let activeViewpoint='Michael',entered=false,playing=false,switching=false,movementPlayed=false,token=0;
-const states={Michael:{index:0,detail:false,entered:false},Lucy:{index:0,detail:false,entered:false},Art:{index:0,detail:false,entered:false},Meet:{index:0,detail:false,entered:false}};
+const states={Michael:{index:0,detail:false,entered:false},Lucy:{index:0,detail:false,entered:false},Art:{index:0,detail:false,entered:false},Meet:{index:0,detail:false,entered:false},Workshop:{index:0,detail:false,entered:false}};
 const artPages=[
  {title:'先看作品',text:'Lucy 帶他走進她建起的藝術房間。Michael 在左牆的第一件作品前停下來，任由視線沿著光裡的空橋慢慢走遠。',detail:'他沒有急著把每件作品看完。光落在那些她平日會停留的地方，他也慢了下來。'},
  {title:'她平日的樣子',text:'他接著看桌上的文字和其他創作。等 Lucy 看向他時，Michael 先微笑了。',detail:'Lucy 這才感受到他傳來的理解、喜悅和喜歡。'},
  {title:'琴聲與餘音',text:'他們的手輕輕碰了一下。後來，Lucy 坐下來，彈了一小段她喜歡的曲子。',detail:'最後一個音落下後，兩人又坐了一會兒，才一起走向通往工作室的空橋。'}
 ];
 const meetingPages=[{title:'並肩看城',text:'兩人站在同一扇窗前。遠處一座座空橋接進樓群，Lucy 和 Michael 並肩看了片刻。',detail:'接下來，Lucy 會帶他去看自己建起的藝術房間。'}];
-const viewHashes={Michael:'#michael',Lucy:'#lucy',Meet:'#meeting',Art:'#art-room'};
+const workshopPages=[
+ {title:'選一張空台',text:'Michael 在入口站了一會兒。放眼望去，各處都有人形機器人照看設備。他和 Lucy 選了一張空台，各自動手。',detail:'他們在同一張台前，各做各的。Lucy 沒有替 Michael 決定他要做什麼。'},
+ {title:'兩顆光石',text:'Michael 做出一顆白而透明的光石，Lucy 做出一顆深黑光滑的光石。準備離開時，他才問起光石的用途。',detail:'光石能留住一段自己選擇保存的感受，之後再重溫。最後，他們各自戴上自己做的那一顆。'}
+];
+const viewHashes={Michael:'#michael',Lucy:'#lucy',Meet:'#meeting',Art:'#art-room',Workshop:'#workshop'};
 const viewFromHash=()=>location.hash.toLowerCase()==='#city-together'?'Meet':Object.keys(viewHashes).find(name=>viewHashes[name]===location.hash.toLowerCase());
-const pages=()=>activeViewpoint==='Art'?artPages:activeViewpoint==='Meet'?meetingPages:window.FW_STORY[activeViewpoint],reading=()=>states[activeViewpoint];
+const pages=()=>activeViewpoint==='Art'?artPages:activeViewpoint==='Meet'?meetingPages:activeViewpoint==='Workshop'?workshopPages:window.FW_STORY[activeViewpoint],reading=()=>states[activeViewpoint];
 const ready=new Promise((resolve,reject)=>{video.addEventListener('loadeddata',resolve,{once:true});video.addEventListener('error',reject,{once:true});if(video.readyState>=2)resolve();});
 $('start-forward').disabled=true;ready.then(()=>{$('start-forward').disabled=false;if(activeViewpoint==='Michael')$('status').textContent='空橋已在眼前，隨時可以啟程。';}).catch(()=>{$('status').textContent='影片載入失敗，請重新整理';});
 function renderReading(resetScroll=false){const r=reading(),p=pages()[r.index];$('reading-text').textContent=p.text;$('reading-text').setAttribute('aria-label',p.title);$('reading-detail').textContent=p.detail;$('reading-detail').hidden=!r.detail;$('reading-detail-toggle').textContent=r.detail?'收起補敘':'再讀一點';$('reading-detail-toggle').setAttribute('aria-expanded',String(r.detail));$('reading-count').textContent=`${r.index+1} / ${pages().length} · ${r.detail?'補敘可上下滑讀':'依你的步調閱讀'}`;$('reading-prev').disabled=r.index===0;$('reading-next').disabled=r.index===pages().length-1;if(resetScroll)$('reading-content').scrollTop=0;}
@@ -108,6 +119,7 @@ function hideReading(){
   $('show-invitation').hidden=playing||switching||!entered;
   $('lucy-opening').hidden=activeViewpoint!=='Lucy';
   $('art-opening').hidden=activeViewpoint!=='Art';
+  $('workshop-opening').hidden=activeViewpoint!=='Workshop';
   $('meeting-opening').hidden=activeViewpoint!=='Meet';
 }
 function showReading(){
@@ -115,27 +127,29 @@ function showReading(){
   renderReading();
   $('lucy-opening').hidden=true;
   $('art-opening').hidden=true;
+  $('workshop-opening').hidden=true;
   $('meeting-opening').hidden=true;
   $('invitation').hidden=false;
   $('show-invitation').hidden=true;
 }
-function syncView(){const lucy=activeViewpoint==='Lucy', art=activeViewpoint==='Art', meet=activeViewpoint==='Meet', bridge=!lucy&&!art&&!meet;document.body.dataset.viewpoint=activeViewpoint;video.hidden=!bridge;room.hidden=!lucy;artScene.hidden=!art;
- $('story-speaker').textContent=art?'藝術房間｜故事':meet?'兩人相遇｜空橋':lucy?'Lucy 的心聲｜書房':'Michael 的心聲｜空橋';
+function syncView(){const lucy=activeViewpoint==='Lucy', art=activeViewpoint==='Art', meet=activeViewpoint==='Meet', workshop=activeViewpoint==='Workshop', bridge=!lucy&&!art&&!meet&&!workshop;document.body.dataset.viewpoint=activeViewpoint;video.hidden=!bridge;room.hidden=!lucy;artScene.hidden=!art;workshopScene.hidden=!workshop;
+ $('story-speaker').textContent=workshop?'工作室｜故事':art?'藝術房間｜故事':meet?'兩人相遇｜空橋':lucy?'Lucy 的心聲｜書房':'Michael 的心聲｜空橋';
  $('opening-line').hidden=entered||!bridge;
  $('art-opening').hidden=!art||!$('invitation').hidden;
+ $('workshop-opening').hidden=!workshop||!$('invitation').hidden;
  $('meeting-opening').hidden=!meet||!$('invitation').hidden;
  $('lucy-opening').hidden=!lucy||!$('invitation').hidden;
-$('reading-viewpoint').textContent=`${lucy?'心聲':'感知'} / ${activeViewpoint} 視角`;$('show-invitation').textContent=(art||meet)?'閱讀這一幕':lucy?'再讀心聲':'感知';$('choose-michael').setAttribute('aria-pressed',String(!lucy));$('choose-lucy').setAttribute('aria-pressed',String(lucy));$('michael-view-status').textContent=lucy?'空橋前進與感知':'目前視角';$('lucy-view-status').textContent=lucy?'目前視角 · 移動 Coming soon':'靜態敘事可閱讀 · 移動 Coming soon';$('reading-forward').textContent=lucy?'後續移動 · Coming soon':'重播這段 →';$('reading-forward').disabled=lucy;$('reading-forward').hidden=!bridge&&!lucy;$('lucy-next').hidden=true;$('lucy-cut').hidden=!lucy;$('room-nav').hidden=bridge;$('next-art').hidden=!meet;$('stop-space-map').hidden=!bridge||!entered;$('start-forward').hidden=!bridge||entered;stopImage.hidden=!bridge||!entered||!stopImage.complete||!stopImage.naturalWidth;renderReading();}
+$('reading-viewpoint').textContent=`${lucy?'心聲':'感知'} / ${activeViewpoint} 視角`;$('show-invitation').textContent=(art||meet||workshop)?'閱讀這一幕':lucy?'再讀心聲':'感知';$('choose-michael').setAttribute('aria-pressed',String(!lucy));$('choose-lucy').setAttribute('aria-pressed',String(lucy));$('michael-view-status').textContent=lucy?'空橋前進與感知':'目前視角';$('lucy-view-status').textContent=lucy?'目前視角 · 移動 Coming soon':'靜態敘事可閱讀 · 移動 Coming soon';$('reading-forward').textContent=lucy?'後續移動 · Coming soon':'重播這段 →';$('reading-forward').disabled=lucy;$('reading-forward').hidden=!bridge&&!lucy;$('lucy-next').hidden=true;$('lucy-cut').hidden=!lucy;$('room-nav').hidden=bridge;$('next-art').hidden=!meet;$('next-workshop').hidden=!art;$('stop-space-map').hidden=!bridge||!entered;$('start-forward').hidden=!bridge||entered;stopImage.hidden=!bridge||!entered||!stopImage.complete||!stopImage.naturalWidth;renderReading();}
 async function selectViewpoint(name){if(playing)return;document.dispatchEvent(new Event('study-view-changing'));const mine=++token;document.querySelectorAll('dialog[open]').forEach(d=>d.close());states[activeViewpoint].entered=entered;video.pause();switching=true;$('invitation').hidden=true;$('show-invitation').hidden=true;$('stop-space-map').hidden=true;document.body.classList.add('switching');
- if(name==='Lucy'||name==='Art'){try{await (name==='Lucy'?room:artScene).decode();}catch(e){if(mine===token){switching=false;document.body.classList.remove('switching');$('status').textContent='房間尚未載入，請再試一次。';syncView();if(entered)showReading();}return;}}
- if(mine!==token)return;activeViewpoint=name;history.replaceState(null,'',viewHashes[name]);entered=name!=='Michael'||states.Michael.entered;states[name].entered=entered;syncView();await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));if(mine!==token)return;switching=false;document.body.classList.remove('switching');$('status').textContent=name==='Art'?'已進入藝術房間':name==='Meet'?'已進入兩人相遇':name==='Lucy'?'房間停點 · 靜態視角':entered?'已停下 · 依你的步調閱讀':'空橋已在眼前，隨時可以啟程。';if(entered){if(name!=='Michael')hideReading();else showReading();}document.dispatchEvent(new Event('story-view-ready'));}
+ if(roomImages[name]){try{await roomImages[name].decode();}catch(e){if(mine===token){switching=false;document.body.classList.remove('switching');$('status').textContent='房間尚未載入，請再試一次。';syncView();if(entered)showReading();}return;}}
+ if(mine!==token)return;activeViewpoint=name;history.replaceState(null,'',viewHashes[name]);entered=name!=='Michael'||states.Michael.entered;states[name].entered=entered;syncView();await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));if(mine!==token)return;switching=false;document.body.classList.remove('switching');$('status').textContent=name==='Workshop'?'已進入工作室':name==='Art'?'已進入藝術房間':name==='Meet'?'已進入兩人相遇':name==='Lucy'?'房間停點 · 靜態視角':entered?'已停下 · 依你的步調閱讀':'空橋已在眼前，隨時可以啟程。';if(entered){if(name!=='Michael')hideReading();else showReading();}document.dispatchEvent(new Event('story-view-ready'));}
 function resetStart(){token++;video.pause();document.body.classList.remove('moving','switching');playing=switching=false;reading().index=0;reading().detail=false;document.querySelectorAll('dialog[open]').forEach(d=>d.close());if(activeViewpoint!=='Michael'){entered=true;syncView();showReading();return;}entered=states.Michael.entered=movementPlayed=false;video.currentTime=0;syncView();hideReading();$('status').textContent='空橋已在眼前，隨時可以啟程。';}
 async function enter(){if(activeViewpoint!=='Michael'||playing||switching)return;const mine=++token;playing=true;document.dispatchEvent(new Event('bridge-moving'));entered=states.Michael.entered=false;states.Michael.index=0;states.Michael.detail=false;stopImage.hidden=true;document.body.classList.add('moving');renderReading(true);hideReading();$('stop-space-map').hidden=true;$('start-forward').hidden=true;video.currentTime=0;$('status').textContent='沿空橋前進…';video.onended=()=>{if(mine!==token||!video.ended||activeViewpoint!=='Michael')return;playing=false;entered=states.Michael.entered=true;document.body.classList.remove('moving');movementPlayed=true;if(stopImage.complete&&stopImage.naturalWidth)stopImage.hidden=false;else stopImage.decode().then(()=>{if(entered&&!playing&&activeViewpoint==='Michael')stopImage.hidden=false;}).catch(()=>{});syncView();showReading();$('status').textContent='已停下 · 依你的步調閱讀';};try{await video.play();}catch(e){document.body.classList.remove('moving');playing=false;syncView();hideReading();$('status').textContent='播放未啟動，請再點一次前進。';}}
 video.addEventListener('playing',()=>{if(activeViewpoint!=='Michael'){video.pause();return;}$('invitation').hidden=true;$('show-invitation').hidden=true;});
 $('hide-invitation').onclick=hideReading;$('show-invitation').onclick=showReading;$('reading-prev').onclick=()=>{if(entered&&!playing&&!switching&&reading().index>0){reading().index--;reading().detail=false;renderReading(true);}};$('reading-next').onclick=()=>{if(entered&&!playing&&!switching&&reading().index<pages().length-1){reading().index++;reading().detail=false;renderReading(true);}};$('reading-detail-toggle').onclick=()=>{if(!entered||playing||switching)return;reading().detail=!reading().detail;renderReading();};
 $('start-forward').onclick=enter;$('enter').onclick=enter;$('reading-forward').onclick=enter;
 document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());$('open-viewpoint').onclick=()=>{if(!playing)$('viewpoint-dialog').showModal();};$('choose-michael').onclick=()=>selectViewpoint('Michael');$('choose-lucy').onclick=()=>selectViewpoint('Lucy');
-window.__stopPoint={snapshot:()=>({entered,playing,switching,movementPlayed:activeViewpoint==='Michael'?movementPlayed:false,michaelMovementPlayed:movementPlayed,viewpoint:activeViewpoint,availableViewpoints:['Michael','Lucy'],scene:activeViewpoint==='Michael'?'bridge':activeViewpoint==='Lucy'?'lucy-room-stop':activeViewpoint==='Meet'?'meeting':'art-room',sceneType:activeViewpoint==='Michael'?'rendered-fixed-route':'static-illustration',developmentStatus:'coming-soon',releaseType:'preview',lucyMovementStatus:'coming-soon',characterAnimationStatus:'coming-soon',pageIndex:reading().index,pageCount:pages().length,detailOpen:reading().detail,frameCount:activeViewpoint==='Michael'?48:0,renderResolution:activeViewpoint==='Michael'?[2560,1440]:null,stillResolution:activeViewpoint==='Michael'?[1536,736]:activeViewpoint==='Lucy'?[1536,768]:[1672,941],stopImageVisible:!stopImage.hidden,roomImageVisible:!room.hidden,artImageVisible:!artScene.hidden,openDialog:document.querySelector('dialog[open]')?.id||null,videoTime:video.currentTime,ready:activeViewpoint==='Michael'?video.readyState>=2:activeViewpoint==='Lucy'?room.complete&&room.naturalWidth>0:artScene.complete&&artScene.naturalWidth>0})};
+window.__stopPoint={snapshot:()=>({entered,playing,switching,movementPlayed:activeViewpoint==='Michael'?movementPlayed:false,michaelMovementPlayed:movementPlayed,viewpoint:activeViewpoint,availableViewpoints:['Michael','Lucy'],scene:activeViewpoint==='Michael'?'bridge':activeViewpoint==='Lucy'?'lucy-room-stop':activeViewpoint==='Meet'?'meeting':activeViewpoint==='Workshop'?'workshop':'art-room',sceneType:activeViewpoint==='Michael'?'rendered-fixed-route':'static-illustration',developmentStatus:'coming-soon',releaseType:'preview',lucyMovementStatus:'coming-soon',characterAnimationStatus:'coming-soon',pageIndex:reading().index,pageCount:pages().length,detailOpen:reading().detail,frameCount:activeViewpoint==='Michael'?48:0,renderResolution:activeViewpoint==='Michael'?[2560,1440]:null,stillResolution:activeViewpoint==='Michael'?[1536,736]:activeViewpoint==='Lucy'?[1536,768]:[1672,941],stopImageVisible:!stopImage.hidden,roomImageVisible:!room.hidden,artImageVisible:!artScene.hidden,workshopImageVisible:!workshopScene.hidden,openDialog:document.querySelector('dialog[open]')?.id||null,videoTime:video.currentTime,ready:activeViewpoint==='Michael'?video.readyState>=2:activeViewpoint==='Lucy'?room.complete&&room.naturalWidth>0:(roomImages[activeViewpoint]?.naturalWidth>0||activeViewpoint==='Meet')})};
 renderReading();
 
 stopImage.addEventListener('load',()=>{if(activeViewpoint==='Michael'&&entered&&!playing)stopImage.hidden=false;});
@@ -158,6 +172,7 @@ $('visit-lucy').onclick=()=>selectViewpoint('Lucy');
 $('return-bridge').onclick=()=>selectViewpoint('Michael');
 $('next-meeting').onclick=()=>selectViewpoint('Meet');
 $('next-art').onclick=()=>selectViewpoint('Art');
+$('next-workshop').onclick=()=>selectViewpoint('Workshop');
 (() => {
   const map = $('space-map');
   const opener = $('open-space-map');
@@ -169,7 +184,7 @@ $('next-art').onclick=()=>selectViewpoint('Art');
       if (current) stop.setAttribute('aria-current', 'location');
       else stop.removeAttribute('aria-current');
       stop.querySelector('small').textContent = current ? '你在這裡'
-        : stop.dataset.view === 'Michael' ? '回到空橋 →' : stop.dataset.view === 'Lucy' ? '前往書房 →' : stop.dataset.view === 'Meet' ? '觀看兩人相遇 →' : '前往藝術房間 →';
+        : stop.dataset.view === 'Michael' ? '回到空橋 →' : stop.dataset.view === 'Lucy' ? '前往書房 →' : stop.dataset.view === 'Meet' ? '觀看兩人相遇 →' : stop.dataset.view === 'Workshop' ? '前往工作室 →' : '前往藝術房間 →';
     }
     map.showModal();
   };
