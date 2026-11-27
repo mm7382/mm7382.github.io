@@ -453,14 +453,14 @@ $('garden-perspective').onclick=()=>{
   const other = document.getElementById('bridge-video');
   const error = document.getElementById('study-door-error');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  let manual = false, visible = false;
+  let manual = false, visible = false, bridgeManual = false;
   const sync = () => {
     const audible = !video.muted && video.volume > 0;
     sound.textContent = audible ? '關閉聲音' : '♪ 開啟聲音';
     sound.setAttribute('aria-pressed', String(audible));
   };
   const play = () => video.play().catch(() => {});
-  const canAutoPlay = () => visible && !manual && !document.hidden &&
+  const canAutoPlay = () => visible && !manual && !bridgeManual && !document.hidden &&
     !reduced.matches && document.body.dataset.viewpoint === 'Michael' &&
     !document.body.classList.contains('moving') && !document.body.classList.contains('switching') &&
     video.muted && video.paused && !video.ended;
@@ -477,8 +477,16 @@ $('garden-perspective').onclick=()=>{
   for (const event of ['pointerdown','keydown']) {
     video.addEventListener(event, () => { manual = true; }, {passive:true});
   }
-  video.addEventListener('play', () => other.pause());
-  other.addEventListener('play', () => { if (!video.paused) video.pause(); });
+  const chooseBridge = () => { bridgeManual = true; };
+  for (const event of ['pointerdown','keydown']) other.addEventListener(event, chooseBridge, {passive:true});
+  document.getElementById('bridge-video-sound').addEventListener('click', chooseBridge);
+  video.addEventListener('play', () => { bridgeManual = false; other.pause(); });
+  other.addEventListener('play', () => {
+    if (visible && !bridgeManual && (!video.paused || canAutoPlay())) {
+      other.pause();
+      if (canAutoPlay()) play();
+    } else if (!video.paused) video.pause();
+  });
   video.addEventListener('playing', () => { error.hidden = true; });
   video.addEventListener('volumechange', sync);
   video.addEventListener('error', () => { error.hidden = false; });
@@ -491,7 +499,7 @@ $('garden-perspective').onclick=()=>{
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(([entry]) => {
       visible = entry.isIntersecting && entry.intersectionRatio >= .45;
-      if (!visible) video.pause();
+      if (!visible) { video.pause(); bridgeManual = false; }
       else if (canAutoPlay()) play();
     }, {threshold:.45}).observe(video);
   } else {
