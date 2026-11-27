@@ -53,6 +53,15 @@ body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]):not(.moving) .story-
 .story-pov-options button:focus-visible{outline:2px solid #705826;outline-offset:2px}
 .story-pov-note{margin:0;color:#5f5544;font-size:.76rem}
 @media(max-width:720px){body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]):not(.moving) .story-pov{grid-template-columns:auto minmax(0,1fr);gap:4px 10px;padding-block:5px}.story-pov-note{grid-column:2}.story-pov-options button{padding:3px}}
+/* Viewpoint color follows both the selector and every line of the reading panel. */
+body[data-viewpoint="Michael"]{--pov-story-ink:#233f55;--pov-story-accent:#284e6b}
+body[data-viewpoint="Lucy"]{--pov-story-ink:#542f22;--pov-story-accent:#713e28}
+body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]) #book-reading :is(#story-speaker,#reading-viewpoint,#reading-count){color:var(--pov-story-accent)}
+body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]) #book-reading :is(#opening-line,#lucy-opening,.hud #reading-text,.hud #reading-detail){color:var(--pov-story-ink)}
+.story-pov-options #choose-michael strong{color:#233f55}
+.story-pov-options #choose-lucy strong{color:#542f22}
+.story-pov-options #choose-michael[aria-pressed="true"] strong{color:#e3f0f9}
+.story-pov-options #choose-lucy[aria-pressed="true"] strong{color:#ffead7}
 </style></head>
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
 <button type="button" id="open-space-map" aria-haspopup="dialog" aria-controls="space-map">空間地圖</button>
