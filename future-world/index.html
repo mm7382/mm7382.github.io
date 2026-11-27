@@ -30,13 +30,15 @@ body[data-viewpoint="Gravity"] .scene {background:#171713;}
 body[data-viewpoint="Gravity"] #book-reading .reading-content {flex:none;block-size:clamp(3.5rem,19dvh,11rem);max-height:none;overflow-y:auto;scrollbar-gutter:stable;}
 body[data-viewpoint="Gravity"] #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
 
-.study-door-entry{display:grid;justify-items:start;min-width:0;max-width:100%;gap:.2rem}
-#study-door{margin:0;width:clamp(176px,18vw,264px);max-width:100%;scroll-margin-block:1rem;color:#453d31}
-#study-door-video{box-sizing:border-box;display:block;width:100%;height:auto;aspect-ratio:16/9;background:#111713;border:1px solid #846c46;border-radius:5px}
-#study-door figcaption{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:0 .5rem;padding:0 .25rem;font:500 .875rem/1.45 system-ui,sans-serif}
-#study-door-sound{min-height:44px;font:inherit}
-#study-door-error{margin:0;font-size:.8rem}
-@media(max-width:600px){.book-nav .study-door-entry{flex:0 1 100%}#study-door{width:min(100%,320px)}}
+#study-door[hidden],#study-door-actions[hidden],#study-door-error[hidden]{display:none!important}
+.scene #study-door{position:absolute;inset:0;z-index:8;display:grid;place-items:center;margin:0;background:#111713}
+.scene #study-door-video{position:static;width:100%;height:100%;min-height:0;object-fit:contain;background:#111713;cursor:pointer}
+#study-door-error{position:absolute;inset:auto 1rem 1rem;margin:0;padding:.5rem;color:#fff8ea;background:#141715d9;text-align:center}
+body.door-scene .scene :is(.bridge-inline,#invitation,#show-invitation),body.door-scene .book-page :is(#book-reading,.book-nav,#project-status){display:none!important}
+#study-door-actions{grid-column:2/-1;justify-self:end;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;min-width:0}
+#study-door-actions button{padding:.5rem .8rem;min-height:44px;border:1px solid #87765a;border-radius:3px}
+#study-door-enter{background:#444c41!important;color:#fffaf1!important}
+@media(max-width:600px){#study-door-actions{grid-column:1/-1;justify-self:stretch}#study-door-actions button{flex:1 1 auto}body.door-scene main{grid-template-rows:minmax(205px,1fr) auto}}
 </style></head>
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
 <button type="button" id="open-space-map" aria-haspopup="dialog" aria-controls="space-map">空間地圖</button>
@@ -48,6 +50,10 @@ body[data-viewpoint="Gravity"] #book-reading .hud-reopen {margin-top:.25rem;widt
   <p id="bridge-video-error" role="status" hidden>影片無法載入，請重新整理後再試。</p>
 </div>
 </section>
+<figure id="study-door" hidden aria-label="書房門還開著">
+<video id="study-door-video" width="1280" height="720" controlslist="nodownload" muted playsinline preload="none" aria-label="書房門還開著" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/future-world-study-door.mp4"></video>
+<p id="study-door-error" role="status" hidden>影片暫時無法播放，仍可直接進入書房。</p>
+</figure>
 <section id="lucy-cut" class="lucy-cut" hidden aria-label="她沒有催他">
 <video id="study-video" controls controlslist="nodownload" muted playsinline preload="metadata" src="study.mp4" aria-label="她沒有催他"></video>
 <div class="study-caption"><span>她沒有催他</span><button id="study-sound" type="button" aria-pressed="false">♪ 開啟聲音</button></div>
@@ -66,17 +72,14 @@ body[data-viewpoint="Gravity"] #book-reading .hud-reopen {margin-top:.25rem;widt
 <nav class="book-nav" aria-label="故事導覽">
 <button id="start-forward">沿空橋前進 <span aria-hidden="true">→</span><small>抵達停點後，繼續讀 Michael 的故事</small></button>
 <button id="open-viewpoint" aria-haspopup="dialog" aria-controls="viewpoint-dialog">切換視角</button>
-<div class="study-door-entry">
-<figure id="study-door" aria-labelledby="study-door-title">
-<video id="study-door-video" width="1280" height="720" controls controlslist="nodownload" muted playsinline preload="metadata" aria-labelledby="study-door-title" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/future-world-study-door.mp4"></video>
-<figcaption><span id="study-door-title">書房門還開著</span><button type="button" id="study-door-sound" aria-pressed="false" aria-controls="study-door-video">♪ 開啟聲音</button></figcaption>
-<p id="study-door-error" role="status" hidden>影片暫時無法載入，請重新整理後再試。</p>
-</figure>
 <button id="visit-lucy">前往 Lucy 的書房</button>
-</div>
 <button id="next-meeting">下一幕 · 兩人相遇 →</button>
 <button id="stop-space-map" aria-haspopup="dialog" aria-controls="space-map" hidden>查看後續空間</button>
 </nav>
+<div id="study-door-actions" hidden aria-label="書房門口導覽">
+<button type="button" id="study-door-sound" aria-pressed="false" aria-controls="study-door-video">♪ 開啟聲音</button>
+<button type="button" id="study-door-enter">進入書房 →</button>
+</div>
 <div id="room-nav" hidden>
 <button type="button" id="return-bridge">回到空橋 <span aria-hidden="true">→</span></button>
 <button type="button" id="next-art" hidden>下一幕 · 藝術房間 →</button>
@@ -292,7 +295,7 @@ window.addEventListener('hashchange',()=>{
 $('project-status').onclick=()=>{if(!playing&&!switching)$('project-dialog').showModal();};
 
 // Room navigation is separate from playback; neither resets reading state.
-$('visit-lucy').onclick=()=>selectViewpoint('Lucy');
+$('visit-lucy').onclick=()=>document.dispatchEvent(new Event('open-study-door'));
 $('return-bridge').onclick=()=>selectViewpoint('Michael');
 $('next-meeting').onclick=()=>selectViewpoint('Meet');
 $('next-art').onclick=()=>selectViewpoint('Art');
@@ -448,65 +451,61 @@ $('garden-perspective').onclick=()=>{
 })();
 </script><script>
 (() => {
-  const video = document.getElementById('study-door-video');
-  const sound = document.getElementById('study-door-sound');
-  const other = document.getElementById('bridge-video');
-  const error = document.getElementById('study-door-error');
+  const door = $('study-door'), film = $('study-door-video'), sound = $('study-door-sound');
+  const actions = $('study-door-actions'), notice = $('study-door-error'), bridge = $('bridge-video');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  let manual = false, visible = false, bridgeManual = false;
-  const sync = () => {
-    const audible = !video.muted && video.volume > 0;
-    sound.textContent = audible ? '關閉聲音' : '♪ 開啟聲音';
-    sound.setAttribute('aria-pressed', String(audible));
+  const isOpen = () => !door.hidden;
+  const syncSound = () => {
+    sound.textContent = film.muted ? '♪ 開啟聲音' : '關閉聲音';
+    sound.setAttribute('aria-pressed', String(!film.muted));
   };
-  const play = () => video.play().catch(() => {});
-  const canAutoPlay = () => visible && !manual && !bridgeManual && !document.hidden &&
-    !reduced.matches && document.body.dataset.viewpoint === 'Michael' &&
-    !document.body.classList.contains('moving') && !document.body.classList.contains('switching') &&
-    video.muted && video.paused && !video.ended;
-  sound.addEventListener('click', () => {
-    manual = true;
-    video.muted = !video.muted;
-    if (!video.muted) {
-      if (!video.volume) video.volume = 1;
-      if (video.ended) video.currentTime = 0;
-      play();
+  const playDoor = () => film.play().catch(() => { if (isOpen()) film.controls = true; });
+  const closeDoor = (restoreFocus = false) => {
+    if (!isOpen()) return;
+    film.pause(); film.muted = true;
+    door.hidden = actions.hidden = true;
+    document.body.classList.remove('door-scene');
+    if (restoreFocus) $('visit-lucy').focus({preventScroll:true});
+  };
+  const openDoor = () => {
+    if (activeViewpoint !== 'Michael' || switching || playing || isOpen()) return;
+    bridge.pause(); bridge.muted = true;
+    document.body.classList.add('door-scene');
+    door.hidden = actions.hidden = false;
+    notice.hidden = !film.error;
+    film.controls = reduced.matches;
+    film.muted = true;
+    if (film.currentTime) film.currentTime = 0;
+    syncSound();
+    if (!reduced.matches) playDoor();
+    sound.focus({preventScroll:true});
+  };
+  document.addEventListener('open-study-door', openDoor);
+  document.addEventListener('study-view-changing', () => closeDoor());
+  document.addEventListener('bridge-moving', () => closeDoor());
+  document.addEventListener('visibilitychange', () => { if (document.hidden) film.pause(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen() && !document.querySelector('dialog[open]')) closeDoor(true); });
+  bridge.addEventListener('play', () => { if (isOpen()) bridge.pause(); });
+  $('study-door-enter').onclick = () => selectViewpoint('Lucy');
+  sound.onclick = () => {
+    film.muted = !film.muted;
+    if (!film.muted) {
+      if (film.volume === 0) film.volume = 1;
+      if (film.ended) film.currentTime = 0;
+      playDoor();
     }
-    sync();
-  });
-  for (const event of ['pointerdown','keydown']) {
-    video.addEventListener(event, () => { manual = true; }, {passive:true});
-  }
-  const chooseBridge = () => { bridgeManual = true; };
-  for (const event of ['pointerdown','keydown']) other.addEventListener(event, chooseBridge, {passive:true});
-  document.getElementById('bridge-video-sound').addEventListener('click', chooseBridge);
-  video.addEventListener('play', () => { bridgeManual = false; other.pause(); });
-  other.addEventListener('play', () => {
-    if (visible && !bridgeManual && (!video.paused || canAutoPlay())) {
-      other.pause();
-      if (canAutoPlay()) play();
-    } else if (!video.paused) video.pause();
-  });
-  video.addEventListener('playing', () => { error.hidden = true; });
-  video.addEventListener('volumechange', sync);
-  video.addEventListener('error', () => { error.hidden = false; });
-  if (video.error) error.hidden = false;
-  const suspend = () => { video.pause(); video.muted = true; };
-  document.addEventListener('study-view-changing', suspend);
-  document.addEventListener('bridge-moving', suspend);
-  document.addEventListener('story-view-ready', () => { if (canAutoPlay()) play(); });
-  document.addEventListener('visibilitychange', () => { if (document.hidden) video.pause(); else if (canAutoPlay()) play(); });
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([entry]) => {
-      visible = entry.isIntersecting && entry.intersectionRatio >= .45;
-      if (!visible) { video.pause(); bridgeManual = false; }
-      else if (canAutoPlay()) play();
-    }, {threshold:.45}).observe(video);
-  } else {
-    const rect = video.getBoundingClientRect();
-    visible = rect.width > 0 && rect.height > 0 && rect.top < innerHeight && rect.bottom > 0;
-    if (canAutoPlay()) play();
-  }
+    syncSound();
+  };
+  film.onclick = () => {
+    if (film.controls) return;
+    if (!film.paused && !film.ended) { film.pause(); return; }
+    if (film.ended) film.currentTime = 0;
+    playDoor();
+  };
+  film.addEventListener('volumechange', syncSound);
+  film.addEventListener('playing', () => { notice.hidden = true; });
+  film.addEventListener('error', () => { notice.hidden = false; });
+  if (location.hash === '#study-door') openDoor();
 })();
 </script>
 </body></html>
