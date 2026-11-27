@@ -1,5 +1,15 @@
 # 未來實驗室 / Future Lab｜App、網站與互動體驗作品
 
+## 從 GitHub 開始 / Start here
+
+- **AI 自主世界 / Autonomous AI Worlds**：從公開存檔看角色如何生活、分工與建造。Explore how AI characters live, coordinate, and build through published snapshots. [繁中](https://mm7382.github.io/pec-ai-agent-training/worlds.html?lang=zh-Hant&utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme) · [English](https://mm7382.github.io/pec-ai-agent-training/worlds.html?lang=en&utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme) · [雅特蘭提斯回放 / Atlantis replay (繁中)](https://mm7382.github.io/ai-world/atlantis/?utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme#settlement-record)
+- **小鵬 IRON 觀後感 / XPENG IRON review**：從實機展示談觸覺、平衡與離線能力。An engineering review of touch, balance, and what the live demo did or didn’t prove. [繁中](https://mm7382.github.io/pec-ai-agent-training/journal-xpeng-iron-review.html?lang=zh-Hant&utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme) · [English](https://mm7382.github.io/pec-ai-agent-training/journal-xpeng-iron-review.html?lang=en&utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme)
+- **AI Agent 教材 / AI agent learning**：從工具入門到能驗收的工作流程。Start with the tools and build toward workflows you can test. [繁中](https://mm7382.github.io/pec-ai-agent-training/learning.html?lang=zh-Hant&utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme) · [English](https://mm7382.github.io/pec-ai-agent-training/learning.html?lang=en&utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme)
+
+[![AI 世界的文明起源測試畫面：地圖與事件紀錄 / AI world test snapshot showing the map and event log](https://mm7382.github.io/pec-ai-agent-training/assets/journal/ai-world-nov20-origin-current.webp)](https://mm7382.github.io/pec-ai-agent-training/worlds.html?lang=zh-Hant&utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme)
+
+*文明起源測試的存檔畫面 / Saved view of the civilization-origin experiment.*
+
 [瀏覽完整作品集](https://mm7382.github.io/?utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme) · [討論專案合作](https://mm7382.github.io/pec-ai-agent-training/services.html#project-contact)
 
 這裡收錄可查看實際畫面、體驗入口與開發狀態的個人作品。想製作學習 App、互動網站、活動拍照體驗，或改善重複處理的工作，可以先從相近的成果開始看。
