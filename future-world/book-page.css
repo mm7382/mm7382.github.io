@@ -24,7 +24,7 @@ header { padding: max(10px,env(safe-area-inset-top)) max(3vw,env(safe-area-inset
 main {display: grid; grid-template-rows: minmax(0,1fr) auto;}
 .scene {position:relative; inset:auto;}
 .scene #lm-city {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:53% 52%;}
-body[data-viewpoint="Lucy"] #lm-city,
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) #lm-city,
 body[data-viewpoint="Michael"]:not(.moving) #motion {display:none;}
 .scene #stop-frame {object-position:53% 52%;}
 .book-page {
@@ -102,11 +102,11 @@ header .more-site {position:relative;pointer-events:auto;align-self:flex-start;f
 .study-viewpoint {display:none;margin:.35em 0 0;font-size:14px;color:#655a49;}
 .study-viewpoint i {padding:0;margin:0;border:0;font-style:italic;}
 body[data-viewpoint="Lucy"] .study-viewpoint {display:block;}
-body[data-viewpoint="Lucy"] :is(#project-status,.book-nav) {display:none;}
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) :is(#project-status,.book-nav) {display:none;}
 .scene #lucy-room {object-position:50% 54%;}
 #lucy-opening {margin:0;letter-spacing:.04em;line-height:1.75;font-size:clamp(16px,1.45vw,23px);}
 /* Keep the illustration and controls still as Lucy's paragraphs change length. */
-body[data-viewpoint="Lucy"] #book-reading .reading-content {
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) #book-reading .reading-content {
   flex: none;
   block-size: clamp(3.5rem,19dvh,11rem);
   max-height: none;
@@ -114,7 +114,7 @@ body[data-viewpoint="Lucy"] #book-reading .reading-content {
   scrollbar-gutter: stable;
   scrollbar-color: var(--rule) transparent;
 }
-body[data-viewpoint="Lucy"] #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"]) #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
 #return-bridge {border-left:1px solid var(--rule);padding-inline:clamp(10px,1.6vw,24px) 0;white-space:nowrap;}
 #return-bridge span {margin-left:.65em;}
 /* A film window in the room, matching the homepage’s inline placement. */
@@ -242,7 +242,7 @@ body.switching #lucy-cut,body:has(dialog[open]) #lucy-cut {visibility:hidden;}
 }
 #space-map h2, #viewpoint-dialog h2 {margin: 0 0 .65rem; color: inherit; font: 500 1.4rem/1.25 var(--serif);}
 #space-map .close, #viewpoint-dialog .close {color: var(--ink); background: var(--ivory);}
-.space-map-open {display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: clamp(5px,2vw,16px);}
+.space-map-open {display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); align-items: stretch; gap: clamp(5px,2vw,16px);}
 .space-map-stop {
   display: grid;
   grid-template-columns: minmax(0,1fr);
@@ -326,34 +326,15 @@ body:has(#space-map[open], #viewpoint-dialog[open]) .book-page {visibility: visi
   header .site-nav {gap: 6px;}
 }
 
-#open-art-room {
-  min-height: 44px;
-  padding: 0 .65rem;
-  margin-bottom: .55rem;
-  border: 1px solid #917d61;
-  background: #fff9ee;
-  color: var(--ink);
-  font: inherit;
+
+.scene #art-scene {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%;}
+.scene #art-scene[hidden], #reading-forward[hidden] {display:none;}
+#art-opening {margin:0;line-height:1.75;}
+#space-map .space-map-stop span {overflow-wrap:anywhere;}
+@media (max-width:600px) {
+  body[data-viewpoint="Art"] .scene {background:#1c1813;}
+  .scene #art-scene {object-fit:contain;}
 }
-#art-room {
-  position: fixed;
-  inset: 0;
-  margin: auto;
-  width: min(1120px, calc(100vw - 24px));
-  max-height: calc(100dvh - 24px);
-  overflow-y: auto;
-  padding: clamp(10px, 2vw, 20px);
-  background: var(--ivory);
-  color: var(--ink);
-  border: 1px solid var(--rule);
-  text-shadow: none;
-  -webkit-text-stroke: 0;
-  font-family: var(--serif);
+@media (max-width:440px) {
+  .space-map-open {grid-template-columns:repeat(2,minmax(0,1fr));}
 }
-#art-room h2 {margin: 0 44px .55rem 0; color: inherit; font: 500 1.4rem/1.3 var(--serif);}
-#art-room h2 small {font-size: .8rem; color: #655a49;}
-#art-room .close {color: var(--ink); background: var(--ivory);}
-#art-room img {display: block; width: 100%; height: auto; max-height: 70dvh; object-fit: contain;}
-#art-room p {margin: .65rem 0 0; color: var(--ink);}
-#art-room::backdrop {background: rgb(20 16 13 / 65%);}
-body:has(#art-room[open]) .book-page {visibility: visible;}
