@@ -24,7 +24,7 @@ header { padding: max(10px,env(safe-area-inset-top)) max(3vw,env(safe-area-inset
 main {display: grid; grid-template-rows: minmax(0,1fr) auto;}
 .scene {position:relative; inset:auto;}
 .scene #lm-city {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:53% 52%;}
-body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Workshop"]) #lm-city,
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Workshop"],[data-viewpoint="Garden"]) #lm-city,
 body:is([data-viewpoint="Michael"],[data-viewpoint="Meet"]):not(.moving) #motion {display:none;}
 .scene #stop-frame {object-position:53% 52%;}
 .book-page {
@@ -102,11 +102,11 @@ header .more-site {position:relative;pointer-events:auto;align-self:flex-start;f
 .study-viewpoint {display:none;margin:.35em 0 0;font-size:14px;color:#655a49;}
 .study-viewpoint i {padding:0;margin:0;border:0;font-style:italic;}
 body[data-viewpoint="Lucy"] .study-viewpoint {display:block;}
-body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"],[data-viewpoint="Workshop"]) :is(#project-status,.book-nav) {display:none;}
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"],[data-viewpoint="Workshop"],[data-viewpoint="Garden"]) :is(#project-status,.book-nav) {display:none;}
 .scene #lucy-room {object-position:50% 54%;}
 #lucy-opening {margin:0;letter-spacing:.04em;line-height:1.75;font-size:clamp(16px,1.45vw,23px);}
 /* Keep the illustration and controls still as Lucy's paragraphs change length. */
-body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"],[data-viewpoint="Workshop"]) #book-reading .reading-content {
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"],[data-viewpoint="Workshop"],[data-viewpoint="Garden"]) #book-reading .reading-content {
   flex: none;
   block-size: clamp(3.5rem,19dvh,11rem);
   max-height: none;
@@ -114,7 +114,7 @@ body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"],[
   scrollbar-gutter: stable;
   scrollbar-color: var(--rule) transparent;
 }
-body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"],[data-viewpoint="Workshop"]) #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
+body:is([data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Meet"],[data-viewpoint="Workshop"],[data-viewpoint="Garden"]) #book-reading .hud-reopen {margin-top:.25rem;width:auto;min-height:44px;font-size:14px;text-decoration:underline;text-underline-offset:.28em;}
 #return-bridge {border-left:1px solid var(--rule);padding-inline:clamp(10px,1.6vw,24px) 0;white-space:nowrap;}
 #return-bridge span {margin-left:.65em;}
 /* A film window in the room, matching the homepage’s inline placement. */
@@ -327,13 +327,13 @@ body:has(#space-map[open], #viewpoint-dialog[open]) .book-page {visibility: visi
 }
 
 
-.scene :is(#art-scene,#workshop-scene) {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%;}
-.scene :is(#art-scene,#workshop-scene)[hidden], #reading-forward[hidden] {display:none;}
-#art-opening, #workshop-opening {margin:0;line-height:1.75;}
+.scene :is(#art-scene,#workshop-scene,#garden-scene) {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 52%;}
+.scene :is(#art-scene,#workshop-scene,#garden-scene)[hidden], #reading-forward[hidden] {display:none;}
+#art-opening, #workshop-opening, #garden-opening {margin:0;line-height:1.75;}
 #space-map .space-map-stop span {overflow-wrap:anywhere;}
 @media (max-width:600px) {
-  body:is([data-viewpoint="Art"],[data-viewpoint="Workshop"]) .scene {background:#1c1813;}
-  .scene :is(#art-scene,#workshop-scene) {object-fit:contain;}
+  body:is([data-viewpoint="Art"],[data-viewpoint="Workshop"],[data-viewpoint="Garden"]) .scene {background:#1c1813;}
+  .scene :is(#art-scene,#workshop-scene,#garden-scene) {object-fit:contain;}
 }
 @media (max-width:440px) {
   .space-map-open {grid-template-columns:repeat(2,minmax(0,1fr));}
@@ -341,8 +341,8 @@ body:has(#space-map[open], #viewpoint-dialog[open]) .book-page {visibility: visi
 
 
 #room-nav {justify-self:end; display:grid; gap:4px;}
-#room-nav[hidden], #next-art[hidden], #next-workshop[hidden] {display:none;}
-#next-meeting, #next-art, #next-workshop {text-decoration:underline;text-underline-offset:.25em;}
+#room-nav[hidden], #next-art[hidden], #next-workshop[hidden], #next-garden[hidden], #garden-perspective[hidden], #reading-detail-toggle[hidden] {display:none;}
+#next-meeting, #next-art, #next-workshop, #next-garden {text-decoration:underline;text-underline-offset:.25em;}
 #next-meeting {grid-column:1/-1;justify-self:start;}
 #meeting-opening {margin:0;line-height:1.75;}
 .space-map-open {grid-template-columns:repeat(2,minmax(0,1fr));}
@@ -376,3 +376,5 @@ body:has(#space-map[open], #viewpoint-dialog[open]) .book-page {visibility: visi
 .site-exit > #home:hover {text-decoration: underline; text-underline-offset: .25em;}
 .site-exit .more-site summary {min-width: 44px; justify-content: center; background: transparent;}
 .site-exit .more-site summary::after {margin-left: 0;}
+
+body[data-viewpoint="Garden"] #reading-text {white-space:pre-line;}
