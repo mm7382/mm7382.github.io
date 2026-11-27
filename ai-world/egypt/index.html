@@ -1,7 +1,7 @@
 <!doctype html><html lang="zh-Hant"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>古埃及 AI 自主世界 · AIWorldLab</title><style>
 :root{color-scheme:dark;--bg:#0d1814;--bar:#18281f;--card:#1b2d23;--edge:#4c6249;--text:#f3efdc;--muted:#becbb8}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 system-ui,"PingFang TC",sans-serif}header,nav,main,footer{padding-inline:clamp(10px,1.8vw,36px)}main,footer{max-width:1580px;margin:auto}header{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding-block:12px;background:var(--bar);border-bottom:1px solid var(--edge)}header strong{font: bold clamp(28px,3vw,42px) Georgia,serif}header small{margin-left:12px}small,p,footer,label{color:var(--muted)}a{color:inherit}nav{padding-block:10px;border-bottom:1px solid var(--edge);font-weight:650}.actions,.tools,.controls{display:flex;align-items:center;gap:8px}.actions span,.badge{border:1px solid var(--edge);border-radius:12px;padding:6px 12px}.actions button{border-radius:99px;background:#d6e7b2;color:#19261c;font-weight:700}button,input,select,textarea{font:inherit;color:inherit;background:#15241c;border:1px solid var(--edge);border-radius:8px;padding:6px 12px}button,summary{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #edf3ab}button:disabled{opacity:.5;cursor:default}.hero{display:flex;justify-content:space-between;gap:25px;padding-block:24px}.hero p{max-width:760px}.metrics{text-align:right;min-width:224px;color:var(--muted);display:grid;justify-items:end;gap:3px}.metrics b{font-size:clamp(22px,2.5vw,36px);color:var(--text);font-variant-numeric:tabular-nums}.badge{font-size:14px}h1,h2,p{margin:0 0 8px}h1{font:700 clamp(30px,3.4vw,48px) Georgia,"Songti TC",serif}h2{font-size:22px}h2 small{font-size:14px}
-#map{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:16/8.6;border-radius:17px;border:1px solid var(--edge);background:#36402e;touch-action:pan-y}#layer{position:absolute;inset:0;isolation:isolate;transform-origin:0 0}#layer>span,#layer>img{position:absolute;transform:translate(-50%,-100%)}.tag,.work{border-radius:5px;padding:1px 5px;color:#fff6e3;background:#283626ba;font-size:clamp(10px,1.1vw,15px)}.work{background:#624522db}#layer .speech{background:#f6ead1;color:#332a19;border:1px solid #ae9770;border-radius:12px;padding:8px 11px;width:clamp(122px,19%,250px);line-height:1.4;font-size:clamp(11px,1.05vw,15px);box-shadow:0 3px 12px #0004;z-index:2}.speech b{display:block;color:#72522c}.speech:after{content:'';position:absolute;top:100%;left:50%;border:7px solid transparent;border-top-color:#f6ead1}.tools{position:absolute;bottom:12px;right:12px;flex-direction:column;gap:0;border:1px solid var(--edge);border-radius:12px;overflow:hidden;background:#18291fee}.tools button{background:transparent;border:0;border-radius:0;font-weight:bold}.tools button:first-child,.tools button:nth-child(3){font-size:23px}.mapnote{position:absolute;bottom:12px;left:12px;background:#16251ce8;border-radius:6px;padding:4px 9px;max-width:70%;font-size:14px}article{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:clamp(14px,2vw,26px);margin:22px 0}summary{font-weight:600;color:var(--muted)}.scroll{max-height:300px;overflow:auto;scrollbar-color:#65705e #1b2921}.row{padding:14px 0;border-bottom:1px solid #415144}.row small,.row strong,.row span{display:block}.row span{color:var(--muted)}.controls{flex-wrap:wrap;margin:8px 0}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(154px,1fr));gap:12px}.person{display:grid;align-content:start;gap:3px;border:1px solid var(--edge);border-radius:13px;background:#26382b;padding:12px;text-align:left}.person img{width:100%;aspect-ratio:1;object-fit:contain;background:#dce6cf;border-radius:8px}.person span{color:var(--muted);font-size:14px}.person button{padding:0;border:0;background:none}.person button img{display:block}label,input,textarea{display:block}textarea{min-height:100px}fieldset{border:0;padding:0;margin:0}fieldset input,textarea{width:100%;margin:3px 0 12px}dialog{max-width:min(90vw,550px);background:var(--card);color:var(--text);border:1px solid var(--edge);border-radius:14px}dialog img{max-width:100%;max-height:65vh;display:block;margin:auto}dialog::backdrop{background:#061009cb}footer{padding-block:12px;font-size:13px}@media(max-width:720px){.hero{display:block}.metrics{text-align:left;justify-items:start;margin-top:12px}.actions{flex-wrap:wrap}header small{display:none}#map{aspect-ratio:1.3}.tools button{padding:2px 9px}.speech{max-height:80px;overflow:auto}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+#map{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:16/8.6;border-radius:17px;border:1px solid var(--edge);background:#36402e;touch-action:pan-y}#layer{position:absolute;inset:0;isolation:isolate;transform-origin:0 0}#layer>span,#layer>img{position:absolute;transform:translate(-50%,-100%)}.tag,.work{border-radius:5px;padding:1px 5px;color:#fff6e3;background:#283626ba;font-size:clamp(10px,1.1vw,15px)}.work{background:#624522db}#layer .speech{background:#f6ead1;color:#332a19;border:1px solid #ae9770;border-radius:12px;padding:8px 11px;width:clamp(122px,19%,250px);line-height:1.4;font-size:clamp(11px,1.05vw,15px);box-shadow:0 3px 12px #0004;z-index:2}.speech b{display:block;color:#72522c}.speech:after{content:'';position:absolute;top:100%;left:50%;border:7px solid transparent;border-top-color:#f6ead1}.tools{position:absolute;bottom:12px;right:12px;flex-direction:column;gap:0;border:1px solid var(--edge);border-radius:12px;overflow:hidden;background:#18291fee}.tools button{background:transparent;border:0;border-radius:0;font-weight:bold}.tools button:first-child,.tools button:nth-child(3){font-size:23px}article{background:var(--card);border:1px solid var(--edge);border-radius:14px;padding:clamp(14px,2vw,26px);margin:22px 0}summary{font-weight:600;color:var(--muted)}.scroll{max-height:300px;overflow:auto;scrollbar-color:#65705e #1b2921}.row{padding:14px 0;border-bottom:1px solid #415144}.row small,.row strong,.row span{display:block}.row span{color:var(--muted)}.controls{flex-wrap:wrap;margin:8px 0}.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(154px,1fr));gap:12px}.person{display:grid;align-content:start;gap:3px;border:1px solid var(--edge);border-radius:13px;background:#26382b;padding:12px;text-align:left}.person img{width:100%;aspect-ratio:1;object-fit:contain;background:#dce6cf;border-radius:8px}.person span{color:var(--muted);font-size:14px}.person button{padding:0;border:0;background:none}.person button img{display:block}label,input,textarea{display:block}textarea{min-height:100px}fieldset{border:0;padding:0;margin:0}fieldset input,textarea{width:100%;margin:3px 0 12px}dialog{max-width:min(90vw,550px);background:var(--card);color:var(--text);border:1px solid var(--edge);border-radius:14px}dialog img{max-width:100%;max-height:65vh;display:block;margin:auto}dialog::backdrop{background:#061009cb}footer{padding-block:12px;font-size:13px}@media(max-width:720px){.hero{display:block}.metrics{text-align:left;justify-items:start;margin-top:12px}.actions{flex-wrap:wrap}header small{display:none}#map{aspect-ratio:1.3}.tools button{padding:2px 9px}.speech{max-height:80px;overflow:auto}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .breadcrumbs{display:flex;align-items:center;flex-wrap:wrap;gap:4px 10px}.breadcrumbs a{padding-block:4px;text-underline-offset:3px}.breadcrumbs [aria-hidden]{color:var(--muted)}
 #visitors{background:var(--card);padding:6px 10px;margin:0 0 8px;font-size:14px;font-variant-numeric:tabular-nums}#visitors strong{margin-right:1em}
 .plot-images{display:grid;grid-template-columns:repeat(var(--columns),minmax(0,1fr));align-items:center;background:#dce6cf;border-radius:8px}.plot-images img{width:100%;height:auto}.metrics{flex-shrink:0}.metrics b{font-size:clamp(20px,2.1vw,32px)}@media(max-width:830px){.hero{display:block}.metrics{justify-items:start;text-align:left}}
@@ -32,23 +32,23 @@ body,header,article,.hero{transition:background-color 1.4s,color 1.4s}
 .hero h1{font-size:clamp(34px,4vw,64px);letter-spacing:.09em;line-height:1.1}.hero summary{color:var(--accent)}.hero details[open] p{margin-top:10px}
 .metrics{gap:0}.metrics span{font-size:13px}.metrics b{font-size:clamp(16px,1.6vw,24px)}
 #map,article,.person{border-radius:3px}#map{border-block:3px double var(--edge)}.person,button,input,select,textarea{background:var(--bar)}.actions button{background:var(--text);color:var(--bg)}
-.tools,.mapnote{background:#182534eb;color:#fff3dc}.row{border-color:var(--edge)}.person img,.plot-images{background:#e7dfcb}.row strong{color:var(--voice-day)!important}
+.tools{background:#182534eb;color:#fff3dc}.row{border-color:var(--edge)}.person img,.plot-images{background:#e7dfcb}.row strong{color:var(--voice-day)!important}
 :root:has(#map:is(.dusk,.night)) .row strong{color:var(--voice-night)!important}
 h2{font-family:Georgia,"Songti TC",serif}button:focus-visible,a:focus-visible,summary:focus-visible{outline-color:var(--accent)}
 @media(max-width:830px){.hero{display:grid;gap:8px;padding-left:clamp(65px,19vw,155px)}.metrics{margin:0}.hero::before,.hero::after{width:21%}}
 @media(prefers-reduced-motion:reduce){body,header,article,.hero,.hero::after{transition:none}}
 
-#layer .site-marker{position:absolute;transform:translate(-50%,-50%);width:32px;height:32px;padding:0;background:#f9edce30;border:1px solid #fff3d99c;border-radius:50%;color:#fff5de;z-index:20;touch-action:manipulation}
+#layer .site-marker{position:absolute;transform:translate(-50%,-50%);width:32px;height:32px;padding:0;background:#f9edce30;border:1px solid #fff3d99c;border-radius:50%;color:#fff5de;z-index:1100;touch-action:manipulation}
 .site-marker::before{content:"";display:block;width:5px;height:5px;background:currentColor;border-radius:50%;margin:auto}
 .site-label{display:none;position:absolute;left:50%;bottom:38px;transform:translateX(-50%);white-space:nowrap;background:#182534ed;color:#fff3dc;padding:4px 10px;border:1px solid #bba16b;border-radius:4px}
 .site-marker[aria-expanded="true"] .site-label{display:block}
-#layer .speech{z-index:30}
+#layer .speech{z-index:1200}
 #layer .resident{transform-origin:50% 100%;animation:breathe 3.4s ease-in-out infinite;z-index:10}
 @keyframes breathe{0%,100%{transform:translate(-50%,-100%) scaleY(1)}50%{transform:translate(-50%,-100%) scaleY(1.018)}}
 :root:has(#pause[aria-pressed="true"]) .resident{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){#layer .resident{animation:none}}
 #layer .building-sprite{object-fit:contain;object-position:center bottom;z-index:3;opacity:.98}
-#layer .work{white-space:normal;text-align:center;line-height:1.2;z-index:4;overflow-wrap:anywhere}
+#layer .work{white-space:normal;text-align:center;line-height:1.2;z-index:1050;overflow-wrap:anywhere}
 </style>
 <header><div><strong>AIWorldLab</strong><small>觀察一個世界慢慢長大</small></div><div class="actions"><span id="phase">讀取世界狀態</span><button id="pause">暫停觀看</button></div></header>
 <nav class="breadcrumbs" aria-label="網站導覽">
@@ -57,7 +57,7 @@ h2{font-family:Georgia,"Songti TC",serif}button:focus-visible,a:focus-visible,su
   <span aria-current="page">古埃及 · 尼羅河聚落</span>
 </nav><main><section class="hero"><div><h1>古埃及</h1><details><summary>尼羅河聚落 · 世界背景</summary><p>這座模擬聚落位於尼羅河岸。氾濫期間，河水阻斷通往平原的道路；水位回落後，居民便能下田耕作。地勢較高的河階用於居住與儲糧，沙漠邊緣的石灰岩露頭則提供建材。</p><p>當住所可用、飲水與存糧足以支應全村兩天，居民便可商議大型工程。從金字塔的基址、神廟的柱廊，到就地鑿刻的獅身人面像，每項提案都涉及選址、材料與人力分配。</p></details></div><div class="metrics"><b id="worldTime" title="從世界建立當天起算，每月 30 天，每年 12 個月"></b><span id="daylight"></span><span id="river"></span><span id="real"></span><span id="timeRate">現實 1 分鐘＝世界 1 天</span><span class="badge" id="count"></span></div></section>
 <div id="visitors" hidden><strong>個人網站 · 近 7 天</strong> <span id="trafficTotals"></span></div>
-<div id="map" aria-label="尼羅河聚落地圖"><div id="layer"></div><div class="mapnote" id="activity"></div><div class="tools"><button id="plus" aria-label="放大">＋</button><button id="zoom" aria-label="重設視角">1×</button><button id="minus" aria-label="縮小">−</button><button id="overview">全景</button></div></div>
+<div id="map" aria-label="尼羅河聚落地圖"><div id="layer"></div><div class="tools"><button id="plus" aria-label="放大">＋</button><button id="zoom" aria-label="重設視角">1×</button><button id="minus" aria-label="縮小">−</button><button id="overview">全景</button></div></div>
 
 <article><h2>生活與對話 <small>最新在上</small></h2><div id="latest" class="scroll"></div></article>
 <details><summary>回放與觀察工具</summary><div class="controls"><button id="prev">上一筆</button><button id="play">播放紀錄</button><button id="next">下一筆</button></div><div id="frame" aria-live="polite"></div></details>
@@ -79,11 +79,19 @@ map.onpointermove=e=>{if(drag){x=e.clientX-drag[0];y=e.clientY-drag[1];camera()}
 const ts=n=>new Date(n*1000).toLocaleString('zh-TW',{timeZone:'Asia/Taipei',hour12:false});
 function place(n,xy){n.style.left=xy[0]+'%';n.style.top=xy[1]+'%';layer.append(n)}
 function lines(id,items,empty){const box=el(id);box.replaceChildren();if(!items.length)box.textContent=empty;for(const t of items){const n=node('div',t);n.className='row';box.append(n)}}
-const line=h=>'第 '+h.day+' 天 · '+h.name+'　'+(h.say?'「'+h.say+'」 ':'')+(h.ok?'':'失敗 · ')+h.message;
+const materialNames={stone:'石料',block:'石塊',reed:'蘆葦',food:'食物',water:'水'};
+const transferActions={gather:'採集',take:'取出',drop:'存入'};
+function actionMessage(record){
+ const match=record.message?.match(/^已移轉 (\d+) (stone|block|reed|food|water)$/);
+ if(!match)return record.message;
+ const [,amount,material]=match;
+ return '已'+(transferActions[record.action]??'搬運')+' '+amount+' 份'+materialNames[material];
+}
+const line=h=>'第 '+h.day+' 天 · '+h.name+'　'+(h.say?'「'+h.say+'」 ':'')+(h.ok?'':'失敗 · ')+actionMessage(h);
 let selectedSite='',residentPositions=new Map();
 let pausedAt=0, paused=false, replayIndex=-1, playing=false;
 const buildingArt={
- '茅舍':'assets/hut-reference.webp?v=fd6c9fe4fddd','農田':'assets/farm-reference.webp?v=c54b9e5fa5c5',
+ '茅舍':'assets/hut-reference.webp?v=fd6c9fe4fddd','農田':'assets/farm-reference.webp?v=c54b9e5fa5c5','工坊':'assets/workshop.webp',
  '金字塔':'assets/pyramid.webp?v=ca4e981ad3d9','神廟':'assets/temple.webp?v=9950a1cb4c90','獅身人面像':'assets/sphinx.webp?v=43ea8564f2f8',
  '磚造工廠':'assets/factory.webp?v=d5d8b37b17fc','發電站':'assets/power-station.webp?v=6c93f1407b0b',
  '鐵路車站':'assets/railway.webp?v=2d849800d2e7','現代醫院':'assets/hospital.webp?v=fc474ed83cd4'
@@ -102,6 +110,19 @@ function buildingLot(building, plot, fallback){
  if(site==='field'&&kind==='農田')return [20+plot%3*8,84+Math.floor(plot/3)*8,7.5,7];
  return buildingLots[site+'/'+kind] ?? fallback;
 }
+// Ground position sets a shared perspective for residents and structures.
+const humanHeight=y=>0.75+0.017*Math.max(0,y-16);
+const buildingHeights={
+ '茅舍':3.5,'工坊':4,'金字塔':15,'神廟':9,'獅身人面像':7,
+ '磚造工廠':9,'發電站':7,'鐵路車站':8,'現代醫院':10
+};
+const walkingAreas={desert:[67.5,48],quarry:[90,54],terrace:[55,71]};
+function residentPoint(state,index){
+ const site=state.actors[index].site;
+ const [x,y]=walkingAreas[site]??state.sites[site].xy;
+ const rank=state.actors.slice(0,index).filter(actor=>actor.site===site).length;
+ return [x+(rank%3-1)*1.8,y+Math.floor(rank/3)*1.7];
+}
 el('overview').onclick=()=>resize(1);
 el('pause').onclick=()=>{
  paused=!paused;el('pause').ariaPressed=String(paused);
@@ -115,7 +136,7 @@ const voices=['#f2ce91','#95d4e8','#c7afea','#ace2a9','#f5ab9e','#f0bad5'];
 const ink=['#71501c','#225c70','#624080','#365d32','#843e36','#793952'];
 function recordRow(h){
  const row=node('div');row.className='row';
- row.append(node('small','聚落 · 第 '+h.day+' 天 · #'+h.id),node('strong',h.name+(h.say?'　'+h.say:'')),node('span',(h.ok?'行動：':'未完成：')+h.message));
+ row.append(node('small','聚落 · 第 '+h.day+' 天 · #'+h.id),node('strong',h.name+(h.say?'　'+h.say:'')),node('span',(h.ok?'行動：':'未完成：')+actionMessage(h)));
  const line=row.children[1];
  line.style.color=voices[h.actor%voices.length];
  line.style.cssText='--voice-night:'+voices[h.actor%voices.length]+';--voice-day:'+ink[h.actor%ink.length]+';color:'+voices[h.actor%voices.length];
@@ -171,8 +192,8 @@ function render(){const s=data.state;el('population').textContent='聚落居民 
  n.onclick=()=>{selectedSite=selectedSite===key?'':key;for(const marker of layer.querySelectorAll('.site-marker'))marker.ariaExpanded=String(marker===n&&selectedSite===key)};
  place(n,loc.xy);
  }
- s.actors.forEach((a,i)=>{const pos=s.sites[a.site].xy,n=node('img');n.src=['assets/resident-0.webp?v=367e65e57dbd','assets/resident-1.webp?v=f3d31e2435ff','assets/resident-2.webp?v=48e01479af98','assets/resident-3.webp?v=1079929810c1','assets/resident-4.webp?v=080e37510279','assets/resident-5.webp?v=132287b727ce'][i];n.alt=a.name;n.style.height=(6+pos[1]*.065)+'%';const xy=[pos[0]+(i-1)*3,pos[1]-3],previous=residentPositions.get(a.name);
- n.className='resident';n.style.animationDelay=(-i*.6)+'s';n.title=a.name;
+ s.actors.forEach((a,i)=>{const xy=residentPoint(s,i),n=node('img');n.src=['assets/resident-0.webp?v=367e65e57dbd','assets/resident-1.webp?v=f3d31e2435ff','assets/resident-2.webp?v=48e01479af98','assets/resident-3.webp?v=1079929810c1','assets/resident-4.webp?v=080e37510279','assets/resident-5.webp?v=132287b727ce'][i];n.alt=a.name;n.style.height=humanHeight(xy[1])+'%';const previous=residentPositions.get(a.name);
+ n.className='resident';n.style.zIndex=Math.round(xy[1]*10);n.style.animationDelay=(-i*.6)+'s';n.title=a.name;
  place(n,xy);
  const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
  if(previous && (previous[0]!==xy[0]||previous[1]!==xy[1]) && n.animate && !reduced){
@@ -195,7 +216,10 @@ function render(){const s=data.state;el('population').textContent='聚落居民 
   const [x,y,width,height]=buildingLot(b,plot,fallback);
   if(file){
    const sprite=node('img');sprite.src=file;sprite.alt=b.kind;sprite.title=b.kind;
-   sprite.className='building-sprite';sprite.style.width=width+'%';sprite.style.height=height+'%';
+   sprite.className='building-sprite';sprite.style.width=width+'%';
+   const scale=buildingHeights[b.kind];
+   sprite.style.height=(scale?Math.min(height,humanHeight(y)*scale):height)+'%';
+   sprite.style.zIndex=Math.round(y*10);
    place(sprite,[x,y]);
   }
   if(!b.complete||!file){
@@ -217,10 +241,9 @@ function render(){const s=data.state;el('population').textContent='聚落居民 
  lines('works',data.needs.map(n=>n.kind+' · '+s.sites[n.site].name+' · '+n.construction+' · '+n.purpose),'目前沒有居民提出建築需求。');
  const last=data.history.at(-1);
  if(last?.say){
-  const who=s.actors[last.actor], pos=who&&s.sites[who.site].xy;
-  if(pos){const bubble=node('span');bubble.className='speech';bubble.append(node('b',last.name),node('span',last.say));bubble.children[0].style.color=ink[last.actor%ink.length];place(bubble,[clamp(pos[0]+(last.actor-1)*3,16,84),Math.max(28,pos[1]-15)])}
+  const who=s.actors[last.actor], pos=who&&residentPoint(s,last.actor);
+  if(pos){const bubble=node('span');bubble.className='speech';bubble.append(node('b',last.name),node('span',last.say));bubble.children[0].style.color=ink[last.actor%ink.length];place(bubble,[clamp(pos[0],16,84),Math.max(28,pos[1]-humanHeight(pos[1])-2)])}
  }
- el('activity').textContent=last?last.name+' · '+last.message:'等待第一筆決策';
  listRecords('latest',data.history.slice(-15).reverse(),'等待第一筆真實居民決策。');replayFrame();lines('milestones',data.history.filter(h=>['propose','agree','build','research'].includes(h.action)||!h.ok).slice(-8).reverse().map(line),'尚無已記錄的發展事件。');
  el('count').textContent='真實 AI 決策 '+(data.aiDecisions??s.turn)+' 次';el('phase').title=friendlyReason(data.status);history();clock()}
 function friendlyReason(status){
