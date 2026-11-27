@@ -1,4 +1,4 @@
-# Michael Agent Lab｜App、網站與互動體驗作品
+# 未來實驗室 / Future Lab｜App、網站與互動體驗作品
 
 [瀏覽完整作品集](https://mm7382.github.io/?utm_source=github&utm_medium=referral&utm_campaign=portfolio_readme) · [討論專案合作](https://mm7382.github.io/pec-ai-agent-training/services.html#project-contact)
 

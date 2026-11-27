@@ -24,8 +24,8 @@
 - [Shilai Astrology (English)](https://mm7382.github.io/astrology/en/): English page for the Western astrology course app: lesson list, how an unknown birth time is handled, free vs member, privacy, FAQ, plus links to the free browser tool and the English beginner articles.
 
 ## Personal site
-- [Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/): AI agent learning hub with public methods, tutorials and engineering notes (zh-Hant). Details: https://mm7382.github.io/pec-ai-agent-training/llms.txt
-- [About Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/about.html): Working method, public projects, deliverables and how a collaboration runs.
+- [Future Lab](https://mm7382.github.io/pec-ai-agent-training/): AI agent learning hub with public methods, tutorials and engineering notes (zh-Hant). Details: https://mm7382.github.io/pec-ai-agent-training/llms.txt
+- [About Future Lab](https://mm7382.github.io/pec-ai-agent-training/about.html): Working method, public projects, deliverables and how a collaboration runs.
 - [Which tasks suit an AI agent?](https://mm7382.github.io/pec-ai-agent-training/ai-agent-workflow-fit.html): Four questions to judge whether one task is ready for an AI agent pilot.
 - [AI Agent adoption and workflow design](https://mm7382.github.io/pec-ai-agent-training/services.html): Scope one real task, check data access and human review, then agree on a small pilot and handover. Contact through the service page.
 - [How to choose an AI Agent consultant](https://mm7382.github.io/pec-ai-agent-training/choose-ai-agent-consultant.html): Questions about data, verification, human review and handover before starting a project.
@@ -33,15 +33,15 @@
 - [Project portfolio](https://mm7382.github.io/): App, work tools, games, website demos and document projects with real screenshots and explicit development status.
 
 ## Portfolio case pages
-- [古裝照片 AI 生成遊戲｜Mac 本機應用｜Michael Agent Lab](https://mm7382.github.io/work/costume-photo.html): Actual work, images and current availability.
-- [淺水網頁 Demo｜自由潛水網站設計｜Michael Agent Lab](https://mm7382.github.io/work/diving.html): Actual work, images and current availability.
-- [教學測驗與文件套件｜試卷與評分資料｜Michael Agent Lab](https://mm7382.github.io/work/document-kit.html): Actual work, images and current availability.
-- [LINE 貼圖角色設計｜獅子角色概念稿｜Michael Agent Lab](https://mm7382.github.io/work/lion-character.html): Actual work, images and current availability.
-- [中文閱讀測驗文件範本｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/reading-template.html): Actual work, images and current availability.
-- [排得好｜排班與班表分享 App・App Store 上架中｜Michael Agent Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
-- [Sugar Boom｜糖果射擊手機遊戲・開發中｜Michael Agent Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
-- [情境主視覺設計｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/visual-scenes.html): Actual work, images and current availability.
-- [易見｜作品介紹｜Michael Agent Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
+- [古裝照片 AI 生成遊戲｜Mac 本機應用｜Future Lab](https://mm7382.github.io/work/costume-photo.html): Actual work, images and current availability.
+- [淺水網頁 Demo｜自由潛水網站設計｜Future Lab](https://mm7382.github.io/work/diving.html): Actual work, images and current availability.
+- [教學測驗與文件套件｜試卷與評分資料｜Future Lab](https://mm7382.github.io/work/document-kit.html): Actual work, images and current availability.
+- [LINE 貼圖角色設計｜獅子角色概念稿｜Future Lab](https://mm7382.github.io/work/lion-character.html): Actual work, images and current availability.
+- [中文閱讀測驗文件範本｜作品介紹｜Future Lab](https://mm7382.github.io/work/reading-template.html): Actual work, images and current availability.
+- [排得好｜排班與班表分享 App・App Store 上架中｜Future Lab](https://mm7382.github.io/work/shiftok.html): Actual work, images and current availability.
+- [Sugar Boom｜糖果射擊手機遊戲・開發中｜Future Lab](https://mm7382.github.io/work/sugar-boom.html): Actual work, images and current availability.
+- [情境主視覺設計｜作品介紹｜Future Lab](https://mm7382.github.io/work/visual-scenes.html): Actual work, images and current availability.
+- [易見｜作品介紹｜Future Lab](https://mm7382.github.io/work/yijian.html): Actual work, images and current availability.
 
 ## Learning articles (zh-Hant + en)
 - [相位是什麼？合相、對分、三分、四分、六分怎麼看｜What are aspects in a birth chart?](https://mm7382.github.io/learn/aspects.html)

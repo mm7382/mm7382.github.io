@@ -169,8 +169,8 @@ def llms():
     import re, glob
     lines += [
         "", "## Personal site",
-        "- [Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/): AI agent learning hub with public methods, tutorials and engineering notes (zh-Hant). Details: https://mm7382.github.io/pec-ai-agent-training/llms.txt",
-        "- [About Michael Agent Lab](https://mm7382.github.io/pec-ai-agent-training/about.html): Working method, public projects, deliverables and how a collaboration runs.",
+        "- [Future Lab](https://mm7382.github.io/pec-ai-agent-training/): AI agent learning hub with public methods, tutorials and engineering notes (zh-Hant). Details: https://mm7382.github.io/pec-ai-agent-training/llms.txt",
+        "- [About Future Lab](https://mm7382.github.io/pec-ai-agent-training/about.html): Working method, public projects, deliverables and how a collaboration runs.",
         "- [Which tasks suit an AI agent?](https://mm7382.github.io/pec-ai-agent-training/ai-agent-workflow-fit.html): Four questions to judge whether one task is ready for an AI agent pilot.",
         "- [AI Agent adoption and workflow design](https://mm7382.github.io/pec-ai-agent-training/services.html): Scope one real task, check data access and human review, then agree on a small pilot and handover. Contact through the service page.",
         "- [How to choose an AI Agent consultant](https://mm7382.github.io/pec-ai-agent-training/choose-ai-agent-consultant.html): Questions about data, verification, human review and handover before starting a project.",
