@@ -79,7 +79,7 @@ body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"]) .brid
   <section class="space-map-later" aria-labelledby="space-map-later-title">
     <h3 id="space-map-later-title">後續故事 · 劇本順序</h3>
     <ol class="space-map-sequence" aria-label="後續故事順序">
-      <li>公共創作工作室</li><li>輕重庭園</li><li>無名花園</li><li>用餐空間</li><li>感官娛樂空間</li><li>共同居所</li><li>地球結尾</li>
+      <li>工作室</li><li>輕重庭園</li><li>無名花園</li><li>用餐空間</li><li>感官娛樂空間</li><li>共同居所</li><li>地球結尾</li>
     </ol>
     <h3 id="space-map-unplaced-title" class="space-map-unplaced-title">待定位</h3>
     <ul aria-labelledby="space-map-unplaced-title">
@@ -261,6 +261,7 @@ $('next-art').onclick=()=>selectViewpoint('Art');
   };
   new MutationObserver(syncFilm).observe(document.body,{attributes:true,attributeFilter:['data-viewpoint']});
   document.addEventListener('story-view-ready', () => {
+    syncFilm();
     if (activeViewpoint === 'Meet' && !reducedMotion.matches && video.muted && !video.ended) play();
   });
   syncFilm();
@@ -282,9 +283,10 @@ $('next-art').onclick=()=>selectViewpoint('Art');
   document.addEventListener('bridge-moving', suspend);
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(([entry]) => {
+      if (activeViewpoint === 'Meet') return;
       if (!entry.isIntersecting) {
         video.pause();
-      } else if ((activeViewpoint === 'Michael' || activeViewpoint === 'Meet') && !switching && !playing &&
+      } else if (activeViewpoint === 'Michael' && !switching && !playing &&
                  !manual && !reducedMotion.matches && video.muted && !video.ended) {
         play();
       }
