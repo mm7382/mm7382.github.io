@@ -39,6 +39,16 @@ body.door-scene .scene :is(.bridge-inline,#invitation,#show-invitation),body.doo
 #study-door-actions button{padding:.5rem .8rem;min-height:44px;border:1px solid #87765a;border-radius:3px}
 #study-door-enter{background:#444c41!important;color:#fffaf1!important}
 @media(max-width:600px){#study-door-actions{grid-column:1/-1;justify-self:stretch}#study-door-actions button{flex:1 1 auto}body.door-scene main{grid-template-rows:minmax(205px,1fr) auto}}
+.story-pov{display:none}
+body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]):not(.moving) .story-pov{display:grid;grid-template-columns:auto minmax(180px,310px) 1fr;align-items:center;gap:clamp(.55rem,1.7vw,1.15rem);padding:8px max(4%,env(safe-area-inset-left));color:#41392e;background:#e6dfd2;border-bottom:1px solid #c9beab}
+.story-pov-label{font:500 .78rem/1.35 system-ui,sans-serif;letter-spacing:.08em;white-space:nowrap}
+.story-pov-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;padding:3px;background:#d5caba;border-radius:6px}
+.story-pov-options button{min-height:44px;display:flex;flex-wrap:wrap;align-items:baseline;place-content:center;gap:2px .42rem;border:0;background:transparent;color:#413a2e;border-radius:4px;font:500 .85rem system-ui,sans-serif;cursor:pointer}
+.story-pov-options button span{font-size:.74rem;white-space:nowrap}
+.story-pov-options button[aria-pressed="true"]{background:#414b41;color:#fffaf0}
+.story-pov-options button:focus-visible{outline:2px solid #705826;outline-offset:2px}
+.story-pov-note{margin:0;color:#5f5544;font-size:.76rem}
+@media(max-width:720px){body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]):not(.moving) .story-pov{grid-template-columns:auto minmax(0,1fr);gap:4px 10px;padding-block:5px}.story-pov-note{grid-column:2}.story-pov-options button{padding:3px}}
 </style></head>
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
 <button type="button" id="open-space-map" aria-haspopup="dialog" aria-controls="space-map">空間地圖</button>
@@ -58,6 +68,14 @@ body.door-scene .scene :is(.bridge-inline,#invitation,#show-invitation),body.doo
 <video id="study-video" controls controlslist="nodownload" muted playsinline preload="metadata" src="study.mp4" aria-label="她沒有催他"></video>
 <div class="study-caption"><span>她沒有催他</span><button id="study-sound" type="button" aria-pressed="false">♪ 開啟聲音</button></div>
 </section></div>
+<div class="story-pov">
+<span class="story-pov-label">故事視角</span>
+<div class="story-pov-options" role="group" aria-label="選擇故事視角">
+<button type="button" id="choose-michael" aria-pressed="true"><strong>Michael</strong><span>空橋</span></button>
+<button type="button" id="choose-lucy" aria-pressed="false"><strong>Lucy</strong><span>書房</span></button>
+</div>
+<p class="story-pov-note">選誰的視角來看故事</p>
+</div>
 <footer class="book-page" aria-label="故事閱讀與導覽">
 <div class="book-title"><h1>回來以後</h1><p class="study-viewpoint" lang="zh-Hant"><i lang="en">Lucy</i> ／ 書房</p><button id="project-status" aria-haspopup="dialog" aria-controls="project-dialog">Coming soon</button></div>
 <div id="book-reading"><p id="story-speaker" class="story-speaker">Michael 的心聲｜空橋</p>
@@ -71,7 +89,6 @@ body.door-scene .scene :is(.bridge-inline,#invitation,#show-invitation),body.doo
 </div>
 <nav class="book-nav" aria-label="故事導覽">
 <button id="start-forward">沿空橋前進 <span aria-hidden="true">→</span><small>抵達停點後，繼續讀 Michael 的故事</small></button>
-<button id="open-viewpoint" aria-haspopup="dialog" aria-controls="viewpoint-dialog">切換視角</button>
 <button id="visit-lucy">前往 Lucy 的書房</button>
 <button id="next-meeting">下一幕 · 兩人相遇 →</button>
 <button id="stop-space-map" aria-haspopup="dialog" aria-controls="space-map" hidden>查看後續空間</button>
@@ -134,7 +151,7 @@ body.door-scene .scene :is(.bridge-inline,#invitation,#show-invitation),body.doo
     </ul>
   </section>
 </dialog>
-<dialog id="viewpoint-dialog" aria-labelledby="viewpoint-title" aria-describedby="viewpoint-note"><button class="close" data-close aria-label="關閉視角選擇">×</button><p class="eyebrow">兩種目光，同一個故事</p><h2 id="viewpoint-title">選擇你的視角</h2><div class="viewpoint-options"><button id="choose-michael" aria-pressed="true"><strong>Michael</strong><span>站在空橋，看見遠方的城市。</span><small id="michael-view-status">目前視角</small></button><button id="choose-lucy" aria-pressed="false"><strong>Lucy</strong><span>留在房間，整理想見他的心意。</span><small id="lucy-view-status">靜態敘事可閱讀 · 移動 Coming soon</small></button></div><p id="viewpoint-note">兩個視角各有不同場景與心聲。Lucy 的房間是靜態停點；後續移動與人物動畫，Coming soon。</p><button class="primary" data-close>回到目前視角</button></dialog><dialog id="project-dialog" aria-labelledby="project-title" aria-describedby="project-summary"><button class="close" data-close aria-label="關閉展示說明">×</button><p class="eyebrow">回來以後 · <time datetime="2026-11-10">2026.11.10</time></p><h2 id="project-title">Coming soon</h2><p id="project-summary">更多故事與空間，Coming soon。你可以先體驗目前開放的片段。</p><dl class="release-scope"><dt>目前可體驗</dt><dd>Michael 的空橋短段前進與文字閱讀；Lucy 的畫桌短片、房間靜態畫面與獨立敘事。兩人相遇、藝術房間、工作室、輕重庭園和無名花園也可從空間地圖進入。</dd><dt>Coming soon</dt><dd>後續房間、完整人物動畫與連續城市探索。</dd></dl><p class="note">目前可體驗的片段保留原有閱讀與互動。</p><button class="primary" data-close>返回展示</button></dialog><script src="narrative.js?v=20261103-dual2b"></script><script>
+<dialog id="project-dialog" aria-labelledby="project-title" aria-describedby="project-summary"><button class="close" data-close aria-label="關閉展示說明">×</button><p class="eyebrow">回來以後 · <time datetime="2026-11-10">2026.11.10</time></p><h2 id="project-title">Coming soon</h2><p id="project-summary">更多故事與空間，Coming soon。你可以先體驗目前開放的片段。</p><dl class="release-scope"><dt>目前可體驗</dt><dd>Michael 的空橋短段前進與文字閱讀；Lucy 的畫桌短片、房間靜態畫面與獨立敘事。兩人相遇、藝術房間、工作室、輕重庭園和無名花園也可從空間地圖進入。</dd><dt>Coming soon</dt><dd>後續房間、完整人物動畫與連續城市探索。</dd></dl><p class="note">目前可體驗的片段保留原有閱讀與互動。</p><button class="primary" data-close>返回展示</button></dialog><script src="narrative.js?v=20261103-dual2b"></script><script>
 const $=id=>document.getElementById(id),video=$('motion'),stopImage=$('stop-frame'),room=$('lucy-room'),artScene=$('art-scene'),workshopScene=$('workshop-scene');
 const roomImages={Lucy:room,Art:artScene,Workshop:workshopScene,Garden:$('garden-scene')};
 let activeViewpoint='Michael',entered=false,playing=false,switching=false,movementPlayed=false,token=0;
@@ -266,7 +283,7 @@ function syncView(){const lucy=activeViewpoint==='Lucy', art=activeViewpoint==='
  $('garden-opening').hidden=!garden||!$('invitation').hidden;
  $('gravity-opening').hidden=!gravity||!$('invitation').hidden;
  $('lucy-opening').hidden=!lucy||!$('invitation').hidden;
-$('reading-viewpoint').textContent=`${lucy?'心聲':'感知'} / ${activeViewpoint} 視角`;$('show-invitation').textContent=(art||meet||workshop||garden||gravity)?'閱讀這一幕':lucy?'再讀心聲':'感知';$('choose-michael').setAttribute('aria-pressed',String(!lucy));$('choose-lucy').setAttribute('aria-pressed',String(lucy));$('michael-view-status').textContent=lucy?'空橋前進與感知':'目前視角';$('lucy-view-status').textContent=lucy?'目前視角 · 移動 Coming soon':'靜態敘事可閱讀 · 移動 Coming soon';$('reading-forward').textContent=lucy?'後續移動 · Coming soon':'重播這段 →';$('reading-forward').disabled=lucy;$('reading-forward').hidden=!bridge&&!lucy;$('lucy-next').hidden=true;$('lucy-cut').hidden=!lucy;$('room-nav').hidden=bridge;$('next-art').hidden=!meet;$('next-workshop').hidden=!art;$('next-gravity').hidden=!workshop;$('next-garden').hidden=!gravity;$('garden-perspective').hidden=!dualScenes[activeViewpoint];$('stop-space-map').hidden=!bridge||!entered;$('start-forward').hidden=!bridge||entered;stopImage.hidden=!bridge||!entered||!stopImage.complete||!stopImage.naturalWidth;renderReading();}
+$('reading-viewpoint').textContent=`${lucy?'心聲':'感知'} / ${activeViewpoint} 視角`;$('show-invitation').textContent=(art||meet||workshop||garden||gravity)?'閱讀這一幕':lucy?'再讀心聲':'感知';$('choose-michael').setAttribute('aria-pressed',String(bridge));$('choose-lucy').setAttribute('aria-pressed',String(lucy));$('reading-forward').textContent=lucy?'後續移動 · Coming soon':'重播這段 →';$('reading-forward').disabled=lucy;$('reading-forward').hidden=!bridge&&!lucy;$('lucy-next').hidden=true;$('lucy-cut').hidden=!lucy;$('room-nav').hidden=bridge;$('next-art').hidden=!meet;$('next-workshop').hidden=!art;$('next-gravity').hidden=!workshop;$('next-garden').hidden=!gravity;$('garden-perspective').hidden=!dualScenes[activeViewpoint];$('stop-space-map').hidden=!bridge||!entered;$('start-forward').hidden=!bridge||entered;stopImage.hidden=!bridge||!entered||!stopImage.complete||!stopImage.naturalWidth;renderReading();}
 async function selectViewpoint(name){if(playing)return;document.dispatchEvent(new Event('study-view-changing'));const mine=++token;document.querySelectorAll('dialog[open]').forEach(d=>d.close());states[activeViewpoint].entered=entered;video.pause();switching=true;$('invitation').hidden=true;$('show-invitation').hidden=true;$('stop-space-map').hidden=true;document.body.classList.add('switching');
  if(roomImages[name]){try{await roomImages[name].decode();}catch(e){if(mine===token){switching=false;document.body.classList.remove('switching');$('status').textContent='房間尚未載入，請再試一次。';syncView();if(entered)showReading();}return;}}
  if(mine!==token)return;activeViewpoint=name;history.replaceState(null,'',viewHashes[name]);entered=name!=='Michael'||states.Michael.entered;states[name].entered=entered;syncView();await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));if(mine!==token)return;switching=false;document.body.classList.remove('switching');$('status').textContent=name==='Gravity'?'已進入輕重庭園':name==='Garden'?'已進入無名花園':name==='Workshop'?'已進入工作室':name==='Art'?'已進入藝術房間':name==='Meet'?'已進入兩人相遇':name==='Lucy'?'房間停點 · 靜態視角':entered?'已停下 · 依你的步調閱讀':'空橋已在眼前，隨時可以啟程。';if(entered){if(name!=='Michael')hideReading();else showReading();}document.dispatchEvent(new Event('story-view-ready'));}
@@ -275,7 +292,7 @@ async function enter(){if(activeViewpoint!=='Michael'||playing||switching)return
 video.addEventListener('playing',()=>{if(activeViewpoint!=='Michael'){video.pause();return;}$('invitation').hidden=true;$('show-invitation').hidden=true;});
 $('hide-invitation').onclick=hideReading;$('show-invitation').onclick=showReading;$('reading-prev').onclick=()=>{if(entered&&!playing&&!switching&&reading().index>0){reading().index--;reading().detail=false;renderReading(true);}};$('reading-next').onclick=()=>{if(entered&&!playing&&!switching&&reading().index<pages().length-1){reading().index++;reading().detail=false;renderReading(true);}};$('reading-detail-toggle').onclick=()=>{if(!entered||playing||switching)return;reading().detail=!reading().detail;renderReading();};
 $('start-forward').onclick=enter;$('enter').onclick=enter;$('reading-forward').onclick=enter;
-document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());$('open-viewpoint').onclick=()=>{if(!playing)$('viewpoint-dialog').showModal();};$('choose-michael').onclick=()=>selectViewpoint('Michael');$('choose-lucy').onclick=()=>selectViewpoint('Lucy');
+document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>b.closest('dialog').close());$('choose-michael').onclick=()=>{if(activeViewpoint!=='Michael')selectViewpoint('Michael');else document.dispatchEvent(new Event('close-study-door'));};$('choose-lucy').onclick=()=>{if(activeViewpoint!=='Lucy')selectViewpoint('Lucy');};
 window.__stopPoint={snapshot:()=>({entered,playing,switching,movementPlayed:activeViewpoint==='Michael'?movementPlayed:false,michaelMovementPlayed:movementPlayed,viewpoint:activeViewpoint,availableViewpoints:['Michael','Lucy'],scene:activeViewpoint==='Michael'?'bridge':activeViewpoint==='Lucy'?'lucy-room-stop':activeViewpoint==='Meet'?'meeting':activeViewpoint==='Workshop'?'workshop':activeViewpoint==='Garden'?'nameless-garden':activeViewpoint==='Gravity'?'gravity-garden':'art-room',sceneType:activeViewpoint==='Michael'?'rendered-fixed-route':activeViewpoint==='Gravity'?'illustrated-walk':'static-illustration',developmentStatus:'coming-soon',releaseType:'preview',lucyMovementStatus:'coming-soon',characterAnimationStatus:'coming-soon',pageIndex:reading().index,pageCount:pages().length,detailOpen:reading().detail,frameCount:activeViewpoint==='Michael'?48:activeViewpoint==='Gravity'?5:0,renderResolution:activeViewpoint==='Michael'?[2560,1440]:null,stillResolution:activeViewpoint==='Michael'?[1536,736]:activeViewpoint==='Lucy'?[1536,768]:[1672,941],stopImageVisible:!stopImage.hidden,roomImageVisible:!room.hidden,artImageVisible:!artScene.hidden,workshopImageVisible:!workshopScene.hidden,openDialog:document.querySelector('dialog[open]')?.id||null,videoTime:video.currentTime,ready:activeViewpoint==='Michael'?video.readyState>=2:activeViewpoint==='Lucy'?room.complete&&room.naturalWidth>0:(roomImages[activeViewpoint]?.naturalWidth>0||activeViewpoint==='Meet'||activeViewpoint==='Gravity')})};
 renderReading();
 
@@ -481,6 +498,7 @@ $('garden-perspective').onclick=()=>{
     sound.focus({preventScroll:true});
   };
   document.addEventListener('open-study-door', openDoor);
+  document.addEventListener('close-study-door', () => closeDoor());
   document.addEventListener('study-view-changing', () => closeDoor());
   document.addEventListener('bridge-moving', () => closeDoor());
   document.addEventListener('visibilitychange', () => { if (document.hidden) film.pause(); });
