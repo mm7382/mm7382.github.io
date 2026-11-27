@@ -62,6 +62,17 @@ body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]) #book-reading :is(#o
 .story-pov-options #choose-lucy strong{color:#542f22}
 .story-pov-options #choose-michael[aria-pressed="true"] strong{color:#e3f0f9}
 .story-pov-options #choose-lucy[aria-pressed="true"] strong{color:#ffead7}
+.scene #lucy-cut[hidden],#scene-film-actions[hidden],#scene-film-error[hidden],#scene-film-start[hidden]{display:none!important}
+.scene #lucy-cut{position:absolute;inset:0;z-index:8;width:100%;max-width:none;display:grid;place-items:center;padding:0;margin:0;border:0;background:#111713}
+.scene #study-video{display:block;position:static;width:100%;height:100%;min-height:0;max-height:none;aspect-ratio:auto;object-fit:contain;background:#111713;border:0;border-radius:0;cursor:pointer}
+#scene-film-error{position:absolute;inset:auto 1rem 1rem;margin:0;padding:.5rem;text-align:center;color:#fff8ea;background:#141715d9}
+body[data-viewpoint="Meet"] .bridge-inline{display:none!important}
+body.scene-film-open .scene .bridge-inline,body.scene-film-open .book-page :is(#book-reading,#room-nav,#project-status){display:none!important}
+#scene-film-actions{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;grid-column:2/-1;justify-self:end;min-width:0}
+#scene-film-actions button{min-height:44px;padding:.5rem .8rem;border:1px solid #87765a;border-radius:3px}
+#scene-film-exit{background:#444c41!important;color:#fffaf1!important}
+#scene-film-start{text-decoration:underline;text-underline-offset:.25em}
+@media(max-width:600px){#scene-film-actions{grid-column:1/-1;justify-self:stretch}#scene-film-actions button{flex:1 1 auto}body.scene-film-open main{grid-template-rows:minmax(205px,1fr) auto}}
 </style></head>
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
 <button type="button" id="open-space-map" aria-haspopup="dialog" aria-controls="space-map">空間地圖</button>
@@ -78,8 +89,8 @@ body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]) #book-reading :is(#o
 <p id="study-door-error" role="status" hidden>影片暫時無法播放，仍可直接進入書房。</p>
 </figure>
 <section id="lucy-cut" class="lucy-cut" hidden aria-label="她沒有催他">
-<video id="study-video" controls controlslist="nodownload" muted playsinline preload="metadata" src="study.mp4" aria-label="她沒有催他"></video>
-<div class="study-caption"><span>她沒有催他</span><button id="study-sound" type="button" aria-pressed="false">♪ 開啟聲音</button></div>
+<video id="study-video" controlslist="nodownload" muted playsinline preload="none" aria-label="她沒有催他"></video>
+<p id="scene-film-error" role="status" hidden>這段影片暫時無法播放。</p>
 </section></div>
 <div class="story-pov">
 <span class="story-pov-label">故事視角</span>
@@ -110,7 +121,12 @@ body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]) #book-reading :is(#o
 <button type="button" id="study-door-sound" aria-pressed="false" aria-controls="study-door-video">♪ 開啟聲音</button>
 <button type="button" id="study-door-enter">進入書房 →</button>
 </div>
+<div id="scene-film-actions" hidden aria-label="片段播放">
+<button id="study-sound" type="button" aria-pressed="false" aria-controls="study-video">♪ 開啟聲音</button>
+<button id="scene-film-exit" type="button">回到書房</button>
+</div>
 <div id="room-nav" hidden>
+<button id="scene-film-start" type="button" hidden>看這一幕</button>
 <button type="button" id="return-bridge">回到空橋 <span aria-hidden="true">→</span></button>
 <button type="button" id="next-art" hidden>下一幕 · 藝術房間 →</button>
 <button type="button" id="next-workshop" hidden>下一幕 · 工作室 →</button>
@@ -296,7 +312,7 @@ function syncView(){const lucy=activeViewpoint==='Lucy', art=activeViewpoint==='
  $('garden-opening').hidden=!garden||!$('invitation').hidden;
  $('gravity-opening').hidden=!gravity||!$('invitation').hidden;
  $('lucy-opening').hidden=!lucy||!$('invitation').hidden;
-$('reading-viewpoint').textContent=`${lucy?'心聲':'感知'} / ${activeViewpoint} 視角`;$('show-invitation').textContent=(art||meet||workshop||garden||gravity)?'閱讀這一幕':lucy?'再讀心聲':'感知';$('choose-michael').setAttribute('aria-pressed',String(bridge));$('choose-lucy').setAttribute('aria-pressed',String(lucy));$('reading-forward').textContent=lucy?'後續移動 · Coming soon':'重播這段 →';$('reading-forward').disabled=lucy;$('reading-forward').hidden=!bridge&&!lucy;$('lucy-next').hidden=true;$('lucy-cut').hidden=!lucy;$('room-nav').hidden=bridge;$('next-art').hidden=!meet;$('next-workshop').hidden=!art;$('next-gravity').hidden=!workshop;$('next-garden').hidden=!gravity;$('garden-perspective').hidden=!dualScenes[activeViewpoint];$('stop-space-map').hidden=!bridge||!entered;$('start-forward').hidden=!bridge||entered;stopImage.hidden=!bridge||!entered||!stopImage.complete||!stopImage.naturalWidth;renderReading();}
+$('reading-viewpoint').textContent=`${lucy?'心聲':'感知'} / ${activeViewpoint} 視角`;$('show-invitation').textContent=(art||meet||workshop||garden||gravity)?'閱讀這一幕':lucy?'再讀心聲':'感知';$('choose-michael').setAttribute('aria-pressed',String(bridge));$('choose-lucy').setAttribute('aria-pressed',String(lucy));$('reading-forward').textContent=lucy?'後續移動 · Coming soon':'重播這段 →';$('reading-forward').disabled=lucy;$('reading-forward').hidden=!bridge&&!lucy;$('lucy-next').hidden=true;$('scene-film-start').hidden=!lucy&&!meet;$('room-nav').hidden=bridge;$('next-art').hidden=!meet;$('next-workshop').hidden=!art;$('next-gravity').hidden=!workshop;$('next-garden').hidden=!gravity;$('garden-perspective').hidden=!dualScenes[activeViewpoint];$('stop-space-map').hidden=!bridge||!entered;$('start-forward').hidden=!bridge||entered;stopImage.hidden=!bridge||!entered||!stopImage.complete||!stopImage.naturalWidth;renderReading();}
 async function selectViewpoint(name){if(playing)return;document.dispatchEvent(new Event('study-view-changing'));const mine=++token;document.querySelectorAll('dialog[open]').forEach(d=>d.close());states[activeViewpoint].entered=entered;video.pause();switching=true;$('invitation').hidden=true;$('show-invitation').hidden=true;$('stop-space-map').hidden=true;document.body.classList.add('switching');
  if(roomImages[name]){try{await roomImages[name].decode();}catch(e){if(mine===token){switching=false;document.body.classList.remove('switching');$('status').textContent='房間尚未載入，請再試一次。';syncView();if(entered)showReading();}return;}}
  if(mine!==token)return;activeViewpoint=name;history.replaceState(null,'',viewHashes[name]);entered=name!=='Michael'||states.Michael.entered;states[name].entered=entered;syncView();await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));if(mine!==token)return;switching=false;document.body.classList.remove('switching');$('status').textContent=name==='Gravity'?'已進入輕重庭園':name==='Garden'?'已進入無名花園':name==='Workshop'?'已進入工作室':name==='Art'?'已進入藝術房間':name==='Meet'?'已進入兩人相遇':name==='Lucy'?'房間停點 · 靜態視角':entered?'已停下 · 依你的步調閱讀':'空橋已在眼前，隨時可以啟程。';if(entered){if(name!=='Michael')hideReading();else showReading();}document.dispatchEvent(new Event('story-view-ready'));}
@@ -369,37 +385,55 @@ $('garden-perspective').onclick=()=>{
   }
 })();
 (() => {
-  const video = $('study-video');
-  const audio = $('study-sound');
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let manual = false;
-  const play = () => video.play().catch(() => {});
-  const syncSound = () => {
-    audio.textContent = video.muted ? '♪ 開啟聲音' : '關閉聲音';
-    audio.setAttribute('aria-pressed', String(!video.muted));
+  const panel = $('lucy-cut'), video = $('study-video'), sound = $('study-sound');
+  const actions = $('scene-film-actions'), notice = $('scene-film-error');
+  const trigger = $('scene-film-start'), exit = $('scene-film-exit');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const scenes = {
+    Lucy: {src:'study.mp4', title:'她沒有催他', back:'回到書房'},
+    Meet: {src:'bridge-city-together.mp4', title:'並肩看城', back:'回到兩人相遇'}
   };
-  audio.addEventListener('click', () => {
-    manual = true;
+  const open = () => !panel.hidden;
+  const syncSound = () => {
+    sound.textContent = video.muted ? '♪ 開啟聲音' : '關閉聲音';
+    sound.setAttribute('aria-pressed',String(!video.muted));
+  };
+  const play = () => video.play().catch(() => { if (open()) video.controls = true; });
+  const close = (restoreFocus = false) => {
+    if (!open()) return;
+    video.pause(); video.muted = true; panel.hidden = actions.hidden = true;
+    document.body.classList.remove('scene-film-open');
+    if (restoreFocus) trigger.focus({preventScroll:true});
+  };
+  trigger.onclick = () => {
+    const scene = scenes[activeViewpoint];
+    if (!scene || open() || switching || playing) return;
+    $('bridge-video').pause();
+    if (video.getAttribute('src') !== scene.src) video.src = scene.src;
+    if (video.currentTime) video.currentTime = 0;
+    video.muted = true; video.controls = reduced.matches;
+    panel.setAttribute('aria-label',scene.title); video.setAttribute('aria-label',scene.title);
+    exit.textContent = scene.back; notice.hidden = true;
+    document.body.classList.add('scene-film-open'); panel.hidden = actions.hidden = false;
+    syncSound(); if (!reduced.matches) play(); sound.focus({preventScroll:true});
+  };
+  exit.onclick = () => close(true);
+  sound.onclick = () => {
     video.muted = !video.muted;
-    if (!video.muted) {
-      video.volume = 1;
-      video.currentTime = 0;
-      play();
-    }
+    if (!video.muted) { if (!video.volume) video.volume = 1; if (video.ended) video.currentTime = 0; play(); }
     syncSound();
-  });
-  video.addEventListener('volumechange', syncSound);
-  for (const event of ['pointerdown','keydown']) video.addEventListener(event, () => { manual = true; });
-  document.addEventListener('study-view-changing', () => {
-    video.pause();
-    video.muted = true;
-    manual = false;
-  });
-  new IntersectionObserver(([entry]) => {
-    if (manual || !video.muted) return;
-    if (entry.isIntersecting && !reducedMotion.matches && !video.ended) play();
-    else if (!entry.isIntersecting) video.pause();
-  }, {threshold:.25}).observe(video);
+  };
+  video.onclick = () => {
+    if (video.controls) return;
+    if (!video.paused && !video.ended) { video.pause(); return; }
+    if (video.ended) video.currentTime = 0; play();
+  };
+  video.addEventListener('volumechange',syncSound);
+  video.addEventListener('error',() => {if(open())notice.hidden=false});
+  video.addEventListener('playing',() => notice.hidden=true);
+  document.addEventListener('study-view-changing',() => close());
+  document.addEventListener('visibilitychange',() => {if(document.hidden)video.pause();});
+  document.addEventListener('keydown',e => {if(e.key==='Escape'&&open()&&!document.querySelector('dialog[open]'))close(true);});
 })();
 </script>
 <script>
@@ -429,26 +463,6 @@ $('garden-perspective').onclick=()=>{
     syncSound();
   });
 
-  const syncFilm = () => {
-    const meeting = activeViewpoint === 'Meet';
-    const src = meeting ? 'bridge-city-together.mp4' : 'bridge-lucy-stops.mp4';
-    if (video.getAttribute('src') === src) return;
-    const title = meeting ? '並肩看城' : '她也停了下來';
-    video.pause();
-    video.muted = true;
-    $('bridge-film-title').textContent = title;
-    video.setAttribute('aria-label', title);
-    video.src = src;
-    error.hidden = true;
-    sound.hidden = false;
-    syncSound();
-  };
-  new MutationObserver(syncFilm).observe(document.body,{attributes:true,attributeFilter:['data-viewpoint']});
-  document.addEventListener('story-view-ready', () => {
-    syncFilm();
-    if (activeViewpoint === 'Meet' && !reducedMotion.matches && video.muted && !video.ended) play();
-  });
-  syncFilm();
 
   video.addEventListener('volumechange', syncSound);
   video.addEventListener('error', () => {
