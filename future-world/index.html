@@ -40,7 +40,6 @@ body.door-scene .scene :is(.bridge-inline,#invitation,#show-invitation),body.doo
 #study-door-enter{background:#444c41!important;color:#fffaf1!important}
 @media(max-width:600px){#study-door-actions{grid-column:1/-1;justify-self:stretch}#study-door-actions button{flex:1 1 auto}body.door-scene main{grid-template-rows:minmax(205px,1fr) auto}}
 .story-pov{display:none}
-body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]):not(.moving) .story-pov{display:grid;grid-template-columns:auto minmax(180px,310px) 1fr;align-items:center;gap:clamp(.55rem,1.7vw,1.15rem);padding:8px max(4%,env(safe-area-inset-left));color:#41392e;background:#e6dfd2;border-bottom:1px solid #c9beab}
 .story-pov-label{font:500 .78rem/1.35 system-ui,sans-serif;letter-spacing:.08em;white-space:nowrap}
 .story-pov-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3px;padding:3px;background:#d5caba;border-radius:6px}
 .story-pov-options button{min-height:44px;display:grid;place-content:center;justify-items:center;gap:2px;border:0;background:transparent;color:#413a2e;border-radius:4px;font:500 .85rem system-ui,sans-serif;cursor:pointer}
@@ -52,7 +51,6 @@ body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]):not(.moving) .story-
 .story-pov-options button[aria-pressed="true"]{background:#414b41;color:#fffaf0}
 .story-pov-options button:focus-visible{outline:2px solid #705826;outline-offset:2px}
 .story-pov-note{margin:0;color:#5f5544;font-size:.76rem}
-@media(max-width:720px){body:is([data-viewpoint="Michael"],[data-viewpoint="Lucy"]):not(.moving) .story-pov{grid-template-columns:auto minmax(0,1fr);gap:4px 10px;padding-block:5px}.story-pov-note{grid-column:2}.story-pov-options button{padding:3px}}
 /* Viewpoint color follows both the selector and every line of the reading panel. */
 body[data-viewpoint="Michael"]{--pov-story-ink:#233f55;--pov-story-accent:#284e6b}
 body[data-viewpoint="Lucy"]{--pov-story-ink:#542f22;--pov-story-accent:#713e28}
@@ -111,6 +109,12 @@ body[data-map-lens="third"] #pov-controls strong {color:#37514a}
   #pov-controls {justify-content:flex-start}
   #pov-controls button:last-of-type {margin-left:auto}
 }
+/* Avoid implicit min-content columns on narrow Safari viewports. */
+main{grid-template-columns:minmax(0,1fr)}
+main>:is(.scene,.story-pov,.book-page){min-inline-size:0;max-inline-size:100%}
+.scene #pov-empty{position:absolute;inset:0;width:auto;height:auto;max-height:none;aspect-ratio:auto;margin:0;padding:1rem;overflow-wrap:anywhere;place-content:center}
+.story-pov{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+.story-pov-options strong,.story-pov-options button span{white-space:nowrap;max-inline-size:100%}
 /* Same three cameras in the story bar and in the map. */
 body:not(.moving) .story-pov{display:grid;grid-template-columns:auto minmax(0,410px) minmax(0,1fr);align-items:center;gap:8px 16px;padding:8px max(3.6%,env(safe-area-inset-left));color:#41392e;background:#e6dfd2;border-bottom:1px solid #c9beab}
 body:not(.moving) .story-pov-options{grid-template-columns:repeat(3,minmax(0,1fr));min-width:0}
@@ -129,12 +133,13 @@ body[data-map-lens] #book-reading :is(#story-speaker,#opening-line,#lucy-opening
 #pov-gallery button{padding:.3rem .5rem;min-height:44px}
 #pov-gallery output{min-width:3.3em;text-align:center}
 @media(max-width:720px){
- body:not(.moving) .story-pov{grid-template-columns:minmax(0,1fr);gap:3px;padding:6px max(12px,env(safe-area-inset-left),env(safe-area-inset-right))}
- .story-pov-note{grid-column:1}
+ body:not(.moving) .story-pov{display:flex;flex-direction:column;align-items:stretch;gap:5px;padding:6px max(12px,env(safe-area-inset-left),env(safe-area-inset-right))}
+ .story-pov-note{grid-column:auto;margin:0}
+ .story-pov-options{inline-size:100%;max-inline-size:100%}
  body:not(.moving) .story-pov .story-pov-options button{min-height:44px}
 }
 @media(max-width:600px){
- body[data-map-lens] main{grid-template-rows:minmax(250px,54dvh) auto auto}
+ body[data-map-lens] main{grid-template-rows:minmax(235px,48dvh) auto auto}
 }
 </style></head>
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
