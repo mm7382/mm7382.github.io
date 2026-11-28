@@ -141,6 +141,10 @@ body[data-map-lens] #book-reading :is(#story-speaker,#opening-line,#lucy-opening
 @media(max-width:600px){
  body[data-map-lens] main{grid-template-rows:minmax(235px,48dvh) auto auto}
 }
+@media(max-height:520px){
+ html:has(body:not(.moving)),body:not(.moving){height:auto;min-height:100dvh;overflow-y:auto}
+ body:not(.moving) main{position:relative;grid-template-rows:minmax(200px,53dvh) auto auto}
+}
 </style></head>
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
 <button type="button" id="open-space-map" aria-haspopup="dialog" aria-controls="space-map">空間地圖</button>
