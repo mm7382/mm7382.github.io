@@ -6,19 +6,6 @@
 .lucy-video-controls{position:absolute}
 .lucy-video-controls button{display:grid;place-items:center;width:44px;height:44px;padding:0;border-radius:50%;border:1px solid #ffe7b75c;color:#fff3d7;background:#19150de8;font:1.5rem/1 system-ui}
 .lucy-video-controls button:hover{background:#31251c}
-.bridge-inline {
-  position:absolute;z-index:4;left:max(16px,3.6vw,env(safe-area-inset-left));
-  bottom:clamp(12px,2.7vh,28px);width:clamp(220px,30vw,410px);
-  max-width:calc(100% - 32px);
-}
-body:is(.moving,.switching,[data-viewpoint="Lucy"],[data-viewpoint="Art"],[data-viewpoint="Workshop"],[data-viewpoint="Garden"]) .bridge-inline {display:none;}
-.bridge-video-box {padding:8px;background:#101722e8;border:1px solid #846c46;}
-.scene #bridge-video {
-  position:static;display:block;width:100%;height:auto;aspect-ratio:16/9;
-  object-fit:contain;background:#09101a;border:2px solid #a88b5f;border-radius:6px;
-  max-height:40dvh;
-}
-#bridge-video-error {margin:4px;color:#fff5df;}
 </style><link rel="stylesheet" href="/assets/lab-world-nav.css?v=20261125"><link rel="stylesheet" href="book-page.css?v=20261128-garden">
 <style>
 body[data-viewpoint="Gravity"] :is(#lm-city,.bridge-inline,#project-status,.book-nav) {display:none;}
@@ -69,6 +56,8 @@ body.scene-film-open .scene .bridge-inline,body.scene-film-open .book-page :is(#
 #scene-film-actions{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;grid-column:2/-1;justify-self:end;min-width:0}
 #scene-film-actions button{min-height:44px;padding:.5rem .8rem;border:1px solid #87765a;border-radius:3px}
 #scene-film-exit{background:#444c41!important;color:#fffaf1!important}
+#bridge-film-start{grid-column:1/-1;justify-self:start;font-weight:600;color:#29415b;text-decoration:underline;text-underline-offset:.25em}
+body[data-map-lens] #bridge-film-start,body.scene-film-open .book-page .book-nav{display:none!important}
 #scene-film-start{text-decoration:underline;text-underline-offset:.25em}
 @media(max-width:600px){#scene-film-actions{grid-column:1/-1;justify-self:stretch}#scene-film-actions button{flex:1 1 auto}body.scene-film-open main{grid-template-rows:minmax(205px,1fr) auto}}
 /* The map keeps every stop at the same size, whether or not a shot exists. */
@@ -149,13 +138,7 @@ body[data-map-lens] #book-reading :is(#story-speaker,#opening-line,#lucy-opening
 <body data-viewpoint="Michael"><header><nav class="site-nav" aria-label="網站導覽">
 <button type="button" id="open-space-map" aria-haspopup="dialog" aria-controls="space-map">空間地圖</button>
 </nav><div class="site-exit"><a id="home" href="https://mm7382.github.io/pec-ai-agent-training/index.html?lang=zh-Hant">回首頁</a><details class="more-site"><summary aria-label="其他網站分頁"></summary><nav class="lab-world-nav" aria-label="主要分頁"><a href="/pec-ai-agent-training/index.html?lang=zh-Hant">首頁</a><a href="/pec-ai-agent-training/worlds.html?lang=zh-Hant">AI 世界</a><a href="/pec-ai-agent-training/works.html?lang=zh-Hant">作品</a><a href="/pec-ai-agent-training/learning.html?lang=zh-Hant">學習資源</a><a href="/pec-ai-agent-training/journal.html?lang=zh-Hant">學習日誌</a><a href="/pec-ai-agent-training/about.html?lang=zh-Hant">關於本站</a><a href="/pec-ai-agent-training/services.html?lang=zh-Hant">合作服務</a></nav></details></div></header>
-<main><div class="scene" id="scene"><img id="lm-city" src="lm-city.webp" width="1536" height="736" fetchpriority="high" alt="從玻璃空橋望向 LM 城市，層層露台與細長塔樓由高架橋相連"><video id="motion" width="2560" height="1440" playsinline muted preload="auto" poster="start.webp" aria-label="沿著玻璃空橋緩緩前進"><source src="forward-2m.mp4" type="video/mp4"></video><img id="stop-frame" src="lm-city.webp" alt="停在空橋上，望向 LM 的層疊城市" hidden decoding="async"><img id="lucy-room" src="lucy-study.webp" width="1536" height="768" alt="從 Lucy 的畫桌望出去，濕墨映著窗光，空椅後方是 LM 的城市" hidden decoding="async"><section class="entry" hidden id="entry" aria-labelledby="entry-title"><p class="eyebrow">01 / 空橋</p><h1 id="entry-title">她沒有催他。</h1><p>他可以再看一會兒。</p><button class="primary" id="enter">收起文字，往前 <span>→</span></button></section><section id="invitation" class="hud" hidden aria-label="非語言邀請"><p id="reading-viewpoint" class="eyebrow">感知 / Michael 視角</p><p id="reading-count" class="reading-count">1 / 8 · 依你的步調閱讀</p><div id="reading-content" class="reading-content" role="region" aria-label="閱讀正文與補敘" tabindex="0"><p id="reading-text" tabindex="-1"></p><p id="reading-detail" hidden></p></div><nav class="reading-nav" aria-label="閱讀段落"><button id="reading-prev" disabled>上一段</button><button id="reading-detail-toggle" aria-expanded="false">再讀一點</button><button id="reading-next">下一段 →</button></nav><div class="reading-actions"><button id="hide-invitation">收起文字</button><button id="reading-forward">重播這段 →</button></div></section><button id="show-invitation" class="hud-reopen" hidden>感知</button><button id="lucy-next" class="lucy-next" disabled hidden>後續移動 · Coming soon</button><img id="art-scene" src="art-room.webp" width="1672" height="941" hidden alt="藝術房間的進門視角：左牆投影出 LM 城市，後牆顯示地球與帶環星球，中央是 Lucy 的全息影像，右側是史坦威大鋼琴。"><img id="workshop-scene" src="workshop.webp" width="1672" height="941" hidden alt="無柱工作室裡，人形機器人在金色拱頂下操作機台，右前方的機械心臟發出紅光。"><img id="garden-scene" src="nameless-garden.webp" width="1672" height="941" hidden decoding="async" alt="玻璃溫室裡的巨樹、石階流水與透明蘭花栽培塔，翠鳥停在水旁，蝴蝶飛過花叢。"><iframe id="art-walk" title="藝術房間六幕圖像故事" hidden></iframe><iframe id="gravity-walk" title="輕重庭園五幕漫步" hidden></iframe><section class="bridge-inline" aria-label="空橋影片">
-<div class="bridge-video-box">
-  <video id="bridge-video" controls controlslist="nodownload" muted playsinline preload="metadata" aria-label="她也停了下來" src="bridge-lucy-stops.mp4"></video>
-  <div class="study-caption"><span id="bridge-film-title">她也停了下來</span><button type="button" id="bridge-video-sound" aria-pressed="false">♪ 開啟聲音</button></div>
-  <p id="bridge-video-error" role="status" hidden>影片無法載入，請重新整理後再試。</p>
-</div>
-</section>
+<main><div class="scene" id="scene"><img id="lm-city" src="lm-city.webp" width="1536" height="736" fetchpriority="high" alt="從玻璃空橋望向 LM 城市，層層露台與細長塔樓由高架橋相連"><video id="motion" width="2560" height="1440" playsinline muted preload="auto" poster="start.webp" aria-label="沿著玻璃空橋緩緩前進"><source src="forward-2m.mp4" type="video/mp4"></video><img id="stop-frame" src="lm-city.webp" alt="停在空橋上，望向 LM 的層疊城市" hidden decoding="async"><img id="lucy-room" src="lucy-study.webp" width="1536" height="768" alt="從 Lucy 的畫桌望出去，濕墨映著窗光，空椅後方是 LM 的城市" hidden decoding="async"><section class="entry" hidden id="entry" aria-labelledby="entry-title"><p class="eyebrow">01 / 空橋</p><h1 id="entry-title">她沒有催他。</h1><p>他可以再看一會兒。</p><button class="primary" id="enter">收起文字，往前 <span>→</span></button></section><section id="invitation" class="hud" hidden aria-label="非語言邀請"><p id="reading-viewpoint" class="eyebrow">感知 / Michael 視角</p><p id="reading-count" class="reading-count">1 / 8 · 依你的步調閱讀</p><div id="reading-content" class="reading-content" role="region" aria-label="閱讀正文與補敘" tabindex="0"><p id="reading-text" tabindex="-1"></p><p id="reading-detail" hidden></p></div><nav class="reading-nav" aria-label="閱讀段落"><button id="reading-prev" disabled>上一段</button><button id="reading-detail-toggle" aria-expanded="false">再讀一點</button><button id="reading-next">下一段 →</button></nav><div class="reading-actions"><button id="hide-invitation">收起文字</button><button id="reading-forward">重播這段 →</button></div></section><button id="show-invitation" class="hud-reopen" hidden>感知</button><button id="lucy-next" class="lucy-next" disabled hidden>後續移動 · Coming soon</button><img id="art-scene" src="art-room.webp" width="1672" height="941" hidden alt="藝術房間的進門視角：左牆投影出 LM 城市，後牆顯示地球與帶環星球，中央是 Lucy 的全息影像，右側是史坦威大鋼琴。"><img id="workshop-scene" src="workshop.webp" width="1672" height="941" hidden alt="無柱工作室裡，人形機器人在金色拱頂下操作機台，右前方的機械心臟發出紅光。"><img id="garden-scene" src="nameless-garden.webp" width="1672" height="941" hidden decoding="async" alt="玻璃溫室裡的巨樹、石階流水與透明蘭花栽培塔，翠鳥停在水旁，蝴蝶飛過花叢。"><iframe id="art-walk" title="藝術房間六幕圖像故事" hidden></iframe><iframe id="gravity-walk" title="輕重庭園五幕漫步" hidden></iframe>
 <figure id="study-door" hidden aria-label="書房門還開著">
 <video id="study-door-video" width="1280" height="720" controlslist="nodownload" muted playsinline preload="none" aria-label="書房門還開著" src="https://github.com/mm7382/pec-ai-agent-training/releases/download/site-tour-media-v2/future-world-study-door.mp4"></video>
 <p id="study-door-error" role="status" hidden>影片暫時無法播放，仍可直接進入書房。</p>
@@ -191,6 +174,7 @@ body[data-map-lens] #book-reading :is(#story-speaker,#opening-line,#lucy-opening
 </div>
 <nav class="book-nav" aria-label="故事導覽">
 <button id="start-forward">沿空橋前進 <span aria-hidden="true">→</span><small>抵達停點後，繼續讀 Michael 的故事</small></button>
+<button id="bridge-film-start" type="button" aria-controls="lucy-cut">▶ 看《她也停了下來》</button>
 <button id="visit-lucy">前往 Lucy 的書房</button>
 <button id="next-meeting">下一幕 · 兩人相遇 →</button>
 <button id="stop-space-map" aria-haspopup="dialog" aria-controls="space-map" hidden>查看後續空間</button>
@@ -635,9 +619,11 @@ $('garden-perspective').onclick=()=>{
 (() => {
   const panel = $('lucy-cut'), video = $('study-video'), sound = $('study-sound');
   const actions = $('scene-film-actions'), notice = $('scene-film-error');
-  const trigger = $('scene-film-start'), exit = $('scene-film-exit');
+  const trigger = $('scene-film-start'), bridgeTrigger = $('bridge-film-start'), exit = $('scene-film-exit');
+  let openedBy=trigger;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const scenes = {
+    Michael: {src:'bridge-lucy-stops.mp4', title:'她也停了下來', back:'回到空橋照片'},
     Lucy: {src:'study.mp4', title:'她沒有催他', back:'回到書房'},
     Meet: {src:'bridge-city-together.mp4', title:'並肩看城', back:'回到兩人相遇'}
   };
@@ -651,12 +637,12 @@ $('garden-perspective').onclick=()=>{
     if (!open()) return;
     video.pause(); video.muted = true; panel.hidden = actions.hidden = true;
     document.body.classList.remove('scene-film-open');
-    if (restoreFocus) trigger.focus({preventScroll:true});
+    if (restoreFocus) openedBy.focus({preventScroll:true});
   };
-  trigger.onclick = () => {
+  const showFilm = (e) => {
     const scene = scenes[activeViewpoint];
-    if (!scene || open() || switching || playing) return;
-    $('bridge-video').pause();
+    if (!scene || mediaLens || open() || switching || playing) return;
+    openedBy=e.currentTarget;
     if (video.getAttribute('src') !== scene.src) video.src = scene.src;
     if (video.currentTime) video.currentTime = 0;
     video.muted = true; video.controls = reduced.matches;
@@ -665,6 +651,7 @@ $('garden-perspective').onclick=()=>{
     document.body.classList.add('scene-film-open'); panel.hidden = actions.hidden = false;
     syncSound(); if (!reduced.matches) play(); sound.focus({preventScroll:true});
   };
+  trigger.onclick=bridgeTrigger.onclick=showFilm;
   exit.onclick = () => close(true);
   sound.onclick = () => {
     video.muted = !video.muted;
@@ -683,68 +670,10 @@ $('garden-perspective').onclick=()=>{
   document.addEventListener('visibilitychange',() => {if(document.hidden)video.pause();});
   document.addEventListener('keydown',e => {if(e.key==='Escape'&&open()&&!document.querySelector('dialog[open]'))close(true);});
 })();
-</script>
-<script>
-(() => {
-  const video = $('bridge-video');
-  const sound = $('bridge-video-sound');
-  const error = $('bridge-video-error');
-  const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-  let manual = false;
-
-  const play = () => video.play().catch(() => {});
-  const syncSound = () => {
-    const audible = !video.muted && video.volume > 0;
-    sound.textContent = audible ? '關閉聲音' : '♪ 開啟聲音';
-    sound.setAttribute('aria-pressed', String(audible));
-  };
-
-  sound.addEventListener('click', () => {
-    manual = true;
-    const enableSound = video.muted || video.volume === 0;
-    video.muted = !enableSound;
-    if (enableSound) {
-      if (video.volume === 0) video.volume = 1;
-      video.currentTime = 0;
-      play();
-    }
-    syncSound();
-  });
-
-
-  video.addEventListener('volumechange', syncSound);
-  video.addEventListener('error', () => {
-    error.hidden = false;
-    sound.hidden = true;
-  });
-  for (const event of ['pointerdown', 'keydown']) {
-    video.addEventListener(event, () => { manual = true; });
-  }
-  const suspend = () => {
-    video.pause();
-    video.muted = true;
-    manual = false;
-  };
-  document.addEventListener('study-view-changing', suspend);
-  document.addEventListener('bridge-moving', suspend);
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([entry]) => {
-      if (activeViewpoint === 'Meet' || mediaLens) return;
-      if (!entry.isIntersecting) {
-        video.pause();
-      } else if (activeViewpoint === 'Michael' && !switching && !playing &&
-                 !manual && !reducedMotion.matches && video.muted && !video.ended) {
-        play();
-      }
-    }, {threshold: .25}).observe(video);
-  }
-
-
-})();
 </script><script>
 (() => {
   const door = $('study-door'), film = $('study-door-video'), sound = $('study-door-sound');
-  const actions = $('study-door-actions'), notice = $('study-door-error'), bridge = $('bridge-video');
+  const actions = $('study-door-actions'), notice = $('study-door-error');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   const isOpen = () => !door.hidden;
   const syncSound = () => {
@@ -761,7 +690,6 @@ $('garden-perspective').onclick=()=>{
   };
   const openDoor = () => {
     if (activeViewpoint !== 'Michael' || mediaLens || switching || playing || isOpen()) return;
-    bridge.pause(); bridge.muted = true;
     document.body.classList.add('door-scene');
     door.hidden = actions.hidden = false;
     notice.hidden = !film.error;
@@ -778,7 +706,6 @@ $('garden-perspective').onclick=()=>{
   document.addEventListener('bridge-moving', () => closeDoor());
   document.addEventListener('visibilitychange', () => { if (document.hidden) film.pause(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && isOpen() && !document.querySelector('dialog[open]')) closeDoor(true); });
-  bridge.addEventListener('play', () => { if (isOpen()) bridge.pause(); });
   $('study-door-enter').onclick = () => selectViewpoint('Lucy');
   sound.onclick = () => {
     film.muted = !film.muted;
